@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
+    
+    <meta name="author" content="Chris MacMackin" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>slsqp &ndash; slsqp</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">slsqp </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+                
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+				
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+				
+            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../program/slsqp_test.html">Program</a></li>
+				
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>slsqp
+    <small>Subroutine</small>
+    
+    </h1>
+	 
+<div class="row">
+<div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+    <li><i class="fa fa-code"></i><a href="../src/slsqp_core.f90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/slsqp_core.f90.html'>slsqp_core.f90</a></li>
+  
+     <li><a href='../module/slsqp_core.html'>slsqp_core</a></li>
+  
+     <li class="active">slsqp</li>
+  </ol>
+</div>
+</div>
+</div>
+    
+  </div>
+  
+  <div class="row">
+    <div class="col-lg-3">
+    
+<div id="sidebar">
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars">Variables</a></h3></div>
+    <div id="vars" class="panel-collapse collapse">
+      <div class="list-group">
+        
+        <a class="list-group-item" href="../proc/slsqp.html#variable-il">il</a>
+        
+        <a class="list-group-item" href="../proc/slsqp.html#variable-im">im</a>
+        
+        <a class="list-group-item" href="../proc/slsqp.html#variable-ir">ir</a>
+        
+        <a class="list-group-item" href="../proc/slsqp.html#variable-is">is</a>
+        
+        <a class="list-group-item" href="../proc/slsqp.html#variable-iu">iu</a>
+        
+        <a class="list-group-item" href="../proc/slsqp.html#variable-iv">iv</a>
+        
+        <a class="list-group-item" href="../proc/slsqp.html#variable-iw">iw</a>
+        
+        <a class="list-group-item" href="../proc/slsqp.html#variable-ix%7E5">ix</a>
+        
+        <a class="list-group-item" href="../proc/slsqp.html#variable-mineq%7E2">mineq</a>
+        
+        <a class="list-group-item" href="../proc/slsqp.html#variable-n1%7E3">n1</a>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+    <div class="list-group">
+      <a class="list-group-item" href="../proc/slsqp.html#src">slsqp</a>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs">All Procedures</a></h3></div>
+    <div id="allprocs" class="panel-collapse collapse">
+        <div class="list-group">
+          
+          <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
+          
+          <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
+          
+          <a class="list-group-item" href="../proc/ddot.html">ddot</a>
+          
+          <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
+          
+          <a class="list-group-item" href="../proc/diff.html">diff</a>
+          
+          <a class="list-group-item" href="../proc/dnrm2.html">dnrm2</a>
+          
+          <a class="list-group-item" href="../proc/dscal.html">dscal</a>
+          
+          <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
+          
+          <a class="list-group-item" href="../proc/g1.html">g1</a>
+          
+          <a class="list-group-item" href="../proc/h12.html">h12</a>
+          
+          <a class="list-group-item" href="../proc/hfti.html">hfti</a>
+          
+          <a class="list-group-item" href="../proc/initialize_slsqp.html">initialize_slsqp</a>
+          
+          <a class="list-group-item" href="../proc/ldl.html">ldl</a>
+          
+          <a class="list-group-item" href="../proc/ldp.html">ldp</a>
+          
+          <a class="list-group-item" href="../proc/linmin.html">linmin</a>
+          
+          <a class="list-group-item" href="../proc/lsei.html">lsei</a>
+          
+          <a class="list-group-item" href="../proc/lsi.html">lsi</a>
+          
+          <a class="list-group-item" href="../proc/lsq.html">lsq</a>
+          
+          <a class="list-group-item" href="../proc/nnls.html">nnls</a>
+          
+          <a class="list-group-item" href="../proc/report_message.html">report_message</a>
+          
+          <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+          
+          <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
+          
+          <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
+          
+          <a class="list-group-item" href="../proc/slsqp_wrapper.html">slsqp_wrapper</a>
+          
+          <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
+          
+        </div>
+    </div>
+  </div>
+  
+</div>
+
+    </div>
+    
+    <div class="col-lg-9" id='text'>
+    <h2>
+public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w, l_w, jw, l_jw, sdat, ldat)
+    
+    
+    
+</h2>
+    
+  
+
+
+
+    <h3>Arguments</h3>
+    
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-m%7E9"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>m</strong></td><td><p>is the total number of constraints, m &gt;= 0</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-meq%7E3"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>meq</strong></td><td><p>is the number of equality constraints, meq &gt;= 0</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-la%7E2"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>la</strong></td><td><p>see a, la &gt;= max(m,1)</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n%7E8"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td><p>is the number of varibles, n &gt;= 1</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-x%7E7"></span>real(kind=wp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(n)</td><td>::</td>
+  <td><strong>x</strong></td><td><p>x() stores the current iterate of the n vector x
+ on entry x() must be initialized. on exit x()
+ stores the solution vector x if mode = 0.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xl%7E3"></span>real(kind=wp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(n)</td><td>::</td>
+  <td><strong>xl</strong></td><td><p>xl() stores an n vector of lower bounds xl to x.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xu%7E3"></span>real(kind=wp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(n)</td><td>::</td>
+  <td><strong>xu</strong></td><td><p>xu() stores an n vector of upper bounds xu to x.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-f%7E6"></span>real(kind=wp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>f</strong></td><td><p>is the value of the objective function.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-c%7E4"></span>real(kind=wp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(la)</td><td>::</td>
+  <td><strong>c</strong></td><td><p>c() stores the m vector c of constraints,
+ equality constraints (if any) first.
+ dimension of c must be greater or equal la,
+ which must be greater or equal max(1,m).</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-g%7E5"></span>real(kind=wp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(n+1)</td><td>::</td>
+  <td><strong>g</strong></td><td><p>g() stores the n vector g of partials of the
+ objective function; dimension of g must be
+ greater or equal n+1.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-a%7E5"></span>real(kind=wp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(la,n+1)</td><td>::</td>
+  <td><strong>a</strong></td><td><p>the la by n + 1 array a() stores
+  the m by n matrix a of constraint normals.
+  a() has first dimensioning parameter la,
+  which must be greater or equal max(1,m).</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-acc%7E4"></span>real(kind=wp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>acc</strong></td><td><p>abs(acc) controls the final accuracy.
+ if acc &lt; zero an exact linesearch is performed,
+ otherwise an armijo-type linesearch is used.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iter%7E2"></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iter</strong></td><td><p>prescribes the maximum number of iterations.
+ on exit iter indicates the number of iterations.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mode%7E3"></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>mode</strong></td><td><p>mode controls calculation:
+ reverse communication is used in the sense that
+ the program is initialized by <code>mode = 0</code>; then it is
+ to be called repeatedly by the user until a return
+ with <code>mode /= abs(1)</code> takes place.
+ if <code>mode = -1</code> gradients have to be calculated,
+ while with <code>mode = 1</code> functions have to be calculated.
+ mode must not be changed between subsequent calls of sqp.
+ <strong>evaluation modes</strong>:
+    * -1 <em>: gradient evaluation, (g&amp;a)
+    *  0 </em>: <em>on entry</em>: initialization, (f,g,c&amp;a),
+            <em>on exit</em>: required accuracy for solution obtained
+    *  1 <em>: function evaluation, (f&amp;c)
+ <strong>failure modes</strong>:
+     * 2 </em>: number of equality contraints larger than n
+     * 3 <em>: more than 3</em>n iterations in lsq subproblem
+     * 4 <em>: inequality constraints incompatible
+     * 5 </em>: singular matrix e in lsq subproblem
+     * 6 <em>: singular matrix c in lsq subproblem
+     * 7 </em>: rank-deficient equality constraint subproblem hfti
+     * 8 <em>: positive directional derivative for linesearch
+     * 9 </em>: more than iter iterations in sqp
+  * &gt;=10 <em>: working space w or jw too small,
+            w should be enlarged to l_w=mode/1000,
+            jw should be enlarged to l_jw=mode-1000</em>l_w</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-w%7E4"></span>real(kind=wp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(l_w)</td><td>::</td>
+  <td><strong>w</strong></td><td><p>w() is a one dimensional working space.
+ the first <code>m+n+n*n1/2</code> elements of w must not be
+ changed between subsequent calls of slsqp.
+ on return w(1) ... w(m) contain the multipliers
+ associated with the general constraints, while
+ w(m+1) ... w(m+n(n+1)/2) store the cholesky factor
+ l<em>d</em>l(t) of the approximate hessian of the
+ lagrangian columnwise dense as lower triangular
+ unit matrix l with d in its 'diagonal' and
+ w(m+n(n+1)/2+n+2 ... w(m+n(n+1)/2+n+2+m+2n)
+ contain the multipliers associated with all
+ all constraints of the quadratic program finding
+ the search direction to the solution x*</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l_w%7E2"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>l_w</strong></td><td><p>the length of w, which should be at least:
+   (3<em>n1+m)</em>(n1+1)                        <em>for lsq</em>
+  +(n1-meq+1)<em>(mineq+2) + 2</em>mineq         <em>for lsi</em>
+  +(n1+mineq)<em>(n1-meq) + 2</em>meq + n1       <em>for lsei</em>
+  + n1<em>n/2 + 2</em>m + 3<em>n + 3</em>n1 + 1         <em>for slsqpb</em>
+   with mineq = m - meq + 2*n1  &amp;  n1 = n+1</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jw%7E2"></span>integer,</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(l_jw)</td><td>::</td>
+  <td><strong>jw</strong></td><td><p>jw() is a one dimensional integer working space</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l_jw%7E2"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>l_jw</strong></td><td><p>the length of jw which should be at least
+ <code>mineq = m - meq + 2*(n+1)</code>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sdat"></span>type(<a href='../type/slsqpb_data.html'>slsqpb_data</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>sdat</strong></td><td><p>data for <a href="../proc/slsqpb.html">slsqpb</a>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ldat"></span>type(<a href='../type/linmin_data.html'>linmin_data</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ldat</strong></td><td><p>data for <a href="../proc/linmin.html">linmin</a>.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+    
+    
+    <h3>Description</h3>
+    <p><strong>slsqp</strong>: <strong>s</strong>equential <strong>l</strong>east <strong>sq</strong>uares <strong>p</strong>rogramming
+  to solve general nonlinear optimization problems</p>
+<p>a nonlinear programming method with quadratic programming subproblems
+  this subroutine solves the general nonlinear programming problem:</p>
+<p><strong>minimize</strong></p>
+<p>\( f(x) \)</p>
+<p><strong>subject to</strong></p>
+<p>\( c_j (x) = 0 \)        , \( j = 1,...,meq   \)</p>
+<p>\(c_j (x) \ge 0 \)       , \( j = meq+1,...,m \)</p>
+<p>\(xl_i \le x_i \le xu_i \) , \( i = 1,...,n     \)</p>
+<p>the algorithm implements the method of Han and Powell
+  with BFGS-update of the b-matrix and L1-test function
+  within the steplength algorithm.</p>
+<h1>Reference</h1>
+<ul>
+<li>Dieter Kraft: "a software package for sequential quadratic programming",
+     dfvlr-fb 88-28, 1988</li>
+</ul>
+<h1>History</h1>
+<ul>
+<li>implemented by: Dieter Kraft, DFVLR oberpfaffenhofen</li>
+<li>date: april - october, 1981.</li>
+<li>december, 31-st, 1984.</li>
+<li>march   , 21-st, 1987, revised to fortan 77</li>
+<li>march   , 20-th, 1989, revised to ms-fortran</li>
+<li>april   , 14-th, 1989, hesse   in-line coded</li>
+<li>february, 28-th, 1991, fortran/2 version 1.04 accepts statement functions</li>
+<li>march   ,  1-st, 1991, tested with salford ftn77/386 compiler vers 2.40 in protected mode</li>
+<li>january, 2016 : refactoring into modern fortran by jacob williams</li>
+</ul>
+<h1>License</h1>
+<p>Copyright 1991: Dieter Kraft, FHM.
+  Released under a BSD license.</p>
+<p></p><div class="alert alert-info" role="alert"><h4>Note</h4>: f,c,g,a must all be set by the user before each call.</div>
+    
+    
+     <h3>Calls</h3>
+     
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: proc~~slsqp~~CallsGraph Pages: 1 -->
+<svg id="procslsqpCallsGraph" width="641pt" height="307pt"
+ viewBox="0.00 0.00 641.00 307.03" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~slsqp~~CallsGraph" class="graph" transform="scale(0.880495 0.880495) rotate(0) translate(4 344.704)">
+<title>proc~~slsqp~~CallsGraph</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-344.704 725,-344.704 725,5 -4,5"/>
+<!-- proc~slsqp -->
+<g id="node1" class="node"><title>proc~slsqp</title>
+<polygon fill="none" stroke="black" points="54,-190.485 2.13163e-14,-190.485 0,-164.485 54,-164.485 54,-190.485"/>
+<text text-anchor="middle" x="27" y="-175.035" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp</text>
+</g>
+<!-- proc~slsqpb -->
+<g id="node2" class="node"><title>proc~slsqpb</title>
+<a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-190.485 90,-190.485 90,-164.485 144,-164.485 144,-190.485"/>
+<text text-anchor="middle" x="117" y="-175.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
+</a>
+</g>
+<!-- proc~slsqp&#45;&gt;proc~slsqpb -->
+<g id="edge66" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
+<path fill="none" stroke="black" d="M54.003,-177.485C62.0277,-177.485 70.9665,-177.485 79.5309,-177.485"/>
+<polygon fill="black" stroke="black" points="79.7051,-180.985 89.705,-177.485 79.705,-173.985 79.7051,-180.985"/>
+</g>
+<!-- proc~ddot -->
+<g id="node3" class="node"><title>proc~ddot</title>
+<a xlink:href="../proc/ddot.html" xlink:title="ddot">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="540,-331.485 486,-331.485 486,-305.485 540,-305.485 540,-331.485"/>
+<text text-anchor="middle" x="513" y="-316.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
+</a>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~ddot -->
+<g id="edge48" class="edge"><title>proc~slsqpb&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="black" d="M120.54,-190.658C127.648,-214.523 145.967,-264.893 180,-291.485 266.985,-359.451 408.681,-341.284 475.664,-327.487"/>
+<polygon fill="black" stroke="black" points="476.709,-330.843 485.754,-325.324 475.242,-323.998 476.709,-330.843"/>
+</g>
+<!-- proc~daxpy -->
+<g id="node4" class="node"><title>proc~daxpy</title>
+<a xlink:href="../proc/daxpy.html" xlink:title="daxpy">
+<polygon fill="#d9534f" stroke="#d9534f" points="540,-287.485 486,-287.485 486,-261.485 540,-261.485 540,-287.485"/>
+<text text-anchor="middle" x="513" y="-272.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
+</a>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~daxpy -->
+<g id="edge50" class="edge"><title>proc~slsqpb&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="black" d="M122.573,-190.604C131.608,-210.193 151.373,-246.78 180,-265.485 271.683,-325.391 409.94,-301.594 475.7,-285.148"/>
+<polygon fill="black" stroke="black" points="476.807,-288.477 485.613,-282.586 475.055,-281.7 476.807,-288.477"/>
+</g>
+<!-- proc~dscal -->
+<g id="node5" class="node"><title>proc~dscal</title>
+<a xlink:href="../proc/dscal.html" xlink:title="dscal">
+<polygon fill="#d9534f" stroke="#d9534f" points="342,-275.485 288,-275.485 288,-249.485 342,-249.485 342,-275.485"/>
+<text text-anchor="middle" x="315" y="-260.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dscal</text>
+</a>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~dscal -->
+<g id="edge52" class="edge"><title>proc~slsqpb&#45;&gt;proc~dscal</title>
+<path fill="none" stroke="black" d="M125.442,-190.662C136.122,-206.118 156.043,-231.188 180,-243.485 210.341,-259.059 249.296,-263.121 277.555,-263.695"/>
+<polygon fill="black" stroke="black" points="277.8,-267.197 287.822,-263.762 277.845,-260.197 277.8,-267.197"/>
+</g>
+<!-- proc~linmin -->
+<g id="node6" class="node"><title>proc~linmin</title>
+<a xlink:href="../proc/linmin.html" xlink:title="linmin">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="234,-234.485 180,-234.485 180,-208.485 234,-208.485 234,-234.485"/>
+<text text-anchor="middle" x="207" y="-219.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">linmin</text>
+</a>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~linmin -->
+<g id="edge54" class="edge"><title>proc~slsqpb&#45;&gt;proc~linmin</title>
+<path fill="none" stroke="black" d="M144.003,-190.687C152.534,-194.857 162.098,-199.533 171.148,-203.957"/>
+<polygon fill="black" stroke="black" points="169.805,-207.197 180.326,-208.445 172.88,-200.908 169.805,-207.197"/>
+</g>
+<!-- proc~ldl -->
+<g id="node7" class="node"><title>proc~ldl</title>
+<a xlink:href="../proc/ldl.html" xlink:title="ldl">
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-190.485 180,-190.485 180,-164.485 234,-164.485 234,-190.485"/>
+<text text-anchor="middle" x="207" y="-175.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldl</text>
+</a>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~ldl -->
+<g id="edge56" class="edge"><title>proc~slsqpb&#45;&gt;proc~ldl</title>
+<path fill="none" stroke="black" d="M144.003,-177.485C152.028,-177.485 160.967,-177.485 169.531,-177.485"/>
+<polygon fill="black" stroke="black" points="169.705,-180.985 179.705,-177.485 169.705,-173.985 169.705,-180.985"/>
+</g>
+<!-- proc~lsq -->
+<g id="node8" class="node"><title>proc~lsq</title>
+<a xlink:href="../proc/lsq.html" xlink:title="lsq">
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-146.485 180,-146.485 180,-120.485 234,-120.485 234,-146.485"/>
+<text text-anchor="middle" x="207" y="-131.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
+</a>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~lsq -->
+<g id="edge58" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
+<path fill="none" stroke="black" d="M144.003,-164.284C152.534,-160.113 162.098,-155.437 171.148,-151.013"/>
+<polygon fill="black" stroke="black" points="172.88,-154.062 180.326,-146.526 169.805,-147.773 172.88,-154.062"/>
+</g>
+<!-- proc~dcopy -->
+<g id="node9" class="node"><title>proc~dcopy</title>
+<a xlink:href="../proc/dcopy.html" xlink:title="dcopy">
+<polygon fill="#d9534f" stroke="#d9534f" points="450,-41.4851 396,-41.4851 396,-15.4851 450,-15.4851 450,-41.4851"/>
+<text text-anchor="middle" x="423" y="-26.0351" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
+</a>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~dcopy -->
+<g id="edge60" class="edge"><title>proc~slsqpb&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="black" d="M122.63,-164.431C131.869,-144.419 152.055,-106.103 180,-83.4851 239.922,-34.9866 334.185,-27.3588 385.931,-27.2006"/>
+<polygon fill="black" stroke="black" points="385.974,-30.7008 395.996,-27.2633 386.018,-23.701 385.974,-30.7008"/>
+</g>
+<!-- proc~dnrm2 -->
+<g id="node10" class="node"><title>proc~dnrm2</title>
+<a xlink:href="../proc/dnrm2.html" xlink:title="dnrm2">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="540,-161.485 486,-161.485 486,-135.485 540,-135.485 540,-161.485"/>
+<text text-anchor="middle" x="513" y="-146.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
+</a>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~dnrm2 -->
+<g id="edge62" class="edge"><title>proc~slsqpb&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="black" d="M119.661,-164.296C125.638,-138.143 142.632,-79.5611 180,-48.4851 255.194,14.0471 298.422,-13.0381 396,-6.48514 419.946,-4.87701 429.88,6.59936 450,-6.48514 490.626,-32.906 505.259,-92.1961 510.373,-125.197"/>
+<polygon fill="black" stroke="black" points="506.932,-125.867 511.766,-135.295 513.867,-124.91 506.932,-125.867"/>
+</g>
+<!-- proc~enforce_bounds -->
+<g id="node11" class="node"><title>proc~enforce_bounds</title>
+<a xlink:href="../proc/enforce_bounds.html" xlink:title="enforce_bounds">
+<polygon fill="#d9534f" stroke="#d9534f" points="360,-82.4851 270,-82.4851 270,-56.4851 360,-56.4851 360,-82.4851"/>
+<text text-anchor="middle" x="315" y="-67.0351" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">enforce_bounds</text>
+</a>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~enforce_bounds -->
+<g id="edge64" class="edge"><title>proc~slsqpb&#45;&gt;proc~enforce_bounds</title>
+<path fill="none" stroke="black" d="M126.198,-164.422C137.32,-149.552 157.384,-125.511 180,-111.485 204.216,-96.4667 234.231,-86.4323 259.805,-79.9502"/>
+<polygon fill="black" stroke="black" points="260.832,-83.3029 269.731,-77.5532 259.189,-76.4985 260.832,-83.3029"/>
+</g>
+<!-- proc~lsq&#45;&gt;proc~ddot -->
+<g id="edge44" class="edge"><title>proc~lsq&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="black" d="M227.338,-146.599C239.636,-154.478 255.658,-164.655 270,-173.485 345.499,-219.966 435.313,-272.973 481.739,-300.205"/>
+<polygon fill="black" stroke="black" points="480.031,-303.261 490.429,-305.298 483.571,-297.222 480.031,-303.261"/>
+</g>
+<!-- proc~lsq&#45;&gt;proc~dscal -->
+<g id="edge46" class="edge"><title>proc~lsq&#45;&gt;proc~dscal</title>
+<path fill="none" stroke="black" d="M225.524,-146.622C228.597,-149.325 231.569,-152.32 234,-155.485 257.75,-186.407 244.097,-206.343 270,-235.485 272.792,-238.626 276.038,-241.512 279.485,-244.132"/>
+<polygon fill="black" stroke="black" points="277.533,-247.037 287.772,-249.76 281.466,-241.246 277.533,-247.037"/>
+</g>
+<!-- proc~lsq&#45;&gt;proc~dcopy -->
+<g id="edge38" class="edge"><title>proc~lsq&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="black" d="M234.058,-130.337C265.969,-125.693 319.757,-114.884 360,-91.4851 360.083,-91.437 384.175,-67.3364 402.538,-48.962"/>
+<polygon fill="black" stroke="black" points="405.378,-51.0721 409.971,-41.5246 400.426,-46.124 405.378,-51.0721"/>
+</g>
+<!-- proc~lsq&#45;&gt;proc~enforce_bounds -->
+<g id="edge40" class="edge"><title>proc~lsq&#45;&gt;proc~enforce_bounds</title>
+<path fill="none" stroke="black" d="M229.116,-120.379C244.987,-110.974 266.582,-98.1772 284.147,-87.7683"/>
+<polygon fill="black" stroke="black" points="286.095,-90.6825 292.914,-82.5734 282.526,-84.6604 286.095,-90.6825"/>
+</g>
+<!-- proc~lsei -->
+<g id="node12" class="node"><title>proc~lsei</title>
+<a xlink:href="../proc/lsei.html" xlink:title="lsei">
+<polygon fill="#d9534f" stroke="#d9534f" points="342,-164.485 288,-164.485 288,-138.485 342,-138.485 342,-164.485"/>
+<text text-anchor="middle" x="315" y="-149.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
+</a>
+</g>
+<!-- proc~lsq&#45;&gt;proc~lsei -->
+<g id="edge42" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
+<path fill="none" stroke="black" d="M234.253,-138.027C247.427,-140.223 263.443,-142.892 277.727,-145.273"/>
+<polygon fill="black" stroke="black" points="277.316,-148.753 287.756,-146.944 278.467,-141.848 277.316,-148.753"/>
+</g>
+<!-- proc~lsei&#45;&gt;proc~ddot -->
+<g id="edge26" class="edge"><title>proc~lsei&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="black" d="M333.822,-164.519C366.027,-186.969 430.151,-232.361 450,-251.485 468.444,-269.256 467.971,-278.293 486,-296.485 486.652,-297.143 487.322,-297.8 488.007,-298.456"/>
+<polygon fill="black" stroke="black" points="485.875,-301.244 495.671,-305.281 490.531,-296.017 485.875,-301.244"/>
+</g>
+<!-- proc~lsei&#45;&gt;proc~dcopy -->
+<g id="edge32" class="edge"><title>proc~lsei&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="black" d="M342.006,-138.557C348.419,-134.647 354.877,-129.923 360,-124.485 383.72,-99.3095 375.534,-83.3704 396,-55.4851 397.544,-53.3809 399.252,-51.2851 401.037,-49.2451"/>
+<polygon fill="black" stroke="black" points="403.793,-51.425 408.118,-41.7531 398.705,-46.617 403.793,-51.425"/>
+</g>
+<!-- proc~lsei&#45;&gt;proc~dnrm2 -->
+<g id="edge36" class="edge"><title>proc~lsei&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="black" d="M342.116,-151.074C376.677,-150.551 436.598,-149.643 475.514,-149.053"/>
+<polygon fill="black" stroke="black" points="475.949,-152.547 485.895,-148.896 475.843,-145.548 475.949,-152.547"/>
+</g>
+<!-- proc~h12 -->
+<g id="node13" class="node"><title>proc~h12</title>
+<a xlink:href="../proc/h12.html" xlink:title="h12">
+<polygon fill="#d9534f" stroke="#d9534f" points="720,-148.485 666,-148.485 666,-122.485 720,-122.485 720,-148.485"/>
+<text text-anchor="middle" x="693" y="-133.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
+</a>
+</g>
+<!-- proc~lsei&#45;&gt;proc~h12 -->
+<g id="edge28" class="edge"><title>proc~lsei&#45;&gt;proc~h12</title>
+<path fill="none" stroke="black" d="M342.113,-146.278C375.723,-140.11 434.83,-130.206 486,-126.485 509.937,-124.745 516.01,-125.78 540,-126.485 579.494,-127.646 624.649,-130.488 655.61,-132.671"/>
+<polygon fill="black" stroke="black" points="655.711,-136.187 665.936,-133.411 656.212,-129.205 655.711,-136.187"/>
+</g>
+<!-- proc~lsi -->
+<g id="node14" class="node"><title>proc~lsi</title>
+<a xlink:href="../proc/lsi.html" xlink:title="lsi">
+<polygon fill="#d9534f" stroke="#d9534f" points="450,-199.485 396,-199.485 396,-173.485 450,-173.485 450,-199.485"/>
+<text text-anchor="middle" x="423" y="-184.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
+</a>
+</g>
+<!-- proc~lsei&#45;&gt;proc~lsi -->
+<g id="edge30" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
+<path fill="none" stroke="black" d="M342.253,-160.317C355.555,-164.628 371.754,-169.878 386.142,-174.54"/>
+<polygon fill="black" stroke="black" points="385.164,-177.903 395.756,-177.656 387.322,-171.243 385.164,-177.903"/>
+</g>
+<!-- proc~hfti -->
+<g id="node15" class="node"><title>proc~hfti</title>
+<a xlink:href="../proc/hfti.html" xlink:title="hfti">
+<polygon fill="#d9534f" stroke="#d9534f" points="630,-81.4851 576,-81.4851 576,-55.4851 630,-55.4851 630,-81.4851"/>
+<text text-anchor="middle" x="603" y="-66.0351" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">hfti</text>
+</a>
+</g>
+<!-- proc~lsei&#45;&gt;proc~hfti -->
+<g id="edge34" class="edge"><title>proc~lsei&#45;&gt;proc~hfti</title>
+<path fill="none" stroke="black" d="M334.389,-138.379C342.372,-132.918 351.681,-126.466 360,-120.485 376.238,-108.81 377.44,-100.938 396,-93.4851 452.051,-70.9777 522.975,-67.1898 565.572,-67.2808"/>
+<polygon fill="black" stroke="black" points="565.732,-70.7824 575.765,-67.3785 565.799,-63.7828 565.732,-70.7824"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~ddot -->
+<g id="edge12" class="edge"><title>proc~lsi&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="black" d="M438.102,-199.598C442.311,-203.75 446.644,-208.552 450,-213.485 472.615,-246.732 461.725,-264.431 486,-296.485 486.452,-297.082 486.923,-297.672 487.411,-298.255"/>
+<polygon fill="black" stroke="black" points="484.924,-300.718 494.44,-305.375 489.905,-295.8 484.924,-300.718"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~daxpy -->
+<g id="edge16" class="edge"><title>proc~lsi&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="black" d="M436.29,-199.564C440.692,-203.952 445.591,-208.896 450,-213.485 466.343,-230.495 468.813,-236.328 486,-252.485 486.793,-253.231 487.608,-253.98 488.438,-254.729"/>
+<polygon fill="black" stroke="black" points="486.261,-257.473 496.122,-261.348 490.83,-252.17 486.261,-257.473"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
+<g id="edge14" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="black" d="M450.003,-175.084C458.292,-171.584 467.557,-167.672 476.377,-163.948"/>
+<polygon fill="black" stroke="black" points="477.854,-167.124 485.705,-160.01 475.131,-160.675 477.854,-167.124"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~h12 -->
+<g id="edge18" class="edge"><title>proc~lsi&#45;&gt;proc~h12</title>
+<path fill="none" stroke="black" d="M450.061,-183.477C473.844,-180.669 509.343,-176.076 540,-170.485 579.859,-163.216 625.032,-152.583 655.898,-144.947"/>
+<polygon fill="black" stroke="black" points="656.933,-148.296 665.79,-142.481 655.24,-141.504 656.933,-148.296"/>
+</g>
+<!-- proc~ldp -->
+<g id="node16" class="node"><title>proc~ldp</title>
+<a xlink:href="../proc/ldp.html" xlink:title="ldp">
+<polygon fill="#d9534f" stroke="#d9534f" points="540,-243.485 486,-243.485 486,-217.485 540,-217.485 540,-243.485"/>
+<text text-anchor="middle" x="513" y="-228.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
+</a>
+</g>
+<!-- proc~lsi&#45;&gt;proc~ldp -->
+<g id="edge20" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<path fill="none" stroke="black" d="M450.003,-199.687C458.534,-203.857 468.098,-208.533 477.148,-212.957"/>
+<polygon fill="black" stroke="black" points="475.805,-216.197 486.326,-217.445 478.88,-209.908 475.805,-216.197"/>
+</g>
+<!-- proc~hfti&#45;&gt;proc~h12 -->
+<g id="edge24" class="edge"><title>proc~hfti&#45;&gt;proc~h12</title>
+<path fill="none" stroke="black" d="M620.781,-81.7222C633.971,-91.5411 652.158,-105.08 666.98,-116.115"/>
+<polygon fill="black" stroke="black" points="665.144,-119.112 675.256,-122.276 669.324,-113.497 665.144,-119.112"/>
+</g>
+<!-- proc~diff -->
+<g id="node18" class="node"><title>proc~diff</title>
+<a xlink:href="../proc/diff.html" xlink:title="diff">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="720,-263.485 666,-263.485 666,-237.485 720,-237.485 720,-263.485"/>
+<text text-anchor="middle" x="693" y="-248.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
+</a>
+</g>
+<!-- proc~hfti&#45;&gt;proc~diff -->
+<g id="edge22" class="edge"><title>proc~hfti&#45;&gt;proc~diff</title>
+<path fill="none" stroke="black" d="M605.766,-81.6155C612.322,-110.443 630.947,-180.52 666,-228.485 666.368,-228.989 666.75,-229.487 667.145,-229.98"/>
+<polygon fill="black" stroke="black" points="664.886,-232.68 674.35,-237.442 669.921,-227.817 664.886,-232.68"/>
+</g>
+<!-- proc~nnls -->
+<g id="node17" class="node"><title>proc~nnls</title>
+<a xlink:href="../proc/nnls.html" xlink:title="nnls">
+<polygon fill="#d9534f" stroke="#d9534f" points="630,-243.485 576,-243.485 576,-217.485 630,-217.485 630,-243.485"/>
+<text text-anchor="middle" x="603" y="-228.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
+</a>
+</g>
+<!-- proc~ldp&#45;&gt;proc~nnls -->
+<g id="edge8" class="edge"><title>proc~ldp&#45;&gt;proc~nnls</title>
+<path fill="none" stroke="black" d="M540.003,-230.485C548.028,-230.485 556.967,-230.485 565.531,-230.485"/>
+<polygon fill="black" stroke="black" points="565.705,-233.985 575.705,-230.485 565.705,-226.985 565.705,-233.985"/>
+</g>
+<!-- proc~ldp&#45;&gt;proc~diff -->
+<g id="edge10" class="edge"><title>proc~ldp&#45;&gt;proc~diff</title>
+<path fill="none" stroke="black" d="M540.071,-242.178C551.01,-246.307 563.893,-250.432 576,-252.485 602.401,-256.962 632.633,-256.299 655.752,-254.601"/>
+<polygon fill="black" stroke="black" points="656.158,-258.08 665.834,-253.763 655.579,-251.104 656.158,-258.08"/>
+</g>
+<!-- proc~nnls&#45;&gt;proc~h12 -->
+<g id="edge4" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
+<path fill="none" stroke="black" d="M616.285,-217.401C620.686,-213.013 625.587,-208.07 630,-203.485 645.114,-187.783 661.867,-169.665 674.296,-156.081"/>
+<polygon fill="black" stroke="black" points="676.913,-158.405 681.069,-148.659 671.743,-153.686 676.913,-158.405"/>
+</g>
+<!-- proc~nnls&#45;&gt;proc~diff -->
+<g id="edge6" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
+<path fill="none" stroke="black" d="M630.003,-236.486C638.116,-238.289 647.163,-240.299 655.813,-242.221"/>
+<polygon fill="black" stroke="black" points="655.184,-245.667 665.705,-244.42 656.702,-238.834 655.184,-245.667"/>
+</g>
+<!-- proc~g1 -->
+<g id="node19" class="node"><title>proc~g1</title>
+<a xlink:href="../proc/g1.html" xlink:title="g1">
+<polygon fill="#d9534f" stroke="#d9534f" points="720,-219.485 666,-219.485 666,-193.485 720,-193.485 720,-219.485"/>
+<text text-anchor="middle" x="693" y="-204.035" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
+</a>
+</g>
+<!-- proc~nnls&#45;&gt;proc~g1 -->
+<g id="edge2" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
+<path fill="none" stroke="black" d="M630.003,-223.284C638.116,-221.121 647.163,-218.708 655.813,-216.402"/>
+<polygon fill="black" stroke="black" points="656.945,-219.722 665.705,-213.764 655.141,-212.959 656.945,-219.722"/>
+</g>
+</g>
+</svg>
+</div>
+                <script>var panprocslsqpCallsGraph = svgPanZoom('#procslsqpCallsGraph', {
+                    zoomEnabled: true,
+                    controlIconsEnabled: true,
+                    fit: true,
+                    center: true,});
+                    </script>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(0.817602 0.817602) rotate(0) translate(4 30)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 781,-30 781,5 -4,5"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-26 2.13163e-14,-26 0,-1.24345e-14 54,-3.55271e-15 54,-26"/>
+<text text-anchor="middle" x="27" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-26 72,-26 72,-1.24345e-14 138,-3.55271e-15 138,-26"/>
+<text text-anchor="middle" x="105" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="210,-26 156,-26 156,-1.24345e-14 210,-3.55271e-15 210,-26"/>
+<text text-anchor="middle" x="183" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="292,-26 228,-26 228,-1.24345e-14 292,-3.55271e-15 292,-26"/>
+<text text-anchor="middle" x="260" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
+<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="436,-26 382,-26 382,-1.24345e-14 436,-3.55271e-15 436,-26"/>
+<text text-anchor="middle" x="409" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="590,-26 454,-26 454,-1.24345e-14 590,-3.55271e-15 590,-26"/>
+<text text-anchor="middle" x="522" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="662,-26 608,-26 608,-1.24345e-14 662,-3.55271e-15 662,-26"/>
+<text text-anchor="middle" x="635" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="776,-26 680,-26 680,-1.24345e-14 776,-3.55271e-15 776,-26"/>
+<text text-anchor="middle" x="728" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+     
+     
+     <h3>Called By</h3>
+     
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: proc~~slsqp~~CalledByGraph Pages: 1 -->
+<svg id="procslsqpCalledByGraph" width="180pt" height="34pt"
+ viewBox="0.00 0.00 180.00 34.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~slsqp~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 30)">
+<title>proc~~slsqp~~CalledByGraph</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 177,-30 177,5 -4,5"/>
+<!-- proc~slsqp -->
+<g id="node1" class="node"><title>proc~slsqp</title>
+<polygon fill="none" stroke="black" points="172,-26 118,-26 118,-1.24345e-14 172,-3.55271e-15 172,-26"/>
+<text text-anchor="middle" x="145" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp</text>
+</g>
+<!-- proc~slsqp_wrapper -->
+<g id="node2" class="node"><title>proc~slsqp_wrapper</title>
+<a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
+<polygon fill="#d9534f" stroke="#d9534f" points="82,-26 4.26326e-14,-26 0,-1.24345e-14 82,-3.55271e-15 82,-26"/>
+<text text-anchor="middle" x="41" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
+</a>
+</g>
+<!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
+<g id="edge2" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
+<path fill="none" stroke="black" d="M82.1036,-13C90.5669,-13 99.4334,-13 107.751,-13"/>
+<polygon fill="black" stroke="black" points="107.921,-16.5001 117.921,-13 107.921,-9.5001 107.921,-16.5001"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+Nodes of different colours represent the following:
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.26.3 (20100126.1600)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="28pt"
+ viewBox="0.00 0.00 641.00 27.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(0.817602 0.817602) rotate(0) translate(4 30)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 781,-30 781,5 -4,5"/>
+<!-- Module -->
+<g id="node1" class="node"><title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-26 2.13163e-14,-26 0,-1.24345e-14 54,-3.55271e-15 54,-26"/>
+<text text-anchor="middle" x="27" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node"><title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-26 72,-26 72,-1.24345e-14 138,-3.55271e-15 138,-26"/>
+<text text-anchor="middle" x="105" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Type -->
+<g id="node3" class="node"><title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="210,-26 156,-26 156,-1.24345e-14 210,-3.55271e-15 210,-26"/>
+<text text-anchor="middle" x="183" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- Subroutine -->
+<g id="node4" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="292,-26 228,-26 228,-1.24345e-14 292,-3.55271e-15 292,-26"/>
+<text text-anchor="middle" x="260" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node5" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
+<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node6" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="436,-26 382,-26 382,-1.24345e-14 436,-3.55271e-15 436,-26"/>
+<text text-anchor="middle" x="409" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node7" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="590,-26 454,-26 454,-1.24345e-14 590,-3.55271e-15 590,-26"/>
+<text text-anchor="middle" x="522" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node8" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="662,-26 608,-26 608,-1.24345e-14 662,-3.55271e-15 662,-26"/>
+<text text-anchor="middle" x="635" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node9" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="776,-26 680,-26 680,-1.24345e-14 776,-3.55271e-15 776,-26"/>
+<text text-anchor="middle" x="728" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<h5>Module Graph</h5>
+<p>Solid arrows point from a parent (sub)module to the submodule which is
+descended from it. Dashed arrows point from a module being used to the
+module using it.</p>
+<h5>Type Graph</h5>
+<p>Solid arrows point from one derived type to another which extends
+(inherits from) it. Dashed arrows point from a derived type to another
+type containing it as a components, with a label listing the name(s) of
+said component(s).</p>
+<h5>Call Graph</h5>
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+     
+    <br>
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-il"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>il</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-im"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>im</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ir"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ir</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-is"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>is</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iu"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>iu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iv"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>iv</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iw"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>iw</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ix%7E5"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ix</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mineq%7E2"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>mineq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n1%7E3"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre>    <span class="k">subroutine </span><span class="n">slsqp</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">la</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">iter</span><span class="p">,</span><span class="n">mode</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">l_w</span><span class="p">,</span> <span class="p">&amp;</span>
+                     <span class="n">jw</span><span class="p">,</span><span class="n">l_jw</span><span class="p">,</span><span class="n">sdat</span><span class="p">,</span><span class="n">ldat</span><span class="p">)</span>
+
+    <span class="k">implicit none</span>
+
+<span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">m</span>                     <span class="c">!! is the total number of constraints, m &gt;= 0</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">meq</span>                   <span class="c">!! is the number of equality constraints, meq &gt;= 0</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">la</span>                    <span class="c">!! see a, la &gt;= max(m,1)</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">n</span>                     <span class="c">!! is the number of varibles, n &gt;= 1</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span>    <span class="c">!! x() stores the current iterate of the n vector x</span>
+                                                <span class="c">!! on entry x() must be initialized. on exit x()</span>
+                                                <span class="c">!! stores the solution vector x if mode = 0.</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">xl</span>      <span class="c">!! xl() stores an n vector of lower bounds xl to x.</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">xu</span>      <span class="c">!! xu() stores an n vector of upper bounds xu to x.</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">f</span>                    <span class="c">!! is the value of the objective function.</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">la</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">c</span>      <span class="c">!! c() stores the m vector c of constraints,</span>
+                                                <span class="c">!! equality constraints (if any) first.</span>
+                                                <span class="c">!! dimension of c must be greater or equal la,</span>
+                                                <span class="c">!! which must be greater or equal max(1,m).</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">g</span>     <span class="c">!! g() stores the n vector g of partials of the</span>
+                                                <span class="c">!! objective function; dimension of g must be</span>
+                                                <span class="c">!! greater or equal n+1.</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">la</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span>  <span class="n">a</span> <span class="c">!! the la by n + 1 array a() stores</span>
+                                                <span class="c">!!  the m by n matrix a of constraint normals.</span>
+                                                <span class="c">!!  a() has first dimensioning parameter la,</span>
+                                                <span class="c">!!  which must be greater or equal max(1,m).</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">acc</span>   <span class="c">!! abs(acc) controls the final accuracy.</span>
+                                    <span class="c">!! if acc &lt; zero an exact linesearch is performed,</span>
+                                    <span class="c">!! otherwise an armijo-type linesearch is used.</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">iter</span>   <span class="c">!! prescribes the maximum number of iterations.</span>
+                                    <span class="c">!! on exit iter indicates the number of iterations.</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">mode</span>   <span class="c">!! mode controls calculation:</span>
+                                    <span class="c">!! reverse communication is used in the sense that</span>
+                                    <span class="c">!! the program is initialized by `mode = 0`; then it is</span>
+                                    <span class="c">!! to be called repeatedly by the user until a return</span>
+                                    <span class="c">!! with `mode /= abs(1)` takes place.</span>
+                                    <span class="c">!! if `mode = -1` gradients have to be calculated,</span>
+                                    <span class="c">!! while with `mode = 1` functions have to be calculated.</span>
+                                    <span class="c">!! mode must not be changed between subsequent calls of sqp.</span>
+                                    <span class="c">!! **evaluation modes**:</span>
+                                    <span class="c">!!    * -1 *: gradient evaluation, (g&amp;a)</span>
+                                    <span class="c">!!    *  0 *: *on entry*: initialization, (f,g,c&amp;a),</span>
+                                    <span class="c">!!            *on exit*: required accuracy for solution obtained</span>
+                                    <span class="c">!!    *  1 *: function evaluation, (f&amp;c)</span>
+                                    <span class="c">!! **failure modes**:</span>
+                                    <span class="c">!!     * 2 *: number of equality contraints larger than n</span>
+                                    <span class="c">!!     * 3 *: more than 3*n iterations in lsq subproblem</span>
+                                    <span class="c">!!     * 4 *: inequality constraints incompatible</span>
+                                    <span class="c">!!     * 5 *: singular matrix e in lsq subproblem</span>
+                                    <span class="c">!!     * 6 *: singular matrix c in lsq subproblem</span>
+                                    <span class="c">!!     * 7 *: rank-deficient equality constraint subproblem hfti</span>
+                                    <span class="c">!!     * 8 *: positive directional derivative for linesearch</span>
+                                    <span class="c">!!     * 9 *: more than iter iterations in sqp</span>
+                                    <span class="c">!!  * &gt;=10 *: working space w or jw too small,</span>
+                                    <span class="c">!!            w should be enlarged to l_w=mode/1000,</span>
+                                    <span class="c">!!            jw should be enlarged to l_jw=mode-1000*l_w</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">l_w</span>       <span class="c">!!   the length of w, which should be at least:</span>
+                                    <span class="c">!!   (3*n1+m)*(n1+1)                        *for lsq*</span>
+                                    <span class="c">!!  +(n1-meq+1)*(mineq+2) + 2*mineq         *for lsi*</span>
+                                    <span class="c">!!  +(n1+mineq)*(n1-meq) + 2*meq + n1       *for lsei*</span>
+                                    <span class="c">!!  + n1*n/2 + 2*m + 3*n + 3*n1 + 1         *for slsqpb*</span>
+                                    <span class="c">!!   with mineq = m - meq + 2*n1  &amp;  n1 = n+1</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">l_jw</span>      <span class="c">!! the length of jw which should be at least</span>
+                                    <span class="c">!! `mineq = m - meq + 2*(n+1)`.</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">l_w</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">w</span>  <span class="c">!! w() is a one dimensional working space.</span>
+                                                <span class="c">!! the first `m+n+n*n1/2` elements of w must not be</span>
+                                                <span class="c">!! changed between subsequent calls of slsqp.</span>
+                                                <span class="c">!! on return w(1) ... w(m) contain the multipliers</span>
+                                                <span class="c">!! associated with the general constraints, while</span>
+                                                <span class="c">!! w(m+1) ... w(m+n(n+1)/2) store the cholesky factor</span>
+                                                <span class="c">!! l*d*l(t) of the approximate hessian of the</span>
+                                                <span class="c">!! lagrangian columnwise dense as lower triangular</span>
+                                                <span class="c">!! unit matrix l with d in its &#39;diagonal&#39; and</span>
+                                                <span class="c">!! w(m+n(n+1)/2+n+2 ... w(m+n(n+1)/2+n+2+m+2n)</span>
+                                                <span class="c">!! contain the multipliers associated with all</span>
+                                                <span class="c">!! all constraints of the quadratic program finding</span>
+                                                <span class="c">!! the search direction to the solution x*</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">dimension</span><span class="p">(</span><span class="n">l_jw</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">jw</span> <span class="c">!! jw() is a one dimensional integer working space</span>
+    <span class="k">type</span><span class="p">(</span><span class="n">slsqpb_data</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">sdat</span>  <span class="c">!! data for [[slsqpb]].</span>
+    <span class="k">type</span><span class="p">(</span><span class="n">linmin_data</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ldat</span>  <span class="c">!! data for [[linmin]].</span>
+
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">il</span> <span class="p">,</span> <span class="n">im</span> <span class="p">,</span> <span class="n">ir</span> <span class="p">,</span> <span class="k">is</span> <span class="p">,</span> <span class="n">iu</span> <span class="p">,</span> <span class="n">iv</span> <span class="p">,</span> <span class="n">iw</span> <span class="p">,</span> <span class="n">ix</span> <span class="p">,</span> <span class="n">mineq</span><span class="p">,</span> <span class="n">n1</span>
+
+<span class="c">!.... note: there seems to be two slightly different specifications</span>
+<span class="c">!     of the appropriate length of w. are they equivalent???</span>
+
+     <span class="c">!         notice:    for proper dimensioning of w it is recommended to</span>
+     <span class="c">!                    copy the following statements into the head of</span>
+     <span class="c">!                    the calling program (and remove the comment c)</span>
+     <span class="c">!#######################################################################</span>
+     <span class="c">!     integer len_w, len_jw, m, n, n1, meq, mineq</span>
+     <span class="c">!     parameter (m=... , meq=... , n=...  )</span>
+     <span class="c">!     parameter (n1= n+1, mineq= m-meq+n1+n1)</span>
+     <span class="c">!     parameter (len_w=</span>
+     <span class="c">!    $           (3*n1+m)*(n1+1)</span>
+     <span class="c">!    $          +(n1-meq+1)*(mineq+2) + 2*mineq</span>
+     <span class="c">!    $          +(n1+mineq)*(n1-meq) + 2*meq + n1</span>
+     <span class="c">!    $          +(n+1)*n/2 + 2*m + 3*n + 3*n1 + 1,</span>
+     <span class="c">!    $           len_jw=mineq)</span>
+     <span class="c">!     real(wp) w(len_w)</span>
+     <span class="c">!     integer          jw(len_jw)</span>
+     <span class="c">!#######################################################################</span>
+
+<span class="c">!     dim(w) =         n1*(n1+1) + meq*(n1+1) + mineq*(n1+1)  for lsq</span>
+<span class="c">!                    +(n1-meq+1)*(mineq+2) + 2*mineq          for lsi</span>
+<span class="c">!                    +(n1+mineq)*(n1-meq) + 2*meq + n1        for lsei</span>
+<span class="c">!                    + n1*n/2 + 2*m + 3*n +3*n1 + 1           for slsqpb</span>
+<span class="c">!                      with mineq = m - meq + 2*n1  &amp;  n1 = n+1</span>
+
+<span class="c">!   check length of working arrays</span>
+
+      <span class="n">n1</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">mineq</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">meq</span> <span class="o">+</span> <span class="n">n1</span> <span class="o">+</span> <span class="n">n1</span>
+      <span class="n">il</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">n1</span><span class="o">+</span><span class="n">m</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">n1</span><span class="o">-</span><span class="n">meq</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">mineq</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">mineq</span> <span class="o">+</span> <span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="n">mineq</span><span class="p">)&amp;</span>
+           <span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">-</span><span class="n">meq</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">meq</span> <span class="o">+</span> <span class="n">n1</span><span class="o">*</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">m</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">n</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">n1</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">im</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">mineq</span><span class="p">,</span><span class="n">n1</span><span class="o">-</span><span class="n">meq</span><span class="p">)</span>
+      <span class="k">if</span> <span class="p">(</span> <span class="n">l_w</span><span class="o">&lt;</span><span class="n">il</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">l_jw</span><span class="o">&lt;</span><span class="n">im</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">         </span><span class="n">mode</span> <span class="o">=</span> <span class="mi">1000</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">il</span><span class="p">)</span>
+         <span class="n">mode</span> <span class="o">=</span> <span class="n">mode</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">im</span><span class="p">)</span>
+         <span class="k">return</span>
+<span class="k">      end if</span>
+
+<span class="c">!   prepare data for calling sqpbdy  -  initial addresses in w</span>
+
+      <span class="n">im</span> <span class="o">=</span> <span class="mi">1</span>
+      <span class="n">il</span> <span class="o">=</span> <span class="n">im</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+      <span class="n">il</span> <span class="o">=</span> <span class="n">im</span> <span class="o">+</span> <span class="n">la</span>
+      <span class="n">ix</span> <span class="o">=</span> <span class="n">il</span> <span class="o">+</span> <span class="n">n1</span><span class="o">*</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">ir</span> <span class="o">=</span> <span class="n">ix</span> <span class="o">+</span> <span class="n">n</span>
+      <span class="k">is</span> <span class="o">=</span> <span class="n">ir</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="p">)</span>
+      <span class="k">is</span> <span class="o">=</span> <span class="n">ir</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="n">la</span>
+      <span class="n">iu</span> <span class="o">=</span> <span class="k">is</span> <span class="o">+</span> <span class="n">n1</span>
+      <span class="n">iv</span> <span class="o">=</span> <span class="n">iu</span> <span class="o">+</span> <span class="n">n1</span>
+      <span class="n">iw</span> <span class="o">=</span> <span class="n">iv</span> <span class="o">+</span> <span class="n">n1</span>
+
+      <span class="n">sdat</span><span class="p">%</span><span class="n">n1</span> <span class="o">=</span> <span class="n">n1</span>
+
+      <span class="k">call </span><span class="n">slsqpb</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">la</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">iter</span><span class="p">,</span><span class="n">mode</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="n">ir</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="n">il</span><span class="p">),</span> <span class="p">&amp;</span>
+                  <span class="n">w</span><span class="p">(</span><span class="n">ix</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="n">im</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="k">is</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="n">iu</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="n">iv</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="n">iw</span><span class="p">),</span><span class="n">jw</span><span class="p">,&amp;</span>
+                  <span class="n">sdat</span><span class="p">%</span><span class="n">t</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">f0</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">h1</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">h2</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">h3</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">h4</span><span class="p">,&amp;</span>
+                  <span class="n">sdat</span><span class="p">%</span><span class="n">n1</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">n2</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">n3</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">t0</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">gs</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">tol</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">line</span><span class="p">,&amp;</span>
+                  <span class="n">sdat</span><span class="p">%</span><span class="n">alpha</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">iexact</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">incons</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">ireset</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">itermx</span><span class="p">,&amp;</span>
+                  <span class="n">ldat</span><span class="p">)</span>
+
+      <span class="k">end subroutine </span><span class="n">slsqp</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    
+    </div>
+  </div>
+
+    <hr>
+    <footer>
+        <div class="row">
+        <div class="col-md-4">&copy; 2016 </div>
+	<div class="col-md-4"><span class="text-center"> slsqp was developed by Jacob Williams</span></div>
+        <div class="col-md-4"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a></span></div>
+        </div>
+        <br>
+    </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
