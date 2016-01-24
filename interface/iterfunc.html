@@ -10,7 +10,7 @@
     <meta name="author" content="Chris MacMackin" >
     <link rel="icon" href="../favicon.png">
 
-    <title>slsqp_kinds.f90 &ndash; slsqp</title>
+    <title>iterfunc &ndash; slsqp</title>
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/pygments.css" rel="stylesheet">
@@ -89,8 +89,8 @@
     
   
   <div class="row">
-    <h1>slsqp_kinds.f90
-    <small>Source File</small>
+    <h1>iterfunc
+	 <small>Abstract Interface</small>
     
     </h1>
 	 
@@ -104,18 +104,23 @@
      
     
     
-    <li><i class="fa fa-code"></i><a href="../src/slsqp_kinds.f90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/slsqp_module.f90"> Source File</a></li>
      
   </ul>
   <ol class="breadcrumb in-well text-right">
   
-     <li class="active">slsqp_kinds.f90</li>
+     <li><a href='../sourcefile/slsqp_module.f90.html'>slsqp_module.f90</a></li>
+  
+     <li><a href='../module/slsqp_module.html'>slsqp_module</a></li>
+  
+     <li class="active">iterfunc</li>
   </ol>
 </div>
 </div>
 </div>
     
   </div>
+  
   <div class="row">
     <div class="col-lg-3">
     
@@ -127,16 +132,6 @@
   
   
   
-  <div class="panel panel-primary">
-    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods">Modules</a></h3></div>
-    <div id="mods" class="panel-collapse collapse">
-        <div class="list-group">
-          
-          <a class="list-group-item" href="../module/slsqp_kinds.html">slsqp_kinds</a>
-          
-        </div>
-    </div>
-  </div>
   
   
   
@@ -150,68 +145,143 @@
   
   
   
-  
-  
-  <div class="panel panel-primary">
-    <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
-    <div class="list-group">
-      <a class="list-group-item" href="../sourcefile/slsqp_kinds.f90.html#src">slsqp_kinds.f90</a>
-    </div>
-  </div>
-  
-  <hr>
   
   <div class="panel panel-default">
-    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles">All Source Files</a></h3></div>
-    <div id="allfiles" class="panel-collapse collapse">
+    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allabsints">All Abstract Interfaces</a></h3></div>
+    <div id="allabsints" class="panel-collapse collapse">
         <div class="list-group">
           
-          <a class="list-group-item" href="../sourcefile/slsqp_core.f90.html">slsqp_core.f90</a>
+          <a class="list-group-item" href="../interface/func.html">func</a>
           
-          <a class="list-group-item" href="../sourcefile/slsqp_kinds.f90.html">slsqp_kinds.f90</a>
+          <a class="list-group-item" href="../interface/grad.html">grad</a>
           
-          <a class="list-group-item" href="../sourcefile/slsqp_module.f90.html">slsqp_module.f90</a>
-          
-          <a class="list-group-item" href="../sourcefile/slsqp_support.f90.html">slsqp_support.f90</a>
-          
-          <a class="list-group-item" href="../sourcefile/slsqp_test.f90.html">slsqp_test.f90</a>
+          <a class="list-group-item" href="../interface/iterfunc.html">iterfunc</a>
           
         </div>
     </div>
-  </div>
+  </div> 
   
 </div>
 
     </div>
+    
     <div class="col-lg-9" id='text'>
+	
+    
+    <h2>abstract interface <br>
+    
+private subroutine iterfunc(me, iter, x, f, c)
     
     
-    <section>
-    <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="hl"><pre><a name="ln-1"></a><span class="c">!*****************************************************************************************</span>
-<a name="ln-2"></a><span class="c">!&gt; author: Jacob Williams</span>
-<a name="ln-3"></a><span class="c">!  date: 12/22/2015</span>
-<a name="ln-4"></a><span class="c">!  license: BSD</span>
-<a name="ln-5"></a><span class="c">!</span>
-<a name="ln-6"></a><span class="c">!  Numeric kind definitions.</span>
-<a name="ln-7"></a>
-<a name="ln-8"></a>    <span class="k">module </span><span class="n">slsqp_kinds</span>
-<a name="ln-9"></a>
-<a name="ln-10"></a>    <span class="k">use</span><span class="p">,</span> <span class="k">intrinsic</span> <span class="kd">::</span> <span class="n">iso_fortran_env</span><span class="p">,</span> <span class="n">only</span><span class="p">:</span> <span class="n">real64</span>
-<a name="ln-11"></a>
-<a name="ln-12"></a>    <span class="k">implicit none</span>
-<a name="ln-13"></a>
-<a name="ln-14"></a><span class="k">    private</span>
-<a name="ln-15"></a>
-<a name="ln-16"></a><span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">parameter</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">wp</span> <span class="o">=</span> <span class="n">real64</span>  <span class="c">!! Using &quot;double precision&quot; real kinds</span>
-<a name="ln-17"></a>
-<a name="ln-18"></a>    <span class="k">end module </span><span class="n">slsqp_kinds</span>
-<a name="ln-19"></a><span class="c">!*****************************************************************************************</span>
-</pre></div>
+    
+</h2>    
+    
 
-    </section>
-    </div>
-  </div>
+    
+  
+
+
+    <h3>Arguments</h3>
+    
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-me%7E3"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>me</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iter"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iter</strong></td><td><p>iteration number</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-x%7E4"></span>real(kind=wp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>x</strong></td><td><p>optimization variable vector</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-f%7E3"></span>real(kind=wp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>f</strong></td><td><p>value of the objective function</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-c%7E2"></span>real(kind=wp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>c</strong></td><td><p>the constraint vector <code>dimension(m)</code>,
+ equality constraints (if any) first.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+    
+    
+    <h3>Description</h3>
+    <p>for reporting an interation</p>
+    
+    <br>
+
+ </div>
+</div>
 
     <hr>
     <footer>

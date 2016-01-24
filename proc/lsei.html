@@ -231,6 +231,8 @@
           
           <a class="list-group-item" href="../proc/nnls.html">nnls</a>
           
+          <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
+          
           <a class="list-group-item" href="../proc/report_message.html">report_message</a>
           
           <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
@@ -281,7 +283,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-c%7E6"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-c%7E7"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -326,7 +328,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-f%7E8"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-f%7E9"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -416,7 +418,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-me%7E7"></span>integer,</td>
+  <td><span class="anchor" id="variable-me%7E8"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -476,7 +478,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-x%7E10"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-x%7E11"></span>real(kind=wp),</td>
   <td>intent(out),</td>
   <td></td>
   
@@ -609,15 +611,15 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
 <polygon fill="none" stroke="black" points="54,-147 2.13163e-14,-147 0,-121 54,-121 54,-147"/>
 <text text-anchor="middle" x="27" y="-131.55" font-family="Helvetica,sans-Serif" font-size="10.50">lsei</text>
 </g>
-<!-- proc~ddot -->
-<g id="node2" class="node"><title>proc~ddot</title>
-<a xlink:href="../proc/ddot.html" xlink:title="ddot">
+<!-- proc~dnrm2 -->
+<g id="node2" class="node"><title>proc~dnrm2</title>
+<a xlink:href="../proc/dnrm2.html" xlink:title="dnrm2">
 <polygon fill="#d94e8f" stroke="#d94e8f" points="234,-278 180,-278 180,-252 234,-252 234,-278"/>
-<text text-anchor="middle" x="207" y="-262.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
+<text text-anchor="middle" x="207" y="-262.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
 </a>
 </g>
-<!-- proc~lsei&#45;&gt;proc~ddot -->
-<g id="edge26" class="edge"><title>proc~lsei&#45;&gt;proc~ddot</title>
+<!-- proc~lsei&#45;&gt;proc~dnrm2 -->
+<g id="edge26" class="edge"><title>proc~lsei&#45;&gt;proc~dnrm2</title>
 <path fill="none" stroke="black" d="M43.4084,-147.123C56.0229,-157.123 73.9502,-171.145 90,-183 120.076,-205.215 155.3,-229.699 179.18,-246.078"/>
 <polygon fill="black" stroke="black" points="177.514,-249.179 187.743,-251.937 181.467,-243.402 177.514,-249.179"/>
 </g>
@@ -645,17 +647,17 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
 <path fill="none" stroke="black" d="M54.003,-142.101C62.204,-144.561 71.3599,-147.308 80.095,-149.928"/>
 <polygon fill="black" stroke="black" points="79.121,-153.29 89.705,-152.812 81.1325,-146.586 79.121,-153.29"/>
 </g>
-<!-- proc~dcopy -->
-<g id="node5" class="node"><title>proc~dcopy</title>
-<a xlink:href="../proc/dcopy.html" xlink:title="dcopy">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-26 90,-26 90,-1.24345e-14 144,-3.55271e-15 144,-26"/>
-<text text-anchor="middle" x="117" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
+<!-- proc~ddot -->
+<g id="node5" class="node"><title>proc~ddot</title>
+<a xlink:href="../proc/ddot.html" xlink:title="ddot">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="234,-108 180,-108 180,-82 234,-82 234,-108"/>
+<text text-anchor="middle" x="207" y="-92.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
 </a>
 </g>
-<!-- proc~lsei&#45;&gt;proc~dcopy -->
-<g id="edge32" class="edge"><title>proc~lsei&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="black" d="M34.6101,-120.977C45.7672,-102.3 67.672,-67.1678 90,-40 91.6942,-37.9386 93.523,-35.858 95.4024,-33.8152"/>
-<polygon fill="black" stroke="black" points="98.2878,-35.8661 102.722,-26.2441 93.2553,-31.0005 98.2878,-35.8661"/>
+<!-- proc~lsei&#45;&gt;proc~ddot -->
+<g id="edge32" class="edge"><title>proc~lsei&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="black" d="M54.3381,-128.077C85.1765,-121.395 135.501,-110.492 169.877,-103.043"/>
+<polygon fill="black" stroke="black" points="170.962,-106.389 179.994,-100.851 169.48,-99.5482 170.962,-106.389"/>
 </g>
 <!-- proc~hfti -->
 <g id="node6" class="node"><title>proc~hfti</title>
@@ -669,59 +671,59 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
 <path fill="none" stroke="black" d="M50.4507,-120.961C79.7078,-105.578 131.772,-81.0732 180,-73 203.671,-69.0376 210.427,-68.4937 234,-73 243.069,-74.7337 252.498,-77.7534 261.213,-81.1079"/>
 <polygon fill="black" stroke="black" points="260.113,-84.4391 270.693,-84.9868 262.764,-77.9605 260.113,-84.4391"/>
 </g>
-<!-- proc~dnrm2 -->
-<g id="node7" class="node"><title>proc~dnrm2</title>
-<a xlink:href="../proc/dnrm2.html" xlink:title="dnrm2">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="234,-108 180,-108 180,-82 234,-82 234,-108"/>
-<text text-anchor="middle" x="207" y="-92.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
+<!-- proc~dcopy -->
+<g id="node7" class="node"><title>proc~dcopy</title>
+<a xlink:href="../proc/dcopy.html" xlink:title="dcopy">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-26 90,-26 90,-1.24345e-14 144,-3.55271e-15 144,-26"/>
+<text text-anchor="middle" x="117" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
 </a>
 </g>
-<!-- proc~lsei&#45;&gt;proc~dnrm2 -->
-<g id="edge36" class="edge"><title>proc~lsei&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="black" d="M54.3381,-128.077C85.1765,-121.395 135.501,-110.492 169.877,-103.043"/>
-<polygon fill="black" stroke="black" points="170.962,-106.389 179.994,-100.851 169.48,-99.5482 170.962,-106.389"/>
+<!-- proc~lsei&#45;&gt;proc~dcopy -->
+<g id="edge36" class="edge"><title>proc~lsei&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="black" d="M34.6101,-120.977C45.7672,-102.3 67.672,-67.1678 90,-40 91.6942,-37.9386 93.523,-35.858 95.4024,-33.8152"/>
+<polygon fill="black" stroke="black" points="98.2878,-35.8661 102.722,-26.2441 93.2553,-31.0005 98.2878,-35.8661"/>
 </g>
-<!-- proc~lsi&#45;&gt;proc~ddot -->
-<g id="edge12" class="edge"><title>proc~lsi&#45;&gt;proc~ddot</title>
+<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
+<g id="edge14" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
 <path fill="none" stroke="black" d="M127.096,-174.136C139.231,-189.732 160.413,-216.357 180,-238 181.96,-240.166 184.045,-242.386 186.154,-244.577"/>
 <polygon fill="black" stroke="black" points="183.759,-247.133 193.271,-251.798 188.744,-242.219 183.759,-247.133"/>
 </g>
 <!-- proc~lsi&#45;&gt;proc~h12 -->
-<g id="edge18" class="edge"><title>proc~lsi&#45;&gt;proc~h12</title>
+<g id="edge12" class="edge"><title>proc~lsi&#45;&gt;proc~h12</title>
 <path fill="none" stroke="black" d="M136.817,-174.088C139.246,-175.728 141.686,-177.394 144,-179 160.214,-190.254 161.518,-198.075 180,-205 236.389,-226.129 307.211,-227.786 349.695,-226.379"/>
 <polygon fill="black" stroke="black" points="350.01,-229.869 359.86,-225.965 349.725,-222.875 350.01,-229.869"/>
 </g>
-<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
-<g id="edge14" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
+<!-- proc~lsi&#45;&gt;proc~ddot -->
+<g id="edge20" class="edge"><title>proc~lsi&#45;&gt;proc~ddot</title>
 <path fill="none" stroke="black" d="M134.781,-147.961C147.971,-138.288 166.158,-124.951 180.98,-114.081"/>
 <polygon fill="black" stroke="black" points="183.262,-116.748 189.256,-108.012 179.122,-111.104 183.262,-116.748"/>
 </g>
-<!-- proc~daxpy -->
-<g id="node8" class="node"><title>proc~daxpy</title>
-<a xlink:href="../proc/daxpy.html" xlink:title="daxpy">
-<polygon fill="#d9534f" stroke="#d9534f" points="234,-196 180,-196 180,-170 234,-170 234,-196"/>
-<text text-anchor="middle" x="207" y="-180.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
-</a>
-</g>
-<!-- proc~lsi&#45;&gt;proc~daxpy -->
-<g id="edge16" class="edge"><title>proc~lsi&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="black" d="M144.003,-167.601C152.116,-169.584 161.163,-171.795 169.813,-173.91"/>
-<polygon fill="black" stroke="black" points="169.16,-177.353 179.705,-176.328 170.822,-170.553 169.16,-177.353"/>
-</g>
 <!-- proc~ldp -->
-<g id="node9" class="node"><title>proc~ldp</title>
+<g id="node8" class="node"><title>proc~ldp</title>
 <a xlink:href="../proc/ldp.html" xlink:title="ldp">
 <polygon fill="#d9534f" stroke="#d9534f" points="234,-152 180,-152 180,-126 234,-126 234,-152"/>
 <text text-anchor="middle" x="207" y="-136.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
 </a>
 </g>
 <!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="edge20" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<g id="edge16" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
 <path fill="none" stroke="black" d="M144.003,-154.399C152.116,-152.416 161.163,-150.205 169.813,-148.09"/>
 <polygon fill="black" stroke="black" points="170.822,-151.447 179.705,-145.672 169.16,-144.647 170.822,-151.447"/>
 </g>
+<!-- proc~daxpy -->
+<g id="node9" class="node"><title>proc~daxpy</title>
+<a xlink:href="../proc/daxpy.html" xlink:title="daxpy">
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-196 180,-196 180,-170 234,-170 234,-196"/>
+<text text-anchor="middle" x="207" y="-180.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
+</a>
+</g>
+<!-- proc~lsi&#45;&gt;proc~daxpy -->
+<g id="edge18" class="edge"><title>proc~lsi&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="black" d="M144.003,-167.601C152.116,-169.584 161.163,-171.795 169.813,-173.91"/>
+<polygon fill="black" stroke="black" points="169.16,-177.353 179.705,-176.328 170.822,-170.553 169.16,-177.353"/>
+</g>
 <!-- proc~hfti&#45;&gt;proc~h12 -->
-<g id="edge24" class="edge"><title>proc~hfti&#45;&gt;proc~h12</title>
+<g id="edge22" class="edge"><title>proc~hfti&#45;&gt;proc~h12</title>
 <path fill="none" stroke="black" d="M303.098,-111.097C313.115,-131.788 334.509,-172.693 360,-202 360.506,-202.582 361.028,-203.16 361.565,-203.734"/>
 <polygon fill="black" stroke="black" points="359.405,-206.509 369.069,-210.851 364.222,-201.43 359.405,-206.509"/>
 </g>
@@ -733,7 +735,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
 </a>
 </g>
 <!-- proc~hfti&#45;&gt;proc~diff -->
-<g id="edge22" class="edge"><title>proc~hfti&#45;&gt;proc~diff</title>
+<g id="edge24" class="edge"><title>proc~hfti&#45;&gt;proc~diff</title>
 <path fill="none" stroke="black" d="M324.003,-109.401C332.292,-112.901 341.557,-116.813 350.377,-120.537"/>
 <polygon fill="black" stroke="black" points="349.131,-123.81 359.705,-124.475 351.854,-117.361 349.131,-123.81"/>
 </g>
@@ -755,12 +757,12 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
 <polygon fill="black" stroke="black" points="350.054,-140.116 359.994,-136.45 349.937,-133.117 350.054,-140.116"/>
 </g>
 <!-- proc~nnls&#45;&gt;proc~h12 -->
-<g id="edge4" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
+<g id="edge2" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
 <path fill="none" stroke="black" d="M324.003,-193.201C332.534,-197.372 342.098,-202.048 351.148,-206.472"/>
 <polygon fill="black" stroke="black" points="349.805,-209.712 360.326,-210.959 352.88,-203.423 349.805,-209.712"/>
 </g>
 <!-- proc~nnls&#45;&gt;proc~diff -->
-<g id="edge6" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
+<g id="edge4" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
 <path fill="none" stroke="black" d="M324.003,-166.799C332.534,-162.628 342.098,-157.952 351.148,-153.528"/>
 <polygon fill="black" stroke="black" points="352.88,-156.577 360.326,-149.041 349.805,-150.288 352.88,-156.577"/>
 </g>
@@ -772,7 +774,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
 </a>
 </g>
 <!-- proc~nnls&#45;&gt;proc~g1 -->
-<g id="edge2" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
+<g id="edge6" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
 <path fill="none" stroke="black" d="M324.003,-180C332.028,-180 340.967,-180 349.531,-180"/>
 <polygon fill="black" stroke="black" points="349.705,-183.5 359.705,-180 349.705,-176.5 349.705,-183.5"/>
 </g>

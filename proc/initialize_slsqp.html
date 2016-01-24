@@ -211,6 +211,8 @@
           
           <a class="list-group-item" href="../proc/nnls.html">nnls</a>
           
+          <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
+          
           <a class="list-group-item" href="../proc/report_message.html">report_message</a>
           
           <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
@@ -233,7 +235,7 @@
     
     <div class="col-lg-9" id='text'>
     <h2>
-private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint)
+private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report)
     
     
     
@@ -261,7 +263,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-me%7E3"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
+  <td><span class="anchor" id="variable-me%7E4"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
   <td>intent(inout)</td>
   <td></td>
   
@@ -351,7 +353,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-f%7E3"></span>procedure(<a href='../interface/func.html'>func</a>)</td>
+  <td><span class="anchor" id="variable-f%7E4"></span>procedure(<a href='../interface/func.html'>func</a>)</td>
   <td></td>
   <td></td>
   
@@ -450,6 +452,21 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 </tr>
 
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-report%7E2"></span>procedure(<a href='../interface/iterfunc.html'>iterfunc</a>)</td>
+  <td>,</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>report</strong></td><td><p>user-defined procedure that will be called once per iteration</p></td>
+  
+</tr>
+
 </tbody>
 </table>
 
@@ -527,7 +544,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre>    <span class="k">subroutine </span><span class="n">initialize_slsqp</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">max_iter</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">,</span><span class="n">status_ok</span><span class="p">,&amp;</span>
-                                <span class="n">linesearch_mode</span><span class="p">,</span><span class="n">iprint</span><span class="p">)</span>
+                                <span class="n">linesearch_mode</span><span class="p">,</span><span class="n">iprint</span><span class="p">,</span><span class="n">report</span><span class="p">)</span>
 
     <span class="k">implicit none</span>
 
@@ -544,6 +561,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
     <span class="kt">logical</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">status_ok</span>       <span class="c">!! will be false if there were errors</span>
     <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>       <span class="kd">::</span> <span class="n">linesearch_mode</span> <span class="c">!! 1 = inexact (default), 2 = exact</span>
     <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>       <span class="kd">::</span> <span class="n">iprint</span>          <span class="c">!! unit number of status messages (default=output_unit)</span>
+    <span class="k">procedure</span><span class="p">(</span><span class="n">iterfunc</span><span class="p">),</span><span class="k">optional</span>      <span class="kd">::</span> <span class="n">report</span>          <span class="c">!! user-defined procedure that will be called once per iteration</span>
 
     <span class="kt">integer</span> <span class="kd">::</span> <span class="n">n1</span><span class="p">,</span><span class="n">mineq</span>
 
@@ -587,6 +605,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
         <span class="n">me</span><span class="p">%</span><span class="n">acc</span> <span class="o">=</span> <span class="n">acc</span>
         <span class="n">me</span><span class="p">%</span><span class="n">f</span> <span class="o">=&gt;</span> <span class="n">f</span>
         <span class="n">me</span><span class="p">%</span><span class="n">g</span> <span class="o">=&gt;</span> <span class="n">g</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">report</span><span class="p">))</span> <span class="n">me</span><span class="p">%</span><span class="n">report</span> <span class="o">=&gt;</span> <span class="n">report</span>
 
         <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">xl</span><span class="p">(</span><span class="n">n</span><span class="p">));</span> <span class="n">me</span><span class="p">%</span><span class="n">xl</span> <span class="o">=</span> <span class="n">xl</span>
         <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">xu</span><span class="p">(</span><span class="n">n</span><span class="p">));</span> <span class="n">me</span><span class="p">%</span><span class="n">xu</span> <span class="o">=</span> <span class="n">xu</span>

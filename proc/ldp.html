@@ -227,6 +227,8 @@
           
           <a class="list-group-item" href="../proc/nnls.html">nnls</a>
           
+          <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
+          
           <a class="list-group-item" href="../proc/report_message.html">report_message</a>
           
           <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
@@ -354,7 +356,7 @@ private subroutine ldp(g, mdg, m, n, h, x, xnorm, w, index, mode)
   
 <tr>
   
-  <td><span class="anchor" id="variable-x%7E12"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-x%7E13"></span>real(kind=wp),</td>
   <td>intent(out),</td>
   <td></td>
   
@@ -442,12 +444,12 @@ private subroutine ldp(g, mdg, m, n, h, x, xnorm, w, index, mode)
     <p>Least distance programming routine.
   Minimize \( \frac{1}{2} \mathbf{x}^T \mathbf{x}  \) subject to
   \( \mathbf{G} \mathbf{x} \ge \mathbf{h} \).</p>
-<p>The declared dimension of w() must be at least (n+1)<em>(m+2)+2</em>m:</p>
-<div class="codehilite"><pre>   first (n+1)*m locs of w()  =  matrix e for problem nnls.
-   next     n+1 locs of w()   =  vector f for problem nnls.
-   next     n+1 locs of w()   =  vector z for problem nnls.
-   next       m locs of w()   =  vector y for problem nnls.
-   next       m locs of w()   =  vector wdual for problem nnls.
+<p>The declared dimension of <code>w</code> must be at least <code>(n+1)*(m+2)+2*m</code>:</p>
+<div class="codehilite"><pre>   first (n+1)*m locs of w = matrix e for problem nnls.
+   next      n+1 locs of w = vector f for problem nnls.
+   next      n+1 locs of w = vector z for problem nnls.
+   next        m locs of w = vector y for problem nnls.
+   next        m locs of w = vector wdual for problem nnls.
 </pre></div>
 
 
@@ -506,31 +508,31 @@ private subroutine ldp(g, mdg, m, n, h, x, xnorm, w, index, mode)
 <polygon fill="black" stroke="black" points="169.644,-99.9602 179.994,-97.6993 170.493,-93.0119 169.644,-99.9602"/>
 </g>
 <!-- proc~nnls&#45;&gt;proc~diff -->
-<g id="edge6" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
+<g id="edge4" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
 <path fill="none" stroke="black" d="M144.003,-70.9014C152.38,-74.904 161.754,-79.3825 170.658,-83.6366"/>
 <polygon fill="black" stroke="black" points="169.173,-86.8061 179.705,-87.9591 172.191,-80.4899 169.173,-86.8061"/>
 </g>
-<!-- proc~g1 -->
-<g id="node4" class="node"><title>proc~g1</title>
-<a xlink:href="../proc/g1.html" xlink:title="g1">
-<polygon fill="#d9534f" stroke="#d9534f" points="234,-70 180,-70 180,-44 234,-44 234,-70"/>
-<text text-anchor="middle" x="207" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
-</a>
-</g>
-<!-- proc~nnls&#45;&gt;proc~g1 -->
-<g id="edge2" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
-<path fill="none" stroke="black" d="M144.003,-57.7C152.028,-57.6108 160.967,-57.5115 169.531,-57.4163"/>
-<polygon fill="black" stroke="black" points="169.745,-60.9143 179.705,-57.3033 169.667,-53.9147 169.745,-60.9143"/>
-</g>
 <!-- proc~h12 -->
-<g id="node5" class="node"><title>proc~h12</title>
+<g id="node4" class="node"><title>proc~h12</title>
 <a xlink:href="../proc/h12.html" xlink:title="h12">
-<polygon fill="#d9534f" stroke="#d9534f" points="234,-26 180,-26 180,-1.24345e-14 234,-3.55271e-15 234,-26"/>
-<text text-anchor="middle" x="207" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-70 180,-70 180,-44 234,-44 234,-70"/>
+<text text-anchor="middle" x="207" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
 </a>
 </g>
 <!-- proc~nnls&#45;&gt;proc~h12 -->
-<g id="edge4" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
+<g id="edge2" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
+<path fill="none" stroke="black" d="M144.003,-57.7C152.028,-57.6108 160.967,-57.5115 169.531,-57.4163"/>
+<polygon fill="black" stroke="black" points="169.745,-60.9143 179.705,-57.3033 169.667,-53.9147 169.745,-60.9143"/>
+</g>
+<!-- proc~g1 -->
+<g id="node5" class="node"><title>proc~g1</title>
+<a xlink:href="../proc/g1.html" xlink:title="g1">
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-26 180,-26 180,-1.24345e-14 234,-3.55271e-15 234,-26"/>
+<text text-anchor="middle" x="207" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
+</a>
+</g>
+<!-- proc~nnls&#45;&gt;proc~g1 -->
+<g id="edge6" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
 <path fill="none" stroke="black" d="M143.032,-44.9841C151.909,-40.5454 161.992,-35.5039 171.485,-30.7574"/>
 <polygon fill="black" stroke="black" points="173.336,-33.7452 180.715,-26.1425 170.205,-27.4842 173.336,-33.7452"/>
 </g>

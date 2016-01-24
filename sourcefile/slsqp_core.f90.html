@@ -456,304 +456,304 @@
 <a name="ln-266"></a>                      <span class="n">alpha</span><span class="p">,</span><span class="n">iexact</span><span class="p">,</span><span class="n">incons</span><span class="p">,</span><span class="n">ireset</span><span class="p">,</span><span class="n">itermx</span><span class="p">,</span><span class="n">ldat</span><span class="p">)</span>
 <a name="ln-267"></a>    <span class="k">implicit none</span>
 <a name="ln-268"></a>
-<a name="ln-269"></a><span class="k">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t</span>
-<a name="ln-270"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">f0</span>
-<a name="ln-271"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">h1</span>
-<a name="ln-272"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">h2</span>
-<a name="ln-273"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">h3</span>
-<a name="ln-274"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">h4</span>
-<a name="ln-275"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">n1</span>
-<a name="ln-276"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">n2</span>
-<a name="ln-277"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">n3</span>
-<a name="ln-278"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t0</span>
-<a name="ln-279"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">gs</span>
-<a name="ln-280"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">tol</span>
-<a name="ln-281"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">line</span>
-<a name="ln-282"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">alpha</span>
-<a name="ln-283"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">iexact</span>
-<a name="ln-284"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">incons</span>
-<a name="ln-285"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ireset</span>
-<a name="ln-286"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">itermx</span>
-<a name="ln-287"></a>    <span class="k">type</span><span class="p">(</span><span class="n">linmin_data</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ldat</span> <span class="c">!! data for [[linmin]].</span>
-<a name="ln-288"></a>
-<a name="ln-289"></a>    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">iw</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="n">i</span><span class="p">,</span> <span class="n">iter</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">la</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">meq</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">n</span>
+<a name="ln-269"></a><span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">iter</span>  <span class="c">!! **in:**  maximum number of iterations.</span>
+<a name="ln-270"></a>                                     <span class="c">!! **out:** actual number of iterations.</span>
+<a name="ln-271"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t</span>
+<a name="ln-272"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">f0</span>
+<a name="ln-273"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">h1</span>
+<a name="ln-274"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">h2</span>
+<a name="ln-275"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">h3</span>
+<a name="ln-276"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">h4</span>
+<a name="ln-277"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">n1</span>
+<a name="ln-278"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">n2</span>
+<a name="ln-279"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">n3</span>
+<a name="ln-280"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t0</span>
+<a name="ln-281"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">gs</span>
+<a name="ln-282"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">tol</span>
+<a name="ln-283"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">line</span>
+<a name="ln-284"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">alpha</span>
+<a name="ln-285"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">iexact</span>
+<a name="ln-286"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">incons</span>
+<a name="ln-287"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ireset</span>
+<a name="ln-288"></a>    <span class="kt">integer</span>  <span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">itermx</span>
+<a name="ln-289"></a>    <span class="k">type</span><span class="p">(</span><span class="n">linmin_data</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ldat</span> <span class="c">!! data for [[linmin]].</span>
 <a name="ln-290"></a>
-<a name="ln-291"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span><span class="p">(</span><span class="n">la</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="n">la</span><span class="p">)</span> <span class="p">,</span> <span class="n">g</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="n">l</span><span class="p">((</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="p">,</span> <span class="p">&amp;</span>
-<a name="ln-292"></a>                  <span class="n">mu</span><span class="p">(</span><span class="n">la</span><span class="p">)</span> <span class="p">,</span> <span class="n">r</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="o">+</span><span class="n">n</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="p">,</span> <span class="n">s</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="n">u</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="p">&amp;</span>
-<a name="ln-293"></a>                  <span class="n">w</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="p">,</span> <span class="n">x</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">,</span> <span class="n">xl</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">,</span> <span class="n">xu</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">,</span> <span class="n">x0</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">,</span> <span class="p">&amp;</span>
-<a name="ln-294"></a>                  <span class="n">acc</span> <span class="p">,</span> <span class="n">f</span>
-<a name="ln-295"></a>
-<a name="ln-296"></a><span class="c">!     dim(w) =         n1*(n1+1) + meq*(n1+1) + mineq*(n1+1)  for lsq</span>
-<a name="ln-297"></a><span class="c">!                     +(n1-meq+1)*(mineq+2) + 2*mineq</span>
-<a name="ln-298"></a><span class="c">!                     +(n1+mineq)*(n1-meq) + 2*meq + n1       for lsei</span>
-<a name="ln-299"></a><span class="c">!                      with mineq = m - meq + 2*n1  &amp;  n1 = n+1</span>
-<a name="ln-300"></a>
-<a name="ln-301"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">alfmin</span> <span class="o">=</span> <span class="mf">0.1_wp</span>
+<a name="ln-291"></a>    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">iw</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="n">i</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">la</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">meq</span><span class="p">,</span> <span class="n">mode</span><span class="p">,</span> <span class="n">n</span>
+<a name="ln-292"></a>
+<a name="ln-293"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span><span class="p">(</span><span class="n">la</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="n">la</span><span class="p">)</span> <span class="p">,</span> <span class="n">g</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="n">l</span><span class="p">((</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-294"></a>                  <span class="n">mu</span><span class="p">(</span><span class="n">la</span><span class="p">)</span> <span class="p">,</span> <span class="n">r</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="o">+</span><span class="n">n</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="p">,</span> <span class="n">s</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="n">u</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-295"></a>                  <span class="n">w</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="p">,</span> <span class="n">x</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">,</span> <span class="n">xl</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">,</span> <span class="n">xu</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">,</span> <span class="n">x0</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-296"></a>                  <span class="n">acc</span> <span class="p">,</span> <span class="n">f</span>
+<a name="ln-297"></a>
+<a name="ln-298"></a><span class="c">!     dim(w) =         n1*(n1+1) + meq*(n1+1) + mineq*(n1+1)  for lsq</span>
+<a name="ln-299"></a><span class="c">!                     +(n1-meq+1)*(mineq+2) + 2*mineq</span>
+<a name="ln-300"></a><span class="c">!                     +(n1+mineq)*(n1-meq) + 2*meq + n1       for lsei</span>
+<a name="ln-301"></a><span class="c">!                      with mineq = m - meq + 2*n1  &amp;  n1 = n+1</span>
 <a name="ln-302"></a>
-<a name="ln-303"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">&lt;</span><span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-303"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">alfmin</span> <span class="o">=</span> <span class="mf">0.1_wp</span>
 <a name="ln-304"></a>
-<a name="ln-305"></a>          <span class="c">!   call jacobian at current x</span>
+<a name="ln-305"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">&lt;</span><span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
 <a name="ln-306"></a>
-<a name="ln-307"></a>          <span class="c">!   update cholesky-factors of hessian matrix by modified bfgs formula</span>
+<a name="ln-307"></a>          <span class="c">!   call jacobian at current x</span>
 <a name="ln-308"></a>
-<a name="ln-309"></a>         <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-310"></a>            <span class="n">u</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">ddot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<a name="ln-311"></a>         <span class="k">end do</span>
-<a name="ln-312"></a>
-<a name="ln-313"></a>         <span class="c">!   l&#39;*s</span>
+<a name="ln-309"></a>          <span class="c">!   update cholesky-factors of hessian matrix by modified bfgs formula</span>
+<a name="ln-310"></a>
+<a name="ln-311"></a>         <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-312"></a>            <span class="n">u</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">ddot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-313"></a>         <span class="k">end do</span>
 <a name="ln-314"></a>
-<a name="ln-315"></a>         <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-<a name="ln-316"></a>         <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-317"></a>            <span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-318"></a>            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-319"></a>            <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-320"></a>               <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-321"></a>               <span class="n">h1</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">l</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">s</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-<a name="ln-322"></a>            <span class="k">end do</span>
-<a name="ln-323"></a><span class="k">            </span><span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">s</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">h1</span>
-<a name="ln-324"></a>         <span class="k">end do</span>
-<a name="ln-325"></a>
-<a name="ln-326"></a>         <span class="c">!   d*l&#39;*s</span>
+<a name="ln-315"></a>         <span class="c">!   l&#39;*s</span>
+<a name="ln-316"></a>
+<a name="ln-317"></a>         <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-318"></a>         <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-319"></a>            <span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-320"></a>            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-321"></a>            <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-322"></a>               <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-323"></a>               <span class="n">h1</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">l</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">s</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-324"></a>            <span class="k">end do</span>
+<a name="ln-325"></a><span class="k">            </span><span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">s</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">h1</span>
+<a name="ln-326"></a>         <span class="k">end do</span>
 <a name="ln-327"></a>
-<a name="ln-328"></a>         <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
-<a name="ln-329"></a>         <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-330"></a>            <span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">l</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<a name="ln-331"></a>            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">n1</span> <span class="o">-</span> <span class="n">i</span>
-<a name="ln-332"></a>         <span class="k">end do</span>
-<a name="ln-333"></a>
-<a name="ln-334"></a>         <span class="c">!   l*d*l&#39;*s</span>
+<a name="ln-328"></a>         <span class="c">!   d*l&#39;*s</span>
+<a name="ln-329"></a>
+<a name="ln-330"></a>         <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-331"></a>         <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-332"></a>            <span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">l</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-333"></a>            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">n1</span> <span class="o">-</span> <span class="n">i</span>
+<a name="ln-334"></a>         <span class="k">end do</span>
 <a name="ln-335"></a>
-<a name="ln-336"></a>         <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="n">n</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
-<a name="ln-337"></a>            <span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-338"></a>            <span class="n">k</span> <span class="o">=</span> <span class="n">i</span>
-<a name="ln-339"></a>            <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
-<a name="ln-340"></a>               <span class="n">h1</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">l</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">v</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-<a name="ln-341"></a>               <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">n</span> <span class="o">-</span> <span class="n">j</span>
-<a name="ln-342"></a>            <span class="k">end do</span>
-<a name="ln-343"></a><span class="k">            </span><span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">h1</span>
-<a name="ln-344"></a>         <span class="k">end do</span>
-<a name="ln-345"></a>
-<a name="ln-346"></a><span class="k">         </span><span class="n">h1</span> <span class="o">=</span> <span class="n">ddot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-347"></a>         <span class="n">h2</span> <span class="o">=</span> <span class="n">ddot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-348"></a>         <span class="n">h3</span> <span class="o">=</span> <span class="mf">0.2_wp</span><span class="o">*</span><span class="n">h2</span>
-<a name="ln-349"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">h1</span><span class="o">&lt;</span><span class="n">h3</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-350"></a><span class="k">            </span><span class="n">h4</span> <span class="o">=</span> <span class="p">(</span><span class="n">h2</span><span class="o">-</span><span class="n">h3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">h2</span><span class="o">-</span><span class="n">h1</span><span class="p">)</span>
-<a name="ln-351"></a>            <span class="n">h1</span> <span class="o">=</span> <span class="n">h3</span>
-<a name="ln-352"></a>            <span class="k">call </span><span class="n">dscal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">h4</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-353"></a>            <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">one</span><span class="o">-</span><span class="n">h4</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-354"></a>         <span class="k">end if</span>
-<a name="ln-355"></a><span class="k">         call </span><span class="n">ldl</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="o">+</span><span class="n">one</span><span class="o">/</span><span class="n">h1</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
-<a name="ln-356"></a>         <span class="k">call </span><span class="n">ldl</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="o">-</span><span class="n">one</span><span class="o">/</span><span class="n">h2</span><span class="p">,</span><span class="n">u</span><span class="p">)</span>
-<a name="ln-357"></a>
-<a name="ln-358"></a>         <span class="c">!   end of main iteration</span>
+<a name="ln-336"></a>         <span class="c">!   l*d*l&#39;*s</span>
+<a name="ln-337"></a>
+<a name="ln-338"></a>         <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="n">n</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
+<a name="ln-339"></a>            <span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-340"></a>            <span class="n">k</span> <span class="o">=</span> <span class="n">i</span>
+<a name="ln-341"></a>            <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+<a name="ln-342"></a>               <span class="n">h1</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">l</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">v</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-343"></a>               <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">n</span> <span class="o">-</span> <span class="n">j</span>
+<a name="ln-344"></a>            <span class="k">end do</span>
+<a name="ln-345"></a><span class="k">            </span><span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">h1</span>
+<a name="ln-346"></a>         <span class="k">end do</span>
+<a name="ln-347"></a>
+<a name="ln-348"></a><span class="k">         </span><span class="n">h1</span> <span class="o">=</span> <span class="n">ddot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-349"></a>         <span class="n">h2</span> <span class="o">=</span> <span class="n">ddot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-350"></a>         <span class="n">h3</span> <span class="o">=</span> <span class="mf">0.2_wp</span><span class="o">*</span><span class="n">h2</span>
+<a name="ln-351"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">h1</span><span class="o">&lt;</span><span class="n">h3</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-352"></a><span class="k">            </span><span class="n">h4</span> <span class="o">=</span> <span class="p">(</span><span class="n">h2</span><span class="o">-</span><span class="n">h3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">h2</span><span class="o">-</span><span class="n">h1</span><span class="p">)</span>
+<a name="ln-353"></a>            <span class="n">h1</span> <span class="o">=</span> <span class="n">h3</span>
+<a name="ln-354"></a>            <span class="k">call </span><span class="n">dscal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">h4</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-355"></a>            <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">one</span><span class="o">-</span><span class="n">h4</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-356"></a>         <span class="k">end if</span>
+<a name="ln-357"></a><span class="k">         call </span><span class="n">ldl</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="o">+</span><span class="n">one</span><span class="o">/</span><span class="n">h1</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+<a name="ln-358"></a>         <span class="k">call </span><span class="n">ldl</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="o">-</span><span class="n">one</span><span class="o">/</span><span class="n">h2</span><span class="p">,</span><span class="n">u</span><span class="p">)</span>
 <a name="ln-359"></a>
-<a name="ln-360"></a>         <span class="k">goto </span><span class="mi">200</span>
+<a name="ln-360"></a>         <span class="c">!   end of main iteration</span>
 <a name="ln-361"></a>
-<a name="ln-362"></a>      <span class="n">elseif</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-362"></a>         <span class="k">goto </span><span class="mi">200</span>
 <a name="ln-363"></a>
-<a name="ln-364"></a><span class="k">         </span><span class="n">itermx</span> <span class="o">=</span> <span class="n">iter</span>
-<a name="ln-365"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">acc</span><span class="o">&gt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-366"></a><span class="k">            </span><span class="n">iexact</span> <span class="o">=</span> <span class="mi">0</span>
-<a name="ln-367"></a>         <span class="k">else</span>
-<a name="ln-368"></a><span class="k">            </span><span class="n">iexact</span> <span class="o">=</span> <span class="mi">1</span>
-<a name="ln-369"></a>         <span class="k">end if</span>
-<a name="ln-370"></a><span class="k">         </span><span class="n">acc</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span>
-<a name="ln-371"></a>         <span class="n">tol</span> <span class="o">=</span> <span class="n">ten</span><span class="o">*</span><span class="n">acc</span>
-<a name="ln-372"></a>         <span class="n">iter</span> <span class="o">=</span> <span class="mi">0</span>
-<a name="ln-373"></a>         <span class="n">ireset</span> <span class="o">=</span> <span class="mi">0</span>
-<a name="ln-374"></a>         <span class="n">n1</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-375"></a>         <span class="n">n2</span> <span class="o">=</span> <span class="n">n1</span><span class="o">*</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span>
-<a name="ln-376"></a>         <span class="n">n3</span> <span class="o">=</span> <span class="n">n2</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-377"></a>         <span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-378"></a>         <span class="n">mu</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-379"></a>         <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-380"></a>         <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">mu</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-381"></a>
-<a name="ln-382"></a>      <span class="k">else</span>
+<a name="ln-364"></a>      <span class="n">elseif</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-365"></a>
+<a name="ln-366"></a><span class="k">         </span><span class="n">itermx</span> <span class="o">=</span> <span class="n">iter</span>
+<a name="ln-367"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">acc</span><span class="o">&gt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-368"></a><span class="k">            </span><span class="n">iexact</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-369"></a>         <span class="k">else</span>
+<a name="ln-370"></a><span class="k">            </span><span class="n">iexact</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-371"></a>         <span class="k">end if</span>
+<a name="ln-372"></a><span class="k">         </span><span class="n">acc</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span>
+<a name="ln-373"></a>         <span class="n">tol</span> <span class="o">=</span> <span class="n">ten</span><span class="o">*</span><span class="n">acc</span>
+<a name="ln-374"></a>         <span class="n">iter</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-375"></a>         <span class="n">ireset</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-376"></a>         <span class="n">n1</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-377"></a>         <span class="n">n2</span> <span class="o">=</span> <span class="n">n1</span><span class="o">*</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span>
+<a name="ln-378"></a>         <span class="n">n3</span> <span class="o">=</span> <span class="n">n2</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-379"></a>         <span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-380"></a>         <span class="n">mu</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-381"></a>         <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-382"></a>         <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">mu</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <a name="ln-383"></a>
-<a name="ln-384"></a>         <span class="c">!   call functions at current x</span>
+<a name="ln-384"></a>      <span class="k">else</span>
 <a name="ln-385"></a>
-<a name="ln-386"></a>         <span class="n">t</span> <span class="o">=</span> <span class="n">f</span>
-<a name="ln-387"></a>         <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
-<a name="ln-388"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-389"></a><span class="k">               </span><span class="n">h1</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-<a name="ln-390"></a>            <span class="k">else</span>
-<a name="ln-391"></a><span class="k">               </span><span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-392"></a>            <span class="k">end if</span>
-<a name="ln-393"></a><span class="k">            </span><span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">mu</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">h1</span><span class="p">)</span>
-<a name="ln-394"></a>         <span class="k">end do</span>
-<a name="ln-395"></a><span class="k">         </span><span class="n">h1</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span>
-<a name="ln-396"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">iexact</span><span class="o">+</span><span class="mi">1</span><span class="o">==</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-397"></a><span class="k">            if</span> <span class="p">(</span> <span class="n">h1</span><span class="o">&lt;=</span><span class="n">h3</span><span class="o">/</span><span class="n">ten</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">line</span><span class="o">&gt;</span><span class="mi">10</span> <span class="p">)</span> <span class="k">goto </span><span class="mi">500</span>
-<a name="ln-398"></a>            <span class="n">alpha</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">h3</span><span class="o">/</span><span class="p">(</span><span class="n">two</span><span class="o">*</span><span class="p">(</span><span class="n">h3</span><span class="o">-</span><span class="n">h1</span><span class="p">)),</span><span class="n">alfmin</span><span class="p">)</span>
-<a name="ln-399"></a>            <span class="k">goto </span><span class="mi">300</span>
-<a name="ln-400"></a>         <span class="n">elseif</span> <span class="p">(</span> <span class="n">iexact</span><span class="o">+</span><span class="mi">1</span><span class="o">==</span><span class="mi">2</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-401"></a><span class="k">            goto </span><span class="mi">400</span>
-<a name="ln-402"></a>         <span class="k">else</span>
-<a name="ln-403"></a><span class="k">            goto </span><span class="mi">500</span>
-<a name="ln-404"></a>         <span class="k">end if</span>
-<a name="ln-405"></a>
-<a name="ln-406"></a><span class="k">      end if</span>
+<a name="ln-386"></a>         <span class="c">!   call functions at current x</span>
+<a name="ln-387"></a>
+<a name="ln-388"></a>         <span class="n">t</span> <span class="o">=</span> <span class="n">f</span>
+<a name="ln-389"></a>         <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
+<a name="ln-390"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-391"></a><span class="k">               </span><span class="n">h1</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-392"></a>            <span class="k">else</span>
+<a name="ln-393"></a><span class="k">               </span><span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-394"></a>            <span class="k">end if</span>
+<a name="ln-395"></a><span class="k">            </span><span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">mu</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">h1</span><span class="p">)</span>
+<a name="ln-396"></a>         <span class="k">end do</span>
+<a name="ln-397"></a><span class="k">         </span><span class="n">h1</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span>
+<a name="ln-398"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">iexact</span><span class="o">+</span><span class="mi">1</span><span class="o">==</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-399"></a><span class="k">            if</span> <span class="p">(</span> <span class="n">h1</span><span class="o">&lt;=</span><span class="n">h3</span><span class="o">/</span><span class="n">ten</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">line</span><span class="o">&gt;</span><span class="mi">10</span> <span class="p">)</span> <span class="k">goto </span><span class="mi">500</span>
+<a name="ln-400"></a>            <span class="n">alpha</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">h3</span><span class="o">/</span><span class="p">(</span><span class="n">two</span><span class="o">*</span><span class="p">(</span><span class="n">h3</span><span class="o">-</span><span class="n">h1</span><span class="p">)),</span><span class="n">alfmin</span><span class="p">)</span>
+<a name="ln-401"></a>            <span class="k">goto </span><span class="mi">300</span>
+<a name="ln-402"></a>         <span class="n">elseif</span> <span class="p">(</span> <span class="n">iexact</span><span class="o">+</span><span class="mi">1</span><span class="o">==</span><span class="mi">2</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-403"></a><span class="k">            goto </span><span class="mi">400</span>
+<a name="ln-404"></a>         <span class="k">else</span>
+<a name="ln-405"></a><span class="k">            goto </span><span class="mi">500</span>
+<a name="ln-406"></a>         <span class="k">end if</span>
 <a name="ln-407"></a>
-<a name="ln-408"></a><span class="c">!   reset bfgs matrix</span>
+<a name="ln-408"></a><span class="k">      end if</span>
 <a name="ln-409"></a>
-<a name="ln-410"></a> <span class="mi">100</span>  <span class="n">ireset</span> <span class="o">=</span> <span class="n">ireset</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-411"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">ireset</span><span class="o">&gt;</span><span class="mi">5</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-412"></a>         <span class="c">! check relaxed convergence in case of positive directional derivative</span>
-<a name="ln-413"></a>         <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="o">-</span><span class="n">f0</span><span class="p">)</span><span class="o">&lt;</span><span class="n">tol</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">tol</span><span class="p">)</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">h3</span><span class="o">&lt;</span><span class="n">tol</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-414"></a><span class="k">            </span><span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span>
-<a name="ln-415"></a>         <span class="k">else</span>
-<a name="ln-416"></a><span class="k">            </span><span class="n">mode</span> <span class="o">=</span> <span class="mi">8</span>
-<a name="ln-417"></a>         <span class="k">end if</span>
-<a name="ln-418"></a><span class="k">         return</span>
-<a name="ln-419"></a><span class="k">      else</span>
-<a name="ln-420"></a><span class="k">         </span><span class="n">l</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-421"></a>         <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n2</span><span class="p">,</span><span class="n">l</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-422"></a>         <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span>
-<a name="ln-423"></a>         <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-424"></a>            <span class="n">l</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span>
-<a name="ln-425"></a>            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="n">n1</span> <span class="o">-</span> <span class="n">i</span>
-<a name="ln-426"></a>         <span class="k">end do</span>
-<a name="ln-427"></a><span class="k">      end if</span>
-<a name="ln-428"></a>
-<a name="ln-429"></a><span class="c">!   main iteration : search direction, steplength, ldl&#39;-update</span>
+<a name="ln-410"></a><span class="c">!   reset bfgs matrix</span>
+<a name="ln-411"></a>
+<a name="ln-412"></a> <span class="mi">100</span>  <span class="n">ireset</span> <span class="o">=</span> <span class="n">ireset</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-413"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">ireset</span><span class="o">&gt;</span><span class="mi">5</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-414"></a>         <span class="c">! check relaxed convergence in case of positive directional derivative</span>
+<a name="ln-415"></a>         <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="o">-</span><span class="n">f0</span><span class="p">)</span><span class="o">&lt;</span><span class="n">tol</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">tol</span><span class="p">)</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">h3</span><span class="o">&lt;</span><span class="n">tol</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-416"></a><span class="k">            </span><span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-417"></a>         <span class="k">else</span>
+<a name="ln-418"></a><span class="k">            </span><span class="n">mode</span> <span class="o">=</span> <span class="mi">8</span>
+<a name="ln-419"></a>         <span class="k">end if</span>
+<a name="ln-420"></a><span class="k">         return</span>
+<a name="ln-421"></a><span class="k">      else</span>
+<a name="ln-422"></a><span class="k">         </span><span class="n">l</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-423"></a>         <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n2</span><span class="p">,</span><span class="n">l</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-424"></a>         <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-425"></a>         <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-426"></a>            <span class="n">l</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span>
+<a name="ln-427"></a>            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="n">n1</span> <span class="o">-</span> <span class="n">i</span>
+<a name="ln-428"></a>         <span class="k">end do</span>
+<a name="ln-429"></a><span class="k">      end if</span>
 <a name="ln-430"></a>
-<a name="ln-431"></a> <span class="mi">200</span>  <span class="n">iter</span> <span class="o">=</span> <span class="n">iter</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-431"></a><span class="c">!   main iteration : search direction, steplength, ldl&#39;-update</span>
 <a name="ln-432"></a>
-<a name="ln-433"></a>    <span class="c">!    write(*,*) &#39;iter:&#39;, iter, x, f, c   ! ..... test ......</span>
-<a name="ln-434"></a>
-<a name="ln-435"></a>      <span class="n">mode</span> <span class="o">=</span> <span class="mi">9</span>
-<a name="ln-436"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">iter</span><span class="o">&gt;</span><span class="n">itermx</span> <span class="p">)</span> <span class="k">return</span>
-<a name="ln-437"></a>
-<a name="ln-438"></a><span class="c">!   search direction as solution of qp - subproblem</span>
-<a name="ln-439"></a>
-<a name="ln-440"></a>      <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-441"></a>      <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">xu</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-442"></a>      <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="o">-</span><span class="n">one</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-443"></a>      <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="o">-</span><span class="n">one</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-444"></a>      <span class="n">h4</span> <span class="o">=</span> <span class="n">one</span>
-<a name="ln-445"></a>      <span class="k">call </span><span class="n">lsq</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">n3</span><span class="p">,</span><span class="n">la</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">iw</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
-<a name="ln-446"></a>
-<a name="ln-447"></a><span class="c">!   augmented problem for inconsistent linearization</span>
-<a name="ln-448"></a>
-<a name="ln-449"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">6</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-450"></a><span class="k">         if</span> <span class="p">(</span> <span class="n">n</span><span class="o">==</span><span class="n">meq</span> <span class="p">)</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">4</span>
-<a name="ln-451"></a>      <span class="k">end if</span>
-<a name="ln-452"></a><span class="k">      if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">4</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-453"></a><span class="k">         do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
-<a name="ln-454"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-455"></a><span class="k">               </span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-<a name="ln-456"></a>            <span class="k">else</span>
-<a name="ln-457"></a><span class="k">               </span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">zero</span><span class="p">)</span>
-<a name="ln-458"></a>            <span class="k">end if</span>
-<a name="ln-459"></a><span class="k">         end do</span>
-<a name="ln-460"></a><span class="k">         </span><span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-461"></a>         <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-462"></a>         <span class="n">h3</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-463"></a>         <span class="n">g</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-464"></a>         <span class="n">l</span><span class="p">(</span><span class="n">n3</span><span class="p">)</span> <span class="o">=</span> <span class="n">hun</span>
-<a name="ln-465"></a>         <span class="n">s</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span>
-<a name="ln-466"></a>         <span class="n">u</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-467"></a>         <span class="n">v</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span>
-<a name="ln-468"></a>         <span class="n">incons</span> <span class="o">=</span> <span class="mi">0</span>
-<a name="ln-469"></a> <span class="mi">250</span>     <span class="k">call </span><span class="n">lsq</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">n3</span><span class="p">,</span><span class="n">la</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">iw</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
-<a name="ln-470"></a>         <span class="n">h4</span> <span class="o">=</span> <span class="n">one</span> <span class="o">-</span> <span class="n">s</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span>
-<a name="ln-471"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">4</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-472"></a><span class="k">            </span><span class="n">l</span><span class="p">(</span><span class="n">n3</span><span class="p">)</span> <span class="o">=</span> <span class="n">ten</span><span class="o">*</span><span class="n">l</span><span class="p">(</span><span class="n">n3</span><span class="p">)</span>
-<a name="ln-473"></a>            <span class="n">incons</span> <span class="o">=</span> <span class="n">incons</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-474"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">incons</span><span class="o">&lt;=</span><span class="mi">5</span> <span class="p">)</span> <span class="k">goto </span><span class="mi">250</span>
-<a name="ln-475"></a>            <span class="k">return</span>
-<a name="ln-476"></a><span class="k">         </span><span class="n">elseif</span> <span class="p">(</span> <span class="n">mode</span><span class="o">/=</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-477"></a><span class="k">            return</span>
-<a name="ln-478"></a><span class="k">         end if</span>
-<a name="ln-479"></a><span class="k">      </span><span class="n">elseif</span> <span class="p">(</span> <span class="n">mode</span><span class="o">/=</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-480"></a><span class="k">         return</span>
-<a name="ln-481"></a><span class="k">      end if</span>
-<a name="ln-482"></a>
-<a name="ln-483"></a><span class="c">!   update multipliers for l1-test</span>
-<a name="ln-484"></a>
-<a name="ln-485"></a>      <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-486"></a>         <span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">ddot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-487"></a>      <span class="k">end do</span>
-<a name="ln-488"></a><span class="k">      </span><span class="n">f0</span> <span class="o">=</span> <span class="n">f</span>
-<a name="ln-489"></a>      <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-490"></a>      <span class="n">gs</span> <span class="o">=</span> <span class="n">ddot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-491"></a>      <span class="n">h1</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">gs</span><span class="p">)</span>
-<a name="ln-492"></a>      <span class="n">h2</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-493"></a>      <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
-<a name="ln-494"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-495"></a><span class="k">            </span><span class="n">h3</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-<a name="ln-496"></a>         <span class="k">else</span>
-<a name="ln-497"></a><span class="k">            </span><span class="n">h3</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-498"></a>         <span class="k">end if</span>
-<a name="ln-499"></a><span class="k">         </span><span class="n">h2</span> <span class="o">=</span> <span class="n">h2</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">h3</span><span class="p">)</span>
-<a name="ln-500"></a>         <span class="n">h3</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
-<a name="ln-501"></a>         <span class="n">mu</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">h3</span><span class="p">,(</span><span class="n">mu</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="n">h3</span><span class="p">)</span><span class="o">/</span><span class="n">two</span><span class="p">)</span>
-<a name="ln-502"></a>         <span class="n">h1</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">h3</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
-<a name="ln-503"></a>      <span class="k">end do</span>
-<a name="ln-504"></a>
-<a name="ln-505"></a><span class="c">!   check convergence</span>
-<a name="ln-506"></a>
-<a name="ln-507"></a>      <span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span>
-<a name="ln-508"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">h1</span><span class="o">&lt;</span><span class="n">acc</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">h2</span><span class="o">&lt;</span><span class="n">acc</span> <span class="p">)</span> <span class="k">return</span>
-<a name="ln-509"></a><span class="k">      </span><span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-510"></a>      <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
-<a name="ln-511"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-512"></a><span class="k">            </span><span class="n">h3</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-<a name="ln-513"></a>         <span class="k">else</span>
-<a name="ln-514"></a><span class="k">            </span><span class="n">h3</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-515"></a>         <span class="k">end if</span>
-<a name="ln-516"></a><span class="k">         </span><span class="n">h1</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">mu</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">h3</span><span class="p">)</span>
-<a name="ln-517"></a>      <span class="k">end do</span>
-<a name="ln-518"></a><span class="k">      </span><span class="n">t0</span> <span class="o">=</span> <span class="n">f</span> <span class="o">+</span> <span class="n">h1</span>
-<a name="ln-519"></a>      <span class="n">h3</span> <span class="o">=</span> <span class="n">gs</span> <span class="o">-</span> <span class="n">h1</span><span class="o">*</span><span class="n">h4</span>
-<a name="ln-520"></a>      <span class="n">mode</span> <span class="o">=</span> <span class="mi">8</span>
-<a name="ln-521"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">h3</span><span class="o">&gt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">goto </span><span class="mi">100</span>
-<a name="ln-522"></a>
-<a name="ln-523"></a><span class="c">!   line search with an l1-testfunction</span>
-<a name="ln-524"></a>
-<a name="ln-525"></a>      <span class="n">line</span> <span class="o">=</span> <span class="mi">0</span>
-<a name="ln-526"></a>      <span class="n">alpha</span> <span class="o">=</span> <span class="n">one</span>
-<a name="ln-527"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">iexact</span><span class="o">==</span><span class="mi">1</span> <span class="p">)</span> <span class="k">goto </span><span class="mi">400</span>
-<a name="ln-528"></a>
-<a name="ln-529"></a><span class="c">!   inexact linesearch</span>
-<a name="ln-530"></a>
-<a name="ln-531"></a> <span class="mi">300</span>  <span class="n">line</span> <span class="o">=</span> <span class="n">line</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-532"></a>      <span class="n">h3</span> <span class="o">=</span> <span class="n">alpha</span><span class="o">*</span><span class="n">h3</span>
-<a name="ln-533"></a>      <span class="k">call </span><span class="n">dscal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-534"></a>      <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-535"></a>      <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">one</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-536"></a>
-<a name="ln-537"></a>      <span class="k">call </span><span class="n">enforce_bounds</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">)</span>  <span class="c">! ensure that x doesn&#39;t violate bounds</span>
-<a name="ln-538"></a>
-<a name="ln-539"></a>      <span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span>
-<a name="ln-540"></a>      <span class="k">return</span>
-<a name="ln-541"></a>
-<a name="ln-542"></a><span class="c">!   exact linesearch</span>
-<a name="ln-543"></a>
-<a name="ln-544"></a> <span class="mi">400</span>  <span class="k">if</span> <span class="p">(</span> <span class="n">line</span><span class="o">/=</span><span class="mi">3</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-545"></a><span class="k">         </span><span class="n">alpha</span> <span class="o">=</span> <span class="n">linmin</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="n">alfmin</span><span class="p">,</span><span class="n">one</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">tol</span><span class="p">,</span> <span class="p">&amp;</span>
-<a name="ln-546"></a>                         <span class="n">ldat</span><span class="p">%</span><span class="n">a</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">b</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">d</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">e</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">p</span><span class="p">,</span>   <span class="n">ldat</span><span class="p">%</span><span class="n">q</span><span class="p">,</span>   <span class="p">&amp;</span>
-<a name="ln-547"></a>                         <span class="n">ldat</span><span class="p">%</span><span class="n">r</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">u</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">v</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">w</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">x</span><span class="p">,</span>   <span class="n">ldat</span><span class="p">%</span><span class="n">m</span><span class="p">,</span>   <span class="p">&amp;</span>
-<a name="ln-548"></a>                         <span class="n">ldat</span><span class="p">%</span><span class="n">fu</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">fv</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">fw</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">fx</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">tol1</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">tol2</span> <span class="p">)</span>
-<a name="ln-549"></a>         <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-550"></a>         <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-551"></a>         <span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span>
-<a name="ln-552"></a>         <span class="k">return</span>
-<a name="ln-553"></a><span class="k">      end if</span>
-<a name="ln-554"></a><span class="k">      call </span><span class="n">dscal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-555"></a>
-<a name="ln-556"></a><span class="c">!   check convergence</span>
-<a name="ln-557"></a>
-<a name="ln-558"></a> <span class="mi">500</span>  <span class="n">h3</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-559"></a>      <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
-<a name="ln-560"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-561"></a><span class="k">            </span><span class="n">h1</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-<a name="ln-562"></a>         <span class="k">else</span>
-<a name="ln-563"></a><span class="k">            </span><span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-564"></a>         <span class="k">end if</span>
-<a name="ln-565"></a><span class="k">         </span><span class="n">h3</span> <span class="o">=</span> <span class="n">h3</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">h1</span><span class="p">)</span>
-<a name="ln-566"></a>      <span class="k">end do</span>
+<a name="ln-433"></a> <span class="mi">200</span>  <span class="n">iter</span> <span class="o">=</span> <span class="n">iter</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-434"></a>      <span class="n">mode</span> <span class="o">=</span> <span class="mi">9</span>
+<a name="ln-435"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">iter</span><span class="o">&gt;</span><span class="n">itermx</span> <span class="p">)</span> <span class="k">return</span>
+<a name="ln-436"></a>
+<a name="ln-437"></a><span class="c">!   search direction as solution of qp - subproblem</span>
+<a name="ln-438"></a>
+<a name="ln-439"></a>      <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-440"></a>      <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">xu</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-441"></a>      <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="o">-</span><span class="n">one</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-442"></a>      <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="o">-</span><span class="n">one</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-443"></a>      <span class="n">h4</span> <span class="o">=</span> <span class="n">one</span>
+<a name="ln-444"></a>      <span class="k">call </span><span class="n">lsq</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">n3</span><span class="p">,</span><span class="n">la</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">iw</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
+<a name="ln-445"></a>
+<a name="ln-446"></a><span class="c">!   augmented problem for inconsistent linearization</span>
+<a name="ln-447"></a>
+<a name="ln-448"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">6</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-449"></a><span class="k">         if</span> <span class="p">(</span> <span class="n">n</span><span class="o">==</span><span class="n">meq</span> <span class="p">)</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">4</span>
+<a name="ln-450"></a>      <span class="k">end if</span>
+<a name="ln-451"></a><span class="k">      if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">4</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-452"></a><span class="k">         do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
+<a name="ln-453"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-454"></a><span class="k">               </span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-455"></a>            <span class="k">else</span>
+<a name="ln-456"></a><span class="k">               </span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">zero</span><span class="p">)</span>
+<a name="ln-457"></a>            <span class="k">end if</span>
+<a name="ln-458"></a><span class="k">         end do</span>
+<a name="ln-459"></a><span class="k">         </span><span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-460"></a>         <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-461"></a>         <span class="n">h3</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-462"></a>         <span class="n">g</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-463"></a>         <span class="n">l</span><span class="p">(</span><span class="n">n3</span><span class="p">)</span> <span class="o">=</span> <span class="n">hun</span>
+<a name="ln-464"></a>         <span class="n">s</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span>
+<a name="ln-465"></a>         <span class="n">u</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-466"></a>         <span class="n">v</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span>
+<a name="ln-467"></a>         <span class="n">incons</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-468"></a> <span class="mi">250</span>     <span class="k">call </span><span class="n">lsq</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">n3</span><span class="p">,</span><span class="n">la</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">iw</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
+<a name="ln-469"></a>         <span class="n">h4</span> <span class="o">=</span> <span class="n">one</span> <span class="o">-</span> <span class="n">s</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span>
+<a name="ln-470"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">4</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-471"></a><span class="k">            </span><span class="n">l</span><span class="p">(</span><span class="n">n3</span><span class="p">)</span> <span class="o">=</span> <span class="n">ten</span><span class="o">*</span><span class="n">l</span><span class="p">(</span><span class="n">n3</span><span class="p">)</span>
+<a name="ln-472"></a>            <span class="n">incons</span> <span class="o">=</span> <span class="n">incons</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-473"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">incons</span><span class="o">&lt;=</span><span class="mi">5</span> <span class="p">)</span> <span class="k">goto </span><span class="mi">250</span>
+<a name="ln-474"></a>            <span class="k">return</span>
+<a name="ln-475"></a><span class="k">         </span><span class="n">elseif</span> <span class="p">(</span> <span class="n">mode</span><span class="o">/=</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-476"></a><span class="k">            return</span>
+<a name="ln-477"></a><span class="k">         end if</span>
+<a name="ln-478"></a><span class="k">      </span><span class="n">elseif</span> <span class="p">(</span> <span class="n">mode</span><span class="o">/=</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-479"></a><span class="k">         return</span>
+<a name="ln-480"></a><span class="k">      end if</span>
+<a name="ln-481"></a>
+<a name="ln-482"></a><span class="c">!   update multipliers for l1-test</span>
+<a name="ln-483"></a>
+<a name="ln-484"></a>      <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-485"></a>         <span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">ddot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-486"></a>      <span class="k">end do</span>
+<a name="ln-487"></a><span class="k">      </span><span class="n">f0</span> <span class="o">=</span> <span class="n">f</span>
+<a name="ln-488"></a>      <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-489"></a>      <span class="n">gs</span> <span class="o">=</span> <span class="n">ddot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-490"></a>      <span class="n">h1</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">gs</span><span class="p">)</span>
+<a name="ln-491"></a>      <span class="n">h2</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-492"></a>      <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
+<a name="ln-493"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-494"></a><span class="k">            </span><span class="n">h3</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-495"></a>         <span class="k">else</span>
+<a name="ln-496"></a><span class="k">            </span><span class="n">h3</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-497"></a>         <span class="k">end if</span>
+<a name="ln-498"></a><span class="k">         </span><span class="n">h2</span> <span class="o">=</span> <span class="n">h2</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">h3</span><span class="p">)</span>
+<a name="ln-499"></a>         <span class="n">h3</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
+<a name="ln-500"></a>         <span class="n">mu</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">h3</span><span class="p">,(</span><span class="n">mu</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="n">h3</span><span class="p">)</span><span class="o">/</span><span class="n">two</span><span class="p">)</span>
+<a name="ln-501"></a>         <span class="n">h1</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">h3</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
+<a name="ln-502"></a>      <span class="k">end do</span>
+<a name="ln-503"></a>
+<a name="ln-504"></a><span class="c">!   check convergence</span>
+<a name="ln-505"></a>
+<a name="ln-506"></a>      <span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-507"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">h1</span><span class="o">&lt;</span><span class="n">acc</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">h2</span><span class="o">&lt;</span><span class="n">acc</span> <span class="p">)</span> <span class="k">return</span>
+<a name="ln-508"></a><span class="k">      </span><span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-509"></a>      <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
+<a name="ln-510"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-511"></a><span class="k">            </span><span class="n">h3</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-512"></a>         <span class="k">else</span>
+<a name="ln-513"></a><span class="k">            </span><span class="n">h3</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-514"></a>         <span class="k">end if</span>
+<a name="ln-515"></a><span class="k">         </span><span class="n">h1</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">mu</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">h3</span><span class="p">)</span>
+<a name="ln-516"></a>      <span class="k">end do</span>
+<a name="ln-517"></a><span class="k">      </span><span class="n">t0</span> <span class="o">=</span> <span class="n">f</span> <span class="o">+</span> <span class="n">h1</span>
+<a name="ln-518"></a>      <span class="n">h3</span> <span class="o">=</span> <span class="n">gs</span> <span class="o">-</span> <span class="n">h1</span><span class="o">*</span><span class="n">h4</span>
+<a name="ln-519"></a>      <span class="n">mode</span> <span class="o">=</span> <span class="mi">8</span>
+<a name="ln-520"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">h3</span><span class="o">&gt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">goto </span><span class="mi">100</span>
+<a name="ln-521"></a>
+<a name="ln-522"></a><span class="c">!   line search with an l1-testfunction</span>
+<a name="ln-523"></a>
+<a name="ln-524"></a>      <span class="n">line</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-525"></a>      <span class="n">alpha</span> <span class="o">=</span> <span class="n">one</span>
+<a name="ln-526"></a>      <span class="k">if</span> <span class="p">(</span> <span class="n">iexact</span><span class="o">==</span><span class="mi">1</span> <span class="p">)</span> <span class="k">goto </span><span class="mi">400</span>
+<a name="ln-527"></a>
+<a name="ln-528"></a><span class="c">!   inexact linesearch</span>
+<a name="ln-529"></a>
+<a name="ln-530"></a> <span class="mi">300</span>  <span class="n">line</span> <span class="o">=</span> <span class="n">line</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-531"></a>      <span class="n">h3</span> <span class="o">=</span> <span class="n">alpha</span><span class="o">*</span><span class="n">h3</span>
+<a name="ln-532"></a>      <span class="k">call </span><span class="n">dscal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-533"></a>      <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-534"></a>      <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">one</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-535"></a>
+<a name="ln-536"></a>      <span class="k">call </span><span class="n">enforce_bounds</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">)</span>  <span class="c">! ensure that x doesn&#39;t violate bounds</span>
+<a name="ln-537"></a>
+<a name="ln-538"></a>      <span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-539"></a>      <span class="k">return</span>
+<a name="ln-540"></a>
+<a name="ln-541"></a><span class="c">!   exact linesearch</span>
+<a name="ln-542"></a>
+<a name="ln-543"></a> <span class="mi">400</span>  <span class="k">if</span> <span class="p">(</span> <span class="n">line</span><span class="o">/=</span><span class="mi">3</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-544"></a><span class="k">         </span><span class="n">alpha</span> <span class="o">=</span> <span class="n">linmin</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="n">alfmin</span><span class="p">,</span><span class="n">one</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">tol</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-545"></a>                         <span class="n">ldat</span><span class="p">%</span><span class="n">a</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">b</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">d</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">e</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">p</span><span class="p">,</span>   <span class="n">ldat</span><span class="p">%</span><span class="n">q</span><span class="p">,</span>   <span class="p">&amp;</span>
+<a name="ln-546"></a>                         <span class="n">ldat</span><span class="p">%</span><span class="n">r</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">u</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">v</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">w</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">x</span><span class="p">,</span>   <span class="n">ldat</span><span class="p">%</span><span class="n">m</span><span class="p">,</span>   <span class="p">&amp;</span>
+<a name="ln-547"></a>                         <span class="n">ldat</span><span class="p">%</span><span class="n">fu</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">fv</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">fw</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">fx</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">tol1</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">tol2</span> <span class="p">)</span>
+<a name="ln-548"></a>         <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-549"></a>         <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-550"></a>         <span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-551"></a>         <span class="k">return</span>
+<a name="ln-552"></a><span class="k">      end if</span>
+<a name="ln-553"></a><span class="k">      call </span><span class="n">dscal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-554"></a>
+<a name="ln-555"></a><span class="c">!   check convergence</span>
+<a name="ln-556"></a>
+<a name="ln-557"></a> <span class="mi">500</span>  <span class="n">h3</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-558"></a>      <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
+<a name="ln-559"></a>         <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-560"></a><span class="k">            </span><span class="n">h1</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-561"></a>         <span class="k">else</span>
+<a name="ln-562"></a><span class="k">            </span><span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-563"></a>         <span class="k">end if</span>
+<a name="ln-564"></a><span class="k">         </span><span class="n">h3</span> <span class="o">=</span> <span class="n">h3</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">h1</span><span class="p">)</span>
+<a name="ln-565"></a>      <span class="k">end do</span>
+<a name="ln-566"></a>
 <a name="ln-567"></a><span class="k">      if</span> <span class="p">(</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="o">-</span><span class="n">f0</span><span class="p">)</span><span class="o">&lt;</span><span class="n">acc</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">acc</span><span class="p">)</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">h3</span><span class="o">&lt;</span><span class="n">acc</span> <span class="p">)</span> <span class="k">then</span>
 <a name="ln-568"></a><span class="k">         </span><span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span>
 <a name="ln-569"></a>      <span class="k">else</span>
@@ -1213,13 +1213,13 @@
 <a name="ln-1023"></a><span class="c">!  Minimize \( \frac{1}{2} \mathbf{x}^T \mathbf{x}  \) subject to</span>
 <a name="ln-1024"></a><span class="c">!  \( \mathbf{G} \mathbf{x} \ge \mathbf{h} \).</span>
 <a name="ln-1025"></a><span class="c">!</span>
-<a name="ln-1026"></a><span class="c">!  The declared dimension of w() must be at least (n+1)*(m+2)+2*m:</span>
+<a name="ln-1026"></a><span class="c">!  The declared dimension of `w` must be at least `(n+1)*(m+2)+2*m`:</span>
 <a name="ln-1027"></a><span class="c">!</span>
-<a name="ln-1028"></a><span class="c">!       first (n+1)*m locs of w()  =  matrix e for problem nnls.</span>
-<a name="ln-1029"></a><span class="c">!       next     n+1 locs of w()   =  vector f for problem nnls.</span>
-<a name="ln-1030"></a><span class="c">!       next     n+1 locs of w()   =  vector z for problem nnls.</span>
-<a name="ln-1031"></a><span class="c">!       next       m locs of w()   =  vector y for problem nnls.</span>
-<a name="ln-1032"></a><span class="c">!       next       m locs of w()   =  vector wdual for problem nnls.</span>
+<a name="ln-1028"></a><span class="c">!       first (n+1)*m locs of w = matrix e for problem nnls.</span>
+<a name="ln-1029"></a><span class="c">!       next      n+1 locs of w = vector f for problem nnls.</span>
+<a name="ln-1030"></a><span class="c">!       next      n+1 locs of w = vector z for problem nnls.</span>
+<a name="ln-1031"></a><span class="c">!       next        m locs of w = vector y for problem nnls.</span>
+<a name="ln-1032"></a><span class="c">!       next        m locs of w = vector wdual for problem nnls.</span>
 <a name="ln-1033"></a><span class="c">!</span>
 <a name="ln-1034"></a><span class="c">!### References</span>
 <a name="ln-1035"></a><span class="c">!  * C.L. Lawson, R.J. Hanson, &#39;Solving least squares problems&#39;</span>

@@ -161,6 +161,8 @@
         
         <a class="list-group-item" href="../type/slsqp_solver.html#variable-g">g</a>
         
+        <a class="list-group-item" href="../type/slsqp_solver.html#variable-report">report</a>
+        
         <a class="list-group-item" href="../type/slsqp_solver.html#variable-linesearch_mode">linesearch_mode</a>
         
         <a class="list-group-item" href="../type/slsqp_solver.html#variable-linmin">linmin</a>
@@ -594,6 +596,20 @@ implementation in a submodule of an interface in a parent module.</p>
   
 <tr>
   
+  <td><span class="anchor" id="variable-report"></span>procedure(<a href='../interface/iterfunc.html'>iterfunc</a>),</td>
+  
+  <td>private,</td>
+  <td>pointer</td><td>::</td>
+  <td><strong>report</strong></td><td>=> </td><td>null()</td><td><p>for reporting an iteration</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
   <td><span class="anchor" id="variable-linesearch_mode"></span>integer,</td>
   
   <td>private</td>
@@ -661,7 +677,7 @@ implementation in a submodule of an interface in a parent module.</p>
          
     
     <h3>
-private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint)
+private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report)
     
     
     
@@ -875,6 +891,21 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   
 </tr>
 
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>procedure(<a href='../interface/iterfunc.html'>iterfunc</a>)</td>
+  <td>,</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>report</strong></td><td><p>user-defined procedure that will be called once per iteration</p></td>
+  
+</tr>
+
 </tbody>
 </table>
 
@@ -1026,7 +1057,8 @@ private subroutine <a href='../proc/slsqp_wrapper.html'>slsqp_wrapper</a>(me, x,
   <td></td>
   
   <td>dimension(:)</td><td>::</td>
-  <td><strong>x</strong></td><td></td>
+  <td><strong>x</strong></td><td><p><strong>in:</strong>  initial optimization variables,
+ <strong>out:</strong> solution.</p></td>
   
 </tr>
 
@@ -1041,7 +1073,7 @@ private subroutine <a href='../proc/slsqp_wrapper.html'>slsqp_wrapper</a>(me, x,
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>istat</strong></td><td><p>status code</p></td>
+  <td><strong>istat</strong></td><td><p>status code (see <code>mode</code> in <a href="../proc/slsqp.html">slsqp</a>).</p></td>
   
 </tr>
 
@@ -1227,8 +1259,9 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
         <span class="kt">integer</span> <span class="kd">::</span> <span class="n">l_jw</span> <span class="o">=</span> <span class="mi">0</span> <span class="c">!! size of `jwork`</span>
         <span class="kt">integer</span><span class="p">,</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">jw</span>  <span class="c">!! integer work array</span>
 
-        <span class="k">procedure</span><span class="p">(</span><span class="n">func</span><span class="p">),</span><span class="k">pointer</span> <span class="kd">::</span> <span class="n">f</span> <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! problem function subroutine</span>
-        <span class="k">procedure</span><span class="p">(</span><span class="n">grad</span><span class="p">),</span><span class="k">pointer</span> <span class="kd">::</span> <span class="n">g</span> <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! gradient subroutine</span>
+        <span class="k">procedure</span><span class="p">(</span><span class="n">func</span><span class="p">),</span><span class="k">pointer</span>     <span class="kd">::</span> <span class="n">f</span>      <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! problem function subroutine</span>
+        <span class="k">procedure</span><span class="p">(</span><span class="n">grad</span><span class="p">),</span><span class="k">pointer</span>     <span class="kd">::</span> <span class="n">g</span>      <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! gradient subroutine</span>
+        <span class="k">procedure</span><span class="p">(</span><span class="n">iterfunc</span><span class="p">),</span><span class="k">pointer</span> <span class="kd">::</span> <span class="n">report</span> <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! for reporting an iteration</span>
 
         <span class="kt">integer</span> <span class="kd">::</span> <span class="n">linesearch_mode</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c">!! linesearch mode.</span>
                                         <span class="c">!! `1` = inexact (Armijo) linesearch,</span>

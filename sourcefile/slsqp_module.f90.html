@@ -228,239 +228,239 @@
 <a name="ln-38"></a>        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">l_jw</span> <span class="o">=</span> <span class="mi">0</span> <span class="c">!! size of `jwork`</span>
 <a name="ln-39"></a>        <span class="kt">integer</span><span class="p">,</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">jw</span>  <span class="c">!! integer work array</span>
 <a name="ln-40"></a>
-<a name="ln-41"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">func</span><span class="p">),</span><span class="k">pointer</span> <span class="kd">::</span> <span class="n">f</span> <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! problem function subroutine</span>
-<a name="ln-42"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">grad</span><span class="p">),</span><span class="k">pointer</span> <span class="kd">::</span> <span class="n">g</span> <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! gradient subroutine</span>
-<a name="ln-43"></a>
-<a name="ln-44"></a>        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">linesearch_mode</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c">!! linesearch mode.</span>
-<a name="ln-45"></a>                                        <span class="c">!! `1` = inexact (Armijo) linesearch,</span>
-<a name="ln-46"></a>                                        <span class="c">!! `2` = exact linesearch.</span>
-<a name="ln-47"></a>        <span class="k">type</span><span class="p">(</span><span class="n">linmin_data</span><span class="p">),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">linmin</span> <span class="c">!! data formerly within [[linmin]].</span>
-<a name="ln-48"></a>                                                <span class="c">!! Only used when `linesearch_mode=2`</span>
-<a name="ln-49"></a>        <span class="k">type</span><span class="p">(</span><span class="n">slsqpb_data</span><span class="p">)</span> <span class="kd">::</span> <span class="n">slsqpb</span>  <span class="c">!! data formerly within [[slsqpb]].</span>
-<a name="ln-50"></a>
-<a name="ln-51"></a>    <span class="k">contains</span>
-<a name="ln-52"></a>
-<a name="ln-53"></a><span class="k">        private</span>
-<a name="ln-54"></a>
-<a name="ln-55"></a><span class="k">        procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">initialize</span> <span class="o">=&gt;</span> <span class="n">initialize_slsqp</span>
-<a name="ln-56"></a>        <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">destroy</span>    <span class="o">=&gt;</span> <span class="n">destroy_slsqp</span>
-<a name="ln-57"></a>        <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">optimize</span>   <span class="o">=&gt;</span> <span class="n">slsqp_wrapper</span>
-<a name="ln-58"></a>
-<a name="ln-59"></a>        <span class="k">procedure</span> <span class="kd">::</span> <span class="n">report_message</span>
-<a name="ln-60"></a>
-<a name="ln-61"></a>    <span class="k">end type </span><span class="n">slsqp_solver</span>
-<a name="ln-62"></a>
-<a name="ln-63"></a>    <span class="k">abstract interface</span>
-<a name="ln-64"></a><span class="k">        subroutine </span><span class="n">func</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>  <span class="c">!! function computation</span>
-<a name="ln-65"></a>            <span class="k">import</span> <span class="kd">::</span> <span class="n">wp</span><span class="p">,</span><span class="n">slsqp_solver</span>
-<a name="ln-66"></a>            <span class="k">implicit none</span>
-<a name="ln-67"></a><span class="k">            class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
-<a name="ln-68"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">x</span>  <span class="c">!! optimization variable vector</span>
-<a name="ln-69"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">f</span>  <span class="c">!! value of the objective function</span>
-<a name="ln-70"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">c</span>  <span class="c">!! the constraint vector `dimension(m)`,</span>
-<a name="ln-71"></a>                                                    <span class="c">!! equality constraints (if any) first.</span>
-<a name="ln-72"></a>        <span class="k">end subroutine </span><span class="n">func</span>
-<a name="ln-73"></a>        <span class="k">subroutine </span><span class="n">grad</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
-<a name="ln-74"></a>            <span class="k">import</span> <span class="kd">::</span> <span class="n">wp</span><span class="p">,</span><span class="n">slsqp_solver</span>
-<a name="ln-75"></a>            <span class="k">implicit none</span>
-<a name="ln-76"></a><span class="k">            class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">me</span>
-<a name="ln-77"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">x</span>  <span class="c">!! optimization variable vector</span>
-<a name="ln-78"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">g</span>  <span class="c">!! objective function partials w.r.t x `dimension(n)`</span>
-<a name="ln-79"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:,:),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span>  <span class="c">!! gradient matrix of constraints w.r.t. x `dimension(m,n)`</span>
-<a name="ln-80"></a>        <span class="k">end subroutine </span><span class="n">grad</span>
-<a name="ln-81"></a>    <span class="k">end interface</span>
-<a name="ln-82"></a>
-<a name="ln-83"></a><span class="k">    contains</span>
-<a name="ln-84"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-85"></a>
-<a name="ln-86"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-87"></a><span class="c">!&gt;</span>
-<a name="ln-88"></a><span class="c">!  initialize the [[slsqp_solver]] class.  see [[slsqp]] for more details.</span>
-<a name="ln-89"></a>
-<a name="ln-90"></a>    <span class="k">subroutine </span><span class="n">initialize_slsqp</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">max_iter</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">,</span><span class="n">status_ok</span><span class="p">,&amp;</span>
-<a name="ln-91"></a>                                <span class="n">linesearch_mode</span><span class="p">,</span><span class="n">iprint</span><span class="p">)</span>
-<a name="ln-92"></a>
-<a name="ln-93"></a>    <span class="k">implicit none</span>
-<a name="ln-94"></a>
-<a name="ln-95"></a><span class="k">    class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
-<a name="ln-96"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">n</span>               <span class="c">!! the number of varibles, n &gt;= 1</span>
-<a name="ln-97"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">m</span>               <span class="c">!! total number of constraints, m &gt;= 0</span>
-<a name="ln-98"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">meq</span>             <span class="c">!! number of equality constraints, meq &gt;= 0</span>
-<a name="ln-99"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">max_iter</span>        <span class="c">!! maximum number of iterations</span>
-<a name="ln-100"></a>    <span class="k">procedure</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>                   <span class="kd">::</span> <span class="n">f</span>               <span class="c">!! problem function</span>
-<a name="ln-101"></a>    <span class="k">procedure</span><span class="p">(</span><span class="n">grad</span><span class="p">)</span>                   <span class="kd">::</span> <span class="n">g</span>               <span class="c">!! function to compute gradients</span>
-<a name="ln-102"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">xl</span>              <span class="c">!! lower bound on `x`</span>
-<a name="ln-103"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">xu</span>              <span class="c">!! upper bound on `x`</span>
-<a name="ln-104"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">acc</span>             <span class="c">!! accuracy</span>
-<a name="ln-105"></a>    <span class="kt">logical</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">status_ok</span>       <span class="c">!! will be false if there were errors</span>
-<a name="ln-106"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>       <span class="kd">::</span> <span class="n">linesearch_mode</span> <span class="c">!! 1 = inexact (default), 2 = exact</span>
-<a name="ln-107"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>       <span class="kd">::</span> <span class="n">iprint</span>          <span class="c">!! unit number of status messages (default=output_unit)</span>
-<a name="ln-108"></a>
-<a name="ln-109"></a>    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">n1</span><span class="p">,</span><span class="n">mineq</span>
-<a name="ln-110"></a>
-<a name="ln-111"></a>    <span class="n">status_ok</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
-<a name="ln-112"></a>    <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">destroy</span><span class="p">()</span>
-<a name="ln-113"></a>
-<a name="ln-114"></a>    <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">iprint</span><span class="p">))</span> <span class="n">me</span><span class="p">%</span><span class="n">iprint</span> <span class="o">=</span> <span class="n">iprint</span>
-<a name="ln-115"></a>
-<a name="ln-116"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span><span class="o">/=</span><span class="n">size</span><span class="p">(</span><span class="n">xu</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">size</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span><span class="o">/=</span><span class="n">n</span><span class="p">)</span> <span class="k">then</span>
-<a name="ln-117"></a><span class="k">        call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: invalid upper or lower bound vector size&#39;</span><span class="p">)</span>
-<a name="ln-118"></a>    <span class="k">else if</span> <span class="p">(</span><span class="n">meq</span><span class="o">&lt;</span><span class="mi">0</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">meq</span><span class="o">&gt;</span><span class="n">m</span><span class="p">)</span> <span class="k">then</span>
-<a name="ln-119"></a><span class="k">        call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: invalid meq value:&#39;</span><span class="p">,</span> <span class="n">ival</span><span class="o">=</span><span class="n">meq</span><span class="p">)</span>
-<a name="ln-120"></a>    <span class="k">else if</span> <span class="p">(</span><span class="n">m</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
-<a name="ln-121"></a><span class="k">        call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: invalid m value:&#39;</span><span class="p">,</span> <span class="n">ival</span><span class="o">=</span><span class="n">m</span><span class="p">)</span>
-<a name="ln-122"></a>    <span class="k">else if</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
-<a name="ln-123"></a><span class="k">        call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: invalid n value:&#39;</span><span class="p">,</span> <span class="n">ival</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-<a name="ln-124"></a>    <span class="k">else if</span> <span class="p">(</span><span class="nb">any</span><span class="p">(</span><span class="n">xl</span><span class="o">&gt;</span><span class="n">xu</span><span class="p">))</span> <span class="k">then</span>
-<a name="ln-125"></a><span class="k">        call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: lower bounds must be &lt;= upper bounds.&#39;</span><span class="p">)</span>
-<a name="ln-126"></a>    <span class="k">else</span>
+<a name="ln-41"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">func</span><span class="p">),</span><span class="k">pointer</span>     <span class="kd">::</span> <span class="n">f</span>      <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! problem function subroutine</span>
+<a name="ln-42"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">grad</span><span class="p">),</span><span class="k">pointer</span>     <span class="kd">::</span> <span class="n">g</span>      <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! gradient subroutine</span>
+<a name="ln-43"></a>        <span class="k">procedure</span><span class="p">(</span><span class="n">iterfunc</span><span class="p">),</span><span class="k">pointer</span> <span class="kd">::</span> <span class="n">report</span> <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! for reporting an iteration</span>
+<a name="ln-44"></a>
+<a name="ln-45"></a>        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">linesearch_mode</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c">!! linesearch mode.</span>
+<a name="ln-46"></a>                                        <span class="c">!! `1` = inexact (Armijo) linesearch,</span>
+<a name="ln-47"></a>                                        <span class="c">!! `2` = exact linesearch.</span>
+<a name="ln-48"></a>        <span class="k">type</span><span class="p">(</span><span class="n">linmin_data</span><span class="p">),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">linmin</span> <span class="c">!! data formerly within [[linmin]].</span>
+<a name="ln-49"></a>                                                <span class="c">!! Only used when `linesearch_mode=2`</span>
+<a name="ln-50"></a>        <span class="k">type</span><span class="p">(</span><span class="n">slsqpb_data</span><span class="p">)</span> <span class="kd">::</span> <span class="n">slsqpb</span>  <span class="c">!! data formerly within [[slsqpb]].</span>
+<a name="ln-51"></a>
+<a name="ln-52"></a>    <span class="k">contains</span>
+<a name="ln-53"></a>
+<a name="ln-54"></a><span class="k">        private</span>
+<a name="ln-55"></a>
+<a name="ln-56"></a><span class="k">        procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">initialize</span> <span class="o">=&gt;</span> <span class="n">initialize_slsqp</span>
+<a name="ln-57"></a>        <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">destroy</span>    <span class="o">=&gt;</span> <span class="n">destroy_slsqp</span>
+<a name="ln-58"></a>        <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">optimize</span>   <span class="o">=&gt;</span> <span class="n">slsqp_wrapper</span>
+<a name="ln-59"></a>
+<a name="ln-60"></a>        <span class="k">procedure</span> <span class="kd">::</span> <span class="n">report_message</span>
+<a name="ln-61"></a>
+<a name="ln-62"></a>    <span class="k">end type </span><span class="n">slsqp_solver</span>
+<a name="ln-63"></a>
+<a name="ln-64"></a>    <span class="k">abstract interface</span>
+<a name="ln-65"></a><span class="k">        subroutine </span><span class="n">func</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>  <span class="c">!! for computing the function</span>
+<a name="ln-66"></a>            <span class="k">import</span> <span class="kd">::</span> <span class="n">wp</span><span class="p">,</span><span class="n">slsqp_solver</span>
+<a name="ln-67"></a>            <span class="k">implicit none</span>
+<a name="ln-68"></a><span class="k">            class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
+<a name="ln-69"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">x</span>  <span class="c">!! optimization variable vector</span>
+<a name="ln-70"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">f</span>  <span class="c">!! value of the objective function</span>
+<a name="ln-71"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">c</span>  <span class="c">!! the constraint vector `dimension(m)`,</span>
+<a name="ln-72"></a>                                                    <span class="c">!! equality constraints (if any) first.</span>
+<a name="ln-73"></a>        <span class="k">end subroutine </span><span class="n">func</span>
+<a name="ln-74"></a>        <span class="k">subroutine </span><span class="n">grad</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>  <span class="c">!! for computing the gradients</span>
+<a name="ln-75"></a>            <span class="k">import</span> <span class="kd">::</span> <span class="n">wp</span><span class="p">,</span><span class="n">slsqp_solver</span>
+<a name="ln-76"></a>            <span class="k">implicit none</span>
+<a name="ln-77"></a><span class="k">            class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">me</span>
+<a name="ln-78"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">x</span>  <span class="c">!! optimization variable vector</span>
+<a name="ln-79"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">g</span>  <span class="c">!! objective function partials w.r.t x `dimension(n)`</span>
+<a name="ln-80"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:,:),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span>  <span class="c">!! gradient matrix of constraints w.r.t. x `dimension(m,n)`</span>
+<a name="ln-81"></a>        <span class="k">end subroutine </span><span class="n">grad</span>
+<a name="ln-82"></a>        <span class="k">subroutine </span><span class="n">iterfunc</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">iter</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>  <span class="c">!! for reporting an interation</span>
+<a name="ln-83"></a>            <span class="k">import</span> <span class="kd">::</span> <span class="n">wp</span><span class="p">,</span><span class="n">slsqp_solver</span>
+<a name="ln-84"></a>            <span class="k">implicit none</span>
+<a name="ln-85"></a><span class="k">            class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
+<a name="ln-86"></a>            <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">iter</span>  <span class="c">!! iteration number</span>
+<a name="ln-87"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">x</span>     <span class="c">!! optimization variable vector</span>
+<a name="ln-88"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">f</span>     <span class="c">!! value of the objective function</span>
+<a name="ln-89"></a>            <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">c</span>     <span class="c">!! the constraint vector `dimension(m)`,</span>
+<a name="ln-90"></a>                                                       <span class="c">!! equality constraints (if any) first.</span>
+<a name="ln-91"></a>        <span class="k">end subroutine </span><span class="n">iterfunc</span>
+<a name="ln-92"></a>    <span class="k">end interface</span>
+<a name="ln-93"></a>
+<a name="ln-94"></a><span class="k">    contains</span>
+<a name="ln-95"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-96"></a>
+<a name="ln-97"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-98"></a><span class="c">!&gt;</span>
+<a name="ln-99"></a><span class="c">!  initialize the [[slsqp_solver]] class.  see [[slsqp]] for more details.</span>
+<a name="ln-100"></a>
+<a name="ln-101"></a>    <span class="k">subroutine </span><span class="n">initialize_slsqp</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">max_iter</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">,</span><span class="n">status_ok</span><span class="p">,&amp;</span>
+<a name="ln-102"></a>                                <span class="n">linesearch_mode</span><span class="p">,</span><span class="n">iprint</span><span class="p">,</span><span class="n">report</span><span class="p">)</span>
+<a name="ln-103"></a>
+<a name="ln-104"></a>    <span class="k">implicit none</span>
+<a name="ln-105"></a>
+<a name="ln-106"></a><span class="k">    class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
+<a name="ln-107"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">n</span>               <span class="c">!! the number of varibles, n &gt;= 1</span>
+<a name="ln-108"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">m</span>               <span class="c">!! total number of constraints, m &gt;= 0</span>
+<a name="ln-109"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">meq</span>             <span class="c">!! number of equality constraints, meq &gt;= 0</span>
+<a name="ln-110"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">max_iter</span>        <span class="c">!! maximum number of iterations</span>
+<a name="ln-111"></a>    <span class="k">procedure</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>                   <span class="kd">::</span> <span class="n">f</span>               <span class="c">!! problem function</span>
+<a name="ln-112"></a>    <span class="k">procedure</span><span class="p">(</span><span class="n">grad</span><span class="p">)</span>                   <span class="kd">::</span> <span class="n">g</span>               <span class="c">!! function to compute gradients</span>
+<a name="ln-113"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">xl</span>              <span class="c">!! lower bound on `x`</span>
+<a name="ln-114"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">xu</span>              <span class="c">!! upper bound on `x`</span>
+<a name="ln-115"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">acc</span>             <span class="c">!! accuracy</span>
+<a name="ln-116"></a>    <span class="kt">logical</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">status_ok</span>       <span class="c">!! will be false if there were errors</span>
+<a name="ln-117"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>       <span class="kd">::</span> <span class="n">linesearch_mode</span> <span class="c">!! 1 = inexact (default), 2 = exact</span>
+<a name="ln-118"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>       <span class="kd">::</span> <span class="n">iprint</span>          <span class="c">!! unit number of status messages (default=output_unit)</span>
+<a name="ln-119"></a>    <span class="k">procedure</span><span class="p">(</span><span class="n">iterfunc</span><span class="p">),</span><span class="k">optional</span>      <span class="kd">::</span> <span class="n">report</span>          <span class="c">!! user-defined procedure that will be called once per iteration</span>
+<a name="ln-120"></a>
+<a name="ln-121"></a>    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">n1</span><span class="p">,</span><span class="n">mineq</span>
+<a name="ln-122"></a>
+<a name="ln-123"></a>    <span class="n">status_ok</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-124"></a>    <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">destroy</span><span class="p">()</span>
+<a name="ln-125"></a>
+<a name="ln-126"></a>    <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">iprint</span><span class="p">))</span> <span class="n">me</span><span class="p">%</span><span class="n">iprint</span> <span class="o">=</span> <span class="n">iprint</span>
 <a name="ln-127"></a>
-<a name="ln-128"></a><span class="k">        if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">linesearch_mode</span><span class="p">))</span> <span class="k">then</span>
-<a name="ln-129"></a>            <span class="c">!two linesearch modes:</span>
-<a name="ln-130"></a>            <span class="k">select case</span> <span class="p">(</span><span class="n">linesearch_mode</span><span class="p">)</span>
-<a name="ln-131"></a>            <span class="k">case</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="c">!inexact</span>
-<a name="ln-132"></a>                <span class="n">me</span><span class="p">%</span><span class="n">linesearch_mode</span> <span class="o">=</span> <span class="n">linesearch_mode</span>
-<a name="ln-133"></a>            <span class="k">case</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>     <span class="c">!exact</span>
-<a name="ln-134"></a>                <span class="n">me</span><span class="p">%</span><span class="n">linesearch_mode</span> <span class="o">=</span> <span class="n">linesearch_mode</span>
-<a name="ln-135"></a>                <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">linmin</span><span class="p">)</span>
-<a name="ln-136"></a>            <span class="k">case </span><span class="n">default</span>
-<a name="ln-137"></a>                <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: invalid linesearch_mode (must be 1 or 2): &#39;</span><span class="p">,</span><span class="n">ival</span><span class="o">=</span><span class="n">linesearch_mode</span><span class="p">)</span>
-<a name="ln-138"></a>                <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">destroy</span><span class="p">()</span>
-<a name="ln-139"></a>                <span class="k">return</span>
-<a name="ln-140"></a><span class="k">            end select</span>
-<a name="ln-141"></a><span class="k">        end if</span>
-<a name="ln-142"></a>
-<a name="ln-143"></a><span class="k">        </span><span class="n">status_ok</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
-<a name="ln-144"></a>        <span class="n">me</span><span class="p">%</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>
-<a name="ln-145"></a>        <span class="n">me</span><span class="p">%</span><span class="n">m</span> <span class="o">=</span> <span class="n">m</span>
-<a name="ln-146"></a>        <span class="n">me</span><span class="p">%</span><span class="n">meq</span> <span class="o">=</span> <span class="n">meq</span>
-<a name="ln-147"></a>        <span class="n">me</span><span class="p">%</span><span class="n">max_iter</span> <span class="o">=</span> <span class="n">max_iter</span>
-<a name="ln-148"></a>        <span class="n">me</span><span class="p">%</span><span class="n">acc</span> <span class="o">=</span> <span class="n">acc</span>
-<a name="ln-149"></a>        <span class="n">me</span><span class="p">%</span><span class="n">f</span> <span class="o">=&gt;</span> <span class="n">f</span>
-<a name="ln-150"></a>        <span class="n">me</span><span class="p">%</span><span class="n">g</span> <span class="o">=&gt;</span> <span class="n">g</span>
-<a name="ln-151"></a>
-<a name="ln-152"></a>        <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">xl</span><span class="p">(</span><span class="n">n</span><span class="p">));</span> <span class="n">me</span><span class="p">%</span><span class="n">xl</span> <span class="o">=</span> <span class="n">xl</span>
-<a name="ln-153"></a>        <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">xu</span><span class="p">(</span><span class="n">n</span><span class="p">));</span> <span class="n">me</span><span class="p">%</span><span class="n">xu</span> <span class="o">=</span> <span class="n">xu</span>
+<a name="ln-128"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span><span class="o">/=</span><span class="n">size</span><span class="p">(</span><span class="n">xu</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">size</span><span class="p">(</span><span class="n">xl</span><span class="p">)</span><span class="o">/=</span><span class="n">n</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-129"></a><span class="k">        call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: invalid upper or lower bound vector size&#39;</span><span class="p">)</span>
+<a name="ln-130"></a>    <span class="k">else if</span> <span class="p">(</span><span class="n">meq</span><span class="o">&lt;</span><span class="mi">0</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">meq</span><span class="o">&gt;</span><span class="n">m</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-131"></a><span class="k">        call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: invalid meq value:&#39;</span><span class="p">,</span> <span class="n">ival</span><span class="o">=</span><span class="n">meq</span><span class="p">)</span>
+<a name="ln-132"></a>    <span class="k">else if</span> <span class="p">(</span><span class="n">m</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-133"></a><span class="k">        call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: invalid m value:&#39;</span><span class="p">,</span> <span class="n">ival</span><span class="o">=</span><span class="n">m</span><span class="p">)</span>
+<a name="ln-134"></a>    <span class="k">else if</span> <span class="p">(</span><span class="n">n</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-135"></a><span class="k">        call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: invalid n value:&#39;</span><span class="p">,</span> <span class="n">ival</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<a name="ln-136"></a>    <span class="k">else if</span> <span class="p">(</span><span class="nb">any</span><span class="p">(</span><span class="n">xl</span><span class="o">&gt;</span><span class="n">xu</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-137"></a><span class="k">        call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: lower bounds must be &lt;= upper bounds.&#39;</span><span class="p">)</span>
+<a name="ln-138"></a>    <span class="k">else</span>
+<a name="ln-139"></a>
+<a name="ln-140"></a><span class="k">        if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">linesearch_mode</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-141"></a>            <span class="c">!two linesearch modes:</span>
+<a name="ln-142"></a>            <span class="k">select case</span> <span class="p">(</span><span class="n">linesearch_mode</span><span class="p">)</span>
+<a name="ln-143"></a>            <span class="k">case</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="c">!inexact</span>
+<a name="ln-144"></a>                <span class="n">me</span><span class="p">%</span><span class="n">linesearch_mode</span> <span class="o">=</span> <span class="n">linesearch_mode</span>
+<a name="ln-145"></a>            <span class="k">case</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>     <span class="c">!exact</span>
+<a name="ln-146"></a>                <span class="n">me</span><span class="p">%</span><span class="n">linesearch_mode</span> <span class="o">=</span> <span class="n">linesearch_mode</span>
+<a name="ln-147"></a>                <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">linmin</span><span class="p">)</span>
+<a name="ln-148"></a>            <span class="k">case </span><span class="n">default</span>
+<a name="ln-149"></a>                <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: invalid linesearch_mode (must be 1 or 2): &#39;</span><span class="p">,</span><span class="n">ival</span><span class="o">=</span><span class="n">linesearch_mode</span><span class="p">)</span>
+<a name="ln-150"></a>                <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">destroy</span><span class="p">()</span>
+<a name="ln-151"></a>                <span class="k">return</span>
+<a name="ln-152"></a><span class="k">            end select</span>
+<a name="ln-153"></a><span class="k">        end if</span>
 <a name="ln-154"></a>
-<a name="ln-155"></a>        <span class="c">!work arrays:</span>
-<a name="ln-156"></a>        <span class="n">n1</span> <span class="o">=</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span>
-<a name="ln-157"></a>        <span class="n">mineq</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">meq</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">n1</span>
-<a name="ln-158"></a>        <span class="n">me</span><span class="p">%</span><span class="n">l_w</span> <span class="o">=</span> <span class="n">n1</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">meq</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">mineq</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">&amp;</span>   <span class="c">!for lsq</span>
-<a name="ln-159"></a>                 <span class="p">(</span><span class="n">n1</span><span class="o">-</span><span class="n">meq</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">mineq</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">mineq</span>        <span class="o">+</span> <span class="p">&amp;</span>   <span class="c">!for lsi</span>
-<a name="ln-160"></a>                 <span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="n">mineq</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">-</span><span class="n">meq</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">meq</span> <span class="o">+</span> <span class="n">n1</span>      <span class="o">+</span> <span class="p">&amp;</span>   <span class="c">!for lsei</span>
-<a name="ln-161"></a>                  <span class="n">n1</span><span class="o">*</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">m</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">n</span> <span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="n">n1</span> <span class="o">+</span> <span class="mi">1</span>               <span class="c">!for slsqpb</span>
-<a name="ln-162"></a>        <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">w</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">l_w</span><span class="p">))</span>
-<a name="ln-163"></a>        <span class="n">me</span><span class="p">%</span><span class="n">w</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-155"></a><span class="k">        </span><span class="n">status_ok</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-156"></a>        <span class="n">me</span><span class="p">%</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>
+<a name="ln-157"></a>        <span class="n">me</span><span class="p">%</span><span class="n">m</span> <span class="o">=</span> <span class="n">m</span>
+<a name="ln-158"></a>        <span class="n">me</span><span class="p">%</span><span class="n">meq</span> <span class="o">=</span> <span class="n">meq</span>
+<a name="ln-159"></a>        <span class="n">me</span><span class="p">%</span><span class="n">max_iter</span> <span class="o">=</span> <span class="n">max_iter</span>
+<a name="ln-160"></a>        <span class="n">me</span><span class="p">%</span><span class="n">acc</span> <span class="o">=</span> <span class="n">acc</span>
+<a name="ln-161"></a>        <span class="n">me</span><span class="p">%</span><span class="n">f</span> <span class="o">=&gt;</span> <span class="n">f</span>
+<a name="ln-162"></a>        <span class="n">me</span><span class="p">%</span><span class="n">g</span> <span class="o">=&gt;</span> <span class="n">g</span>
+<a name="ln-163"></a>        <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">report</span><span class="p">))</span> <span class="n">me</span><span class="p">%</span><span class="n">report</span> <span class="o">=&gt;</span> <span class="n">report</span>
 <a name="ln-164"></a>
-<a name="ln-165"></a>        <span class="n">me</span><span class="p">%</span><span class="n">l_jw</span> <span class="o">=</span> <span class="n">mineq</span>
-<a name="ln-166"></a>        <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">jw</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">l_jw</span><span class="p">))</span>
-<a name="ln-167"></a>        <span class="n">me</span><span class="p">%</span><span class="n">jw</span> <span class="o">=</span> <span class="mi">0</span>
-<a name="ln-168"></a>
-<a name="ln-169"></a>    <span class="k">end if</span>
-<a name="ln-170"></a>
-<a name="ln-171"></a><span class="k">    end subroutine </span><span class="n">initialize_slsqp</span>
-<a name="ln-172"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-173"></a>
-<a name="ln-174"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-175"></a><span class="c">!&gt;</span>
-<a name="ln-176"></a><span class="c">!  destructor for [[slsqp_solver]].</span>
+<a name="ln-165"></a>        <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">xl</span><span class="p">(</span><span class="n">n</span><span class="p">));</span> <span class="n">me</span><span class="p">%</span><span class="n">xl</span> <span class="o">=</span> <span class="n">xl</span>
+<a name="ln-166"></a>        <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">xu</span><span class="p">(</span><span class="n">n</span><span class="p">));</span> <span class="n">me</span><span class="p">%</span><span class="n">xu</span> <span class="o">=</span> <span class="n">xu</span>
+<a name="ln-167"></a>
+<a name="ln-168"></a>        <span class="c">!work arrays:</span>
+<a name="ln-169"></a>        <span class="n">n1</span> <span class="o">=</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span>
+<a name="ln-170"></a>        <span class="n">mineq</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">meq</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">n1</span>
+<a name="ln-171"></a>        <span class="n">me</span><span class="p">%</span><span class="n">l_w</span> <span class="o">=</span> <span class="n">n1</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">meq</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">mineq</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">&amp;</span>   <span class="c">!for lsq</span>
+<a name="ln-172"></a>                 <span class="p">(</span><span class="n">n1</span><span class="o">-</span><span class="n">meq</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">mineq</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">mineq</span>        <span class="o">+</span> <span class="p">&amp;</span>   <span class="c">!for lsi</span>
+<a name="ln-173"></a>                 <span class="p">(</span><span class="n">n1</span><span class="o">+</span><span class="n">mineq</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n1</span><span class="o">-</span><span class="n">meq</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">meq</span> <span class="o">+</span> <span class="n">n1</span>      <span class="o">+</span> <span class="p">&amp;</span>   <span class="c">!for lsei</span>
+<a name="ln-174"></a>                  <span class="n">n1</span><span class="o">*</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">m</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">n</span> <span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="n">n1</span> <span class="o">+</span> <span class="mi">1</span>               <span class="c">!for slsqpb</span>
+<a name="ln-175"></a>        <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">w</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">l_w</span><span class="p">))</span>
+<a name="ln-176"></a>        <span class="n">me</span><span class="p">%</span><span class="n">w</span> <span class="o">=</span> <span class="n">zero</span>
 <a name="ln-177"></a>
-<a name="ln-178"></a>    <span class="k">subroutine </span><span class="n">destroy_slsqp</span><span class="p">(</span><span class="n">me</span><span class="p">)</span>
-<a name="ln-179"></a>
-<a name="ln-180"></a>    <span class="k">implicit none</span>
+<a name="ln-178"></a>        <span class="n">me</span><span class="p">%</span><span class="n">l_jw</span> <span class="o">=</span> <span class="n">mineq</span>
+<a name="ln-179"></a>        <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">jw</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">l_jw</span><span class="p">))</span>
+<a name="ln-180"></a>        <span class="n">me</span><span class="p">%</span><span class="n">jw</span> <span class="o">=</span> <span class="mi">0</span>
 <a name="ln-181"></a>
-<a name="ln-182"></a><span class="k">    class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
+<a name="ln-182"></a>    <span class="k">end if</span>
 <a name="ln-183"></a>
-<a name="ln-184"></a>    <span class="k">end subroutine </span><span class="n">destroy_slsqp</span>
+<a name="ln-184"></a><span class="k">    end subroutine </span><span class="n">initialize_slsqp</span>
 <a name="ln-185"></a><span class="c">!*******************************************************************************</span>
 <a name="ln-186"></a>
 <a name="ln-187"></a><span class="c">!*******************************************************************************</span>
 <a name="ln-188"></a><span class="c">!&gt;</span>
-<a name="ln-189"></a><span class="c">!  main routine for calling [[slsqp]].</span>
+<a name="ln-189"></a><span class="c">!  destructor for [[slsqp_solver]].</span>
 <a name="ln-190"></a>
-<a name="ln-191"></a>    <span class="k">subroutine </span><span class="n">slsqp_wrapper</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">istat</span><span class="p">,</span><span class="n">iterations</span><span class="p">)</span>
+<a name="ln-191"></a>    <span class="k">subroutine </span><span class="n">destroy_slsqp</span><span class="p">(</span><span class="n">me</span><span class="p">)</span>
 <a name="ln-192"></a>
 <a name="ln-193"></a>    <span class="k">implicit none</span>
 <a name="ln-194"></a>
-<a name="ln-195"></a><span class="k">    class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">me</span>
-<a name="ln-196"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span>          <span class="c">!! in: initialize optimization variables,</span>
-<a name="ln-197"></a>                                                      <span class="c">!! out: solution.</span>
-<a name="ln-198"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>                 <span class="kd">::</span> <span class="n">istat</span>      <span class="c">!! status code</span>
-<a name="ln-199"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">),</span><span class="k">optional</span>        <span class="kd">::</span> <span class="n">iterations</span> <span class="c">!! number of iterations</span>
-<a name="ln-200"></a>
-<a name="ln-201"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>                               <span class="kd">::</span> <span class="n">f</span>        <span class="c">!! objective function</span>
-<a name="ln-202"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">))</span>        <span class="kd">::</span> <span class="n">c</span>        <span class="c">!! constraint vector</span>
-<a name="ln-203"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">),</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span>        <span class="c">!! a matrix for slsqp</span>
-<a name="ln-204"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">g</span>        <span class="c">!! g matrix for slsqp</span>
-<a name="ln-205"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">cvec</span>     <span class="c">!! constraint vector</span>
-<a name="ln-206"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">dfdx</span>     <span class="c">!! objective function partials</span>
-<a name="ln-207"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">,</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="p">)</span>          <span class="kd">::</span> <span class="n">dcdx</span>     <span class="c">!! constraint partials</span>
-<a name="ln-208"></a>    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span><span class="n">mode</span><span class="p">,</span><span class="n">la</span><span class="p">,</span><span class="n">iter</span>
-<a name="ln-209"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">acc</span>
-<a name="ln-210"></a>
-<a name="ln-211"></a>    <span class="c">!check setup:</span>
-<a name="ln-212"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/=</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="p">)</span> <span class="k">then</span>
-<a name="ln-213"></a><span class="k">        call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;invalid size(x) in slsqp_wrapper&#39;</span><span class="p">)</span>
-<a name="ln-214"></a>        <span class="n">istat</span> <span class="o">=</span> <span class="o">-</span><span class="mi">100</span>
-<a name="ln-215"></a>        <span class="k">return</span>
-<a name="ln-216"></a><span class="k">    end if</span>
-<a name="ln-217"></a>
-<a name="ln-218"></a>    <span class="c">!initialize:</span>
-<a name="ln-219"></a>    <span class="n">i</span>    <span class="o">=</span> <span class="mi">0</span>
-<a name="ln-220"></a>    <span class="n">iter</span> <span class="o">=</span> <span class="n">me</span><span class="p">%</span><span class="n">max_iter</span>
-<a name="ln-221"></a>    <span class="n">la</span>   <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">)</span>
-<a name="ln-222"></a>    <span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span>
-<a name="ln-223"></a>    <span class="n">a</span>    <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-224"></a>    <span class="n">g</span>    <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-225"></a>    <span class="n">c</span>    <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-226"></a>    <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">iterations</span><span class="p">))</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-195"></a><span class="k">    class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
+<a name="ln-196"></a>
+<a name="ln-197"></a>    <span class="k">end subroutine </span><span class="n">destroy_slsqp</span>
+<a name="ln-198"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-199"></a>
+<a name="ln-200"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-201"></a><span class="c">!&gt;</span>
+<a name="ln-202"></a><span class="c">!  main routine for calling [[slsqp]].</span>
+<a name="ln-203"></a>
+<a name="ln-204"></a>    <span class="k">subroutine </span><span class="n">slsqp_wrapper</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">istat</span><span class="p">,</span><span class="n">iterations</span><span class="p">)</span>
+<a name="ln-205"></a>
+<a name="ln-206"></a>    <span class="k">implicit none</span>
+<a name="ln-207"></a>
+<a name="ln-208"></a><span class="k">    class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">me</span>
+<a name="ln-209"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span>          <span class="c">!! **in:**  initial optimization variables,</span>
+<a name="ln-210"></a>                                                      <span class="c">!! **out:** solution.</span>
+<a name="ln-211"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>                 <span class="kd">::</span> <span class="n">istat</span>      <span class="c">!! status code (see `mode` in [[slsqp]]).</span>
+<a name="ln-212"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">),</span><span class="k">optional</span>        <span class="kd">::</span> <span class="n">iterations</span> <span class="c">!! number of iterations</span>
+<a name="ln-213"></a>
+<a name="ln-214"></a>    <span class="c">!local variables:</span>
+<a name="ln-215"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>                               <span class="kd">::</span> <span class="n">f</span>        <span class="c">!! objective function</span>
+<a name="ln-216"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">))</span>        <span class="kd">::</span> <span class="n">c</span>        <span class="c">!! constraint vector</span>
+<a name="ln-217"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">),</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span>        <span class="c">!! a matrix for slsqp</span>
+<a name="ln-218"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">g</span>        <span class="c">!! g matrix for slsqp</span>
+<a name="ln-219"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">cvec</span>     <span class="c">!! constraint vector</span>
+<a name="ln-220"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">dfdx</span>     <span class="c">!! objective function partials</span>
+<a name="ln-221"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">,</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="p">)</span>          <span class="kd">::</span> <span class="n">dcdx</span>     <span class="c">!! constraint partials</span>
+<a name="ln-222"></a>    <span class="kt">integer</span>                                <span class="kd">::</span> <span class="n">i</span>        <span class="c">!! iteration counter</span>
+<a name="ln-223"></a>    <span class="kt">integer</span>                                <span class="kd">::</span> <span class="n">mode</span>     <span class="c">!! reverse communication flag for [[slsqp]]</span>
+<a name="ln-224"></a>    <span class="kt">integer</span>                                <span class="kd">::</span> <span class="n">la</span>       <span class="c">!! input to [[slsqp]]</span>
+<a name="ln-225"></a>    <span class="kt">integer</span>                                <span class="kd">::</span> <span class="n">iter</span>     <span class="c">!! in/out for [[slsqp]]</span>
+<a name="ln-226"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>                               <span class="kd">::</span> <span class="n">acc</span>      <span class="c">!! in/out for [[slsqp]]</span>
 <a name="ln-227"></a>
-<a name="ln-228"></a>    <span class="c">!linesearch:</span>
-<a name="ln-229"></a>    <span class="k">select case</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">linesearch_mode</span><span class="p">)</span>
-<a name="ln-230"></a>    <span class="k">case</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="c">!inexact (armijo-type linesearch)</span>
-<a name="ln-231"></a>        <span class="n">acc</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">acc</span><span class="p">)</span>
-<a name="ln-232"></a>    <span class="k">case</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>     <span class="c">!exact</span>
-<a name="ln-233"></a>        <span class="n">acc</span> <span class="o">=</span> <span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">acc</span><span class="p">)</span>
-<a name="ln-234"></a>    <span class="k">case </span><span class="n">default</span>
-<a name="ln-235"></a>        <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;invalid linesearch_mode in slsqp_wrapper&#39;</span><span class="p">)</span>
-<a name="ln-236"></a>        <span class="n">istat</span> <span class="o">=</span> <span class="o">-</span><span class="mi">101</span>
-<a name="ln-237"></a>        <span class="k">return</span>
-<a name="ln-238"></a><span class="k">    end select</span>
-<a name="ln-239"></a>
-<a name="ln-240"></a>    <span class="c">!main solver loop:</span>
-<a name="ln-241"></a>    <span class="k">do</span>
-<a name="ln-242"></a>
-<a name="ln-243"></a><span class="k">        if</span> <span class="p">(</span><span class="n">mode</span><span class="o">==</span><span class="mi">0</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">mode</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="k">then</span>  <span class="c">!function evaluation (f&amp;c)</span>
-<a name="ln-244"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">cvec</span><span class="p">)</span>
-<a name="ln-245"></a>            <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">)</span>   <span class="o">=</span> <span class="n">cvec</span>
-<a name="ln-246"></a>
-<a name="ln-247"></a>            <span class="c">!write(*,*) &#39;&#39;</span>
-<a name="ln-248"></a>            <span class="c">!write(*,*) &#39;func&#39;       !........</span>
-<a name="ln-249"></a>            <span class="c">!write(*,*) &#39;x=&#39;,x</span>
-<a name="ln-250"></a>            <span class="c">!write(*,*) &#39;f=&#39;,f</span>
-<a name="ln-251"></a>            <span class="c">!write(*,*) &#39;c=&#39;,c</span>
-<a name="ln-252"></a>
-<a name="ln-253"></a>            <span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="n">i</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="nb">norm2</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-<a name="ln-254"></a>            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-255"></a>
-<a name="ln-256"></a>            <span class="c">!note: not really an iteration (can also be during exact linesearch)</span>
-<a name="ln-257"></a>
-<a name="ln-258"></a>        <span class="k">end if</span>
+<a name="ln-228"></a>    <span class="c">!initialize:</span>
+<a name="ln-229"></a>    <span class="n">i</span>    <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-230"></a>    <span class="n">iter</span> <span class="o">=</span> <span class="n">me</span><span class="p">%</span><span class="n">max_iter</span>
+<a name="ln-231"></a>    <span class="n">la</span>   <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">)</span>
+<a name="ln-232"></a>    <span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-233"></a>    <span class="n">a</span>    <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-234"></a>    <span class="n">g</span>    <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-235"></a>    <span class="n">c</span>    <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-236"></a>    <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">iterations</span><span class="p">))</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-237"></a>
+<a name="ln-238"></a>    <span class="c">!check setup:</span>
+<a name="ln-239"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/=</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-240"></a><span class="k">        call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;invalid size(x) in slsqp_wrapper&#39;</span><span class="p">)</span>
+<a name="ln-241"></a>        <span class="n">istat</span> <span class="o">=</span> <span class="o">-</span><span class="mi">100</span>
+<a name="ln-242"></a>        <span class="k">return</span>
+<a name="ln-243"></a><span class="k">    end if</span>
+<a name="ln-244"></a>
+<a name="ln-245"></a>    <span class="c">!linesearch:</span>
+<a name="ln-246"></a>    <span class="k">select case</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">linesearch_mode</span><span class="p">)</span>
+<a name="ln-247"></a>    <span class="k">case</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="c">!inexact (armijo-type linesearch)</span>
+<a name="ln-248"></a>        <span class="n">acc</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">acc</span><span class="p">)</span>
+<a name="ln-249"></a>    <span class="k">case</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>     <span class="c">!exact</span>
+<a name="ln-250"></a>        <span class="n">acc</span> <span class="o">=</span> <span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">acc</span><span class="p">)</span>
+<a name="ln-251"></a>    <span class="k">case </span><span class="n">default</span>
+<a name="ln-252"></a>        <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;invalid linesearch_mode in slsqp_wrapper&#39;</span><span class="p">)</span>
+<a name="ln-253"></a>        <span class="n">istat</span> <span class="o">=</span> <span class="o">-</span><span class="mi">101</span>
+<a name="ln-254"></a>        <span class="k">return</span>
+<a name="ln-255"></a><span class="k">    end select</span>
+<a name="ln-256"></a>
+<a name="ln-257"></a>    <span class="c">!main solver loop:</span>
+<a name="ln-258"></a>    <span class="k">do</span>
 <a name="ln-259"></a>
-<a name="ln-260"></a><span class="k">        if</span> <span class="p">(</span><span class="n">mode</span><span class="o">==</span><span class="mi">0</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">mode</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span> <span class="k">then</span>  <span class="c">!gradient evaluation (g&amp;a)</span>
-<a name="ln-261"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">dfdx</span><span class="p">,</span><span class="n">dcdx</span><span class="p">)</span>
-<a name="ln-262"></a>            <span class="n">g</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="p">)</span>        <span class="o">=</span> <span class="n">dfdx</span>
-<a name="ln-263"></a>            <span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="n">dcdx</span>
+<a name="ln-260"></a><span class="k">        if</span> <span class="p">(</span><span class="n">mode</span><span class="o">==</span><span class="mi">0</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">mode</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="k">then</span>  <span class="c">!function evaluation (f&amp;c)</span>
+<a name="ln-261"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">cvec</span><span class="p">)</span>
+<a name="ln-262"></a>            <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">)</span>   <span class="o">=</span> <span class="n">cvec</span>
+<a name="ln-263"></a>        <span class="k">end if</span>
 <a name="ln-264"></a>
-<a name="ln-265"></a>            <span class="c">!write(*,*) &#39;&#39;</span>
-<a name="ln-266"></a>            <span class="c">!write(*,*) &#39;grad&#39;       !........</span>
-<a name="ln-267"></a>            <span class="c">!write(*,*) &#39;x=&#39;,x</span>
-<a name="ln-268"></a>            <span class="c">!write(*,*) &#39;g=&#39;,g</span>
-<a name="ln-269"></a>            <span class="c">!write(*,*) &#39;a=&#39;,a</span>
-<a name="ln-270"></a>
-<a name="ln-271"></a>            <span class="c">!write(*,*) i,x,f,norm2(c)</span>
-<a name="ln-272"></a>            <span class="c">!i = i + 1</span>
-<a name="ln-273"></a>
+<a name="ln-265"></a><span class="k">        if</span> <span class="p">(</span><span class="n">mode</span><span class="o">==</span><span class="mi">0</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">mode</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span> <span class="k">then</span>  <span class="c">!gradient evaluation (g&amp;a)</span>
+<a name="ln-266"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">dfdx</span><span class="p">,</span><span class="n">dcdx</span><span class="p">)</span>
+<a name="ln-267"></a>            <span class="n">g</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="p">)</span>        <span class="o">=</span> <span class="n">dfdx</span>
+<a name="ln-268"></a>            <span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">me</span><span class="p">%</span><span class="n">m</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="n">me</span><span class="p">%</span><span class="n">n</span><span class="p">)</span> <span class="o">=</span> <span class="n">dcdx</span>
+<a name="ln-269"></a>
+<a name="ln-270"></a>            <span class="c">!this is an iteration:</span>
+<a name="ln-271"></a>            <span class="c">!note: the initial guess is reported as iteration 0:</span>
+<a name="ln-272"></a>            <span class="k">if</span> <span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">report</span><span class="p">))</span> <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">)</span> <span class="c">!report iteration</span>
+<a name="ln-273"></a>            <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>  <span class="c">! iteration counter</span>
 <a name="ln-274"></a>        <span class="k">end if</span>
 <a name="ln-275"></a>
 <a name="ln-276"></a>        <span class="c">!main routine:</span>
@@ -471,105 +471,106 @@
 <a name="ln-281"></a>
 <a name="ln-282"></a>        <span class="k">select case</span> <span class="p">(</span><span class="n">mode</span><span class="p">)</span>
 <a name="ln-283"></a>        <span class="k">case</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c">!required accuracy for solution obtained</span>
-<a name="ln-284"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;required accuracy for solution obtained&#39;</span><span class="p">)</span>
-<a name="ln-285"></a>            <span class="k">exit</span>
-<a name="ln-286"></a><span class="k">        case</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-287"></a>            <span class="c">!continue to next call</span>
-<a name="ln-288"></a>        <span class="k">case</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-<a name="ln-289"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;number of equality contraints larger than n&#39;</span><span class="p">)</span>
-<a name="ln-290"></a>            <span class="k">exit</span>
-<a name="ln-291"></a><span class="k">        case</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-<a name="ln-292"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;more than 3*n iterations in lsq subproblem&#39;</span><span class="p">)</span>
-<a name="ln-293"></a>            <span class="k">exit</span>
-<a name="ln-294"></a><span class="k">        case</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<a name="ln-295"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;inequality constraints incompatible&#39;</span><span class="p">)</span>
-<a name="ln-296"></a>            <span class="k">exit</span>
-<a name="ln-297"></a><span class="k">        case</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-<a name="ln-298"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;singular matrix e in lsq subproblem&#39;</span><span class="p">)</span>
-<a name="ln-299"></a>            <span class="k">exit</span>
-<a name="ln-300"></a><span class="k">        case</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
-<a name="ln-301"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;singular matrix c in lsq subproblem&#39;</span><span class="p">)</span>
-<a name="ln-302"></a>            <span class="k">exit</span>
-<a name="ln-303"></a><span class="k">        case</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
-<a name="ln-304"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;rank-deficient equality constraint subproblem hfti&#39;</span><span class="p">)</span>
-<a name="ln-305"></a>            <span class="k">exit</span>
-<a name="ln-306"></a><span class="k">        case</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
-<a name="ln-307"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;positive directional derivative for linesearch&#39;</span><span class="p">)</span>
-<a name="ln-308"></a>            <span class="k">exit</span>
-<a name="ln-309"></a><span class="k">        case</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
-<a name="ln-310"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;more than max_iter iterations in slsqp&#39;</span><span class="p">)</span>
-<a name="ln-311"></a>            <span class="k">exit</span>
-<a name="ln-312"></a><span class="k">        case </span><span class="n">default</span>
-<a name="ln-313"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;unknown slsqp error&#39;</span><span class="p">)</span>
-<a name="ln-314"></a>            <span class="k">exit</span>
-<a name="ln-315"></a><span class="k">        end select</span>
-<a name="ln-316"></a>
-<a name="ln-317"></a><span class="k">    end do</span>
-<a name="ln-318"></a>
-<a name="ln-319"></a><span class="k">    </span><span class="n">istat</span> <span class="o">=</span> <span class="n">mode</span>
-<a name="ln-320"></a>    <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">iterations</span><span class="p">))</span> <span class="n">iterations</span> <span class="o">=</span> <span class="n">iter</span>
-<a name="ln-321"></a>
-<a name="ln-322"></a>    <span class="k">end subroutine </span><span class="n">slsqp_wrapper</span>
-<a name="ln-323"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-324"></a>
-<a name="ln-325"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-326"></a><span class="c">!&gt;</span>
-<a name="ln-327"></a><span class="c">!  Report a message from an [[slsqp_solver]] class. This uses the `iprint`</span>
-<a name="ln-328"></a><span class="c">!  variable in the class as the unit number for printing. Note: for fatal errors,</span>
-<a name="ln-329"></a><span class="c">!  if no unit is specified, the `error_unit` is used.</span>
-<a name="ln-330"></a>
-<a name="ln-331"></a>    <span class="k">subroutine </span><span class="n">report_message</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">str</span><span class="p">,</span><span class="n">ival</span><span class="p">,</span><span class="n">fatal</span><span class="p">)</span>
-<a name="ln-332"></a>
-<a name="ln-333"></a>    <span class="k">implicit none</span>
-<a name="ln-334"></a>
-<a name="ln-335"></a><span class="k">    class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
-<a name="ln-336"></a>    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">str</span>    <span class="c">!! the message to report.</span>
-<a name="ln-337"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>    <span class="kd">::</span> <span class="n">ival</span>   <span class="c">!! optional integer to print after the message.</span>
-<a name="ln-338"></a>    <span class="kt">logical</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>    <span class="kd">::</span> <span class="n">fatal</span>  <span class="c">!! if True, then the program is stopped (default=False).</span>
-<a name="ln-339"></a>
-<a name="ln-340"></a>    <span class="kt">logical</span> <span class="kd">::</span> <span class="n">stop_program</span>  <span class="c">!! true if the program is to be stopped</span>
-<a name="ln-341"></a>    <span class="kt">logical</span> <span class="kd">::</span> <span class="n">write_message</span>  <span class="c">!! true if the message is to be printed</span>
-<a name="ln-342"></a>    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="kd">::</span> <span class="n">istr</span>  <span class="c">!! string version of `ival`</span>
-<a name="ln-343"></a>    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">str_to_write</span>  <span class="c">!! the actual message to the printed</span>
-<a name="ln-344"></a>    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">istat</span>  <span class="c">!! iostat for integer to string conversion</span>
-<a name="ln-345"></a>
-<a name="ln-346"></a>    <span class="c">!fatal error check:</span>
-<a name="ln-347"></a>    <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">fatal</span><span class="p">))</span> <span class="k">then</span>
-<a name="ln-348"></a><span class="k">        </span><span class="n">stop_program</span> <span class="o">=</span> <span class="n">fatal</span>
-<a name="ln-349"></a>    <span class="k">else</span>
-<a name="ln-350"></a><span class="k">        </span><span class="n">stop_program</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
-<a name="ln-351"></a>    <span class="k">end if</span>
-<a name="ln-352"></a>
-<a name="ln-353"></a>    <span class="c">!note: if stopping program, then the message is always printed:</span>
-<a name="ln-354"></a>    <span class="n">write_message</span> <span class="o">=</span> <span class="n">me</span><span class="p">%</span><span class="n">iprint</span><span class="o">/=</span><span class="mi">0</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">stop_program</span>
-<a name="ln-355"></a>
-<a name="ln-356"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">write_message</span><span class="p">)</span> <span class="k">then</span>
-<a name="ln-357"></a>
-<a name="ln-358"></a><span class="k">        if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">ival</span><span class="p">))</span> <span class="k">then</span>
-<a name="ln-359"></a><span class="k">            write</span><span class="p">(</span><span class="n">istr</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;(I10)&#39;</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">istat</span><span class="p">)</span> <span class="n">ival</span>
-<a name="ln-360"></a>            <span class="k">if</span> <span class="p">(</span><span class="n">istat</span><span class="o">/=</span><span class="mi">0</span><span class="p">)</span> <span class="n">istr</span> <span class="o">=</span> <span class="s1">&#39;*****&#39;</span>
-<a name="ln-361"></a>            <span class="n">str_to_write</span> <span class="o">=</span> <span class="n">str</span><span class="o">//</span><span class="s1">&#39; &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">istr</span><span class="p">))</span>
-<a name="ln-362"></a>        <span class="k">else</span>
-<a name="ln-363"></a><span class="k">            </span><span class="n">str_to_write</span> <span class="o">=</span> <span class="n">str</span>
-<a name="ln-364"></a>        <span class="k">end if</span>
-<a name="ln-365"></a>
-<a name="ln-366"></a><span class="k">        if</span> <span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">iprint</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
-<a name="ln-367"></a><span class="k">            write</span><span class="p">(</span><span class="n">error_unit</span><span class="p">,</span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="n">str_to_write</span>  <span class="c">!in this case, use the error unit</span>
-<a name="ln-368"></a>        <span class="k">else</span>
-<a name="ln-369"></a><span class="k">            write</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">iprint</span><span class="p">,</span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="n">str_to_write</span>   <span class="c">!user specified unit number</span>
-<a name="ln-370"></a>        <span class="k">end if</span>
-<a name="ln-371"></a><span class="k">        deallocate</span><span class="p">(</span><span class="n">str_to_write</span><span class="p">)</span>
-<a name="ln-372"></a>
-<a name="ln-373"></a>        <span class="k">if</span> <span class="p">(</span><span class="n">stop_program</span><span class="p">)</span> <span class="n">error</span> <span class="k">stop</span> <span class="s1">&#39;Fatal Error&#39;</span>
-<a name="ln-374"></a>
-<a name="ln-375"></a>    <span class="k">end if</span>
-<a name="ln-376"></a>
-<a name="ln-377"></a><span class="k">    end subroutine </span><span class="n">report_message</span>
-<a name="ln-378"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-379"></a>
-<a name="ln-380"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-381"></a>    <span class="k">end module </span><span class="n">slsqp_module</span>
-<a name="ln-382"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-284"></a>            <span class="k">if</span> <span class="p">(</span><span class="nb">associated</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">report</span><span class="p">))</span> <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">)</span> <span class="c">!report solution</span>
+<a name="ln-285"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;required accuracy for solution obtained&#39;</span><span class="p">)</span>
+<a name="ln-286"></a>            <span class="k">exit</span>
+<a name="ln-287"></a><span class="k">        case</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-288"></a>            <span class="c">!continue to next call</span>
+<a name="ln-289"></a>        <span class="k">case</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a name="ln-290"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;number of equality contraints larger than n&#39;</span><span class="p">)</span>
+<a name="ln-291"></a>            <span class="k">exit</span>
+<a name="ln-292"></a><span class="k">        case</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<a name="ln-293"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;more than 3*n iterations in lsq subproblem&#39;</span><span class="p">)</span>
+<a name="ln-294"></a>            <span class="k">exit</span>
+<a name="ln-295"></a><span class="k">        case</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<a name="ln-296"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;inequality constraints incompatible&#39;</span><span class="p">)</span>
+<a name="ln-297"></a>            <span class="k">exit</span>
+<a name="ln-298"></a><span class="k">        case</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<a name="ln-299"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;singular matrix e in lsq subproblem&#39;</span><span class="p">)</span>
+<a name="ln-300"></a>            <span class="k">exit</span>
+<a name="ln-301"></a><span class="k">        case</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
+<a name="ln-302"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;singular matrix c in lsq subproblem&#39;</span><span class="p">)</span>
+<a name="ln-303"></a>            <span class="k">exit</span>
+<a name="ln-304"></a><span class="k">        case</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+<a name="ln-305"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;rank-deficient equality constraint subproblem hfti&#39;</span><span class="p">)</span>
+<a name="ln-306"></a>            <span class="k">exit</span>
+<a name="ln-307"></a><span class="k">        case</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
+<a name="ln-308"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;positive directional derivative for linesearch&#39;</span><span class="p">)</span>
+<a name="ln-309"></a>            <span class="k">exit</span>
+<a name="ln-310"></a><span class="k">        case</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
+<a name="ln-311"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;more than max_iter iterations in slsqp&#39;</span><span class="p">)</span>
+<a name="ln-312"></a>            <span class="k">exit</span>
+<a name="ln-313"></a><span class="k">        case </span><span class="n">default</span>
+<a name="ln-314"></a>            <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;unknown slsqp error&#39;</span><span class="p">)</span>
+<a name="ln-315"></a>            <span class="k">exit</span>
+<a name="ln-316"></a><span class="k">        end select</span>
+<a name="ln-317"></a>
+<a name="ln-318"></a><span class="k">    end do</span>
+<a name="ln-319"></a>
+<a name="ln-320"></a><span class="k">    </span><span class="n">istat</span> <span class="o">=</span> <span class="n">mode</span>
+<a name="ln-321"></a>    <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">iterations</span><span class="p">))</span> <span class="n">iterations</span> <span class="o">=</span> <span class="n">iter</span>
+<a name="ln-322"></a>
+<a name="ln-323"></a>    <span class="k">end subroutine </span><span class="n">slsqp_wrapper</span>
+<a name="ln-324"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-325"></a>
+<a name="ln-326"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-327"></a><span class="c">!&gt;</span>
+<a name="ln-328"></a><span class="c">!  Report a message from an [[slsqp_solver]] class. This uses the `iprint`</span>
+<a name="ln-329"></a><span class="c">!  variable in the class as the unit number for printing. Note: for fatal errors,</span>
+<a name="ln-330"></a><span class="c">!  if no unit is specified, the `error_unit` is used.</span>
+<a name="ln-331"></a>
+<a name="ln-332"></a>    <span class="k">subroutine </span><span class="n">report_message</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">str</span><span class="p">,</span><span class="n">ival</span><span class="p">,</span><span class="n">fatal</span><span class="p">)</span>
+<a name="ln-333"></a>
+<a name="ln-334"></a>    <span class="k">implicit none</span>
+<a name="ln-335"></a>
+<a name="ln-336"></a><span class="k">    class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
+<a name="ln-337"></a>    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">str</span>    <span class="c">!! the message to report.</span>
+<a name="ln-338"></a>    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>    <span class="kd">::</span> <span class="n">ival</span>   <span class="c">!! optional integer to print after the message.</span>
+<a name="ln-339"></a>    <span class="kt">logical</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>    <span class="kd">::</span> <span class="n">fatal</span>  <span class="c">!! if True, then the program is stopped (default=False).</span>
+<a name="ln-340"></a>
+<a name="ln-341"></a>    <span class="kt">logical</span> <span class="kd">::</span> <span class="n">stop_program</span>  <span class="c">!! true if the program is to be stopped</span>
+<a name="ln-342"></a>    <span class="kt">logical</span> <span class="kd">::</span> <span class="n">write_message</span>  <span class="c">!! true if the message is to be printed</span>
+<a name="ln-343"></a>    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="kd">::</span> <span class="n">istr</span>  <span class="c">!! string version of `ival`</span>
+<a name="ln-344"></a>    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">str_to_write</span>  <span class="c">!! the actual message to the printed</span>
+<a name="ln-345"></a>    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">istat</span>  <span class="c">!! iostat for integer to string conversion</span>
+<a name="ln-346"></a>
+<a name="ln-347"></a>    <span class="c">!fatal error check:</span>
+<a name="ln-348"></a>    <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">fatal</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-349"></a><span class="k">        </span><span class="n">stop_program</span> <span class="o">=</span> <span class="n">fatal</span>
+<a name="ln-350"></a>    <span class="k">else</span>
+<a name="ln-351"></a><span class="k">        </span><span class="n">stop_program</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-352"></a>    <span class="k">end if</span>
+<a name="ln-353"></a>
+<a name="ln-354"></a>    <span class="c">!note: if stopping program, then the message is always printed:</span>
+<a name="ln-355"></a>    <span class="n">write_message</span> <span class="o">=</span> <span class="n">me</span><span class="p">%</span><span class="n">iprint</span><span class="o">/=</span><span class="mi">0</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">stop_program</span>
+<a name="ln-356"></a>
+<a name="ln-357"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">write_message</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-358"></a>
+<a name="ln-359"></a><span class="k">        if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">ival</span><span class="p">))</span> <span class="k">then</span>
+<a name="ln-360"></a><span class="k">            write</span><span class="p">(</span><span class="n">istr</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;(I10)&#39;</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">istat</span><span class="p">)</span> <span class="n">ival</span>
+<a name="ln-361"></a>            <span class="k">if</span> <span class="p">(</span><span class="n">istat</span><span class="o">/=</span><span class="mi">0</span><span class="p">)</span> <span class="n">istr</span> <span class="o">=</span> <span class="s1">&#39;*****&#39;</span>
+<a name="ln-362"></a>            <span class="n">str_to_write</span> <span class="o">=</span> <span class="n">str</span><span class="o">//</span><span class="s1">&#39; &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">istr</span><span class="p">))</span>
+<a name="ln-363"></a>        <span class="k">else</span>
+<a name="ln-364"></a><span class="k">            </span><span class="n">str_to_write</span> <span class="o">=</span> <span class="n">str</span>
+<a name="ln-365"></a>        <span class="k">end if</span>
+<a name="ln-366"></a>
+<a name="ln-367"></a><span class="k">        if</span> <span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">iprint</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-368"></a><span class="k">            write</span><span class="p">(</span><span class="n">error_unit</span><span class="p">,</span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="n">str_to_write</span>  <span class="c">!in this case, use the error unit</span>
+<a name="ln-369"></a>        <span class="k">else</span>
+<a name="ln-370"></a><span class="k">            write</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">iprint</span><span class="p">,</span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="n">str_to_write</span>   <span class="c">!user specified unit number</span>
+<a name="ln-371"></a>        <span class="k">end if</span>
+<a name="ln-372"></a><span class="k">        deallocate</span><span class="p">(</span><span class="n">str_to_write</span><span class="p">)</span>
+<a name="ln-373"></a>
+<a name="ln-374"></a>        <span class="k">if</span> <span class="p">(</span><span class="n">stop_program</span><span class="p">)</span> <span class="n">error</span> <span class="k">stop</span> <span class="s1">&#39;Fatal Error&#39;</span>
+<a name="ln-375"></a>
+<a name="ln-376"></a>    <span class="k">end if</span>
+<a name="ln-377"></a>
+<a name="ln-378"></a><span class="k">    end subroutine </span><span class="n">report_message</span>
+<a name="ln-379"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-380"></a>
+<a name="ln-381"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-382"></a>    <span class="k">end module </span><span class="n">slsqp_module</span>
+<a name="ln-383"></a><span class="c">!*******************************************************************************</span>
 </pre></div>
 
     </section>

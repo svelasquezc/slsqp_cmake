@@ -10,7 +10,7 @@
     <meta name="author" content="Chris MacMackin" >
     <link rel="icon" href="../favicon.png">
 
-    <title>rosenbrock_grad &ndash; slsqp</title>
+    <title>report_iteration &ndash; slsqp</title>
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/pygments.css" rel="stylesheet">
@@ -89,7 +89,7 @@
     
   
   <div class="row">
-    <h1>rosenbrock_grad
+    <h1>report_iteration
     <small>Subroutine</small>
     
     </h1>
@@ -113,7 +113,7 @@
   
      <li><a href='../program/slsqp_test.html'>slsqp_test</a></li>
   
-     <li class="active">rosenbrock_grad</li>
+     <li class="active">report_iteration</li>
   </ol>
 </div>
 </div>
@@ -148,7 +148,7 @@
   <div class="panel panel-primary">
     <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
     <div class="list-group">
-      <a class="list-group-item" href="../proc/rosenbrock_grad.html#src">rosenbrock_grad</a>
+      <a class="list-group-item" href="../proc/report_iteration.html#src">report_iteration</a>
     </div>
   </div>
   
@@ -221,12 +221,19 @@
     
     <div class="col-lg-9" id='text'>
     <h2>
-subroutine rosenbrock_grad(me, x, g, a)
+subroutine report_iteration(me, iter, x, f, c)
     
     
     
 </h2>
     
+  
+    <ul class="list-inline">
+      <li><h4>Uses:</h4></li>
+      
+      <li><a href="https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html">iso_fortran_env</a></li>
+      
+    </ul>
   
 
 
@@ -249,7 +256,7 @@ subroutine rosenbrock_grad(me, x, g, a)
   
 <tr>
   
-  <td><span class="anchor" id="variable-me%7E11"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
+  <td><span class="anchor" id="variable-me%7E12"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
   <td>intent(inout)</td>
   <td></td>
   
@@ -264,12 +271,27 @@ subroutine rosenbrock_grad(me, x, g, a)
   
 <tr>
   
-  <td><span class="anchor" id="variable-x%7E17"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-iter%7E6"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iter</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-x%7E18"></span>real(kind=wp),</td>
   <td>intent(in),</td>
   <td></td>
   
   <td>dimension(:)</td><td>::</td>
-  <td><strong>x</strong></td><td><p>optimization variable vector</p></td>
+  <td><strong>x</strong></td><td></td>
   
 </tr>
 
@@ -279,27 +301,27 @@ subroutine rosenbrock_grad(me, x, g, a)
   
 <tr>
   
-  <td><span class="anchor" id="variable-g%7E12"></span>real(kind=wp),</td>
-  <td>intent(out),</td>
+  <td><span class="anchor" id="variable-f%7E12"></span>real(kind=wp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>f</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-c%7E11"></span>real(kind=wp),</td>
+  <td>intent(in),</td>
   <td></td>
   
   <td>dimension(:)</td><td>::</td>
-  <td><strong>g</strong></td><td><p>objective function partials w.r.t x <code>dimension(n)</code></p></td>
-  
-</tr>
-
-  
-  
-  
-  
-<tr>
-  
-  <td><span class="anchor" id="variable-a%7E12"></span>real(kind=wp),</td>
-  <td>intent(out),</td>
-  <td></td>
-  
-  <td>dimension(:,:)</td><td>::</td>
-  <td><strong>a</strong></td><td><p>gradient matrix of constraints w.r.t. x <code>dimension(m,n)</code></p></td>
+  <td><strong>c</strong></td><td></td>
   
 </tr>
 
@@ -310,7 +332,7 @@ subroutine rosenbrock_grad(me, x, g, a)
     
     
     <h3>Description</h3>
-    <p>gradients for <a href="../proc/rosenbrock_func.html">rosenbrock_func</a>.</p>
+    <p>report an iteration (print to the console).</p>
     
     
      
@@ -333,21 +355,25 @@ subroutine rosenbrock_grad(me, x, g, a)
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre>    <span class="k">subroutine </span><span class="n">rosenbrock_grad</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
-        <span class="c">!! gradients for [[rosenbrock_func]].</span>
+    <div class="highlight"><pre>    <span class="k">subroutine </span><span class="n">report_iteration</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">iter</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+        <span class="k">use</span><span class="p">,</span> <span class="k">intrinsic</span> <span class="kd">::</span> <span class="n">iso_fortran_env</span><span class="p">,</span> <span class="n">only</span><span class="p">:</span> <span class="n">output_unit</span>
+        <span class="c">!! report an iteration (print to the console).</span>
         <span class="k">implicit none</span>
-<span class="k">        class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">me</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">x</span>    <span class="c">!! optimization variable vector</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">g</span>    <span class="c">!! objective function partials w.r.t x `dimension(n)`</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:,:),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span>    <span class="c">!! gradient matrix of constraints w.r.t. x `dimension(m,n)`</span>
+<span class="k">        class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
+        <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">iter</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">x</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">f</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">c</span>
 
-        <span class="n">g</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="mi">40</span><span class="mf">0.0_wp</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mf">2.0_wp</span><span class="o">*</span><span class="p">(</span><span class="mf">1.0_wp</span><span class="o">-</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c">!df/x1</span>
-        <span class="n">g</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="mi">20</span><span class="mf">0.0_wp</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>                             <span class="c">!df/x2</span>
+        <span class="c">!write a header:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">iter</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<span class="k">            write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="s1">&#39;(*(A20,1X))&#39;</span><span class="p">)</span> <span class="s1">&#39;iteration&#39;</span><span class="p">,</span> <span class="s1">&#39;x(1)&#39;</span><span class="p">,</span> <span class="s1">&#39;x(2)&#39;</span><span class="p">,</span> <span class="s1">&#39;f(1)&#39;</span><span class="p">,</span> <span class="s1">&#39;c(1)&#39;</span>
+        <span class="k">end if</span>
 
-        <span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.0_wp</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>     <span class="c">! dc/dx1</span>
-        <span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.0_wp</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>     <span class="c">! dc/dx2</span>
+        <span class="c">!write the iteration data:</span>
+        <span class="k">write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="s1">&#39;(I20,1X,(*(F20.16,1X)))&#39;</span><span class="p">)</span> <span class="n">iter</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span>
 
-    <span class="k">end subroutine </span><span class="n">rosenbrock_grad</span>
+    <span class="k">end subroutine </span><span class="n">report_iteration</span>
 </pre></div>
 
     </section>
