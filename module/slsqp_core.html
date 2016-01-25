@@ -1627,7 +1627,7 @@ private function <a href='../proc/linmin.html'>linmin</a>(mode, ax, bx, f, tol, 
     
   <div class="panel panel-default">
   <div class="panel-heading codesum"><span class="anchor" id="proc-slsqp"></span><h3>
-public subroutine <a href='../proc/slsqp.html'>slsqp</a>(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w, l_w, jw, l_jw, sdat, ldat)
+public subroutine <a href='../proc/slsqp.html'>slsqp</a>(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w, l_w, jw, l_jw, sdat, ldat, alphamin, alphamax)
     
     
     
@@ -1659,7 +1659,7 @@ public subroutine <a href='../proc/slsqp.html'>slsqp</a>(m, meq, la, n, x, xl, x
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>m</strong></td><td><p>is the total number of constraints, m &gt;= 0</p></td>
+  <td><strong>m</strong></td><td><p>is the total number of constraints, \( m \ge 0 \)</p></td>
   
 </tr>
 
@@ -1674,7 +1674,7 @@ public subroutine <a href='../proc/slsqp.html'>slsqp</a>(m, meq, la, n, x, xl, x
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>meq</strong></td><td><p>is the number of equality constraints, meq &gt;= 0</p></td>
+  <td><strong>meq</strong></td><td><p>is the number of equality constraints, \( m_{eq} \ge 0 \)</p></td>
   
 </tr>
 
@@ -1689,7 +1689,7 @@ public subroutine <a href='../proc/slsqp.html'>slsqp</a>(m, meq, la, n, x, xl, x
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>la</strong></td><td><p>see a, la &gt;= max(m,1)</p></td>
+  <td><strong>la</strong></td><td><p>see a, \( la \ge \max(m,1) \)</p></td>
   
 </tr>
 
@@ -1704,7 +1704,7 @@ public subroutine <a href='../proc/slsqp.html'>slsqp</a>(m, meq, la, n, x, xl, x
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>n</strong></td><td><p>is the number of varibles, n &gt;= 1</p></td>
+  <td><strong>n</strong></td><td><p>is the number of varibles, \( n \ge 1 \)</p></td>
   
 </tr>
 
@@ -2003,6 +2003,36 @@ public subroutine <a href='../proc/slsqp.html'>slsqp</a>(m, meq, la, n, x, xl, x
   
 </tr>
 
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=wp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>alphamin</strong></td><td><p>min \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=wp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>alphamax</strong></td><td><p>max \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</p></td>
+  
+</tr>
+
 </tbody>
 </table>
 
@@ -2027,7 +2057,7 @@ public subroutine <a href='../proc/slsqp.html'>slsqp</a>(m, meq, la, n, x, xl, x
     
   <div class="panel panel-default">
   <div class="panel-heading codesum"><span class="anchor" id="proc-slsqpb"></span><h3>
-private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, r, l, x0, mu, s, u, v, w, iw, t, f0, h1, h2, h3, h4, n1, n2, n3, t0, gs, tol, line, alpha, iexact, incons, ireset, itermx, ldat)
+private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, r, l, x0, mu, s, u, v, w, iw, t, f0, h1, h2, h3, h4, n1, n2, n3, t0, gs, tol, line, alpha, iexact, incons, ireset, itermx, ldat, alphamin, alphamax)
     
     
     
@@ -2676,6 +2706,36 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
   
   <td></td><td>::</td>
   <td><strong>ldat</strong></td><td><p>data for <a href="../proc/linmin.html">linmin</a>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=wp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>alphamin</strong></td><td><p>min \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=wp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>alphamax</strong></td><td><p>max \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</p></td>
   
 </tr>
 

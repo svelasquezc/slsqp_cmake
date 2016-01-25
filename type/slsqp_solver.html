@@ -143,6 +143,10 @@
         
         <a class="list-group-item" href="../type/slsqp_solver.html#variable-acc">acc</a>
         
+        <a class="list-group-item" href="../type/slsqp_solver.html#variable-alphamin">alphamin</a>
+        
+        <a class="list-group-item" href="../type/slsqp_solver.html#variable-alphamax">alphamax</a>
+        
         <a class="list-group-item" href="../type/slsqp_solver.html#variable-iprint">iprint</a>
         
         <a class="list-group-item" href="../type/slsqp_solver.html#variable-xl">xl</a>
@@ -470,6 +474,34 @@ implementation in a submodule of an interface in a parent module.</p>
   
 <tr>
   
+  <td><span class="anchor" id="variable-alphamin"></span>real(kind=wp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>alphamin</strong></td><td> =</td><td>0.1_wp</td><td><p>min \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-alphamax"></span>real(kind=wp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>alphamax</strong></td><td> =</td><td>1.0_wp</td><td><p>max \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
   <td><span class="anchor" id="variable-iprint"></span>integer,</td>
   
   <td>private</td>
@@ -677,7 +709,7 @@ implementation in a submodule of an interface in a parent module.</p>
          
     
     <h3>
-private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report)
+private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report, alphamin, alphamax)
     
     
     
@@ -722,7 +754,7 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>n</strong></td><td><p>the number of varibles, n &gt;= 1</p></td>
+  <td><strong>n</strong></td><td><p>the number of varibles, \( n \ge 1 \)</p></td>
   
 </tr>
 
@@ -737,7 +769,7 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>m</strong></td><td><p>total number of constraints, m &gt;= 0</p></td>
+  <td><strong>m</strong></td><td><p>total number of constraints, \( m \ge 0 \)</p></td>
   
 </tr>
 
@@ -752,7 +784,7 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>meq</strong></td><td><p>number of equality constraints, meq &gt;= 0</p></td>
+  <td><strong>meq</strong></td><td><p>number of equality constraints, \( m_{eq} \ge 0 \)</p></td>
   
 </tr>
 
@@ -827,7 +859,7 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td></td>
   
   <td>dimension(n)</td><td>::</td>
-  <td><strong>xl</strong></td><td><p>lower bound on <code>x</code></p></td>
+  <td><strong>xl</strong></td><td><p>lower bounds on <code>x</code></p></td>
   
 </tr>
 
@@ -842,7 +874,7 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td></td>
   
   <td>dimension(n)</td><td>::</td>
-  <td><strong>xu</strong></td><td><p>upper bound on <code>x</code></p></td>
+  <td><strong>xu</strong></td><td><p>upper bounds on <code>x</code></p></td>
   
 </tr>
 
@@ -903,6 +935,36 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   
   <td></td><td>::</td>
   <td><strong>report</strong></td><td><p>user-defined procedure that will be called once per iteration</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=wp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>alphamin</strong></td><td><p>minimum alpha for linesearch [default 0.1]</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=wp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>alphamax</strong></td><td><p>maximum alpha for linesearch [default 1.0]</p></td>
   
 </tr>
 
@@ -1128,7 +1190,7 @@ private subroutine <a href='../proc/slsqp_wrapper.html'>slsqp_wrapper</a>(me, x,
          
     
     <h3>
-private subroutine <a href='../proc/report_message.html'>report_message</a>(me, str, ival, fatal)
+private subroutine <a href='../proc/report_message.html'>report_message</a>(me, str, ival, rval, fatal)
     
     
     
@@ -1198,6 +1260,21 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
   
 <tr>
   
+  <td><span class="anchor" ></span>real(kind=wp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>rval</strong></td><td><p>optional real to print after the message.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
   <td><span class="anchor" ></span>logical,</td>
   <td>intent(in),</td>
   <td>optional</td>
@@ -1242,11 +1319,15 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
 
         <span class="k">private</span>
 
-<span class="k">        </span><span class="kt">integer</span> <span class="kd">::</span> <span class="n">n</span>        <span class="o">=</span> <span class="mi">0</span>        <span class="c">!! number of optimization variables (\( n &gt; 0 \))</span>
-        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">m</span>        <span class="o">=</span> <span class="mi">0</span>        <span class="c">!! number of constraints (\( m \ge 0 \))</span>
-        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">meq</span>      <span class="o">=</span> <span class="mi">0</span>        <span class="c">!! number of equality constraints (\( m \ge m_{eq} \ge 0 \))</span>
-        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">max_iter</span> <span class="o">=</span> <span class="mi">0</span>        <span class="c">!! maximum number of iterations</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">acc</span>     <span class="o">=</span> <span class="n">zero</span>     <span class="c">!! accuracy tolerance</span>
+<span class="k">        </span><span class="kt">integer</span>  <span class="kd">::</span> <span class="n">n</span>        <span class="o">=</span> <span class="mi">0</span>        <span class="c">!! number of optimization variables (\( n &gt; 0 \))</span>
+        <span class="kt">integer</span>  <span class="kd">::</span> <span class="n">m</span>        <span class="o">=</span> <span class="mi">0</span>        <span class="c">!! number of constraints (\( m \ge 0 \))</span>
+        <span class="kt">integer</span>  <span class="kd">::</span> <span class="n">meq</span>      <span class="o">=</span> <span class="mi">0</span>        <span class="c">!! number of equality constraints (\( m \ge m_{eq} \ge 0 \))</span>
+        <span class="kt">integer</span>  <span class="kd">::</span> <span class="n">max_iter</span> <span class="o">=</span> <span class="mi">0</span>        <span class="c">!! maximum number of iterations</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">acc</span>      <span class="o">=</span> <span class="n">zero</span>     <span class="c">!! accuracy tolerance</span>
+
+        <span class="c">!these two were not in the original code:</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">alphamin</span> <span class="o">=</span> <span class="mf">0.1_wp</span>   <span class="c">!! min \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">alphamax</span> <span class="o">=</span> <span class="mf">1.0_wp</span>   <span class="c">!! max \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</span>
 
         <span class="kt">integer</span> <span class="kd">::</span> <span class="n">iprint</span> <span class="o">=</span> <span class="n">output_unit</span> <span class="c">!! unit number of status printing (0 for no printing)</span>
 
