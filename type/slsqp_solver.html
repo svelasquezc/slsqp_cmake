@@ -173,6 +173,8 @@
         
         <a class="list-group-item" href="../type/slsqp_solver.html#variable-slsqpb">slsqpb</a>
         
+        <a class="list-group-item" href="../type/slsqp_solver.html#variable-user_triggered_stop">user_triggered_stop</a>
+        
       </div>
     </div>
   </div>
@@ -203,6 +205,8 @@
           <a class="list-group-item" href="../type/slsqp_solver.html#boundprocedure-destroy">destroy</a>
           
           <a class="list-group-item" href="../type/slsqp_solver.html#boundprocedure-optimize">optimize</a>
+          
+          <a class="list-group-item" href="../type/slsqp_solver.html#boundprocedure-abort">abort</a>
           
           <a class="list-group-item" href="../type/slsqp_solver.html#boundprocedure-report_message">report_message</a>
           
@@ -261,31 +265,31 @@
 <polygon fill="none" stroke="black" points="206,-48 134,-48 134,-22 206,-22 206,-48"/>
 <text text-anchor="middle" x="170" y="-32.55" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp_solver</text>
 </g>
-<!-- type~linmin_data -->
-<g id="node2" class="node"><title>type~linmin_data</title>
-<a xlink:href="../type/linmin_data.html" xlink:title="linmin_data">
-<polygon fill="#5cb85c" stroke="#5cb85c" points="68,-70 2,-70 2,-44 68,-44 68,-70"/>
-<text text-anchor="middle" x="35" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">linmin_data</text>
-</a>
-</g>
-<!-- type~linmin_data&#45;&gt;type~slsqp_solver -->
-<g id="edge2" class="edge"><title>type~linmin_data&#45;&gt;type~slsqp_solver</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M68.718,-51.5052C85.3778,-48.7903 105.737,-45.4725 123.821,-42.5255"/>
-<polygon fill="black" stroke="black" points="124.57,-45.9497 133.877,-40.8868 123.444,-39.0408 124.57,-45.9497"/>
-<text text-anchor="middle" x="102" y="-51.45" font-family="Helvetica,sans-Serif" font-size="9.50">linmin</text>
-</g>
 <!-- type~slsqpb_data -->
-<g id="node3" class="node"><title>type~slsqpb_data</title>
+<g id="node2" class="node"><title>type~slsqpb_data</title>
 <a xlink:href="../type/slsqpb_data.html" xlink:title="slsqpb_data">
-<polygon fill="#5cb85c" stroke="#5cb85c" points="70,-26 3.55271e-14,-26 0,-1.24345e-14 70,-3.55271e-15 70,-26"/>
-<text text-anchor="middle" x="35" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb_data</text>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="70,-70 3.55271e-14,-70 0,-44 70,-44 70,-70"/>
+<text text-anchor="middle" x="35" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb_data</text>
 </a>
 </g>
 <!-- type~slsqpb_data&#45;&gt;type~slsqp_solver -->
-<g id="edge4" class="edge"><title>type~slsqpb_data&#45;&gt;type~slsqp_solver</title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M70.1172,-18.7228C86.4441,-21.3835 106.084,-24.584 123.611,-27.4404"/>
-<polygon fill="black" stroke="black" points="123.214,-30.9216 133.646,-29.0757 124.339,-24.0128 123.214,-30.9216"/>
-<text text-anchor="middle" x="102" y="-29.45" font-family="Helvetica,sans-Serif" font-size="9.50">slsqpb</text>
+<g id="edge2" class="edge"><title>type~slsqpb_data&#45;&gt;type~slsqp_solver</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M70.1172,-51.2772C86.4441,-48.6165 106.084,-45.416 123.611,-42.5596"/>
+<polygon fill="black" stroke="black" points="124.339,-45.9872 133.646,-40.9243 123.214,-39.0784 124.339,-45.9872"/>
+<text text-anchor="middle" x="102" y="-51.45" font-family="Helvetica,sans-Serif" font-size="9.50">slsqpb</text>
+</g>
+<!-- type~linmin_data -->
+<g id="node3" class="node"><title>type~linmin_data</title>
+<a xlink:href="../type/linmin_data.html" xlink:title="linmin_data">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="68,-26 2,-26 2,-1.24345e-14 68,-3.55271e-15 68,-26"/>
+<text text-anchor="middle" x="35" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">linmin_data</text>
+</a>
+</g>
+<!-- type~linmin_data&#45;&gt;type~slsqp_solver -->
+<g id="edge4" class="edge"><title>type~linmin_data&#45;&gt;type~slsqp_solver</title>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M68.718,-18.4948C85.3778,-21.2097 105.737,-24.5275 123.821,-27.4745"/>
+<polygon fill="black" stroke="black" points="123.444,-30.9592 133.877,-29.1132 124.57,-24.0503 123.444,-30.9592"/>
+<text text-anchor="middle" x="102" y="-29.45" font-family="Helvetica,sans-Serif" font-size="9.50">linmin</text>
 </g>
 </g>
 </svg>
@@ -382,8 +386,8 @@ implementation in a submodule of an interface in a parent module.</p>
                 
     <br><br>
     
-    
-    
+    <p>The main class used to interface with the SLSQP solver.</p>
+    <br>
     
     
     <section>
@@ -548,7 +552,7 @@ implementation in a submodule of an interface in a parent module.</p>
   
   <td>private</td>
   <td></td><td>::</td>
-  <td><strong>l_w</strong></td><td> =</td><td>0</td><td><p>size of <code>work</code></p></td>
+  <td><strong>l_w</strong></td><td> =</td><td>0</td><td><p>size of <code>w</code></p></td>
   
 </tr>
 
@@ -576,7 +580,7 @@ implementation in a submodule of an interface in a parent module.</p>
   
   <td>private</td>
   <td></td><td>::</td>
-  <td><strong>l_jw</strong></td><td> =</td><td>0</td><td><p>size of <code>jwork</code></p></td>
+  <td><strong>l_jw</strong></td><td> =</td><td>0</td><td><p>size of <code>jw</code></p></td>
   
 </tr>
 
@@ -678,6 +682,21 @@ implementation in a submodule of an interface in a parent module.</p>
   <td>private</td>
   <td></td><td>::</td>
   <td><strong>slsqpb</strong></td><td></td><td></td><td><p>data formerly within <a href="../proc/slsqpb.html">slsqpb</a>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-user_triggered_stop"></span>logical,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>user_triggered_stop</strong></td><td> =</td><td>.false.</td><td><p>if the <code>abort</code> method has been called
+ to stop the iterations</p></td>
   
 </tr>
 
@@ -1179,6 +1198,78 @@ private subroutine <a href='../proc/slsqp_wrapper.html'>slsqp_wrapper</a>(me, x,
     
 	   
 <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-abort"></span><h3>procedure, public :: <strong>abort</strong>  => <a href='../proc/stop_iterations.html'>stop_iterations</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+         
+    
+    <h3>
+private subroutine <a href='../proc/stop_iterations.html'>stop_iterations</a>(me)
+    
+    
+    
+</h3>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>me</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+    
+    <h4>Description</h4>
+       
+       
+
+
+       
+       <p>A method that the user can call to stop the iterations.
+  (it can be called in any of the functions).
+  SLSQP will stop at the end of the next iteration.</p>
+        
+
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+	   
+<div class="panel panel-default">
   <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-report_message"></span><h3>procedure, private :: <strong>report_message</strong>  
     
   </h3></div>
@@ -1315,7 +1406,9 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre>    <span class="k">type</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">slsqp_solver</span>
+    <div class="highlight"><pre><span></span>    <span class="k">type</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">slsqp_solver</span>
+
+        <span class="c">!! The main class used to interface with the SLSQP solver.</span>
 
         <span class="k">private</span>
 
@@ -1334,15 +1427,15 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
         <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">xl</span>  <span class="c">!! lower bound on x</span>
         <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">xu</span>  <span class="c">!! upper bound on x</span>
 
-        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">l_w</span> <span class="o">=</span> <span class="mi">0</span> <span class="c">!! size of `work`</span>
+        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">l_w</span> <span class="o">=</span> <span class="mi">0</span> <span class="c">!! size of `w`</span>
         <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">w</span> <span class="c">!! real work array</span>
 
-        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">l_jw</span> <span class="o">=</span> <span class="mi">0</span> <span class="c">!! size of `jwork`</span>
+        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">l_jw</span> <span class="o">=</span> <span class="mi">0</span> <span class="c">!! size of `jw`</span>
         <span class="kt">integer</span><span class="p">,</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">jw</span>  <span class="c">!! integer work array</span>
 
-        <span class="k">procedure</span><span class="p">(</span><span class="n">func</span><span class="p">),</span><span class="k">pointer</span>     <span class="kd">::</span> <span class="n">f</span>      <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! problem function subroutine</span>
-        <span class="k">procedure</span><span class="p">(</span><span class="n">grad</span><span class="p">),</span><span class="k">pointer</span>     <span class="kd">::</span> <span class="n">g</span>      <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! gradient subroutine</span>
-        <span class="k">procedure</span><span class="p">(</span><span class="n">iterfunc</span><span class="p">),</span><span class="k">pointer</span> <span class="kd">::</span> <span class="n">report</span> <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>  <span class="c">!! for reporting an iteration</span>
+        <span class="k">procedure</span><span class="p">(</span><span class="n">func</span><span class="p">),</span><span class="k">pointer</span>     <span class="kd">::</span> <span class="n">f</span>      <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>         <span class="c">!! problem function subroutine</span>
+        <span class="k">procedure</span><span class="p">(</span><span class="n">grad</span><span class="p">),</span><span class="k">pointer</span>     <span class="kd">::</span> <span class="n">g</span>      <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>         <span class="c">!! gradient subroutine</span>
+        <span class="k">procedure</span><span class="p">(</span><span class="n">iterfunc</span><span class="p">),</span><span class="k">pointer</span> <span class="kd">::</span> <span class="n">report</span> <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>         <span class="c">!! for reporting an iteration</span>
 
         <span class="kt">integer</span> <span class="kd">::</span> <span class="n">linesearch_mode</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c">!! linesearch mode.</span>
                                         <span class="c">!! `1` = inexact (Armijo) linesearch,</span>
@@ -1351,6 +1444,9 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
                                                 <span class="c">!! Only used when `linesearch_mode=2`</span>
         <span class="k">type</span><span class="p">(</span><span class="n">slsqpb_data</span><span class="p">)</span> <span class="kd">::</span> <span class="n">slsqpb</span>  <span class="c">!! data formerly within [[slsqpb]].</span>
 
+        <span class="kt">logical</span> <span class="kd">::</span> <span class="n">user_triggered_stop</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>    <span class="c">!! if the `abort` method has been called</span>
+                                                    <span class="c">!! to stop the iterations</span>
+
     <span class="k">contains</span>
 
 <span class="k">        private</span>
@@ -1358,6 +1454,7 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
 <span class="k">        procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">initialize</span> <span class="o">=&gt;</span> <span class="n">initialize_slsqp</span>
         <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">destroy</span>    <span class="o">=&gt;</span> <span class="n">destroy_slsqp</span>
         <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">optimize</span>   <span class="o">=&gt;</span> <span class="n">slsqp_wrapper</span>
+        <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="nb">abort</span>      <span class="o">=&gt;</span> <span class="n">stop_iterations</span>
 
         <span class="k">procedure</span> <span class="kd">::</span> <span class="n">report_message</span>
 

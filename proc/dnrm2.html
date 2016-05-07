@@ -231,6 +231,8 @@
           
           <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
           
+          <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
+          
         </div>
     </div>
   </div>
@@ -356,87 +358,87 @@ public function dnrm2(n, x, incx)
 <polygon fill="none" stroke="black" points="622,-67 568,-67 568,-41 622,-41 622,-67"/>
 <text text-anchor="middle" x="595" y="-51.55" font-family="Helvetica,sans-Serif" font-size="10.50">dnrm2</text>
 </g>
-<!-- proc~lsei -->
-<g id="node2" class="node"><title>proc~lsei</title>
-<a xlink:href="../proc/lsei.html" xlink:title="lsei">
-<polygon fill="#d9534f" stroke="#d9534f" points="442,-64 388,-64 388,-38 442,-38 442,-64"/>
-<text text-anchor="middle" x="415" y="-48.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
-</a>
-</g>
-<!-- proc~lsei&#45;&gt;proc~dnrm2 -->
-<g id="edge12" class="edge"><title>proc~lsei&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="black" d="M442.338,-51.4556C473.177,-51.9696 523.501,-52.8083 557.877,-53.3813"/>
-<polygon fill="black" stroke="black" points="557.937,-56.8827 567.994,-53.5499 558.054,-49.8837 557.937,-56.8827"/>
-</g>
-<!-- proc~lsi -->
-<g id="node4" class="node"><title>proc~lsi</title>
-<a xlink:href="../proc/lsi.html" xlink:title="lsi">
-<polygon fill="#d9534f" stroke="#d9534f" points="532,-26 478,-26 478,-1.24345e-14 532,-3.55271e-15 532,-26"/>
-<text text-anchor="middle" x="505" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
-</a>
-</g>
-<!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="edge10" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
-<path fill="none" stroke="black" d="M442.003,-39.5987C450.292,-36.0988 459.557,-32.1871 468.377,-28.4632"/>
-<polygon fill="black" stroke="black" points="469.854,-31.6387 477.705,-24.5245 467.131,-25.1899 469.854,-31.6387"/>
-</g>
 <!-- proc~slsqpb -->
-<g id="node3" class="node"><title>proc~slsqpb</title>
+<g id="node2" class="node"><title>proc~slsqpb</title>
 <a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
 <polygon fill="#d9534f" stroke="#d9534f" points="262,-84 208,-84 208,-58 262,-58 262,-84"/>
 <text text-anchor="middle" x="235" y="-68.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
 </a>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~dnrm2 -->
-<g id="edge14" class="edge"><title>proc~slsqpb&#45;&gt;proc~dnrm2</title>
+<g id="edge12" class="edge"><title>proc~slsqpb&#45;&gt;proc~dnrm2</title>
 <path fill="none" stroke="black" d="M262.19,-72.8267C314.654,-75.8679 433.381,-80.3981 532,-67 540.418,-65.8563 549.396,-64.2445 557.858,-62.5437"/>
 <polygon fill="black" stroke="black" points="558.781,-65.9263 567.851,-60.4504 557.346,-59.075 558.781,-65.9263"/>
 </g>
 <!-- proc~lsq -->
-<g id="node5" class="node"><title>proc~lsq</title>
+<g id="node10" class="node"><title>proc~lsq</title>
 <a xlink:href="../proc/lsq.html" xlink:title="lsq">
 <polygon fill="#d9534f" stroke="#d9534f" points="352,-64 298,-64 298,-38 352,-38 352,-64"/>
 <text text-anchor="middle" x="325" y="-48.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
 </a>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~lsq -->
-<g id="edge2" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
+<g id="edge8" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
 <path fill="none" stroke="black" d="M262.003,-64.9993C270.116,-63.1965 279.163,-61.186 287.813,-59.2638"/>
 <polygon fill="black" stroke="black" points="288.702,-62.6516 297.705,-57.0655 287.184,-55.8183 288.702,-62.6516"/>
 </g>
+<!-- proc~lsi -->
+<g id="node3" class="node"><title>proc~lsi</title>
+<a xlink:href="../proc/lsi.html" xlink:title="lsi">
+<polygon fill="#d9534f" stroke="#d9534f" points="532,-26 478,-26 478,-1.24345e-14 532,-3.55271e-15 532,-26"/>
+<text text-anchor="middle" x="505" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
+</a>
+</g>
 <!-- proc~lsi&#45;&gt;proc~dnrm2 -->
-<g id="edge16" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
+<g id="edge14" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
 <path fill="none" stroke="black" d="M532.003,-25.3014C540.292,-29.0776 549.557,-33.2982 558.377,-37.316"/>
 <polygon fill="black" stroke="black" points="557.154,-40.605 567.705,-41.5656 560.056,-34.2348 557.154,-40.605"/>
 </g>
-<!-- proc~lsq&#45;&gt;proc~lsei -->
-<g id="edge4" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
-<path fill="none" stroke="black" d="M352.003,-51C360.028,-51 368.967,-51 377.531,-51"/>
-<polygon fill="black" stroke="black" points="377.705,-54.5001 387.705,-51 377.705,-47.5001 377.705,-54.5001"/>
+<!-- proc~lsei -->
+<g id="node4" class="node"><title>proc~lsei</title>
+<a xlink:href="../proc/lsei.html" xlink:title="lsei">
+<polygon fill="#d9534f" stroke="#d9534f" points="442,-64 388,-64 388,-38 442,-38 442,-64"/>
+<text text-anchor="middle" x="415" y="-48.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
+</a>
+</g>
+<!-- proc~lsei&#45;&gt;proc~dnrm2 -->
+<g id="edge16" class="edge"><title>proc~lsei&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="black" d="M442.338,-51.4556C473.177,-51.9696 523.501,-52.8083 557.877,-53.3813"/>
+<polygon fill="black" stroke="black" points="557.937,-56.8827 567.994,-53.5499 558.054,-49.8837 557.937,-56.8827"/>
+</g>
+<!-- proc~lsei&#45;&gt;proc~lsi -->
+<g id="edge6" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
+<path fill="none" stroke="black" d="M442.003,-39.5987C450.292,-36.0988 459.557,-32.1871 468.377,-28.4632"/>
+<polygon fill="black" stroke="black" points="469.854,-31.6387 477.705,-24.5245 467.131,-25.1899 469.854,-31.6387"/>
 </g>
 <!-- proc~slsqp -->
-<g id="node8" class="node"><title>proc~slsqp</title>
+<g id="node5" class="node"><title>proc~slsqp</title>
 <a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
 <polygon fill="#d9534f" stroke="#d9534f" points="172,-84 118,-84 118,-58 172,-58 172,-84"/>
 <text text-anchor="middle" x="145" y="-68.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
 </a>
 </g>
 <!-- proc~slsqp&#45;&gt;proc~slsqpb -->
-<g id="edge8" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
+<g id="edge4" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
 <path fill="none" stroke="black" d="M172.003,-71C180.028,-71 188.967,-71 197.531,-71"/>
 <polygon fill="black" stroke="black" points="197.705,-74.5001 207.705,-71 197.705,-67.5001 197.705,-74.5001"/>
 </g>
 <!-- proc~slsqp_wrapper -->
-<g id="node9" class="node"><title>proc~slsqp_wrapper</title>
+<g id="node6" class="node"><title>proc~slsqp_wrapper</title>
 <a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
 <polygon fill="#d9534f" stroke="#d9534f" points="82,-84 4.26326e-14,-84 0,-58 82,-58 82,-84"/>
 <text text-anchor="middle" x="41" y="-68.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
 </a>
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
-<g id="edge6" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
+<g id="edge2" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
 <path fill="none" stroke="black" d="M82.1036,-71C90.5669,-71 99.4334,-71 107.751,-71"/>
 <polygon fill="black" stroke="black" points="107.921,-74.5001 117.921,-71 107.921,-67.5001 107.921,-74.5001"/>
+</g>
+<!-- proc~lsq&#45;&gt;proc~lsei -->
+<g id="edge10" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
+<path fill="none" stroke="black" d="M352.003,-51C360.028,-51 368.967,-51 377.531,-51"/>
+<polygon fill="black" stroke="black" points="377.705,-54.5001 387.705,-51 377.705,-47.5001 377.705,-54.5001"/>
 </g>
 </g>
 </svg>
@@ -639,7 +641,7 @@ implementation in a submodule of an interface in a parent module.</p>
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="k">function </span><span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">incx</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="k">function </span><span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">incx</span><span class="p">)</span>
 
         <span class="k">implicit none</span>
 

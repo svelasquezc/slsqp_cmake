@@ -211,6 +211,8 @@
           
           <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
           
+          <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
+          
         </div>
     </div>
   </div>
@@ -249,7 +251,7 @@ subroutine rosenbrock_grad(me, x, g, a)
   
 <tr>
   
-  <td><span class="anchor" id="variable-me%7E11"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
+  <td><span class="anchor" id="variable-me%7E12"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
   <td>intent(inout)</td>
   <td></td>
   
@@ -333,7 +335,7 @@ subroutine rosenbrock_grad(me, x, g, a)
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre>    <span class="k">subroutine </span><span class="n">rosenbrock_grad</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">rosenbrock_grad</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
         <span class="c">!! gradients for [[rosenbrock_func]].</span>
         <span class="k">implicit none</span>
 <span class="k">        class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">me</span>
