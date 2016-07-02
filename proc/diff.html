@@ -68,7 +68,7 @@
             <li><a href="../lists/types.html">Derived Types</a></li>
 				
 				
-            <li><a href="../program/slsqp_test.html">Program</a></li>
+            <li><a href="../lists/programs.html">Programs</a></li>
 				
           </ul>
         
@@ -165,7 +165,11 @@
           
           <a class="list-group-item" href="../proc/ddot.html">ddot</a>
           
+          <a class="list-group-item" href="../proc/destroy_linmin_data.html">destroy_linmin_data</a>
+          
           <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
+          
+          <a class="list-group-item" href="../proc/destroy_slsqpb_data.html">destroy_slsqpb_data</a>
           
           <a class="list-group-item" href="../proc/diff.html">diff</a>
           
@@ -195,9 +199,13 @@
           
           <a class="list-group-item" href="../proc/lsq.html">lsq</a>
           
+          <a class="list-group-item" href="../proc/mode_to_status_message.html">mode_to_status_message</a>
+          
           <a class="list-group-item" href="../proc/nnls.html">nnls</a>
           
           <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
+          
+          <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
           
           <a class="list-group-item" href="../proc/report_message.html">report_message</a>
           
@@ -212,6 +220,10 @@
           <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
           
           <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
+          
+          <a class="list-group-item" href="../proc/test_func.html">test_func</a>
+          
+          <a class="list-group-item" href="../proc/test_grad.html">test_grad</a>
           
         </div>
     </div>
@@ -323,64 +335,69 @@ private pure elemental function diff(u, v) result(d)
 </g>
 <!-- proc~nnls&#45;&gt;proc~diff -->
 <g id="edge18" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
-<path fill="none" stroke="black" d="M712.003,-25.3014C720.292,-29.0776 729.557,-33.2982 738.377,-37.316"/>
-<polygon fill="black" stroke="black" points="737.154,-40.605 747.705,-41.5656 740.056,-34.2348 737.154,-40.605"/>
-</g>
-<!-- proc~hfti -->
-<g id="node3" class="node"><title>proc~hfti</title>
-<a xlink:href="../proc/hfti.html" xlink:title="hfti">
-<polygon fill="#d9534f" stroke="#d9534f" points="622,-105 568,-105 568,-79 622,-79 622,-105"/>
-<text text-anchor="middle" x="595" y="-89.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">hfti</text>
-</a>
-</g>
-<!-- proc~hfti&#45;&gt;proc~diff -->
-<g id="edge20" class="edge"><title>proc~hfti&#45;&gt;proc~diff</title>
-<path fill="none" stroke="black" d="M622.338,-86.2286C653.177,-79.7183 703.501,-69.0943 737.877,-61.8371"/>
-<polygon fill="black" stroke="black" points="738.933,-65.1914 747.994,-59.7012 737.487,-58.3423 738.933,-65.1914"/>
+<path fill="none" stroke="#000000" d="M712.003,-25.3014C720.292,-29.0776 729.557,-33.2982 738.377,-37.316"/>
+<polygon fill="#000000" stroke="#000000" points="737.154,-40.605 747.705,-41.5656 740.056,-34.2348 737.154,-40.605"/>
 </g>
 <!-- proc~ldp -->
-<g id="node4" class="node"><title>proc~ldp</title>
+<g id="node3" class="node"><title>proc~ldp</title>
 <a xlink:href="../proc/ldp.html" xlink:title="ldp">
 <polygon fill="#d9534f" stroke="#d9534f" points="622,-61 568,-61 568,-35 622,-35 622,-61"/>
 <text text-anchor="middle" x="595" y="-45.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
 </a>
 </g>
 <!-- proc~ldp&#45;&gt;proc~diff -->
-<g id="edge22" class="edge"><title>proc~ldp&#45;&gt;proc~diff</title>
-<path fill="none" stroke="black" d="M622.338,-48.9113C653.177,-49.9392 703.501,-51.6167 737.877,-52.7626"/>
-<polygon fill="black" stroke="black" points="737.883,-56.2646 747.994,-53.0998 738.117,-49.2685 737.883,-56.2646"/>
+<g id="edge20" class="edge"><title>proc~ldp&#45;&gt;proc~diff</title>
+<path fill="none" stroke="#000000" d="M622.338,-48.9113C653.177,-49.9392 703.501,-51.6167 737.877,-52.7626"/>
+<polygon fill="#000000" stroke="#000000" points="737.883,-56.2646 747.994,-53.0998 738.117,-49.2685 737.883,-56.2646"/>
 </g>
 <!-- proc~ldp&#45;&gt;proc~nnls -->
 <g id="edge2" class="edge"><title>proc~ldp&#45;&gt;proc~nnls</title>
-<path fill="none" stroke="black" d="M622.003,-37.4988C630.292,-34.2752 639.557,-30.6723 648.377,-27.2424"/>
-<polygon fill="black" stroke="black" points="649.654,-30.5013 657.705,-23.6147 647.116,-23.9772 649.654,-30.5013"/>
+<path fill="none" stroke="#000000" d="M622.003,-37.4988C630.292,-34.2752 639.557,-30.6723 648.377,-27.2424"/>
+<polygon fill="#000000" stroke="#000000" points="649.654,-30.5013 657.705,-23.6147 647.116,-23.9772 649.654,-30.5013"/>
+</g>
+<!-- proc~hfti -->
+<g id="node4" class="node"><title>proc~hfti</title>
+<a xlink:href="../proc/hfti.html" xlink:title="hfti">
+<polygon fill="#d9534f" stroke="#d9534f" points="622,-105 568,-105 568,-79 622,-79 622,-105"/>
+<text text-anchor="middle" x="595" y="-89.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">hfti</text>
+</a>
+</g>
+<!-- proc~hfti&#45;&gt;proc~diff -->
+<g id="edge22" class="edge"><title>proc~hfti&#45;&gt;proc~diff</title>
+<path fill="none" stroke="#000000" d="M622.338,-86.2286C653.177,-79.7183 703.501,-69.0943 737.877,-61.8371"/>
+<polygon fill="#000000" stroke="#000000" points="738.933,-65.1914 747.994,-59.7012 737.487,-58.3423 738.933,-65.1914"/>
+</g>
+<!-- proc~lsi -->
+<g id="node6" class="node"><title>proc~lsi</title>
+<a xlink:href="../proc/lsi.html" xlink:title="lsi">
+<polygon fill="#d9534f" stroke="#d9534f" points="532,-62 478,-62 478,-36 532,-36 532,-62"/>
+<text text-anchor="middle" x="505" y="-46.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
+</a>
+</g>
+<!-- proc~lsi&#45;&gt;proc~ldp -->
+<g id="edge14" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<path fill="none" stroke="#000000" d="M532.003,-48.7C540.028,-48.6108 548.967,-48.5115 557.531,-48.4163"/>
+<polygon fill="#000000" stroke="#000000" points="557.745,-51.9143 567.705,-48.3033 557.667,-44.9147 557.745,-51.9143"/>
 </g>
 <!-- proc~lsei -->
-<g id="node6" class="node"><title>proc~lsei</title>
+<g id="node7" class="node"><title>proc~lsei</title>
 <a xlink:href="../proc/lsei.html" xlink:title="lsei">
 <polygon fill="#d9534f" stroke="#d9534f" points="442,-82 388,-82 388,-56 442,-56 442,-82"/>
 <text text-anchor="middle" x="415" y="-66.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
 </a>
 </g>
 <!-- proc~lsei&#45;&gt;proc~hfti -->
-<g id="edge12" class="edge"><title>proc~lsei&#45;&gt;proc~hfti</title>
-<path fill="none" stroke="black" d="M442.338,-72.4932C473.177,-76.4337 523.501,-82.864 557.877,-87.2565"/>
-<polygon fill="black" stroke="black" points="557.631,-90.7535 567.994,-88.5493 558.519,-83.81 557.631,-90.7535"/>
-</g>
-<!-- proc~lsi -->
-<g id="node16" class="node"><title>proc~lsi</title>
-<a xlink:href="../proc/lsi.html" xlink:title="lsi">
-<polygon fill="#d9534f" stroke="#d9534f" points="532,-62 478,-62 478,-36 532,-36 532,-62"/>
-<text text-anchor="middle" x="505" y="-46.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
-</a>
+<g id="edge16" class="edge"><title>proc~lsei&#45;&gt;proc~hfti</title>
+<path fill="none" stroke="#000000" d="M442.338,-72.4932C473.177,-76.4337 523.501,-82.864 557.877,-87.2565"/>
+<polygon fill="#000000" stroke="#000000" points="557.631,-90.7535 567.994,-88.5493 558.519,-83.81 557.631,-90.7535"/>
 </g>
 <!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="edge14" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
-<path fill="none" stroke="black" d="M442.003,-62.9993C450.116,-61.1965 459.163,-59.186 467.813,-57.2638"/>
-<polygon fill="black" stroke="black" points="468.702,-60.6516 477.705,-55.0655 467.184,-53.8183 468.702,-60.6516"/>
+<g id="edge12" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
+<path fill="none" stroke="#000000" d="M442.003,-62.9993C450.116,-61.1965 459.163,-59.186 467.813,-57.2638"/>
+<polygon fill="#000000" stroke="#000000" points="468.702,-60.6516 477.705,-55.0655 467.184,-53.8183 468.702,-60.6516"/>
 </g>
 <!-- proc~lsq -->
-<g id="node7" class="node"><title>proc~lsq</title>
+<g id="node8" class="node"><title>proc~lsq</title>
 <a xlink:href="../proc/lsq.html" xlink:title="lsq">
 <polygon fill="#d9534f" stroke="#d9534f" points="352,-82 298,-82 298,-56 352,-56 352,-82"/>
 <text text-anchor="middle" x="325" y="-66.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
@@ -388,11 +405,11 @@ private pure elemental function diff(u, v) result(d)
 </g>
 <!-- proc~lsq&#45;&gt;proc~lsei -->
 <g id="edge10" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
-<path fill="none" stroke="black" d="M352.003,-69C360.028,-69 368.967,-69 377.531,-69"/>
-<polygon fill="black" stroke="black" points="377.705,-72.5001 387.705,-69 377.705,-65.5001 377.705,-72.5001"/>
+<path fill="none" stroke="#000000" d="M352.003,-69C360.028,-69 368.967,-69 377.531,-69"/>
+<polygon fill="#000000" stroke="#000000" points="377.705,-72.5001 387.705,-69 377.705,-65.5001 377.705,-72.5001"/>
 </g>
 <!-- proc~slsqpb -->
-<g id="node8" class="node"><title>proc~slsqpb</title>
+<g id="node9" class="node"><title>proc~slsqpb</title>
 <a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
 <polygon fill="#d9534f" stroke="#d9534f" points="262,-82 208,-82 208,-56 262,-56 262,-82"/>
 <text text-anchor="middle" x="235" y="-66.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
@@ -400,11 +417,11 @@ private pure elemental function diff(u, v) result(d)
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~lsq -->
 <g id="edge8" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
-<path fill="none" stroke="black" d="M262.003,-69C270.028,-69 278.967,-69 287.531,-69"/>
-<polygon fill="black" stroke="black" points="287.705,-72.5001 297.705,-69 287.705,-65.5001 287.705,-72.5001"/>
+<path fill="none" stroke="#000000" d="M262.003,-69C270.028,-69 278.967,-69 287.531,-69"/>
+<polygon fill="#000000" stroke="#000000" points="287.705,-72.5001 297.705,-69 287.705,-65.5001 287.705,-72.5001"/>
 </g>
 <!-- proc~slsqp -->
-<g id="node9" class="node"><title>proc~slsqp</title>
+<g id="node10" class="node"><title>proc~slsqp</title>
 <a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
 <polygon fill="#d9534f" stroke="#d9534f" points="172,-82 118,-82 118,-56 172,-56 172,-82"/>
 <text text-anchor="middle" x="145" y="-66.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
@@ -412,11 +429,11 @@ private pure elemental function diff(u, v) result(d)
 </g>
 <!-- proc~slsqp&#45;&gt;proc~slsqpb -->
 <g id="edge6" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
-<path fill="none" stroke="black" d="M172.003,-69C180.028,-69 188.967,-69 197.531,-69"/>
-<polygon fill="black" stroke="black" points="197.705,-72.5001 207.705,-69 197.705,-65.5001 197.705,-72.5001"/>
+<path fill="none" stroke="#000000" d="M172.003,-69C180.028,-69 188.967,-69 197.531,-69"/>
+<polygon fill="#000000" stroke="#000000" points="197.705,-72.5001 207.705,-69 197.705,-65.5001 197.705,-72.5001"/>
 </g>
 <!-- proc~slsqp_wrapper -->
-<g id="node10" class="node"><title>proc~slsqp_wrapper</title>
+<g id="node11" class="node"><title>proc~slsqp_wrapper</title>
 <a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
 <polygon fill="#d9534f" stroke="#d9534f" points="82,-82 4.26326e-14,-82 0,-56 82,-56 82,-82"/>
 <text text-anchor="middle" x="41" y="-66.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
@@ -424,13 +441,8 @@ private pure elemental function diff(u, v) result(d)
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
 <g id="edge4" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
-<path fill="none" stroke="black" d="M82.1036,-69C90.5669,-69 99.4334,-69 107.751,-69"/>
-<polygon fill="black" stroke="black" points="107.921,-72.5001 117.921,-69 107.921,-65.5001 107.921,-72.5001"/>
-</g>
-<!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="edge16" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
-<path fill="none" stroke="black" d="M532.003,-48.7C540.028,-48.6108 548.967,-48.5115 557.531,-48.4163"/>
-<polygon fill="black" stroke="black" points="557.745,-51.9143 567.705,-48.3033 557.667,-44.9147 557.745,-51.9143"/>
+<path fill="none" stroke="#000000" d="M82.1036,-69C90.5669,-69 99.4334,-69 107.751,-69"/>
+<polygon fill="#000000" stroke="#000000" points="107.921,-72.5001 117.921,-69 107.921,-65.5001 107.921,-72.5001"/>
 </g>
 </g>
 </svg>
@@ -511,6 +523,8 @@ Nodes of different colours represent the following:
 </g>
 </svg>
 
+Where possible, edges connecting nodes are given different colours to make them
+easier to distinguish in large graphs.
 <h5>Module Graph</h5>
 <p>Solid arrows point from a parent (sub)module to the submodule which is
 descended from it. Dashed arrows point from a module being used to the
@@ -552,11 +566,15 @@ implementation in a submodule of an interface in a parent module.</p>
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span>    <span class="k">pure elemental function </span><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-        <span class="k">implicit none</span>
-<span class="k">        </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">u</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">v</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>            <span class="kd">::</span> <span class="n">d</span>
-        <span class="n">d</span> <span class="o">=</span> <span class="n">u</span> <span class="o">-</span> <span class="n">v</span>
+
+    <span class="k">implicit none</span>
+
+<span class="k">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">u</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">v</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>            <span class="kd">::</span> <span class="n">d</span>
+
+    <span class="n">d</span> <span class="o">=</span> <span class="n">u</span> <span class="o">-</span> <span class="n">v</span>
+
     <span class="k">end function </span><span class="n">diff</span>
 </pre></div>
 
@@ -569,12 +587,18 @@ implementation in a submodule of an interface in a parent module.</p>
 
     <hr>
     <footer>
-        <div class="row">
+      <div class="row">
         <div class="col-md-4">&copy; 2016 </div>
-	<div class="col-md-4"><span class="text-center"> slsqp was developed by Jacob Williams</span></div>
-        <div class="col-md-4"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a></span></div>
+        <div class="col-md-4"><span class="text-center"> slsqp was developed by Jacob Williams</span></div>
+        <div class="col-md-4">
+          <span class="pull-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </span>
         </div>
-        <br>
+      </div>
+      <br>
     </footer>
     </div> <!-- /container -->
 
@@ -602,6 +626,6 @@ implementation in a submodule of an interface in a parent module.</p>
         }
       });
     </script>
-    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </body>
 </html>

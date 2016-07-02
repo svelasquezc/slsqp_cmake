@@ -68,7 +68,7 @@
             <li><a href="../lists/types.html">Derived Types</a></li>
 				
 				
-            <li><a href="../program/slsqp_test.html">Program</a></li>
+            <li><a href="../lists/programs.html">Programs</a></li>
 				
           </ul>
         
@@ -233,7 +233,11 @@
           
           <a class="list-group-item" href="../proc/ddot.html">ddot</a>
           
+          <a class="list-group-item" href="../proc/destroy_linmin_data.html">destroy_linmin_data</a>
+          
           <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
+          
+          <a class="list-group-item" href="../proc/destroy_slsqpb_data.html">destroy_slsqpb_data</a>
           
           <a class="list-group-item" href="../proc/diff.html">diff</a>
           
@@ -263,9 +267,13 @@
           
           <a class="list-group-item" href="../proc/lsq.html">lsq</a>
           
+          <a class="list-group-item" href="../proc/mode_to_status_message.html">mode_to_status_message</a>
+          
           <a class="list-group-item" href="../proc/nnls.html">nnls</a>
           
           <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
+          
+          <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
           
           <a class="list-group-item" href="../proc/report_message.html">report_message</a>
           
@@ -280,6 +288,10 @@
           <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
           
           <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
+          
+          <a class="list-group-item" href="../proc/test_func.html">test_func</a>
+          
+          <a class="list-group-item" href="../proc/test_grad.html">test_grad</a>
           
         </div>
     </div>
@@ -533,29 +545,29 @@ private subroutine nnls(a, mda, m, n, b, x, rnorm, w, zz, index, mode)
 <polygon fill="none" stroke="black" points="54,-70 2.13163e-14,-70 0,-44 54,-44 54,-70"/>
 <text text-anchor="middle" x="27" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50">nnls</text>
 </g>
-<!-- proc~g1 -->
-<g id="node2" class="node"><title>proc~g1</title>
-<a xlink:href="../proc/g1.html" xlink:title="g1">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-114 90,-114 90,-88 144,-88 144,-114"/>
-<text text-anchor="middle" x="117" y="-98.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
-</a>
-</g>
-<!-- proc~nnls&#45;&gt;proc~g1 -->
-<g id="edge2" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
-<path fill="none" stroke="black" d="M54.003,-70.2015C62.5341,-74.3722 72.0985,-79.0481 81.1476,-83.4721"/>
-<polygon fill="black" stroke="black" points="79.8051,-86.7117 90.3262,-87.9595 82.8796,-80.423 79.8051,-86.7117"/>
-</g>
 <!-- proc~h12 -->
-<g id="node3" class="node"><title>proc~h12</title>
+<g id="node2" class="node"><title>proc~h12</title>
 <a xlink:href="../proc/h12.html" xlink:title="h12">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-70 90,-70 90,-44 144,-44 144,-70"/>
-<text text-anchor="middle" x="117" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-114 90,-114 90,-88 144,-88 144,-114"/>
+<text text-anchor="middle" x="117" y="-98.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
 </a>
 </g>
 <!-- proc~nnls&#45;&gt;proc~h12 -->
-<g id="edge4" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
-<path fill="none" stroke="black" d="M54.003,-57C62.0277,-57 70.9665,-57 79.5309,-57"/>
-<polygon fill="black" stroke="black" points="79.7051,-60.5001 89.705,-57 79.705,-53.5001 79.7051,-60.5001"/>
+<g id="edge2" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
+<path fill="none" stroke="#000000" d="M54.003,-70.2015C62.5341,-74.3722 72.0985,-79.0481 81.1476,-83.4721"/>
+<polygon fill="#000000" stroke="#000000" points="79.8051,-86.7117 90.3262,-87.9595 82.8796,-80.423 79.8051,-86.7117"/>
+</g>
+<!-- proc~g1 -->
+<g id="node3" class="node"><title>proc~g1</title>
+<a xlink:href="../proc/g1.html" xlink:title="g1">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-70 90,-70 90,-44 144,-44 144,-70"/>
+<text text-anchor="middle" x="117" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
+</a>
+</g>
+<!-- proc~nnls&#45;&gt;proc~g1 -->
+<g id="edge4" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
+<path fill="none" stroke="#000000" d="M54.003,-57C62.0277,-57 70.9665,-57 79.5309,-57"/>
+<polygon fill="#000000" stroke="#000000" points="79.7051,-60.5001 89.705,-57 79.705,-53.5001 79.7051,-60.5001"/>
 </g>
 <!-- proc~diff -->
 <g id="node4" class="node"><title>proc~diff</title>
@@ -566,8 +578,8 @@ private subroutine nnls(a, mda, m, n, b, x, rnorm, w, zz, index, mode)
 </g>
 <!-- proc~nnls&#45;&gt;proc~diff -->
 <g id="edge6" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
-<path fill="none" stroke="black" d="M54.003,-43.7985C62.5341,-39.6278 72.0985,-34.9519 81.1476,-30.5279"/>
-<polygon fill="black" stroke="black" points="82.8796,-33.577 90.3262,-26.0405 79.8051,-27.2883 82.8796,-33.577"/>
+<path fill="none" stroke="#000000" d="M54.003,-43.7985C62.5341,-39.6278 72.0985,-34.9519 81.1476,-30.5279"/>
+<polygon fill="#000000" stroke="#000000" points="82.8796,-33.577 90.3262,-26.0405 79.8051,-27.2883 82.8796,-33.577"/>
 </g>
 </g>
 </svg>
@@ -642,6 +654,8 @@ Nodes of different colours represent the following:
 </g>
 </svg>
 
+Where possible, edges connecting nodes are given different colours to make them
+easier to distinguish in large graphs.
 <h5>Module Graph</h5>
 <p>Solid arrows point from a parent (sub)module to the submodule which is
 descended from it. Dashed arrows point from a module being used to the
@@ -691,8 +705,8 @@ implementation in a submodule of an interface in a parent module.</p>
 </g>
 <!-- proc~ldp&#45;&gt;proc~nnls -->
 <g id="edge14" class="edge"><title>proc~ldp&#45;&gt;proc~nnls</title>
-<path fill="none" stroke="black" d="M622.003,-13C630.028,-13 638.967,-13 647.531,-13"/>
-<polygon fill="black" stroke="black" points="647.705,-16.5001 657.705,-13 647.705,-9.5001 647.705,-16.5001"/>
+<path fill="none" stroke="#000000" d="M622.003,-13C630.028,-13 638.967,-13 647.531,-13"/>
+<polygon fill="#000000" stroke="#000000" points="647.705,-16.5001 657.705,-13 647.705,-9.5001 647.705,-16.5001"/>
 </g>
 <!-- proc~lsi -->
 <g id="node3" class="node"><title>proc~lsi</title>
@@ -703,8 +717,8 @@ implementation in a submodule of an interface in a parent module.</p>
 </g>
 <!-- proc~lsi&#45;&gt;proc~ldp -->
 <g id="edge12" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
-<path fill="none" stroke="black" d="M532.003,-13C540.028,-13 548.967,-13 557.531,-13"/>
-<polygon fill="black" stroke="black" points="557.705,-16.5001 567.705,-13 557.705,-9.5001 557.705,-16.5001"/>
+<path fill="none" stroke="#000000" d="M532.003,-13C540.028,-13 548.967,-13 557.531,-13"/>
+<polygon fill="#000000" stroke="#000000" points="557.705,-16.5001 567.705,-13 557.705,-9.5001 557.705,-16.5001"/>
 </g>
 <!-- proc~lsei -->
 <g id="node4" class="node"><title>proc~lsei</title>
@@ -715,8 +729,8 @@ implementation in a submodule of an interface in a parent module.</p>
 </g>
 <!-- proc~lsei&#45;&gt;proc~lsi -->
 <g id="edge10" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
-<path fill="none" stroke="black" d="M442.003,-13C450.028,-13 458.967,-13 467.531,-13"/>
-<polygon fill="black" stroke="black" points="467.705,-16.5001 477.705,-13 467.705,-9.5001 467.705,-16.5001"/>
+<path fill="none" stroke="#000000" d="M442.003,-13C450.028,-13 458.967,-13 467.531,-13"/>
+<polygon fill="#000000" stroke="#000000" points="467.705,-16.5001 477.705,-13 467.705,-9.5001 467.705,-16.5001"/>
 </g>
 <!-- proc~lsq -->
 <g id="node5" class="node"><title>proc~lsq</title>
@@ -727,8 +741,8 @@ implementation in a submodule of an interface in a parent module.</p>
 </g>
 <!-- proc~lsq&#45;&gt;proc~lsei -->
 <g id="edge8" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
-<path fill="none" stroke="black" d="M352.003,-13C360.028,-13 368.967,-13 377.531,-13"/>
-<polygon fill="black" stroke="black" points="377.705,-16.5001 387.705,-13 377.705,-9.5001 377.705,-16.5001"/>
+<path fill="none" stroke="#000000" d="M352.003,-13C360.028,-13 368.967,-13 377.531,-13"/>
+<polygon fill="#000000" stroke="#000000" points="377.705,-16.5001 387.705,-13 377.705,-9.5001 377.705,-16.5001"/>
 </g>
 <!-- proc~slsqpb -->
 <g id="node6" class="node"><title>proc~slsqpb</title>
@@ -739,8 +753,8 @@ implementation in a submodule of an interface in a parent module.</p>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~lsq -->
 <g id="edge6" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
-<path fill="none" stroke="black" d="M262.003,-13C270.028,-13 278.967,-13 287.531,-13"/>
-<polygon fill="black" stroke="black" points="287.705,-16.5001 297.705,-13 287.705,-9.5001 287.705,-16.5001"/>
+<path fill="none" stroke="#000000" d="M262.003,-13C270.028,-13 278.967,-13 287.531,-13"/>
+<polygon fill="#000000" stroke="#000000" points="287.705,-16.5001 297.705,-13 287.705,-9.5001 287.705,-16.5001"/>
 </g>
 <!-- proc~slsqp -->
 <g id="node7" class="node"><title>proc~slsqp</title>
@@ -751,8 +765,8 @@ implementation in a submodule of an interface in a parent module.</p>
 </g>
 <!-- proc~slsqp&#45;&gt;proc~slsqpb -->
 <g id="edge4" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
-<path fill="none" stroke="black" d="M172.003,-13C180.028,-13 188.967,-13 197.531,-13"/>
-<polygon fill="black" stroke="black" points="197.705,-16.5001 207.705,-13 197.705,-9.5001 197.705,-16.5001"/>
+<path fill="none" stroke="#000000" d="M172.003,-13C180.028,-13 188.967,-13 197.531,-13"/>
+<polygon fill="#000000" stroke="#000000" points="197.705,-16.5001 207.705,-13 197.705,-9.5001 197.705,-16.5001"/>
 </g>
 <!-- proc~slsqp_wrapper -->
 <g id="node8" class="node"><title>proc~slsqp_wrapper</title>
@@ -763,8 +777,8 @@ implementation in a submodule of an interface in a parent module.</p>
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
 <g id="edge2" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
-<path fill="none" stroke="black" d="M82.1036,-13C90.5669,-13 99.4334,-13 107.751,-13"/>
-<polygon fill="black" stroke="black" points="107.921,-16.5001 117.921,-13 107.921,-9.5001 107.921,-16.5001"/>
+<path fill="none" stroke="#000000" d="M82.1036,-13C90.5669,-13 99.4334,-13 107.751,-13"/>
+<polygon fill="#000000" stroke="#000000" points="107.921,-16.5001 117.921,-13 107.921,-9.5001 107.921,-16.5001"/>
 </g>
 </g>
 </svg>
@@ -845,6 +859,8 @@ Nodes of different colours represent the following:
 </g>
 </svg>
 
+Where possible, edges connecting nodes are given different colours to make them
+easier to distinguish in large graphs.
 <h5>Module Graph</h5>
 <p>Solid arrows point from a parent (sub)module to the submodule which is
 descended from it. Dashed arrows point from a module being used to the
@@ -1623,12 +1639,18 @@ implementation in a submodule of an interface in a parent module.</p>
 
     <hr>
     <footer>
-        <div class="row">
+      <div class="row">
         <div class="col-md-4">&copy; 2016 </div>
-	<div class="col-md-4"><span class="text-center"> slsqp was developed by Jacob Williams</span></div>
-        <div class="col-md-4"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a></span></div>
+        <div class="col-md-4"><span class="text-center"> slsqp was developed by Jacob Williams</span></div>
+        <div class="col-md-4">
+          <span class="pull-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </span>
         </div>
-        <br>
+      </div>
+      <br>
     </footer>
     </div> <!-- /container -->
 
@@ -1656,6 +1678,6 @@ implementation in a submodule of an interface in a parent module.</p>
         }
       });
     </script>
-    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </body>
 </html>

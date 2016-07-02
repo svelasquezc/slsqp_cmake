@@ -68,7 +68,7 @@
             <li><a href="../lists/types.html">Derived Types</a></li>
 				
 				
-            <li><a href="../program/slsqp_test.html">Program</a></li>
+            <li><a href="../lists/programs.html">Programs</a></li>
 				
           </ul>
         
@@ -104,14 +104,14 @@
      
     
     
-    <li><i class="fa fa-code"></i><a href="../src/slsqp_test.f90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/slsqp_test_2.f90"> Source File</a></li>
      
   </ul>
   <ol class="breadcrumb in-well text-right">
   
-     <li><a href='../sourcefile/slsqp_test.f90.html'>slsqp_test.f90</a></li>
+     <li><a href='../sourcefile/slsqp_test_2.f90.html'>slsqp_test_2.f90</a></li>
   
-     <li><a href='../program/slsqp_test.html'>slsqp_test</a></li>
+     <li><a href='../program/slsqp_test_2.html'>slsqp_test_2</a></li>
   
      <li class="active">report_iteration</li>
   </ol>
@@ -165,7 +165,11 @@
           
           <a class="list-group-item" href="../proc/ddot.html">ddot</a>
           
+          <a class="list-group-item" href="../proc/destroy_linmin_data.html">destroy_linmin_data</a>
+          
           <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
+          
+          <a class="list-group-item" href="../proc/destroy_slsqpb_data.html">destroy_slsqpb_data</a>
           
           <a class="list-group-item" href="../proc/diff.html">diff</a>
           
@@ -195,9 +199,13 @@
           
           <a class="list-group-item" href="../proc/lsq.html">lsq</a>
           
+          <a class="list-group-item" href="../proc/mode_to_status_message.html">mode_to_status_message</a>
+          
           <a class="list-group-item" href="../proc/nnls.html">nnls</a>
           
           <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
+          
+          <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
           
           <a class="list-group-item" href="../proc/report_message.html">report_message</a>
           
@@ -212,6 +220,10 @@
           <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
           
           <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
+          
+          <a class="list-group-item" href="../proc/test_func.html">test_func</a>
+          
+          <a class="list-group-item" href="../proc/test_grad.html">test_grad</a>
           
         </div>
     </div>
@@ -258,7 +270,7 @@ subroutine report_iteration(me, iter, x, f, c)
   
 <tr>
   
-  <td><span class="anchor" id="variable-me%7E13"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
+  <td><span class="anchor" id="variable-me%7E15"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
   <td>intent(inout)</td>
   <td></td>
   
@@ -358,9 +370,13 @@ subroutine report_iteration(me, iter, x, f, c)
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">report_iteration</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">iter</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
-        <span class="k">use</span><span class="p">,</span> <span class="k">intrinsic</span> <span class="kd">::</span> <span class="n">iso_fortran_env</span><span class="p">,</span> <span class="n">only</span><span class="p">:</span> <span class="n">output_unit</span>
+
         <span class="c">!! report an iteration (print to the console).</span>
+
+        <span class="k">use</span><span class="p">,</span> <span class="k">intrinsic</span> <span class="kd">::</span> <span class="n">iso_fortran_env</span><span class="p">,</span> <span class="n">only</span><span class="p">:</span> <span class="n">output_unit</span>
+
         <span class="k">implicit none</span>
+
 <span class="k">        class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
         <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">iter</span>
         <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">x</span>
@@ -369,7 +385,9 @@ subroutine report_iteration(me, iter, x, f, c)
 
         <span class="c">!write a header:</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">iter</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
-<span class="k">            write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="s1">&#39;(*(A20,1X))&#39;</span><span class="p">)</span> <span class="s1">&#39;iteration&#39;</span><span class="p">,</span> <span class="s1">&#39;x(1)&#39;</span><span class="p">,</span> <span class="s1">&#39;x(2)&#39;</span><span class="p">,</span> <span class="s1">&#39;f(1)&#39;</span><span class="p">,</span> <span class="s1">&#39;c(1)&#39;</span>
+<span class="k">            write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="s1">&#39;(*(A20,1X))&#39;</span><span class="p">)</span> <span class="s1">&#39;iteration&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+                                             <span class="s1">&#39;x(1)&#39;</span><span class="p">,</span> <span class="s1">&#39;x(2)&#39;</span><span class="p">,</span> <span class="s1">&#39;x(3)&#39;</span><span class="p">,</span> <span class="p">&amp;</span>
+                                             <span class="s1">&#39;f(1)&#39;</span><span class="p">,</span> <span class="s1">&#39;c(1)&#39;</span><span class="p">,</span> <span class="s1">&#39;c(2)&#39;</span>
         <span class="k">end if</span>
 
         <span class="c">!write the iteration data:</span>
@@ -387,12 +405,18 @@ subroutine report_iteration(me, iter, x, f, c)
 
     <hr>
     <footer>
-        <div class="row">
+      <div class="row">
         <div class="col-md-4">&copy; 2016 </div>
-	<div class="col-md-4"><span class="text-center"> slsqp was developed by Jacob Williams</span></div>
-        <div class="col-md-4"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a></span></div>
+        <div class="col-md-4"><span class="text-center"> slsqp was developed by Jacob Williams</span></div>
+        <div class="col-md-4">
+          <span class="pull-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </span>
         </div>
-        <br>
+      </div>
+      <br>
     </footer>
     </div> <!-- /container -->
 
@@ -420,6 +444,6 @@ subroutine report_iteration(me, iter, x, f, c)
         }
       });
     </script>
-    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </body>
 </html>

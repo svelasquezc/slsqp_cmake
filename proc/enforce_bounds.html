@@ -68,7 +68,7 @@
             <li><a href="../lists/types.html">Derived Types</a></li>
 				
 				
-            <li><a href="../program/slsqp_test.html">Program</a></li>
+            <li><a href="../lists/programs.html">Programs</a></li>
 				
           </ul>
         
@@ -165,7 +165,11 @@
           
           <a class="list-group-item" href="../proc/ddot.html">ddot</a>
           
+          <a class="list-group-item" href="../proc/destroy_linmin_data.html">destroy_linmin_data</a>
+          
           <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
+          
+          <a class="list-group-item" href="../proc/destroy_slsqpb_data.html">destroy_slsqpb_data</a>
           
           <a class="list-group-item" href="../proc/diff.html">diff</a>
           
@@ -195,9 +199,13 @@
           
           <a class="list-group-item" href="../proc/lsq.html">lsq</a>
           
+          <a class="list-group-item" href="../proc/mode_to_status_message.html">mode_to_status_message</a>
+          
           <a class="list-group-item" href="../proc/nnls.html">nnls</a>
           
           <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
+          
+          <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
           
           <a class="list-group-item" href="../proc/report_message.html">report_message</a>
           
@@ -212,6 +220,10 @@
           <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
           
           <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
+          
+          <a class="list-group-item" href="../proc/test_func.html">test_func</a>
+          
+          <a class="list-group-item" href="../proc/test_grad.html">test_grad</a>
           
         </div>
     </div>
@@ -328,8 +340,8 @@ private subroutine enforce_bounds(x, xl, xu)
 </g>
 <!-- proc~lsq&#45;&gt;proc~enforce_bounds -->
 <g id="edge8" class="edge"><title>proc~lsq&#45;&gt;proc~enforce_bounds</title>
-<path fill="none" stroke="black" d="M352.253,-18.0468C360.062,-19.493 368.87,-21.124 377.723,-22.7635"/>
-<polygon fill="black" stroke="black" points="377.217,-26.2293 387.687,-24.6087 378.492,-19.3463 377.217,-26.2293"/>
+<path fill="none" stroke="#000000" d="M352.253,-18.0468C360.062,-19.493 368.87,-21.124 377.723,-22.7635"/>
+<polygon fill="#000000" stroke="#000000" points="377.217,-26.2293 387.687,-24.6087 378.492,-19.3463 377.217,-26.2293"/>
 </g>
 <!-- proc~slsqpb -->
 <g id="node3" class="node"><title>proc~slsqpb</title>
@@ -340,13 +352,13 @@ private subroutine enforce_bounds(x, xl, xu)
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~enforce_bounds -->
 <g id="edge10" class="edge"><title>proc~slsqpb&#45;&gt;proc~enforce_bounds</title>
-<path fill="none" stroke="black" d="M262.284,-34.0551C273.366,-34.4343 286.292,-34.8142 298,-35 324.25,-35.4166 353.371,-35.0858 377.826,-34.5819"/>
-<polygon fill="black" stroke="black" points="378.079,-38.0773 388,-34.357 377.925,-31.079 378.079,-38.0773"/>
+<path fill="none" stroke="#000000" d="M262.284,-34.0551C273.366,-34.4343 286.292,-34.8142 298,-35 324.25,-35.4166 353.371,-35.0858 377.826,-34.5819"/>
+<polygon fill="#000000" stroke="#000000" points="378.079,-38.0773 388,-34.357 377.925,-31.079 378.079,-38.0773"/>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~lsq -->
 <g id="edge2" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
-<path fill="none" stroke="black" d="M262.003,-26.9993C270.116,-25.1965 279.163,-23.186 287.813,-21.2638"/>
-<polygon fill="black" stroke="black" points="288.702,-24.6516 297.705,-19.0655 287.184,-17.8183 288.702,-24.6516"/>
+<path fill="none" stroke="#000000" d="M262.003,-26.9993C270.116,-25.1965 279.163,-23.186 287.813,-21.2638"/>
+<polygon fill="#000000" stroke="#000000" points="288.702,-24.6516 297.705,-19.0655 287.184,-17.8183 288.702,-24.6516"/>
 </g>
 <!-- proc~slsqp -->
 <g id="node5" class="node"><title>proc~slsqp</title>
@@ -357,8 +369,8 @@ private subroutine enforce_bounds(x, xl, xu)
 </g>
 <!-- proc~slsqp&#45;&gt;proc~slsqpb -->
 <g id="edge6" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
-<path fill="none" stroke="black" d="M172.003,-33C180.028,-33 188.967,-33 197.531,-33"/>
-<polygon fill="black" stroke="black" points="197.705,-36.5001 207.705,-33 197.705,-29.5001 197.705,-36.5001"/>
+<path fill="none" stroke="#000000" d="M172.003,-33C180.028,-33 188.967,-33 197.531,-33"/>
+<polygon fill="#000000" stroke="#000000" points="197.705,-36.5001 207.705,-33 197.705,-29.5001 197.705,-36.5001"/>
 </g>
 <!-- proc~slsqp_wrapper -->
 <g id="node6" class="node"><title>proc~slsqp_wrapper</title>
@@ -369,8 +381,8 @@ private subroutine enforce_bounds(x, xl, xu)
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
 <g id="edge4" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
-<path fill="none" stroke="black" d="M82.1036,-33C90.5669,-33 99.4334,-33 107.751,-33"/>
-<polygon fill="black" stroke="black" points="107.921,-36.5001 117.921,-33 107.921,-29.5001 107.921,-36.5001"/>
+<path fill="none" stroke="#000000" d="M82.1036,-33C90.5669,-33 99.4334,-33 107.751,-33"/>
+<polygon fill="#000000" stroke="#000000" points="107.921,-36.5001 117.921,-33 107.921,-29.5001 107.921,-36.5001"/>
 </g>
 </g>
 </svg>
@@ -445,6 +457,8 @@ Nodes of different colours represent the following:
 </g>
 </svg>
 
+Where possible, edges connecting nodes are given different colours to make them
+easier to distinguish in large graphs.
 <h5>Module Graph</h5>
 <p>Solid arrows point from a parent (sub)module to the submodule which is
 descended from it. Dashed arrows point from a module being used to the
@@ -511,12 +525,18 @@ implementation in a submodule of an interface in a parent module.</p>
 
     <hr>
     <footer>
-        <div class="row">
+      <div class="row">
         <div class="col-md-4">&copy; 2016 </div>
-	<div class="col-md-4"><span class="text-center"> slsqp was developed by Jacob Williams</span></div>
-        <div class="col-md-4"><span class="pull-right">Documentation generated by <a href="https://github.com/cmacmackin/ford">FORD</a></span></div>
+        <div class="col-md-4"><span class="text-center"> slsqp was developed by Jacob Williams</span></div>
+        <div class="col-md-4">
+          <span class="pull-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </span>
         </div>
-        <br>
+      </div>
+      <br>
     </footer>
     </div> <!-- /container -->
 
@@ -544,6 +564,6 @@ implementation in a submodule of an interface in a parent module.</p>
         }
       });
     </script>
-    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </body>
 </html>
