@@ -399,27 +399,15 @@ public subroutine daxpy(n, da, dx, incx, dy, incy)
 <polygon fill="none" stroke="black" points="712,-67 658,-67 658,-41 712,-41 712,-67"/>
 <text text-anchor="middle" x="685" y="-51.55" font-family="Helvetica,sans-Serif" font-size="10.50">daxpy</text>
 </g>
-<!-- proc~ldp -->
-<g id="node2" class="node"><title>proc~ldp</title>
-<a xlink:href="../proc/ldp.html" xlink:title="ldp">
-<polygon fill="#d9534f" stroke="#d9534f" points="622,-26 568,-26 568,-1.24345e-14 622,-3.55271e-15 622,-26"/>
-<text text-anchor="middle" x="595" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
-</a>
-</g>
-<!-- proc~ldp&#45;&gt;proc~daxpy -->
-<g id="edge14" class="edge"><title>proc~ldp&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M622.003,-25.3014C630.292,-29.0776 639.557,-33.2982 648.377,-37.316"/>
-<polygon fill="#000000" stroke="#000000" points="647.154,-40.605 657.705,-41.5656 650.056,-34.2348 647.154,-40.605"/>
-</g>
 <!-- proc~slsqpb -->
-<g id="node3" class="node"><title>proc~slsqpb</title>
+<g id="node2" class="node"><title>proc~slsqpb</title>
 <a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
 <polygon fill="#d9534f" stroke="#d9534f" points="262,-84 208,-84 208,-58 262,-58 262,-84"/>
 <text text-anchor="middle" x="235" y="-68.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
 </a>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~daxpy -->
-<g id="edge16" class="edge"><title>proc~slsqpb&#45;&gt;proc~daxpy</title>
+<g id="edge14" class="edge"><title>proc~slsqpb&#45;&gt;proc~daxpy</title>
 <path fill="none" stroke="#000000" d="M262.026,-76.1372C297.139,-82.3542 360.414,-92 415,-92 415,-92 415,-92 505,-92 555.506,-92 612.297,-77.5007 648.338,-66.4147"/>
 <polygon fill="#000000" stroke="#000000" points="649.444,-69.7359 657.93,-63.3933 647.341,-63.0593 649.444,-69.7359"/>
 </g>
@@ -435,6 +423,18 @@ public subroutine daxpy(n, da, dx, incx, dy, incy)
 <path fill="none" stroke="#000000" d="M262.003,-64.9993C270.116,-63.1965 279.163,-61.186 287.813,-59.2638"/>
 <polygon fill="#000000" stroke="#000000" points="288.702,-62.6516 297.705,-57.0655 287.184,-55.8183 288.702,-62.6516"/>
 </g>
+<!-- proc~ldp -->
+<g id="node3" class="node"><title>proc~ldp</title>
+<a xlink:href="../proc/ldp.html" xlink:title="ldp">
+<polygon fill="#d9534f" stroke="#d9534f" points="622,-26 568,-26 568,-1.24345e-14 622,-3.55271e-15 622,-26"/>
+<text text-anchor="middle" x="595" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
+</a>
+</g>
+<!-- proc~ldp&#45;&gt;proc~daxpy -->
+<g id="edge16" class="edge"><title>proc~ldp&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M622.003,-25.3014C630.292,-29.0776 639.557,-33.2982 648.377,-37.316"/>
+<polygon fill="#000000" stroke="#000000" points="647.154,-40.605 657.705,-41.5656 650.056,-34.2348 647.154,-40.605"/>
+</g>
 <!-- proc~lsi -->
 <g id="node4" class="node"><title>proc~lsi</title>
 <a xlink:href="../proc/lsi.html" xlink:title="lsi">
@@ -448,31 +448,31 @@ public subroutine daxpy(n, da, dx, incx, dy, incy)
 <polygon fill="#000000" stroke="#000000" points="647.937,-56.8827 657.994,-53.5499 648.054,-49.8837 647.937,-56.8827"/>
 </g>
 <!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="edge2" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<g id="edge6" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
 <path fill="none" stroke="#000000" d="M532.003,-39.5987C540.292,-36.0988 549.557,-32.1871 558.377,-28.4632"/>
 <polygon fill="#000000" stroke="#000000" points="559.854,-31.6387 567.705,-24.5245 557.131,-25.1899 559.854,-31.6387"/>
 </g>
 <!-- proc~slsqp -->
-<g id="node6" class="node"><title>proc~slsqp</title>
+<g id="node5" class="node"><title>proc~slsqp</title>
 <a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
 <polygon fill="#d9534f" stroke="#d9534f" points="172,-84 118,-84 118,-58 172,-58 172,-84"/>
 <text text-anchor="middle" x="145" y="-68.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
 </a>
 </g>
 <!-- proc~slsqp&#45;&gt;proc~slsqpb -->
-<g id="edge6" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
+<g id="edge4" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
 <path fill="none" stroke="#000000" d="M172.003,-71C180.028,-71 188.967,-71 197.531,-71"/>
 <polygon fill="#000000" stroke="#000000" points="197.705,-74.5001 207.705,-71 197.705,-67.5001 197.705,-74.5001"/>
 </g>
 <!-- proc~slsqp_wrapper -->
-<g id="node7" class="node"><title>proc~slsqp_wrapper</title>
+<g id="node6" class="node"><title>proc~slsqp_wrapper</title>
 <a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
 <polygon fill="#d9534f" stroke="#d9534f" points="82,-84 4.26326e-14,-84 0,-58 82,-58 82,-84"/>
 <text text-anchor="middle" x="41" y="-68.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
 </a>
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
-<g id="edge4" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
+<g id="edge2" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
 <path fill="none" stroke="#000000" d="M82.1036,-71C90.5669,-71 99.4334,-71 107.751,-71"/>
 <polygon fill="#000000" stroke="#000000" points="107.921,-74.5001 117.921,-71 107.921,-67.5001 107.921,-74.5001"/>
 </g>
