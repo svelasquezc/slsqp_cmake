@@ -7,7 +7,7 @@
 	 
 	 <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
     
-    <meta name="author" content="Chris MacMackin" >
+    <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
 
     <title>slsqp_core &ndash; slsqp</title>
@@ -53,13 +53,20 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
 				
-                
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+              
             <li><a href="../lists/files.html">Source Files</a></li>
 				
 				
             <li><a href="../lists/modules.html">Modules</a></li>
 				
-				
+            
+                                
             <li><a href="../lists/procedures.html">Procedures</a></li>
 				
 				
@@ -70,6 +77,26 @@
 				
             <li><a href="../lists/programs.html">Programs</a></li>
 				
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
           </ul>
         
         <form action="../search.html" class="navbar-form navbar-right" role="search">
@@ -93,9 +120,9 @@
     <small>Module</small>
     
     </h1>
-	 
+    
 <div class="row">
-<div class="col-lg-12">
+  <div class="col-lg-12">
 <div class="well well-sm">
   <ul class="list-inline" style="margin-bottom:0px;display:inline">
      
@@ -106,6 +133,13 @@
      
     
     
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title="70.4% of total for modules and submodules.">1210 statements</a>
+     </li> 
+     
+     
     <li><i class="fa fa-code"></i><a href="../src/slsqp_core.f90"> Source File</a></li>
      
   </ul>
@@ -118,123 +152,130 @@
 </div>
 </div>
 </div>
-    
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
   </div>
   
   <div class="row">
-    <div class="col-lg-3">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
     
 <div id="sidebar">
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <div class="panel panel-primary">
-    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types">Derived Types</a></h3></div>
-    <div id="types" class="panel-collapse collapse">
-      <div class="list-group">
-        
-        <a class="list-group-item" href="../module/slsqp_core.html#type-linmin_data">linmin_data</a>
-        
-        <a class="list-group-item" href="../module/slsqp_core.html#type-slsqpb_data">slsqpb_data</a>
-        
-      </div>
-    </div>
-  </div>
-  
-  
-  
-  <div class="panel panel-primary">
-    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs">Functions</a></h3></div>
-    <div id="funcs" class="panel-collapse collapse">
-        <div class="list-group">
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-diff">diff</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-linmin">linmin</a>
-          
-        </div>
-    </div>
-  </div>
-  
-  
-  
-  <div class="panel panel-primary">
-    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs">Subroutines</a></h3></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-0">Derived Types</a></h3></div>
+  <div id="types-0" class="panel-collapse collapse">
     <div class="list-group">
-        <div id="subs" class="panel-collapse collapse">
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-slsqp">slsqp</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-slsqpb">slsqpb</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-lsq">lsq</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-lsei">lsei</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-lsi">lsi</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-ldp">ldp</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-nnls">nnls</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-hfti">hfti</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-h12">h12</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-g1">g1</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-ldl">ldl</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-enforce_bounds">enforce_bounds</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-destroy_slsqpb_data">destroy_slsqpb_data</a>
-          
-          <a class="list-group-item" href="../module/slsqp_core.html#proc-destroy_linmin_data">destroy_linmin_data</a>
-          
-        </div>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#type-linmin_data">linmin_data</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#type-slsqpb_data">slsqpb_data</a>
+      
     </div>
   </div>
-  
-  
-  
-  
-  
-  
-  
-  
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-diff">diff</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-linmin">linmin</a>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-slsqp">slsqp</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-slsqpb">slsqpb</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-lsq">lsq</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-lsei">lsei</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-lsi">lsi</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-ldp">ldp</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-nnls">nnls</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-hfti">hfti</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-h12">h12</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-g1">g1</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-ldl">ldl</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-enforce_bounds">enforce_bounds</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-destroy_slsqpb_data">destroy_slsqpb_data</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-destroy_linmin_data">destroy_linmin_data</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
   <hr>
   
-  <div class="panel panel-default">
-    <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods">All Modules</a></h3></div>
-    <div id="allmods" class="panel-collapse collapse">
-        <div class="list-group">
-          
-          <a class="list-group-item" href="../module/slsqp_core.html">slsqp_core</a>
-          
-          <a class="list-group-item" href="../module/slsqp_kinds.html">slsqp_kinds</a>
-          
-          <a class="list-group-item" href="../module/slsqp_module.html">slsqp_module</a>
-          
-          <a class="list-group-item" href="../module/slsqp_support.html">slsqp_support</a>
-          
-        </div>
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-0">All Modules</a></h3></div>
+  <div id="allmods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/slsqp_core.html">slsqp_core</a>
+      
+      <a class="list-group-item" href="../module/slsqp_kinds.html">slsqp_kinds</a>
+      
+      <a class="list-group-item" href="../module/slsqp_module.html">slsqp_module</a>
+      
+      <a class="list-group-item" href="../module/slsqp_support.html">slsqp_support</a>
+      
     </div>
   </div>
-  
 </div>
+
+
+</div>  
 
     </div>
     
-    <div class="col-lg-9" id='text'>
-    
+    <div class="col-md-9" id='text'>
+      
     
   
     <ul class="list-inline">
@@ -245,8 +286,6 @@
       <li><a href='../module/slsqp_support.html'>slsqp_support</a></li>
       
     </ul>
-  
-
     
                 <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -264,44 +303,44 @@
 <polygon fill="none" stroke="black" points="408,-46 344,-46 344,-20 408,-20 408,-46"/>
 <text text-anchor="middle" x="376" y="-30.55" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp_core</text>
 </g>
-<!-- module~slsqp_support -->
-<g id="node2" class="node"><title>module~slsqp_support</title>
-<a xlink:href="../module/slsqp_support.html" xlink:title="slsqp_support">
-<polygon fill="#337ab7" stroke="#337ab7" points="307,-26 229,-26 229,-1.24345e-14 307,-3.55271e-15 307,-26"/>
-<text text-anchor="middle" x="268" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_support</text>
-</a>
-</g>
-<!-- module~slsqp_support&#45;&gt;module~slsqp_core -->
-<g id="edge6" class="edge"><title>module~slsqp_support&#45;&gt;module~slsqp_core</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M307.602,-20.3337C316.169,-21.9203 325.258,-23.6034 333.917,-25.2069"/>
-<polygon fill="#000000" stroke="#000000" points="333.357,-28.6626 343.827,-27.0421 334.632,-21.7796 333.357,-28.6626"/>
-</g>
 <!-- module~slsqp_kinds -->
-<g id="node3" class="node"><title>module~slsqp_kinds</title>
+<g id="node2" class="node"><title>module~slsqp_kinds</title>
 <a xlink:href="../module/slsqp_kinds.html" xlink:title="slsqp_kinds">
 <polygon fill="#337ab7" stroke="#337ab7" points="192,-46 124,-46 124,-20 192,-20 192,-46"/>
 <text text-anchor="middle" x="158" y="-30.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_kinds</text>
 </a>
 </g>
 <!-- module~slsqp_kinds&#45;&gt;module~slsqp_core -->
-<g id="edge8" class="edge"><title>module~slsqp_kinds&#45;&gt;module~slsqp_core</title>
+<g id="edge6" class="edge"><title>module~slsqp_kinds&#45;&gt;module~slsqp_core</title>
 <path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M192.176,-34.1719C203.568,-34.5104 216.33,-34.8333 228,-35 263.552,-35.5078 272.448,-35.5227 308,-35 316.312,-34.8778 325.193,-34.6716 333.703,-34.4369"/>
 <polygon fill="#000000" stroke="#000000" points="333.942,-37.9315 343.835,-34.1401 333.737,-30.9345 333.942,-37.9315"/>
 </g>
+<!-- module~slsqp_support -->
+<g id="node3" class="node"><title>module~slsqp_support</title>
+<a xlink:href="../module/slsqp_support.html" xlink:title="slsqp_support">
+<polygon fill="#337ab7" stroke="#337ab7" points="307,-26 229,-26 229,-1.24345e-14 307,-3.55271e-15 307,-26"/>
+<text text-anchor="middle" x="268" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_support</text>
+</a>
+</g>
 <!-- module~slsqp_kinds&#45;&gt;module~slsqp_support -->
-<g id="edge2" class="edge"><title>module~slsqp_kinds&#45;&gt;module~slsqp_support</title>
+<g id="edge4" class="edge"><title>module~slsqp_kinds&#45;&gt;module~slsqp_support</title>
 <path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M192.202,-26.7815C200.541,-25.2652 209.629,-23.6128 218.523,-21.9959"/>
 <polygon fill="#000000" stroke="#000000" points="219.218,-25.4269 228.431,-20.1944 217.966,-18.5398 219.218,-25.4269"/>
 </g>
+<!-- module~slsqp_support&#45;&gt;module~slsqp_core -->
+<g id="edge8" class="edge"><title>module~slsqp_support&#45;&gt;module~slsqp_core</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M307.602,-20.3337C316.169,-21.9203 325.258,-23.6034 333.917,-25.2069"/>
+<polygon fill="#000000" stroke="#000000" points="333.357,-28.6626 343.827,-27.0421 334.632,-21.7796 333.357,-28.6626"/>
+</g>
 <!-- iso_fortran_env -->
-<g id="node5" class="node"><title>iso_fortran_env</title>
+<g id="node4" class="node"><title>iso_fortran_env</title>
 <a xlink:href="https://gcc.gnu.org/onlinedocs/gfortran/ISO_005fFORTRAN_005fENV.html" xlink:title="iso_fortran_env">
 <polygon fill="#337ab7" stroke="#337ab7" points="87,-46 1,-46 1,-20 87,-20 87,-46"/>
 <text text-anchor="middle" x="44" y="-30.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_fortran_env</text>
 </a>
 </g>
 <!-- iso_fortran_env&#45;&gt;module~slsqp_kinds -->
-<g id="edge4" class="edge"><title>iso_fortran_env&#45;&gt;module~slsqp_kinds</title>
+<g id="edge2" class="edge"><title>iso_fortran_env&#45;&gt;module~slsqp_kinds</title>
 <path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M87.7493,-33C96.2309,-33 105.127,-33 113.628,-33"/>
 <polygon fill="#000000" stroke="#000000" points="113.748,-36.5001 123.748,-33 113.748,-29.5001 113.748,-36.5001"/>
 </g>
@@ -318,18 +357,18 @@
                       </div>
                       <div class="modal-body">
                         
-Nodes of different colours represent the following:
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.26.3 (20100126.1600)
  -->
 <!-- Title: Graph Key Pages: 1 -->
-<svg width="641pt" height="28pt"
- viewBox="0.00 0.00 641.00 27.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph1" class="graph" transform="scale(0.817602 0.817602) rotate(0) translate(4 30)">
+<svg width="486pt" height="34pt"
+ viewBox="0.00 0.00 486.00 34.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 30)">
 <title>Graph Key</title>
-<polygon fill="white" stroke="white" points="-4,5 -4,-30 781,-30 781,5 -4,5"/>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 483,-30 483,5 -4,5"/>
 <!-- Module -->
 <g id="node1" class="node"><title>Module</title>
 <polygon fill="#337ab7" stroke="#337ab7" points="54,-26 2.13163e-14,-26 0,-1.24345e-14 54,-3.55271e-15 54,-26"/>
@@ -340,66 +379,42 @@ Nodes of different colours represent the following:
 <polygon fill="#5bc0de" stroke="#5bc0de" points="138,-26 72,-26 72,-1.24345e-14 138,-3.55271e-15 138,-26"/>
 <text text-anchor="middle" x="105" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
 </g>
-<!-- Type -->
-<g id="node3" class="node"><title>Type</title>
-<polygon fill="#5cb85c" stroke="#5cb85c" points="210,-26 156,-26 156,-1.24345e-14 210,-3.55271e-15 210,-26"/>
-<text text-anchor="middle" x="183" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
-</g>
 <!-- Subroutine -->
-<g id="node4" class="node"><title>Subroutine</title>
-<polygon fill="#d9534f" stroke="#d9534f" points="292,-26 228,-26 228,-1.24345e-14 292,-3.55271e-15 292,-26"/>
-<text text-anchor="middle" x="260" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+<g id="node3" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="220,-26 156,-26 156,-1.24345e-14 220,-3.55271e-15 220,-26"/>
+<text text-anchor="middle" x="188" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
 </g>
 <!-- Function -->
-<g id="node5" class="node"><title>Function</title>
-<polygon fill="#d94e8f" stroke="#d94e8f" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
-<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
-</g>
-<!-- Interface -->
-<g id="node6" class="node"><title>Interface</title>
-<polygon fill="#a7506f" stroke="#a7506f" points="436,-26 382,-26 382,-1.24345e-14 436,-3.55271e-15 436,-26"/>
-<text text-anchor="middle" x="409" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
-</g>
-<!-- Unknown Procedure Type -->
-<g id="node7" class="node"><title>Unknown Procedure Type</title>
-<polygon fill="#777777" stroke="#777777" points="590,-26 454,-26 454,-1.24345e-14 590,-3.55271e-15 590,-26"/>
-<text text-anchor="middle" x="522" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+<g id="node4" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-26 238,-26 238,-1.24345e-14 292,-3.55271e-15 292,-26"/>
+<text text-anchor="middle" x="265" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
 </g>
 <!-- Program -->
-<g id="node8" class="node"><title>Program</title>
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="662,-26 608,-26 608,-1.24345e-14 662,-3.55271e-15 662,-26"/>
-<text text-anchor="middle" x="635" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+<g id="node5" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
+<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
 </g>
 <!-- This Page&#39;s Entity -->
-<g id="node9" class="node"><title>This Page&#39;s Entity</title>
-<polygon fill="none" stroke="black" points="776,-26 680,-26 680,-1.24345e-14 776,-3.55271e-15 776,-26"/>
-<text text-anchor="middle" x="728" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+<g id="node6" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="478,-26 382,-26 382,-1.24345e-14 478,-3.55271e-15 478,-26"/>
+<text text-anchor="middle" x="430" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
 </g>
 </g>
 </svg>
 
-Where possible, edges connecting nodes are given different colours to make them
-easier to distinguish in large graphs.
-<h5>Module Graph</h5>
-<p>Solid arrows point from a parent (sub)module to the submodule which is
-descended from it. Dashed arrows point from a module being used to the
-module using it.</p>
-<h5>Type Graph</h5>
-<p>Solid arrows point from one derived type to another which extends
-(inherits from) it. Dashed arrows point from a derived type to another
-type containing it as a components, with a label listing the name(s) of
-said component(s).</p>
-<h5>Call Graph</h5>
-<p>Solid arrows point from a procedure to one which it calls. Dashed 
-arrows point from an interface to procedures which implement that interface.
-This could include the module procedures in a generic interface or the
-implementation in a submodule of an interface in a parent module.</p>
-
+    
+    <p>Solid arrows point from a parent (sub)module to the submodule which is
+    descended from it. Dashed arrows point from a module being used to the
+    module or program unit using it.
+    </p>
+    
                       </div>
                     </div>
                   </div>
                 </div>
                 
+    
+
     
     <p>Core subroutines for the SLSQP optimization method.
   These are refactoried versions of the original routines.</p>
@@ -435,29 +450,29 @@ implementation in a submodule of an interface in a parent module.</p>
 <path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M64.1112,-35C72.2449,-35 81.1762,-35 89.9665,-35"/>
 <polygon fill="#000000" stroke="#000000" points="90.1647,-38.5001 100.165,-35 90.1646,-31.5001 90.1647,-38.5001"/>
 </g>
-<!-- program~slsqp_test_2 -->
-<g id="node3" class="node"><title>program~slsqp_test_2</title>
-<a xlink:href="../program/slsqp_test_2.html" xlink:title="slsqp_test_2">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="289,-70 217,-70 217,-44 289,-44 289,-70"/>
-<text text-anchor="middle" x="253" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_2</text>
-</a>
-</g>
-<!-- module~slsqp_module&#45;&gt;program~slsqp_test_2 -->
-<g id="edge2" class="edge"><title>module~slsqp_module&#45;&gt;program~slsqp_test_2</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M179.522,-42.6945C188.215,-44.3871 197.5,-46.1947 206.442,-47.9355"/>
-<polygon fill="#000000" stroke="#000000" points="205.857,-51.3873 216.341,-49.8629 207.195,-44.5163 205.857,-51.3873"/>
-</g>
 <!-- program~slsqp_test -->
-<g id="node4" class="node"><title>program~slsqp_test</title>
+<g id="node3" class="node"><title>program~slsqp_test</title>
 <a xlink:href="../program/slsqp_test.html" xlink:title="slsqp_test">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="283,-26 223,-26 223,-1.24345e-14 283,-3.55271e-15 283,-26"/>
-<text text-anchor="middle" x="253" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test</text>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="283,-70 223,-70 223,-44 283,-44 283,-70"/>
+<text text-anchor="middle" x="253" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test</text>
 </a>
 </g>
 <!-- module~slsqp_module&#45;&gt;program~slsqp_test -->
-<g id="edge4" class="edge"><title>module~slsqp_module&#45;&gt;program~slsqp_test</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M179.522,-27.3055C190.133,-25.2397 201.624,-23.0024 212.298,-20.9244"/>
-<polygon fill="#000000" stroke="#000000" points="213.078,-24.3382 222.225,-18.9916 211.74,-17.4672 213.078,-24.3382"/>
+<g id="edge2" class="edge"><title>module~slsqp_module&#45;&gt;program~slsqp_test</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M179.522,-42.6945C190.133,-44.7603 201.624,-46.9976 212.298,-49.0756"/>
+<polygon fill="#000000" stroke="#000000" points="211.74,-52.5328 222.225,-51.0084 213.078,-45.6618 211.74,-52.5328"/>
+</g>
+<!-- program~slsqp_test_2 -->
+<g id="node4" class="node"><title>program~slsqp_test_2</title>
+<a xlink:href="../program/slsqp_test_2.html" xlink:title="slsqp_test_2">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="289,-26 217,-26 217,-1.24345e-14 289,-3.55271e-15 289,-26"/>
+<text text-anchor="middle" x="253" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_2</text>
+</a>
+</g>
+<!-- module~slsqp_module&#45;&gt;program~slsqp_test_2 -->
+<g id="edge4" class="edge"><title>module~slsqp_module&#45;&gt;program~slsqp_test_2</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M179.522,-27.3055C188.215,-25.6129 197.5,-23.8053 206.442,-22.0645"/>
+<polygon fill="#000000" stroke="#000000" points="207.195,-25.4837 216.341,-20.1371 205.857,-18.6127 207.195,-25.4837"/>
 </g>
 </g>
 </svg>
@@ -472,18 +487,18 @@ implementation in a submodule of an interface in a parent module.</p>
                       </div>
                       <div class="modal-body">
                         
-Nodes of different colours represent the following:
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.26.3 (20100126.1600)
  -->
 <!-- Title: Graph Key Pages: 1 -->
-<svg width="641pt" height="28pt"
- viewBox="0.00 0.00 641.00 27.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph1" class="graph" transform="scale(0.817602 0.817602) rotate(0) translate(4 30)">
+<svg width="486pt" height="34pt"
+ viewBox="0.00 0.00 486.00 34.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 30)">
 <title>Graph Key</title>
-<polygon fill="white" stroke="white" points="-4,5 -4,-30 781,-30 781,5 -4,5"/>
+<polygon fill="white" stroke="white" points="-4,5 -4,-30 483,-30 483,5 -4,5"/>
 <!-- Module -->
 <g id="node1" class="node"><title>Module</title>
 <polygon fill="#337ab7" stroke="#337ab7" points="54,-26 2.13163e-14,-26 0,-1.24345e-14 54,-3.55271e-15 54,-26"/>
@@ -494,67 +509,132 @@ Nodes of different colours represent the following:
 <polygon fill="#5bc0de" stroke="#5bc0de" points="138,-26 72,-26 72,-1.24345e-14 138,-3.55271e-15 138,-26"/>
 <text text-anchor="middle" x="105" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
 </g>
-<!-- Type -->
-<g id="node3" class="node"><title>Type</title>
-<polygon fill="#5cb85c" stroke="#5cb85c" points="210,-26 156,-26 156,-1.24345e-14 210,-3.55271e-15 210,-26"/>
-<text text-anchor="middle" x="183" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
-</g>
 <!-- Subroutine -->
-<g id="node4" class="node"><title>Subroutine</title>
-<polygon fill="#d9534f" stroke="#d9534f" points="292,-26 228,-26 228,-1.24345e-14 292,-3.55271e-15 292,-26"/>
-<text text-anchor="middle" x="260" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+<g id="node3" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="220,-26 156,-26 156,-1.24345e-14 220,-3.55271e-15 220,-26"/>
+<text text-anchor="middle" x="188" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
 </g>
 <!-- Function -->
-<g id="node5" class="node"><title>Function</title>
-<polygon fill="#d94e8f" stroke="#d94e8f" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
-<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
-</g>
-<!-- Interface -->
-<g id="node6" class="node"><title>Interface</title>
-<polygon fill="#a7506f" stroke="#a7506f" points="436,-26 382,-26 382,-1.24345e-14 436,-3.55271e-15 436,-26"/>
-<text text-anchor="middle" x="409" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
-</g>
-<!-- Unknown Procedure Type -->
-<g id="node7" class="node"><title>Unknown Procedure Type</title>
-<polygon fill="#777777" stroke="#777777" points="590,-26 454,-26 454,-1.24345e-14 590,-3.55271e-15 590,-26"/>
-<text text-anchor="middle" x="522" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+<g id="node4" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-26 238,-26 238,-1.24345e-14 292,-3.55271e-15 292,-26"/>
+<text text-anchor="middle" x="265" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
 </g>
 <!-- Program -->
-<g id="node8" class="node"><title>Program</title>
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="662,-26 608,-26 608,-1.24345e-14 662,-3.55271e-15 662,-26"/>
-<text text-anchor="middle" x="635" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+<g id="node5" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-26 310,-26 310,-1.24345e-14 364,-3.55271e-15 364,-26"/>
+<text text-anchor="middle" x="337" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
 </g>
 <!-- This Page&#39;s Entity -->
-<g id="node9" class="node"><title>This Page&#39;s Entity</title>
-<polygon fill="none" stroke="black" points="776,-26 680,-26 680,-1.24345e-14 776,-3.55271e-15 776,-26"/>
-<text text-anchor="middle" x="728" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+<g id="node6" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="478,-26 382,-26 382,-1.24345e-14 478,-3.55271e-15 478,-26"/>
+<text text-anchor="middle" x="430" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
 </g>
 </g>
 </svg>
 
-Where possible, edges connecting nodes are given different colours to make them
-easier to distinguish in large graphs.
-<h5>Module Graph</h5>
-<p>Solid arrows point from a parent (sub)module to the submodule which is
-descended from it. Dashed arrows point from a module being used to the
-module using it.</p>
-<h5>Type Graph</h5>
-<p>Solid arrows point from one derived type to another which extends
-(inherits from) it. Dashed arrows point from a derived type to another
-type containing it as a components, with a label listing the name(s) of
-said component(s).</p>
-<h5>Call Graph</h5>
-<p>Solid arrows point from a procedure to one which it calls. Dashed 
-arrows point from an interface to procedures which implement that interface.
-This could include the module procedures in a generic interface or the
-implementation in a submodule of an interface in a parent module.</p>
-
+    
+    <p>Solid arrows point from a parent (sub)module to the submodule which is
+    descended from it. Dashed arrows point from a module being used to the
+    module or program unit using it.
+    </p>
+    
                       </div>
                     </div>
                   </div>
                 </div>
                 
     <br>
+    
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-1">Derived Types</a></h3></div>
+  <div id="types-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#type-linmin_data">linmin_data</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#type-slsqpb_data">slsqpb_data</a>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-diff">diff</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-linmin">linmin</a>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-slsqp">slsqp</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-slsqpb">slsqpb</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-lsq">lsq</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-lsei">lsei</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-lsi">lsi</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-ldp">ldp</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-nnls">nnls</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-hfti">hfti</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-h12">h12</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-g1">g1</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-ldl">ldl</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-enforce_bounds">enforce_bounds</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-destroy_slsqpb_data">destroy_slsqpb_data</a>
+      
+      <a class="list-group-item" href="../module/slsqp_core.html#proc-destroy_linmin_data">destroy_linmin_data</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
     
 
     
@@ -575,6 +655,10 @@ implementation in a submodule of an interface in a parent module.</p>
     
   </h3></div>
   <div class="panel-body">
+    
+    
+    <p>data formerly saved in <a href="../proc/linmin.html">linmin</a> routine.</p>
+    
      
      <h4>Components</h4>
     
@@ -719,7 +803,7 @@ implementation in a submodule of an interface in a parent module.</p>
   
 <tr>
   
-  <td><span class="anchor" id="variable-w%7E2"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-w"></span>real(kind=wp),</td>
   
   <td>public</td>
   <td></td><td>::</td>
@@ -747,7 +831,7 @@ implementation in a submodule of an interface in a parent module.</p>
   
 <tr>
   
-  <td><span class="anchor" id="variable-m%7E2"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-m"></span>real(kind=wp),</td>
   
   <td>public</td>
   <td></td><td>::</td>
@@ -850,16 +934,11 @@ implementation in a submodule of an interface in a parent module.</p>
       <table class="table table-striped varlist">
       <tbody>
       
-       <tr><td>procedure, public :: <strong>destroy</strong>  => destroy_linmin_data </td>
+       <tr><td>procedure, public :: <strong><a href='../type/linmin_data.html#boundprocedure-destroy'>destroy</a></strong>  => destroy_linmin_data </td>
        <td></td></tr>
       
        </tbody>
        </table>
-     
-     
-     <h4>Description</h4>
-       
-       <p>data formerly saved in <a href="../proc/linmin.html">linmin</a> routine.</p>
      
   </div>
 </div>
@@ -871,6 +950,10 @@ implementation in a submodule of an interface in a parent module.</p>
     
   </h3></div>
   <div class="panel-body">
+    
+    
+    <p>data formerly saved in <a href="../proc/slsqpb.html">slsqpb</a>.</p>
+    
      
      <h4>Components</h4>
     
@@ -1146,16 +1229,11 @@ implementation in a submodule of an interface in a parent module.</p>
       <table class="table table-striped varlist">
       <tbody>
       
-       <tr><td>procedure, public :: <strong>destroy</strong>  => destroy_slsqpb_data </td>
+       <tr><td>procedure, public :: <strong><a href='../type/slsqpb_data.html#boundprocedure-destroy%7E2'>destroy</a></strong>  => destroy_slsqpb_data </td>
        <td></td></tr>
       
        </tbody>
        </table>
-     
-     
-     <h4>Description</h4>
-       
-       <p>data formerly saved in <a href="../proc/slsqpb.html">slsqpb</a>.</p>
      
   </div>
 </div>
@@ -1175,10 +1253,20 @@ implementation in a submodule of an interface in a parent module.</p>
 private pure elemental function <a href='../proc/diff.html'>diff</a>(u, v) result(d)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>Replaced statement function in the original code.
+  Returns \( d = u - v \).</p>
     
     <h4>Arguments</h4>
     
@@ -1238,16 +1326,6 @@ private pure elemental function <a href='../proc/diff.html'>diff</a>(u, v) resul
   </small></h4>
   
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>Replaced statement function in the original code.
-  Returns \( d = u - v \).</p>
-        
 
   </div>
   </div>
@@ -1259,10 +1337,20 @@ private pure elemental function <a href='../proc/diff.html'>diff</a>(u, v) resul
 private function <a href='../proc/linmin.html'>linmin</a>(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m, fu, fv, fw, fx, tol1, tol2)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>Linesearch without derivatives (used by <a href="../proc/slsqp.html">slsqp</a> if <code>linesearch_mode=2</code>).
+  Returns the abscissa approximating the point where <code>f</code> attains a minimum.</p>
     
     <h4>Arguments</h4>
     
@@ -1641,16 +1729,6 @@ private function <a href='../proc/linmin.html'>linmin</a>(mode, ax, bx, f, tol, 
   </small></h4>
   
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>Linesearch without derivatives (used by <a href="../proc/slsqp.html">slsqp</a> if <code>linesearch_mode=2</code>).
-  Returns the abscissa approximating the point where <code>f</code> attains a minimum.</p>
-        
 
   </div>
   </div>
@@ -1670,10 +1748,20 @@ private function <a href='../proc/linmin.html'>linmin</a>(mode, ax, bx, f, tol, 
 public subroutine <a href='../proc/slsqp.html'>slsqp</a>(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w, l_w, jw, l_jw, sdat, ldat, alphamin, alphamax)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p><strong>slsqp</strong>: <strong>s</strong>equential <strong>l</strong>east <strong>sq</strong>uares <strong>p</strong>rogramming
+  to solve general nonlinear optimization problems</p>
     
     <h4>Arguments</h4>
     
@@ -2079,16 +2167,6 @@ public subroutine <a href='../proc/slsqp.html'>slsqp</a>(m, meq, la, n, x, xl, x
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p><strong>slsqp</strong>: <strong>s</strong>equential <strong>l</strong>east <strong>sq</strong>uares <strong>p</strong>rogramming
-  to solve general nonlinear optimization problems</p>
-        
 
   </div>
   </div>
@@ -2100,10 +2178,19 @@ public subroutine <a href='../proc/slsqp.html'>slsqp</a>(m, meq, la, n, x, xl, x
 private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, r, l, x0, mu, s, u, v, w, iw, t, f0, h1, h2, h3, h4, n1, n2, n3, t0, gs, tol, line, alpha, iexact, incons, ireset, itermx, ldat, alphamin, alphamax)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>nonlinear programming by solving sequentially quadratic programs</p>
     
     <h4>Arguments</h4>
     
@@ -2185,7 +2272,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(n)</td><td>::</td>
@@ -2200,7 +2287,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(n)</td><td>::</td>
@@ -2215,7 +2302,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(n)</td><td>::</td>
@@ -2245,7 +2332,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(la)</td><td>::</td>
@@ -2260,7 +2347,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(n+1)</td><td>::</td>
@@ -2275,7 +2362,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(la,n+1)</td><td>::</td>
@@ -2336,7 +2423,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(m+n+n+2)</td><td>::</td>
@@ -2351,7 +2438,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension((n+1)*(n+2)/2)</td><td>::</td>
@@ -2366,7 +2453,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(n)</td><td>::</td>
@@ -2381,7 +2468,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(la)</td><td>::</td>
@@ -2396,7 +2483,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(n+1)</td><td>::</td>
@@ -2411,7 +2498,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(n+1)</td><td>::</td>
@@ -2426,7 +2513,7 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(n+1)</td><td>::</td>
@@ -2787,15 +2874,6 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>nonlinear programming by solving sequentially quadratic programs</p>
-        
 
   </div>
   </div>
@@ -2807,10 +2885,24 @@ private subroutine <a href='../proc/slsqpb.html'>slsqpb</a>(m, meq, la, n, x, xl
 private subroutine <a href='../proc/lsq.html'>lsq</a>(m, meq, n, nl, la, l, g, a, b, xl, xu, x, y, w, jw, mode)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>Minimize \( || e x - f || \) with respect to \(x\),
+  with upper triangular matrix \( e = + d ^{1/2} l^T \),
+  and vector \( f = -d^{-1/2} l^{-1} g \),
+  where the unit lower tridiangular matrix \(l\) is stored columnwise
+  dense in the \(n*(n+1)/2\) array \(l\) with vector \(d\) stored in its
+  'diagonal' thus substituting the one-elements of \(l\)</p>
     
     <h4>Arguments</h4>
     
@@ -2997,7 +3089,7 @@ private subroutine <a href='../proc/lsq.html'>lsq</a>(m, meq, n, nl, la, l, g, a
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(n)</td><td>::</td>
@@ -3012,7 +3104,7 @@ private subroutine <a href='../proc/lsq.html'>lsq</a>(m, meq, n, nl, la, l, g, a
 <tr>
   
   <td><span class="anchor" ></span>real(kind=wp),</td>
-  <td>,</td>
+  <td></td>
   <td></td>
   
   <td>dimension(m+n+n)</td><td>::</td>
@@ -3079,20 +3171,6 @@ private subroutine <a href='../proc/lsq.html'>lsq</a>(m, meq, n, nl, la, l, g, a
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>Minimize \( || e x - f || \) with respect to \(x\),
-  with upper triangular matrix \( e = + d ^{1/2} l^T \),
-  and vector \( f = -d^{-1/2} l^{-1} g \),
-  where the unit lower tridiangular matrix \(l\) is stored columnwise
-  dense in the \(n*(n+1)/2\) array \(l\) with vector \(d\) stored in its
-  'diagonal' thus substituting the one-elements of \(l\)</p>
-        
 
   </div>
   </div>
@@ -3104,10 +3182,20 @@ private subroutine <a href='../proc/lsq.html'>lsq</a>(m, meq, n, nl, la, l, g, a
 private subroutine <a href='../proc/lsei.html'>lsei</a>(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w, jw, mode)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>for <code>mode=1</code>, the subroutine returns the solution <code>x</code> of
+  equality &amp; inequality constrained least squares problem lsei :</p>
     
     <h4>Arguments</h4>
     
@@ -3406,16 +3494,6 @@ private subroutine <a href='../proc/lsei.html'>lsei</a>(c, d, e, f, g, h, lc, mc
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>for <code>mode=1</code>, the subroutine returns the solution <code>x</code> of
-  equality &amp; inequality constrained least squares problem lsei :</p>
-        
 
   </div>
   </div>
@@ -3427,10 +3505,20 @@ private subroutine <a href='../proc/lsei.html'>lsei</a>(c, d, e, f, g, h, lc, mc
 private subroutine <a href='../proc/lsi.html'>lsi</a>(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, jw, mode)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>for <code>mode=1</code>, the subroutine returns the solution <code>x</code> of
+  inequality constrained linear least squares problem:</p>
     
     <h4>Arguments</h4>
     
@@ -3667,16 +3755,6 @@ private subroutine <a href='../proc/lsi.html'>lsi</a>(e, f, g, h, le, me, lg, mg
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>for <code>mode=1</code>, the subroutine returns the solution <code>x</code> of
-  inequality constrained linear least squares problem:</p>
-        
 
   </div>
   </div>
@@ -3688,10 +3766,21 @@ private subroutine <a href='../proc/lsi.html'>lsi</a>(e, f, g, h, le, me, lg, mg
 private subroutine <a href='../proc/ldp.html'>ldp</a>(g, mg, m, n, h, x, xnorm, w, index, mode)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>Least distance programming routine.
+  Minimize \( \frac{1}{2} \mathbf{x}^T \mathbf{x}  \) subject to
+  \( \mathbf{G} \mathbf{x} \ge \mathbf{h} \).</p>
     
     <h4>Arguments</h4>
     
@@ -3873,17 +3962,6 @@ private subroutine <a href='../proc/ldp.html'>ldp</a>(g, mg, m, n, h, x, xnorm, 
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>Least distance programming routine.
-  Minimize \( \frac{1}{2} \mathbf{x}^T \mathbf{x}  \) subject to
-  \( \mathbf{G} \mathbf{x} \ge \mathbf{h} \).</p>
-        
 
   </div>
   </div>
@@ -3895,10 +3973,19 @@ private subroutine <a href='../proc/ldp.html'>ldp</a>(g, mg, m, n, h, x, xnorm, 
 private subroutine <a href='../proc/nnls.html'>nnls</a>(a, mda, m, n, b, x, rnorm, w, zz, index, mode)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>Nonnegative least squares algorithm.</p>
     
     <h4>Arguments</h4>
     
@@ -4098,15 +4185,6 @@ private subroutine <a href='../proc/nnls.html'>nnls</a>(a, mda, m, n, b, x, rnor
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>Nonnegative least squares algorithm.</p>
-        
 
   </div>
   </div>
@@ -4118,10 +4196,20 @@ private subroutine <a href='../proc/nnls.html'>nnls</a>(a, mda, m, n, b, x, rnor
 private subroutine <a href='../proc/hfti.html'>hfti</a>(a, mda, m, n, b, mdb, nb, tau, krank, rnorm, h, g, ip)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>Rank-deficient least squares algorithm using
+  householder forward triangulation with column interchanges.</p>
     
     <h4>Arguments</h4>
     
@@ -4349,16 +4437,6 @@ private subroutine <a href='../proc/hfti.html'>hfti</a>(a, mda, m, n, b, mdb, nb
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>Rank-deficient least squares algorithm using
-  householder forward triangulation with column interchanges.</p>
-        
 
   </div>
   </div>
@@ -4370,10 +4448,20 @@ private subroutine <a href='../proc/hfti.html'>hfti</a>(a, mda, m, n, b, mdb, nb
 private subroutine <a href='../proc/h12.html'>h12</a>(mode, lpivot, l1, m, u, iue, up, c, ice, icv, ncv)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>Construction and/or application of a single
+  householder transformation \( Q = I + u(u^t)/b \).</p>
     
     <h4>Arguments</h4>
     
@@ -4574,16 +4662,6 @@ private subroutine <a href='../proc/h12.html'>h12</a>(mode, lpivot, l1, m, u, iu
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>Construction and/or application of a single
-  householder transformation \( Q = I + u(u^t)/b \).</p>
-        
 
   </div>
   </div>
@@ -4595,10 +4673,19 @@ private subroutine <a href='../proc/h12.html'>h12</a>(mode, lpivot, l1, m, u, iu
 private subroutine <a href='../proc/g1.html'>g1</a>(a, b, c, s, sig)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>Compute orthogonal rotation matrix.</p>
     
     <h4>Arguments</h4>
     
@@ -4694,15 +4781,6 @@ private subroutine <a href='../proc/g1.html'>g1</a>(a, b, c, s, sig)
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>Compute orthogonal rotation matrix.</p>
-        
 
   </div>
   </div>
@@ -4714,10 +4792,19 @@ private subroutine <a href='../proc/g1.html'>g1</a>(a, b, c, s, sig)
 private subroutine <a href='../proc/ldl.html'>ldl</a>(n, a, z, sigma, w)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>\(LDL^T\) - rank-one - update</p>
     
     <h4>Arguments</h4>
     
@@ -4816,15 +4903,6 @@ private subroutine <a href='../proc/ldl.html'>ldl</a>(n, a, z, sigma, w)
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>\(LDL^T\) - rank-one - update</p>
-        
 
   </div>
   </div>
@@ -4836,10 +4914,19 @@ private subroutine <a href='../proc/ldl.html'>ldl</a>(n, a, z, sigma, w)
 private subroutine <a href='../proc/enforce_bounds.html'>enforce_bounds</a>(x, xl, xu)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>enforce the bound constraints on x.</p>
     
     <h4>Arguments</h4>
     
@@ -4905,15 +4992,6 @@ private subroutine <a href='../proc/enforce_bounds.html'>enforce_bounds</a>(x, x
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>enforce the bound constraints on x.</p>
-        
 
   </div>
   </div>
@@ -4925,10 +5003,19 @@ private subroutine <a href='../proc/enforce_bounds.html'>enforce_bounds</a>(x, x
 private subroutine <a href='../proc/destroy_slsqpb_data.html'>destroy_slsqpb_data</a>(me)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>Destructor for <a href="../type/slsqpb_data.html">slsqpb_data</a> type.</p>
     
     <h4>Arguments</h4>
     
@@ -4964,15 +5051,6 @@ private subroutine <a href='../proc/destroy_slsqpb_data.html'>destroy_slsqpb_dat
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>Destructor for <a href="../type/slsqpb_data.html">slsqpb_data</a> type.</p>
-        
 
   </div>
   </div>
@@ -4984,10 +5062,19 @@ private subroutine <a href='../proc/destroy_slsqpb_data.html'>destroy_slsqpb_dat
 private subroutine <a href='../proc/destroy_linmin_data.html'>destroy_linmin_data</a>(me)
     
     
-    
+	 
 </h3></div>
   <div class="panel-body">
        
+    
+
+
+
+
+
+
+
+<p>Destructor for <a href="../type/linmin_data.html">linmin_data</a> type.</p>
     
     <h4>Arguments</h4>
     
@@ -5023,15 +5110,6 @@ private subroutine <a href='../proc/destroy_linmin_data.html'>destroy_linmin_dat
       
     
     
-    
-    <h4>Description</h4>
-       
-       
-
-
-       
-       <p>Destructor for <a href="../type/linmin_data.html">linmin_data</a> type.</p>
-        
 
   </div>
   </div>
@@ -5045,23 +5123,48 @@ private subroutine <a href='../proc/destroy_linmin_data.html'>destroy_linmin_dat
     </div>
   </div>
 
+  <section class="visible-xs visible-sm hidden-md">
     <hr>
+    
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-1">All Modules</a></h3></div>
+  <div id="allmods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/slsqp_core.html">slsqp_core</a>
+      
+      <a class="list-group-item" href="../module/slsqp_kinds.html">slsqp_kinds</a>
+      
+      <a class="list-group-item" href="../module/slsqp_module.html">slsqp_module</a>
+      
+      <a class="list-group-item" href="../module/slsqp_support.html">slsqp_support</a>
+      
+    </div>
+  </div>
+</div>
+
+
+  </section>
+  
+    <hr>    
+    </div> <!-- /container -->
     <footer>
+      <div class="container">
       <div class="row">
-        <div class="col-md-4">&copy; 2016 </div>
-        <div class="col-md-4"><span class="text-center"> slsqp was developed by Jacob Williams</span></div>
-        <div class="col-md-4">
-          <span class="pull-right">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2017 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
             Documentation generated by 
             <a href="https://github.com/cmacmackin/ford">FORD</a>
             
-          </span>
+          </p>
         </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> slsqp was developed by Jacob Williams</p></div>
       </div>
       <br>
+      </div> <!-- /container -->    
     </footer>
-    </div> <!-- /container -->
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
