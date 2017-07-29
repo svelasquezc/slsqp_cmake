@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 2.4% of total for procedures.">39 statements</a>
+	  title=" 2.3% of total for procedures.">39 statements</a>
      </li> 
      
      
@@ -499,37 +499,37 @@ private pure function mode_to_status_message(imode) result(message)
 
     <span class="k">select case</span> <span class="p">(</span><span class="n">imode</span><span class="p">)</span>
     <span class="k">case</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c">!required accuracy for solution obtained</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;required accuracy for solution obtained&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Required accuracy for solution obtained&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;invalid size(x) in slsqp_wrapper&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Invalid size(x) in slsqp_wrapper&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="o">-</span><span class="mi">101</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;invalid linesearch_mode in slsqp_wrapper&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Invalid linesearch_mode in slsqp_wrapper&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="o">-</span><span class="mi">102</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;function is not associated&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Function is not associated&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="o">-</span><span class="mi">103</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;gradient function is not associated&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Gradient function is not associated&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;user-triggered stop of slsqp&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;User-triggered stop of slsqp&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;in progress&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;In progress&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;number of equality contraints larger than n&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Number of equality constraints larger than n&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;more than 3*n iterations in lsq subproblem&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;More than 3*n iterations in lsq subproblem&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;inequality constraints incompatible&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Inequality constraints incompatible&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;singular matrix e in lsq subproblem&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Singular matrix e in lsq subproblem&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;singular matrix c in lsq subproblem&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Singular matrix c in lsq subproblem&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;rank-deficient equality constraint subproblem hfti&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Rank-deficient equality constraint subproblem hfti&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;positive directional derivative for linesearch&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Positive directional derivative for linesearch&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;more than max_iter iterations in slsqp&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;More than max_iter iterations in slsqp&#39;</span>
     <span class="k">case </span><span class="n">default</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;unknown slsqp error&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Unknown slsqp error&#39;</span>
     <span class="k">end select</span>
 
 <span class="k">    end function </span><span class="n">mode_to_status_message</span>

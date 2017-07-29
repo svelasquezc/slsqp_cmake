@@ -317,7 +317,7 @@
 <polygon fill="#000000" stroke="#000000" points="550.623,-72.0742 560.245,-67.6396 549.957,-65.1059 550.623,-72.0742"/>
 </g>
 <!-- module~slsqp_kinds&#45;&gt;module~slsqp_module -->
-<g id="edge10" class="edge"><title>module~slsqp_kinds&#45;&gt;module~slsqp_module</title>
+<g id="edge8" class="edge"><title>module~slsqp_kinds&#45;&gt;module~slsqp_module</title>
 <path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M268,-85.1256C315.828,-89.1814 328.211,-89.621 376,-85.1256"/>
 <path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M376,-85.1256C402.493,-82.6334 430.535,-71.7114 451.403,-61.7669"/>
 <polygon fill="#000000" stroke="#000000" points="453.037,-64.864 460.456,-57.3004 449.939,-58.5866 453.037,-64.864"/>
@@ -348,7 +348,7 @@
 <polygon fill="#000000" stroke="#000000" points="218.431,-47.6257 228.431,-44.1256 218.431,-40.6257 218.431,-47.6257"/>
 </g>
 <!-- module~slsqp_core&#45;&gt;module~slsqp_module -->
-<g id="edge8" class="edge"><title>module~slsqp_core&#45;&gt;module~slsqp_module</title>
+<g id="edge10" class="edge"><title>module~slsqp_core&#45;&gt;module~slsqp_module</title>
 <path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M408.111,-44.1256C416.245,-44.1256 425.176,-44.1256 433.967,-44.1256"/>
 <polygon fill="#000000" stroke="#000000" points="434.165,-47.6257 444.165,-44.1256 434.165,-40.6257 434.165,-47.6257"/>
 </g>
@@ -781,7 +781,7 @@ subroutine <a href='../proc/test_func.html'>test_func</a>(me, x, f, c)
 
 
 
-<p>compute the function.</p>
+<p>Compute the objective function and constraints</p>
     
     <h4>Arguments</h4>
     
@@ -1143,15 +1143,24 @@ subroutine <a href='../proc/report_iteration%7E2.html'>report_iteration</a>(me, 
 
 <span class="k">    subroutine </span><span class="n">test_func</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
 
-        <span class="c">!! compute the function.</span>
+        <span class="c">!!  Compute the objective function and constraints</span>
+        <span class="c">!!</span>
+        <span class="c">!!  Minimize:</span>
+        <span class="c">!!</span>
+        <span class="c">!!   * \( f = x_1^2 + x_2^2 + x_3 \)</span>
+        <span class="c">!!</span>
+        <span class="c">!!  Subject to:</span>
+        <span class="c">!!</span>
+        <span class="c">!!   * \( c_1 = x_1 x_2 - x_3 = 0 \)</span>
+        <span class="c">!!   * \( c_2 = x_3 - 1 \ge 0 \)</span>
 
         <span class="k">implicit none</span>
 
 <span class="k">        class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">x</span>      <span class="c">!! optimization variable vector</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">f</span>      <span class="c">!! value of the objective function</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">c</span>      <span class="c">!! the constraint vector `dimension(m)`,</span>
-                                                    <span class="c">!! equality constraints (if any) first.</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">x</span>   <span class="c">!! optimization variable vector</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">f</span>   <span class="c">!! value of the objective function</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">c</span>   <span class="c">!! the constraint vector `dimension(m)`,</span>
+                                                 <span class="c">!! equality constraints (if any) first.</span>
 
         <span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c">!objective function</span>
 

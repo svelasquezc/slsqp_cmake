@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 1.8% of total for procedures.">29 statements</a>
+	  title=" 1.7% of total for procedures.">29 statements</a>
      </li> 
      
      
@@ -319,7 +319,7 @@ public function dnrm2(n, x, incx)
   
 <tr>
   
-  <td><span class="anchor" id="variable-n%7E12"></span>integer,</td>
+  <td><span class="anchor" id="variable-n%7E3"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -334,7 +334,7 @@ public function dnrm2(n, x, incx)
   
 <tr>
   
-  <td><span class="anchor" id="variable-x%7E14"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-x%7E5"></span>real(kind=wp),</td>
   <td>intent(in),</td>
   <td></td>
   
@@ -392,17 +392,29 @@ public function dnrm2(n, x, incx)
 <polygon fill="none" stroke="black" points="712,-86 658,-86 658,-60 712,-60 712,-86"/>
 <text text-anchor="middle" x="685" y="-70.55" font-family="Helvetica,sans-Serif" font-size="10.50">dnrm2</text>
 </g>
+<!-- proc~lsi -->
+<g id="node2" class="node"><title>proc~lsi</title>
+<a xlink:href="../proc/lsi.html" xlink:title="lsi">
+<polygon fill="#d9534f" stroke="#d9534f" points="532,-64 478,-64 478,-38 532,-38 532,-64"/>
+<text text-anchor="middle" x="505" y="-48.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
+</a>
+</g>
+<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
+<g id="edge14" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M532.338,-54.3413C563.177,-58.1105 613.501,-64.2612 647.877,-68.4628"/>
+<polygon fill="#000000" stroke="#000000" points="647.644,-71.9602 657.994,-69.6993 648.493,-65.0119 647.644,-71.9602"/>
+</g>
 <!-- proc~ldp -->
-<g id="node2" class="node"><title>proc~ldp</title>
+<g id="node5" class="node"><title>proc~ldp</title>
 <a xlink:href="../proc/ldp.html" xlink:title="ldp">
 <polygon fill="#d9534f" stroke="#d9534f" points="622,-26 568,-26 568,-1.24345e-14 622,-3.55271e-15 622,-26"/>
 <text text-anchor="middle" x="595" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
 </a>
 </g>
-<!-- proc~ldp&#45;&gt;proc~dnrm2 -->
-<g id="edge14" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M614.529,-26.0191C626.827,-34.2182 642.911,-44.9405 656.607,-54.0712"/>
-<polygon fill="#000000" stroke="#000000" points="654.937,-57.1642 665.199,-59.7991 658.82,-51.3399 654.937,-57.1642"/>
+<!-- proc~lsi&#45;&gt;proc~ldp -->
+<g id="edge12" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<path fill="none" stroke="#000000" d="M532.003,-39.5987C540.292,-36.0988 549.557,-32.1871 558.377,-28.4632"/>
+<polygon fill="#000000" stroke="#000000" points="559.854,-31.6387 567.705,-24.5245 557.131,-25.1899 559.854,-31.6387"/>
 </g>
 <!-- proc~lsei -->
 <g id="node3" class="node"><title>proc~lsei</title>
@@ -416,15 +428,8 @@ public function dnrm2(n, x, incx)
 <path fill="none" stroke="#000000" d="M442.125,-87.3926C490.744,-84.5115 592.781,-78.4649 647.856,-75.2011"/>
 <polygon fill="#000000" stroke="#000000" points="648.118,-78.6918 657.893,-74.6063 647.704,-71.7041 648.118,-78.6918"/>
 </g>
-<!-- proc~lsi -->
-<g id="node5" class="node"><title>proc~lsi</title>
-<a xlink:href="../proc/lsi.html" xlink:title="lsi">
-<polygon fill="#d9534f" stroke="#d9534f" points="532,-64 478,-64 478,-38 532,-38 532,-64"/>
-<text text-anchor="middle" x="505" y="-48.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
-</a>
-</g>
 <!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="edge12" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
+<g id="edge2" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
 <path fill="none" stroke="#000000" d="M442.003,-77.5987C450.292,-74.0988 459.557,-70.1871 468.377,-66.4632"/>
 <polygon fill="#000000" stroke="#000000" points="469.854,-69.6387 477.705,-62.5245 467.131,-63.1899 469.854,-69.6387"/>
 </g>
@@ -452,15 +457,10 @@ public function dnrm2(n, x, incx)
 <path fill="none" stroke="#000000" d="M262.003,-102.999C270.116,-101.196 279.163,-99.186 287.813,-97.2638"/>
 <polygon fill="#000000" stroke="#000000" points="288.702,-100.652 297.705,-95.0655 287.184,-93.8183 288.702,-100.652"/>
 </g>
-<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
-<g id="edge20" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M532.338,-54.3413C563.177,-58.1105 613.501,-64.2612 647.877,-68.4628"/>
-<polygon fill="#000000" stroke="#000000" points="647.644,-71.9602 657.994,-69.6993 648.493,-65.0119 647.644,-71.9602"/>
-</g>
-<!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="edge2" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
-<path fill="none" stroke="#000000" d="M532.003,-39.5987C540.292,-36.0988 549.557,-32.1871 558.377,-28.4632"/>
-<polygon fill="#000000" stroke="#000000" points="559.854,-31.6387 567.705,-24.5245 557.131,-25.1899 559.854,-31.6387"/>
+<!-- proc~ldp&#45;&gt;proc~dnrm2 -->
+<g id="edge20" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M614.529,-26.0191C626.827,-34.2182 642.911,-44.9405 656.607,-54.0712"/>
+<polygon fill="#000000" stroke="#000000" points="654.937,-57.1642 665.199,-59.7991 658.82,-51.3399 654.937,-57.1642"/>
 </g>
 <!-- proc~lsq&#45;&gt;proc~lsei -->
 <g id="edge6" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>

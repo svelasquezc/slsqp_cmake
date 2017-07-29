@@ -309,7 +309,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-me%7E9"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
+  <td><span class="anchor" id="variable-me%7E5"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
   <td>intent(inout)</td>
   <td></td>
   
@@ -324,7 +324,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-n%7E16"></span>integer,</td>
+  <td><span class="anchor" id="variable-n%7E7"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -339,7 +339,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-m%7E11"></span>integer,</td>
+  <td><span class="anchor" id="variable-m%7E3"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -354,7 +354,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-meq%7E5"></span>integer,</td>
+  <td><span class="anchor" id="variable-meq%7E2"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -384,7 +384,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-acc%7E4"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-acc%7E2"></span>real(kind=wp),</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -399,7 +399,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-f%7E9"></span>procedure(<a href='../interface/func.html'>func</a>)</td>
+  <td><span class="anchor" id="variable-f%7E4"></span>procedure(<a href='../interface/func.html'>func</a>)</td>
   <td></td>
   <td></td>
   
@@ -414,7 +414,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-g%7E10"></span>procedure(<a href='../interface/grad.html'>grad</a>)</td>
+  <td><span class="anchor" id="variable-g%7E3"></span>procedure(<a href='../interface/grad.html'>grad</a>)</td>
   <td></td>
   <td></td>
   
@@ -429,7 +429,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-xl%7E6"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-xl%7E2"></span>real(kind=wp),</td>
   <td>intent(in),</td>
   <td></td>
   
@@ -444,7 +444,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-xu%7E6"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-xu%7E2"></span>real(kind=wp),</td>
   <td>intent(in),</td>
   <td></td>
   
@@ -519,7 +519,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-alphamin%7E4"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-alphamin%7E2"></span>real(kind=wp),</td>
   <td>intent(in),</td>
   <td>optional</td>
   
@@ -534,7 +534,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 <tr>
   
-  <td><span class="anchor" id="variable-alphamax%7E4"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-alphamax%7E2"></span>real(kind=wp),</td>
   <td>intent(in),</td>
   <td>optional</td>
   
@@ -674,9 +674,9 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
         <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">alphamax</span><span class="p">))</span> <span class="n">me</span><span class="p">%</span><span class="n">alphamax</span> <span class="o">=</span> <span class="n">alphamax</span>
 
         <span class="c">!verify valid values for alphamin and alphamax: 0&lt;alphamin&lt;alphamax&lt;=1</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">alphamin</span><span class="o">&lt;=</span><span class="mf">0.0_wp</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">me</span><span class="p">%</span><span class="n">alphamax</span><span class="o">&lt;=</span><span class="mf">0.0_wp</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="p">&amp;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">alphamin</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">me</span><span class="p">%</span><span class="n">alphamax</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="p">&amp;</span>
             <span class="n">me</span><span class="p">%</span><span class="n">alphamax</span><span class="o">&lt;=</span><span class="n">me</span><span class="p">%</span><span class="n">alphamin</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="p">&amp;</span>
-            <span class="n">me</span><span class="p">%</span><span class="n">alphamin</span><span class="o">&gt;=</span><span class="mf">1.0_wp</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">me</span><span class="p">%</span><span class="n">alphamax</span><span class="o">&gt;</span><span class="mf">1.0_wp</span><span class="p">)</span> <span class="k">then</span>
+            <span class="n">me</span><span class="p">%</span><span class="n">alphamin</span><span class="o">&gt;=</span><span class="n">one</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">me</span><span class="p">%</span><span class="n">alphamax</span><span class="o">&gt;</span><span class="n">one</span><span class="p">)</span> <span class="k">then</span>
 
 <span class="k">            call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;error: invalid values for alphamin or alphamax.&#39;</span><span class="p">)</span>
             <span class="k">call </span><span class="n">me</span><span class="p">%</span><span class="n">report_message</span><span class="p">(</span><span class="s1">&#39;  alphamin =&#39;</span><span class="p">,</span><span class="n">rval</span><span class="o">=</span><span class="n">me</span><span class="p">%</span><span class="n">alphamin</span><span class="p">)</span>
