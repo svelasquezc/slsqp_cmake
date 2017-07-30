@@ -752,9 +752,11 @@
   
   <td>private</td>
   <td></td><td>::</td>
-  <td><strong>linesearch_mode</strong></td><td> =</td><td>1</td><td><p>linesearch mode.
- <code>1</code> = inexact (Armijo) linesearch,
- <code>2</code> = exact linesearch.</p></td>
+  <td><strong>linesearch_mode</strong></td><td> =</td><td>1</td><td><p>linesearch mode:</p>
+<ul>
+<li><code>1</code> = inexact (Armijo) linesearch,</li>
+<li><code>2</code> = exact linesearch.</li>
+</ul></td>
   
 </tr>
 
@@ -1561,11 +1563,12 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
         <span class="k">procedure</span><span class="p">(</span><span class="n">grad</span><span class="p">),</span><span class="k">pointer</span>     <span class="kd">::</span> <span class="n">g</span>      <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>         <span class="c">!! gradient subroutine</span>
         <span class="k">procedure</span><span class="p">(</span><span class="n">iterfunc</span><span class="p">),</span><span class="k">pointer</span> <span class="kd">::</span> <span class="n">report</span> <span class="o">=&gt;</span> <span class="nb">null</span><span class="p">()</span>         <span class="c">!! for reporting an iteration</span>
 
-        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">linesearch_mode</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c">!! linesearch mode.</span>
-                                        <span class="c">!! `1` = inexact (Armijo) linesearch,</span>
-                                        <span class="c">!! `2` = exact linesearch.</span>
+        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">linesearch_mode</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c">!! linesearch mode:</span>
+                                        <span class="c">!!</span>
+                                        <span class="c">!! * `1` = inexact (Armijo) linesearch,</span>
+                                        <span class="c">!! * `2` = exact linesearch.</span>
         <span class="k">type</span><span class="p">(</span><span class="n">linmin_data</span><span class="p">)</span> <span class="kd">::</span> <span class="n">linmin</span> <span class="c">!! data formerly within [[linmin]].</span>
-                                                <span class="c">!! Only used when `linesearch_mode=2`</span>
+                                    <span class="c">!! Only used when `linesearch_mode=2`</span>
         <span class="k">type</span><span class="p">(</span><span class="n">slsqpb_data</span><span class="p">)</span> <span class="kd">::</span> <span class="n">slsqpb</span>  <span class="c">!! data formerly within [[slsqpb]].</span>
 
         <span class="kt">logical</span> <span class="kd">::</span> <span class="n">user_triggered_stop</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>    <span class="c">!! if the `abort` method has been called</span>

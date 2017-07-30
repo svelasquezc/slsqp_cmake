@@ -470,10 +470,12 @@ private subroutine nnls(a, mda, m, n, b, x, rnorm, w, zz, index, mode)
   <td>dimension(n)</td><td>::</td>
   <td><strong>index</strong></td><td><p>an integer working array.
  on exit the contents of this array define the sets
- <code>p</code> and <code>z</code> as follows:
- <code>index(1:nsetp) = set p</code>.
- <code>index(iz1:iz2) = set z</code>.
- where: <code>iz1 = nsetp + 1 = npp1</code>, <code>iz2 = n</code></p></td>
+ <code>p</code> and <code>z</code> as follows:</p>
+<ul>
+<li><code>index(1:nsetp) = set p</code>.</li>
+<li><code>index(iz1:iz2) = set z</code>.</li>
+</ul>
+<p>where: <code>iz1 = nsetp + 1 = npp1</code>, <code>iz2 = n</code></p></td>
   
 </tr>
 
@@ -488,10 +490,12 @@ private subroutine nnls(a, mda, m, n, b, x, rnorm, w, zz, index, mode)
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>mode</strong></td><td><p>this is a success-failure flag with the following meanings:
- <strong><em>1</em></strong> the solution has been computed successfully.
- <strong><em>2</em></strong> the dimensions of the problem are bad. either <code>m&lt;=0</code> or <code>n&lt;=0</code>.
- <strong><em>3</em></strong> iteration count exceeded. more than <code>3*n</code> iterations.</p></td>
+  <td><strong>mode</strong></td><td><p>this is a success-failure flag with the following meanings:</p>
+<ul>
+<li><strong><em>1</em></strong> the solution has been computed successfully.</li>
+<li><strong><em>2</em></strong> the dimensions of the problem are bad. either <code>m&lt;=0</code> or <code>n&lt;=0</code>.</li>
+<li><strong><em>3</em></strong> iteration count exceeded. more than <code>3*n</code> iterations.</li>
+</ul></td>
   
 </tr>
 
@@ -519,39 +523,39 @@ private subroutine nnls(a, mda, m, n, b, x, rnorm, w, zz, index, mode)
 <polygon fill="none" stroke="black" points="54,-70 2.13163e-14,-70 0,-44 54,-44 54,-70"/>
 <text text-anchor="middle" x="27" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50">nnls</text>
 </g>
-<!-- proc~g1 -->
-<g id="node2" class="node"><title>proc~g1</title>
-<a xlink:href="../proc/g1.html" xlink:title="g1">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-114 90,-114 90,-88 144,-88 144,-114"/>
-<text text-anchor="middle" x="117" y="-98.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
-</a>
-</g>
-<!-- proc~nnls&#45;&gt;proc~g1 -->
-<g id="edge2" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
-<path fill="none" stroke="#000000" d="M54.003,-70.2015C62.5341,-74.3722 72.0985,-79.0481 81.1476,-83.4721"/>
-<polygon fill="#000000" stroke="#000000" points="79.8051,-86.7117 90.3262,-87.9595 82.8796,-80.423 79.8051,-86.7117"/>
-</g>
 <!-- proc~h12 -->
-<g id="node3" class="node"><title>proc~h12</title>
+<g id="node2" class="node"><title>proc~h12</title>
 <a xlink:href="../proc/h12.html" xlink:title="h12">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-70 90,-70 90,-44 144,-44 144,-70"/>
-<text text-anchor="middle" x="117" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-114 90,-114 90,-88 144,-88 144,-114"/>
+<text text-anchor="middle" x="117" y="-98.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
 </a>
 </g>
 <!-- proc~nnls&#45;&gt;proc~h12 -->
-<g id="edge4" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M54.003,-57C62.0277,-57 70.9665,-57 79.5309,-57"/>
-<polygon fill="#000000" stroke="#000000" points="79.7051,-60.5001 89.705,-57 79.705,-53.5001 79.7051,-60.5001"/>
+<g id="edge2" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
+<path fill="none" stroke="#000000" d="M54.003,-70.2015C62.5341,-74.3722 72.0985,-79.0481 81.1476,-83.4721"/>
+<polygon fill="#000000" stroke="#000000" points="79.8051,-86.7117 90.3262,-87.9595 82.8796,-80.423 79.8051,-86.7117"/>
 </g>
 <!-- proc~diff -->
-<g id="node4" class="node"><title>proc~diff</title>
+<g id="node3" class="node"><title>proc~diff</title>
 <a xlink:href="../proc/diff.html" xlink:title="diff">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-26 90,-26 90,-1.24345e-14 144,-3.55271e-15 144,-26"/>
-<text text-anchor="middle" x="117" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-70 90,-70 90,-44 144,-44 144,-70"/>
+<text text-anchor="middle" x="117" y="-54.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
 </a>
 </g>
 <!-- proc~nnls&#45;&gt;proc~diff -->
-<g id="edge6" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
+<g id="edge4" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
+<path fill="none" stroke="#000000" d="M54.003,-57C62.0277,-57 70.9665,-57 79.5309,-57"/>
+<polygon fill="#000000" stroke="#000000" points="79.7051,-60.5001 89.705,-57 79.705,-53.5001 79.7051,-60.5001"/>
+</g>
+<!-- proc~g1 -->
+<g id="node4" class="node"><title>proc~g1</title>
+<a xlink:href="../proc/g1.html" xlink:title="g1">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-26 90,-26 90,-1.24345e-14 144,-3.55271e-15 144,-26"/>
+<text text-anchor="middle" x="117" y="-10.55" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
+</a>
+</g>
+<!-- proc~nnls&#45;&gt;proc~g1 -->
+<g id="edge6" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
 <path fill="none" stroke="#000000" d="M54.003,-43.7985C62.5341,-39.6278 72.0985,-34.9519 81.1476,-30.5279"/>
 <polygon fill="#000000" stroke="#000000" points="82.8796,-33.577 90.3262,-26.0405 79.8051,-27.2883 82.8796,-33.577"/>
 </g>
@@ -883,13 +887,16 @@ private subroutine nnls(a, mda, m, n, b, x, rnorm, w, zz, index, mode)
     <span class="kt">integer</span><span class="p">,</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>        <span class="kd">::</span> <span class="nb">index</span>   <span class="c">!! an integer working array.</span>
                                                        <span class="c">!! on exit the contents of this array define the sets</span>
                                                        <span class="c">!! `p` and `z` as follows:</span>
-                                                       <span class="c">!! `index(1:nsetp) = set p`.</span>
-                                                       <span class="c">!! `index(iz1:iz2) = set z`.</span>
+                                                       <span class="c">!!</span>
+                                                       <span class="c">!! * `index(1:nsetp) = set p`.</span>
+                                                       <span class="c">!! * `index(iz1:iz2) = set z`.</span>
+                                                       <span class="c">!!</span>
                                                        <span class="c">!! where: `iz1 = nsetp + 1 = npp1`, `iz2 = n`</span>
     <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>                     <span class="kd">::</span> <span class="n">mode</span>    <span class="c">!! this is a success-failure flag with the following meanings:</span>
-                                                       <span class="c">!! ***1*** the solution has been computed successfully.</span>
-                                                       <span class="c">!! ***2*** the dimensions of the problem are bad. either `m&lt;=0` or `n&lt;=0`.</span>
-                                                       <span class="c">!! ***3*** iteration count exceeded. more than `3*n` iterations.</span>
+                                                       <span class="c">!!</span>
+                                                       <span class="c">!! * ***1*** the solution has been computed successfully.</span>
+                                                       <span class="c">!! * ***2*** the dimensions of the problem are bad. either `m&lt;=0` or `n&lt;=0`.</span>
+                                                       <span class="c">!! * ***3*** iteration count exceeded. more than `3*n` iterations.</span>
 
     <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span><span class="n">ii</span><span class="p">,</span><span class="n">ip</span><span class="p">,</span><span class="n">iter</span><span class="p">,</span><span class="n">itmax</span><span class="p">,</span><span class="n">iz</span><span class="p">,</span><span class="n">iz1</span><span class="p">,</span><span class="n">iz2</span><span class="p">,</span><span class="n">izmax</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">jj</span><span class="p">,</span><span class="n">jz</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">npp1</span><span class="p">,</span><span class="n">nsetp</span><span class="p">,</span><span class="n">rtnkey</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">alpha</span><span class="p">,</span><span class="n">asave</span><span class="p">,</span><span class="n">cc</span><span class="p">,</span><span class="n">sm</span><span class="p">,</span><span class="n">ss</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">temp</span><span class="p">,</span><span class="n">unorm</span><span class="p">,</span><span class="n">up</span><span class="p">,</span><span class="n">wmax</span><span class="p">,</span><span class="n">ztest</span>

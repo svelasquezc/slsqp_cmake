@@ -346,8 +346,8 @@ private subroutine ldl(n, a, z, sigma, w)
   <td>dimension(*)</td><td>::</td>
   <td><strong>a</strong></td><td><p><strong><em>In:</em></strong> positive definite matrix of dimension <code>n</code>;
  only the lower triangle is used and is stored column by
- column as one dimensional array of dimension <code>n*(n+1)/2</code>.
- <strong><em>Out:</em></strong> updated \(LDL^T\) factors</p></td>
+ column as one dimensional array of dimension <code>n*(n+1)/2</code>.</p>
+<p><strong><em>Out:</em></strong> updated \(LDL^T\) factors</p></td>
   
 </tr>
 
@@ -592,6 +592,7 @@ private subroutine ldl(n, a, z, sigma, w)
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span>     <span class="c">!! ***In:*** positive definite matrix of dimension `n`;</span>
                                                  <span class="c">!! only the lower triangle is used and is stored column by</span>
                                                  <span class="c">!! column as one dimensional array of dimension `n*(n+1)/2`.</span>
+                                                 <span class="c">!!</span>
                                                  <span class="c">!! ***Out:*** updated \(LDL^T\) factors</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">w</span>     <span class="c">!! working array of dimension `n` (used only if \( \sigma \lt 0 \) ).</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">z</span>     <span class="c">!! vector of dimension `n` of updating elements.</span>
