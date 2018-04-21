@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
+    
+    <meta name="author" content="Jacob Williams" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>slsqpb &ndash; slsqp</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">slsqp </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+				
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+		 aria-expanded="false">Contents <span class="caret"></span></a>
+	      <ul class="dropdown-menu">
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+				
+				
+            <li><a href="../lists/modules.html">Modules</a></li>
+				
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+				
+				
+            <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
+								
+            <li><a href="../lists/types.html">Derived Types</a></li>
+				
+				
+            <li><a href="../lists/programs.html">Programs</a></li>
+				
+            </ul>
+            </li>
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>slsqpb
+      <small>Subroutine</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+	  data-placement="bottom" data-html="true"
+	  title="15.2% of total for procedures.">253 statements</a>
+     </li> 
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/slsqp_core.f90"> Source File</a></li>
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+     <li><a href='../sourcefile/slsqp_core.f90.html'>slsqp_core.f90</a></li>
+  
+     <li><a href='../module/slsqp_core.html'>slsqp_core</a></li>
+  
+     <li class="active">slsqpb</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/slsqpb.html#src">slsqpb</a>
+  </div>
+</div>
+
+
+  <hr>
+  
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs-0">All Procedures</a></h3></div>
+  <div id="allprocs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
+      
+      <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
+      
+      <a class="list-group-item" href="../proc/ddot.html">ddot</a>
+      
+      <a class="list-group-item" href="../proc/destroy_linmin_data.html">destroy_linmin_data</a>
+      
+      <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
+      
+      <a class="list-group-item" href="../proc/destroy_slsqpb_data.html">destroy_slsqpb_data</a>
+      
+      <a class="list-group-item" href="../proc/diff.html">diff</a>
+      
+      <a class="list-group-item" href="../proc/dnrm2.html">dnrm2</a>
+      
+      <a class="list-group-item" href="../proc/dscal.html">dscal</a>
+      
+      <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
+      
+      <a class="list-group-item" href="../proc/g1.html">g1</a>
+      
+      <a class="list-group-item" href="../proc/h12.html">h12</a>
+      
+      <a class="list-group-item" href="../proc/hfti.html">hfti</a>
+      
+      <a class="list-group-item" href="../proc/initialize_slsqp.html">initialize_slsqp</a>
+      
+      <a class="list-group-item" href="../proc/ldl.html">ldl</a>
+      
+      <a class="list-group-item" href="../proc/ldp.html">ldp</a>
+      
+      <a class="list-group-item" href="../proc/linmin.html">linmin</a>
+      
+      <a class="list-group-item" href="../proc/lsei.html">lsei</a>
+      
+      <a class="list-group-item" href="../proc/lsi.html">lsi</a>
+      
+      <a class="list-group-item" href="../proc/lsq.html">lsq</a>
+      
+      <a class="list-group-item" href="../proc/mode_to_status_message.html">mode_to_status_message</a>
+      
+      <a class="list-group-item" href="../proc/nnls.html">nnls</a>
+      
+      <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
+      
+      <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
+      
+      <a class="list-group-item" href="../proc/report_message.html">report_message</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
+      
+      <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
+      
+      <a class="list-group-item" href="../proc/slsqp_wrapper.html">slsqp_wrapper</a>
+      
+      <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
+      
+      <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
+      
+      <a class="list-group-item" href="../proc/test_func.html">test_func</a>
+      
+      <a class="list-group-item" href="../proc/test_grad.html">test_grad</a>
+      
+    </div>
+  </div>
+</div>
+
+
+</div>  
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>
+private subroutine slsqpb(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, r, l, x0, mu, s, u, v, w, iw, t, f0, h1, h2, h3, h4, n1, n2, n3, t0, gs, tol, line, alpha, iexact, incons, ireset, itermx, ldat, alphamin, alphamax)
+    
+    
+	 
+</h2>
+    
+  
+
+
+    
+    <p>nonlinear programming by solving sequentially quadratic programs</p>
+<p>l1 - line search, positive definite bfgs update</p>
+    
+
+    <h3>Arguments</h3>
+    
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-m%7E6"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>m</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-meq%7E4"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>meq</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-la%7E2"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>la</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n%7E9"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-x%7E9"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension(n)</td><td>::</td>
+  <td><strong>x</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xl%7E4"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension(n)</td><td>::</td>
+  <td><strong>xl</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xu%7E4"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension(n)</td><td>::</td>
+  <td><strong>xu</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-f%7E7"></span>real(kind=wp)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>f</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-c%7E4"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension(la)</td><td>::</td>
+  <td><strong>c</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-g%7E5"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension(n+1)</td><td>::</td>
+  <td><strong>g</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-a%7E5"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension(la,n+1)</td><td>::</td>
+  <td><strong>a</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-acc%7E4"></span>real(kind=wp)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>acc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iter%7E3"></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iter</strong></td><td><p><strong>in:</strong>  maximum number of iterations.
+ <strong>out:</strong> actual number of iterations.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mode%7E3"></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>mode</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-r%7E3"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension(m+n+n+2)</td><td>::</td>
+  <td><strong>r</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-l"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension((n+1)*(n+2)/2)</td><td>::</td>
+  <td><strong>l</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-x0"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension(n)</td><td>::</td>
+  <td><strong>x0</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mu"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension(la)</td><td>::</td>
+  <td><strong>mu</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-s"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension(n+1)</td><td>::</td>
+  <td><strong>s</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u%7E4"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension(n+1)</td><td>::</td>
+  <td><strong>u</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-v%7E4"></span>real(kind=wp),</td>
+  <td></td>
+  <td></td>
+  
+  <td>dimension(n+1)</td><td>::</td>
+  <td><strong>v</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-w%7E5"></span>real(kind=wp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(*)</td><td>::</td>
+  <td><strong>w</strong></td><td><p><code>dim(w)</code> =</p>
+<ul>
+<li><code>n1*(n1+1) + meq*(n1+1) + mineq*(n1+1)</code>   for <a href="../proc/lsq.html">lsq</a></li>
+<li><code>+(n1-meq+1)*(mineq+2) + 2*mineq</code>         for <a href="../proc/lsi.html">lsi</a></li>
+<li><code>+(n1+mineq)*(n1-meq) + 2*meq + n1</code>       for <a href="../proc/lsei.html">lsei</a></li>
+</ul>
+<p>with <code>mineq = m - meq + 2*n1</code> &amp; <code>n1 = n+1</code></p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iw"></span>integer,</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(*)</td><td>::</td>
+  <td><strong>iw</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-t%7E2"></span>real(kind=wp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>t</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-f0%7E2"></span>real(kind=wp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>f0</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-h1%7E2"></span>real(kind=wp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>h1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-h2%7E2"></span>real(kind=wp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>h2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-h3%7E2"></span>real(kind=wp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>h3</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-h4%7E2"></span>real(kind=wp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>h4</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n1%7E2"></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n2%7E2"></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n2</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n3%7E2"></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n3</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-t0%7E2"></span>real(kind=wp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>t0</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gs%7E2"></span>real(kind=wp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>gs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tol%7E3"></span>real(kind=wp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>tol</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-line%7E2"></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>line</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-alpha%7E2"></span>real(kind=wp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>alpha</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iexact%7E2"></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>iexact</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-incons%7E2"></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>incons</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ireset%7E2"></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ireset</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-itermx%7E2"></span>integer,</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>itermx</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ldat%7E2"></span>type(<a href='../type/linmin_data.html'>linmin_data</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ldat</strong></td><td><p>data for <a href="../proc/linmin.html">linmin</a>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-alphamin%7E4"></span>real(kind=wp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>alphamin</strong></td><td><p>min \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-alphamax%7E4"></span>real(kind=wp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>alphamax</strong></td><td><p>max \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+    
+    
+     <h3>Calls</h3>
+     
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.36.0 (20140111.2315)
+ -->
+<!-- Title: proc~~slsqpb~~CallsGraph Pages: 1 -->
+<svg id="procslsqpbCallsGraph" width="638pt" height="601pt"
+ viewBox="0.00 0.00 638.00 601.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~slsqpb~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 597)">
+<title>proc~~slsqpb~~CallsGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-597 634,-597 634,4 -4,4"/>
+<!-- proc~slsqpb -->
+<g id="proc~~slsqpb~~CallsGraph_node1" class="node"><title>proc~slsqpb</title>
+<polygon fill="none" stroke="black" points="54,-426 0,-426 0,-402 54,-402 54,-426"/>
+<text text-anchor="middle" x="27" y="-411.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqpb</text>
+</g>
+<!-- proc~enforce_bounds -->
+<g id="proc~~slsqpb~~CallsGraph_node2" class="node"><title>proc~enforce_bounds</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node2"><a xlink:href="../proc/enforce_bounds.html" xlink:title="enforce_bounds">
+<polygon fill="#d9534f" stroke="#d9534f" points="270,-511 180,-511 180,-487 270,-487 270,-511"/>
+<text text-anchor="middle" x="225" y="-496.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">enforce_bounds</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~enforce_bounds -->
+<g id="proc~~slsqpb~~CallsGraph_edge28" class="edge"><title>proc~slsqpb&#45;&gt;proc~enforce_bounds</title>
+<path fill="none" stroke="#000000" d="M31.0451,-426.042C37.5009,-448.701 54.9322,-497.178 90,-517 120.526,-534.255 161.056,-525.242 189.519,-514.743"/>
+<polygon fill="#000000" stroke="#000000" points="191.014,-517.916 199.047,-511.008 188.46,-511.399 191.014,-517.916"/>
+</g>
+<!-- proc~daxpy -->
+<g id="proc~~slsqpb~~CallsGraph_node3" class="node"><title>proc~daxpy</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node3"><a xlink:href="../proc/daxpy.html" xlink:title="daxpy">
+<polygon fill="#d9534f" stroke="#d9534f" points="540,-453 486,-453 486,-429 540,-429 540,-453"/>
+<text text-anchor="middle" x="513" y="-438.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~daxpy -->
+<g id="proc~~slsqpb~~CallsGraph_edge29" class="edge"><title>proc~slsqpb&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M54.0219,-415.452C134.942,-419.966 382.314,-433.765 475.751,-438.978"/>
+<polygon fill="#000000" stroke="#000000" points="475.67,-442.479 485.849,-439.541 476.06,-435.49 475.67,-442.479"/>
+</g>
+<!-- proc~ldl -->
+<g id="proc~~slsqpb~~CallsGraph_node4" class="node"><title>proc~ldl</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node4"><a xlink:href="../proc/ldl.html" xlink:title="ldl">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-508 90,-508 90,-484 144,-484 144,-508"/>
+<text text-anchor="middle" x="117" y="-493.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldl</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~ldl -->
+<g id="proc~~slsqpb~~CallsGraph_edge30" class="edge"><title>proc~slsqpb&#45;&gt;proc~ldl</title>
+<path fill="none" stroke="#000000" d="M39.5549,-426.047C51.7655,-438.615 71.7443,-458.717 90,-475 90.8227,-475.734 91.6666,-476.474 92.5238,-477.217"/>
+<polygon fill="#000000" stroke="#000000" points="90.4807,-480.071 100.395,-483.807 94.9745,-474.704 90.4807,-480.071"/>
+</g>
+<!-- proc~linmin -->
+<g id="proc~~slsqpb~~CallsGraph_node5" class="node"><title>proc~linmin</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node5"><a xlink:href="../proc/linmin.html" xlink:title="linmin">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-466 90,-466 90,-442 144,-442 144,-466"/>
+<text text-anchor="middle" x="117" y="-451.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">linmin</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~linmin -->
+<g id="proc~~slsqpb~~CallsGraph_edge31" class="edge"><title>proc~slsqpb&#45;&gt;proc~linmin</title>
+<path fill="none" stroke="#000000" d="M54.4029,-426.001C62.6567,-429.753 71.8995,-433.954 80.6647,-437.939"/>
+<polygon fill="#000000" stroke="#000000" points="79.367,-441.193 89.919,-442.145 82.2636,-434.821 79.367,-441.193"/>
+</g>
+<!-- proc~ddot -->
+<g id="proc~~slsqpb~~CallsGraph_node6" class="node"><title>proc~ddot</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node6"><a xlink:href="../proc/ddot.html" xlink:title="ddot">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="540,-529 486,-529 486,-505 540,-505 540,-529"/>
+<text text-anchor="middle" x="513" y="-514.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~ddot -->
+<g id="proc~~slsqpb~~CallsGraph_edge32" class="edge"><title>proc~slsqpb&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M31.2684,-426.345C38.2091,-450.346 56.5847,-503.69 90,-535 137.355,-579.372 159.105,-593 224,-593 224,-593 224,-593 334,-593 392.664,-593 454.099,-557.653 487.242,-535.171"/>
+<polygon fill="#000000" stroke="#000000" points="489.601,-537.793 495.814,-529.211 485.605,-532.046 489.601,-537.793"/>
+</g>
+<!-- proc~lsq -->
+<g id="proc~~slsqpb~~CallsGraph_node7" class="node"><title>proc~lsq</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node7"><a xlink:href="../proc/lsq.html" xlink:title="lsq">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-322 90,-322 90,-298 144,-298 144,-322"/>
+<text text-anchor="middle" x="117" y="-307.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~lsq -->
+<g id="proc~~slsqpb~~CallsGraph_edge33" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
+<path fill="none" stroke="#000000" d="M38.4403,-401.661C53.4724,-383.896 81.3705,-350.926 99.2898,-329.748"/>
+<polygon fill="#000000" stroke="#000000" points="102.057,-331.896 105.845,-322.002 96.7135,-327.375 102.057,-331.896"/>
+</g>
+<!-- proc~dscal -->
+<g id="proc~~slsqpb~~CallsGraph_node8" class="node"><title>proc~dscal</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node8"><a xlink:href="../proc/dscal.html" xlink:title="dscal">
+<polygon fill="#d9534f" stroke="#d9534f" points="252,-90 198,-90 198,-66 252,-66 252,-90"/>
+<text text-anchor="middle" x="225" y="-75.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dscal</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~dscal -->
+<g id="proc~~slsqpb~~CallsGraph_edge34" class="edge"><title>proc~slsqpb&#45;&gt;proc~dscal</title>
+<path fill="none" stroke="#000000" d="M31.1877,-401.877C43.4331,-357.276 91.2665,-199.923 180,-104 182.768,-101.008 185.959,-98.2524 189.333,-95.745"/>
+<polygon fill="#000000" stroke="#000000" points="191.555,-98.4713 197.957,-90.0296 187.688,-92.6363 191.555,-98.4713"/>
+</g>
+<!-- proc~dnrm2 -->
+<g id="proc~~slsqpb~~CallsGraph_node9" class="node"><title>proc~dnrm2</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node9"><a xlink:href="../proc/dnrm2.html" xlink:title="dnrm2">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="540,-236 486,-236 486,-212 540,-212 540,-236"/>
+<text text-anchor="middle" x="513" y="-221.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~dnrm2 -->
+<g id="proc~~slsqpb~~CallsGraph_edge35" class="edge"><title>proc~slsqpb&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M28.0204,-401.812C28.8778,-346.165 40.9187,-116.388 180,-57 304.167,-3.98012 447.173,-149.222 495.256,-204.028"/>
+<polygon fill="#000000" stroke="#000000" points="492.709,-206.434 501.895,-211.714 498.007,-201.859 492.709,-206.434"/>
+</g>
+<!-- proc~dcopy -->
+<g id="proc~~slsqpb~~CallsGraph_node10" class="node"><title>proc~dcopy</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node10"><a xlink:href="../proc/dcopy.html" xlink:title="dcopy">
+<polygon fill="#d9534f" stroke="#d9534f" points="540,-87 486,-87 486,-63 540,-63 540,-87"/>
+<text text-anchor="middle" x="513" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~dcopy -->
+<g id="proc~~slsqpb~~CallsGraph_edge36" class="edge"><title>proc~slsqpb&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M28.8759,-401.667C32.9329,-347.423 51.3634,-130.333 90,-76 129.678,-20.202 155.532,-7.10543e-15 224,-0 224,-0 224,-0 334,-0 392.546,-0 454.024,-34.8819 487.206,-57.0684"/>
+<polygon fill="#000000" stroke="#000000" points="485.561,-60.1842 495.789,-62.95 489.518,-54.4099 485.561,-60.1842"/>
+</g>
+<!-- proc~lsq&#45;&gt;proc~enforce_bounds -->
+<g id="proc~~slsqpb~~CallsGraph_edge23" class="edge"><title>proc~lsq&#45;&gt;proc~enforce_bounds</title>
+<path fill="none" stroke="#000000" d="M124.792,-322.11C142.4,-353.506 189.699,-437.841 212.023,-477.645"/>
+<polygon fill="#000000" stroke="#000000" points="209.183,-479.736 217.127,-486.746 215.288,-476.312 209.183,-479.736"/>
+</g>
+<!-- proc~lsq&#45;&gt;proc~ddot -->
+<g id="proc~~slsqpb~~CallsGraph_edge27" class="edge"><title>proc~lsq&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M134.415,-322.161C176.149,-352.607 290.489,-433.096 396,-481 421.924,-492.77 452.77,-502.139 476.135,-508.365"/>
+<polygon fill="#000000" stroke="#000000" points="475.418,-511.795 485.976,-510.92 477.177,-505.019 475.418,-511.795"/>
+</g>
+<!-- proc~lsq&#45;&gt;proc~dscal -->
+<g id="proc~~slsqpb~~CallsGraph_edge24" class="edge"><title>proc~lsq&#45;&gt;proc~dscal</title>
+<path fill="none" stroke="#000000" d="M121.99,-297.959C127.194,-282.169 136.516,-253.585 144,-229 160.837,-173.692 144.611,-149.717 180,-104 182.627,-100.606 185.833,-97.5661 189.304,-94.8679"/>
+<polygon fill="#000000" stroke="#000000" points="191.401,-97.6756 197.74,-89.1862 187.491,-91.8698 191.401,-97.6756"/>
+</g>
+<!-- proc~lsq&#45;&gt;proc~dcopy -->
+<g id="proc~~slsqpb~~CallsGraph_edge26" class="edge"><title>proc~lsq&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M125.397,-297.784C147.727,-262.03 218.334,-156.922 306,-106 359.16,-75.121 432.548,-71.5816 475.864,-72.6892"/>
+<polygon fill="#000000" stroke="#000000" points="475.819,-76.1897 485.936,-73.0452 476.066,-69.194 475.819,-76.1897"/>
+</g>
+<!-- proc~lsei -->
+<g id="proc~~slsqpb~~CallsGraph_node11" class="node"><title>proc~lsei</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node11"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
+<polygon fill="#d9534f" stroke="#d9534f" points="252,-259 198,-259 198,-235 252,-235 252,-259"/>
+<text text-anchor="middle" x="225" y="-244.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
+</a>
+</g>
+</g>
+<!-- proc~lsq&#45;&gt;proc~lsei -->
+<g id="proc~~slsqpb~~CallsGraph_edge25" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
+<path fill="none" stroke="#000000" d="M138.438,-297.853C154.422,-288.353 176.857,-275.019 194.744,-264.388"/>
+<polygon fill="#000000" stroke="#000000" points="196.817,-267.228 203.625,-259.11 193.24,-261.21 196.817,-267.228"/>
+</g>
+<!-- proc~lsei&#45;&gt;proc~ddot -->
+<g id="proc~~slsqpb~~CallsGraph_edge19" class="edge"><title>proc~lsei&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M233.177,-259.213C246.33,-281.175 275.74,-328.36 306,-364 341.808,-406.175 351.73,-416.817 396,-450 422.121,-469.58 454.472,-487.831 478.368,-500.324"/>
+<polygon fill="#000000" stroke="#000000" points="476.911,-503.511 487.403,-504.985 480.12,-497.29 476.911,-503.511"/>
+</g>
+<!-- proc~lsei&#45;&gt;proc~dnrm2 -->
+<g id="proc~~slsqpb~~CallsGraph_edge21" class="edge"><title>proc~lsei&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M252.181,-241.536C267.745,-238.508 287.918,-234.969 306,-233 365.256,-226.548 434.576,-224.682 475.801,-224.165"/>
+<polygon fill="#000000" stroke="#000000" points="475.94,-227.664 485.903,-224.059 475.866,-220.664 475.94,-227.664"/>
+</g>
+<!-- proc~lsei&#45;&gt;proc~dcopy -->
+<g id="proc~~slsqpb~~CallsGraph_edge22" class="edge"><title>proc~lsei&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M231.609,-234.86C242.623,-212.355 269.247,-164.085 306,-138 357.984,-101.106 432.064,-85.4128 475.773,-79.0441"/>
+<polygon fill="#000000" stroke="#000000" points="476.504,-82.4769 485.936,-77.6523 475.554,-75.5416 476.504,-82.4769"/>
+</g>
+<!-- proc~lsi -->
+<g id="proc~~slsqpb~~CallsGraph_node12" class="node"><title>proc~lsi</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node12"><a xlink:href="../proc/lsi.html" xlink:title="lsi">
+<polygon fill="#d9534f" stroke="#d9534f" points="360,-355 306,-355 306,-331 360,-331 360,-355"/>
+<text text-anchor="middle" x="333" y="-340.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
+</a>
+</g>
+</g>
+<!-- proc~lsei&#45;&gt;proc~lsi -->
+<g id="proc~~slsqpb~~CallsGraph_edge17" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
+<path fill="none" stroke="#000000" d="M239.425,-259.158C257.505,-275.533 289.86,-304.835 311.128,-324.097"/>
+<polygon fill="#000000" stroke="#000000" points="308.922,-326.822 318.684,-330.94 313.621,-321.633 308.922,-326.822"/>
+</g>
+<!-- proc~hfti -->
+<g id="proc~~slsqpb~~CallsGraph_node13" class="node"><title>proc~hfti</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node13"><a xlink:href="../proc/hfti.html" xlink:title="hfti">
+<polygon fill="#d9534f" stroke="#d9534f" points="540,-293 486,-293 486,-269 540,-269 540,-293"/>
+<text text-anchor="middle" x="513" y="-278.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">hfti</text>
+</a>
+</g>
+</g>
+<!-- proc~lsei&#45;&gt;proc~hfti -->
+<g id="proc~~slsqpb~~CallsGraph_edge18" class="edge"><title>proc~lsei&#45;&gt;proc~hfti</title>
+<path fill="none" stroke="#000000" d="M252.139,-250.107C303.286,-256.188 416.706,-269.671 475.33,-276.641"/>
+<polygon fill="#000000" stroke="#000000" points="475.268,-280.158 485.611,-277.863 476.095,-273.207 475.268,-280.158"/>
+</g>
+<!-- proc~h12 -->
+<g id="proc~~slsqpb~~CallsGraph_node14" class="node"><title>proc~h12</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node14"><a xlink:href="../proc/h12.html" xlink:title="h12">
+<polygon fill="#d9534f" stroke="#d9534f" points="630,-302 576,-302 576,-278 630,-278 630,-302"/>
+<text text-anchor="middle" x="603" y="-287.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
+</a>
+</g>
+</g>
+<!-- proc~lsei&#45;&gt;proc~h12 -->
+<g id="proc~~slsqpb~~CallsGraph_edge20" class="edge"><title>proc~lsei&#45;&gt;proc~h12</title>
+<path fill="none" stroke="#000000" d="M249.228,-234.958C303.483,-208.627 441.402,-152.192 540,-203 566.495,-216.653 584.158,-247.448 593.636,-268.484"/>
+<polygon fill="#000000" stroke="#000000" points="590.507,-270.07 597.635,-277.909 596.951,-267.336 590.507,-270.07"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~daxpy -->
+<g id="proc~~slsqpb~~CallsGraph_edge12" class="edge"><title>proc~lsi&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M350.999,-355.091C363.253,-363.596 380.326,-375.015 396,-384 422.349,-399.104 453.263,-414.17 476.548,-425.017"/>
+<polygon fill="#000000" stroke="#000000" points="475.161,-428.231 485.707,-429.249 478.097,-421.877 475.161,-428.231"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~ddot -->
+<g id="proc~~slsqpb~~CallsGraph_edge10" class="edge"><title>proc~lsi&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M344.434,-355.097C356.506,-368.938 377.145,-392.124 396,-411 427.733,-442.768 466.613,-477.504 490.332,-498.259"/>
+<polygon fill="#000000" stroke="#000000" points="488.214,-501.057 498.052,-504.99 492.814,-495.78 488.214,-501.057"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
+<g id="proc~~slsqpb~~CallsGraph_edge11" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M352.047,-330.935C383.498,-309.909 448.495,-266.456 485.216,-241.906"/>
+<polygon fill="#000000" stroke="#000000" points="487.537,-244.565 493.905,-236.097 483.647,-238.745 487.537,-244.565"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~h12 -->
+<g id="proc~~slsqpb~~CallsGraph_edge13" class="edge"><title>proc~lsi&#45;&gt;proc~h12</title>
+<path fill="none" stroke="#000000" d="M360.185,-337.822C408.318,-328.303 510.935,-308.009 565.736,-297.172"/>
+<polygon fill="#000000" stroke="#000000" points="566.578,-300.573 575.709,-295.199 565.22,-293.706 566.578,-300.573"/>
+</g>
+<!-- proc~ldp -->
+<g id="proc~~slsqpb~~CallsGraph_node15" class="node"><title>proc~ldp</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node15"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
+<polygon fill="#d9534f" stroke="#d9534f" points="450,-375 396,-375 396,-351 450,-351 450,-375"/>
+<text text-anchor="middle" x="423" y="-360.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
+</a>
+</g>
+</g>
+<!-- proc~lsi&#45;&gt;proc~ldp -->
+<g id="proc~~slsqpb~~CallsGraph_edge14" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<path fill="none" stroke="#000000" d="M360.403,-349.001C368.481,-350.837 377.507,-352.888 386.105,-354.842"/>
+<polygon fill="#000000" stroke="#000000" points="385.392,-358.269 395.919,-357.072 386.943,-351.443 385.392,-358.269"/>
+</g>
+<!-- proc~hfti&#45;&gt;proc~h12 -->
+<g id="proc~~slsqpb~~CallsGraph_edge16" class="edge"><title>proc~hfti&#45;&gt;proc~h12</title>
+<path fill="none" stroke="#000000" d="M540.403,-283.7C548.393,-284.517 557.311,-285.429 565.824,-286.3"/>
+<polygon fill="#000000" stroke="#000000" points="565.615,-289.797 575.919,-287.333 566.327,-282.833 565.615,-289.797"/>
+</g>
+<!-- proc~diff -->
+<g id="proc~~slsqpb~~CallsGraph_node16" class="node"><title>proc~diff</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node16"><a xlink:href="../proc/diff.html" xlink:title="diff">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="630,-363 576,-363 576,-339 630,-339 630,-363"/>
+<text text-anchor="middle" x="603" y="-348.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
+</a>
+</g>
+</g>
+<!-- proc~hfti&#45;&gt;proc~diff -->
+<g id="proc~~slsqpb~~CallsGraph_edge15" class="edge"><title>proc~hfti&#45;&gt;proc~diff</title>
+<path fill="none" stroke="#000000" d="M529.328,-293.193C542.957,-304.034 563.084,-320.044 578.704,-332.469"/>
+<polygon fill="#000000" stroke="#000000" points="576.842,-335.46 586.847,-338.947 581.2,-329.982 576.842,-335.46"/>
+</g>
+<!-- proc~ldp&#45;&gt;proc~daxpy -->
+<g id="proc~~slsqpb~~CallsGraph_edge5" class="edge"><title>proc~ldp&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M437.75,-375.188C451.957,-387.78 474.32,-407.602 490.794,-422.204"/>
+<polygon fill="#000000" stroke="#000000" points="488.541,-424.884 498.347,-428.898 493.185,-419.646 488.541,-424.884"/>
+</g>
+<!-- proc~ldp&#45;&gt;proc~ddot -->
+<g id="proc~~slsqpb~~CallsGraph_edge6" class="edge"><title>proc~ldp&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M430.905,-375.084C445.878,-401.286 481.479,-463.589 500.134,-496.235"/>
+<polygon fill="#000000" stroke="#000000" points="497.127,-498.026 505.127,-504.972 503.204,-494.553 497.127,-498.026"/>
+</g>
+<!-- proc~ldp&#45;&gt;proc~dnrm2 -->
+<g id="proc~~slsqpb~~CallsGraph_edge8" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M430.932,-350.745C442.066,-331.236 464.836,-292.046 486,-260 489.346,-254.934 493.093,-249.578 496.679,-244.59"/>
+<polygon fill="#000000" stroke="#000000" points="499.77,-246.292 502.837,-236.151 494.115,-242.166 499.77,-246.292"/>
+</g>
+<!-- proc~ldp&#45;&gt;proc~dcopy -->
+<g id="proc~~slsqpb~~CallsGraph_edge9" class="edge"><title>proc~ldp&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M427.669,-350.992C441.115,-306.986 487.817,-154.144 505.313,-96.8847"/>
+<polygon fill="#000000" stroke="#000000" points="508.74,-97.6459 508.315,-87.0596 502.046,-95.6003 508.74,-97.6459"/>
+</g>
+<!-- proc~ldp&#45;&gt;proc~diff -->
+<g id="proc~~slsqpb~~CallsGraph_edge4" class="edge"><title>proc~ldp&#45;&gt;proc~diff</title>
+<path fill="none" stroke="#000000" d="M450.004,-373.084C473.649,-380.878 509.414,-389.22 540,-382 551.927,-379.185 564.175,-373.704 574.602,-368.124"/>
+<polygon fill="#000000" stroke="#000000" points="576.614,-371.008 583.604,-363.045 573.174,-364.911 576.614,-371.008"/>
+</g>
+<!-- proc~nnls -->
+<g id="proc~~slsqpb~~CallsGraph_node17" class="node"><title>proc~nnls</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node17"><a xlink:href="../proc/nnls.html" xlink:title="nnls">
+<polygon fill="#d9534f" stroke="#d9534f" points="540,-373 486,-373 486,-349 540,-349 540,-373"/>
+<text text-anchor="middle" x="513" y="-358.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp&#45;&gt;proc~nnls -->
+<g id="proc~~slsqpb~~CallsGraph_edge7" class="edge"><title>proc~ldp&#45;&gt;proc~nnls</title>
+<path fill="none" stroke="#000000" d="M450.403,-362.4C458.393,-362.218 467.311,-362.016 475.824,-361.822"/>
+<polygon fill="#000000" stroke="#000000" points="476.001,-365.319 485.919,-361.593 475.842,-358.321 476.001,-365.319"/>
+</g>
+<!-- proc~nnls&#45;&gt;proc~h12 -->
+<g id="proc~~slsqpb~~CallsGraph_edge2" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
+<path fill="none" stroke="#000000" d="M528.928,-348.956C542.582,-337.94 562.996,-321.47 578.779,-308.735"/>
+<polygon fill="#000000" stroke="#000000" points="581.414,-311.107 586.999,-302.103 577.018,-305.659 581.414,-311.107"/>
+</g>
+<!-- proc~nnls&#45;&gt;proc~diff -->
+<g id="proc~~slsqpb~~CallsGraph_edge1" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
+<path fill="none" stroke="#000000" d="M540.403,-358C548.393,-357.092 557.311,-356.078 565.824,-355.111"/>
+<polygon fill="#000000" stroke="#000000" points="566.378,-358.571 575.919,-353.964 565.588,-351.615 566.378,-358.571"/>
+</g>
+<!-- proc~g1 -->
+<g id="proc~~slsqpb~~CallsGraph_node18" class="node"><title>proc~g1</title>
+<g id="a_proc~~slsqpb~~CallsGraph_node18"><a xlink:href="../proc/g1.html" xlink:title="g1">
+<polygon fill="#d9534f" stroke="#d9534f" points="630,-405 576,-405 576,-381 630,-381 630,-405"/>
+<text text-anchor="middle" x="603" y="-390.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
+</a>
+</g>
+</g>
+<!-- proc~nnls&#45;&gt;proc~g1 -->
+<g id="proc~~slsqpb~~CallsGraph_edge3" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
+<path fill="none" stroke="#000000" d="M540.403,-370.601C548.569,-373.57 557.703,-376.892 566.385,-380.049"/>
+<polygon fill="#000000" stroke="#000000" points="565.325,-383.388 575.919,-383.516 567.717,-376.809 565.325,-383.388"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.36.0 (20140111.2315)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="559pt" height="32pt"
+ viewBox="0.00 0.00 559.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 555,-28 555,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,-0 64,-0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,-0 136,-0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.25,-24 154.75,-24 154.75,-0 209.25,-0 209.25,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="364,-24 228,-24 228,-0 364,-0 364,-24"/>
+<text text-anchor="middle" x="296" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="436,-24 382,-24 382,-0 436,-0 436,-24"/>
+<text text-anchor="middle" x="409" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="551.25,-24 454.75,-24 454.75,-0 551.25,-0 551.25,-24"/>
+<text text-anchor="middle" x="503" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module.
+    </p>
+    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+     
+     
+     <h3>Called By</h3>
+     
+                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.36.0 (20140111.2315)
+ -->
+<!-- Title: proc~~slsqpb~~CalledByGraph Pages: 1 -->
+<svg id="procslsqpbCalledByGraph" width="270pt" height="32pt"
+ viewBox="0.00 0.00 270.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~slsqpb~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~slsqpb~~CalledByGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 266,-28 266,4 -4,4"/>
+<!-- proc~slsqpb -->
+<g id="proc~~slsqpb~~CalledByGraph_node1" class="node"><title>proc~slsqpb</title>
+<polygon fill="none" stroke="black" points="262,-24 208,-24 208,-0 262,-0 262,-24"/>
+<text text-anchor="middle" x="235" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqpb</text>
+</g>
+<!-- proc~slsqp -->
+<g id="proc~~slsqpb~~CalledByGraph_node2" class="node"><title>proc~slsqp</title>
+<g id="a_proc~~slsqpb~~CalledByGraph_node2"><a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
+<polygon fill="#d9534f" stroke="#d9534f" points="172,-24 118,-24 118,-0 172,-0 172,-24"/>
+<text text-anchor="middle" x="145" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqp&#45;&gt;proc~slsqpb -->
+<g id="proc~~slsqpb~~CalledByGraph_edge2" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
+<path fill="none" stroke="#000000" d="M172.403,-12C180.393,-12 189.311,-12 197.824,-12"/>
+<polygon fill="#000000" stroke="#000000" points="197.919,-15.5001 207.919,-12 197.919,-8.5001 197.919,-15.5001"/>
+</g>
+<!-- proc~slsqp_wrapper -->
+<g id="proc~~slsqpb~~CalledByGraph_node3" class="node"><title>proc~slsqp_wrapper</title>
+<g id="a_proc~~slsqpb~~CalledByGraph_node3"><a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
+<polygon fill="#d9534f" stroke="#d9534f" points="82,-24 0,-24 0,-0 82,-0 82,-24"/>
+<text text-anchor="middle" x="41" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
+<g id="proc~~slsqpb~~CalledByGraph_edge1" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
+<path fill="none" stroke="#000000" d="M82.0203,-12C90.4968,-12 99.3981,-12 107.726,-12"/>
+<polygon fill="#000000" stroke="#000000" points="107.894,-15.5001 117.894,-12 107.894,-8.5001 107.894,-15.5001"/>
+</g>
+</g>
+</svg>
+</div>
+                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
+                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
+                  <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                      </div>
+                      <div class="modal-body">
+                        
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.36.0 (20140111.2315)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="559pt" height="32pt"
+ viewBox="0.00 0.00 559.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 555,-28 555,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node"><title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,-0 64,-0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node"><title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,-0 136,-0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node"><title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.25,-24 154.75,-24 154.75,-0 209.25,-0 209.25,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node"><title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="364,-24 228,-24 228,-0 364,-0 364,-24"/>
+<text text-anchor="middle" x="296" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node"><title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="436,-24 382,-24 382,-0 436,-0 436,-24"/>
+<text text-anchor="middle" x="409" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node"><title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="551.25,-24 454.75,-24 454.75,-0 551.25,-0 551.25,-24"/>
+<text text-anchor="middle" x="503" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module.
+    </p>
+    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+     
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../proc/slsqpb.html#src">slsqpb</a>
+  </div>
+</div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">slsqpb</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">la</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">iter</span><span class="p">,</span><span class="n">mode</span><span class="p">,&amp;</span>
+                      <span class="n">r</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">iw</span><span class="p">,&amp;</span>
+                      <span class="n">t</span><span class="p">,</span><span class="n">f0</span><span class="p">,</span><span class="n">h1</span><span class="p">,</span><span class="n">h2</span><span class="p">,</span><span class="n">h3</span><span class="p">,</span><span class="n">h4</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">,</span><span class="n">n3</span><span class="p">,</span><span class="n">t0</span><span class="p">,</span><span class="n">gs</span><span class="p">,</span><span class="n">tol</span><span class="p">,</span><span class="n">line</span><span class="p">,&amp;</span>
+                      <span class="n">alpha</span><span class="p">,</span><span class="n">iexact</span><span class="p">,</span><span class="n">incons</span><span class="p">,</span><span class="n">ireset</span><span class="p">,</span><span class="n">itermx</span><span class="p">,</span><span class="n">ldat</span><span class="p">,&amp;</span>
+                      <span class="n">alphamin</span><span class="p">,</span><span class="n">alphamax</span><span class="p">)</span>
+    <span class="k">implicit none</span>
+
+<span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">m</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">meq</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">la</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">n</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">x</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">xl</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">xu</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>                            <span class="kd">::</span> <span class="n">f</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">c</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">g</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">la</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>          <span class="kd">::</span> <span class="n">a</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>                            <span class="kd">::</span> <span class="n">acc</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">iter</span>     <span class="c">!! **in:**  maximum number of iterations.</span>
+                                                    <span class="c">!! **out:** actual number of iterations.</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">mode</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">m</span><span class="o">+</span><span class="n">n</span><span class="o">+</span><span class="n">n</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>         <span class="kd">::</span> <span class="n">r</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">((</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">l</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">x0</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">la</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">mu</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">s</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">u</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">v</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">w</span>   <span class="c">!! `dim(w)` =</span>
+                                               <span class="c">!!</span>
+                                               <span class="c">!! * `n1*(n1+1) + meq*(n1+1) + mineq*(n1+1)`   for [[lsq]]</span>
+                                               <span class="c">!! * `+(n1-meq+1)*(mineq+2) + 2*mineq`         for [[lsi]]</span>
+                                               <span class="c">!! * `+(n1+mineq)*(n1-meq) + 2*meq + n1`       for [[lsei]]</span>
+                                               <span class="c">!!</span>
+                                               <span class="c">!! with `mineq = m - meq + 2*n1` &amp; `n1 = n+1`</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">iw</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">t</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">f0</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">h1</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">h2</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">h3</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">h4</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">n1</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">n2</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">n3</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">t0</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">gs</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">tol</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">line</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>              <span class="kd">::</span> <span class="n">alpha</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">iexact</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">incons</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">ireset</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">itermx</span>
+    <span class="k">type</span><span class="p">(</span><span class="n">linmin_data</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">ldat</span>      <span class="c">!! data for [[linmin]].</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                 <span class="kd">::</span> <span class="n">alphamin</span>  <span class="c">!! min \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                 <span class="kd">::</span> <span class="n">alphamax</span>  <span class="c">!! max \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</span>
+
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">&lt;</span><span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+
+        <span class="c">! call jacobian at current x</span>
+
+        <span class="c">! update cholesky-factors of hessian matrix by modified bfgs formula</span>
+
+        <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+            <span class="n">u</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">ddot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">end do</span>
+
+        <span class="c">! l&#39;*s</span>
+
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+            <span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="n">h1</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">l</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">s</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+            <span class="k">end do</span>
+<span class="k">            </span><span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">s</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">h1</span>
+        <span class="k">end do</span>
+
+        <span class="c">! d*l&#39;*s</span>
+
+        <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+            <span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">l</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">n1</span> <span class="o">-</span> <span class="n">i</span>
+        <span class="k">end do</span>
+
+        <span class="c">! l*d*l&#39;*s</span>
+
+        <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="n">n</span> <span class="p">,</span> <span class="mi">1</span> <span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">i</span>
+            <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span>
+                <span class="n">h1</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">l</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">v</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="n">n</span> <span class="o">-</span> <span class="n">j</span>
+            <span class="k">end do</span>
+<span class="k">            </span><span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">h1</span>
+        <span class="k">end do</span>
+
+<span class="k">        </span><span class="n">h1</span> <span class="o">=</span> <span class="n">ddot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">h2</span> <span class="o">=</span> <span class="n">ddot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">h3</span> <span class="o">=</span> <span class="mf">0.2_wp</span><span class="o">*</span><span class="n">h2</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">h1</span><span class="o">&lt;</span><span class="n">h3</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">            </span><span class="n">h4</span> <span class="o">=</span> <span class="p">(</span><span class="n">h2</span><span class="o">-</span><span class="n">h3</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">h2</span><span class="o">-</span><span class="n">h1</span><span class="p">)</span>
+            <span class="n">h1</span> <span class="o">=</span> <span class="n">h3</span>
+            <span class="k">call </span><span class="n">dscal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">h4</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">one</span><span class="o">-</span><span class="n">h4</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">end if</span>
+<span class="k">        call </span><span class="n">ldl</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="o">+</span><span class="n">one</span><span class="o">/</span><span class="n">h1</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">ldl</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="o">-</span><span class="n">one</span><span class="o">/</span><span class="n">h2</span><span class="p">,</span><span class="n">u</span><span class="p">)</span>
+
+        <span class="c">! end of main iteration</span>
+
+        <span class="k">goto </span><span class="mi">200</span>
+
+    <span class="k">else if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+
+<span class="k">        </span><span class="n">itermx</span> <span class="o">=</span> <span class="n">iter</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">acc</span><span class="o">&gt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">            </span><span class="n">iexact</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span>
+<span class="k">            </span><span class="n">iexact</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">end if</span>
+<span class="k">        </span><span class="n">acc</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span>
+        <span class="n">tol</span> <span class="o">=</span> <span class="n">ten</span><span class="o">*</span><span class="n">acc</span>
+        <span class="n">iter</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">ireset</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">n1</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">n2</span> <span class="o">=</span> <span class="n">n1</span><span class="o">*</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span>
+        <span class="n">n3</span> <span class="o">=</span> <span class="n">n2</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
+        <span class="n">mu</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
+        <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">mu</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">mu</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">else</span>
+
+        <span class="c">! call functions at current x</span>
+
+        <span class="n">t</span> <span class="o">=</span> <span class="n">f</span>
+        <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">                </span><span class="n">h1</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+            <span class="k">else</span>
+<span class="k">                </span><span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
+            <span class="k">end if</span>
+<span class="k">            </span><span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">mu</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">h1</span><span class="p">)</span>
+        <span class="k">end do</span>
+<span class="k">        </span><span class="n">h1</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-</span> <span class="n">t0</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">iexact</span><span class="o">+</span><span class="mi">1</span><span class="o">==</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">            if</span> <span class="p">(</span> <span class="n">h1</span><span class="o">&lt;=</span><span class="n">h3</span><span class="o">/</span><span class="n">ten</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">line</span><span class="o">&gt;</span><span class="mi">10</span> <span class="p">)</span> <span class="k">goto </span><span class="mi">500</span>
+            <span class="n">alpha</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">h3</span><span class="o">/</span><span class="p">(</span><span class="n">two</span><span class="o">*</span><span class="p">(</span><span class="n">h3</span><span class="o">-</span><span class="n">h1</span><span class="p">)),</span><span class="n">alphamin</span><span class="p">),</span><span class="n">alphamax</span><span class="p">)</span>
+            <span class="k">goto </span><span class="mi">300</span>
+        <span class="k">else if</span> <span class="p">(</span> <span class="n">iexact</span><span class="o">+</span><span class="mi">1</span><span class="o">==</span><span class="mi">2</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">            goto </span><span class="mi">400</span>
+        <span class="k">else</span>
+<span class="k">            goto </span><span class="mi">500</span>
+        <span class="k">end if</span>
+
+<span class="k">    end if</span>
+
+    <span class="c">! reset bfgs matrix</span>
+
+<span class="mi">100</span> <span class="n">ireset</span> <span class="o">=</span> <span class="n">ireset</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">ireset</span><span class="o">&gt;</span><span class="mi">5</span> <span class="p">)</span> <span class="k">then</span>
+        <span class="c">! check relaxed convergence in case of positive directional derivative</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="o">-</span><span class="n">f0</span><span class="p">)</span><span class="o">&lt;</span><span class="n">tol</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">tol</span><span class="p">)</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">h3</span><span class="o">&lt;</span><span class="n">tol</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">            </span><span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">else</span>
+<span class="k">            </span><span class="n">mode</span> <span class="o">=</span> <span class="mi">8</span>
+        <span class="k">end if</span>
+<span class="k">        return</span>
+<span class="k">    else</span>
+<span class="k">        </span><span class="n">l</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
+        <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n2</span><span class="p">,</span><span class="n">l</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+            <span class="n">l</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="n">n1</span> <span class="o">-</span> <span class="n">i</span>
+        <span class="k">end do</span>
+<span class="k">    end if</span>
+
+    <span class="c">! main iteration : search direction, steplength, ldl&#39;-update</span>
+
+<span class="mi">200</span> <span class="n">iter</span> <span class="o">=</span> <span class="n">iter</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">iter</span><span class="o">&gt;</span><span class="n">itermx</span> <span class="p">)</span> <span class="k">return</span>
+
+    <span class="c">! search direction as solution of qp - subproblem</span>
+
+    <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">xu</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="o">-</span><span class="n">one</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="o">-</span><span class="n">one</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">h4</span> <span class="o">=</span> <span class="n">one</span>
+    <span class="k">call </span><span class="n">lsq</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">n3</span><span class="p">,</span><span class="n">la</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">iw</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
+
+    <span class="c">! augmented problem for inconsistent linearization</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">6</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">        if</span> <span class="p">(</span> <span class="n">n</span><span class="o">==</span><span class="n">meq</span> <span class="p">)</span> <span class="n">mode</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="k">end if</span>
+<span class="k">    if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">4</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">        do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">                </span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+            <span class="k">else</span>
+<span class="k">                </span><span class="n">a</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">zero</span><span class="p">)</span>
+            <span class="k">end if</span>
+<span class="k">        end do</span>
+<span class="k">        </span><span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
+        <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">h3</span> <span class="o">=</span> <span class="n">zero</span>
+        <span class="n">g</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
+        <span class="n">l</span><span class="p">(</span><span class="n">n3</span><span class="p">)</span> <span class="o">=</span> <span class="n">hun</span>
+        <span class="n">s</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span>
+        <span class="n">u</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">zero</span>
+        <span class="n">v</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span> <span class="o">=</span> <span class="n">one</span>
+        <span class="n">incons</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="mi">250</span>     <span class="k">call </span><span class="n">lsq</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">n3</span><span class="p">,</span><span class="n">la</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">iw</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
+        <span class="n">h4</span> <span class="o">=</span> <span class="n">one</span> <span class="o">-</span> <span class="n">s</span><span class="p">(</span><span class="n">n1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">4</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">            </span><span class="n">l</span><span class="p">(</span><span class="n">n3</span><span class="p">)</span> <span class="o">=</span> <span class="n">ten</span><span class="o">*</span><span class="n">l</span><span class="p">(</span><span class="n">n3</span><span class="p">)</span>
+            <span class="n">incons</span> <span class="o">=</span> <span class="n">incons</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="n">incons</span><span class="o">&lt;=</span><span class="mi">5</span> <span class="p">)</span> <span class="k">goto </span><span class="mi">250</span>
+            <span class="k">return</span>
+<span class="k">        else if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">/=</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">            return</span>
+<span class="k">        end if</span>
+<span class="k">    else if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">/=</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">        return</span>
+<span class="k">    end if</span>
+
+    <span class="c">! update multipliers for l1-test</span>
+
+    <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+        <span class="n">v</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">ddot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">end do</span>
+<span class="k">    </span><span class="n">f0</span> <span class="o">=</span> <span class="n">f</span>
+    <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">gs</span> <span class="o">=</span> <span class="n">ddot</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">h1</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">gs</span><span class="p">)</span>
+    <span class="n">h2</span> <span class="o">=</span> <span class="n">zero</span>
+    <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">            </span><span class="n">h3</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">else</span>
+<span class="k">            </span><span class="n">h3</span> <span class="o">=</span> <span class="n">zero</span>
+        <span class="k">end if</span>
+<span class="k">        </span><span class="n">h2</span> <span class="o">=</span> <span class="n">h2</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">h3</span><span class="p">)</span>
+        <span class="n">h3</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">r</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
+        <span class="n">mu</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">h3</span><span class="p">,(</span><span class="n">mu</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="n">h3</span><span class="p">)</span><span class="o">/</span><span class="n">two</span><span class="p">)</span>
+        <span class="n">h1</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">h3</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
+    <span class="k">end do</span>
+
+    <span class="c">! check convergence</span>
+
+    <span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">h1</span><span class="o">&lt;</span><span class="n">acc</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">h2</span><span class="o">&lt;</span><span class="n">acc</span> <span class="p">)</span> <span class="k">return</span>
+<span class="k">    </span><span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
+    <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">            </span><span class="n">h3</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">else</span>
+<span class="k">            </span><span class="n">h3</span> <span class="o">=</span> <span class="n">zero</span>
+        <span class="k">end if</span>
+<span class="k">        </span><span class="n">h1</span> <span class="o">=</span> <span class="n">h1</span> <span class="o">+</span> <span class="n">mu</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">h3</span><span class="p">)</span>
+    <span class="k">end do</span>
+<span class="k">    </span><span class="n">t0</span> <span class="o">=</span> <span class="n">f</span> <span class="o">+</span> <span class="n">h1</span>
+    <span class="n">h3</span> <span class="o">=</span> <span class="n">gs</span> <span class="o">-</span> <span class="n">h1</span><span class="o">*</span><span class="n">h4</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">h3</span><span class="o">&gt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">goto </span><span class="mi">100</span>
+
+    <span class="c">! line search with an l1-testfunction</span>
+
+    <span class="n">line</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">alpha</span> <span class="o">=</span> <span class="n">alphamax</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">iexact</span><span class="o">==</span><span class="mi">1</span> <span class="p">)</span> <span class="k">goto </span><span class="mi">400</span>
+
+    <span class="c">! inexact linesearch</span>
+
+<span class="mi">300</span> <span class="n">line</span> <span class="o">=</span> <span class="n">line</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">h3</span> <span class="o">=</span> <span class="n">alpha</span><span class="o">*</span><span class="n">h3</span>
+    <span class="k">call </span><span class="n">dscal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">one</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">call </span><span class="n">enforce_bounds</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">)</span>  <span class="c">! ensure that x doesn&#39;t violate bounds</span>
+
+    <span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">return</span>
+
+    <span class="c">! exact linesearch</span>
+
+<span class="mi">400</span> <span class="k">if</span> <span class="p">(</span> <span class="n">line</span><span class="o">/=</span><span class="mi">3</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">        </span><span class="n">alpha</span> <span class="o">=</span> <span class="n">linmin</span><span class="p">(</span><span class="n">line</span><span class="p">,</span><span class="n">alphamin</span><span class="p">,</span><span class="n">alphamax</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">tol</span><span class="p">,</span> <span class="p">&amp;</span>
+        <span class="n">ldat</span><span class="p">%</span><span class="n">a</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">b</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">d</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">e</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">p</span><span class="p">,</span>   <span class="n">ldat</span><span class="p">%</span><span class="n">q</span><span class="p">,</span>   <span class="p">&amp;</span>
+        <span class="n">ldat</span><span class="p">%</span><span class="n">r</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">u</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">v</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">w</span><span class="p">,</span> <span class="n">ldat</span><span class="p">%</span><span class="n">x</span><span class="p">,</span>   <span class="n">ldat</span><span class="p">%</span><span class="n">m</span><span class="p">,</span>   <span class="p">&amp;</span>
+        <span class="n">ldat</span><span class="p">%</span><span class="n">fu</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">fv</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">fw</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">fx</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">tol1</span><span class="p">,</span><span class="n">ldat</span><span class="p">%</span><span class="n">tol2</span> <span class="p">)</span>
+        <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">return</span>
+<span class="k">    end if</span>
+<span class="k">    call </span><span class="n">dscal</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">alpha</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c">! check convergence</span>
+
+<span class="mi">500</span> <span class="n">h3</span> <span class="o">=</span> <span class="n">zero</span>
+    <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">m</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">j</span><span class="o">&lt;=</span><span class="n">meq</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">            </span><span class="n">h1</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+        <span class="k">else</span>
+<span class="k">            </span><span class="n">h1</span> <span class="o">=</span> <span class="n">zero</span>
+        <span class="k">end if</span>
+<span class="k">        </span><span class="n">h3</span> <span class="o">=</span> <span class="n">h3</span> <span class="o">+</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="n">c</span><span class="p">(</span><span class="n">j</span><span class="p">),</span><span class="n">h1</span><span class="p">)</span>
+    <span class="k">end do</span>
+
+<span class="k">    if</span> <span class="p">(</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">f</span><span class="o">-</span><span class="n">f0</span><span class="p">)</span><span class="o">&lt;</span><span class="n">acc</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">&lt;</span><span class="n">acc</span><span class="p">)</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">h3</span><span class="o">&lt;</span><span class="n">acc</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">        </span><span class="n">mode</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">else</span>
+<span class="k">        </span><span class="n">mode</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">end if</span>
+
+<span class="k">    end subroutine </span><span class="n">slsqpb</span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    
+    </div>
+  </div>
+
+  <section class="visible-xs visible-sm hidden-md">
+    <hr>
+    
+
+<div class="panel panel-default">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs-1">All Procedures</a></h3></div>
+  <div id="allprocs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
+      
+      <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
+      
+      <a class="list-group-item" href="../proc/ddot.html">ddot</a>
+      
+      <a class="list-group-item" href="../proc/destroy_linmin_data.html">destroy_linmin_data</a>
+      
+      <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
+      
+      <a class="list-group-item" href="../proc/destroy_slsqpb_data.html">destroy_slsqpb_data</a>
+      
+      <a class="list-group-item" href="../proc/diff.html">diff</a>
+      
+      <a class="list-group-item" href="../proc/dnrm2.html">dnrm2</a>
+      
+      <a class="list-group-item" href="../proc/dscal.html">dscal</a>
+      
+      <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
+      
+      <a class="list-group-item" href="../proc/g1.html">g1</a>
+      
+      <a class="list-group-item" href="../proc/h12.html">h12</a>
+      
+      <a class="list-group-item" href="../proc/hfti.html">hfti</a>
+      
+      <a class="list-group-item" href="../proc/initialize_slsqp.html">initialize_slsqp</a>
+      
+      <a class="list-group-item" href="../proc/ldl.html">ldl</a>
+      
+      <a class="list-group-item" href="../proc/ldp.html">ldp</a>
+      
+      <a class="list-group-item" href="../proc/linmin.html">linmin</a>
+      
+      <a class="list-group-item" href="../proc/lsei.html">lsei</a>
+      
+      <a class="list-group-item" href="../proc/lsi.html">lsi</a>
+      
+      <a class="list-group-item" href="../proc/lsq.html">lsq</a>
+      
+      <a class="list-group-item" href="../proc/mode_to_status_message.html">mode_to_status_message</a>
+      
+      <a class="list-group-item" href="../proc/nnls.html">nnls</a>
+      
+      <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
+      
+      <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
+      
+      <a class="list-group-item" href="../proc/report_message.html">report_message</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
+      
+      <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
+      
+      <a class="list-group-item" href="../proc/slsqp_wrapper.html">slsqp_wrapper</a>
+      
+      <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
+      
+      <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
+      
+      <a class="list-group-item" href="../proc/test_func.html">test_func</a>
+      
+      <a class="list-group-item" href="../proc/test_grad.html">test_grad</a>
+      
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2018 </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> slsqp was developed by Jacob Williams</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
+        'HTML-CSS': { 
+           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
+        }
+      });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </body>
+</html>
