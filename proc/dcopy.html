@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 2.1% of total for procedures.">35 statements</a>
+	  title=" 2.0% of total for procedures.">35 statements</a>
      </li> 
      
      
@@ -249,9 +249,13 @@
       
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
       
@@ -432,16 +436,29 @@ public subroutine dcopy(n, dx, incx, dy, incy)
 <path fill="none" stroke="#000000" d="M262.403,-101.999C270.481,-100.163 279.507,-98.1121 288.105,-96.158"/>
 <polygon fill="#000000" stroke="#000000" points="288.943,-99.5568 297.919,-93.9275 287.392,-92.7308 288.943,-99.5568"/>
 </g>
+<!-- proc~ldp -->
+<g id="proc~~dcopy~~CalledByGraph_node3" class="node"><title>proc~ldp</title>
+<g id="a_proc~~dcopy~~CalledByGraph_node3"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
+<polygon fill="#d9534f" stroke="#d9534f" points="622,-24 568,-24 568,-0 622,-0 622,-24"/>
+<text text-anchor="middle" x="595" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp&#45;&gt;proc~dcopy -->
+<g id="proc~~dcopy~~CalledByGraph_edge8" class="edge"><title>proc~ldp&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M614.234,-24.2248C626.705,-32.5866 643.442,-43.8074 657.396,-53.1629"/>
+<polygon fill="#000000" stroke="#000000" points="655.836,-56.331 666.091,-58.9927 659.734,-50.5168 655.836,-56.331"/>
+</g>
 <!-- proc~lsei -->
-<g id="proc~~dcopy~~CalledByGraph_node3" class="node"><title>proc~lsei</title>
-<g id="a_proc~~dcopy~~CalledByGraph_node3"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
+<g id="proc~~dcopy~~CalledByGraph_node4" class="node"><title>proc~lsei</title>
+<g id="a_proc~~dcopy~~CalledByGraph_node4"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
 <polygon fill="#d9534f" stroke="#d9534f" points="442,-62 388,-62 388,-38 442,-38 442,-62"/>
 <text text-anchor="middle" x="415" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
 </a>
 </g>
 </g>
 <!-- proc~lsei&#45;&gt;proc~dcopy -->
-<g id="proc~~dcopy~~CalledByGraph_edge8" class="edge"><title>proc~lsei&#45;&gt;proc~dcopy</title>
+<g id="proc~~dcopy~~CalledByGraph_edge9" class="edge"><title>proc~lsei&#45;&gt;proc~dcopy</title>
 <path fill="none" stroke="#000000" d="M442.185,-52.0518C490.318,-55.8234 592.935,-63.8643 647.736,-68.1584"/>
 <polygon fill="#000000" stroke="#000000" points="647.466,-71.6479 657.709,-68.9399 648.013,-64.6693 647.466,-71.6479"/>
 </g>
@@ -454,22 +471,9 @@ public subroutine dcopy(n, dx, incx, dy, incy)
 </g>
 </g>
 <!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="proc~~dcopy~~CalledByGraph_edge4" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
+<g id="proc~~dcopy~~CalledByGraph_edge3" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
 <path fill="none" stroke="#000000" d="M442.403,-38.5987C450.657,-35.0346 459.9,-31.0434 468.665,-27.2584"/>
 <polygon fill="#000000" stroke="#000000" points="470.126,-30.4399 477.919,-23.2623 467.351,-24.0135 470.126,-30.4399"/>
-</g>
-<!-- proc~ldp -->
-<g id="proc~~dcopy~~CalledByGraph_node4" class="node"><title>proc~ldp</title>
-<g id="a_proc~~dcopy~~CalledByGraph_node4"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
-<polygon fill="#d9534f" stroke="#d9534f" points="622,-24 568,-24 568,-0 622,-0 622,-24"/>
-<text text-anchor="middle" x="595" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
-</a>
-</g>
-</g>
-<!-- proc~ldp&#45;&gt;proc~dcopy -->
-<g id="proc~~dcopy~~CalledByGraph_edge9" class="edge"><title>proc~ldp&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M614.234,-24.2248C626.705,-32.5866 643.442,-43.8074 657.396,-53.1629"/>
-<polygon fill="#000000" stroke="#000000" points="655.836,-56.331 666.091,-58.9927 659.734,-50.5168 655.836,-56.331"/>
 </g>
 <!-- proc~lsq&#45;&gt;proc~dcopy -->
 <g id="proc~~dcopy~~CalledByGraph_edge10" class="edge"><title>proc~lsq&#45;&gt;proc~dcopy</title>
@@ -477,7 +481,7 @@ public subroutine dcopy(n, dx, incx, dy, incy)
 <polygon fill="#000000" stroke="#000000" points="648.089,-77.6521 657.77,-73.3486 647.518,-70.6754 648.089,-77.6521"/>
 </g>
 <!-- proc~lsq&#45;&gt;proc~lsei -->
-<g id="proc~~dcopy~~CalledByGraph_edge3" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
+<g id="proc~~dcopy~~CalledByGraph_edge5" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
 <path fill="none" stroke="#000000" d="M352.403,-76.5987C360.657,-73.0346 369.9,-69.0434 378.665,-65.2584"/>
 <polygon fill="#000000" stroke="#000000" points="380.126,-68.4399 387.919,-61.2623 377.351,-62.0135 380.126,-68.4399"/>
 </g>
@@ -508,7 +512,7 @@ public subroutine dcopy(n, dx, incx, dy, incy)
 <polygon fill="#000000" stroke="#000000" points="107.894,-111.5 117.894,-108 107.894,-104.5 107.894,-111.5"/>
 </g>
 <!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="proc~~dcopy~~CalledByGraph_edge5" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<g id="proc~~dcopy~~CalledByGraph_edge4" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
 <path fill="none" stroke="#000000" d="M532.403,-12C540.393,-12 549.311,-12 557.824,-12"/>
 <polygon fill="#000000" stroke="#000000" points="557.919,-15.5001 567.919,-12 557.919,-8.5001 557.919,-15.5001"/>
 </g>
@@ -760,9 +764,13 @@ public subroutine dcopy(n, dx, incx, dy, incy)
       
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
       

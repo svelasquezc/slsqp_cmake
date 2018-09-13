@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 2.2% of total for procedures.">36 statements</a>
+	  title=" 2.1% of total for procedures.">36 statements</a>
      </li> 
      
      
@@ -249,9 +249,13 @@
       
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
       
@@ -454,34 +458,16 @@ public function ddot(n, dx, incx, dy, incy)
 <path fill="none" stroke="#000000" d="M609.75,-24.1875C623.957,-36.7804 646.32,-56.6021 662.794,-71.2038"/>
 <polygon fill="#000000" stroke="#000000" points="660.541,-73.8842 670.347,-77.8981 665.185,-68.6458 660.541,-73.8842"/>
 </g>
-<!-- proc~lsei -->
-<g id="proc~~ddot~~CalledByGraph_node4" class="node"><title>proc~lsei</title>
-<g id="a_proc~~ddot~~CalledByGraph_node4"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
-<polygon fill="#d9534f" stroke="#d9534f" points="442,-100 388,-100 388,-76 442,-76 442,-100"/>
-<text text-anchor="middle" x="415" y="-85.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
-</a>
-</g>
-</g>
-<!-- proc~lsei&#45;&gt;proc~ddot -->
-<g id="proc~~ddot~~CalledByGraph_edge9" class="edge"><title>proc~lsei&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M442.185,-88.1954C490.218,-88.5539 592.508,-89.3172 647.394,-89.7268"/>
-<polygon fill="#000000" stroke="#000000" points="647.683,-93.229 657.709,-89.8038 647.735,-86.2292 647.683,-93.229"/>
-</g>
 <!-- proc~lsi -->
-<g id="proc~~ddot~~CalledByGraph_node5" class="node"><title>proc~lsi</title>
-<g id="a_proc~~ddot~~CalledByGraph_node5"><a xlink:href="../proc/lsi.html" xlink:title="lsi">
+<g id="proc~~ddot~~CalledByGraph_node4" class="node"><title>proc~lsi</title>
+<g id="a_proc~~ddot~~CalledByGraph_node4"><a xlink:href="../proc/lsi.html" xlink:title="lsi">
 <polygon fill="#d9534f" stroke="#d9534f" points="532,-62 478,-62 478,-38 532,-38 532,-62"/>
 <text text-anchor="middle" x="505" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
 </a>
 </g>
 </g>
-<!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="proc~~ddot~~CalledByGraph_edge5" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
-<path fill="none" stroke="#000000" d="M442.403,-76.5987C450.657,-73.0346 459.9,-69.0434 468.665,-65.2584"/>
-<polygon fill="#000000" stroke="#000000" points="470.126,-68.4399 477.919,-61.2623 467.351,-62.0135 470.126,-68.4399"/>
-</g>
 <!-- proc~lsi&#45;&gt;proc~ddot -->
-<g id="proc~~ddot~~CalledByGraph_edge10" class="edge"><title>proc~lsi&#45;&gt;proc~ddot</title>
+<g id="proc~~ddot~~CalledByGraph_edge9" class="edge"><title>proc~lsi&#45;&gt;proc~ddot</title>
 <path fill="none" stroke="#000000" d="M532.263,-55.874C555.776,-61.1359 591.193,-69.0693 622,-76 630.343,-77.8769 639.316,-79.9003 647.773,-81.8095"/>
 <polygon fill="#000000" stroke="#000000" points="647.231,-85.2752 657.756,-84.0643 648.773,-78.4472 647.231,-85.2752"/>
 </g>
@@ -490,13 +476,31 @@ public function ddot(n, dx, incx, dy, incy)
 <path fill="none" stroke="#000000" d="M532.403,-38.5987C540.657,-35.0346 549.9,-31.0434 558.665,-27.2584"/>
 <polygon fill="#000000" stroke="#000000" points="560.126,-30.4399 567.919,-23.2623 557.351,-24.0135 560.126,-30.4399"/>
 </g>
+<!-- proc~lsei -->
+<g id="proc~~ddot~~CalledByGraph_node5" class="node"><title>proc~lsei</title>
+<g id="a_proc~~ddot~~CalledByGraph_node5"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
+<polygon fill="#d9534f" stroke="#d9534f" points="442,-100 388,-100 388,-76 442,-76 442,-100"/>
+<text text-anchor="middle" x="415" y="-85.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
+</a>
+</g>
+</g>
+<!-- proc~lsei&#45;&gt;proc~ddot -->
+<g id="proc~~ddot~~CalledByGraph_edge10" class="edge"><title>proc~lsei&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M442.185,-88.1954C490.218,-88.5539 592.508,-89.3172 647.394,-89.7268"/>
+<polygon fill="#000000" stroke="#000000" points="647.683,-93.229 657.709,-89.8038 647.735,-86.2292 647.683,-93.229"/>
+</g>
+<!-- proc~lsei&#45;&gt;proc~lsi -->
+<g id="proc~~ddot~~CalledByGraph_edge4" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
+<path fill="none" stroke="#000000" d="M442.403,-76.5987C450.657,-73.0346 459.9,-69.0434 468.665,-65.2584"/>
+<polygon fill="#000000" stroke="#000000" points="470.126,-68.4399 477.919,-61.2623 467.351,-62.0135 470.126,-68.4399"/>
+</g>
 <!-- proc~lsq&#45;&gt;proc~ddot -->
 <g id="proc~~ddot~~CalledByGraph_edge11" class="edge"><title>proc~lsq&#45;&gt;proc~ddot</title>
 <path fill="none" stroke="#000000" d="M352.277,-125.35C404.121,-123.781 523.125,-118.755 622,-104 630.458,-102.738 639.476,-100.957 647.94,-99.0872"/>
 <polygon fill="#000000" stroke="#000000" points="648.956,-102.445 657.916,-96.7911 647.386,-95.6235 648.956,-102.445"/>
 </g>
 <!-- proc~lsq&#45;&gt;proc~lsei -->
-<g id="proc~~ddot~~CalledByGraph_edge4" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
+<g id="proc~~ddot~~CalledByGraph_edge5" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
 <path fill="none" stroke="#000000" d="M352.403,-114.599C360.657,-111.035 369.9,-107.043 378.665,-103.258"/>
 <polygon fill="#000000" stroke="#000000" points="380.126,-106.44 387.919,-99.2623 377.351,-100.013 380.126,-106.44"/>
 </g>
@@ -776,9 +780,13 @@ public function ddot(n, dx, incx, dy, incy)
       
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
       

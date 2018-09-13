@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 2.3% of total for procedures.">39 statements</a>
+	  title=" 2.5% of total for procedures.">43 statements</a>
      </li> 
      
      
@@ -249,9 +249,13 @@
       
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
       
@@ -509,6 +513,10 @@ private pure function mode_to_status_message(imode) result(message)
         <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Function is not associated&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="o">-</span><span class="mi">103</span><span class="p">)</span>
         <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Gradient function is not associated&#39;</span>
+    <span class="k">case</span><span class="p">(</span><span class="o">-</span><span class="mi">104</span><span class="p">)</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Invalid gradient mode&#39;</span>
+    <span class="k">case</span><span class="p">(</span><span class="o">-</span><span class="mi">105</span><span class="p">)</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Invalid perturbation step size for finite difference gradients&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
         <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;User-triggered stop of slsqp&#39;</span>
     <span class="k">case</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
@@ -600,9 +608,13 @@ private pure function mode_to_status_message(imode) result(message)
       
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
       

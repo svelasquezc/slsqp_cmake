@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 3.7% of total for procedures.">61 statements</a>
+	  title=" 3.5% of total for procedures.">61 statements</a>
      </li> 
      
      
@@ -249,9 +249,13 @@
       
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
       
@@ -510,117 +514,117 @@ private subroutine ldp(g, mg, m, n, h, x, xnorm, w, index, mode)
 <polygon fill="white" stroke="none" points="-4,4 -4,-255 238,-255 238,4 -4,4"/>
 <!-- proc~ldp -->
 <g id="proc~~ldp~~CallsGraph_node1" class="node"><title>proc~ldp</title>
-<polygon fill="none" stroke="black" points="54,-149 0,-149 0,-125 54,-125 54,-149"/>
-<text text-anchor="middle" x="27" y="-134.6" font-family="Helvetica,sans-Serif" font-size="10.50">ldp</text>
-</g>
-<!-- proc~daxpy -->
-<g id="proc~~ldp~~CallsGraph_node2" class="node"><title>proc~daxpy</title>
-<g id="a_proc~~ldp~~CallsGraph_node2"><a xlink:href="../proc/daxpy.html" xlink:title="daxpy">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-251 90,-251 90,-227 144,-227 144,-251"/>
-<text text-anchor="middle" x="117" y="-236.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
-</a>
-</g>
-</g>
-<!-- proc~ldp&#45;&gt;proc~daxpy -->
-<g id="proc~~ldp~~CallsGraph_edge4" class="edge"><title>proc~ldp&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M36.0079,-149.246C47.1018,-165.762 68.2504,-195.675 90,-218 90.6554,-218.673 91.3319,-219.344 92.0242,-220.012"/>
-<polygon fill="#000000" stroke="#000000" points="90.0008,-222.896 99.8047,-226.913 94.6456,-217.659 90.0008,-222.896"/>
-</g>
-<!-- proc~dcopy -->
-<g id="proc~~ldp~~CallsGraph_node3" class="node"><title>proc~dcopy</title>
-<g id="a_proc~~ldp~~CallsGraph_node3"><a xlink:href="../proc/dcopy.html" xlink:title="dcopy">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-209 90,-209 90,-185 144,-185 144,-209"/>
-<text text-anchor="middle" x="117" y="-194.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
-</a>
-</g>
-</g>
-<!-- proc~ldp&#45;&gt;proc~dcopy -->
-<g id="proc~~ldp~~CallsGraph_edge5" class="edge"><title>proc~ldp&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M45.8081,-149.142C58.4516,-157.762 75.6317,-169.476 89.8302,-179.157"/>
-<polygon fill="#000000" stroke="#000000" points="87.9844,-182.135 98.2184,-184.876 91.9278,-176.351 87.9844,-182.135"/>
-</g>
-<!-- proc~diff -->
-<g id="proc~~ldp~~CallsGraph_node4" class="node"><title>proc~diff</title>
-<g id="a_proc~~ldp~~CallsGraph_node4"><a xlink:href="../proc/diff.html" xlink:title="diff">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="234,-138 180,-138 180,-114 234,-114 234,-138"/>
-<text text-anchor="middle" x="207" y="-123.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
-</a>
-</g>
-</g>
-<!-- proc~ldp&#45;&gt;proc~diff -->
-<g id="proc~~ldp~~CallsGraph_edge6" class="edge"><title>proc~ldp&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M54.3278,-138.784C77.8835,-140.009 113.327,-140.941 144,-138 152.457,-137.189 161.475,-135.77 169.94,-134.184"/>
-<polygon fill="#000000" stroke="#000000" points="170.792,-137.583 179.915,-132.198 169.424,-130.718 170.792,-137.583"/>
-</g>
-<!-- proc~ddot -->
-<g id="proc~~ldp~~CallsGraph_node5" class="node"><title>proc~ddot</title>
-<g id="a_proc~~ldp~~CallsGraph_node5"><a xlink:href="../proc/ddot.html" xlink:title="ddot">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-129 90,-129 90,-105 144,-105 144,-129"/>
-<text text-anchor="middle" x="117" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
-</a>
-</g>
-</g>
-<!-- proc~ldp&#45;&gt;proc~ddot -->
-<g id="proc~~ldp~~CallsGraph_edge7" class="edge"><title>proc~ldp&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M54.4029,-130.999C62.481,-129.163 71.5067,-127.112 80.1046,-125.158"/>
-<polygon fill="#000000" stroke="#000000" points="80.9434,-128.557 89.919,-122.928 79.392,-121.731 80.9434,-128.557"/>
-</g>
-<!-- proc~dnrm2 -->
-<g id="proc~~ldp~~CallsGraph_node6" class="node"><title>proc~dnrm2</title>
-<g id="a_proc~~ldp~~CallsGraph_node6"><a xlink:href="../proc/dnrm2.html" xlink:title="dnrm2">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-87 90,-87 90,-63 144,-63 144,-87"/>
-<text text-anchor="middle" x="117" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
-</a>
-</g>
-</g>
-<!-- proc~ldp&#45;&gt;proc~dnrm2 -->
-<g id="proc~~ldp~~CallsGraph_edge8" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M45.386,-124.751C58.2449,-115.691 75.9616,-103.209 90.4318,-93.014"/>
-<polygon fill="#000000" stroke="#000000" points="92.7906,-95.6336 98.9496,-87.0128 88.7589,-89.9112 92.7906,-95.6336"/>
+<polygon fill="none" stroke="black" points="54,-125 0,-125 0,-101 54,-101 54,-125"/>
+<text text-anchor="middle" x="27" y="-110.6" font-family="Helvetica,sans-Serif" font-size="10.50">ldp</text>
 </g>
 <!-- proc~nnls -->
-<g id="proc~~ldp~~CallsGraph_node7" class="node"><title>proc~nnls</title>
-<g id="a_proc~~ldp~~CallsGraph_node7"><a xlink:href="../proc/nnls.html" xlink:title="nnls">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-45 90,-45 90,-21 144,-21 144,-45"/>
-<text text-anchor="middle" x="117" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
+<g id="proc~~ldp~~CallsGraph_node2" class="node"><title>proc~nnls</title>
+<g id="a_proc~~ldp~~CallsGraph_node2"><a xlink:href="../proc/nnls.html" xlink:title="nnls">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-230 90,-230 90,-206 144,-206 144,-230"/>
+<text text-anchor="middle" x="117" y="-215.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
 </a>
 </g>
 </g>
 <!-- proc~ldp&#45;&gt;proc~nnls -->
-<g id="proc~~ldp~~CallsGraph_edge9" class="edge"><title>proc~ldp&#45;&gt;proc~nnls</title>
-<path fill="none" stroke="#000000" d="M35.7604,-124.718C46.7332,-107.831 67.9189,-76.933 90,-54 90.6515,-53.3234 91.3245,-52.6484 92.0138,-51.9775"/>
-<polygon fill="#000000" stroke="#000000" points="94.6392,-54.326 99.7772,-45.0604 89.9826,-49.0996 94.6392,-54.326"/>
+<g id="proc~~ldp~~CallsGraph_edge4" class="edge"><title>proc~ldp&#45;&gt;proc~nnls</title>
+<path fill="none" stroke="#000000" d="M35.546,-125.152C46.4296,-142.188 67.6887,-173.695 90,-197 90.6495,-197.678 91.3209,-198.355 92.0087,-199.027"/>
+<polygon fill="#000000" stroke="#000000" points="89.9736,-201.902 99.7638,-205.953 94.6361,-196.681 89.9736,-201.902"/>
+</g>
+<!-- proc~daxpy -->
+<g id="proc~~ldp~~CallsGraph_node3" class="node"><title>proc~daxpy</title>
+<g id="a_proc~~ldp~~CallsGraph_node3"><a xlink:href="../proc/daxpy.html" xlink:title="daxpy">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-188 90,-188 90,-164 144,-164 144,-188"/>
+<text text-anchor="middle" x="117" y="-173.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp&#45;&gt;proc~daxpy -->
+<g id="proc~~ldp~~CallsGraph_edge5" class="edge"><title>proc~ldp&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M44.9673,-125.147C57.9935,-134.473 76.1808,-147.493 90.8908,-158.024"/>
+<polygon fill="#000000" stroke="#000000" points="88.9163,-160.915 99.0848,-163.89 92.9911,-155.223 88.9163,-160.915"/>
+</g>
+<!-- proc~dnrm2 -->
+<g id="proc~~ldp~~CallsGraph_node4" class="node"><title>proc~dnrm2</title>
+<g id="a_proc~~ldp~~CallsGraph_node4"><a xlink:href="../proc/dnrm2.html" xlink:title="dnrm2">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-146 90,-146 90,-122 144,-122 144,-146"/>
+<text text-anchor="middle" x="117" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp&#45;&gt;proc~dnrm2 -->
+<g id="proc~~ldp~~CallsGraph_edge6" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M54.4029,-119.301C62.481,-121.228 71.5067,-123.382 80.1046,-125.434"/>
+<polygon fill="#000000" stroke="#000000" points="79.3797,-128.859 89.919,-127.776 81.0046,-122.05 79.3797,-128.859"/>
+</g>
+<!-- proc~dcopy -->
+<g id="proc~~ldp~~CallsGraph_node5" class="node"><title>proc~dcopy</title>
+<g id="a_proc~~ldp~~CallsGraph_node5"><a xlink:href="../proc/dcopy.html" xlink:title="dcopy">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-104 90,-104 90,-80 144,-80 144,-104"/>
+<text text-anchor="middle" x="117" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp&#45;&gt;proc~dcopy -->
+<g id="proc~~ldp~~CallsGraph_edge7" class="edge"><title>proc~ldp&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M54.4029,-106.699C62.481,-104.772 71.5067,-102.618 80.1046,-100.566"/>
+<polygon fill="#000000" stroke="#000000" points="81.0046,-103.95 89.919,-98.2239 79.3797,-97.1407 81.0046,-103.95"/>
+</g>
+<!-- proc~diff -->
+<g id="proc~~ldp~~CallsGraph_node6" class="node"><title>proc~diff</title>
+<g id="a_proc~~ldp~~CallsGraph_node6"><a xlink:href="../proc/diff.html" xlink:title="diff">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="234,-126 180,-126 180,-102 234,-102 234,-126"/>
+<text text-anchor="middle" x="207" y="-111.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp&#45;&gt;proc~diff -->
+<g id="proc~~ldp~~CallsGraph_edge8" class="edge"><title>proc~ldp&#45;&gt;proc~diff</title>
+<path fill="none" stroke="#000000" d="M41.0294,-100.707C52.7925,-90.5164 71.1075,-76.7966 90,-71 112.944,-63.9602 121.095,-63.8344 144,-71 159.342,-75.7996 174.222,-85.8788 185.558,-95.073"/>
+<polygon fill="#000000" stroke="#000000" points="183.604,-98.006 193.485,-101.829 188.145,-92.6786 183.604,-98.006"/>
+</g>
+<!-- proc~ddot -->
+<g id="proc~~ldp~~CallsGraph_node7" class="node"><title>proc~ddot</title>
+<g id="a_proc~~ldp~~CallsGraph_node7"><a xlink:href="../proc/ddot.html" xlink:title="ddot">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-24 90,-24 90,-0 144,-0 144,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp&#45;&gt;proc~ddot -->
+<g id="proc~~ldp~~CallsGraph_edge9" class="edge"><title>proc~ldp&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M37.5376,-100.754C49.4283,-85.6549 70.5615,-59.3704 90,-38 91.9732,-35.8307 94.0754,-33.6027 96.1969,-31.407"/>
+<polygon fill="#000000" stroke="#000000" points="98.7822,-33.7702 103.324,-24.1981 93.8043,-28.8488 98.7822,-33.7702"/>
 </g>
 <!-- proc~nnls&#45;&gt;proc~diff -->
 <g id="proc~~ldp~~CallsGraph_edge2" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M134.063,-45.2197C137.443,-47.9968 140.916,-51.0121 144,-54 160.934,-70.4089 178.288,-90.9418 190.313,-105.877"/>
-<polygon fill="#000000" stroke="#000000" points="187.769,-108.302 196.733,-113.95 193.248,-103.945 187.769,-108.302"/>
+<path fill="none" stroke="#000000" d="M134.223,-205.94C137.593,-203.153 141.022,-200.093 144,-197 162.803,-177.471 180.958,-152.166 192.709,-134.656"/>
+<polygon fill="#000000" stroke="#000000" points="195.649,-136.555 198.24,-126.282 189.808,-132.698 195.649,-136.555"/>
 </g>
 <!-- proc~h12 -->
 <g id="proc~~ldp~~CallsGraph_node8" class="node"><title>proc~h12</title>
 <g id="a_proc~~ldp~~CallsGraph_node8"><a xlink:href="../proc/h12.html" xlink:title="h12">
-<polygon fill="#d9534f" stroke="#d9534f" points="234,-66 180,-66 180,-42 234,-42 234,-66"/>
-<text text-anchor="middle" x="207" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-251 180,-251 180,-227 234,-227 234,-251"/>
+<text text-anchor="middle" x="207" y="-236.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
 </a>
 </g>
 </g>
 <!-- proc~nnls&#45;&gt;proc~h12 -->
 <g id="proc~~ldp~~CallsGraph_edge1" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M144.403,-39.3007C152.481,-41.2284 161.507,-43.3823 170.105,-45.4341"/>
-<polygon fill="#000000" stroke="#000000" points="169.38,-48.8593 179.919,-47.7761 171.005,-42.0505 169.38,-48.8593"/>
+<path fill="none" stroke="#000000" d="M144.403,-224.301C152.481,-226.228 161.507,-228.382 170.105,-230.434"/>
+<polygon fill="#000000" stroke="#000000" points="169.38,-233.859 179.919,-232.776 171.005,-227.05 169.38,-233.859"/>
 </g>
 <!-- proc~g1 -->
 <g id="proc~~ldp~~CallsGraph_node9" class="node"><title>proc~g1</title>
 <g id="a_proc~~ldp~~CallsGraph_node9"><a xlink:href="../proc/g1.html" xlink:title="g1">
-<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 180,-24 180,-0 234,-0 234,-24"/>
-<text text-anchor="middle" x="207" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-209 180,-209 180,-185 234,-185 234,-209"/>
+<text text-anchor="middle" x="207" y="-194.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
 </a>
 </g>
 </g>
 <!-- proc~nnls&#45;&gt;proc~g1 -->
 <g id="proc~~ldp~~CallsGraph_edge3" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
-<path fill="none" stroke="#000000" d="M144.403,-26.6993C152.481,-24.7716 161.507,-22.6177 170.105,-20.5659"/>
-<polygon fill="#000000" stroke="#000000" points="171.005,-23.9495 179.919,-18.2239 169.38,-17.1407 171.005,-23.9495"/>
+<path fill="none" stroke="#000000" d="M144.403,-211.699C152.481,-209.772 161.507,-207.618 170.105,-205.566"/>
+<polygon fill="#000000" stroke="#000000" points="171.005,-208.95 179.919,-203.224 169.38,-202.141 171.005,-208.95"/>
 </g>
 </g>
 </svg>
@@ -1065,9 +1069,13 @@ private subroutine ldp(g, mg, m, n, h, x, xnorm, w, index, mode)
       
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
       

@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 5.1% of total for procedures.">85 statements</a>
+	  title=" 5.3% of total for procedures.">93 statements</a>
      </li> 
      
      
@@ -249,9 +249,13 @@
       
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
       
@@ -278,7 +282,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report, alphamin, alphamax)
+private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report, alphamin, alphamax, gradient_mode, grad_delta)
     
     
 	 
@@ -329,7 +333,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>n</strong></td><td><p>the number of varibles, \( n \ge 1 \)</p></td>
+  <td><strong>n</strong></td><td><p>the number of variables, \( n \ge 1 \)</p></td>
   
 </tr>
 
@@ -419,7 +423,8 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>g</strong></td><td><p>function to compute gradients</p></td>
+  <td><strong>g</strong></td><td><p>function to compute gradients (must be
+ associated if <code>gradient_mode=0</code>)</p></td>
   
 </tr>
 
@@ -543,6 +548,44 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 </tr>
 
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gradient_mode%7E2"></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>gradient_mode</strong></td><td><p>how the gradients are to be computed:</p>
+<ul>
+<li>0 - use the user-supplied <code>g</code> subroutine. [default]</li>
+<li>1 - approximate by basic backward differences</li>
+<li>2 - approximate by basic forward differences</li>
+<li>3 - approximate by basic central differences</li>
+</ul></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-grad_delta%7E2"></span>real(kind=wp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>grad_delta</strong></td><td><p>perturbation step size (&gt;epsilon) to compute the approximated
+ gradient by finite differences (<code>gradient_mode</code> 1-3).
+ note that this is an absolute step.</p></td>
+  
+</tr>
+
 </tbody>
 </table>
 
@@ -606,17 +649,19 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">initialize_slsqp</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">max_iter</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">,</span><span class="n">status_ok</span><span class="p">,&amp;</span>
-                                <span class="n">linesearch_mode</span><span class="p">,</span><span class="n">iprint</span><span class="p">,</span><span class="n">report</span><span class="p">,</span><span class="n">alphamin</span><span class="p">,</span><span class="n">alphamax</span><span class="p">)</span>
+                                <span class="n">linesearch_mode</span><span class="p">,</span><span class="n">iprint</span><span class="p">,</span><span class="n">report</span><span class="p">,</span><span class="n">alphamin</span><span class="p">,</span><span class="n">alphamax</span><span class="p">,&amp;</span>
+                                <span class="n">gradient_mode</span><span class="p">,</span><span class="n">grad_delta</span><span class="p">)</span>
 
     <span class="k">implicit none</span>
 
 <span class="k">    class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
-    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">n</span>               <span class="c">!! the number of varibles, \( n \ge 1 \)</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">n</span>               <span class="c">!! the number of variables, \( n \ge 1 \)</span>
     <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">m</span>               <span class="c">!! total number of constraints, \( m \ge 0 \)</span>
     <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">meq</span>             <span class="c">!! number of equality constraints, \( m_{eq} \ge 0 \)</span>
     <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                <span class="kd">::</span> <span class="n">max_iter</span>        <span class="c">!! maximum number of iterations</span>
     <span class="k">procedure</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>                   <span class="kd">::</span> <span class="n">f</span>               <span class="c">!! problem function</span>
-    <span class="k">procedure</span><span class="p">(</span><span class="n">grad</span><span class="p">)</span>                   <span class="kd">::</span> <span class="n">g</span>               <span class="c">!! function to compute gradients</span>
+    <span class="k">procedure</span><span class="p">(</span><span class="n">grad</span><span class="p">)</span>                   <span class="kd">::</span> <span class="n">g</span>               <span class="c">!! function to compute gradients (must be</span>
+                                                         <span class="c">!! associated if `gradient_mode=0`)</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">xl</span>              <span class="c">!! lower bounds on `x`</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">xu</span>              <span class="c">!! upper bounds on `x`</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">acc</span>             <span class="c">!! accuracy</span>
@@ -626,6 +671,15 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
     <span class="k">procedure</span><span class="p">(</span><span class="n">iterfunc</span><span class="p">),</span><span class="k">optional</span>      <span class="kd">::</span> <span class="n">report</span>          <span class="c">!! user-defined procedure that will be called once per iteration</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>      <span class="kd">::</span> <span class="n">alphamin</span>        <span class="c">!! minimum alpha for linesearch [default 0.1]</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>      <span class="kd">::</span> <span class="n">alphamax</span>        <span class="c">!! maximum alpha for linesearch [default 1.0]</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>       <span class="kd">::</span> <span class="n">gradient_mode</span>   <span class="c">!! how the gradients are to be computed:</span>
+                                                         <span class="c">!!</span>
+                                                         <span class="c">!! * 0 - use the user-supplied `g` subroutine. [default]</span>
+                                                         <span class="c">!! * 1 - approximate by basic backward differences</span>
+                                                         <span class="c">!! * 2 - approximate by basic forward differences</span>
+                                                         <span class="c">!! * 3 - approximate by basic central differences</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>      <span class="kd">::</span> <span class="n">grad_delta</span>      <span class="c">!! perturbation step size (&gt;epsilon) to compute the approximated</span>
+                                                         <span class="c">!! gradient by finite differences (`gradient_mode` 1-3).</span>
+                                                         <span class="c">!! note that this is an absolute step.</span>
 
     <span class="kt">integer</span> <span class="kd">::</span> <span class="n">n1</span><span class="p">,</span><span class="n">mineq</span><span class="p">,</span><span class="n">i</span>
 
@@ -714,9 +768,13 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
         <span class="n">me</span><span class="p">%</span><span class="n">l_jw</span> <span class="o">=</span> <span class="n">mineq</span>
         <span class="k">allocate</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">jw</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">l_jw</span><span class="p">))</span>
         <span class="n">me</span><span class="p">%</span><span class="n">jw</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="k">end if</span>
-
+        <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">gradient_mode</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">            </span><span class="n">me</span><span class="p">%</span><span class="n">gradient_mode</span> <span class="o">=</span> <span class="n">gradient_mode</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">grad_delta</span><span class="p">))</span> <span class="k">then</span>
+<span class="k">                </span><span class="n">me</span><span class="p">%</span><span class="n">grad_delta</span> <span class="o">=</span> <span class="n">grad_delta</span>
+            <span class="k">end if</span>
+<span class="k">        end if</span>
+<span class="k">    end if</span>
 <span class="k">    end subroutine </span><span class="n">initialize_slsqp</span>
 </pre></div>
 
@@ -784,9 +842,13 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
       
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
       
