@@ -184,7 +184,7 @@
       
       <a class="list-group-item" href="../type/slsqp_solver.html#variable-gradient_mode">gradient_mode</a>
       
-      <a class="list-group-item" href="../type/slsqp_solver.html#variable-grad_delta">grad_delta</a>
+      <a class="list-group-item" href="../type/slsqp_solver.html#variable-gradient_delta">gradient_delta</a>
       
       <a class="list-group-item" href="../type/slsqp_solver.html#variable-alphamin">alphamin</a>
       
@@ -415,7 +415,7 @@
       
       <a class="list-group-item" href="../type/slsqp_solver.html#variable-gradient_mode">gradient_mode</a>
       
-      <a class="list-group-item" href="../type/slsqp_solver.html#variable-grad_delta">grad_delta</a>
+      <a class="list-group-item" href="../type/slsqp_solver.html#variable-gradient_delta">gradient_delta</a>
       
       <a class="list-group-item" href="../type/slsqp_solver.html#variable-alphamin">alphamin</a>
       
@@ -610,11 +610,11 @@
   
 <tr>
   
-  <td><span class="anchor" id="variable-grad_delta"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-gradient_delta"></span>real(kind=wp),</td>
   
   <td>private</td>
   <td></td><td>::</td>
-  <td><strong>grad_delta</strong></td><td> =</td><td>1.0e8_wp</td><td><p>perturbation step size to approximate gradients
+  <td><strong>gradient_delta</strong></td><td> =</td><td>1.0e8_wp</td><td><p>perturbation step size to approximate gradients
  by finite differences (<code>gradient_mode</code> 1-3).</p></td>
   
 </tr>
@@ -877,7 +877,7 @@
          
     
     <h3>
-private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report, alphamin, alphamax, gradient_mode, grad_delta)
+private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report, alphamin, alphamax, gradient_mode, gradient_delta)
     
     
 	 
@@ -1172,9 +1172,10 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td>optional</td>
   
   <td></td><td>::</td>
-  <td><strong>grad_delta</strong></td><td><p>perturbation step size (&gt;epsilon) to compute the approximated
+  <td><strong>gradient_delta</strong></td><td><p>perturbation step size (&gt;epsilon) to compute the approximated
  gradient by finite differences (<code>gradient_mode</code> 1-3).
- note that this is an absolute step.</p></td>
+ note that this is an absolute step that does not respect
+ the <code>xl</code> or <code>xu</code> variable bounds.</p></td>
   
 </tr>
 
@@ -1628,8 +1629,8 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
                                            <span class="c">!! * 1 - approximate by basic backward differences</span>
                                            <span class="c">!! * 2 - approximate by basic forward differences</span>
                                            <span class="c">!! * 3 - approximate by basic central differences</span>
-        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">grad_delta</span>  <span class="o">=</span> <span class="mf">1.0e8_wp</span> <span class="c">!! perturbation step size to approximate gradients</span>
-                                           <span class="c">!! by finite differences (`gradient_mode` 1-3).</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">gradient_delta</span>  <span class="o">=</span> <span class="mf">1.0e8_wp</span> <span class="c">!! perturbation step size to approximate gradients</span>
+                                               <span class="c">!! by finite differences (`gradient_mode` 1-3).</span>
 
         <span class="c">!these two were not in the original code:</span>
         <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">alphamin</span> <span class="o">=</span> <span class="mf">0.1_wp</span>   <span class="c">!! min \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</span>
