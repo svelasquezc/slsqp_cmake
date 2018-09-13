@@ -219,6 +219,8 @@
       
       <a class="list-group-item" href="../proc/dscal.html">dscal</a>
       
+      <a class="list-group-item" href="../proc/dummy_grad.html">dummy_grad</a>
+      
       <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
       
       <a class="list-group-item" href="../proc/g1.html">g1</a>
@@ -424,33 +426,20 @@ public subroutine dcopy(n, dx, incx, dy, incy)
 <polygon fill="#000000" stroke="#000000" points="654.283,-90.6599 661.694,-83.0882 651.179,-84.3858 654.283,-90.6599"/>
 </g>
 <!-- proc~lsq -->
-<g id="proc~~dcopy~~CalledByGraph_node4" class="node"><title>proc~lsq</title>
-<g id="a_proc~~dcopy~~CalledByGraph_node4"><a xlink:href="../proc/lsq.html" xlink:title="lsq">
+<g id="proc~~dcopy~~CalledByGraph_node3" class="node"><title>proc~lsq</title>
+<g id="a_proc~~dcopy~~CalledByGraph_node3"><a xlink:href="../proc/lsq.html" xlink:title="lsq">
 <polygon fill="#d9534f" stroke="#d9534f" points="352,-100 298,-100 298,-76 352,-76 352,-100"/>
 <text text-anchor="middle" x="325" y="-85.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~lsq -->
-<g id="proc~~dcopy~~CalledByGraph_edge5" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
+<g id="proc~~dcopy~~CalledByGraph_edge3" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
 <path fill="none" stroke="#000000" d="M262.403,-101.999C270.481,-100.163 279.507,-98.1121 288.105,-96.158"/>
 <polygon fill="#000000" stroke="#000000" points="288.943,-99.5568 297.919,-93.9275 287.392,-92.7308 288.943,-99.5568"/>
 </g>
-<!-- proc~ldp -->
-<g id="proc~~dcopy~~CalledByGraph_node3" class="node"><title>proc~ldp</title>
-<g id="a_proc~~dcopy~~CalledByGraph_node3"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
-<polygon fill="#d9534f" stroke="#d9534f" points="622,-24 568,-24 568,-0 622,-0 622,-24"/>
-<text text-anchor="middle" x="595" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
-</a>
-</g>
-</g>
-<!-- proc~ldp&#45;&gt;proc~dcopy -->
-<g id="proc~~dcopy~~CalledByGraph_edge8" class="edge"><title>proc~ldp&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M614.234,-24.2248C626.705,-32.5866 643.442,-43.8074 657.396,-53.1629"/>
-<polygon fill="#000000" stroke="#000000" points="655.836,-56.331 666.091,-58.9927 659.734,-50.5168 655.836,-56.331"/>
-</g>
 <!-- proc~lsq&#45;&gt;proc~dcopy -->
-<g id="proc~~dcopy~~CalledByGraph_edge9" class="edge"><title>proc~lsq&#45;&gt;proc~dcopy</title>
+<g id="proc~~dcopy~~CalledByGraph_edge8" class="edge"><title>proc~lsq&#45;&gt;proc~dcopy</title>
 <path fill="none" stroke="#000000" d="M352.151,-87.2908C403.772,-85.8132 522.406,-82.0323 622,-76 630.353,-75.4941 639.33,-74.8363 647.788,-74.1649"/>
 <polygon fill="#000000" stroke="#000000" points="648.089,-77.6521 657.77,-73.3486 647.518,-70.6754 648.089,-77.6521"/>
 </g>
@@ -467,6 +456,19 @@ public subroutine dcopy(n, dx, incx, dy, incy)
 <path fill="none" stroke="#000000" d="M352.403,-76.5987C360.657,-73.0346 369.9,-69.0434 378.665,-65.2584"/>
 <polygon fill="#000000" stroke="#000000" points="380.126,-68.4399 387.919,-61.2623 377.351,-62.0135 380.126,-68.4399"/>
 </g>
+<!-- proc~ldp -->
+<g id="proc~~dcopy~~CalledByGraph_node4" class="node"><title>proc~ldp</title>
+<g id="a_proc~~dcopy~~CalledByGraph_node4"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
+<polygon fill="#d9534f" stroke="#d9534f" points="622,-24 568,-24 568,-0 622,-0 622,-24"/>
+<text text-anchor="middle" x="595" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp&#45;&gt;proc~dcopy -->
+<g id="proc~~dcopy~~CalledByGraph_edge9" class="edge"><title>proc~ldp&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M614.234,-24.2248C626.705,-32.5866 643.442,-43.8074 657.396,-53.1629"/>
+<polygon fill="#000000" stroke="#000000" points="655.836,-56.331 666.091,-58.9927 659.734,-50.5168 655.836,-56.331"/>
+</g>
 <!-- proc~lsei&#45;&gt;proc~dcopy -->
 <g id="proc~~dcopy~~CalledByGraph_edge10" class="edge"><title>proc~lsei&#45;&gt;proc~dcopy</title>
 <path fill="none" stroke="#000000" d="M442.185,-52.0518C490.318,-55.8234 592.935,-63.8643 647.736,-68.1584"/>
@@ -481,7 +483,7 @@ public subroutine dcopy(n, dx, incx, dy, incy)
 </g>
 </g>
 <!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="proc~~dcopy~~CalledByGraph_edge3" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
+<g id="proc~~dcopy~~CalledByGraph_edge4" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
 <path fill="none" stroke="#000000" d="M442.403,-38.5987C450.657,-35.0346 459.9,-31.0434 468.665,-27.2584"/>
 <polygon fill="#000000" stroke="#000000" points="470.126,-30.4399 477.919,-23.2623 467.351,-24.0135 470.126,-30.4399"/>
 </g>
@@ -512,7 +514,7 @@ public subroutine dcopy(n, dx, incx, dy, incy)
 <polygon fill="#000000" stroke="#000000" points="107.894,-111.5 117.894,-108 107.894,-104.5 107.894,-111.5"/>
 </g>
 <!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="proc~~dcopy~~CalledByGraph_edge4" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<g id="proc~~dcopy~~CalledByGraph_edge5" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
 <path fill="none" stroke="#000000" d="M532.403,-12C540.393,-12 549.311,-12 557.824,-12"/>
 <polygon fill="#000000" stroke="#000000" points="557.919,-15.5001 567.919,-12 557.919,-8.5001 557.919,-15.5001"/>
 </g>
@@ -733,6 +735,8 @@ public subroutine dcopy(n, dx, incx, dy, incy)
       <a class="list-group-item" href="../proc/dnrm2.html">dnrm2</a>
       
       <a class="list-group-item" href="../proc/dscal.html">dscal</a>
+      
+      <a class="list-group-item" href="../proc/dummy_grad.html">dummy_grad</a>
       
       <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
       
