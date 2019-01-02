@@ -223,7 +223,11 @@
       
       <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
       
+      <a class="list-group-item" href="../proc/func.html">func</a>
+      
       <a class="list-group-item" href="../proc/g1.html">g1</a>
+      
+      <a class="list-group-item" href="../proc/grad.html">grad</a>
       
       <a class="list-group-item" href="../proc/h12.html">h12</a>
       
@@ -252,6 +256,8 @@
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
+      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
@@ -374,36 +380,36 @@ private pure elemental function diff(u, v) result(d)
 <polygon fill="none" stroke="black" points="802,-64 748,-64 748,-40 802,-40 802,-64"/>
 <text text-anchor="middle" x="775" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50">diff</text>
 </g>
+<!-- proc~nnls -->
+<g id="proc~~diff~~CalledByGraph_node2" class="node"><title>proc~nnls</title>
+<g id="a_proc~~diff~~CalledByGraph_node2"><a xlink:href="../proc/nnls.html" xlink:title="nnls">
+<polygon fill="#d9534f" stroke="#d9534f" points="712,-24 658,-24 658,-0 712,-0 712,-24"/>
+<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
+</a>
+</g>
+</g>
+<!-- proc~nnls&#45;&gt;proc~diff -->
+<g id="proc~~diff~~CalledByGraph_edge9" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
+<path fill="none" stroke="#000000" d="M712.403,-24.0013C720.657,-27.753 729.9,-31.9543 738.665,-35.9385"/>
+<polygon fill="#000000" stroke="#000000" points="737.367,-39.1932 747.919,-40.145 740.264,-32.8206 737.367,-39.1932"/>
+</g>
 <!-- proc~ldp -->
-<g id="proc~~diff~~CalledByGraph_node2" class="node"><title>proc~ldp</title>
-<g id="a_proc~~diff~~CalledByGraph_node2"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
+<g id="proc~~diff~~CalledByGraph_node3" class="node"><title>proc~ldp</title>
+<g id="a_proc~~diff~~CalledByGraph_node3"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
 <polygon fill="#d9534f" stroke="#d9534f" points="622,-60 568,-60 568,-36 622,-36 622,-60"/>
 <text text-anchor="middle" x="595" y="-45.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
 </a>
 </g>
 </g>
 <!-- proc~ldp&#45;&gt;proc~diff -->
-<g id="proc~~diff~~CalledByGraph_edge9" class="edge"><title>proc~ldp&#45;&gt;proc~diff</title>
+<g id="proc~~diff~~CalledByGraph_edge10" class="edge"><title>proc~ldp&#45;&gt;proc~diff</title>
 <path fill="none" stroke="#000000" d="M622.265,-48.5902C652.851,-49.2775 703.551,-50.4169 737.843,-51.1875"/>
 <polygon fill="#000000" stroke="#000000" points="737.842,-54.6882 747.918,-51.4139 737.999,-47.69 737.842,-54.6882"/>
 </g>
-<!-- proc~nnls -->
-<g id="proc~~diff~~CalledByGraph_node3" class="node"><title>proc~nnls</title>
-<g id="a_proc~~diff~~CalledByGraph_node3"><a xlink:href="../proc/nnls.html" xlink:title="nnls">
-<polygon fill="#d9534f" stroke="#d9534f" points="712,-24 658,-24 658,-0 712,-0 712,-24"/>
-<text text-anchor="middle" x="685" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
-</a>
-</g>
-</g>
 <!-- proc~ldp&#45;&gt;proc~nnls -->
-<g id="proc~~diff~~CalledByGraph_edge7" class="edge"><title>proc~ldp&#45;&gt;proc~nnls</title>
+<g id="proc~~diff~~CalledByGraph_edge1" class="edge"><title>proc~ldp&#45;&gt;proc~nnls</title>
 <path fill="none" stroke="#000000" d="M622.403,-37.1988C630.569,-33.8582 639.703,-30.1215 648.385,-26.5699"/>
 <polygon fill="#000000" stroke="#000000" points="649.989,-29.6953 657.919,-22.6695 647.338,-23.2165 649.989,-29.6953"/>
-</g>
-<!-- proc~nnls&#45;&gt;proc~diff -->
-<g id="proc~~diff~~CalledByGraph_edge10" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M712.403,-24.0013C720.657,-27.753 729.9,-31.9543 738.665,-35.9385"/>
-<polygon fill="#000000" stroke="#000000" points="737.367,-39.1932 747.919,-40.145 740.264,-32.8206 737.367,-39.1932"/>
 </g>
 <!-- proc~hfti -->
 <g id="proc~~diff~~CalledByGraph_node4" class="node"><title>proc~hfti</title>
@@ -427,7 +433,7 @@ private pure elemental function diff(u, v) result(d)
 </g>
 </g>
 <!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="proc~~diff~~CalledByGraph_edge6" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<g id="proc~~diff~~CalledByGraph_edge7" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
 <path fill="none" stroke="#000000" d="M532.403,-48C540.393,-48 549.311,-48 557.824,-48"/>
 <polygon fill="#000000" stroke="#000000" points="557.919,-51.5001 567.919,-48 557.919,-44.5001 557.919,-51.5001"/>
 </g>
@@ -445,7 +451,7 @@ private pure elemental function diff(u, v) result(d)
 <polygon fill="#000000" stroke="#000000" points="557.564,-89.0232 567.918,-86.7763 558.423,-82.0761 557.564,-89.0232"/>
 </g>
 <!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="proc~~diff~~CalledByGraph_edge5" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
+<g id="proc~~diff~~CalledByGraph_edge6" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
 <path fill="none" stroke="#000000" d="M442.403,-61.9993C450.481,-60.1634 459.507,-58.1121 468.105,-56.158"/>
 <polygon fill="#000000" stroke="#000000" points="468.943,-59.5568 477.919,-53.9275 467.392,-52.7308 468.943,-59.5568"/>
 </g>
@@ -458,7 +464,7 @@ private pure elemental function diff(u, v) result(d)
 </g>
 </g>
 <!-- proc~lsq&#45;&gt;proc~lsei -->
-<g id="proc~~diff~~CalledByGraph_edge4" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
+<g id="proc~~diff~~CalledByGraph_edge5" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
 <path fill="none" stroke="#000000" d="M352.403,-68C360.393,-68 369.311,-68 377.824,-68"/>
 <polygon fill="#000000" stroke="#000000" points="377.919,-71.5001 387.919,-68 377.919,-64.5001 377.919,-71.5001"/>
 </g>
@@ -471,7 +477,7 @@ private pure elemental function diff(u, v) result(d)
 </g>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~lsq -->
-<g id="proc~~diff~~CalledByGraph_edge3" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
+<g id="proc~~diff~~CalledByGraph_edge4" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
 <path fill="none" stroke="#000000" d="M262.403,-68C270.393,-68 279.311,-68 287.824,-68"/>
 <polygon fill="#000000" stroke="#000000" points="287.919,-71.5001 297.919,-68 287.919,-64.5001 287.919,-71.5001"/>
 </g>
@@ -484,7 +490,7 @@ private pure elemental function diff(u, v) result(d)
 </g>
 </g>
 <!-- proc~slsqp&#45;&gt;proc~slsqpb -->
-<g id="proc~~diff~~CalledByGraph_edge2" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
+<g id="proc~~diff~~CalledByGraph_edge3" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
 <path fill="none" stroke="#000000" d="M172.403,-68C180.393,-68 189.311,-68 197.824,-68"/>
 <polygon fill="#000000" stroke="#000000" points="197.919,-71.5001 207.919,-68 197.919,-64.5001 197.919,-71.5001"/>
 </g>
@@ -497,7 +503,7 @@ private pure elemental function diff(u, v) result(d)
 </g>
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
-<g id="proc~~diff~~CalledByGraph_edge1" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
+<g id="proc~~diff~~CalledByGraph_edge2" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
 <path fill="none" stroke="#000000" d="M82.0203,-68C90.4968,-68 99.3981,-68 107.726,-68"/>
 <polygon fill="#000000" stroke="#000000" points="107.894,-71.5001 117.894,-68 107.894,-64.5001 107.894,-71.5001"/>
 </g>
@@ -684,7 +690,11 @@ private pure elemental function diff(u, v) result(d)
       
       <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
       
+      <a class="list-group-item" href="../proc/func.html">func</a>
+      
       <a class="list-group-item" href="../proc/g1.html">g1</a>
+      
+      <a class="list-group-item" href="../proc/grad.html">grad</a>
       
       <a class="list-group-item" href="../proc/h12.html">h12</a>
       
@@ -713,6 +723,8 @@ private pure elemental function diff(u, v) result(d)
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
+      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
@@ -746,7 +758,7 @@ private pure elemental function diff(u, v) result(d)
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2018 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 

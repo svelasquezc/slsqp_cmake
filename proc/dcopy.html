@@ -223,7 +223,11 @@
       
       <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
       
+      <a class="list-group-item" href="../proc/func.html">func</a>
+      
       <a class="list-group-item" href="../proc/g1.html">g1</a>
+      
+      <a class="list-group-item" href="../proc/grad.html">grad</a>
       
       <a class="list-group-item" href="../proc/h12.html">h12</a>
       
@@ -252,6 +256,8 @@
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
+      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
@@ -412,55 +418,16 @@ public subroutine dcopy(n, dx, incx, dy, incy)
 <polygon fill="none" stroke="black" points="712,-83 658,-83 658,-59 712,-59 712,-83"/>
 <text text-anchor="middle" x="685" y="-68.6" font-family="Helvetica,sans-Serif" font-size="10.50">dcopy</text>
 </g>
-<!-- proc~lsei -->
-<g id="proc~~dcopy~~CalledByGraph_node2" class="node"><title>proc~lsei</title>
-<g id="a_proc~~dcopy~~CalledByGraph_node2"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
-<polygon fill="#d9534f" stroke="#d9534f" points="442,-62 388,-62 388,-38 442,-38 442,-62"/>
-<text text-anchor="middle" x="415" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
-</a>
-</g>
-</g>
-<!-- proc~lsei&#45;&gt;proc~dcopy -->
-<g id="proc~~dcopy~~CalledByGraph_edge7" class="edge"><title>proc~lsei&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M442.185,-52.0518C490.318,-55.8234 592.935,-63.8643 647.736,-68.1584"/>
-<polygon fill="#000000" stroke="#000000" points="647.466,-71.6479 657.709,-68.9399 648.013,-64.6693 647.466,-71.6479"/>
-</g>
-<!-- proc~lsi -->
-<g id="proc~~dcopy~~CalledByGraph_node6" class="node"><title>proc~lsi</title>
-<g id="a_proc~~dcopy~~CalledByGraph_node6"><a xlink:href="../proc/lsi.html" xlink:title="lsi">
-<polygon fill="#d9534f" stroke="#d9534f" points="532,-24 478,-24 478,-0 532,-0 532,-24"/>
-<text text-anchor="middle" x="505" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
-</a>
-</g>
-</g>
-<!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="proc~~dcopy~~CalledByGraph_edge2" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
-<path fill="none" stroke="#000000" d="M442.403,-38.5987C450.657,-35.0346 459.9,-31.0434 468.665,-27.2584"/>
-<polygon fill="#000000" stroke="#000000" points="470.126,-30.4399 477.919,-23.2623 467.351,-24.0135 470.126,-30.4399"/>
-</g>
-<!-- proc~ldp -->
-<g id="proc~~dcopy~~CalledByGraph_node3" class="node"><title>proc~ldp</title>
-<g id="a_proc~~dcopy~~CalledByGraph_node3"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
-<polygon fill="#d9534f" stroke="#d9534f" points="622,-24 568,-24 568,-0 622,-0 622,-24"/>
-<text text-anchor="middle" x="595" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
-</a>
-</g>
-</g>
-<!-- proc~ldp&#45;&gt;proc~dcopy -->
-<g id="proc~~dcopy~~CalledByGraph_edge8" class="edge"><title>proc~ldp&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M614.234,-24.2248C626.705,-32.5866 643.442,-43.8074 657.396,-53.1629"/>
-<polygon fill="#000000" stroke="#000000" points="655.836,-56.331 666.091,-58.9927 659.734,-50.5168 655.836,-56.331"/>
-</g>
 <!-- proc~slsqpb -->
-<g id="proc~~dcopy~~CalledByGraph_node4" class="node"><title>proc~slsqpb</title>
-<g id="a_proc~~dcopy~~CalledByGraph_node4"><a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
+<g id="proc~~dcopy~~CalledByGraph_node2" class="node"><title>proc~slsqpb</title>
+<g id="a_proc~~dcopy~~CalledByGraph_node2"><a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
 <polygon fill="#d9534f" stroke="#d9534f" points="262,-120 208,-120 208,-96 262,-96 262,-120"/>
 <text text-anchor="middle" x="235" y="-105.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~dcopy -->
-<g id="proc~~dcopy~~CalledByGraph_edge9" class="edge"><title>proc~slsqpb&#45;&gt;proc~dcopy</title>
+<g id="proc~~dcopy~~CalledByGraph_edge7" class="edge"><title>proc~slsqpb&#45;&gt;proc~dcopy</title>
 <path fill="none" stroke="#000000" d="M262.136,-112.79C296.744,-118.707 359.735,-128 414,-128 414,-128 414,-128 506,-128 559.388,-128 617.676,-104.455 652.514,-87.6304"/>
 <polygon fill="#000000" stroke="#000000" points="654.283,-90.6599 661.694,-83.0882 651.179,-84.3858 654.283,-90.6599"/>
 </g>
@@ -477,46 +444,85 @@ public subroutine dcopy(n, dx, incx, dy, incy)
 <path fill="none" stroke="#000000" d="M262.403,-101.999C270.481,-100.163 279.507,-98.1121 288.105,-96.158"/>
 <polygon fill="#000000" stroke="#000000" points="288.943,-99.5568 297.919,-93.9275 287.392,-92.7308 288.943,-99.5568"/>
 </g>
+<!-- proc~ldp -->
+<g id="proc~~dcopy~~CalledByGraph_node3" class="node"><title>proc~ldp</title>
+<g id="a_proc~~dcopy~~CalledByGraph_node3"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
+<polygon fill="#d9534f" stroke="#d9534f" points="622,-24 568,-24 568,-0 622,-0 622,-24"/>
+<text text-anchor="middle" x="595" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp&#45;&gt;proc~dcopy -->
+<g id="proc~~dcopy~~CalledByGraph_edge8" class="edge"><title>proc~ldp&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M614.234,-24.2248C626.705,-32.5866 643.442,-43.8074 657.396,-53.1629"/>
+<polygon fill="#000000" stroke="#000000" points="655.836,-56.331 666.091,-58.9927 659.734,-50.5168 655.836,-56.331"/>
+</g>
+<!-- proc~lsei -->
+<g id="proc~~dcopy~~CalledByGraph_node4" class="node"><title>proc~lsei</title>
+<g id="a_proc~~dcopy~~CalledByGraph_node4"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
+<polygon fill="#d9534f" stroke="#d9534f" points="442,-62 388,-62 388,-38 442,-38 442,-62"/>
+<text text-anchor="middle" x="415" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
+</a>
+</g>
+</g>
+<!-- proc~lsei&#45;&gt;proc~dcopy -->
+<g id="proc~~dcopy~~CalledByGraph_edge9" class="edge"><title>proc~lsei&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M442.185,-52.0518C490.318,-55.8234 592.935,-63.8643 647.736,-68.1584"/>
+<polygon fill="#000000" stroke="#000000" points="647.466,-71.6479 657.709,-68.9399 648.013,-64.6693 647.466,-71.6479"/>
+</g>
+<!-- proc~lsi -->
+<g id="proc~~dcopy~~CalledByGraph_node8" class="node"><title>proc~lsi</title>
+<g id="a_proc~~dcopy~~CalledByGraph_node8"><a xlink:href="../proc/lsi.html" xlink:title="lsi">
+<polygon fill="#d9534f" stroke="#d9534f" points="532,-24 478,-24 478,-0 532,-0 532,-24"/>
+<text text-anchor="middle" x="505" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
+</a>
+</g>
+</g>
+<!-- proc~lsei&#45;&gt;proc~lsi -->
+<g id="proc~~dcopy~~CalledByGraph_edge3" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
+<path fill="none" stroke="#000000" d="M442.403,-38.5987C450.657,-35.0346 459.9,-31.0434 468.665,-27.2584"/>
+<polygon fill="#000000" stroke="#000000" points="470.126,-30.4399 477.919,-23.2623 467.351,-24.0135 470.126,-30.4399"/>
+</g>
 <!-- proc~lsq&#45;&gt;proc~dcopy -->
 <g id="proc~~dcopy~~CalledByGraph_edge10" class="edge"><title>proc~lsq&#45;&gt;proc~dcopy</title>
 <path fill="none" stroke="#000000" d="M352.151,-87.2908C403.772,-85.8132 522.406,-82.0323 622,-76 630.353,-75.4941 639.33,-74.8363 647.788,-74.1649"/>
 <polygon fill="#000000" stroke="#000000" points="648.089,-77.6521 657.77,-73.3486 647.518,-70.6754 648.089,-77.6521"/>
 </g>
 <!-- proc~lsq&#45;&gt;proc~lsei -->
-<g id="proc~~dcopy~~CalledByGraph_edge1" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
+<g id="proc~~dcopy~~CalledByGraph_edge5" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
 <path fill="none" stroke="#000000" d="M352.403,-76.5987C360.657,-73.0346 369.9,-69.0434 378.665,-65.2584"/>
 <polygon fill="#000000" stroke="#000000" points="380.126,-68.4399 387.919,-61.2623 377.351,-62.0135 380.126,-68.4399"/>
 </g>
-<!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="proc~~dcopy~~CalledByGraph_edge3" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
-<path fill="none" stroke="#000000" d="M532.403,-12C540.393,-12 549.311,-12 557.824,-12"/>
-<polygon fill="#000000" stroke="#000000" points="557.919,-15.5001 567.919,-12 557.919,-8.5001 557.919,-15.5001"/>
-</g>
 <!-- proc~slsqp -->
-<g id="proc~~dcopy~~CalledByGraph_node7" class="node"><title>proc~slsqp</title>
-<g id="a_proc~~dcopy~~CalledByGraph_node7"><a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
+<g id="proc~~dcopy~~CalledByGraph_node6" class="node"><title>proc~slsqp</title>
+<g id="a_proc~~dcopy~~CalledByGraph_node6"><a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
 <polygon fill="#d9534f" stroke="#d9534f" points="172,-120 118,-120 118,-96 172,-96 172,-120"/>
 <text text-anchor="middle" x="145" y="-105.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqp&#45;&gt;proc~slsqpb -->
-<g id="proc~~dcopy~~CalledByGraph_edge5" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
+<g id="proc~~dcopy~~CalledByGraph_edge2" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
 <path fill="none" stroke="#000000" d="M172.403,-108C180.393,-108 189.311,-108 197.824,-108"/>
 <polygon fill="#000000" stroke="#000000" points="197.919,-111.5 207.919,-108 197.919,-104.5 197.919,-111.5"/>
 </g>
 <!-- proc~slsqp_wrapper -->
-<g id="proc~~dcopy~~CalledByGraph_node8" class="node"><title>proc~slsqp_wrapper</title>
-<g id="a_proc~~dcopy~~CalledByGraph_node8"><a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
+<g id="proc~~dcopy~~CalledByGraph_node7" class="node"><title>proc~slsqp_wrapper</title>
+<g id="a_proc~~dcopy~~CalledByGraph_node7"><a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
 <polygon fill="#d9534f" stroke="#d9534f" points="82,-120 0,-120 0,-96 82,-96 82,-120"/>
 <text text-anchor="middle" x="41" y="-105.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
-<g id="proc~~dcopy~~CalledByGraph_edge4" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
+<g id="proc~~dcopy~~CalledByGraph_edge1" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
 <path fill="none" stroke="#000000" d="M82.0203,-108C90.4968,-108 99.3981,-108 107.726,-108"/>
 <polygon fill="#000000" stroke="#000000" points="107.894,-111.5 117.894,-108 107.894,-104.5 107.894,-111.5"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~ldp -->
+<g id="proc~~dcopy~~CalledByGraph_edge4" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<path fill="none" stroke="#000000" d="M532.403,-12C540.393,-12 549.311,-12 557.824,-12"/>
+<polygon fill="#000000" stroke="#000000" points="557.919,-15.5001 567.919,-12 557.919,-8.5001 557.919,-15.5001"/>
 </g>
 </g>
 </svg>
@@ -740,7 +746,11 @@ public subroutine dcopy(n, dx, incx, dy, incy)
       
       <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
       
+      <a class="list-group-item" href="../proc/func.html">func</a>
+      
       <a class="list-group-item" href="../proc/g1.html">g1</a>
+      
+      <a class="list-group-item" href="../proc/grad.html">grad</a>
       
       <a class="list-group-item" href="../proc/h12.html">h12</a>
       
@@ -769,6 +779,8 @@ public subroutine dcopy(n, dx, incx, dy, incy)
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
+      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
@@ -802,7 +814,7 @@ public subroutine dcopy(n, dx, incx, dy, incy)
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2018 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 

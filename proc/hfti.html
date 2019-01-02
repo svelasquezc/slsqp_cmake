@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 7.0% of total for procedures.">123 statements</a>
+	  title=" 6.9% of total for procedures.">123 statements</a>
      </li> 
      
      
@@ -223,7 +223,11 @@
       
       <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
       
+      <a class="list-group-item" href="../proc/func.html">func</a>
+      
       <a class="list-group-item" href="../proc/g1.html">g1</a>
+      
+      <a class="list-group-item" href="../proc/grad.html">grad</a>
       
       <a class="list-group-item" href="../proc/h12.html">h12</a>
       
@@ -252,6 +256,8 @@
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
+      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
@@ -284,7 +290,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-private subroutine hfti(a, mda, m, n, b, mdb, nb, tau, krank, rnorm, h, g, ip)
+private subroutine hfti(a, mda, m, n, b, mdb, nb, tau, krank, rnorm, h, g)
     
     
 	 
@@ -511,22 +517,6 @@ private subroutine hfti(a, mda, m, n, b, mdb, nb, tau, krank, rnorm, h, g, ip)
   
 </tr>
 
-  
-  
-  
-  
-<tr>
-  
-  <td><span class="anchor" id="variable-ip"></span>integer,</td>
-  <td>intent(inout),</td>
-  <td></td>
-  
-  <td>dimension(n)</td><td>::</td>
-  <td><strong>ip</strong></td><td><p>integer array of working space
- recording permutation indices of column vectors</p></td>
-  
-</tr>
-
 </tbody>
 </table>
 
@@ -551,29 +541,29 @@ private subroutine hfti(a, mda, m, n, b, mdb, nb, tau, krank, rnorm, h, g, ip)
 <polygon fill="none" stroke="black" points="54,-45 0,-45 0,-21 54,-21 54,-45"/>
 <text text-anchor="middle" x="27" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50">hfti</text>
 </g>
-<!-- proc~diff -->
-<g id="proc~~hfti~~CallsGraph_node2" class="node"><title>proc~diff</title>
-<g id="a_proc~~hfti~~CallsGraph_node2"><a xlink:href="../proc/diff.html" xlink:title="diff">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-66 90,-66 90,-42 144,-42 144,-66"/>
-<text text-anchor="middle" x="117" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
-</a>
-</g>
-</g>
-<!-- proc~hfti&#45;&gt;proc~diff -->
-<g id="proc~~hfti~~CallsGraph_edge1" class="edge"><title>proc~hfti&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M54.4029,-39.3007C62.481,-41.2284 71.5067,-43.3823 80.1046,-45.4341"/>
-<polygon fill="#000000" stroke="#000000" points="79.3797,-48.8593 89.919,-47.7761 81.0046,-42.0505 79.3797,-48.8593"/>
-</g>
 <!-- proc~h12 -->
-<g id="proc~~hfti~~CallsGraph_node3" class="node"><title>proc~h12</title>
-<g id="a_proc~~hfti~~CallsGraph_node3"><a xlink:href="../proc/h12.html" xlink:title="h12">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-24 90,-24 90,-0 144,-0 144,-24"/>
-<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
+<g id="proc~~hfti~~CallsGraph_node2" class="node"><title>proc~h12</title>
+<g id="a_proc~~hfti~~CallsGraph_node2"><a xlink:href="../proc/h12.html" xlink:title="h12">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-66 90,-66 90,-42 144,-42 144,-66"/>
+<text text-anchor="middle" x="117" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
 </a>
 </g>
 </g>
 <!-- proc~hfti&#45;&gt;proc~h12 -->
-<g id="proc~~hfti~~CallsGraph_edge2" class="edge"><title>proc~hfti&#45;&gt;proc~h12</title>
+<g id="proc~~hfti~~CallsGraph_edge1" class="edge"><title>proc~hfti&#45;&gt;proc~h12</title>
+<path fill="none" stroke="#000000" d="M54.4029,-39.3007C62.481,-41.2284 71.5067,-43.3823 80.1046,-45.4341"/>
+<polygon fill="#000000" stroke="#000000" points="79.3797,-48.8593 89.919,-47.7761 81.0046,-42.0505 79.3797,-48.8593"/>
+</g>
+<!-- proc~diff -->
+<g id="proc~~hfti~~CallsGraph_node3" class="node"><title>proc~diff</title>
+<g id="a_proc~~hfti~~CallsGraph_node3"><a xlink:href="../proc/diff.html" xlink:title="diff">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-24 90,-24 90,-0 144,-0 144,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
+</a>
+</g>
+</g>
+<!-- proc~hfti&#45;&gt;proc~diff -->
+<g id="proc~~hfti~~CallsGraph_edge2" class="edge"><title>proc~hfti&#45;&gt;proc~diff</title>
 <path fill="none" stroke="#000000" d="M54.4029,-26.6993C62.481,-24.7716 71.5067,-22.6177 80.1046,-20.5659"/>
 <polygon fill="#000000" stroke="#000000" points="81.0046,-23.9495 89.919,-18.2239 79.3797,-17.1407 81.0046,-23.9495"/>
 </g>
@@ -858,7 +848,7 @@ private subroutine hfti(a, mda, m, n, b, mdb, nb, tau, krank, rnorm, h, g, ip)
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">hfti</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">mda</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">mdb</span><span class="p">,</span><span class="n">nb</span><span class="p">,</span><span class="n">tau</span><span class="p">,</span><span class="n">krank</span><span class="p">,</span><span class="n">rnorm</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">ip</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">hfti</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">mda</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">mdb</span><span class="p">,</span><span class="n">nb</span><span class="p">,</span><span class="n">tau</span><span class="p">,</span><span class="n">krank</span><span class="p">,</span><span class="n">rnorm</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">g</span><span class="p">)</span>
 
     <span class="k">implicit none</span>
 
@@ -880,8 +870,6 @@ private subroutine hfti(a, mda, m, n, b, mdb, nb, tau, krank, rnorm, h, g, ip)
                                                       <span class="c">!! defined by the `j-th` column vector of the array `b`.</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>      <span class="kd">::</span> <span class="n">h</span>     <span class="c">!! array of working space</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>      <span class="kd">::</span> <span class="n">g</span>     <span class="c">!! array of working space</span>
-    <span class="kt">integer</span><span class="p">,</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>       <span class="kd">::</span> <span class="n">ip</span>    <span class="c">!! integer array of working space</span>
-                                                      <span class="c">!! recording permutation indices of column vectors</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">mdb</span><span class="p">,</span><span class="n">nb</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">b</span>     <span class="c">!! if `nb = 0` the subroutine will make no reference</span>
                                                       <span class="c">!! to the array `b`. if `nb &gt; 0` the array `b` must</span>
                                                       <span class="c">!! initially contain the `m x nb` matrix `b` of the</span>
@@ -891,6 +879,8 @@ private subroutine hfti(a, mda, m, n, b, mdb, nb, tau, krank, rnorm, h, g, ip)
     <span class="kt">integer</span>  <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">ii</span><span class="p">,</span> <span class="n">ip1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">jb</span><span class="p">,</span> <span class="n">jj</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">kp1</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">ldiag</span><span class="p">,</span> <span class="n">lmax</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">hmax</span><span class="p">,</span> <span class="n">sm</span><span class="p">,</span> <span class="n">tmp</span>
     <span class="kt">logical</span>  <span class="kd">::</span> <span class="n">need_lmax</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ip</span>    <span class="c">!! integer array of working space</span>
+                                  <span class="c">!! recording permutation indices of column vectors</span>
 
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">factor</span> <span class="o">=</span> <span class="mf">0.001_wp</span>
 
@@ -1082,7 +1072,11 @@ private subroutine hfti(a, mda, m, n, b, mdb, nb, tau, krank, rnorm, h, g, ip)
       
       <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
       
+      <a class="list-group-item" href="../proc/func.html">func</a>
+      
       <a class="list-group-item" href="../proc/g1.html">g1</a>
+      
+      <a class="list-group-item" href="../proc/grad.html">grad</a>
       
       <a class="list-group-item" href="../proc/h12.html">h12</a>
       
@@ -1111,6 +1105,8 @@ private subroutine hfti(a, mda, m, n, b, mdb, nb, tau, krank, rnorm, h, g, ip)
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
+      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
@@ -1144,7 +1140,7 @@ private subroutine hfti(a, mda, m, n, b, mdb, nb, tau, krank, rnorm, h, g, ip)
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2018 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 

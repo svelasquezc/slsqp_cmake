@@ -10,7 +10,7 @@
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
 
-    <title>report_message &ndash; slsqp</title>
+    <title>grad &ndash; slsqp</title>
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/pygments.css" rel="stylesheet">
@@ -116,7 +116,7 @@
     
   
   <div class="row">
-    <h1>report_message
+    <h1>grad
       <small>Subroutine</small>
     
     </h1>
@@ -134,20 +134,20 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 2.2% of total for procedures.">40 statements</a>
+	  title=" 1.2% of total for procedures.">22 statements</a>
      </li> 
      
      
-    <li><i class="fa fa-code"></i><a href="../src/slsqp_module.f90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/slsqp_test_71.f90"> Source File</a></li>
      
   </ul>
   <ol class="breadcrumb in-well text-right">
   
-     <li><a href='../sourcefile/slsqp_module.f90.html'>slsqp_module.f90</a></li>
+     <li><a href='../sourcefile/slsqp_test_71.f90.html'>slsqp_test_71.f90</a></li>
   
-     <li><a href='../module/slsqp_module.html'>slsqp_module</a></li>
+     <li><a href='../program/slsqp_test_71.html'>slsqp_test_71</a></li>
   
-     <li class="active">report_message</li>
+     <li class="active">grad</li>
   </ol>
 </div>
 </div>
@@ -188,7 +188,7 @@
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
-    <a class="list-group-item" href="../proc/report_message.html#src">report_message</a>
+    <a class="list-group-item" href="../proc/grad.html#src">grad</a>
   </div>
 </div>
 
@@ -290,7 +290,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-private subroutine report_message(me, str, ival, rval, fatal)
+subroutine grad(me, x, g, a)
     
     
 	 
@@ -300,9 +300,7 @@ private subroutine report_message(me, str, ival, rval, fatal)
 
 
     
-    <p>Report a message from an <a href="../type/slsqp_solver.html">slsqp_solver</a> class. This uses the <code>iprint</code>
-  variable in the class as the unit number for printing. Note: for fatal errors,
-  if no unit is specified, the <code>error_unit</code> is used.</p>
+    <p>gradients for <a href="../proc/func.html">func</a>.</p>
     
 
     <h3>Arguments</h3>
@@ -323,8 +321,8 @@ private subroutine report_message(me, str, ival, rval, fatal)
   
 <tr>
   
-  <td><span class="anchor" id="variable-me%7E8"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
-  <td>intent(in)</td>
+  <td><span class="anchor" id="variable-me%7E17"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
+  <td>intent(inout)</td>
   <td></td>
   
   <td></td><td>::</td>
@@ -338,12 +336,12 @@ private subroutine report_message(me, str, ival, rval, fatal)
   
 <tr>
   
-  <td><span class="anchor" id="variable-str"></span>character(len=*),</td>
-  <td>intent(in)</td>
+  <td><span class="anchor" id="variable-x%7E20"></span>real(kind=wp),</td>
+  <td>intent(in),</td>
   <td></td>
   
-  <td></td><td>::</td>
-  <td><strong>str</strong></td><td><p>the message to report.</p></td>
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>x</strong></td><td><p>optimization variable vector</p></td>
   
 </tr>
 
@@ -353,27 +351,12 @@ private subroutine report_message(me, str, ival, rval, fatal)
   
 <tr>
   
-  <td><span class="anchor" id="variable-ival"></span>integer,</td>
-  <td>intent(in),</td>
-  <td>optional</td>
+  <td><span class="anchor" id="variable-g%7E12"></span>real(kind=wp),</td>
+  <td>intent(out),</td>
+  <td></td>
   
-  <td></td><td>::</td>
-  <td><strong>ival</strong></td><td><p>optional integer to print after the message.</p></td>
-  
-</tr>
-
-  
-  
-  
-  
-<tr>
-  
-  <td><span class="anchor" id="variable-rval"></span>real(kind=wp),</td>
-  <td>intent(in),</td>
-  <td>optional</td>
-  
-  <td></td><td>::</td>
-  <td><strong>rval</strong></td><td><p>optional real to print after the message.</p></td>
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>g</strong></td><td><p>objective function partials w.r.t x <code>dimension(n)</code></p></td>
   
 </tr>
 
@@ -383,12 +366,12 @@ private subroutine report_message(me, str, ival, rval, fatal)
   
 <tr>
   
-  <td><span class="anchor" id="variable-fatal"></span>logical,</td>
-  <td>intent(in),</td>
-  <td>optional</td>
+  <td><span class="anchor" id="variable-a%7E12"></span>real(kind=wp),</td>
+  <td>intent(out),</td>
+  <td></td>
   
-  <td></td><td>::</td>
-  <td><strong>fatal</strong></td><td><p>if True, then the program is stopped (default=False).</p></td>
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>a</strong></td><td><p>gradient matrix of constraints w.r.t. x <code>dimension(m,n)</code></p></td>
   
 </tr>
 
@@ -426,7 +409,7 @@ private subroutine report_message(me, str, ival, rval, fatal)
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
-    <a class="list-group-item" href="../proc/report_message.html#src">report_message</a>
+    <a class="list-group-item" href="../proc/grad.html#src">grad</a>
   </div>
 </div>
 
@@ -454,59 +437,32 @@ private subroutine report_message(me, str, ival, rval, fatal)
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">report_message</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">str</span><span class="p">,</span><span class="n">ival</span><span class="p">,</span><span class="n">rval</span><span class="p">,</span><span class="n">fatal</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">grad</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+        <span class="c">!! gradients for [[func]].</span>
+        <span class="k">implicit none</span>
+<span class="k">        class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">me</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">x</span>    <span class="c">!! optimization variable vector</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>   <span class="kd">::</span> <span class="n">g</span>    <span class="c">!! objective function partials w.r.t x `dimension(n)`</span>
+        <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:,:),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span>    <span class="c">!! gradient matrix of constraints w.r.t. x `dimension(m,n)`</span>
 
-    <span class="k">implicit none</span>
+        <span class="n">g</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mf">2.0_wp</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+        <span class="n">g</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+        <span class="n">g</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1.0_wp</span>
+        <span class="n">g</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+        <span class="n">g</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.0_wp</span>
 
-<span class="k">    class</span><span class="p">(</span><span class="n">slsqp_solver</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
-    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">str</span>    <span class="c">!! the message to report.</span>
-    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>    <span class="kd">::</span> <span class="n">ival</span>   <span class="c">!! optional integer to print after the message.</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>   <span class="kd">::</span> <span class="n">rval</span>   <span class="c">!! optional real to print after the message.</span>
-    <span class="kt">logical</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>    <span class="kd">::</span> <span class="n">fatal</span>  <span class="c">!! if True, then the program is stopped (default=False).</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="mf">0.0_wp</span>
+        <span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0_wp</span>
+        <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mf">2.0_wp</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="mf">2.0_wp</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="mf">2.0_wp</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">=</span> <span class="mf">2.0_wp</span><span class="o">*</span><span class="n">x</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 
-    <span class="kt">logical</span> <span class="kd">::</span> <span class="n">stop_program</span>  <span class="c">!! true if the program is to be stopped</span>
-    <span class="kt">logical</span> <span class="kd">::</span> <span class="n">write_message</span>  <span class="c">!! true if the message is to be printed</span>
-    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> <span class="kd">::</span> <span class="n">istr</span>  <span class="c">!! string version of `ival`</span>
-    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span> <span class="kd">::</span> <span class="n">rstr</span>  <span class="c">!! string version of `rval`</span>
-    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">str_to_write</span>  <span class="c">!! the actual message to the printed</span>
-    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">istat</span>  <span class="c">!! iostat for integer to string conversion</span>
-
-    <span class="c">!fatal error check:</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">fatal</span><span class="p">))</span> <span class="k">then</span>
-<span class="k">        </span><span class="n">stop_program</span> <span class="o">=</span> <span class="n">fatal</span>
-    <span class="k">else</span>
-<span class="k">        </span><span class="n">stop_program</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
-    <span class="k">end if</span>
-
-    <span class="c">!note: if stopping program, then the message is always printed:</span>
-    <span class="n">write_message</span> <span class="o">=</span> <span class="n">me</span><span class="p">%</span><span class="n">iprint</span><span class="o">/=</span><span class="mi">0</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">stop_program</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">write_message</span><span class="p">)</span> <span class="k">then</span>
-
-<span class="k">        if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">ival</span><span class="p">))</span> <span class="k">then</span>
-<span class="k">            write</span><span class="p">(</span><span class="n">istr</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;(I10)&#39;</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">istat</span><span class="p">)</span> <span class="n">ival</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">istat</span><span class="o">/=</span><span class="mi">0</span><span class="p">)</span> <span class="n">istr</span> <span class="o">=</span> <span class="s1">&#39;*****&#39;</span>
-            <span class="n">str_to_write</span> <span class="o">=</span> <span class="n">str</span><span class="o">//</span><span class="s1">&#39; &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">istr</span><span class="p">))</span>
-        <span class="n">elseif</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">rval</span><span class="p">))</span> <span class="k">then</span>
-<span class="k">            write</span><span class="p">(</span><span class="n">istr</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;(F30.16)&#39;</span><span class="p">,</span><span class="n">iostat</span><span class="o">=</span><span class="n">istat</span><span class="p">)</span> <span class="n">rval</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">istat</span><span class="o">/=</span><span class="mi">0</span><span class="p">)</span> <span class="n">rstr</span> <span class="o">=</span> <span class="s1">&#39;*****&#39;</span>
-            <span class="n">str_to_write</span> <span class="o">=</span> <span class="n">str</span><span class="o">//</span><span class="s1">&#39; &#39;</span><span class="o">//</span><span class="nb">trim</span><span class="p">(</span><span class="nb">adjustl</span><span class="p">(</span><span class="n">rstr</span><span class="p">))</span>
-        <span class="k">else</span>
-<span class="k">            </span><span class="n">str_to_write</span> <span class="o">=</span> <span class="n">str</span>
-        <span class="k">end if</span>
-
-<span class="k">        if</span> <span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">iprint</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
-<span class="k">            write</span><span class="p">(</span><span class="n">error_unit</span><span class="p">,</span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="n">str_to_write</span>  <span class="c">!in this case, use the error unit</span>
-        <span class="k">else</span>
-<span class="k">            write</span><span class="p">(</span><span class="n">me</span><span class="p">%</span><span class="n">iprint</span><span class="p">,</span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span> <span class="n">str_to_write</span>   <span class="c">!user specified unit number</span>
-        <span class="k">end if</span>
-<span class="k">        deallocate</span><span class="p">(</span><span class="n">str_to_write</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="p">(</span><span class="n">stop_program</span><span class="p">)</span> <span class="n">error</span> <span class="k">stop</span> <span class="s1">&#39;Fatal Error&#39;</span>
-
-    <span class="k">end if</span>
-
-<span class="k">    end subroutine </span><span class="n">report_message</span>
+    <span class="k">end subroutine </span><span class="n">grad</span>
 </pre></div>
 
     </section>

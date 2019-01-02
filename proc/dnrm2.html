@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 1.7% of total for procedures.">29 statements</a>
+	  title=" 1.6% of total for procedures.">29 statements</a>
      </li> 
      
      
@@ -223,7 +223,11 @@
       
       <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
       
+      <a class="list-group-item" href="../proc/func.html">func</a>
+      
       <a class="list-group-item" href="../proc/g1.html">g1</a>
+      
+      <a class="list-group-item" href="../proc/grad.html">grad</a>
       
       <a class="list-group-item" href="../proc/h12.html">h12</a>
       
@@ -252,6 +256,8 @@
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
+      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
@@ -424,29 +430,16 @@ public function dnrm2(n, x, incx)
 <path fill="none" stroke="#000000" d="M442.403,-76.5987C450.657,-73.0346 459.9,-69.0434 468.665,-65.2584"/>
 <polygon fill="#000000" stroke="#000000" points="470.126,-68.4399 477.919,-61.2623 467.351,-62.0135 470.126,-68.4399"/>
 </g>
-<!-- proc~ldp -->
-<g id="proc~~dnrm2~~CalledByGraph_node3" class="node"><title>proc~ldp</title>
-<g id="a_proc~~dnrm2~~CalledByGraph_node3"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
-<polygon fill="#d9534f" stroke="#d9534f" points="622,-24 568,-24 568,-0 622,-0 622,-24"/>
-<text text-anchor="middle" x="595" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
-</a>
-</g>
-</g>
-<!-- proc~ldp&#45;&gt;proc~dnrm2 -->
-<g id="proc~~dnrm2~~CalledByGraph_edge8" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M614.234,-24.2248C626.705,-32.5866 643.442,-43.8074 657.396,-53.1629"/>
-<polygon fill="#000000" stroke="#000000" points="655.836,-56.331 666.091,-58.9927 659.734,-50.5168 655.836,-56.331"/>
-</g>
 <!-- proc~slsqpb -->
-<g id="proc~~dnrm2~~CalledByGraph_node4" class="node"><title>proc~slsqpb</title>
-<g id="a_proc~~dnrm2~~CalledByGraph_node4"><a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
+<g id="proc~~dnrm2~~CalledByGraph_node3" class="node"><title>proc~slsqpb</title>
+<g id="a_proc~~dnrm2~~CalledByGraph_node3"><a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
 <polygon fill="#d9534f" stroke="#d9534f" points="262,-120 208,-120 208,-96 262,-96 262,-120"/>
 <text text-anchor="middle" x="235" y="-105.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~dnrm2 -->
-<g id="proc~~dnrm2~~CalledByGraph_edge9" class="edge"><title>proc~slsqpb&#45;&gt;proc~dnrm2</title>
+<g id="proc~~dnrm2~~CalledByGraph_edge8" class="edge"><title>proc~slsqpb&#45;&gt;proc~dnrm2</title>
 <path fill="none" stroke="#000000" d="M262.136,-112.79C296.744,-118.707 359.735,-128 414,-128 414,-128 414,-128 506,-128 559.388,-128 617.676,-104.455 652.514,-87.6304"/>
 <polygon fill="#000000" stroke="#000000" points="654.283,-90.6599 661.694,-83.0882 651.179,-84.3858 654.283,-90.6599"/>
 </g>
@@ -463,13 +456,26 @@ public function dnrm2(n, x, incx)
 <path fill="none" stroke="#000000" d="M262.403,-101.999C270.481,-100.163 279.507,-98.1121 288.105,-96.158"/>
 <polygon fill="#000000" stroke="#000000" points="288.943,-99.5568 297.919,-93.9275 287.392,-92.7308 288.943,-99.5568"/>
 </g>
+<!-- proc~ldp -->
+<g id="proc~~dnrm2~~CalledByGraph_node4" class="node"><title>proc~ldp</title>
+<g id="a_proc~~dnrm2~~CalledByGraph_node4"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
+<polygon fill="#d9534f" stroke="#d9534f" points="622,-24 568,-24 568,-0 622,-0 622,-24"/>
+<text text-anchor="middle" x="595" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp&#45;&gt;proc~dnrm2 -->
+<g id="proc~~dnrm2~~CalledByGraph_edge9" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M614.234,-24.2248C626.705,-32.5866 643.442,-43.8074 657.396,-53.1629"/>
+<polygon fill="#000000" stroke="#000000" points="655.836,-56.331 666.091,-58.9927 659.734,-50.5168 655.836,-56.331"/>
+</g>
 <!-- proc~lsi&#45;&gt;proc~dnrm2 -->
 <g id="proc~~dnrm2~~CalledByGraph_edge10" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
 <path fill="none" stroke="#000000" d="M532.265,-53.0986C562.851,-56.7071 613.551,-62.6886 647.843,-66.7342"/>
 <polygon fill="#000000" stroke="#000000" points="647.576,-70.227 657.918,-67.9229 648.397,-63.2752 647.576,-70.227"/>
 </g>
 <!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="proc~~dnrm2~~CalledByGraph_edge3" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<g id="proc~~dnrm2~~CalledByGraph_edge5" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
 <path fill="none" stroke="#000000" d="M532.403,-38.5987C540.657,-35.0346 549.9,-31.0434 558.665,-27.2584"/>
 <polygon fill="#000000" stroke="#000000" points="560.126,-30.4399 567.919,-23.2623 557.351,-24.0135 560.126,-30.4399"/>
 </g>
@@ -487,7 +493,7 @@ public function dnrm2(n, x, incx)
 </g>
 </g>
 <!-- proc~slsqp&#45;&gt;proc~slsqpb -->
-<g id="proc~~dnrm2~~CalledByGraph_edge5" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
+<g id="proc~~dnrm2~~CalledByGraph_edge4" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
 <path fill="none" stroke="#000000" d="M172.403,-108C180.393,-108 189.311,-108 197.824,-108"/>
 <polygon fill="#000000" stroke="#000000" points="197.919,-111.5 207.919,-108 197.919,-104.5 197.919,-111.5"/>
 </g>
@@ -500,7 +506,7 @@ public function dnrm2(n, x, incx)
 </g>
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
-<g id="proc~~dnrm2~~CalledByGraph_edge4" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
+<g id="proc~~dnrm2~~CalledByGraph_edge3" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
 <path fill="none" stroke="#000000" d="M82.0203,-108C90.4968,-108 99.3981,-108 107.726,-108"/>
 <polygon fill="#000000" stroke="#000000" points="107.894,-111.5 117.894,-108 107.894,-104.5 107.894,-111.5"/>
 </g>
@@ -714,7 +720,11 @@ public function dnrm2(n, x, incx)
       
       <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
       
+      <a class="list-group-item" href="../proc/func.html">func</a>
+      
       <a class="list-group-item" href="../proc/g1.html">g1</a>
+      
+      <a class="list-group-item" href="../proc/grad.html">grad</a>
       
       <a class="list-group-item" href="../proc/h12.html">h12</a>
       
@@ -743,6 +753,8 @@ public function dnrm2(n, x, incx)
       <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
+      
+      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
@@ -776,7 +788,7 @@ public function dnrm2(n, x, incx)
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2018 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 
