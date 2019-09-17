@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 3.4% of total for procedures.">61 statements</a>
+	  title=" 3.3% of total for procedures.">61 statements</a>
      </li> 
      
      
@@ -201,6 +201,8 @@
   <div id="allprocs-0" class="panel-collapse collapse">
     <div class="list-group">
       
+      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
+      
       <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
       
       <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
@@ -259,13 +261,19 @@
       
       <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
+      
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
       
       <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
       
@@ -332,7 +340,7 @@ private subroutine h12(mode, lpivot, l1, m, u, iue, up, c, ice, icv, ncv)
   
 <tr>
   
-  <td><span class="anchor" id="variable-mode%7E9"></span>integer,</td>
+  <td><span class="anchor" id="variable-mode%7E10"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -531,137 +539,137 @@ private subroutine h12(mode, lpivot, l1, m, u, iue, up, c, ice, icv, ncv)
 <polygon fill="none" stroke="black" points="808,-83 754,-83 754,-59 808,-59 808,-83"/>
 <text text-anchor="middle" x="781" y="-68.6" font-family="Helvetica,sans-Serif" font-size="10.50">h12</text>
 </g>
-<!-- proc~hfti -->
-<g id="proc~~h12~~CalledByGraph_node2" class="node"><title>proc~hfti</title>
-<g id="a_proc~~h12~~CalledByGraph_node2"><a xlink:href="../proc/hfti.html" xlink:title="hfti">
-<polygon fill="#d9534f" stroke="#d9534f" points="628,-104 574,-104 574,-80 628,-80 628,-104"/>
-<text text-anchor="middle" x="601" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">hfti</text>
-</a>
-</g>
-</g>
-<!-- proc~hfti&#45;&gt;proc~h12 -->
-<g id="proc~~h12~~CalledByGraph_edge9" class="edge"><title>proc~hfti&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M628.265,-88.9014C658.851,-85.2929 709.551,-79.3114 743.843,-75.2658"/>
-<polygon fill="#000000" stroke="#000000" points="744.397,-78.7248 753.918,-74.0771 743.576,-71.773 744.397,-78.7248"/>
-</g>
-<!-- proc~nnls -->
-<g id="proc~~h12~~CalledByGraph_node3" class="node"><title>proc~nnls</title>
-<g id="a_proc~~h12~~CalledByGraph_node3"><a xlink:href="../proc/nnls.html" xlink:title="nnls">
-<polygon fill="#d9534f" stroke="#d9534f" points="718,-24 664,-24 664,-0 718,-0 718,-24"/>
-<text text-anchor="middle" x="691" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
-</a>
-</g>
-</g>
-<!-- proc~nnls&#45;&gt;proc~h12 -->
-<g id="proc~~h12~~CalledByGraph_edge10" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M710.234,-24.2248C722.705,-32.5866 739.442,-43.8074 753.396,-53.1629"/>
-<polygon fill="#000000" stroke="#000000" points="751.836,-56.331 762.091,-58.9927 755.734,-50.5168 751.836,-56.331"/>
-</g>
 <!-- proc~lsei -->
-<g id="proc~~h12~~CalledByGraph_node4" class="node"><title>proc~lsei</title>
-<g id="a_proc~~h12~~CalledByGraph_node4"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
+<g id="proc~~h12~~CalledByGraph_node2" class="node"><title>proc~lsei</title>
+<g id="a_proc~~h12~~CalledByGraph_node2"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
 <polygon fill="#d9534f" stroke="#d9534f" points="448,-104 394,-104 394,-80 448,-80 448,-104"/>
 <text text-anchor="middle" x="421" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
 </a>
 </g>
 </g>
 <!-- proc~lsei&#45;&gt;proc~h12 -->
-<g id="proc~~h12~~CalledByGraph_edge11" class="edge"><title>proc~lsei&#45;&gt;proc~h12</title>
+<g id="proc~~h12~~CalledByGraph_edge9" class="edge"><title>proc~lsei&#45;&gt;proc~h12</title>
 <path fill="none" stroke="#000000" d="M448.087,-98.7709C459.101,-101.4 472.107,-104.204 484,-106 586.928,-121.54 618.104,-125.266 718,-96 726.74,-93.4396 735.947,-90.1 744.514,-86.6994"/>
 <polygon fill="#000000" stroke="#000000" points="745.928,-89.9023 753.855,-82.8724 743.274,-83.4248 745.928,-89.9023"/>
 </g>
+<!-- proc~hfti -->
+<g id="proc~~h12~~CalledByGraph_node3" class="node"><title>proc~hfti</title>
+<g id="a_proc~~h12~~CalledByGraph_node3"><a xlink:href="../proc/hfti.html" xlink:title="hfti">
+<polygon fill="#d9534f" stroke="#d9534f" points="628,-104 574,-104 574,-80 628,-80 628,-104"/>
+<text text-anchor="middle" x="601" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">hfti</text>
+</a>
+</g>
+</g>
 <!-- proc~lsei&#45;&gt;proc~hfti -->
-<g id="proc~~h12~~CalledByGraph_edge1" class="edge"><title>proc~lsei&#45;&gt;proc~hfti</title>
+<g id="proc~~h12~~CalledByGraph_edge5" class="edge"><title>proc~lsei&#45;&gt;proc~hfti</title>
 <path fill="none" stroke="#000000" d="M448.265,-92C478.851,-92 529.551,-92 563.843,-92"/>
 <polygon fill="#000000" stroke="#000000" points="563.918,-95.5001 573.918,-92 563.918,-88.5001 563.918,-95.5001"/>
 </g>
 <!-- proc~lsi -->
-<g id="proc~~h12~~CalledByGraph_node5" class="node"><title>proc~lsi</title>
-<g id="a_proc~~h12~~CalledByGraph_node5"><a xlink:href="../proc/lsi.html" xlink:title="lsi">
+<g id="proc~~h12~~CalledByGraph_node4" class="node"><title>proc~lsi</title>
+<g id="a_proc~~h12~~CalledByGraph_node4"><a xlink:href="../proc/lsi.html" xlink:title="lsi">
 <polygon fill="#d9534f" stroke="#d9534f" points="538,-64 484,-64 484,-40 538,-40 538,-64"/>
 <text text-anchor="middle" x="511" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
 </a>
 </g>
 </g>
 <!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="proc~~h12~~CalledByGraph_edge8" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
+<g id="proc~~h12~~CalledByGraph_edge6" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
 <path fill="none" stroke="#000000" d="M448.403,-79.9987C456.657,-76.247 465.9,-72.0457 474.665,-68.0615"/>
 <polygon fill="#000000" stroke="#000000" points="476.264,-71.1794 483.919,-63.855 473.367,-64.8068 476.264,-71.1794"/>
 </g>
+<!-- proc~hfti&#45;&gt;proc~h12 -->
+<g id="proc~~h12~~CalledByGraph_edge10" class="edge"><title>proc~hfti&#45;&gt;proc~h12</title>
+<path fill="none" stroke="#000000" d="M628.265,-88.9014C658.851,-85.2929 709.551,-79.3114 743.843,-75.2658"/>
+<polygon fill="#000000" stroke="#000000" points="744.397,-78.7248 753.918,-74.0771 743.576,-71.773 744.397,-78.7248"/>
+</g>
 <!-- proc~lsi&#45;&gt;proc~h12 -->
-<g id="proc~~h12~~CalledByGraph_edge12" class="edge"><title>proc~lsi&#45;&gt;proc~h12</title>
+<g id="proc~~h12~~CalledByGraph_edge11" class="edge"><title>proc~lsi&#45;&gt;proc~h12</title>
 <path fill="none" stroke="#000000" d="M538.185,-53.8564C586.218,-57.2617 688.508,-64.5137 743.394,-68.4048"/>
 <polygon fill="#000000" stroke="#000000" points="743.486,-71.92 753.709,-69.1361 743.981,-64.9376 743.486,-71.92"/>
 </g>
 <!-- proc~ldp -->
-<g id="proc~~h12~~CalledByGraph_node6" class="node"><title>proc~ldp</title>
-<g id="a_proc~~h12~~CalledByGraph_node6"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
+<g id="proc~~h12~~CalledByGraph_node10" class="node"><title>proc~ldp</title>
+<g id="a_proc~~h12~~CalledByGraph_node10"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
 <polygon fill="#d9534f" stroke="#d9534f" points="628,-24 574,-24 574,-0 628,-0 628,-24"/>
 <text text-anchor="middle" x="601" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
 </a>
 </g>
 </g>
 <!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="proc~~h12~~CalledByGraph_edge2" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<g id="proc~~h12~~CalledByGraph_edge7" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
 <path fill="none" stroke="#000000" d="M538.403,-39.9987C546.657,-36.247 555.9,-32.0457 564.665,-28.0615"/>
 <polygon fill="#000000" stroke="#000000" points="566.264,-31.1794 573.919,-23.855 563.367,-24.8068 566.264,-31.1794"/>
 </g>
-<!-- proc~ldp&#45;&gt;proc~nnls -->
-<g id="proc~~h12~~CalledByGraph_edge3" class="edge"><title>proc~ldp&#45;&gt;proc~nnls</title>
-<path fill="none" stroke="#000000" d="M628.403,-12C636.393,-12 645.311,-12 653.824,-12"/>
-<polygon fill="#000000" stroke="#000000" points="653.919,-15.5001 663.919,-12 653.919,-8.5001 653.919,-15.5001"/>
+<!-- proc~nnls -->
+<g id="proc~~h12~~CalledByGraph_node5" class="node"><title>proc~nnls</title>
+<g id="a_proc~~h12~~CalledByGraph_node5"><a xlink:href="../proc/nnls.html" xlink:title="nnls">
+<polygon fill="#d9534f" stroke="#d9534f" points="718,-24 664,-24 664,-0 718,-0 718,-24"/>
+<text text-anchor="middle" x="691" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
+</a>
+</g>
+</g>
+<!-- proc~nnls&#45;&gt;proc~h12 -->
+<g id="proc~~h12~~CalledByGraph_edge12" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
+<path fill="none" stroke="#000000" d="M710.234,-24.2248C722.705,-32.5866 739.442,-43.8074 753.396,-53.1629"/>
+<polygon fill="#000000" stroke="#000000" points="751.836,-56.331 762.091,-58.9927 755.734,-50.5168 751.836,-56.331"/>
 </g>
 <!-- proc~lsq -->
-<g id="proc~~h12~~CalledByGraph_node7" class="node"><title>proc~lsq</title>
-<g id="a_proc~~h12~~CalledByGraph_node7"><a xlink:href="../proc/lsq.html" xlink:title="lsq">
+<g id="proc~~h12~~CalledByGraph_node6" class="node"><title>proc~lsq</title>
+<g id="a_proc~~h12~~CalledByGraph_node6"><a xlink:href="../proc/lsq.html" xlink:title="lsq">
 <polygon fill="#d9534f" stroke="#d9534f" points="358,-104 304,-104 304,-80 358,-80 358,-104"/>
 <text text-anchor="middle" x="331" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
 </a>
 </g>
 </g>
 <!-- proc~lsq&#45;&gt;proc~lsei -->
-<g id="proc~~h12~~CalledByGraph_edge7" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
+<g id="proc~~h12~~CalledByGraph_edge4" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
 <path fill="none" stroke="#000000" d="M358.403,-92C366.393,-92 375.311,-92 383.824,-92"/>
 <polygon fill="#000000" stroke="#000000" points="383.919,-95.5001 393.919,-92 383.919,-88.5001 383.919,-95.5001"/>
 </g>
 <!-- proc~slsqpb -->
-<g id="proc~~h12~~CalledByGraph_node8" class="node"><title>proc~slsqpb</title>
-<g id="a_proc~~h12~~CalledByGraph_node8"><a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
+<g id="proc~~h12~~CalledByGraph_node7" class="node"><title>proc~slsqpb</title>
+<g id="a_proc~~h12~~CalledByGraph_node7"><a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
 <polygon fill="#d9534f" stroke="#d9534f" points="268,-104 214,-104 214,-80 268,-80 268,-104"/>
 <text text-anchor="middle" x="241" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~lsq -->
-<g id="proc~~h12~~CalledByGraph_edge6" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
+<g id="proc~~h12~~CalledByGraph_edge3" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
 <path fill="none" stroke="#000000" d="M268.403,-92C276.393,-92 285.311,-92 293.824,-92"/>
 <polygon fill="#000000" stroke="#000000" points="293.919,-95.5001 303.919,-92 293.919,-88.5001 293.919,-95.5001"/>
 </g>
 <!-- proc~slsqp -->
-<g id="proc~~h12~~CalledByGraph_node9" class="node"><title>proc~slsqp</title>
-<g id="a_proc~~h12~~CalledByGraph_node9"><a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
+<g id="proc~~h12~~CalledByGraph_node8" class="node"><title>proc~slsqp</title>
+<g id="a_proc~~h12~~CalledByGraph_node8"><a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
 <polygon fill="#d9534f" stroke="#d9534f" points="178,-104 124,-104 124,-80 178,-80 178,-104"/>
 <text text-anchor="middle" x="151" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqp&#45;&gt;proc~slsqpb -->
-<g id="proc~~h12~~CalledByGraph_edge5" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
+<g id="proc~~h12~~CalledByGraph_edge2" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
 <path fill="none" stroke="#000000" d="M178.403,-92C186.393,-92 195.311,-92 203.824,-92"/>
 <polygon fill="#000000" stroke="#000000" points="203.919,-95.5001 213.919,-92 203.919,-88.5001 203.919,-95.5001"/>
 </g>
 <!-- proc~slsqp_wrapper -->
-<g id="proc~~h12~~CalledByGraph_node10" class="node"><title>proc~slsqp_wrapper</title>
-<g id="a_proc~~h12~~CalledByGraph_node10"><a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
+<g id="proc~~h12~~CalledByGraph_node9" class="node"><title>proc~slsqp_wrapper</title>
+<g id="a_proc~~h12~~CalledByGraph_node9"><a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
 <polygon fill="#d9534f" stroke="#d9534f" points="88,-104 7.10543e-15,-104 7.10543e-15,-80 88,-80 88,-104"/>
 <text text-anchor="middle" x="44" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
-<g id="proc~~h12~~CalledByGraph_edge4" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
+<g id="proc~~h12~~CalledByGraph_edge1" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
 <path fill="none" stroke="#000000" d="M88.0105,-92C96.5323,-92 105.399,-92 113.672,-92"/>
 <polygon fill="#000000" stroke="#000000" points="113.763,-95.5001 123.763,-92 113.763,-88.5001 113.763,-95.5001"/>
+</g>
+<!-- proc~ldp&#45;&gt;proc~nnls -->
+<g id="proc~~h12~~CalledByGraph_edge8" class="edge"><title>proc~ldp&#45;&gt;proc~nnls</title>
+<path fill="none" stroke="#000000" d="M628.403,-12C636.393,-12 645.311,-12 653.824,-12"/>
+<polygon fill="#000000" stroke="#000000" points="653.919,-15.5001 663.919,-12 653.919,-8.5001 653.919,-15.5001"/>
 </g>
 </g>
 </svg>
@@ -836,17 +844,17 @@ private subroutine h12(mode, lpivot, l1, m, u, iue, up, c, ice, icv, ncv)
         <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">l1</span> <span class="p">,</span> <span class="n">m</span>
             <span class="n">cl</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">)),</span><span class="n">cl</span><span class="p">)</span>
         <span class="k">end do</span>
-<span class="k">        if</span> <span class="p">(</span> <span class="n">cl</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="p">)</span> <span class="k">return</span>
+<span class="k">        if</span> <span class="p">(</span> <span class="n">cl</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">return</span>
 <span class="k">        </span><span class="n">clinv</span> <span class="o">=</span> <span class="n">one</span><span class="o">/</span><span class="n">cl</span>
         <span class="n">sm</span> <span class="o">=</span> <span class="p">(</span><span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">lpivot</span><span class="p">)</span><span class="o">*</span><span class="n">clinv</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
         <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">l1</span> <span class="p">,</span> <span class="n">m</span>
             <span class="n">sm</span> <span class="o">=</span> <span class="n">sm</span> <span class="o">+</span> <span class="p">(</span><span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">clinv</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
         <span class="k">end do</span>
 <span class="k">        </span><span class="n">cl</span> <span class="o">=</span> <span class="n">cl</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span>
-        <span class="k">if</span> <span class="p">(</span> <span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">lpivot</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span> <span class="p">)</span> <span class="n">cl</span> <span class="o">=</span> <span class="o">-</span><span class="n">cl</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">lpivot</span><span class="p">)</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="n">cl</span> <span class="o">=</span> <span class="o">-</span><span class="n">cl</span>
         <span class="n">up</span> <span class="o">=</span> <span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">lpivot</span><span class="p">)</span> <span class="o">-</span> <span class="n">cl</span>
         <span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">lpivot</span><span class="p">)</span> <span class="o">=</span> <span class="n">cl</span>
-    <span class="k">else if</span> <span class="p">(</span> <span class="n">cl</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+    <span class="k">else if</span> <span class="p">(</span> <span class="n">cl</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
 <span class="k">        return</span>
 <span class="k">    end if</span>
 
@@ -854,7 +862,7 @@ private subroutine h12(mode, lpivot, l1, m, u, iue, up, c, ice, icv, ncv)
         <span class="c">! apply the transformation i+u*(u**t)/b to c.</span>
         <span class="n">b</span> <span class="o">=</span> <span class="n">up</span><span class="o">*</span><span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">lpivot</span><span class="p">)</span>
         <span class="c">! b must be nonpositive here.</span>
-        <span class="k">if</span> <span class="p">(</span> <span class="n">b</span><span class="o">&lt;</span><span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">b</span><span class="o">&lt;</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
 <span class="k">            </span><span class="n">b</span> <span class="o">=</span> <span class="n">one</span><span class="o">/</span><span class="n">b</span>
             <span class="n">i2</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">icv</span> <span class="o">+</span> <span class="n">ice</span><span class="o">*</span><span class="p">(</span><span class="n">lpivot</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
             <span class="n">incr</span> <span class="o">=</span> <span class="n">ice</span><span class="o">*</span><span class="p">(</span><span class="n">l1</span><span class="o">-</span><span class="n">lpivot</span><span class="p">)</span>
@@ -867,7 +875,7 @@ private subroutine h12(mode, lpivot, l1, m, u, iue, up, c, ice, icv, ncv)
                     <span class="n">sm</span> <span class="o">=</span> <span class="n">sm</span> <span class="o">+</span> <span class="n">c</span><span class="p">(</span><span class="n">i3</span><span class="p">)</span><span class="o">*</span><span class="n">u</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
                     <span class="n">i3</span> <span class="o">=</span> <span class="n">i3</span> <span class="o">+</span> <span class="n">ice</span>
                 <span class="k">end do</span>
-<span class="k">                if</span> <span class="p">(</span> <span class="n">sm</span><span class="o">/=</span><span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
+<span class="k">                if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
 <span class="k">                    </span><span class="n">sm</span> <span class="o">=</span> <span class="n">sm</span><span class="o">*</span><span class="n">b</span>
                     <span class="n">c</span><span class="p">(</span><span class="n">i2</span><span class="p">)</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">i2</span><span class="p">)</span> <span class="o">+</span> <span class="n">sm</span><span class="o">*</span><span class="n">up</span>
                     <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="n">l1</span> <span class="p">,</span> <span class="n">m</span>
@@ -897,6 +905,8 @@ private subroutine h12(mode, lpivot, l1, m, u, iue, up, c, ice, icv, ncv)
   <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs-1">All Procedures</a></h3></div>
   <div id="allprocs-1" class="panel-collapse collapse">
     <div class="list-group">
+      
+      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
       
       <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
       
@@ -956,13 +966,19 @@ private subroutine h12(mode, lpivot, l1, m, u, iue, up, c, ice, icv, ncv)
       
       <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
+      
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
       
       <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
       

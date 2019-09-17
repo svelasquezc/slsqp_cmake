@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 3.5% of total for procedures.">63 statements</a>
+	  title=" 3.4% of total for procedures.">63 statements</a>
      </li> 
      
      
@@ -201,6 +201,8 @@
   <div id="allprocs-0" class="panel-collapse collapse">
     <div class="list-group">
       
+      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
+      
       <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
       
       <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
@@ -259,13 +261,19 @@
       
       <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
+      
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
       
       <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
       
@@ -336,7 +344,7 @@ private subroutine ldl(n, a, z, sigma, w)
   
 <tr>
   
-  <td><span class="anchor" id="variable-n%7E16"></span>integer,</td>
+  <td><span class="anchor" id="variable-n%7E17"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -615,7 +623,7 @@ private subroutine ldl(n, a, z, sigma, w)
     <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span> <span class="p">,</span> <span class="n">ij</span> <span class="p">,</span> <span class="n">j</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t</span> <span class="p">,</span> <span class="n">v</span> <span class="p">,</span> <span class="n">u</span> <span class="p">,</span> <span class="n">tp</span> <span class="p">,</span> <span class="n">beta</span> <span class="p">,</span> <span class="n">alpha</span> <span class="p">,</span> <span class="n">delta</span> <span class="p">,</span> <span class="nb">gamma</span>
 
-<span class="nb">    </span><span class="k">if</span> <span class="p">(</span> <span class="n">sigma</span><span class="o">/=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
+<span class="nb">    </span><span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
 <span class="k">        </span><span class="n">ij</span> <span class="o">=</span> <span class="mi">1</span>
         <span class="n">t</span> <span class="o">=</span> <span class="n">one</span><span class="o">/</span><span class="n">sigma</span>
         <span class="k">if</span> <span class="p">(</span> <span class="n">sigma</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
@@ -690,6 +698,8 @@ private subroutine ldl(n, a, z, sigma, w)
   <div id="allprocs-1" class="panel-collapse collapse">
     <div class="list-group">
       
+      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
+      
       <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
       
       <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
@@ -748,13 +758,19 @@ private subroutine ldl(n, a, z, sigma, w)
       
       <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
+      
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
       
       <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
       

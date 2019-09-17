@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 4.8% of total for procedures.">86 statements</a>
+	  title=" 4.6% of total for procedures.">86 statements</a>
      </li> 
      
      
@@ -201,6 +201,8 @@
   <div id="allprocs-0" class="panel-collapse collapse">
     <div class="list-group">
       
+      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
+      
       <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
       
       <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
@@ -259,13 +261,19 @@
       
       <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
+      
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
       
       <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
       
@@ -339,7 +347,7 @@ private function linmin(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m
   
 <tr>
   
-  <td><span class="anchor" id="variable-mode"></span>integer,</td>
+  <td><span class="anchor" id="variable-mode%7E2"></span>integer,</td>
   <td>intent(inout)</td>
   <td></td>
   
@@ -387,7 +395,7 @@ private function linmin(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m
   
 <tr>
   
-  <td><span class="anchor" id="variable-f%7E5"></span>real(kind=wp)</td>
+  <td><span class="anchor" id="variable-f%7E6"></span>real(kind=wp)</td>
   <td></td>
   <td></td>
   
@@ -568,7 +576,7 @@ private function linmin(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m
   
 <tr>
   
-  <td><span class="anchor" id="variable-x%7E7"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-x%7E8"></span>real(kind=wp),</td>
   <td>intent(inout)</td>
   <td></td>
   
@@ -917,12 +925,12 @@ private function linmin(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m
         <span class="k">if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&gt;</span><span class="n">fx</span> <span class="p">)</span> <span class="k">then</span>
 <span class="k">            if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&lt;</span><span class="n">x</span> <span class="p">)</span> <span class="n">a</span> <span class="o">=</span> <span class="n">u</span>
             <span class="k">if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&gt;=</span><span class="n">x</span> <span class="p">)</span> <span class="n">b</span> <span class="o">=</span> <span class="n">u</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&lt;=</span><span class="n">fw</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">w</span><span class="o">==</span><span class="n">x</span> <span class="p">)</span> <span class="k">then</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&lt;=</span><span class="n">fw</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">w</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
 <span class="k">                </span><span class="n">v</span> <span class="o">=</span> <span class="n">w</span>
                 <span class="n">fv</span> <span class="o">=</span> <span class="n">fw</span>
                 <span class="n">w</span> <span class="o">=</span> <span class="n">u</span>
                 <span class="n">fw</span> <span class="o">=</span> <span class="n">fu</span>
-            <span class="k">else if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&lt;=</span><span class="n">fv</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">v</span><span class="o">==</span><span class="n">x</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">v</span><span class="o">==</span><span class="n">w</span> <span class="p">)</span> <span class="k">then</span>
+            <span class="k">else if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&lt;=</span><span class="n">fv</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
 <span class="k">                </span><span class="n">v</span> <span class="o">=</span> <span class="n">u</span>
                 <span class="n">fv</span> <span class="o">=</span> <span class="n">fu</span>
             <span class="k">end if</span>
@@ -1020,6 +1028,8 @@ private function linmin(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m
   <div id="allprocs-1" class="panel-collapse collapse">
     <div class="list-group">
       
+      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
+      
       <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
       
       <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
@@ -1078,13 +1088,19 @@ private function linmin(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m
       
       <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
+      
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
       
       <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
       

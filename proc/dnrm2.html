@@ -134,7 +134,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
 	  data-placement="bottom" data-html="true"
-	  title=" 1.6% of total for procedures.">29 statements</a>
+	  title=" 1.5% of total for procedures.">29 statements</a>
      </li> 
      
      
@@ -201,6 +201,8 @@
   <div id="allprocs-0" class="panel-collapse collapse">
     <div class="list-group">
       
+      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
+      
       <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
       
       <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
@@ -259,13 +261,19 @@
       
       <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
+      
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
       
       <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
       
@@ -395,120 +403,133 @@ public function dnrm2(n, x, incx)
  -->
 <!-- Title: proc~~dnrm2~~CalledByGraph Pages: 1 -->
 <svg id="procdnrm2CalledByGraph" width="641pt" height="120pt"
- viewBox="0.00 0.00 641.00 120.08" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="proc~~dnrm2~~CalledByGraph" class="graph" transform="scale(0.88292 0.88292) rotate(0) translate(4 132)">
+ viewBox="0.00 0.00 641.00 120.09" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~dnrm2~~CalledByGraph" class="graph" transform="scale(0.811392 0.811392) rotate(0) translate(4 144)">
 <title>proc~~dnrm2~~CalledByGraph</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-132 722,-132 722,4 -4,4"/>
+<polygon fill="white" stroke="none" points="-4,4 -4,-144 786,-144 786,4 -4,4"/>
 <!-- proc~dnrm2 -->
 <g id="proc~~dnrm2~~CalledByGraph_node1" class="node"><title>proc~dnrm2</title>
-<polygon fill="none" stroke="black" points="718,-83 664,-83 664,-59 718,-59 718,-83"/>
-<text text-anchor="middle" x="691" y="-68.6" font-family="Helvetica,sans-Serif" font-size="10.50">dnrm2</text>
+<polygon fill="none" stroke="black" points="782,-83 728,-83 728,-59 782,-59 782,-83"/>
+<text text-anchor="middle" x="755" y="-68.6" font-family="Helvetica,sans-Serif" font-size="10.50">dnrm2</text>
+</g>
+<!-- proc~check_convergence -->
+<g id="proc~~dnrm2~~CalledByGraph_node2" class="node"><title>proc~check_convergence</title>
+<g id="a_proc~~dnrm2~~CalledByGraph_node2"><a xlink:href="../proc/check_convergence.html" xlink:title="check_convergence">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="512,-140 394,-140 394,-116 512,-116 512,-140"/>
+<text text-anchor="middle" x="453" y="-125.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">check_convergence</text>
+</a>
+</g>
+</g>
+<!-- proc~check_convergence&#45;&gt;proc~dnrm2 -->
+<g id="proc~~dnrm2~~CalledByGraph_edge8" class="edge"><title>proc~check_convergence&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M512.207,-121.556C560.701,-115.567 631.38,-105.394 692,-91 700.542,-88.9717 709.604,-86.3346 718.086,-83.6443"/>
+<polygon fill="#000000" stroke="#000000" points="719.294,-86.9316 727.71,-80.4951 717.117,-80.2787 719.294,-86.9316"/>
 </g>
 <!-- proc~ldp -->
-<g id="proc~~dnrm2~~CalledByGraph_node2" class="node"><title>proc~ldp</title>
-<g id="a_proc~~dnrm2~~CalledByGraph_node2"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
-<polygon fill="#d9534f" stroke="#d9534f" points="628,-24 574,-24 574,-0 628,-0 628,-24"/>
-<text text-anchor="middle" x="601" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
+<g id="proc~~dnrm2~~CalledByGraph_node3" class="node"><title>proc~ldp</title>
+<g id="a_proc~~dnrm2~~CalledByGraph_node3"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
+<polygon fill="#d9534f" stroke="#d9534f" points="692,-24 638,-24 638,-0 692,-0 692,-24"/>
+<text text-anchor="middle" x="665" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
 </a>
 </g>
 </g>
 <!-- proc~ldp&#45;&gt;proc~dnrm2 -->
-<g id="proc~~dnrm2~~CalledByGraph_edge7" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M620.234,-24.2248C632.705,-32.5866 649.442,-43.8074 663.396,-53.1629"/>
-<polygon fill="#000000" stroke="#000000" points="661.836,-56.331 672.091,-58.9927 665.734,-50.5168 661.836,-56.331"/>
+<g id="proc~~dnrm2~~CalledByGraph_edge9" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M684.234,-24.2248C696.705,-32.5866 713.442,-43.8074 727.396,-53.1629"/>
+<polygon fill="#000000" stroke="#000000" points="725.836,-56.331 736.091,-58.9927 729.734,-50.5168 725.836,-56.331"/>
 </g>
 <!-- proc~lsei -->
-<g id="proc~~dnrm2~~CalledByGraph_node3" class="node"><title>proc~lsei</title>
-<g id="a_proc~~dnrm2~~CalledByGraph_node3"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
-<polygon fill="#d9534f" stroke="#d9534f" points="448,-100 394,-100 394,-76 448,-76 448,-100"/>
-<text text-anchor="middle" x="421" y="-85.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
+<g id="proc~~dnrm2~~CalledByGraph_node4" class="node"><title>proc~lsei</title>
+<g id="a_proc~~dnrm2~~CalledByGraph_node4"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
+<polygon fill="#d9534f" stroke="#d9534f" points="480,-98 426,-98 426,-74 480,-74 480,-98"/>
+<text text-anchor="middle" x="453" y="-83.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
 </a>
 </g>
 </g>
 <!-- proc~lsei&#45;&gt;proc~dnrm2 -->
-<g id="proc~~dnrm2~~CalledByGraph_edge8" class="edge"><title>proc~lsei&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M448.016,-86.37C487.094,-83.9188 563.27,-79.1305 628,-75 636.342,-74.4677 645.314,-73.8912 653.771,-73.3459"/>
-<polygon fill="#000000" stroke="#000000" points="654.001,-76.8385 663.755,-72.7014 653.55,-69.853 654.001,-76.8385"/>
+<g id="proc~~dnrm2~~CalledByGraph_edge10" class="edge"><title>proc~lsei&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M480.069,-84.9509C523.863,-83.1535 614.975,-79.2643 692,-75 700.346,-74.538 709.32,-73.9891 717.777,-73.4484"/>
+<polygon fill="#000000" stroke="#000000" points="718.009,-76.9408 727.76,-72.7992 717.554,-69.9556 718.009,-76.9408"/>
 </g>
 <!-- proc~lsi -->
 <g id="proc~~dnrm2~~CalledByGraph_node5" class="node"><title>proc~lsi</title>
 <g id="a_proc~~dnrm2~~CalledByGraph_node5"><a xlink:href="../proc/lsi.html" xlink:title="lsi">
-<polygon fill="#d9534f" stroke="#d9534f" points="538,-62 484,-62 484,-38 538,-38 538,-62"/>
-<text text-anchor="middle" x="511" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="602,-62 548,-62 548,-38 602,-38 602,-62"/>
+<text text-anchor="middle" x="575" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
 </a>
 </g>
 </g>
 <!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="proc~~dnrm2~~CalledByGraph_edge6" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
-<path fill="none" stroke="#000000" d="M448.403,-76.5987C456.657,-73.0346 465.9,-69.0434 474.665,-65.2584"/>
-<polygon fill="#000000" stroke="#000000" points="476.126,-68.4399 483.919,-61.2623 473.351,-62.0135 476.126,-68.4399"/>
+<g id="proc~~dnrm2~~CalledByGraph_edge7" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
+<path fill="none" stroke="#000000" d="M480.038,-78.1885C496.983,-73.1051 519.316,-66.4051 537.958,-60.8127"/>
+<polygon fill="#000000" stroke="#000000" points="539.026,-64.1465 547.598,-57.9205 537.014,-57.4417 539.026,-64.1465"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
+<g id="proc~~dnrm2~~CalledByGraph_edge11" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M602.265,-53.0986C632.851,-56.7071 683.551,-62.6886 717.843,-66.7342"/>
+<polygon fill="#000000" stroke="#000000" points="717.576,-70.227 727.918,-67.9229 718.397,-63.2752 717.576,-70.227"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~ldp -->
+<g id="proc~~dnrm2~~CalledByGraph_edge4" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<path fill="none" stroke="#000000" d="M602.403,-38.5987C610.657,-35.0346 619.9,-31.0434 628.665,-27.2584"/>
+<polygon fill="#000000" stroke="#000000" points="630.126,-30.4399 637.919,-23.2623 627.351,-24.0135 630.126,-30.4399"/>
 </g>
 <!-- proc~slsqpb -->
-<g id="proc~~dnrm2~~CalledByGraph_node4" class="node"><title>proc~slsqpb</title>
-<g id="a_proc~~dnrm2~~CalledByGraph_node4"><a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
-<polygon fill="#d9534f" stroke="#d9534f" points="268,-120 214,-120 214,-96 268,-96 268,-120"/>
-<text text-anchor="middle" x="241" y="-105.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
+<g id="proc~~dnrm2~~CalledByGraph_node6" class="node"><title>proc~slsqpb</title>
+<g id="a_proc~~dnrm2~~CalledByGraph_node6"><a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
+<polygon fill="#d9534f" stroke="#d9534f" points="268,-118 214,-118 214,-94 268,-94 268,-118"/>
+<text text-anchor="middle" x="241" y="-103.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
 </a>
 </g>
 </g>
-<!-- proc~slsqpb&#45;&gt;proc~dnrm2 -->
-<g id="proc~~dnrm2~~CalledByGraph_edge9" class="edge"><title>proc~slsqpb&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M268.136,-112.79C302.744,-118.707 365.735,-128 420,-128 420,-128 420,-128 512,-128 565.388,-128 623.676,-104.455 658.514,-87.6304"/>
-<polygon fill="#000000" stroke="#000000" points="660.283,-90.6599 667.694,-83.0882 657.179,-84.3858 660.283,-90.6599"/>
+<!-- proc~slsqpb&#45;&gt;proc~check_convergence -->
+<g id="proc~~dnrm2~~CalledByGraph_edge3" class="edge"><title>proc~slsqpb&#45;&gt;proc~check_convergence</title>
+<path fill="none" stroke="#000000" d="M268.172,-108.742C296.897,-111.751 344.171,-116.704 383.585,-120.833"/>
+<polygon fill="#000000" stroke="#000000" points="383.372,-124.329 393.682,-121.89 384.101,-117.368 383.372,-124.329"/>
 </g>
 <!-- proc~lsq -->
-<g id="proc~~dnrm2~~CalledByGraph_node6" class="node"><title>proc~lsq</title>
-<g id="a_proc~~dnrm2~~CalledByGraph_node6"><a xlink:href="../proc/lsq.html" xlink:title="lsq">
-<polygon fill="#d9534f" stroke="#d9534f" points="358,-100 304,-100 304,-76 358,-76 358,-100"/>
-<text text-anchor="middle" x="331" y="-85.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
+<g id="proc~~dnrm2~~CalledByGraph_node9" class="node"><title>proc~lsq</title>
+<g id="a_proc~~dnrm2~~CalledByGraph_node9"><a xlink:href="../proc/lsq.html" xlink:title="lsq">
+<polygon fill="#d9534f" stroke="#d9534f" points="358,-98 304,-98 304,-74 358,-74 358,-98"/>
+<text text-anchor="middle" x="331" y="-83.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~lsq -->
-<g id="proc~~dnrm2~~CalledByGraph_edge2" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
-<path fill="none" stroke="#000000" d="M268.403,-101.999C276.481,-100.163 285.507,-98.1121 294.105,-96.158"/>
-<polygon fill="#000000" stroke="#000000" points="294.943,-99.5568 303.919,-93.9275 293.392,-92.7308 294.943,-99.5568"/>
-</g>
-<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
-<g id="proc~~dnrm2~~CalledByGraph_edge10" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M538.265,-53.0986C568.851,-56.7071 619.551,-62.6886 653.843,-66.7342"/>
-<polygon fill="#000000" stroke="#000000" points="653.576,-70.227 663.918,-67.9229 654.397,-63.2752 653.576,-70.227"/>
-</g>
-<!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="proc~~dnrm2~~CalledByGraph_edge1" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
-<path fill="none" stroke="#000000" d="M538.403,-38.5987C546.657,-35.0346 555.9,-31.0434 564.665,-27.2584"/>
-<polygon fill="#000000" stroke="#000000" points="566.126,-30.4399 573.919,-23.2623 563.351,-24.0135 566.126,-30.4399"/>
-</g>
-<!-- proc~lsq&#45;&gt;proc~lsei -->
-<g id="proc~~dnrm2~~CalledByGraph_edge3" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
-<path fill="none" stroke="#000000" d="M358.403,-88C366.393,-88 375.311,-88 383.824,-88"/>
-<polygon fill="#000000" stroke="#000000" points="383.919,-91.5001 393.919,-88 383.919,-84.5001 383.919,-91.5001"/>
+<g id="proc~~dnrm2~~CalledByGraph_edge5" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
+<path fill="none" stroke="#000000" d="M268.403,-99.9993C276.481,-98.1634 285.507,-96.1121 294.105,-94.158"/>
+<polygon fill="#000000" stroke="#000000" points="294.943,-97.5568 303.919,-91.9275 293.392,-90.7308 294.943,-97.5568"/>
 </g>
 <!-- proc~slsqp -->
 <g id="proc~~dnrm2~~CalledByGraph_node7" class="node"><title>proc~slsqp</title>
 <g id="a_proc~~dnrm2~~CalledByGraph_node7"><a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
-<polygon fill="#d9534f" stroke="#d9534f" points="178,-120 124,-120 124,-96 178,-96 178,-120"/>
-<text text-anchor="middle" x="151" y="-105.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="178,-118 124,-118 124,-94 178,-94 178,-118"/>
+<text text-anchor="middle" x="151" y="-103.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqp&#45;&gt;proc~slsqpb -->
-<g id="proc~~dnrm2~~CalledByGraph_edge5" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
-<path fill="none" stroke="#000000" d="M178.403,-108C186.393,-108 195.311,-108 203.824,-108"/>
-<polygon fill="#000000" stroke="#000000" points="203.919,-111.5 213.919,-108 203.919,-104.5 203.919,-111.5"/>
+<g id="proc~~dnrm2~~CalledByGraph_edge2" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
+<path fill="none" stroke="#000000" d="M178.403,-106C186.393,-106 195.311,-106 203.824,-106"/>
+<polygon fill="#000000" stroke="#000000" points="203.919,-109.5 213.919,-106 203.919,-102.5 203.919,-109.5"/>
 </g>
 <!-- proc~slsqp_wrapper -->
 <g id="proc~~dnrm2~~CalledByGraph_node8" class="node"><title>proc~slsqp_wrapper</title>
 <g id="a_proc~~dnrm2~~CalledByGraph_node8"><a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
-<polygon fill="#d9534f" stroke="#d9534f" points="88,-120 7.10543e-15,-120 7.10543e-15,-96 88,-96 88,-120"/>
-<text text-anchor="middle" x="44" y="-105.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="88,-118 7.10543e-15,-118 7.10543e-15,-94 88,-94 88,-118"/>
+<text text-anchor="middle" x="44" y="-103.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
-<g id="proc~~dnrm2~~CalledByGraph_edge4" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
-<path fill="none" stroke="#000000" d="M88.0105,-108C96.5323,-108 105.399,-108 113.672,-108"/>
-<polygon fill="#000000" stroke="#000000" points="113.763,-111.5 123.763,-108 113.763,-104.5 113.763,-111.5"/>
+<g id="proc~~dnrm2~~CalledByGraph_edge1" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
+<path fill="none" stroke="#000000" d="M88.0105,-106C96.5323,-106 105.399,-106 113.672,-106"/>
+<polygon fill="#000000" stroke="#000000" points="113.763,-109.5 123.763,-106 113.763,-102.5 113.763,-109.5"/>
+</g>
+<!-- proc~lsq&#45;&gt;proc~lsei -->
+<g id="proc~~dnrm2~~CalledByGraph_edge6" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
+<path fill="none" stroke="#000000" d="M358.038,-86C374.827,-86 396.905,-86 415.441,-86"/>
+<polygon fill="#000000" stroke="#000000" points="415.598,-89.5001 425.598,-86 415.598,-82.5001 415.598,-89.5001"/>
 </g>
 </g>
 </svg>
@@ -664,7 +685,7 @@ public function dnrm2(n, x, incx)
         <span class="c">! auxiliary routine:</span>
         <span class="c">! call dlassq( n, x, incx, scale, ssq )</span>
         <span class="k">do </span><span class="n">ix</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">incx</span> <span class="p">,</span> <span class="n">incx</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="n">x</span><span class="p">(</span><span class="n">ix</span><span class="p">)</span><span class="o">/=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">ix</span><span class="p">))</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
 <span class="k">                </span><span class="n">absxi</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">ix</span><span class="p">))</span>
                 <span class="k">if</span> <span class="p">(</span> <span class="nb">scale</span><span class="o">&lt;</span><span class="n">absxi</span> <span class="p">)</span> <span class="k">then</span>
 <span class="k">                    </span><span class="n">ssq</span> <span class="o">=</span> <span class="n">one</span> <span class="o">+</span> <span class="n">ssq</span><span class="o">*</span><span class="p">(</span><span class="nb">scale</span><span class="o">/</span><span class="n">absxi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
@@ -697,6 +718,8 @@ public function dnrm2(n, x, incx)
   <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs-1">All Procedures</a></h3></div>
   <div id="allprocs-1" class="panel-collapse collapse">
     <div class="list-group">
+      
+      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
       
       <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
       
@@ -756,13 +779,19 @@ public function dnrm2(n, x, incx)
       
       <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
       
+      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
+      
       <a class="list-group-item" href="../proc/report_message.html">report_message</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
       
       <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
       
+      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
+      
       <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
+      
+      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
       
       <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
       
