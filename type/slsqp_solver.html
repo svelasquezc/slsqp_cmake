@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 
-	 <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
+   
+   <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
     
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
@@ -17,6 +17,9 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
     
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,13 +29,6 @@
     
     <script src="../js/jquery-2.1.3.min.js"></script>
     <script src="../js/svg-pan-zoom.min.js"></script>
-
-    
-    <script src="../tipuesearch/tipuesearch_content.js"></script>
-    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    <script src="../tipuesearch/tipuesearch_set.js"></script>
-    <script src="../tipuesearch/tipuesearch.js"></script>
-    
 
   </head>
 
@@ -52,35 +48,37 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-				
+        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
-		 aria-expanded="false">Contents <span class="caret"></span></a>
-	      <ul class="dropdown-menu">
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
               
             <li><a href="../lists/files.html">Source Files</a></li>
-				
-				
+        
+        
+        
             <li><a href="../lists/modules.html">Modules</a></li>
-				
+        
             
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
-				
-				
+        
+        
             <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-								
+               
             <li><a href="../lists/types.html">Derived Types</a></li>
-				
-				
-            <li><a href="../lists/programs.html">Programs</a></li>
-				
+        
+        
             </ul>
             </li>
 
+
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
@@ -94,8 +92,6 @@
                              
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
 
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
 
           </ul>
         
@@ -133,19 +129,23 @@
     
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
-	  data-placement="bottom" data-html="true"
-	  title="<p>43.6% of total for derived types.</p>Including implementation: 321 statements, 86.1% of total for derived types.">34 statements</a>
+    data-placement="bottom" data-html="true"
+    title="<p>43.6% of total for derived types.</p>Including implementation: 321 statements, 86.1% of total for derived types.">34 statements</a>
      </li> 
+     
      
      
     <li><i class="fa fa-code"></i><a href="../src/slsqp_module.f90"> Source File</a></li>
      
+     
   </ul>
   <ol class="breadcrumb in-well text-right">
   
+    
      <li><a href='../sourcefile/slsqp_module.f90.html'>slsqp_module.f90</a></li>
-  
+    
      <li><a href='../module/slsqp_module.html'>slsqp_module</a></li>
+    
   
      <li class="active">slsqp_solver</li>
   </ol>
@@ -165,6 +165,9 @@
     
 <div id="sidebar">
   
+<h3>Contents</h3>
+ 
+
 
 
 <div class="panel panel-primary">
@@ -240,6 +243,7 @@
 
 
 
+
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#boundprocs-0">Type-Bound Procedures</a></h3></div>
   <div id="boundprocs-0" class="panel-collapse collapse">
@@ -261,6 +265,7 @@
 
 
 
+
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
@@ -269,34 +274,22 @@
 </div>
 
 
-  <hr>
-  
 
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#alltypes-0">All Derived Types</a></h3></div>
-  <div id="alltypes-0" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../type/linmin_data.html">linmin_data</a>
-      
-      <a class="list-group-item" href="../type/slsqp_solver.html">slsqp_solver</a>
-      
-      <a class="list-group-item" href="../type/slsqpb_data.html">slsqpb_data</a>
-      
-    </div>
-  </div>
 </div>
-
-
-</div>  
 
     </div>
     
     <div class="col-md-9" id='text'>
       <h2>type, public :: slsqp_solver</h2>
+    <p>The main class used to interface with the SLSQP solver.</p>
+    <br>
     
-    
-                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Inherits</h3>
+      </div>
+      <div class="panel-body">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.38.0 (20140413.2041)
@@ -314,45 +307,35 @@
 </g>
 <!-- type~linmin_data -->
 <g id="type~~slsqp_solver~~InheritsGraph_node2" class="node"><title>type~linmin_data</title>
-<g id="a_type~~slsqp_solver~~InheritsGraph_node2"><a xlink:href="../type/linmin_data.html" xlink:title="linmin_data">
+<g id="a_type~~slsqp_solver~~InheritsGraph_node2"><a xlink:href=".././type/linmin_data.html" xlink:title="linmin_data">
 <polygon fill="#5cb85c" stroke="#5cb85c" points="72.5,-66 2.5,-66 2.5,-42 72.5,-42 72.5,-66"/>
 <text text-anchor="middle" x="37.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">linmin_data</text>
 </a>
 </g>
 </g>
-<!-- type~linmin_data&#45;&gt;type~slsqp_solver -->
-<g id="type~~slsqp_solver~~InheritsGraph_edge1" class="edge"><title>type~linmin_data&#45;&gt;type~slsqp_solver</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M72.5111,-48.9165C90.354,-46.2496 112.492,-42.9407 131.954,-40.0319"/>
-<polygon fill="#000000" stroke="#000000" points="132.477,-43.4926 141.85,-38.5527 131.442,-36.5695 132.477,-43.4926"/>
+<!-- type~slsqp_solver&#45;&gt;type~linmin_data -->
+<g id="type~~slsqp_solver~~InheritsGraph_edge1" class="edge"><title>type~slsqp_solver&#45;&gt;type~linmin_data</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M141.717,-38.5725C123.525,-41.2917 101.517,-44.581 82.505,-47.4227"/>
+<polygon fill="#000000" stroke="#000000" points="81.9567,-43.9657 72.584,-48.9056 82.9915,-50.8888 81.9567,-43.9657"/>
 <text text-anchor="middle" x="108.5" y="-47.4" font-family="Helvetica,sans-Serif" font-size="9.50">linmin</text>
 </g>
 <!-- type~slsqpb_data -->
 <g id="type~~slsqp_solver~~InheritsGraph_node3" class="node"><title>type~slsqpb_data</title>
-<g id="a_type~~slsqp_solver~~InheritsGraph_node3"><a xlink:href="../type/slsqpb_data.html" xlink:title="slsqpb_data">
-<polygon fill="#5cb85c" stroke="#5cb85c" points="75,-24 7.10543e-15,-24 7.10543e-15,-0 75,-0 75,-24"/>
+<g id="a_type~~slsqp_solver~~InheritsGraph_node3"><a xlink:href=".././type/slsqpb_data.html" xlink:title="slsqpb_data">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="75,-24 0,-24 0,-0 75,-0 75,-24"/>
 <text text-anchor="middle" x="37.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb_data</text>
 </a>
 </g>
 </g>
-<!-- type~slsqpb_data&#45;&gt;type~slsqp_solver -->
-<g id="type~~slsqp_solver~~InheritsGraph_edge2" class="edge"><title>type~slsqpb_data&#45;&gt;type~slsqp_solver</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M75.0479,-17.4627C92.336,-20.0467 113.193,-23.164 131.673,-25.9262"/>
-<polygon fill="#000000" stroke="#000000" points="131.249,-29.4017 141.657,-27.4185 132.284,-22.4786 131.249,-29.4017"/>
+<!-- type~slsqp_solver&#45;&gt;type~slsqpb_data -->
+<g id="type~~slsqp_solver~~InheritsGraph_edge2" class="edge"><title>type~slsqp_solver&#45;&gt;type~slsqpb_data</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M141.717,-27.4275C124.432,-24.8439 103.702,-21.7455 85.37,-19.0055"/>
+<polygon fill="#000000" stroke="#000000" points="85.8768,-15.5424 75.4693,-17.5257 84.842,-22.4655 85.8768,-15.5424"/>
 <text text-anchor="middle" x="108.5" y="-26.4" font-family="Helvetica,sans-Serif" font-size="9.50">slsqpb</text>
 </g>
 </g>
 </svg>
-</div>
-                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
-                      </div>
-                      <div class="modal-body">
-                        
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
     <p>Nodes of different colours represent the following: </p>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -379,25 +362,23 @@
 </svg>
 
     
-    <p>Solid arrows point from one derived type to another which extends
-    (inherits from) it. Dashed arrows point from a derived type to another
-    type containing it as a components, with a label listing the name(s) of
+    <p>Solid arrows point from a derived type to the parent type which it
+    extends. Dashed arrows point from a derived type to the other
+    types it contains as a components, with a label listing the name(s) of
     said component(s).
     </p>
+    </div></div></div></div>
+      </div>
+    </div>
     
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-    <br><br>
     
-    <p>The main class used to interface with the SLSQP solver.</p>
     <br>
-    
 
     <section class="visible-xs visible-sm hidden-md">
       
+<h3>Contents</h3>
+ 
+
 
 
 <div class="panel panel-primary">
@@ -473,6 +454,7 @@
 
 
 
+
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#boundprocs-1">Type-Bound Procedures</a></h3></div>
   <div id="boundprocs-1" class="panel-collapse collapse">
@@ -494,12 +476,14 @@
 
 
 
+
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
     <a class="list-group-item" href="../type/slsqp_solver.html#src">slsqp_solver</a>
   </div>
 </div>
+
 
 
     </section>
@@ -528,7 +512,7 @@
   
   <td>private</td>
   <td></td><td>::</td>
-  <td><strong>n</strong></td><td> =</td><td>0</td><td><p>number of optimization variables (\( n &gt; 0 \))</p></td>
+  <td><strong>n</strong></td><td> =</td><td>0</td><td><p>number of optimization variables (<script type="math/tex"> n > 0 </script>)</p></td>
   
 </tr>
 
@@ -542,7 +526,7 @@
   
   <td>private</td>
   <td></td><td>::</td>
-  <td><strong>m</strong></td><td> =</td><td>0</td><td><p>number of constraints (\( m \ge 0 \))</p></td>
+  <td><strong>m</strong></td><td> =</td><td>0</td><td><p>number of constraints (<script type="math/tex"> m \ge 0 </script>)</p></td>
   
 </tr>
 
@@ -556,7 +540,7 @@
   
   <td>private</td>
   <td></td><td>::</td>
-  <td><strong>meq</strong></td><td> =</td><td>0</td><td><p>number of equality constraints (\( m \ge m_{eq} \ge 0 \))</p></td>
+  <td><strong>meq</strong></td><td> =</td><td>0</td><td><p>number of equality constraints (<script type="math/tex"> m \ge m_{eq} \ge 0 </script>)</p></td>
   
 </tr>
 
@@ -598,7 +582,7 @@
   
   <td>private</td>
   <td></td><td>::</td>
-  <td><strong>tolf</strong></td><td> =</td><td>-one</td><td><p>accuracy tolerance over f:  if \( |f| &lt; tolf \) then stop</p></td>
+  <td><strong>tolf</strong></td><td> =</td><td>-one</td><td><p>accuracy tolerance over f:  if <script type="math/tex"> |f| < tolf </script> then stop</p></td>
   
 </tr>
 
@@ -612,7 +596,7 @@
   
   <td>private</td>
   <td></td><td>::</td>
-  <td><strong>toldf</strong></td><td> =</td><td>-one</td><td><p>accuracy tolerance over df: if \( |f_{n+1} - f_n| &lt; toldf \) then stop.
+  <td><strong>toldf</strong></td><td> =</td><td>-one</td><td><p>accuracy tolerance over df: if <script type="math/tex"> |f_{n+1} - f_n| < toldf </script> then stop.
  It's different from <code>acc</code> in the case of positive derivative</p></td>
   
 </tr>
@@ -627,7 +611,7 @@
   
   <td>private</td>
   <td></td><td>::</td>
-  <td><strong>toldx</strong></td><td> =</td><td>-one</td><td><p>accuracy tolerance over xf: if \( |x_{n+1} - x_n| &lt; toldx \) then stop</p></td>
+  <td><strong>toldx</strong></td><td> =</td><td>-one</td><td><p>accuracy tolerance over xf: if <script type="math/tex"> |x_{n+1} - x_n| < toldx </script> then stop</p></td>
   
 </tr>
 
@@ -676,7 +660,8 @@
   
   <td>private</td>
   <td></td><td>::</td>
-  <td><strong>alphamin</strong></td><td> =</td><td>0.1_wp</td><td><p>min \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</p></td>
+  <td><strong>alphamin</strong></td><td> =</td><td>0.1_wp</td><td><p>min <script type="math/tex"> \alpha </script> for line search <script type="math/tex"> 0 < \alpha_{min} < \alpha_{max} \le 1 </script>
+</p></td>
   
 </tr>
 
@@ -690,7 +675,8 @@
   
   <td>private</td>
   <td></td><td>::</td>
-  <td><strong>alphamax</strong></td><td> =</td><td>1.0_wp</td><td><p>max \( \alpha \) for line search \( 0 &lt; \alpha_{min} &lt; \alpha_{max} \le 1 \)</p></td>
+  <td><strong>alphamax</strong></td><td> =</td><td>1.0_wp</td><td><p>max <script type="math/tex"> \alpha </script> for line search <script type="math/tex"> 0 < \alpha_{min} < \alpha_{max} \le 1 </script>
+</p></td>
   
 </tr>
 
@@ -883,7 +869,7 @@
     <section>
     <h2>Type-Bound Procedures</h2>
     
-	   
+     
 <div class="panel panel-default">
   <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-initialize"></span><h3>procedure, public :: <strong>initialize</strong>  => <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a> 
     
@@ -893,13 +879,14 @@
     
       <li class="list-group-item">
       
-         
+        
+          
     
     <h3>
 private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report, alphamin, alphamax, gradient_mode, gradient_delta, tolf, toldf, toldx)
     
     
-	 
+   
 </h3>
     
 
@@ -950,7 +937,8 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>n</strong></td><td><p>the number of variables, \( n \ge 1 \)</p></td>
+  <td><strong>n</strong></td><td><p>the number of variables, <script type="math/tex"> n \ge 1 </script>
+</p></td>
   
 </tr>
 
@@ -965,7 +953,8 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>m</strong></td><td><p>total number of constraints, \( m \ge 0 \)</p></td>
+  <td><strong>m</strong></td><td><p>total number of constraints, <script type="math/tex"> m \ge 0 </script>
+</p></td>
   
 </tr>
 
@@ -980,7 +969,8 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>meq</strong></td><td><p>number of equality constraints, \( m_{eq} \ge 0 \)</p></td>
+  <td><strong>meq</strong></td><td><p>number of equality constraints, <script type="math/tex"> m_{eq} \ge 0 </script>
+</p></td>
   
 </tr>
 
@@ -1176,7 +1166,7 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td>optional</td>
   
   <td></td><td>::</td>
-  <td><strong>gradient_mode</strong></td><td><p>how the gradients are to be computed:</p></td>
+  <td><strong>gradient_mode</strong></td><td><p>how the gradients are to be computed:</p><a href="None" class="pull-right"><emph>Read more&hellip;</emph></a></td>
   
 </tr>
 
@@ -1209,7 +1199,7 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td>optional</td>
   
   <td></td><td>::</td>
-  <td><strong>tolf</strong></td><td><p>stopping criterion if \( |f| &lt; tolf \) then stop.</p></td>
+  <td><strong>tolf</strong></td><td><p>stopping criterion if <script type="math/tex"> |f| < tolf </script> then stop.</p></td>
   
 </tr>
 
@@ -1224,7 +1214,7 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td>optional</td>
   
   <td></td><td>::</td>
-  <td><strong>toldf</strong></td><td><p>stopping criterion if \( |f_{n+1} - f_n| &lt; toldf \) then stop</p></td>
+  <td><strong>toldf</strong></td><td><p>stopping criterion if <script type="math/tex"> |f_{n+1} - f_n| < toldf </script> then stop</p></td>
   
 </tr>
 
@@ -1239,7 +1229,7 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   <td>optional</td>
   
   <td></td><td>::</td>
-  <td><strong>toldx</strong></td><td><p>stopping criterion if \( ||x_{n+1} - x_n|| &lt; toldx \) then stop</p></td>
+  <td><strong>toldx</strong></td><td><p>stopping criterion if <script type="math/tex"> ||x_{n+1} - x_n|| < toldx </script> then stop</p></td>
   
 </tr>
 
@@ -1250,6 +1240,7 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
     
     
 
+        
       
       </li>
     
@@ -1257,7 +1248,7 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
 </div>
 
     
-	   
+     
 <div class="panel panel-default">
   <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-destroy"></span><h3>procedure, public :: <strong>destroy</strong>  => <a href='../proc/destroy_slsqp.html'>destroy_slsqp</a> 
     
@@ -1267,13 +1258,14 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
     
       <li class="list-group-item">
       
-         
+        
+          
     
     <h3>
 private subroutine <a href='../proc/destroy_slsqp.html'>destroy_slsqp</a>(me)
     
     
-	 
+   
 </h3>
     
 
@@ -1320,6 +1312,7 @@ private subroutine <a href='../proc/destroy_slsqp.html'>destroy_slsqp</a>(me)
     
     
 
+        
       
       </li>
     
@@ -1327,7 +1320,7 @@ private subroutine <a href='../proc/destroy_slsqp.html'>destroy_slsqp</a>(me)
 </div>
 
     
-	   
+     
 <div class="panel panel-default">
   <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-optimize"></span><h3>procedure, public :: <strong>optimize</strong>  => <a href='../proc/slsqp_wrapper.html'>slsqp_wrapper</a> 
     
@@ -1337,13 +1330,14 @@ private subroutine <a href='../proc/destroy_slsqp.html'>destroy_slsqp</a>(me)
     
       <li class="list-group-item">
       
-         
+        
+          
     
     <h3>
 private subroutine <a href='../proc/slsqp_wrapper.html'>slsqp_wrapper</a>(me, x, istat, iterations, status_message)
     
     
-	 
+   
 </h3>
     
 
@@ -1452,6 +1446,7 @@ private subroutine <a href='../proc/slsqp_wrapper.html'>slsqp_wrapper</a>(me, x,
     
     
 
+        
       
       </li>
     
@@ -1459,7 +1454,7 @@ private subroutine <a href='../proc/slsqp_wrapper.html'>slsqp_wrapper</a>(me, x,
 </div>
 
     
-	   
+     
 <div class="panel panel-default">
   <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-abort"></span><h3>procedure, public :: <strong>abort</strong>  => <a href='../proc/stop_iterations.html'>stop_iterations</a> 
     
@@ -1469,13 +1464,14 @@ private subroutine <a href='../proc/slsqp_wrapper.html'>slsqp_wrapper</a>(me, x,
     
       <li class="list-group-item">
       
-         
+        
+          
     
     <h3>
 private subroutine <a href='../proc/stop_iterations.html'>stop_iterations</a>(me)
     
     
-	 
+   
 </h3>
     
 
@@ -1524,6 +1520,7 @@ private subroutine <a href='../proc/stop_iterations.html'>stop_iterations</a>(me
     
     
 
+        
       
       </li>
     
@@ -1531,7 +1528,7 @@ private subroutine <a href='../proc/stop_iterations.html'>stop_iterations</a>(me
 </div>
 
     
-	   
+     
 <div class="panel panel-default">
   <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-report_message"></span><h3>procedure, private :: <strong>report_message</strong>  
     
@@ -1548,13 +1545,14 @@ private subroutine <a href='../proc/stop_iterations.html'>stop_iterations</a>(me
     
       <li class="list-group-item">
       
-         
+        
+          
     
     <h3>
 private subroutine <a href='../proc/report_message.html'>report_message</a>(me, str, ival, rval, fatal)
     
     
-	 
+   
 </h3>
     
 
@@ -1663,6 +1661,7 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
     
     
 
+        
       
       </li>
     
@@ -1675,7 +1674,7 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
     
     
     <section>
-    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
     <div class="highlight"><pre><span></span>    <span class="k">type</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">slsqp_solver</span>
 
         <span class="c">!! The main class used to interface with the SLSQP solver.</span>
@@ -1748,34 +1747,14 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
     </div>
   </div>
 
-  <section class="visible-xs visible-sm hidden-md">
-    <hr>
-    
-
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#alltypes-1">All Derived Types</a></h3></div>
-  <div id="alltypes-1" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../type/linmin_data.html">linmin_data</a>
-      
-      <a class="list-group-item" href="../type/slsqp_solver.html">slsqp_solver</a>
-      
-      <a class="list-group-item" href="../type/slsqpb_data.html">slsqpb_data</a>
-      
-    </div>
-  </div>
-</div>
-
-
-  </section>
 
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+                                          </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 
@@ -1806,12 +1785,17 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
       MathJax.Hub.Config({
         TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
         jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
-        'HTML-CSS': { 
-           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
-        }
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
   </body>
 </html>

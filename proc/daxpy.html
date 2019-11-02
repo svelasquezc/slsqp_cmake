@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 
-	 <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
+   
+   <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
     
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
@@ -17,6 +17,9 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
     
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,13 +29,6 @@
     
     <script src="../js/jquery-2.1.3.min.js"></script>
     <script src="../js/svg-pan-zoom.min.js"></script>
-
-    
-    <script src="../tipuesearch/tipuesearch_content.js"></script>
-    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    <script src="../tipuesearch/tipuesearch_set.js"></script>
-    <script src="../tipuesearch/tipuesearch.js"></script>
-    
 
   </head>
 
@@ -52,35 +48,37 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-				
+        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
-		 aria-expanded="false">Contents <span class="caret"></span></a>
-	      <ul class="dropdown-menu">
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
               
             <li><a href="../lists/files.html">Source Files</a></li>
-				
-				
+        
+        
+        
             <li><a href="../lists/modules.html">Modules</a></li>
-				
+        
             
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
-				
-				
+        
+        
             <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-								
+               
             <li><a href="../lists/types.html">Derived Types</a></li>
-				
-				
-            <li><a href="../lists/programs.html">Programs</a></li>
-				
+        
+        
             </ul>
             </li>
 
+
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
@@ -94,8 +92,6 @@
                              
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
 
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
 
           </ul>
         
@@ -133,19 +129,23 @@
     
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
-	  data-placement="bottom" data-html="true"
-	  title=" 1.8% of total for procedures.">33 statements</a>
+    data-placement="bottom" data-html="true"
+    title=" 2.0% of total for procedures.">33 statements</a>
      </li> 
+     
      
      
     <li><i class="fa fa-code"></i><a href="../src/slsqp_support.f90"> Source File</a></li>
      
+     
   </ul>
   <ol class="breadcrumb in-well text-right">
   
+    
      <li><a href='../sourcefile/slsqp_support.f90.html'>slsqp_support.f90</a></li>
-  
+    
      <li><a href='../module/slsqp_support.html'>slsqp_support</a></li>
+    
   
      <li class="active">daxpy</li>
   </ol>
@@ -165,6 +165,9 @@
     
 <div id="sidebar">
   
+<h3>Contents</h3>
+ 
+
 
 
 
@@ -193,106 +196,8 @@
 </div>
 
 
-  <hr>
-  
 
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs-0">All Procedures</a></h3></div>
-  <div id="allprocs-0" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
-      
-      <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
-      
-      <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
-      
-      <a class="list-group-item" href="../proc/ddot.html">ddot</a>
-      
-      <a class="list-group-item" href="../proc/destroy_linmin_data.html">destroy_linmin_data</a>
-      
-      <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
-      
-      <a class="list-group-item" href="../proc/destroy_slsqpb_data.html">destroy_slsqpb_data</a>
-      
-      <a class="list-group-item" href="../proc/diff.html">diff</a>
-      
-      <a class="list-group-item" href="../proc/dnrm2.html">dnrm2</a>
-      
-      <a class="list-group-item" href="../proc/dscal.html">dscal</a>
-      
-      <a class="list-group-item" href="../proc/dummy_grad.html">dummy_grad</a>
-      
-      <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
-      
-      <a class="list-group-item" href="../proc/func.html">func</a>
-      
-      <a class="list-group-item" href="../proc/g1.html">g1</a>
-      
-      <a class="list-group-item" href="../proc/grad.html">grad</a>
-      
-      <a class="list-group-item" href="../proc/h12.html">h12</a>
-      
-      <a class="list-group-item" href="../proc/hfti.html">hfti</a>
-      
-      <a class="list-group-item" href="../proc/initialize_slsqp.html">initialize_slsqp</a>
-      
-      <a class="list-group-item" href="../proc/ldl.html">ldl</a>
-      
-      <a class="list-group-item" href="../proc/ldp.html">ldp</a>
-      
-      <a class="list-group-item" href="../proc/linmin.html">linmin</a>
-      
-      <a class="list-group-item" href="../proc/lsei.html">lsei</a>
-      
-      <a class="list-group-item" href="../proc/lsi.html">lsi</a>
-      
-      <a class="list-group-item" href="../proc/lsq.html">lsq</a>
-      
-      <a class="list-group-item" href="../proc/mode_to_status_message.html">mode_to_status_message</a>
-      
-      <a class="list-group-item" href="../proc/nnls.html">nnls</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_message.html">report_message</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
-      
-      <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
-      
-      <a class="list-group-item" href="../proc/slsqp_wrapper.html">slsqp_wrapper</a>
-      
-      <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
-      
-      <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
-      
-      <a class="list-group-item" href="../proc/test_func.html">test_func</a>
-      
-      <a class="list-group-item" href="../proc/test_grad.html">test_grad</a>
-      
-    </div>
-  </div>
 </div>
-
-
-</div>  
 
     </div>
     
@@ -301,7 +206,7 @@
 public subroutine daxpy(n, da, dx, incx, dy, incy)
     
     
-	 
+   
 </h2>
     
   
@@ -422,145 +327,60 @@ public subroutine daxpy(n, da, dx, incx, dy, incy)
     
     
     
+    <br>
+    
+    
      
-     <h3>Called By</h3>
-     
-                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Called by</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.38.0 (20140413.2041)
  -->
 <!-- Title: proc~~daxpy~~CalledByGraph Pages: 1 -->
-<svg id="procdaxpyCalledByGraph" width="641pt" height="87pt"
- viewBox="0.00 0.00 641.00 86.53" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="proc~~daxpy~~CalledByGraph" class="graph" transform="scale(0.88292 0.88292) rotate(0) translate(4 94)">
+<svg id="procdaxpyCalledByGraph" width="152pt" height="74pt"
+ viewBox="0.00 0.00 152.00 74.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~daxpy~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 70)">
 <title>proc~~daxpy~~CalledByGraph</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-94 722,-94 722,4 -4,4"/>
+<polygon fill="white" stroke="none" points="-4,4 -4,-70 148,-70 148,4 -4,4"/>
 <!-- proc~daxpy -->
 <g id="proc~~daxpy~~CalledByGraph_node1" class="node"><title>proc~daxpy</title>
-<polygon fill="none" stroke="black" points="718,-64 664,-64 664,-40 718,-40 718,-64"/>
-<text text-anchor="middle" x="691" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50">daxpy</text>
+<polygon fill="none" stroke="black" points="144,-45 90,-45 90,-21 144,-21 144,-45"/>
+<text text-anchor="middle" x="117" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50">daxpy</text>
 </g>
 <!-- proc~slsqpb -->
 <g id="proc~~daxpy~~CalledByGraph_node2" class="node"><title>proc~slsqpb</title>
-<g id="a_proc~~daxpy~~CalledByGraph_node2"><a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
-<polygon fill="#d9534f" stroke="#d9534f" points="268,-82 214,-82 214,-58 268,-58 268,-82"/>
-<text text-anchor="middle" x="241" y="-67.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
+<g id="a_proc~~daxpy~~CalledByGraph_node2"><a xlink:href=".././proc/slsqpb.html" xlink:title="slsqpb">
+<polygon fill="#d9534f" stroke="#d9534f" points="54,-66 0,-66 0,-42 54,-42 54,-66"/>
+<text text-anchor="middle" x="27" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~daxpy -->
-<g id="proc~~daxpy~~CalledByGraph_edge7" class="edge"><title>proc~slsqpb&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M268.136,-74.7905C302.744,-80.7073 365.735,-90 420,-90 420,-90 420,-90 512,-90 562.043,-90 618.29,-75.4577 653.914,-64.3654"/>
-<polygon fill="#000000" stroke="#000000" points="655.373,-67.5738 663.835,-61.1987 653.244,-60.9053 655.373,-67.5738"/>
-</g>
-<!-- proc~lsq -->
-<g id="proc~~daxpy~~CalledByGraph_node8" class="node"><title>proc~lsq</title>
-<g id="a_proc~~daxpy~~CalledByGraph_node8"><a xlink:href="../proc/lsq.html" xlink:title="lsq">
-<polygon fill="#d9534f" stroke="#d9534f" points="358,-62 304,-62 304,-38 358,-38 358,-62"/>
-<text text-anchor="middle" x="331" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~lsq -->
-<g id="proc~~daxpy~~CalledByGraph_edge4" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
-<path fill="none" stroke="#000000" d="M268.403,-63.9993C276.481,-62.1634 285.507,-60.1121 294.105,-58.158"/>
-<polygon fill="#000000" stroke="#000000" points="294.943,-61.5568 303.919,-55.9275 293.392,-54.7308 294.943,-61.5568"/>
-</g>
-<!-- proc~ldp -->
-<g id="proc~~daxpy~~CalledByGraph_node3" class="node"><title>proc~ldp</title>
-<g id="a_proc~~daxpy~~CalledByGraph_node3"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
-<polygon fill="#d9534f" stroke="#d9534f" points="628,-24 574,-24 574,-0 628,-0 628,-24"/>
-<text text-anchor="middle" x="601" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
-</a>
-</g>
-</g>
-<!-- proc~ldp&#45;&gt;proc~daxpy -->
-<g id="proc~~daxpy~~CalledByGraph_edge8" class="edge"><title>proc~ldp&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M628.403,-24.0013C636.657,-27.753 645.9,-31.9543 654.665,-35.9385"/>
-<polygon fill="#000000" stroke="#000000" points="653.367,-39.1932 663.919,-40.145 656.264,-32.8206 653.367,-39.1932"/>
+<g id="proc~~daxpy~~CalledByGraph_edge1" class="edge"><title>proc~slsqpb&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M54.4029,-47.6993C62.481,-45.7716 71.5067,-43.6177 80.1046,-41.5659"/>
+<polygon fill="#000000" stroke="#000000" points="81.0046,-44.9495 89.919,-39.2239 79.3797,-38.1407 81.0046,-44.9495"/>
 </g>
 <!-- proc~lsi -->
-<g id="proc~~daxpy~~CalledByGraph_node4" class="node"><title>proc~lsi</title>
-<g id="a_proc~~daxpy~~CalledByGraph_node4"><a xlink:href="../proc/lsi.html" xlink:title="lsi">
-<polygon fill="#d9534f" stroke="#d9534f" points="538,-62 484,-62 484,-38 538,-38 538,-62"/>
-<text text-anchor="middle" x="511" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
+<g id="proc~~daxpy~~CalledByGraph_node3" class="node"><title>proc~lsi</title>
+<g id="a_proc~~daxpy~~CalledByGraph_node3"><a xlink:href=".././proc/lsi.html" xlink:title="lsi">
+<polygon fill="#d9534f" stroke="#d9534f" points="54,-24 0,-24 0,-0 54,-0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
 </a>
 </g>
 </g>
 <!-- proc~lsi&#45;&gt;proc~daxpy -->
-<g id="proc~~daxpy~~CalledByGraph_edge9" class="edge"><title>proc~lsi&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M538.265,-50.2951C568.851,-50.6388 619.551,-51.2084 653.843,-51.5937"/>
-<polygon fill="#000000" stroke="#000000" points="653.879,-55.0943 663.918,-51.7069 653.958,-48.0947 653.879,-55.0943"/>
-</g>
-<!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="proc~~daxpy~~CalledByGraph_edge3" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
-<path fill="none" stroke="#000000" d="M538.403,-38.5987C546.657,-35.0346 555.9,-31.0434 564.665,-27.2584"/>
-<polygon fill="#000000" stroke="#000000" points="566.126,-30.4399 573.919,-23.2623 563.351,-24.0135 566.126,-30.4399"/>
-</g>
-<!-- proc~slsqp -->
-<g id="proc~~daxpy~~CalledByGraph_node5" class="node"><title>proc~slsqp</title>
-<g id="a_proc~~daxpy~~CalledByGraph_node5"><a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
-<polygon fill="#d9534f" stroke="#d9534f" points="178,-82 124,-82 124,-58 178,-58 178,-82"/>
-<text text-anchor="middle" x="151" y="-67.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqp&#45;&gt;proc~slsqpb -->
-<g id="proc~~daxpy~~CalledByGraph_edge2" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
-<path fill="none" stroke="#000000" d="M178.403,-70C186.393,-70 195.311,-70 203.824,-70"/>
-<polygon fill="#000000" stroke="#000000" points="203.919,-73.5001 213.919,-70 203.919,-66.5001 203.919,-73.5001"/>
-</g>
-<!-- proc~slsqp_wrapper -->
-<g id="proc~~daxpy~~CalledByGraph_node6" class="node"><title>proc~slsqp_wrapper</title>
-<g id="a_proc~~daxpy~~CalledByGraph_node6"><a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
-<polygon fill="#d9534f" stroke="#d9534f" points="88,-82 7.10543e-15,-82 7.10543e-15,-58 88,-58 88,-82"/>
-<text text-anchor="middle" x="44" y="-67.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
-<g id="proc~~daxpy~~CalledByGraph_edge1" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
-<path fill="none" stroke="#000000" d="M88.0105,-70C96.5323,-70 105.399,-70 113.672,-70"/>
-<polygon fill="#000000" stroke="#000000" points="113.763,-73.5001 123.763,-70 113.763,-66.5001 113.763,-73.5001"/>
-</g>
-<!-- proc~lsei -->
-<g id="proc~~daxpy~~CalledByGraph_node7" class="node"><title>proc~lsei</title>
-<g id="a_proc~~daxpy~~CalledByGraph_node7"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
-<polygon fill="#d9534f" stroke="#d9534f" points="448,-62 394,-62 394,-38 448,-38 448,-62"/>
-<text text-anchor="middle" x="421" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
-</a>
-</g>
-</g>
-<!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="proc~~daxpy~~CalledByGraph_edge6" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
-<path fill="none" stroke="#000000" d="M448.403,-50C456.393,-50 465.311,-50 473.824,-50"/>
-<polygon fill="#000000" stroke="#000000" points="473.919,-53.5001 483.919,-50 473.919,-46.5001 473.919,-53.5001"/>
-</g>
-<!-- proc~lsq&#45;&gt;proc~lsei -->
-<g id="proc~~daxpy~~CalledByGraph_edge5" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
-<path fill="none" stroke="#000000" d="M358.403,-50C366.393,-50 375.311,-50 383.824,-50"/>
-<polygon fill="#000000" stroke="#000000" points="383.919,-53.5001 393.919,-50 383.919,-46.5001 383.919,-53.5001"/>
+<g id="proc~~daxpy~~CalledByGraph_edge2" class="edge"><title>proc~lsi&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M54.4029,-18.3007C62.481,-20.2284 71.5067,-22.3823 80.1046,-24.4341"/>
+<polygon fill="#000000" stroke="#000000" points="79.3797,-27.8593 89.919,-26.7761 81.0046,-21.0505 79.3797,-27.8593"/>
 </g>
 </g>
 </svg>
-</div>
-                <script>var panprocdaxpyCalledByGraph = svgPanZoom('#procdaxpyCalledByGraph', {
-                    zoomEnabled: true,
-                    controlIconsEnabled: true,
-                    fit: true,
-                    center: true,});
-                    </script>
-                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
-                      </div>
-                      <div class="modal-body">
-                        
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
     <p>Nodes of different colours represent the following: </p>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -612,17 +432,17 @@ public subroutine daxpy(n, da, dx, incx, dy, incy)
     This could include the module procedures in a generic interface or the
     implementation in a submodule of an interface in a parent module.
     </p>
-    
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+    </div></div></div></div>
+      </div>
+    </div>
      
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
       
+<h3>Contents</h3>
+ 
+
 
 
 
@@ -649,6 +469,7 @@ public subroutine daxpy(n, da, dx, incx, dy, incy)
     <a class="list-group-item" href="../proc/daxpy.html#src">daxpy</a>
   </div>
 </div>
+
 
 
     </section>
@@ -731,114 +552,14 @@ public subroutine daxpy(n, da, dx, incx, dy, incy)
     </div>
   </div>
 
-  <section class="visible-xs visible-sm hidden-md">
-    <hr>
-    
-
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs-1">All Procedures</a></h3></div>
-  <div id="allprocs-1" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
-      
-      <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
-      
-      <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
-      
-      <a class="list-group-item" href="../proc/ddot.html">ddot</a>
-      
-      <a class="list-group-item" href="../proc/destroy_linmin_data.html">destroy_linmin_data</a>
-      
-      <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
-      
-      <a class="list-group-item" href="../proc/destroy_slsqpb_data.html">destroy_slsqpb_data</a>
-      
-      <a class="list-group-item" href="../proc/diff.html">diff</a>
-      
-      <a class="list-group-item" href="../proc/dnrm2.html">dnrm2</a>
-      
-      <a class="list-group-item" href="../proc/dscal.html">dscal</a>
-      
-      <a class="list-group-item" href="../proc/dummy_grad.html">dummy_grad</a>
-      
-      <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
-      
-      <a class="list-group-item" href="../proc/func.html">func</a>
-      
-      <a class="list-group-item" href="../proc/g1.html">g1</a>
-      
-      <a class="list-group-item" href="../proc/grad.html">grad</a>
-      
-      <a class="list-group-item" href="../proc/h12.html">h12</a>
-      
-      <a class="list-group-item" href="../proc/hfti.html">hfti</a>
-      
-      <a class="list-group-item" href="../proc/initialize_slsqp.html">initialize_slsqp</a>
-      
-      <a class="list-group-item" href="../proc/ldl.html">ldl</a>
-      
-      <a class="list-group-item" href="../proc/ldp.html">ldp</a>
-      
-      <a class="list-group-item" href="../proc/linmin.html">linmin</a>
-      
-      <a class="list-group-item" href="../proc/lsei.html">lsei</a>
-      
-      <a class="list-group-item" href="../proc/lsi.html">lsi</a>
-      
-      <a class="list-group-item" href="../proc/lsq.html">lsq</a>
-      
-      <a class="list-group-item" href="../proc/mode_to_status_message.html">mode_to_status_message</a>
-      
-      <a class="list-group-item" href="../proc/nnls.html">nnls</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_message.html">report_message</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
-      
-      <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
-      
-      <a class="list-group-item" href="../proc/slsqp_wrapper.html">slsqp_wrapper</a>
-      
-      <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
-      
-      <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
-      
-      <a class="list-group-item" href="../proc/test_func.html">test_func</a>
-      
-      <a class="list-group-item" href="../proc/test_grad.html">test_grad</a>
-      
-    </div>
-  </div>
-</div>
-
-
-  </section>
 
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+                                          </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 
@@ -869,12 +590,17 @@ public subroutine daxpy(n, da, dx, incx, dy, incy)
       MathJax.Hub.Config({
         TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
         jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
-        'HTML-CSS': { 
-           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
-        }
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
   </body>
 </html>

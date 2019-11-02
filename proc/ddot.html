@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 
-	 <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
+   
+   <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
     
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
@@ -17,6 +17,9 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
     
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,13 +29,6 @@
     
     <script src="../js/jquery-2.1.3.min.js"></script>
     <script src="../js/svg-pan-zoom.min.js"></script>
-
-    
-    <script src="../tipuesearch/tipuesearch_content.js"></script>
-    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    <script src="../tipuesearch/tipuesearch_set.js"></script>
-    <script src="../tipuesearch/tipuesearch.js"></script>
-    
 
   </head>
 
@@ -52,35 +48,37 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-				
+        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
-		 aria-expanded="false">Contents <span class="caret"></span></a>
-	      <ul class="dropdown-menu">
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
               
             <li><a href="../lists/files.html">Source Files</a></li>
-				
-				
+        
+        
+        
             <li><a href="../lists/modules.html">Modules</a></li>
-				
+        
             
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
-				
-				
+        
+        
             <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-								
+               
             <li><a href="../lists/types.html">Derived Types</a></li>
-				
-				
-            <li><a href="../lists/programs.html">Programs</a></li>
-				
+        
+        
             </ul>
             </li>
 
+
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
@@ -94,8 +92,6 @@
                              
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
 
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
 
           </ul>
         
@@ -133,19 +129,23 @@
     
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
-	  data-placement="bottom" data-html="true"
-	  title=" 1.9% of total for procedures.">36 statements</a>
+    data-placement="bottom" data-html="true"
+    title=" 2.1% of total for procedures.">36 statements</a>
      </li> 
+     
      
      
     <li><i class="fa fa-code"></i><a href="../src/slsqp_support.f90"> Source File</a></li>
      
+     
   </ul>
   <ol class="breadcrumb in-well text-right">
   
+    
      <li><a href='../sourcefile/slsqp_support.f90.html'>slsqp_support.f90</a></li>
-  
+    
      <li><a href='../module/slsqp_support.html'>slsqp_support</a></li>
+    
   
      <li class="active">ddot</li>
   </ol>
@@ -165,6 +165,9 @@
     
 <div id="sidebar">
   
+<h3>Contents</h3>
+ 
+
 
 
 
@@ -193,106 +196,8 @@
 </div>
 
 
-  <hr>
-  
 
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs-0">All Procedures</a></h3></div>
-  <div id="allprocs-0" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
-      
-      <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
-      
-      <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
-      
-      <a class="list-group-item" href="../proc/ddot.html">ddot</a>
-      
-      <a class="list-group-item" href="../proc/destroy_linmin_data.html">destroy_linmin_data</a>
-      
-      <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
-      
-      <a class="list-group-item" href="../proc/destroy_slsqpb_data.html">destroy_slsqpb_data</a>
-      
-      <a class="list-group-item" href="../proc/diff.html">diff</a>
-      
-      <a class="list-group-item" href="../proc/dnrm2.html">dnrm2</a>
-      
-      <a class="list-group-item" href="../proc/dscal.html">dscal</a>
-      
-      <a class="list-group-item" href="../proc/dummy_grad.html">dummy_grad</a>
-      
-      <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
-      
-      <a class="list-group-item" href="../proc/func.html">func</a>
-      
-      <a class="list-group-item" href="../proc/g1.html">g1</a>
-      
-      <a class="list-group-item" href="../proc/grad.html">grad</a>
-      
-      <a class="list-group-item" href="../proc/h12.html">h12</a>
-      
-      <a class="list-group-item" href="../proc/hfti.html">hfti</a>
-      
-      <a class="list-group-item" href="../proc/initialize_slsqp.html">initialize_slsqp</a>
-      
-      <a class="list-group-item" href="../proc/ldl.html">ldl</a>
-      
-      <a class="list-group-item" href="../proc/ldp.html">ldp</a>
-      
-      <a class="list-group-item" href="../proc/linmin.html">linmin</a>
-      
-      <a class="list-group-item" href="../proc/lsei.html">lsei</a>
-      
-      <a class="list-group-item" href="../proc/lsi.html">lsi</a>
-      
-      <a class="list-group-item" href="../proc/lsq.html">lsq</a>
-      
-      <a class="list-group-item" href="../proc/mode_to_status_message.html">mode_to_status_message</a>
-      
-      <a class="list-group-item" href="../proc/nnls.html">nnls</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_message.html">report_message</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
-      
-      <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
-      
-      <a class="list-group-item" href="../proc/slsqp_wrapper.html">slsqp_wrapper</a>
-      
-      <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
-      
-      <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
-      
-      <a class="list-group-item" href="../proc/test_func.html">test_func</a>
-      
-      <a class="list-group-item" href="../proc/test_grad.html">test_grad</a>
-      
-    </div>
-  </div>
 </div>
-
-
-</div>  
 
     </div>
     
@@ -301,7 +206,7 @@
 public function ddot(n, dx, incx, dy, incy)
     
     
-	 
+   
 </h2>
     
   
@@ -411,160 +316,114 @@ public function ddot(n, dx, incx, dy, incy)
     
     
     
-	 <h3>Return Value <small><span class="anchor" id="variable-ddot"></span>real(kind=wp)
+   <h3>Return Value <small><span class="anchor" id="variable-ddot"></span>real(kind=wp)
   </small></h3>
     
     
     
+    <br>
+    
+    
      
-     <h3>Called By</h3>
-     
-                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Called by</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.38.0 (20140413.2041)
  -->
 <!-- Title: proc~~ddot~~CalledByGraph Pages: 1 -->
-<svg id="procddotCalledByGraph" width="641pt" height="154pt"
- viewBox="0.00 0.00 641.00 153.63" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="proc~~ddot~~CalledByGraph" class="graph" transform="scale(0.88292 0.88292) rotate(0) translate(4 170)">
+<svg id="procddotCalledByGraph" width="242pt" height="174pt"
+ viewBox="0.00 0.00 242.00 174.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~ddot~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 170)">
 <title>proc~~ddot~~CalledByGraph</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-170 722,-170 722,4 -4,4"/>
+<polygon fill="white" stroke="none" points="-4,4 -4,-170 238,-170 238,4 -4,4"/>
 <!-- proc~ddot -->
 <g id="proc~~ddot~~CalledByGraph_node1" class="node"><title>proc~ddot</title>
-<polygon fill="none" stroke="black" points="718,-102 664,-102 664,-78 718,-78 718,-102"/>
-<text text-anchor="middle" x="691" y="-87.6" font-family="Helvetica,sans-Serif" font-size="10.50">ddot</text>
+<polygon fill="none" stroke="black" points="234,-104 180,-104 180,-80 234,-80 234,-104"/>
+<text text-anchor="middle" x="207" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50">ddot</text>
 </g>
 <!-- proc~ldp -->
 <g id="proc~~ddot~~CalledByGraph_node2" class="node"><title>proc~ldp</title>
-<g id="a_proc~~ddot~~CalledByGraph_node2"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
-<polygon fill="#d9534f" stroke="#d9534f" points="628,-24 574,-24 574,-0 628,-0 628,-24"/>
-<text text-anchor="middle" x="601" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
+<g id="a_proc~~ddot~~CalledByGraph_node2"><a xlink:href=".././proc/ldp.html" xlink:title="ldp">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-146 90,-146 90,-122 144,-122 144,-146"/>
+<text text-anchor="middle" x="117" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
 </a>
 </g>
 </g>
 <!-- proc~ldp&#45;&gt;proc~ddot -->
-<g id="proc~~ddot~~CalledByGraph_edge7" class="edge"><title>proc~ldp&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M615.75,-24.1875C629.957,-36.7804 652.32,-56.6021 668.794,-71.2038"/>
-<polygon fill="#000000" stroke="#000000" points="666.541,-73.8842 676.347,-77.8981 671.185,-68.6458 666.541,-73.8842"/>
+<g id="proc~~ddot~~CalledByGraph_edge1" class="edge"><title>proc~ldp&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M143.453,-121.852C152.21,-117.673 162.165,-112.921 171.518,-108.457"/>
+<polygon fill="#000000" stroke="#000000" points="173.087,-111.587 180.604,-104.121 170.072,-105.27 173.087,-111.587"/>
+</g>
+<!-- proc~lsei -->
+<g id="proc~~ddot~~CalledByGraph_node3" class="node"><title>proc~lsei</title>
+<g id="a_proc~~ddot~~CalledByGraph_node3"><a xlink:href=".././proc/lsei.html" xlink:title="lsei">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-104 90,-104 90,-80 144,-80 144,-104"/>
+<text text-anchor="middle" x="117" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
+</a>
+</g>
+</g>
+<!-- proc~lsei&#45;&gt;proc~ddot -->
+<g id="proc~~ddot~~CalledByGraph_edge3" class="edge"><title>proc~lsei&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M144.403,-92C152.393,-92 161.311,-92 169.824,-92"/>
+<polygon fill="#000000" stroke="#000000" points="169.919,-95.5001 179.919,-92 169.919,-88.5001 169.919,-95.5001"/>
 </g>
 <!-- proc~slsqpb -->
-<g id="proc~~ddot~~CalledByGraph_node3" class="node"><title>proc~slsqpb</title>
-<g id="a_proc~~ddot~~CalledByGraph_node3"><a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
-<polygon fill="#d9534f" stroke="#d9534f" points="268,-158 214,-158 214,-134 268,-134 268,-158"/>
-<text text-anchor="middle" x="241" y="-143.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
+<g id="proc~~ddot~~CalledByGraph_node4" class="node"><title>proc~slsqpb</title>
+<g id="a_proc~~ddot~~CalledByGraph_node4"><a xlink:href=".././proc/slsqpb.html" xlink:title="slsqpb">
+<polygon fill="#d9534f" stroke="#d9534f" points="54,-44 0,-44 0,-20 54,-20 54,-44"/>
+<text text-anchor="middle" x="27" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~ddot -->
-<g id="proc~~ddot~~CalledByGraph_edge8" class="edge"><title>proc~slsqpb&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M268.136,-150.79C302.744,-156.707 365.735,-166 420,-166 420,-166 420,-166 512,-166 570.664,-166 632.099,-130.653 665.242,-108.171"/>
-<polygon fill="#000000" stroke="#000000" points="667.601,-110.793 673.814,-102.211 663.605,-105.046 667.601,-110.793"/>
+<g id="proc~~ddot~~CalledByGraph_edge2" class="edge"><title>proc~slsqpb&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M54.2657,-40.812C77.7806,-48.7056 113.199,-60.606 144,-71 152.436,-73.8468 161.515,-76.9179 170.054,-79.8095"/>
+<polygon fill="#000000" stroke="#000000" points="169.164,-83.2034 179.758,-83.0972 171.41,-76.5735 169.164,-83.2034"/>
 </g>
 <!-- proc~lsq -->
 <g id="proc~~ddot~~CalledByGraph_node5" class="node"><title>proc~lsq</title>
-<g id="a_proc~~ddot~~CalledByGraph_node5"><a xlink:href="../proc/lsq.html" xlink:title="lsq">
-<polygon fill="#d9534f" stroke="#d9534f" points="358,-138 304,-138 304,-114 358,-114 358,-138"/>
-<text text-anchor="middle" x="331" y="-123.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
+<g id="a_proc~~ddot~~CalledByGraph_node5"><a xlink:href=".././proc/lsq.html" xlink:title="lsq">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-24 90,-24 90,-0 144,-0 144,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~lsq -->
-<g id="proc~~ddot~~CalledByGraph_edge5" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
-<path fill="none" stroke="#000000" d="M268.403,-139.999C276.481,-138.163 285.507,-136.112 294.105,-134.158"/>
-<polygon fill="#000000" stroke="#000000" points="294.943,-137.557 303.919,-131.928 293.392,-130.731 294.943,-137.557"/>
+<g id="proc~~ddot~~CalledByGraph_edge7" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
+<path fill="none" stroke="#000000" d="M54.4029,-25.9993C62.481,-24.1634 71.5067,-22.1121 80.1046,-20.158"/>
+<polygon fill="#000000" stroke="#000000" points="80.9434,-23.5568 89.919,-17.9275 79.392,-16.7308 80.9434,-23.5568"/>
+</g>
+<!-- proc~lsq&#45;&gt;proc~ddot -->
+<g id="proc~~ddot~~CalledByGraph_edge4" class="edge"><title>proc~lsq&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M131.365,-24.1503C145.662,-37.1473 168.525,-57.932 185.183,-73.0754"/>
+<polygon fill="#000000" stroke="#000000" points="183.043,-75.8605 192.797,-79.9975 187.752,-70.6809 183.043,-75.8605"/>
 </g>
 <!-- proc~lsi -->
-<g id="proc~~ddot~~CalledByGraph_node4" class="node"><title>proc~lsi</title>
-<g id="a_proc~~ddot~~CalledByGraph_node4"><a xlink:href="../proc/lsi.html" xlink:title="lsi">
-<polygon fill="#d9534f" stroke="#d9534f" points="538,-62 484,-62 484,-38 538,-38 538,-62"/>
-<text text-anchor="middle" x="511" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
+<g id="proc~~ddot~~CalledByGraph_node6" class="node"><title>proc~lsi</title>
+<g id="a_proc~~ddot~~CalledByGraph_node6"><a xlink:href=".././proc/lsi.html" xlink:title="lsi">
+<polygon fill="#d9534f" stroke="#d9534f" points="54,-166 0,-166 0,-142 54,-142 54,-166"/>
+<text text-anchor="middle" x="27" y="-151.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
 </a>
 </g>
 </g>
 <!-- proc~lsi&#45;&gt;proc~ddot -->
-<g id="proc~~ddot~~CalledByGraph_edge9" class="edge"><title>proc~lsi&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M538.263,-55.874C561.776,-61.1359 597.193,-69.0693 628,-76 636.343,-77.8769 645.316,-79.9003 653.773,-81.8095"/>
-<polygon fill="#000000" stroke="#000000" points="653.231,-85.2752 663.756,-84.0643 654.773,-78.4472 653.231,-85.2752"/>
+<g id="proc~~ddot~~CalledByGraph_edge5" class="edge"><title>proc~lsi&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M54.0072,-159.895C78.2858,-164.112 115.022,-167.139 144,-155 164.587,-146.376 181.795,-127.214 192.818,-112.273"/>
+<polygon fill="#000000" stroke="#000000" points="195.692,-114.271 198.572,-104.075 189.962,-110.249 195.692,-114.271"/>
 </g>
 <!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="proc~~ddot~~CalledByGraph_edge1" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
-<path fill="none" stroke="#000000" d="M538.403,-38.5987C546.657,-35.0346 555.9,-31.0434 564.665,-27.2584"/>
-<polygon fill="#000000" stroke="#000000" points="566.126,-30.4399 573.919,-23.2623 563.351,-24.0135 566.126,-30.4399"/>
-</g>
-<!-- proc~lsq&#45;&gt;proc~ddot -->
-<g id="proc~~ddot~~CalledByGraph_edge10" class="edge"><title>proc~lsq&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M358.277,-125.35C410.121,-123.781 529.125,-118.755 628,-104 636.458,-102.738 645.476,-100.957 653.94,-99.0872"/>
-<polygon fill="#000000" stroke="#000000" points="654.956,-102.445 663.916,-96.7911 653.386,-95.6235 654.956,-102.445"/>
-</g>
-<!-- proc~lsei -->
-<g id="proc~~ddot~~CalledByGraph_node6" class="node"><title>proc~lsei</title>
-<g id="a_proc~~ddot~~CalledByGraph_node6"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
-<polygon fill="#d9534f" stroke="#d9534f" points="448,-100 394,-100 394,-76 448,-76 448,-100"/>
-<text text-anchor="middle" x="421" y="-85.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
-</a>
-</g>
-</g>
-<!-- proc~lsq&#45;&gt;proc~lsei -->
-<g id="proc~~ddot~~CalledByGraph_edge6" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
-<path fill="none" stroke="#000000" d="M358.403,-114.599C366.657,-111.035 375.9,-107.043 384.665,-103.258"/>
-<polygon fill="#000000" stroke="#000000" points="386.126,-106.44 393.919,-99.2623 383.351,-100.013 386.126,-106.44"/>
-</g>
-<!-- proc~lsei&#45;&gt;proc~ddot -->
-<g id="proc~~ddot~~CalledByGraph_edge11" class="edge"><title>proc~lsei&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M448.185,-88.1954C496.218,-88.5539 598.508,-89.3172 653.394,-89.7268"/>
-<polygon fill="#000000" stroke="#000000" points="653.683,-93.229 663.709,-89.8038 653.735,-86.2292 653.683,-93.229"/>
-</g>
-<!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="proc~~ddot~~CalledByGraph_edge4" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
-<path fill="none" stroke="#000000" d="M448.403,-76.5987C456.657,-73.0346 465.9,-69.0434 474.665,-65.2584"/>
-<polygon fill="#000000" stroke="#000000" points="476.126,-68.4399 483.919,-61.2623 473.351,-62.0135 476.126,-68.4399"/>
-</g>
-<!-- proc~slsqp -->
-<g id="proc~~ddot~~CalledByGraph_node7" class="node"><title>proc~slsqp</title>
-<g id="a_proc~~ddot~~CalledByGraph_node7"><a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
-<polygon fill="#d9534f" stroke="#d9534f" points="178,-158 124,-158 124,-134 178,-134 178,-158"/>
-<text text-anchor="middle" x="151" y="-143.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqp&#45;&gt;proc~slsqpb -->
-<g id="proc~~ddot~~CalledByGraph_edge3" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
-<path fill="none" stroke="#000000" d="M178.403,-146C186.393,-146 195.311,-146 203.824,-146"/>
-<polygon fill="#000000" stroke="#000000" points="203.919,-149.5 213.919,-146 203.919,-142.5 203.919,-149.5"/>
-</g>
-<!-- proc~slsqp_wrapper -->
-<g id="proc~~ddot~~CalledByGraph_node8" class="node"><title>proc~slsqp_wrapper</title>
-<g id="a_proc~~ddot~~CalledByGraph_node8"><a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
-<polygon fill="#d9534f" stroke="#d9534f" points="88,-158 7.10543e-15,-158 7.10543e-15,-134 88,-134 88,-158"/>
-<text text-anchor="middle" x="44" y="-143.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
-<g id="proc~~ddot~~CalledByGraph_edge2" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
-<path fill="none" stroke="#000000" d="M88.0105,-146C96.5323,-146 105.399,-146 113.672,-146"/>
-<polygon fill="#000000" stroke="#000000" points="113.763,-149.5 123.763,-146 113.763,-142.5 113.763,-149.5"/>
+<g id="proc~~ddot~~CalledByGraph_edge6" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<path fill="none" stroke="#000000" d="M54.4029,-147.999C62.481,-146.163 71.5067,-144.112 80.1046,-142.158"/>
+<polygon fill="#000000" stroke="#000000" points="80.9434,-145.557 89.919,-139.928 79.392,-138.731 80.9434,-145.557"/>
 </g>
 </g>
 </svg>
-</div>
-                <script>var panprocddotCalledByGraph = svgPanZoom('#procddotCalledByGraph', {
-                    zoomEnabled: true,
-                    controlIconsEnabled: true,
-                    fit: true,
-                    center: true,});
-                    </script>
-                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
-                      </div>
-                      <div class="modal-body">
-                        
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
     <p>Nodes of different colours represent the following: </p>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -616,17 +475,17 @@ public function ddot(n, dx, incx, dy, incy)
     This could include the module procedures in a generic interface or the
     implementation in a submodule of an interface in a parent module.
     </p>
-    
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+    </div></div></div></div>
+      </div>
+    </div>
      
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
       
+<h3>Contents</h3>
+ 
+
 
 
 
@@ -653,6 +512,7 @@ public function ddot(n, dx, incx, dy, incy)
     <a class="list-group-item" href="../proc/ddot.html#src">ddot</a>
   </div>
 </div>
+
 
 
     </section>
@@ -739,114 +599,14 @@ public function ddot(n, dx, incx, dy, incy)
     </div>
   </div>
 
-  <section class="visible-xs visible-sm hidden-md">
-    <hr>
-    
-
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs-1">All Procedures</a></h3></div>
-  <div id="allprocs-1" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
-      
-      <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
-      
-      <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
-      
-      <a class="list-group-item" href="../proc/ddot.html">ddot</a>
-      
-      <a class="list-group-item" href="../proc/destroy_linmin_data.html">destroy_linmin_data</a>
-      
-      <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
-      
-      <a class="list-group-item" href="../proc/destroy_slsqpb_data.html">destroy_slsqpb_data</a>
-      
-      <a class="list-group-item" href="../proc/diff.html">diff</a>
-      
-      <a class="list-group-item" href="../proc/dnrm2.html">dnrm2</a>
-      
-      <a class="list-group-item" href="../proc/dscal.html">dscal</a>
-      
-      <a class="list-group-item" href="../proc/dummy_grad.html">dummy_grad</a>
-      
-      <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
-      
-      <a class="list-group-item" href="../proc/func.html">func</a>
-      
-      <a class="list-group-item" href="../proc/g1.html">g1</a>
-      
-      <a class="list-group-item" href="../proc/grad.html">grad</a>
-      
-      <a class="list-group-item" href="../proc/h12.html">h12</a>
-      
-      <a class="list-group-item" href="../proc/hfti.html">hfti</a>
-      
-      <a class="list-group-item" href="../proc/initialize_slsqp.html">initialize_slsqp</a>
-      
-      <a class="list-group-item" href="../proc/ldl.html">ldl</a>
-      
-      <a class="list-group-item" href="../proc/ldp.html">ldp</a>
-      
-      <a class="list-group-item" href="../proc/linmin.html">linmin</a>
-      
-      <a class="list-group-item" href="../proc/lsei.html">lsei</a>
-      
-      <a class="list-group-item" href="../proc/lsi.html">lsi</a>
-      
-      <a class="list-group-item" href="../proc/lsq.html">lsq</a>
-      
-      <a class="list-group-item" href="../proc/mode_to_status_message.html">mode_to_status_message</a>
-      
-      <a class="list-group-item" href="../proc/nnls.html">nnls</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_message.html">report_message</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
-      
-      <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
-      
-      <a class="list-group-item" href="../proc/slsqp_wrapper.html">slsqp_wrapper</a>
-      
-      <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
-      
-      <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
-      
-      <a class="list-group-item" href="../proc/test_func.html">test_func</a>
-      
-      <a class="list-group-item" href="../proc/test_grad.html">test_grad</a>
-      
-    </div>
-  </div>
-</div>
-
-
-  </section>
 
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+                                          </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 
@@ -877,12 +637,17 @@ public function ddot(n, dx, incx, dy, incy)
       MathJax.Hub.Config({
         TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
         jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
-        'HTML-CSS': { 
-           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
-        }
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
   </body>
 </html>

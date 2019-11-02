@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 
-	 <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
+   
+   <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
     
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
@@ -17,6 +17,9 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
     
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,13 +29,6 @@
     
     <script src="../js/jquery-2.1.3.min.js"></script>
     <script src="../js/svg-pan-zoom.min.js"></script>
-
-    
-    <script src="../tipuesearch/tipuesearch_content.js"></script>
-    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    <script src="../tipuesearch/tipuesearch_set.js"></script>
-    <script src="../tipuesearch/tipuesearch.js"></script>
-    
 
   </head>
 
@@ -52,35 +48,37 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-				
+        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
-		 aria-expanded="false">Contents <span class="caret"></span></a>
-	      <ul class="dropdown-menu">
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
               
             <li><a href="../lists/files.html">Source Files</a></li>
-				
-				
+        
+        
+        
             <li><a href="../lists/modules.html">Modules</a></li>
-				
+        
             
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
-				
-				
+        
+        
             <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-								
+               
             <li><a href="../lists/types.html">Derived Types</a></li>
-				
-				
-            <li><a href="../lists/programs.html">Programs</a></li>
-				
+        
+        
             </ul>
             </li>
 
+
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
@@ -94,8 +92,6 @@
                              
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
 
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
 
           </ul>
         
@@ -133,15 +129,19 @@
     
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
-	  data-placement="bottom" data-html="true"
-	  title="56.9% of total for source files.">1250 statements</a>
+    data-placement="bottom" data-html="true"
+    title="68.3% of total for source files.">1250 statements</a>
      </li> 
+     
      
      
     <li><i class="fa fa-code"></i><a href="../src/slsqp_core.f90"> Source File</a></li>
      
+     
   </ul>
   <ol class="breadcrumb in-well text-right">
+  
+    
   
      <li class="active">slsqp_core.f90</li>
   </ol>
@@ -160,6 +160,9 @@
     
 <div id="sidebar">
   
+<h3>Contents</h3>
+ 
+
 
 
 
@@ -191,6 +194,7 @@
 
 
 
+
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
@@ -199,46 +203,20 @@
 </div>
 
 
-  <hr>
-  
 
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-0">All Source Files</a></h3></div>
-  <div id="allfiles-0" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_core.f90.html">slsqp_core.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_kinds.f90.html">slsqp_kinds.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_module.f90.html">slsqp_module.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_support.f90.html">slsqp_support.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test.f90.html">slsqp_test.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_2.f90.html">slsqp_test_2.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_3.f90.html">slsqp_test_3.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_71.f90.html">slsqp_test_71.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_stopping_criterion.f90.html">slsqp_test_stopping_criterion.f90</a>
-      
-    </div>
-  </div>
 </div>
-
-
-</div>  
 
     </div>
     <div class="col-md-9" id='text'>
+      
+      <br>
     
-    
-    <h3>This File Depends On</h3>
-    
-                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">This file depends on</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.38.0 (20140413.2041)
@@ -251,53 +229,43 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-48 363,-48 363,4 -4,4"/>
 <!-- sourcefile~slsqp_core.f90 -->
 <g id="sourcefile~~slsqp_core.f90~~EfferentGraph_node1" class="node"><title>sourcefile~slsqp_core.f90</title>
-<polygon fill="none" stroke="black" points="359,-44 271,-44 271,-20 359,-20 359,-44"/>
-<text text-anchor="middle" x="315" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp_core.f90</text>
+<polygon fill="none" stroke="black" points="359,-24 271,-24 271,-0 359,-0 359,-24"/>
+<text text-anchor="middle" x="315" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp_core.f90</text>
 </g>
 <!-- sourcefile~slsqp_support.f90 -->
 <g id="sourcefile~~slsqp_core.f90~~EfferentGraph_node2" class="node"><title>sourcefile~slsqp_support.f90</title>
-<g id="a_sourcefile~~slsqp_core.f90~~EfferentGraph_node2"><a xlink:href="../sourcefile/slsqp_support.f90.html" xlink:title="slsqp_support.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="235,-24 129,-24 129,-0 235,-0 235,-24"/>
-<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_support.f90</text>
+<g id="a_sourcefile~~slsqp_core.f90~~EfferentGraph_node2"><a xlink:href=".././sourcefile/slsqp_support.f90.html" xlink:title="slsqp_support.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="235,-44 129,-44 129,-20 235,-20 235,-44"/>
+<text text-anchor="middle" x="182" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_support.f90</text>
 </a>
 </g>
 </g>
-<!-- sourcefile~slsqp_support.f90&#45;&gt;sourcefile~slsqp_core.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~EfferentGraph_edge2" class="edge"><title>sourcefile~slsqp_support.f90&#45;&gt;sourcefile~slsqp_core.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M235.151,-19.962C243.572,-21.2476 252.3,-22.5801 260.746,-23.8696"/>
-<polygon fill="#000000" stroke="#000000" points="260.455,-27.3657 270.869,-25.4151 261.512,-20.4459 260.455,-27.3657"/>
+<!-- sourcefile~slsqp_core.f90&#45;&gt;sourcefile~slsqp_support.f90 -->
+<g id="sourcefile~~slsqp_core.f90~~EfferentGraph_edge1" class="edge"><title>sourcefile~slsqp_core.f90&#45;&gt;sourcefile~slsqp_support.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M270.743,-18.6042C262.601,-19.8472 253.938,-21.1697 245.349,-22.4811"/>
+<polygon fill="#000000" stroke="#000000" points="244.691,-19.0409 235.334,-24.0101 245.747,-25.9607 244.691,-19.0409"/>
 </g>
 <!-- sourcefile~slsqp_kinds.f90 -->
 <g id="sourcefile~~slsqp_core.f90~~EfferentGraph_node3" class="node"><title>sourcefile~slsqp_kinds.f90</title>
-<g id="a_sourcefile~~slsqp_core.f90~~EfferentGraph_node3"><a xlink:href="../sourcefile/slsqp_kinds.f90.html" xlink:title="slsqp_kinds.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="93,-44 7.10543e-15,-44 7.10543e-15,-20 93,-20 93,-44"/>
-<text text-anchor="middle" x="46.5" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_kinds.f90</text>
+<g id="a_sourcefile~~slsqp_core.f90~~EfferentGraph_node3"><a xlink:href=".././sourcefile/slsqp_kinds.f90.html" xlink:title="slsqp_kinds.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="93,-24 0,-24 0,-0 93,-0 93,-24"/>
+<text text-anchor="middle" x="46.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_kinds.f90</text>
 </a>
 </g>
 </g>
-<!-- sourcefile~slsqp_kinds.f90&#45;&gt;sourcefile~slsqp_core.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~EfferentGraph_edge3" class="edge"><title>sourcefile~slsqp_kinds.f90&#45;&gt;sourcefile~slsqp_core.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M93.1901,-32.6593C104.865,-32.8006 117.397,-32.9288 129,-33 176.11,-33.289 187.89,-33.2982 235,-33 243.38,-32.947 252.259,-32.8623 260.922,-32.7641"/>
-<polygon fill="#000000" stroke="#000000" points="260.993,-36.2636 270.95,-32.6437 260.909,-29.2641 260.993,-36.2636"/>
+<!-- sourcefile~slsqp_core.f90&#45;&gt;sourcefile~slsqp_kinds.f90 -->
+<g id="sourcefile~~slsqp_core.f90~~EfferentGraph_edge2" class="edge"><title>sourcefile~slsqp_core.f90&#45;&gt;sourcefile~slsqp_kinds.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M270.95,-11.3563C259.285,-11.2088 246.659,-11.0738 235,-11 187.89,-10.7018 176.11,-10.711 129,-11 120.66,-11.0512 111.841,-11.1318 103.205,-11.2256"/>
+<polygon fill="#000000" stroke="#000000" points="103.149,-7.72586 93.1901,-11.3407 103.23,-14.7254 103.149,-7.72586"/>
 </g>
-<!-- sourcefile~slsqp_kinds.f90&#45;&gt;sourcefile~slsqp_support.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~EfferentGraph_edge1" class="edge"><title>sourcefile~slsqp_kinds.f90&#45;&gt;sourcefile~slsqp_support.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M93.0697,-25.1731C101.322,-23.9368 110.056,-22.6283 118.69,-21.3348"/>
-<polygon fill="#000000" stroke="#000000" points="119.375,-24.7714 128.746,-19.8283 118.338,-17.8486 119.375,-24.7714"/>
+<!-- sourcefile~slsqp_support.f90&#45;&gt;sourcefile~slsqp_kinds.f90 -->
+<g id="sourcefile~~slsqp_core.f90~~EfferentGraph_edge3" class="edge"><title>sourcefile~slsqp_support.f90&#45;&gt;sourcefile~slsqp_kinds.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M128.62,-24.1529C120.311,-22.908 111.69,-21.6165 103.306,-20.3604"/>
+<polygon fill="#000000" stroke="#000000" points="103.641,-16.8717 93.233,-18.8514 102.604,-23.7944 103.641,-16.8717"/>
 </g>
 </g>
 </svg>
-</div>
-                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
-                      </div>
-                      <div class="modal-body">
-                        
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
     <p>Nodes of different colours represent the following: </p>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -324,127 +292,52 @@
 </svg>
 
     
-    <p>Solid arrows point from a file to a file which depends upon it. A file 
+    <p>Solid arrows point from a file to a file which it depends on. A file
     is dependent upon another if the latter must be compiled before the former
     can be.
     </p>
-    
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+    </div></div></div></div>
+      </div>
+    </div>
     
       
-      <h3>Files Dependent On This One</h3>
-      
-                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Files dependent on this one</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.38.0 (20140413.2041)
  -->
 <!-- Title: sourcefile~~slsqp_core.f90~~AfferentGraph Pages: 1 -->
-<svg id="sourcefileslsqp_coref90AfferentGraph" width="456pt" height="200pt"
- viewBox="0.00 0.00 456.00 200.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="sourcefile~~slsqp_core.f90~~AfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 196)">
+<svg id="sourcefileslsqp_coref90AfferentGraph" width="236pt" height="32pt"
+ viewBox="0.00 0.00 236.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~slsqp_core.f90~~AfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
 <title>sourcefile~~slsqp_core.f90~~AfferentGraph</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-196 452,-196 452,4 -4,4"/>
+<polygon fill="white" stroke="none" points="-4,4 -4,-28 232,-28 232,4 -4,4"/>
 <!-- sourcefile~slsqp_core.f90 -->
 <g id="sourcefile~~slsqp_core.f90~~AfferentGraph_node1" class="node"><title>sourcefile~slsqp_core.f90</title>
-<polygon fill="none" stroke="black" points="88,-108 7.10543e-15,-108 7.10543e-15,-84 88,-84 88,-108"/>
-<text text-anchor="middle" x="44" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp_core.f90</text>
+<polygon fill="none" stroke="black" points="88,-24 0,-24 0,-0 88,-0 88,-24"/>
+<text text-anchor="middle" x="44" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp_core.f90</text>
 </g>
 <!-- sourcefile~slsqp_module.f90 -->
 <g id="sourcefile~~slsqp_core.f90~~AfferentGraph_node2" class="node"><title>sourcefile~slsqp_module.f90</title>
-<g id="a_sourcefile~~slsqp_core.f90~~AfferentGraph_node2"><a xlink:href="../sourcefile/slsqp_module.f90.html" xlink:title="slsqp_module.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="228,-108 124,-108 124,-84 228,-84 228,-108"/>
-<text text-anchor="middle" x="176" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_module.f90</text>
+<g id="a_sourcefile~~slsqp_core.f90~~AfferentGraph_node2"><a xlink:href=".././sourcefile/slsqp_module.f90.html" xlink:title="slsqp_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="228,-24 124,-24 124,-0 228,-0 228,-24"/>
+<text text-anchor="middle" x="176" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_module.f90</text>
 </a>
 </g>
 </g>
-<!-- sourcefile~slsqp_core.f90&#45;&gt;sourcefile~slsqp_module.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~AfferentGraph_edge6" class="edge"><title>sourcefile~slsqp_core.f90&#45;&gt;sourcefile~slsqp_module.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M88.2881,-96C96.4637,-96 105.157,-96 113.762,-96"/>
-<polygon fill="#000000" stroke="#000000" points="113.787,-99.5001 123.787,-96 113.787,-92.5001 113.787,-99.5001"/>
-</g>
-<!-- sourcefile~slsqp_test_2.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~AfferentGraph_node3" class="node"><title>sourcefile~slsqp_test_2.f90</title>
-<g id="a_sourcefile~~slsqp_core.f90~~AfferentGraph_node3"><a xlink:href="../sourcefile/slsqp_test_2.f90.html" xlink:title="slsqp_test_2.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="404.5,-192 307.5,-192 307.5,-168 404.5,-168 404.5,-192"/>
-<text text-anchor="middle" x="356" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_2.f90</text>
-</a>
-</g>
-</g>
-<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_2.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~AfferentGraph_edge1" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_2.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M190.088,-108.11C206.245,-122.402 235.141,-145.877 264,-159 274.388,-163.724 285.943,-167.437 297.237,-170.339"/>
-<polygon fill="#000000" stroke="#000000" points="296.52,-173.766 307.06,-172.686 298.147,-166.958 296.52,-173.766"/>
-</g>
-<!-- sourcefile~slsqp_test.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~AfferentGraph_node4" class="node"><title>sourcefile~slsqp_test.f90</title>
-<g id="a_sourcefile~~slsqp_core.f90~~AfferentGraph_node4"><a xlink:href="../sourcefile/slsqp_test.f90.html" xlink:title="slsqp_test.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="398.5,-150 313.5,-150 313.5,-126 398.5,-126 398.5,-150"/>
-<text text-anchor="middle" x="356" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test.f90</text>
-</a>
-</g>
-</g>
-<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~AfferentGraph_edge2" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M226.667,-108.08C238.869,-111.022 251.902,-114.144 264,-117 276.701,-119.998 290.41,-123.187 303.238,-126.15"/>
-<polygon fill="#000000" stroke="#000000" points="302.771,-129.634 313.301,-128.47 304.343,-122.813 302.771,-129.634"/>
-</g>
-<!-- sourcefile~slsqp_test_3.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~AfferentGraph_node5" class="node"><title>sourcefile~slsqp_test_3.f90</title>
-<g id="a_sourcefile~~slsqp_core.f90~~AfferentGraph_node5"><a xlink:href="../sourcefile/slsqp_test_3.f90.html" xlink:title="slsqp_test_3.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="404.5,-108 307.5,-108 307.5,-84 404.5,-84 404.5,-108"/>
-<text text-anchor="middle" x="356" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_3.f90</text>
-</a>
-</g>
-</g>
-<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_3.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~AfferentGraph_edge3" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_3.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M228.008,-96C249.656,-96 274.996,-96 297.322,-96"/>
-<polygon fill="#000000" stroke="#000000" points="297.344,-99.5001 307.344,-96 297.344,-92.5001 297.344,-99.5001"/>
-</g>
-<!-- sourcefile~slsqp_test_stopping_criterion.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~AfferentGraph_node6" class="node"><title>sourcefile~slsqp_test_stopping_criterion.f90</title>
-<g id="a_sourcefile~~slsqp_core.f90~~AfferentGraph_node6"><a xlink:href="../sourcefile/slsqp_test_stopping_criterion.f90.html" xlink:title="slsqp_test_stopping_criterion.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="448,-66 264,-66 264,-42 448,-42 448,-66"/>
-<text text-anchor="middle" x="356" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_stopping_criterion.f90</text>
-</a>
-</g>
-</g>
-<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_stopping_criterion.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~AfferentGraph_edge4" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_stopping_criterion.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M226.667,-83.9202C238.869,-80.9777 251.902,-77.8559 264,-75 273.252,-72.8158 283.04,-70.5306 292.632,-68.3051"/>
-<polygon fill="#000000" stroke="#000000" points="293.575,-71.6796 302.528,-66.0143 291.996,-64.86 293.575,-71.6796"/>
-</g>
-<!-- sourcefile~slsqp_test_71.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~AfferentGraph_node7" class="node"><title>sourcefile~slsqp_test_71.f90</title>
-<g id="a_sourcefile~~slsqp_core.f90~~AfferentGraph_node7"><a xlink:href="../sourcefile/slsqp_test_71.f90.html" xlink:title="slsqp_test_71.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="408,-24 304,-24 304,-0 408,-0 408,-24"/>
-<text text-anchor="middle" x="356" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_71.f90</text>
-</a>
-</g>
-</g>
-<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_71.f90 -->
-<g id="sourcefile~~slsqp_core.f90~~AfferentGraph_edge5" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_71.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M190.088,-83.8903C206.245,-69.5985 235.141,-46.1227 264,-33 273.395,-28.7277 283.745,-25.2817 293.993,-22.5151"/>
-<polygon fill="#000000" stroke="#000000" points="294.906,-25.8947 303.753,-20.0661 293.202,-19.1052 294.906,-25.8947"/>
+<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_core.f90 -->
+<g id="sourcefile~~slsqp_core.f90~~AfferentGraph_edge1" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_core.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M123.994,-12C115.599,-12 106.877,-12 98.4251,-12"/>
+<polygon fill="#000000" stroke="#000000" points="98.2896,-8.5001 88.2895,-12 98.2895,-15.5001 98.2896,-8.5001"/>
 </g>
 </g>
 </svg>
-</div>
-                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
-                      </div>
-                      <div class="modal-body">
-                        
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
     <p>Nodes of different colours represent the following: </p>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -471,21 +364,21 @@
 </svg>
 
     
-    <p>Solid arrows point from a file to a file which depends upon it. A file 
+    <p>Solid arrows point from a file to a file which it depends on. A file
     is dependent upon another if the latter must be compiled before the former
     can be.
     </p>
-    
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+    </div></div></div></div>
+      </div>
+    </div>
       
       <br>
 
     <section class="visible-xs visible-sm hidden-md">
       
+<h3>Contents</h3>
+ 
+
 
 
 
@@ -517,12 +410,14 @@
 
 
 
+
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
     <a class="list-group-item" href="../sourcefile/slsqp_core.f90.html#src">slsqp_core.f90</a>
   </div>
 </div>
+
 
 
     </section>
@@ -2364,401 +2259,371 @@
 <a name="ln-1832"></a><span class="c">!&gt;</span>
 <a name="ln-1833"></a><span class="c">!  Compute orthogonal rotation matrix.</span>
 <a name="ln-1834"></a><span class="c">!</span>
-<a name="ln-1835"></a><span class="c">!  Compute matrix \( \left[ \begin{array}{cc} c &amp; s \\ -s &amp; c \end{array} \right] \)</span>
-<a name="ln-1836"></a><span class="c">!  so that \(</span>
-<a name="ln-1837"></a><span class="c">!  \left[ \begin{array}{cc} c &amp; s \\ -s &amp; c \end{array} \right]</span>
-<a name="ln-1838"></a><span class="c">!  \left[ \begin{array}{c} a \\ b \end{array} \right]  =</span>
-<a name="ln-1839"></a><span class="c">!  \left[ \begin{array}{c} \sqrt{a^2+b^2} \\ 0 \end{array} \right]</span>
-<a name="ln-1840"></a><span class="c">!  \)</span>
-<a name="ln-1841"></a><span class="c">!</span>
-<a name="ln-1842"></a><span class="c">!  Compute \( \sigma = \sqrt{a^2+b^2} \)</span>
+<a name="ln-1835"></a><span class="c">!  Compute matrix $$ \left[ \begin{array}{cc} c &amp; s \\ -s &amp; c \end{array} \right] $$</span>
+<a name="ln-1836"></a><span class="c">!  so that</span>
+<a name="ln-1837"></a><span class="c">!</span>
+<a name="ln-1838"></a><span class="c">!  $$</span>
+<a name="ln-1839"></a><span class="c">!  \left[ \begin{array}{cc} c &amp; s \\ -s &amp; c \end{array} \right]</span>
+<a name="ln-1840"></a><span class="c">!  \left[ \begin{array}{c} a \\ b \end{array} \right]  =</span>
+<a name="ln-1841"></a><span class="c">!  \left[ \begin{array}{c} \sqrt{a^2+b^2} \\ 0 \end{array} \right]</span>
+<a name="ln-1842"></a><span class="c">!  $$</span>
 <a name="ln-1843"></a><span class="c">!</span>
-<a name="ln-1844"></a><span class="c">!  \( \sigma \) is computed last to allow for the possibility that</span>
-<a name="ln-1845"></a><span class="c">!  `sig` may be in the same location as `a` or `b`.</span>
-<a name="ln-1846"></a><span class="c">!</span>
-<a name="ln-1847"></a><span class="c">!### References</span>
-<a name="ln-1848"></a><span class="c">!  * C.L. Lawson, R.J. Hanson, &#39;Solving least squares problems&#39;</span>
-<a name="ln-1849"></a><span class="c">!    Prentice Hall, 1974. (revised 1995 edition)</span>
-<a name="ln-1850"></a><span class="c">!  * [lawson-hanson](http://www.netlib.org/lawson-hanson/all) from Netlib.</span>
-<a name="ln-1851"></a><span class="c">!</span>
-<a name="ln-1852"></a><span class="c">!### History</span>
-<a name="ln-1853"></a><span class="c">!  * Jacob Williams, refactored into modern Fortran, Jan. 2016.</span>
-<a name="ln-1854"></a>
-<a name="ln-1855"></a>    <span class="k">subroutine </span><span class="n">g1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">sig</span><span class="p">)</span>
+<a name="ln-1844"></a><span class="c">!  Compute \( \sigma = \sqrt{a^2+b^2} \)</span>
+<a name="ln-1845"></a><span class="c">!</span>
+<a name="ln-1846"></a><span class="c">!  \( \sigma \) is computed last to allow for the possibility that</span>
+<a name="ln-1847"></a><span class="c">!  `sig` may be in the same location as `a` or `b`.</span>
+<a name="ln-1848"></a><span class="c">!</span>
+<a name="ln-1849"></a><span class="c">!### References</span>
+<a name="ln-1850"></a><span class="c">!  * C.L. Lawson, R.J. Hanson, &#39;Solving least squares problems&#39;</span>
+<a name="ln-1851"></a><span class="c">!    Prentice Hall, 1974. (revised 1995 edition)</span>
+<a name="ln-1852"></a><span class="c">!  * [lawson-hanson](http://www.netlib.org/lawson-hanson/all) from Netlib.</span>
+<a name="ln-1853"></a><span class="c">!</span>
+<a name="ln-1854"></a><span class="c">!### History</span>
+<a name="ln-1855"></a><span class="c">!  * Jacob Williams, refactored into modern Fortran, Jan. 2016.</span>
 <a name="ln-1856"></a>
-<a name="ln-1857"></a>    <span class="k">implicit none</span>
+<a name="ln-1857"></a>    <span class="k">subroutine </span><span class="n">g1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">sig</span><span class="p">)</span>
 <a name="ln-1858"></a>
-<a name="ln-1859"></a><span class="k">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">a</span>
-<a name="ln-1860"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">b</span>
-<a name="ln-1861"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">sig</span>
-<a name="ln-1862"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">c</span>
-<a name="ln-1863"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">s</span>
-<a name="ln-1864"></a>
-<a name="ln-1865"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">xr</span><span class="p">,</span> <span class="n">yr</span>
+<a name="ln-1859"></a>    <span class="k">implicit none</span>
+<a name="ln-1860"></a>
+<a name="ln-1861"></a><span class="k">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">a</span>
+<a name="ln-1862"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">b</span>
+<a name="ln-1863"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">sig</span>
+<a name="ln-1864"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">c</span>
+<a name="ln-1865"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">s</span>
 <a name="ln-1866"></a>
-<a name="ln-1867"></a>    <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">&gt;</span><span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-1868"></a><span class="k">        </span><span class="n">xr</span> <span class="o">=</span> <span class="n">b</span><span class="o">/</span><span class="n">a</span>
-<a name="ln-1869"></a>        <span class="n">yr</span> <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">one</span><span class="o">+</span><span class="n">xr</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<a name="ln-1870"></a>        <span class="n">c</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">one</span><span class="o">/</span><span class="n">yr</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
-<a name="ln-1871"></a>        <span class="n">s</span> <span class="o">=</span> <span class="n">c</span><span class="o">*</span><span class="n">xr</span>
-<a name="ln-1872"></a>        <span class="n">sig</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">yr</span>
-<a name="ln-1873"></a>    <span class="k">else</span>
-<a name="ln-1874"></a><span class="k">        if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-1875"></a><span class="k">            </span><span class="n">xr</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span>
-<a name="ln-1876"></a>            <span class="n">yr</span> <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">one</span><span class="o">+</span><span class="n">xr</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<a name="ln-1877"></a>            <span class="n">s</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">one</span><span class="o">/</span><span class="n">yr</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-<a name="ln-1878"></a>            <span class="n">c</span> <span class="o">=</span> <span class="n">s</span><span class="o">*</span><span class="n">xr</span>
-<a name="ln-1879"></a>            <span class="n">sig</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">yr</span>
-<a name="ln-1880"></a>        <span class="k">else</span>
-<a name="ln-1881"></a><span class="k">            </span><span class="n">sig</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-1882"></a>            <span class="n">c</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-1883"></a>            <span class="n">s</span> <span class="o">=</span> <span class="n">one</span>
-<a name="ln-1884"></a>        <span class="k">end if</span>
-<a name="ln-1885"></a><span class="k">    end if</span>
-<a name="ln-1886"></a>
-<a name="ln-1887"></a><span class="k">    end subroutine </span><span class="n">g1</span>
-<a name="ln-1888"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-1889"></a>
+<a name="ln-1867"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">xr</span><span class="p">,</span> <span class="n">yr</span>
+<a name="ln-1868"></a>
+<a name="ln-1869"></a>    <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">&gt;</span><span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-1870"></a><span class="k">        </span><span class="n">xr</span> <span class="o">=</span> <span class="n">b</span><span class="o">/</span><span class="n">a</span>
+<a name="ln-1871"></a>        <span class="n">yr</span> <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">one</span><span class="o">+</span><span class="n">xr</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-1872"></a>        <span class="n">c</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">one</span><span class="o">/</span><span class="n">yr</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+<a name="ln-1873"></a>        <span class="n">s</span> <span class="o">=</span> <span class="n">c</span><span class="o">*</span><span class="n">xr</span>
+<a name="ln-1874"></a>        <span class="n">sig</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">yr</span>
+<a name="ln-1875"></a>    <span class="k">else</span>
+<a name="ln-1876"></a><span class="k">        if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-1877"></a><span class="k">            </span><span class="n">xr</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span>
+<a name="ln-1878"></a>            <span class="n">yr</span> <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">one</span><span class="o">+</span><span class="n">xr</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-1879"></a>            <span class="n">s</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">one</span><span class="o">/</span><span class="n">yr</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<a name="ln-1880"></a>            <span class="n">c</span> <span class="o">=</span> <span class="n">s</span><span class="o">*</span><span class="n">xr</span>
+<a name="ln-1881"></a>            <span class="n">sig</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">yr</span>
+<a name="ln-1882"></a>        <span class="k">else</span>
+<a name="ln-1883"></a><span class="k">            </span><span class="n">sig</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-1884"></a>            <span class="n">c</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-1885"></a>            <span class="n">s</span> <span class="o">=</span> <span class="n">one</span>
+<a name="ln-1886"></a>        <span class="k">end if</span>
+<a name="ln-1887"></a><span class="k">    end if</span>
+<a name="ln-1888"></a>
+<a name="ln-1889"></a><span class="k">    end subroutine </span><span class="n">g1</span>
 <a name="ln-1890"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-1891"></a><span class="c">!&gt;</span>
-<a name="ln-1892"></a><span class="c">!  \(LDL^T\) - rank-one - update</span>
-<a name="ln-1893"></a><span class="c">!</span>
-<a name="ln-1894"></a><span class="c">!### Purpose:</span>
+<a name="ln-1891"></a>
+<a name="ln-1892"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-1893"></a><span class="c">!&gt;</span>
+<a name="ln-1894"></a><span class="c">!  \(LDL^T\) - rank-one - update</span>
 <a name="ln-1895"></a><span class="c">!</span>
-<a name="ln-1896"></a><span class="c">!  Updates the \(LDL^T\) factors of matrix \(A\)</span>
-<a name="ln-1897"></a><span class="c">!  by rank-one matrix \(\sigma z z^T \).</span>
-<a name="ln-1898"></a><span class="c">!</span>
-<a name="ln-1899"></a><span class="c">!### Reference</span>
-<a name="ln-1900"></a><span class="c">!  * R. Fletcher, M.J.D. Powell,</span>
-<a name="ln-1901"></a><span class="c">!    &quot;[On the modification of LDL&#39; factorization](http://www.ams.org/journals/mcom/1974-28-128/S0025-5718-1974-0359297-1/S0025-5718-1974-0359297-1.pdf)&quot;.</span>
-<a name="ln-1902"></a><span class="c">!    Mathematics of Computation Vol. 28, No. 128, p. 1067-1087, October 1974.</span>
-<a name="ln-1903"></a><span class="c">!</span>
-<a name="ln-1904"></a><span class="c">!### History</span>
-<a name="ln-1905"></a><span class="c">!  * D. Kraft, DFVLR - institut fuer dynamik der flugsysteme</span>
-<a name="ln-1906"></a><span class="c">!    d-8031  oberpfaffenhofen</span>
-<a name="ln-1907"></a><span class="c">!  * Status: 15. january 1980</span>
-<a name="ln-1908"></a>
-<a name="ln-1909"></a>    <span class="k">subroutine </span><span class="n">ldl</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">sigma</span><span class="p">,</span><span class="n">w</span><span class="p">)</span>
+<a name="ln-1896"></a><span class="c">!### Purpose:</span>
+<a name="ln-1897"></a><span class="c">!</span>
+<a name="ln-1898"></a><span class="c">!  Updates the \(LDL^T\) factors of matrix \(A\)</span>
+<a name="ln-1899"></a><span class="c">!  by rank-one matrix \(\sigma z z^T \).</span>
+<a name="ln-1900"></a><span class="c">!</span>
+<a name="ln-1901"></a><span class="c">!### Reference</span>
+<a name="ln-1902"></a><span class="c">!  * R. Fletcher, M.J.D. Powell,</span>
+<a name="ln-1903"></a><span class="c">!    &quot;[On the modification of LDL&#39; factorization](http://www.ams.org/journals/mcom/1974-28-128/S0025-5718-1974-0359297-1/S0025-5718-1974-0359297-1.pdf)&quot;.</span>
+<a name="ln-1904"></a><span class="c">!    Mathematics of Computation Vol. 28, No. 128, p. 1067-1087, October 1974.</span>
+<a name="ln-1905"></a><span class="c">!</span>
+<a name="ln-1906"></a><span class="c">!### History</span>
+<a name="ln-1907"></a><span class="c">!  * D. Kraft, DFVLR - institut fuer dynamik der flugsysteme</span>
+<a name="ln-1908"></a><span class="c">!    d-8031  oberpfaffenhofen</span>
+<a name="ln-1909"></a><span class="c">!  * Status: 15. january 1980</span>
 <a name="ln-1910"></a>
-<a name="ln-1911"></a>    <span class="k">implicit none</span>
+<a name="ln-1911"></a>    <span class="k">subroutine </span><span class="n">ldl</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">sigma</span><span class="p">,</span><span class="n">w</span><span class="p">)</span>
 <a name="ln-1912"></a>
-<a name="ln-1913"></a><span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">n</span>     <span class="c">!! order of the coefficient matrix `a`</span>
-<a name="ln-1914"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                 <span class="kd">::</span> <span class="n">sigma</span> <span class="c">!! scalar factor by which the modifying dyade \(z z^T\) is multiplied.</span>
-<a name="ln-1915"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span>     <span class="c">!! ***In:*** positive definite matrix of dimension `n`;</span>
-<a name="ln-1916"></a>                                                 <span class="c">!! only the lower triangle is used and is stored column by</span>
-<a name="ln-1917"></a>                                                 <span class="c">!! column as one dimensional array of dimension `n*(n+1)/2`.</span>
-<a name="ln-1918"></a>                                                 <span class="c">!!</span>
-<a name="ln-1919"></a>                                                 <span class="c">!! ***Out:*** updated \(LDL^T\) factors</span>
-<a name="ln-1920"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">w</span>     <span class="c">!! working array of dimension `n` (used only if \( \sigma \lt 0 \) ).</span>
-<a name="ln-1921"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">z</span>     <span class="c">!! vector of dimension `n` of updating elements.</span>
-<a name="ln-1922"></a>
-<a name="ln-1923"></a>    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span> <span class="p">,</span> <span class="n">ij</span> <span class="p">,</span> <span class="n">j</span>
-<a name="ln-1924"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t</span> <span class="p">,</span> <span class="n">v</span> <span class="p">,</span> <span class="n">u</span> <span class="p">,</span> <span class="n">tp</span> <span class="p">,</span> <span class="n">beta</span> <span class="p">,</span> <span class="n">alpha</span> <span class="p">,</span> <span class="n">delta</span> <span class="p">,</span> <span class="nb">gamma</span>
-<a name="ln-1925"></a>
-<a name="ln-1926"></a><span class="nb">    </span><span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-1927"></a><span class="k">        </span><span class="n">ij</span> <span class="o">=</span> <span class="mi">1</span>
-<a name="ln-1928"></a>        <span class="n">t</span> <span class="o">=</span> <span class="n">one</span><span class="o">/</span><span class="n">sigma</span>
-<a name="ln-1929"></a>        <span class="k">if</span> <span class="p">(</span> <span class="n">sigma</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-1930"></a>            <span class="c">! prepare negative update</span>
-<a name="ln-1931"></a>            <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-1932"></a>                <span class="n">w</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">z</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<a name="ln-1933"></a>            <span class="k">end do</span>
-<a name="ln-1934"></a><span class="k">            do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-1935"></a>                <span class="n">v</span> <span class="o">=</span> <span class="n">w</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<a name="ln-1936"></a>                <span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">v</span><span class="o">*</span><span class="n">v</span><span class="o">/</span><span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
-<a name="ln-1937"></a>                <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-1938"></a>                    <span class="n">ij</span> <span class="o">=</span> <span class="n">ij</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-1939"></a>                    <span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">-</span> <span class="n">v</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
-<a name="ln-1940"></a>                <span class="k">end do</span>
-<a name="ln-1941"></a><span class="k">                </span><span class="n">ij</span> <span class="o">=</span> <span class="n">ij</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-1942"></a>            <span class="k">end do</span>
-<a name="ln-1943"></a><span class="k">            if</span> <span class="p">(</span> <span class="n">t</span><span class="o">&gt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="n">t</span> <span class="o">=</span> <span class="n">epmach</span><span class="o">/</span><span class="n">sigma</span>
-<a name="ln-1944"></a>            <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-1945"></a>                <span class="n">j</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span>
-<a name="ln-1946"></a>                <span class="n">ij</span> <span class="o">=</span> <span class="n">ij</span> <span class="o">-</span> <span class="n">i</span>
-<a name="ln-1947"></a>                <span class="n">u</span> <span class="o">=</span> <span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-<a name="ln-1948"></a>                <span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">t</span>
-<a name="ln-1949"></a>                <span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-</span> <span class="n">u</span><span class="o">*</span><span class="n">u</span><span class="o">/</span><span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
-<a name="ln-1950"></a>            <span class="k">end do</span>
-<a name="ln-1951"></a><span class="k">        end if</span>
-<a name="ln-1952"></a>        <span class="c">! here updating begins</span>
-<a name="ln-1953"></a>        <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-1954"></a>            <span class="n">v</span> <span class="o">=</span> <span class="n">z</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<a name="ln-1955"></a>            <span class="n">delta</span> <span class="o">=</span> <span class="n">v</span><span class="o">/</span><span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
-<a name="ln-1956"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">sigma</span><span class="o">&lt;</span><span class="n">zero</span> <span class="p">)</span> <span class="n">tp</span> <span class="o">=</span> <span class="n">w</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<a name="ln-1957"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">sigma</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="n">tp</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">delta</span><span class="o">*</span><span class="n">v</span>
-<a name="ln-1958"></a>            <span class="n">alpha</span> <span class="o">=</span> <span class="n">tp</span><span class="o">/</span><span class="n">t</span>
-<a name="ln-1959"></a>            <span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span> <span class="o">=</span> <span class="n">alpha</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
-<a name="ln-1960"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">i</span><span class="o">==</span><span class="n">n</span> <span class="p">)</span> <span class="k">return</span>
-<a name="ln-1961"></a><span class="k">            </span><span class="n">beta</span> <span class="o">=</span> <span class="n">delta</span><span class="o">/</span><span class="n">tp</span>
-<a name="ln-1962"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">alpha</span><span class="o">&gt;</span><span class="n">four</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-1963"></a><span class="k">                </span><span class="nb">gamma</span> <span class="o">=</span> <span class="n">t</span><span class="o">/</span><span class="n">tp</span>
-<a name="ln-1964"></a>                <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-1965"></a>                    <span class="n">ij</span> <span class="o">=</span> <span class="n">ij</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-1966"></a>                    <span class="n">u</span> <span class="o">=</span> <span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
-<a name="ln-1967"></a>                    <span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span> <span class="o">=</span> <span class="nb">gamma</span><span class="o">*</span><span class="n">u</span> <span class="o">+</span> <span class="n">beta</span><span class="o">*</span><span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-<a name="ln-1968"></a>                    <span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">-</span> <span class="n">v</span><span class="o">*</span><span class="n">u</span>
-<a name="ln-1969"></a>                <span class="k">end do</span>
-<a name="ln-1970"></a><span class="k">            else</span>
-<a name="ln-1971"></a><span class="k">                do </span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
-<a name="ln-1972"></a>                    <span class="n">ij</span> <span class="o">=</span> <span class="n">ij</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-1973"></a>                    <span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">-</span> <span class="n">v</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
-<a name="ln-1974"></a>                    <span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span> <span class="o">=</span> <span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="o">*</span><span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-<a name="ln-1975"></a>                <span class="k">end do</span>
-<a name="ln-1976"></a><span class="k">            end if</span>
-<a name="ln-1977"></a><span class="k">            </span><span class="n">ij</span> <span class="o">=</span> <span class="n">ij</span> <span class="o">+</span> <span class="mi">1</span>
-<a name="ln-1978"></a>            <span class="n">t</span> <span class="o">=</span> <span class="n">tp</span>
-<a name="ln-1979"></a>        <span class="k">end do</span>
-<a name="ln-1980"></a><span class="k">    end if</span>
-<a name="ln-1981"></a>
-<a name="ln-1982"></a><span class="k">    end subroutine </span><span class="n">ldl</span>
-<a name="ln-1983"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-1984"></a>
+<a name="ln-1913"></a>    <span class="k">implicit none</span>
+<a name="ln-1914"></a>
+<a name="ln-1915"></a><span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">n</span>     <span class="c">!! order of the coefficient matrix `a`</span>
+<a name="ln-1916"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                 <span class="kd">::</span> <span class="n">sigma</span> <span class="c">!! scalar factor by which the modifying dyade \(z z^T\) is multiplied.</span>
+<a name="ln-1917"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span>     <span class="c">!! ***In:*** positive definite matrix of dimension `n`;</span>
+<a name="ln-1918"></a>                                                 <span class="c">!! only the lower triangle is used and is stored column by</span>
+<a name="ln-1919"></a>                                                 <span class="c">!! column as one dimensional array of dimension `n*(n+1)/2`.</span>
+<a name="ln-1920"></a>                                                 <span class="c">!!</span>
+<a name="ln-1921"></a>                                                 <span class="c">!! ***Out:*** updated \(LDL^T\) factors</span>
+<a name="ln-1922"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">w</span>     <span class="c">!! working array of dimension `n` (used only if \( \sigma \lt 0 \) ).</span>
+<a name="ln-1923"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">z</span>     <span class="c">!! vector of dimension `n` of updating elements.</span>
+<a name="ln-1924"></a>
+<a name="ln-1925"></a>    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span> <span class="p">,</span> <span class="n">ij</span> <span class="p">,</span> <span class="n">j</span>
+<a name="ln-1926"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t</span> <span class="p">,</span> <span class="n">v</span> <span class="p">,</span> <span class="n">u</span> <span class="p">,</span> <span class="n">tp</span> <span class="p">,</span> <span class="n">beta</span> <span class="p">,</span> <span class="n">alpha</span> <span class="p">,</span> <span class="n">delta</span> <span class="p">,</span> <span class="nb">gamma</span>
+<a name="ln-1927"></a>
+<a name="ln-1928"></a><span class="nb">    </span><span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-1929"></a><span class="k">        </span><span class="n">ij</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-1930"></a>        <span class="n">t</span> <span class="o">=</span> <span class="n">one</span><span class="o">/</span><span class="n">sigma</span>
+<a name="ln-1931"></a>        <span class="k">if</span> <span class="p">(</span> <span class="n">sigma</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-1932"></a>            <span class="c">! prepare negative update</span>
+<a name="ln-1933"></a>            <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-1934"></a>                <span class="n">w</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">z</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-1935"></a>            <span class="k">end do</span>
+<a name="ln-1936"></a><span class="k">            do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-1937"></a>                <span class="n">v</span> <span class="o">=</span> <span class="n">w</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-1938"></a>                <span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">v</span><span class="o">*</span><span class="n">v</span><span class="o">/</span><span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
+<a name="ln-1939"></a>                <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-1940"></a>                    <span class="n">ij</span> <span class="o">=</span> <span class="n">ij</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-1941"></a>                    <span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">-</span> <span class="n">v</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
+<a name="ln-1942"></a>                <span class="k">end do</span>
+<a name="ln-1943"></a><span class="k">                </span><span class="n">ij</span> <span class="o">=</span> <span class="n">ij</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-1944"></a>            <span class="k">end do</span>
+<a name="ln-1945"></a><span class="k">            if</span> <span class="p">(</span> <span class="n">t</span><span class="o">&gt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="n">t</span> <span class="o">=</span> <span class="n">epmach</span><span class="o">/</span><span class="n">sigma</span>
+<a name="ln-1946"></a>            <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-1947"></a>                <span class="n">j</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">i</span>
+<a name="ln-1948"></a>                <span class="n">ij</span> <span class="o">=</span> <span class="n">ij</span> <span class="o">-</span> <span class="n">i</span>
+<a name="ln-1949"></a>                <span class="n">u</span> <span class="o">=</span> <span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-1950"></a>                <span class="n">w</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">t</span>
+<a name="ln-1951"></a>                <span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">-</span> <span class="n">u</span><span class="o">*</span><span class="n">u</span><span class="o">/</span><span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
+<a name="ln-1952"></a>            <span class="k">end do</span>
+<a name="ln-1953"></a><span class="k">        end if</span>
+<a name="ln-1954"></a>        <span class="c">! here updating begins</span>
+<a name="ln-1955"></a>        <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-1956"></a>            <span class="n">v</span> <span class="o">=</span> <span class="n">z</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-1957"></a>            <span class="n">delta</span> <span class="o">=</span> <span class="n">v</span><span class="o">/</span><span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
+<a name="ln-1958"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">sigma</span><span class="o">&lt;</span><span class="n">zero</span> <span class="p">)</span> <span class="n">tp</span> <span class="o">=</span> <span class="n">w</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-1959"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">sigma</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="n">tp</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">delta</span><span class="o">*</span><span class="n">v</span>
+<a name="ln-1960"></a>            <span class="n">alpha</span> <span class="o">=</span> <span class="n">tp</span><span class="o">/</span><span class="n">t</span>
+<a name="ln-1961"></a>            <span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span> <span class="o">=</span> <span class="n">alpha</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
+<a name="ln-1962"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">i</span><span class="o">==</span><span class="n">n</span> <span class="p">)</span> <span class="k">return</span>
+<a name="ln-1963"></a><span class="k">            </span><span class="n">beta</span> <span class="o">=</span> <span class="n">delta</span><span class="o">/</span><span class="n">tp</span>
+<a name="ln-1964"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">alpha</span><span class="o">&gt;</span><span class="n">four</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-1965"></a><span class="k">                </span><span class="nb">gamma</span> <span class="o">=</span> <span class="n">t</span><span class="o">/</span><span class="n">tp</span>
+<a name="ln-1966"></a>                <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-1967"></a>                    <span class="n">ij</span> <span class="o">=</span> <span class="n">ij</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-1968"></a>                    <span class="n">u</span> <span class="o">=</span> <span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
+<a name="ln-1969"></a>                    <span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span> <span class="o">=</span> <span class="nb">gamma</span><span class="o">*</span><span class="n">u</span> <span class="o">+</span> <span class="n">beta</span><span class="o">*</span><span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-1970"></a>                    <span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">-</span> <span class="n">v</span><span class="o">*</span><span class="n">u</span>
+<a name="ln-1971"></a>                <span class="k">end do</span>
+<a name="ln-1972"></a><span class="k">            else</span>
+<a name="ln-1973"></a><span class="k">                do </span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">,</span> <span class="n">n</span>
+<a name="ln-1974"></a>                    <span class="n">ij</span> <span class="o">=</span> <span class="n">ij</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-1975"></a>                    <span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span> <span class="o">-</span> <span class="n">v</span><span class="o">*</span><span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
+<a name="ln-1976"></a>                    <span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span> <span class="o">=</span> <span class="n">a</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="o">*</span><span class="n">z</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+<a name="ln-1977"></a>                <span class="k">end do</span>
+<a name="ln-1978"></a><span class="k">            end if</span>
+<a name="ln-1979"></a><span class="k">            </span><span class="n">ij</span> <span class="o">=</span> <span class="n">ij</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-1980"></a>            <span class="n">t</span> <span class="o">=</span> <span class="n">tp</span>
+<a name="ln-1981"></a>        <span class="k">end do</span>
+<a name="ln-1982"></a><span class="k">    end if</span>
+<a name="ln-1983"></a>
+<a name="ln-1984"></a><span class="k">    end subroutine </span><span class="n">ldl</span>
 <a name="ln-1985"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-1986"></a><span class="c">!&gt;</span>
-<a name="ln-1987"></a><span class="c">!  Linesearch without derivatives (used by [[slsqp]] if `linesearch_mode=2`).</span>
-<a name="ln-1988"></a><span class="c">!  Returns the abscissa approximating the point where `f` attains a minimum.</span>
-<a name="ln-1989"></a><span class="c">!</span>
-<a name="ln-1990"></a><span class="c">!### purpose:</span>
+<a name="ln-1986"></a>
+<a name="ln-1987"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-1988"></a><span class="c">!&gt;</span>
+<a name="ln-1989"></a><span class="c">!  Linesearch without derivatives (used by [[slsqp]] if `linesearch_mode=2`).</span>
+<a name="ln-1990"></a><span class="c">!  Returns the abscissa approximating the point where `f` attains a minimum.</span>
 <a name="ln-1991"></a><span class="c">!</span>
-<a name="ln-1992"></a><span class="c">!  to find the argument linmin where the function `f` takes it&#39;s minimum</span>
-<a name="ln-1993"></a><span class="c">!  on the interval `ax`, `bx`. It uses a combination of golden section</span>
-<a name="ln-1994"></a><span class="c">!  and successive quadratic interpolation.</span>
-<a name="ln-1995"></a><span class="c">!</span>
-<a name="ln-1996"></a><span class="c">!### Reference</span>
+<a name="ln-1992"></a><span class="c">!### purpose:</span>
+<a name="ln-1993"></a><span class="c">!</span>
+<a name="ln-1994"></a><span class="c">!  to find the argument linmin where the function `f` takes it&#39;s minimum</span>
+<a name="ln-1995"></a><span class="c">!  on the interval `ax`, `bx`. It uses a combination of golden section</span>
+<a name="ln-1996"></a><span class="c">!  and successive quadratic interpolation.</span>
 <a name="ln-1997"></a><span class="c">!</span>
-<a name="ln-1998"></a><span class="c">!  This function subprogram is a slightly modified version of the</span>
-<a name="ln-1999"></a><span class="c">!  ALGOL 60 procedure `localmin` given in R.P. Brent:</span>
-<a name="ln-2000"></a><span class="c">!  &quot;[Algorithms for minimization without derivatives](https://maths-people.anu.edu.au/~brent/pub/pub011.html)&quot;,</span>
-<a name="ln-2001"></a><span class="c">!  Prentice-Hall (1973).</span>
-<a name="ln-2002"></a><span class="c">!</span>
-<a name="ln-2003"></a><span class="c">!### History</span>
+<a name="ln-1998"></a><span class="c">!### Reference</span>
+<a name="ln-1999"></a><span class="c">!</span>
+<a name="ln-2000"></a><span class="c">!  This function subprogram is a slightly modified version of the</span>
+<a name="ln-2001"></a><span class="c">!  ALGOL 60 procedure `localmin` given in R.P. Brent:</span>
+<a name="ln-2002"></a><span class="c">!  &quot;[Algorithms for minimization without derivatives](https://maths-people.anu.edu.au/~brent/pub/pub011.html)&quot;,</span>
+<a name="ln-2003"></a><span class="c">!  Prentice-Hall (1973).</span>
 <a name="ln-2004"></a><span class="c">!</span>
-<a name="ln-2005"></a><span class="c">!  * Kraft, D., DFVLR - institut fuer dynamik der flugsysteme</span>
-<a name="ln-2006"></a><span class="c">!    d-8031  oberpfaffenhofen</span>
-<a name="ln-2007"></a><span class="c">!  * status: 31. august 1984</span>
-<a name="ln-2008"></a><span class="c">!  * Jacob Williams, Jan 2016, Refactored into modern Fortran.</span>
-<a name="ln-2009"></a><span class="c">!    Added saved variables as `inout`s to make the routine thread-safe.</span>
-<a name="ln-2010"></a>
-<a name="ln-2011"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="k">function </span><span class="n">linmin</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span><span class="n">ax</span><span class="p">,</span><span class="n">bx</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">tol</span><span class="p">,&amp;</span>
-<a name="ln-2012"></a>                                <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,&amp;</span>
-<a name="ln-2013"></a>                                <span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">fu</span><span class="p">,</span><span class="n">fv</span><span class="p">,</span><span class="n">fw</span><span class="p">,</span><span class="n">fx</span><span class="p">,</span><span class="n">tol1</span><span class="p">,</span><span class="n">tol2</span><span class="p">)</span>
-<a name="ln-2014"></a>
-<a name="ln-2015"></a>    <span class="k">implicit none</span>
+<a name="ln-2005"></a><span class="c">!### History</span>
+<a name="ln-2006"></a><span class="c">!</span>
+<a name="ln-2007"></a><span class="c">!  * Kraft, D., DFVLR - institut fuer dynamik der flugsysteme</span>
+<a name="ln-2008"></a><span class="c">!    d-8031  oberpfaffenhofen</span>
+<a name="ln-2009"></a><span class="c">!  * status: 31. august 1984</span>
+<a name="ln-2010"></a><span class="c">!  * Jacob Williams, Jan 2016, Refactored into modern Fortran.</span>
+<a name="ln-2011"></a><span class="c">!    Added saved variables as `inout`s to make the routine thread-safe.</span>
+<a name="ln-2012"></a>
+<a name="ln-2013"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="k">function </span><span class="n">linmin</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span><span class="n">ax</span><span class="p">,</span><span class="n">bx</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">tol</span><span class="p">,&amp;</span>
+<a name="ln-2014"></a>                                <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,&amp;</span>
+<a name="ln-2015"></a>                                <span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">fu</span><span class="p">,</span><span class="n">fv</span><span class="p">,</span><span class="n">fw</span><span class="p">,</span><span class="n">fx</span><span class="p">,</span><span class="n">tol1</span><span class="p">,</span><span class="n">tol2</span><span class="p">)</span>
 <a name="ln-2016"></a>
-<a name="ln-2017"></a><span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">mode</span>  <span class="c">!! controls reverse communication</span>
-<a name="ln-2018"></a>                                   <span class="c">!! must be set to 0 initially, returns with intermediate</span>
-<a name="ln-2019"></a>                                   <span class="c">!! values 1 and 2 which must not be changed by the user,</span>
-<a name="ln-2020"></a>                                   <span class="c">!! ends with convergence with value 3.</span>
-<a name="ln-2021"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">f</span>                  <span class="c">!! function value at `linmin` which is to be brought in by</span>
-<a name="ln-2022"></a>                                   <span class="c">!! reverse communication controlled by `mode`</span>
-<a name="ln-2023"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">tol</span>     <span class="c">!! desired length of interval of uncertainty of final result</span>
-<a name="ln-2024"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ax</span>      <span class="c">!! left endpoint of initial interval</span>
-<a name="ln-2025"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">bx</span>      <span class="c">!! right endpoint of initial interval</span>
-<a name="ln-2026"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">fu</span><span class="p">,</span><span class="n">fv</span><span class="p">,</span><span class="n">fw</span><span class="p">,</span><span class="n">fx</span><span class="p">,</span><span class="n">tol1</span><span class="p">,</span><span class="n">tol2</span>
-<a name="ln-2027"></a>
-<a name="ln-2028"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">c</span>    <span class="o">=</span> <span class="p">(</span><span class="mf">3.0_wp</span><span class="o">-</span><span class="nb">sqrt</span><span class="p">(</span><span class="mf">5.0_wp</span><span class="p">))</span><span class="o">/</span><span class="mf">2.0_wp</span>  <span class="c">!! golden section ratio = `0.381966011`</span>
-<a name="ln-2029"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">eps</span>  <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="nb">epsilon</span><span class="p">(</span><span class="mf">1.0_wp</span><span class="p">))</span>         <span class="c">!! square - root of machine precision</span>
-<a name="ln-2030"></a>
-<a name="ln-2031"></a>    <span class="k">select case</span> <span class="p">(</span><span class="n">mode</span><span class="p">)</span>
-<a name="ln-2032"></a>    <span class="k">case</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<a name="ln-2033"></a>
-<a name="ln-2034"></a>        <span class="c">! main loop starts here</span>
+<a name="ln-2017"></a>    <span class="k">implicit none</span>
+<a name="ln-2018"></a>
+<a name="ln-2019"></a><span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">mode</span>  <span class="c">!! controls reverse communication</span>
+<a name="ln-2020"></a>                                   <span class="c">!! must be set to 0 initially, returns with intermediate</span>
+<a name="ln-2021"></a>                                   <span class="c">!! values 1 and 2 which must not be changed by the user,</span>
+<a name="ln-2022"></a>                                   <span class="c">!! ends with convergence with value 3.</span>
+<a name="ln-2023"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">f</span>                  <span class="c">!! function value at `linmin` which is to be brought in by</span>
+<a name="ln-2024"></a>                                   <span class="c">!! reverse communication controlled by `mode`</span>
+<a name="ln-2025"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">tol</span>     <span class="c">!! desired length of interval of uncertainty of final result</span>
+<a name="ln-2026"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ax</span>      <span class="c">!! left endpoint of initial interval</span>
+<a name="ln-2027"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">bx</span>      <span class="c">!! right endpoint of initial interval</span>
+<a name="ln-2028"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">fu</span><span class="p">,</span><span class="n">fv</span><span class="p">,</span><span class="n">fw</span><span class="p">,</span><span class="n">fx</span><span class="p">,</span><span class="n">tol1</span><span class="p">,</span><span class="n">tol2</span>
+<a name="ln-2029"></a>
+<a name="ln-2030"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">c</span>    <span class="o">=</span> <span class="p">(</span><span class="mf">3.0_wp</span><span class="o">-</span><span class="nb">sqrt</span><span class="p">(</span><span class="mf">5.0_wp</span><span class="p">))</span><span class="o">/</span><span class="mf">2.0_wp</span>  <span class="c">!! golden section ratio = `0.381966011`</span>
+<a name="ln-2031"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">eps</span>  <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="nb">epsilon</span><span class="p">(</span><span class="mf">1.0_wp</span><span class="p">))</span>         <span class="c">!! square - root of machine precision</span>
+<a name="ln-2032"></a>
+<a name="ln-2033"></a>    <span class="k">select case</span> <span class="p">(</span><span class="n">mode</span><span class="p">)</span>
+<a name="ln-2034"></a>    <span class="k">case</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <a name="ln-2035"></a>
-<a name="ln-2036"></a>        <span class="n">fx</span> <span class="o">=</span> <span class="n">f</span>
-<a name="ln-2037"></a>        <span class="n">fv</span> <span class="o">=</span> <span class="n">fx</span>
-<a name="ln-2038"></a>        <span class="n">fw</span> <span class="o">=</span> <span class="n">fv</span>
-<a name="ln-2039"></a>
-<a name="ln-2040"></a>    <span class="k">case</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-2036"></a>        <span class="c">! main loop starts here</span>
+<a name="ln-2037"></a>
+<a name="ln-2038"></a>        <span class="n">fx</span> <span class="o">=</span> <span class="n">f</span>
+<a name="ln-2039"></a>        <span class="n">fv</span> <span class="o">=</span> <span class="n">fx</span>
+<a name="ln-2040"></a>        <span class="n">fw</span> <span class="o">=</span> <span class="n">fv</span>
 <a name="ln-2041"></a>
-<a name="ln-2042"></a>        <span class="n">fu</span> <span class="o">=</span> <span class="n">f</span>
-<a name="ln-2043"></a>        <span class="c">! update a, b, v, w, and x</span>
-<a name="ln-2044"></a>        <span class="k">if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&gt;</span><span class="n">fx</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-2045"></a><span class="k">            if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&lt;</span><span class="n">x</span> <span class="p">)</span> <span class="n">a</span> <span class="o">=</span> <span class="n">u</span>
-<a name="ln-2046"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&gt;=</span><span class="n">x</span> <span class="p">)</span> <span class="n">b</span> <span class="o">=</span> <span class="n">u</span>
-<a name="ln-2047"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&lt;=</span><span class="n">fw</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">w</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-2048"></a><span class="k">                </span><span class="n">v</span> <span class="o">=</span> <span class="n">w</span>
-<a name="ln-2049"></a>                <span class="n">fv</span> <span class="o">=</span> <span class="n">fw</span>
-<a name="ln-2050"></a>                <span class="n">w</span> <span class="o">=</span> <span class="n">u</span>
-<a name="ln-2051"></a>                <span class="n">fw</span> <span class="o">=</span> <span class="n">fu</span>
-<a name="ln-2052"></a>            <span class="k">else if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&lt;=</span><span class="n">fv</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-2053"></a><span class="k">                </span><span class="n">v</span> <span class="o">=</span> <span class="n">u</span>
-<a name="ln-2054"></a>                <span class="n">fv</span> <span class="o">=</span> <span class="n">fu</span>
-<a name="ln-2055"></a>            <span class="k">end if</span>
-<a name="ln-2056"></a><span class="k">        else</span>
-<a name="ln-2057"></a><span class="k">            if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&gt;=</span><span class="n">x</span> <span class="p">)</span> <span class="n">a</span> <span class="o">=</span> <span class="n">x</span>
-<a name="ln-2058"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&lt;</span><span class="n">x</span> <span class="p">)</span> <span class="n">b</span> <span class="o">=</span> <span class="n">x</span>
-<a name="ln-2059"></a>            <span class="n">v</span> <span class="o">=</span> <span class="n">w</span>
-<a name="ln-2060"></a>            <span class="n">fv</span> <span class="o">=</span> <span class="n">fw</span>
-<a name="ln-2061"></a>            <span class="n">w</span> <span class="o">=</span> <span class="n">x</span>
-<a name="ln-2062"></a>            <span class="n">fw</span> <span class="o">=</span> <span class="n">fx</span>
-<a name="ln-2063"></a>            <span class="n">x</span> <span class="o">=</span> <span class="n">u</span>
-<a name="ln-2064"></a>            <span class="n">fx</span> <span class="o">=</span> <span class="n">fu</span>
-<a name="ln-2065"></a>        <span class="k">end if</span>
-<a name="ln-2066"></a>
-<a name="ln-2067"></a><span class="k">    case </span><span class="n">default</span>
+<a name="ln-2042"></a>    <span class="k">case</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-2043"></a>
+<a name="ln-2044"></a>        <span class="n">fu</span> <span class="o">=</span> <span class="n">f</span>
+<a name="ln-2045"></a>        <span class="c">! update a, b, v, w, and x</span>
+<a name="ln-2046"></a>        <span class="k">if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&gt;</span><span class="n">fx</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-2047"></a><span class="k">            if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&lt;</span><span class="n">x</span> <span class="p">)</span> <span class="n">a</span> <span class="o">=</span> <span class="n">u</span>
+<a name="ln-2048"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&gt;=</span><span class="n">x</span> <span class="p">)</span> <span class="n">b</span> <span class="o">=</span> <span class="n">u</span>
+<a name="ln-2049"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&lt;=</span><span class="n">fw</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">w</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-2050"></a><span class="k">                </span><span class="n">v</span> <span class="o">=</span> <span class="n">w</span>
+<a name="ln-2051"></a>                <span class="n">fv</span> <span class="o">=</span> <span class="n">fw</span>
+<a name="ln-2052"></a>                <span class="n">w</span> <span class="o">=</span> <span class="n">u</span>
+<a name="ln-2053"></a>                <span class="n">fw</span> <span class="o">=</span> <span class="n">fu</span>
+<a name="ln-2054"></a>            <span class="k">else if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&lt;=</span><span class="n">fv</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-2055"></a><span class="k">                </span><span class="n">v</span> <span class="o">=</span> <span class="n">u</span>
+<a name="ln-2056"></a>                <span class="n">fv</span> <span class="o">=</span> <span class="n">fu</span>
+<a name="ln-2057"></a>            <span class="k">end if</span>
+<a name="ln-2058"></a><span class="k">        else</span>
+<a name="ln-2059"></a><span class="k">            if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&gt;=</span><span class="n">x</span> <span class="p">)</span> <span class="n">a</span> <span class="o">=</span> <span class="n">x</span>
+<a name="ln-2060"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&lt;</span><span class="n">x</span> <span class="p">)</span> <span class="n">b</span> <span class="o">=</span> <span class="n">x</span>
+<a name="ln-2061"></a>            <span class="n">v</span> <span class="o">=</span> <span class="n">w</span>
+<a name="ln-2062"></a>            <span class="n">fv</span> <span class="o">=</span> <span class="n">fw</span>
+<a name="ln-2063"></a>            <span class="n">w</span> <span class="o">=</span> <span class="n">x</span>
+<a name="ln-2064"></a>            <span class="n">fw</span> <span class="o">=</span> <span class="n">fx</span>
+<a name="ln-2065"></a>            <span class="n">x</span> <span class="o">=</span> <span class="n">u</span>
+<a name="ln-2066"></a>            <span class="n">fx</span> <span class="o">=</span> <span class="n">fu</span>
+<a name="ln-2067"></a>        <span class="k">end if</span>
 <a name="ln-2068"></a>
-<a name="ln-2069"></a>        <span class="c">! initialization</span>
-<a name="ln-2070"></a>        <span class="n">a</span> <span class="o">=</span> <span class="n">ax</span>
-<a name="ln-2071"></a>        <span class="n">b</span> <span class="o">=</span> <span class="n">bx</span>
-<a name="ln-2072"></a>        <span class="n">e</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-2073"></a>        <span class="n">v</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span>
-<a name="ln-2074"></a>        <span class="n">w</span> <span class="o">=</span> <span class="n">v</span>
-<a name="ln-2075"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">w</span>
-<a name="ln-2076"></a>        <span class="n">linmin</span> <span class="o">=</span> <span class="n">x</span>
-<a name="ln-2077"></a>        <span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span>
-<a name="ln-2078"></a>        <span class="k">return</span>
-<a name="ln-2079"></a>
-<a name="ln-2080"></a><span class="k">    end select</span>
+<a name="ln-2069"></a><span class="k">    case </span><span class="n">default</span>
+<a name="ln-2070"></a>
+<a name="ln-2071"></a>        <span class="c">! initialization</span>
+<a name="ln-2072"></a>        <span class="n">a</span> <span class="o">=</span> <span class="n">ax</span>
+<a name="ln-2073"></a>        <span class="n">b</span> <span class="o">=</span> <span class="n">bx</span>
+<a name="ln-2074"></a>        <span class="n">e</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-2075"></a>        <span class="n">v</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span>
+<a name="ln-2076"></a>        <span class="n">w</span> <span class="o">=</span> <span class="n">v</span>
+<a name="ln-2077"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">w</span>
+<a name="ln-2078"></a>        <span class="n">linmin</span> <span class="o">=</span> <span class="n">x</span>
+<a name="ln-2079"></a>        <span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-2080"></a>        <span class="k">return</span>
 <a name="ln-2081"></a>
-<a name="ln-2082"></a><span class="k">    </span><span class="n">m</span> <span class="o">=</span> <span class="mf">0.5_wp</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
-<a name="ln-2083"></a>    <span class="n">tol1</span> <span class="o">=</span> <span class="n">eps</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">tol</span>
-<a name="ln-2084"></a>    <span class="n">tol2</span> <span class="o">=</span> <span class="n">tol1</span> <span class="o">+</span> <span class="n">tol1</span>
-<a name="ln-2085"></a>
-<a name="ln-2086"></a>    <span class="c">! test convergence</span>
+<a name="ln-2082"></a><span class="k">    end select</span>
+<a name="ln-2083"></a>
+<a name="ln-2084"></a><span class="k">    </span><span class="n">m</span> <span class="o">=</span> <span class="mf">0.5_wp</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<a name="ln-2085"></a>    <span class="n">tol1</span> <span class="o">=</span> <span class="n">eps</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">tol</span>
+<a name="ln-2086"></a>    <span class="n">tol2</span> <span class="o">=</span> <span class="n">tol1</span> <span class="o">+</span> <span class="n">tol1</span>
 <a name="ln-2087"></a>
-<a name="ln-2088"></a>    <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">m</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">tol2</span><span class="o">-</span><span class="mf">0.5_wp</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-2089"></a>        <span class="c">! end of main loop</span>
-<a name="ln-2090"></a>        <span class="n">linmin</span> <span class="o">=</span> <span class="n">x</span>
-<a name="ln-2091"></a>        <span class="n">mode</span> <span class="o">=</span> <span class="mi">3</span>
-<a name="ln-2092"></a>    <span class="k">else</span>
-<a name="ln-2093"></a><span class="k">        </span><span class="n">r</span> <span class="o">=</span> <span class="n">zero</span>
-<a name="ln-2094"></a>        <span class="n">q</span> <span class="o">=</span> <span class="n">r</span>
-<a name="ln-2095"></a>        <span class="n">p</span> <span class="o">=</span> <span class="n">q</span>
-<a name="ln-2096"></a>        <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">&gt;</span><span class="n">tol1</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-2097"></a>            <span class="c">! fit parabola</span>
-<a name="ln-2098"></a>            <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">fx</span><span class="o">-</span><span class="n">fv</span><span class="p">)</span>
-<a name="ln-2099"></a>            <span class="n">q</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">fx</span><span class="o">-</span><span class="n">fw</span><span class="p">)</span>
-<a name="ln-2100"></a>            <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="n">q</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">*</span><span class="n">r</span>
-<a name="ln-2101"></a>            <span class="n">q</span> <span class="o">=</span> <span class="n">q</span> <span class="o">-</span> <span class="n">r</span>
-<a name="ln-2102"></a>            <span class="n">q</span> <span class="o">=</span> <span class="n">q</span> <span class="o">+</span> <span class="n">q</span>
-<a name="ln-2103"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">q</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="n">p</span> <span class="o">=</span> <span class="o">-</span><span class="n">p</span>
-<a name="ln-2104"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">q</span><span class="o">&lt;</span><span class="n">zero</span> <span class="p">)</span> <span class="n">q</span> <span class="o">=</span> <span class="o">-</span><span class="n">q</span>
-<a name="ln-2105"></a>            <span class="n">r</span> <span class="o">=</span> <span class="n">e</span>
-<a name="ln-2106"></a>            <span class="n">e</span> <span class="o">=</span> <span class="n">d</span>
-<a name="ln-2107"></a>        <span class="k">end if</span>
-<a name="ln-2108"></a>
-<a name="ln-2109"></a>        <span class="c">! is parabola acceptable</span>
-<a name="ln-2110"></a>        <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">&gt;=</span><span class="mf">0.5_wp</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">q</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">p</span><span class="o">&lt;=</span><span class="n">q</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">p</span><span class="o">&gt;=</span><span class="n">q</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
-<a name="ln-2111"></a>            <span class="c">! golden section step</span>
-<a name="ln-2112"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">x</span><span class="o">&gt;=</span><span class="n">m</span> <span class="p">)</span> <span class="n">e</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">x</span>
-<a name="ln-2113"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">m</span> <span class="p">)</span> <span class="n">e</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="n">x</span>
-<a name="ln-2114"></a>            <span class="n">d</span> <span class="o">=</span> <span class="n">c</span><span class="o">*</span><span class="n">e</span>
-<a name="ln-2115"></a>        <span class="k">else</span>
-<a name="ln-2116"></a>            <span class="c">! parabolic interpolation step</span>
-<a name="ln-2117"></a>            <span class="n">d</span> <span class="o">=</span> <span class="n">p</span><span class="o">/</span><span class="n">q</span>
-<a name="ln-2118"></a>            <span class="c">! f must not be evaluated too close to a or b</span>
-<a name="ln-2119"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">u</span><span class="o">-</span><span class="n">a</span><span class="o">&lt;</span><span class="n">tol2</span> <span class="p">)</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">tol1</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
-<a name="ln-2120"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">b</span><span class="o">-</span><span class="n">u</span><span class="o">&lt;</span><span class="n">tol2</span> <span class="p">)</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">tol1</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
-<a name="ln-2121"></a>        <span class="k">end if</span>
-<a name="ln-2122"></a>
-<a name="ln-2123"></a>        <span class="c">! f must not be evaluated too close to x</span>
-<a name="ln-2124"></a>        <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">&lt;</span><span class="n">tol1</span> <span class="p">)</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">tol1</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
-<a name="ln-2125"></a>        <span class="n">u</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">d</span>
-<a name="ln-2126"></a>        <span class="n">linmin</span> <span class="o">=</span> <span class="n">u</span>
-<a name="ln-2127"></a>        <span class="n">mode</span> <span class="o">=</span> <span class="mi">2</span>
-<a name="ln-2128"></a>
-<a name="ln-2129"></a>    <span class="k">end if</span>
+<a name="ln-2088"></a>    <span class="c">! test convergence</span>
+<a name="ln-2089"></a>
+<a name="ln-2090"></a>    <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">m</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">tol2</span><span class="o">-</span><span class="mf">0.5_wp</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-2091"></a>        <span class="c">! end of main loop</span>
+<a name="ln-2092"></a>        <span class="n">linmin</span> <span class="o">=</span> <span class="n">x</span>
+<a name="ln-2093"></a>        <span class="n">mode</span> <span class="o">=</span> <span class="mi">3</span>
+<a name="ln-2094"></a>    <span class="k">else</span>
+<a name="ln-2095"></a><span class="k">        </span><span class="n">r</span> <span class="o">=</span> <span class="n">zero</span>
+<a name="ln-2096"></a>        <span class="n">q</span> <span class="o">=</span> <span class="n">r</span>
+<a name="ln-2097"></a>        <span class="n">p</span> <span class="o">=</span> <span class="n">q</span>
+<a name="ln-2098"></a>        <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">&gt;</span><span class="n">tol1</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-2099"></a>            <span class="c">! fit parabola</span>
+<a name="ln-2100"></a>            <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">fx</span><span class="o">-</span><span class="n">fv</span><span class="p">)</span>
+<a name="ln-2101"></a>            <span class="n">q</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">fx</span><span class="o">-</span><span class="n">fw</span><span class="p">)</span>
+<a name="ln-2102"></a>            <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="n">q</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">*</span><span class="n">r</span>
+<a name="ln-2103"></a>            <span class="n">q</span> <span class="o">=</span> <span class="n">q</span> <span class="o">-</span> <span class="n">r</span>
+<a name="ln-2104"></a>            <span class="n">q</span> <span class="o">=</span> <span class="n">q</span> <span class="o">+</span> <span class="n">q</span>
+<a name="ln-2105"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">q</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="n">p</span> <span class="o">=</span> <span class="o">-</span><span class="n">p</span>
+<a name="ln-2106"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">q</span><span class="o">&lt;</span><span class="n">zero</span> <span class="p">)</span> <span class="n">q</span> <span class="o">=</span> <span class="o">-</span><span class="n">q</span>
+<a name="ln-2107"></a>            <span class="n">r</span> <span class="o">=</span> <span class="n">e</span>
+<a name="ln-2108"></a>            <span class="n">e</span> <span class="o">=</span> <span class="n">d</span>
+<a name="ln-2109"></a>        <span class="k">end if</span>
+<a name="ln-2110"></a>
+<a name="ln-2111"></a>        <span class="c">! is parabola acceptable</span>
+<a name="ln-2112"></a>        <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">&gt;=</span><span class="mf">0.5_wp</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">q</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">p</span><span class="o">&lt;=</span><span class="n">q</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">p</span><span class="o">&gt;=</span><span class="n">q</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
+<a name="ln-2113"></a>            <span class="c">! golden section step</span>
+<a name="ln-2114"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">x</span><span class="o">&gt;=</span><span class="n">m</span> <span class="p">)</span> <span class="n">e</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">x</span>
+<a name="ln-2115"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">m</span> <span class="p">)</span> <span class="n">e</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="n">x</span>
+<a name="ln-2116"></a>            <span class="n">d</span> <span class="o">=</span> <span class="n">c</span><span class="o">*</span><span class="n">e</span>
+<a name="ln-2117"></a>        <span class="k">else</span>
+<a name="ln-2118"></a>            <span class="c">! parabolic interpolation step</span>
+<a name="ln-2119"></a>            <span class="n">d</span> <span class="o">=</span> <span class="n">p</span><span class="o">/</span><span class="n">q</span>
+<a name="ln-2120"></a>            <span class="c">! f must not be evaluated too close to a or b</span>
+<a name="ln-2121"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">u</span><span class="o">-</span><span class="n">a</span><span class="o">&lt;</span><span class="n">tol2</span> <span class="p">)</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">tol1</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+<a name="ln-2122"></a>            <span class="k">if</span> <span class="p">(</span> <span class="n">b</span><span class="o">-</span><span class="n">u</span><span class="o">&lt;</span><span class="n">tol2</span> <span class="p">)</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">tol1</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+<a name="ln-2123"></a>        <span class="k">end if</span>
+<a name="ln-2124"></a>
+<a name="ln-2125"></a>        <span class="c">! f must not be evaluated too close to x</span>
+<a name="ln-2126"></a>        <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">&lt;</span><span class="n">tol1</span> <span class="p">)</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">tol1</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+<a name="ln-2127"></a>        <span class="n">u</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">d</span>
+<a name="ln-2128"></a>        <span class="n">linmin</span> <span class="o">=</span> <span class="n">u</span>
+<a name="ln-2129"></a>        <span class="n">mode</span> <span class="o">=</span> <span class="mi">2</span>
 <a name="ln-2130"></a>
-<a name="ln-2131"></a><span class="k">    end function </span><span class="n">linmin</span>
-<a name="ln-2132"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-2133"></a>
+<a name="ln-2131"></a>    <span class="k">end if</span>
+<a name="ln-2132"></a>
+<a name="ln-2133"></a><span class="k">    end function </span><span class="n">linmin</span>
 <a name="ln-2134"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-2135"></a><span class="c">!&gt;</span>
-<a name="ln-2136"></a><span class="c">!  enforce the bound constraints on x.</span>
-<a name="ln-2137"></a>
-<a name="ln-2138"></a>    <span class="k">subroutine </span><span class="n">enforce_bounds</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">)</span>
+<a name="ln-2135"></a>
+<a name="ln-2136"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-2137"></a><span class="c">!&gt;</span>
+<a name="ln-2138"></a><span class="c">!  enforce the bound constraints on x.</span>
 <a name="ln-2139"></a>
-<a name="ln-2140"></a>    <span class="k">implicit none</span>
+<a name="ln-2140"></a>    <span class="k">subroutine </span><span class="n">enforce_bounds</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">)</span>
 <a name="ln-2141"></a>
-<a name="ln-2142"></a><span class="k">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span>   <span class="c">!! optimization variable vector</span>
-<a name="ln-2143"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">xl</span>  <span class="c">!! lower bounds (must be same dimension as `x`)</span>
-<a name="ln-2144"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">xu</span>  <span class="c">!! upper bounds (must be same dimension as `x`)</span>
-<a name="ln-2145"></a>
-<a name="ln-2146"></a>    <span class="k">where</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">xl</span><span class="p">)</span>
-<a name="ln-2147"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">xl</span>
-<a name="ln-2148"></a>    <span class="n">elsewhere</span> <span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">xu</span><span class="p">)</span>
-<a name="ln-2149"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">xu</span>
-<a name="ln-2150"></a>    <span class="k">end where</span>
-<a name="ln-2151"></a>
-<a name="ln-2152"></a><span class="k">    end subroutine </span><span class="n">enforce_bounds</span>
-<a name="ln-2153"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-2154"></a>
+<a name="ln-2142"></a>    <span class="k">implicit none</span>
+<a name="ln-2143"></a>
+<a name="ln-2144"></a><span class="k">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span>   <span class="c">!! optimization variable vector</span>
+<a name="ln-2145"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">xl</span>  <span class="c">!! lower bounds (must be same dimension as `x`)</span>
+<a name="ln-2146"></a>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">xu</span>  <span class="c">!! upper bounds (must be same dimension as `x`)</span>
+<a name="ln-2147"></a>
+<a name="ln-2148"></a>    <span class="k">where</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">xl</span><span class="p">)</span>
+<a name="ln-2149"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">xl</span>
+<a name="ln-2150"></a>    <span class="n">elsewhere</span> <span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">xu</span><span class="p">)</span>
+<a name="ln-2151"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">xu</span>
+<a name="ln-2152"></a>    <span class="k">end where</span>
+<a name="ln-2153"></a>
+<a name="ln-2154"></a><span class="k">    end subroutine </span><span class="n">enforce_bounds</span>
 <a name="ln-2155"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-2156"></a><span class="c">!&gt;</span>
-<a name="ln-2157"></a><span class="c">!  Destructor for [[slsqpb_data]] type.</span>
-<a name="ln-2158"></a>
-<a name="ln-2159"></a>    <span class="k">subroutine </span><span class="n">destroy_slsqpb_data</span><span class="p">(</span><span class="n">me</span><span class="p">)</span>
+<a name="ln-2156"></a>
+<a name="ln-2157"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-2158"></a><span class="c">!&gt;</span>
+<a name="ln-2159"></a><span class="c">!  Destructor for [[slsqpb_data]] type.</span>
 <a name="ln-2160"></a>
-<a name="ln-2161"></a>    <span class="k">implicit none</span>
+<a name="ln-2161"></a>    <span class="k">subroutine </span><span class="n">destroy_slsqpb_data</span><span class="p">(</span><span class="n">me</span><span class="p">)</span>
 <a name="ln-2162"></a>
-<a name="ln-2163"></a><span class="k">    class</span><span class="p">(</span><span class="n">slsqpb_data</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
+<a name="ln-2163"></a>    <span class="k">implicit none</span>
 <a name="ln-2164"></a>
-<a name="ln-2165"></a>    <span class="k">end subroutine </span><span class="n">destroy_slsqpb_data</span>
-<a name="ln-2166"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-2167"></a>
+<a name="ln-2165"></a><span class="k">    class</span><span class="p">(</span><span class="n">slsqpb_data</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
+<a name="ln-2166"></a>
+<a name="ln-2167"></a>    <span class="k">end subroutine </span><span class="n">destroy_slsqpb_data</span>
 <a name="ln-2168"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-2169"></a><span class="c">!&gt;</span>
-<a name="ln-2170"></a><span class="c">!  Destructor for [[linmin_data]] type.</span>
-<a name="ln-2171"></a>
-<a name="ln-2172"></a>    <span class="k">subroutine </span><span class="n">destroy_linmin_data</span><span class="p">(</span><span class="n">me</span><span class="p">)</span>
+<a name="ln-2169"></a>
+<a name="ln-2170"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-2171"></a><span class="c">!&gt;</span>
+<a name="ln-2172"></a><span class="c">!  Destructor for [[linmin_data]] type.</span>
 <a name="ln-2173"></a>
-<a name="ln-2174"></a>    <span class="k">implicit none</span>
+<a name="ln-2174"></a>    <span class="k">subroutine </span><span class="n">destroy_linmin_data</span><span class="p">(</span><span class="n">me</span><span class="p">)</span>
 <a name="ln-2175"></a>
-<a name="ln-2176"></a><span class="k">    class</span><span class="p">(</span><span class="n">linmin_data</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
+<a name="ln-2176"></a>    <span class="k">implicit none</span>
 <a name="ln-2177"></a>
-<a name="ln-2178"></a>    <span class="k">end subroutine </span><span class="n">destroy_linmin_data</span>
-<a name="ln-2179"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-2180"></a>
+<a name="ln-2178"></a><span class="k">    class</span><span class="p">(</span><span class="n">linmin_data</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">me</span>
+<a name="ln-2179"></a>
+<a name="ln-2180"></a>    <span class="k">end subroutine </span><span class="n">destroy_linmin_data</span>
 <a name="ln-2181"></a><span class="c">!*******************************************************************************</span>
-<a name="ln-2182"></a>    <span class="k">end module </span><span class="n">slsqp_core</span>
+<a name="ln-2182"></a>
 <a name="ln-2183"></a><span class="c">!*******************************************************************************</span>
+<a name="ln-2184"></a>    <span class="k">end module </span><span class="n">slsqp_core</span>
+<a name="ln-2185"></a><span class="c">!*******************************************************************************</span>
 </pre></div>
 
     </section>
     </div>
   </div>
 
-  <section class="visible-xs visible-sm hidden-md">
-    <hr>
-    
-
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-1">All Source Files</a></h3></div>
-  <div id="allfiles-1" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_core.f90.html">slsqp_core.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_kinds.f90.html">slsqp_kinds.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_module.f90.html">slsqp_module.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_support.f90.html">slsqp_support.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test.f90.html">slsqp_test.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_2.f90.html">slsqp_test_2.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_3.f90.html">slsqp_test_3.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_71.f90.html">slsqp_test_71.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_stopping_criterion.f90.html">slsqp_test_stopping_criterion.f90</a>
-      
-    </div>
-  </div>
-</div>
-
-
-  </section>
   
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+                                          </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 
@@ -2789,12 +2654,17 @@
       MathJax.Hub.Config({
         TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
         jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
-        'HTML-CSS': { 
-           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
-        }
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
   </body>
 </html>

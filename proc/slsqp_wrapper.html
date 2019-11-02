@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 
-	 <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
+   
+   <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
     
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
@@ -17,6 +17,9 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
     
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,13 +29,6 @@
     
     <script src="../js/jquery-2.1.3.min.js"></script>
     <script src="../js/svg-pan-zoom.min.js"></script>
-
-    
-    <script src="../tipuesearch/tipuesearch_content.js"></script>
-    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    <script src="../tipuesearch/tipuesearch_set.js"></script>
-    <script src="../tipuesearch/tipuesearch.js"></script>
-    
 
   </head>
 
@@ -52,35 +48,37 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-				
+        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
-		 aria-expanded="false">Contents <span class="caret"></span></a>
-	      <ul class="dropdown-menu">
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
               
             <li><a href="../lists/files.html">Source Files</a></li>
-				
-				
+        
+        
+        
             <li><a href="../lists/modules.html">Modules</a></li>
-				
+        
             
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
-				
-				
+        
+        
             <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-								
+               
             <li><a href="../lists/types.html">Derived Types</a></li>
-				
-				
-            <li><a href="../lists/programs.html">Programs</a></li>
-				
+        
+        
             </ul>
             </li>
 
+
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
@@ -94,8 +92,6 @@
                              
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
 
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
 
           </ul>
         
@@ -133,19 +129,23 @@
     
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
-	  data-placement="bottom" data-html="true"
-	  title=" 7.6% of total for procedures.">142 statements</a>
+    data-placement="bottom" data-html="true"
+    title=" 8.4% of total for procedures.">142 statements</a>
      </li> 
+     
      
      
     <li><i class="fa fa-code"></i><a href="../src/slsqp_module.f90"> Source File</a></li>
      
+     
   </ul>
   <ol class="breadcrumb in-well text-right">
   
+    
      <li><a href='../sourcefile/slsqp_module.f90.html'>slsqp_module.f90</a></li>
-  
+    
      <li><a href='../module/slsqp_module.html'>slsqp_module</a></li>
+    
   
      <li class="active">slsqp_wrapper</li>
   </ol>
@@ -165,6 +165,9 @@
     
 <div id="sidebar">
   
+<h3>Contents</h3>
+ 
+
 
 
 
@@ -193,106 +196,8 @@
 </div>
 
 
-  <hr>
-  
 
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs-0">All Procedures</a></h3></div>
-  <div id="allprocs-0" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
-      
-      <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
-      
-      <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
-      
-      <a class="list-group-item" href="../proc/ddot.html">ddot</a>
-      
-      <a class="list-group-item" href="../proc/destroy_linmin_data.html">destroy_linmin_data</a>
-      
-      <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
-      
-      <a class="list-group-item" href="../proc/destroy_slsqpb_data.html">destroy_slsqpb_data</a>
-      
-      <a class="list-group-item" href="../proc/diff.html">diff</a>
-      
-      <a class="list-group-item" href="../proc/dnrm2.html">dnrm2</a>
-      
-      <a class="list-group-item" href="../proc/dscal.html">dscal</a>
-      
-      <a class="list-group-item" href="../proc/dummy_grad.html">dummy_grad</a>
-      
-      <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
-      
-      <a class="list-group-item" href="../proc/func.html">func</a>
-      
-      <a class="list-group-item" href="../proc/g1.html">g1</a>
-      
-      <a class="list-group-item" href="../proc/grad.html">grad</a>
-      
-      <a class="list-group-item" href="../proc/h12.html">h12</a>
-      
-      <a class="list-group-item" href="../proc/hfti.html">hfti</a>
-      
-      <a class="list-group-item" href="../proc/initialize_slsqp.html">initialize_slsqp</a>
-      
-      <a class="list-group-item" href="../proc/ldl.html">ldl</a>
-      
-      <a class="list-group-item" href="../proc/ldp.html">ldp</a>
-      
-      <a class="list-group-item" href="../proc/linmin.html">linmin</a>
-      
-      <a class="list-group-item" href="../proc/lsei.html">lsei</a>
-      
-      <a class="list-group-item" href="../proc/lsi.html">lsi</a>
-      
-      <a class="list-group-item" href="../proc/lsq.html">lsq</a>
-      
-      <a class="list-group-item" href="../proc/mode_to_status_message.html">mode_to_status_message</a>
-      
-      <a class="list-group-item" href="../proc/nnls.html">nnls</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_message.html">report_message</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
-      
-      <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
-      
-      <a class="list-group-item" href="../proc/slsqp_wrapper.html">slsqp_wrapper</a>
-      
-      <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
-      
-      <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
-      
-      <a class="list-group-item" href="../proc/test_func.html">test_func</a>
-      
-      <a class="list-group-item" href="../proc/test_grad.html">test_grad</a>
-      
-    </div>
-  </div>
 </div>
-
-
-</div>  
 
     </div>
     
@@ -301,7 +206,7 @@
 private subroutine slsqp_wrapper(me, x, istat, iterations, status_message)
     
     
-	 
+   
 </h2>
     
   
@@ -406,411 +311,59 @@ private subroutine slsqp_wrapper(me, x, istat, iterations, status_message)
     
     
     
-     <h3>Calls</h3>
-     
-                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <br>
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Calls</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.38.0 (20140413.2041)
  -->
 <!-- Title: proc~~slsqp_wrapper~~CallsGraph Pages: 1 -->
-<svg id="procslsqp_wrapperCallsGraph" width="641pt" height="408pt"
- viewBox="0.00 0.00 641.00 408.02" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="proc~~slsqp_wrapper~~CallsGraph" class="graph" transform="scale(0.629666 0.629666) rotate(0) translate(4 644)">
+<svg id="procslsqp_wrapperCallsGraph" width="281pt" height="74pt"
+ viewBox="0.00 0.00 281.00 74.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~slsqp_wrapper~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 70)">
 <title>proc~~slsqp_wrapper~~CallsGraph</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-644 1014,-644 1014,4 -4,4"/>
+<polygon fill="white" stroke="none" points="-4,4 -4,-70 277,-70 277,4 -4,4"/>
 <!-- proc~slsqp_wrapper -->
 <g id="proc~~slsqp_wrapper~~CallsGraph_node1" class="node"><title>proc~slsqp_wrapper</title>
-<polygon fill="none" stroke="black" points="88,-239 7.10543e-15,-239 7.10543e-15,-215 88,-215 88,-239"/>
-<text text-anchor="middle" x="44" y="-224.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp_wrapper</text>
-</g>
-<!-- proc~slsqp -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node2" class="node"><title>proc~slsqp</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node2"><a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
-<polygon fill="#d9534f" stroke="#d9534f" points="225.5,-260 171.5,-260 171.5,-236 225.5,-236 225.5,-260"/>
-<text text-anchor="middle" x="198.5" y="-245.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge39" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
-<path fill="none" stroke="#000000" d="M88.2925,-232.962C111.298,-236.13 139.259,-239.98 161.129,-242.992"/>
-<polygon fill="#000000" stroke="#000000" points="160.944,-246.499 171.328,-244.396 161.899,-239.564 160.944,-246.499"/>
+<polygon fill="none" stroke="black" points="88,-45 7.10543e-15,-45 7.10543e-15,-21 88,-21 88,-45"/>
+<text text-anchor="middle" x="44" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp_wrapper</text>
 </g>
 <!-- proc~mode_to_status_message -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node3" class="node"><title>proc~mode_to_status_message</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node3"><a xlink:href="../proc/mode_to_status_message.html" xlink:title="mode_to_status_message">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="273,-218 124,-218 124,-194 273,-194 273,-218"/>
-<text text-anchor="middle" x="198.5" y="-203.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mode_to_status_message</text>
+<g id="proc~~slsqp_wrapper~~CallsGraph_node2" class="node"><title>proc~mode_to_status_message</title>
+<g id="a_proc~~slsqp_wrapper~~CallsGraph_node2"><a xlink:href=".././proc/mode_to_status_message.html" xlink:title="mode_to_status_message">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="273,-66 124,-66 124,-42 273,-42 273,-66"/>
+<text text-anchor="middle" x="198.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mode_to_status_message</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~mode_to_status_message -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge40" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~mode_to_status_message</title>
-<path fill="none" stroke="#000000" d="M88.2925,-221.038C96.3539,-219.928 105.024,-218.734 113.827,-217.522"/>
-<polygon fill="#000000" stroke="#000000" points="114.369,-220.981 123.798,-216.149 113.414,-214.046 114.369,-220.981"/>
+<g id="proc~~slsqp_wrapper~~CallsGraph_edge1" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~mode_to_status_message</title>
+<path fill="none" stroke="#000000" d="M88.2925,-38.9616C96.3539,-40.0717 105.024,-41.2656 113.827,-42.4778"/>
+<polygon fill="#000000" stroke="#000000" points="113.414,-45.9538 123.798,-43.8508 114.369,-39.0193 113.414,-45.9538"/>
 </g>
-<!-- proc~slsqpb -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node4" class="node"><title>proc~slsqpb</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node4"><a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
-<polygon fill="#d9534f" stroke="#d9534f" points="363,-260 309,-260 309,-236 363,-236 363,-260"/>
-<text text-anchor="middle" x="336" y="-245.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
+<!-- proc~slsqp -->
+<g id="proc~~slsqp_wrapper~~CallsGraph_node3" class="node"><title>proc~slsqp</title>
+<g id="a_proc~~slsqp_wrapper~~CallsGraph_node3"><a xlink:href=".././proc/slsqp.html" xlink:title="slsqp">
+<polygon fill="#d9534f" stroke="#d9534f" points="225.5,-24 171.5,-24 171.5,-0 225.5,-0 225.5,-24"/>
+<text text-anchor="middle" x="198.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
 </a>
 </g>
 </g>
-<!-- proc~slsqp&#45;&gt;proc~slsqpb -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge38" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
-<path fill="none" stroke="#000000" d="M225.626,-248C246.433,-248 275.792,-248 298.855,-248"/>
-<polygon fill="#000000" stroke="#000000" points="298.954,-251.5 308.954,-248 298.954,-244.5 298.954,-251.5"/>
-</g>
-<!-- proc~linmin -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node5" class="node"><title>proc~linmin</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node5"><a xlink:href="../proc/linmin.html" xlink:title="linmin">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="453,-640 399,-640 399,-616 453,-616 453,-640"/>
-<text text-anchor="middle" x="426" y="-625.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">linmin</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~linmin -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge29" class="edge"><title>proc~slsqpb&#45;&gt;proc~linmin</title>
-<path fill="none" stroke="#000000" d="M336.569,-260.126C335.406,-307.098 335.831,-480.484 399,-602 400.077,-604.071 401.376,-606.081 402.813,-608.004"/>
-<polygon fill="#000000" stroke="#000000" points="400.475,-610.644 409.724,-615.811 405.716,-606.004 400.475,-610.644"/>
-</g>
-<!-- proc~dcopy -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node6" class="node"><title>proc~dcopy</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node6"><a xlink:href="../proc/dcopy.html" xlink:title="dcopy">
-<polygon fill="#d9534f" stroke="#d9534f" points="920,-543 866,-543 866,-519 920,-519 920,-543"/>
-<text text-anchor="middle" x="893" y="-528.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~dcopy -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge30" class="edge"><title>proc~slsqpb&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M338.119,-260.101C344.441,-320.668 381.144,-588 536.5,-588 536.5,-588 536.5,-588 682,-588 749.029,-588 766.143,-579.374 830,-559 839.771,-555.883 850.046,-551.658 859.361,-547.437"/>
-<polygon fill="#000000" stroke="#000000" points="861.084,-550.495 868.657,-543.085 858.116,-544.155 861.084,-550.495"/>
-</g>
-<!-- proc~daxpy -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node7" class="node"><title>proc~daxpy</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node7"><a xlink:href="../proc/daxpy.html" xlink:title="daxpy">
-<polygon fill="#d9534f" stroke="#d9534f" points="920,-292 866,-292 866,-268 920,-268 920,-292"/>
-<text text-anchor="middle" x="893" y="-277.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~daxpy -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge31" class="edge"><title>proc~slsqpb&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M353.654,-235.901C386.743,-213.091 463.853,-166 536.5,-166 536.5,-166 536.5,-166 682,-166 760.346,-166 837.388,-228.044 872.41,-260.589"/>
-<polygon fill="#000000" stroke="#000000" points="870.34,-263.451 880.001,-267.8 875.161,-258.375 870.34,-263.451"/>
-</g>
-<!-- proc~check_convergence -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node8" class="node"><title>proc~check_convergence</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node8"><a xlink:href="../proc/check_convergence.html" xlink:title="check_convergence">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="740,-484 622,-484 622,-460 740,-460 740,-484"/>
-<text text-anchor="middle" x="681" y="-469.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">check_convergence</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~check_convergence -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge32" class="edge"><title>proc~slsqpb&#45;&gt;proc~check_convergence</title>
-<path fill="none" stroke="#000000" d="M347.637,-260.154C359.401,-273.173 379.307,-293.984 399,-309 481.289,-371.745 589.971,-428.281 644.94,-455.276"/>
-<polygon fill="#000000" stroke="#000000" points="643.721,-458.576 654.243,-459.814 646.79,-452.284 643.721,-458.576"/>
-</g>
-<!-- proc~dscal -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node9" class="node"><title>proc~dscal</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node9"><a xlink:href="../proc/dscal.html" xlink:title="dscal">
-<polygon fill="#d9534f" stroke="#d9534f" points="564.5,-260 510.5,-260 510.5,-236 564.5,-236 564.5,-260"/>
-<text text-anchor="middle" x="537.5" y="-245.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dscal</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~dscal -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge33" class="edge"><title>proc~slsqpb&#45;&gt;proc~dscal</title>
-<path fill="none" stroke="#000000" d="M363.081,-248C398.179,-248 460.769,-248 500.38,-248"/>
-<polygon fill="#000000" stroke="#000000" points="500.412,-251.5 510.412,-248 500.412,-244.5 500.412,-251.5"/>
-</g>
-<!-- proc~ddot -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node10" class="node"><title>proc~ddot</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node10"><a xlink:href="../proc/ddot.html" xlink:title="ddot">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="920,-140 866,-140 866,-116 920,-116 920,-140"/>
-<text text-anchor="middle" x="893" y="-125.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~ddot -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge34" class="edge"><title>proc~slsqpb&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M342.144,-235.739C361.052,-192.83 431.138,-52 536.5,-52 536.5,-52 536.5,-52 682,-52 750.739,-52 824.985,-88.4492 864.144,-110.863"/>
-<polygon fill="#000000" stroke="#000000" points="862.465,-113.936 872.865,-115.958 865.996,-107.891 862.465,-113.936"/>
-</g>
-<!-- proc~ldl -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node11" class="node"><title>proc~ldl</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node11"><a xlink:href="../proc/ldl.html" xlink:title="ldl">
-<polygon fill="#d9534f" stroke="#d9534f" points="453,-24 399,-24 399,-0 453,-0 453,-24"/>
-<text text-anchor="middle" x="426" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldl</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~ldl -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge35" class="edge"><title>proc~slsqpb&#45;&gt;proc~ldl</title>
-<path fill="none" stroke="#000000" d="M338.461,-235.789C342.921,-202.122 358.603,-105.971 399,-38 400.313,-35.7913 401.855,-33.6343 403.523,-31.5675"/>
-<polygon fill="#000000" stroke="#000000" points="406.172,-33.8581 410.354,-24.124 401.014,-29.125 406.172,-33.8581"/>
-</g>
-<!-- proc~lsq -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node12" class="node"><title>proc~lsq</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node12"><a xlink:href="../proc/lsq.html" xlink:title="lsq">
-<polygon fill="#d9534f" stroke="#d9534f" points="453,-300 399,-300 399,-276 453,-276 453,-300"/>
-<text text-anchor="middle" x="426" y="-285.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~lsq -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge36" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
-<path fill="none" stroke="#000000" d="M363.403,-260.001C371.657,-263.753 380.9,-267.954 389.665,-271.939"/>
-<polygon fill="#000000" stroke="#000000" points="388.367,-275.193 398.919,-276.145 391.264,-268.821 388.367,-275.193"/>
-</g>
-<!-- proc~enforce_bounds -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node13" class="node"><title>proc~enforce_bounds</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node13"><a xlink:href="../proc/enforce_bounds.html" xlink:title="enforce_bounds">
-<polygon fill="#d9534f" stroke="#d9534f" points="586,-218 489,-218 489,-194 586,-194 586,-218"/>
-<text text-anchor="middle" x="537.5" y="-203.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">enforce_bounds</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~enforce_bounds -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge37" class="edge"><title>proc~slsqpb&#45;&gt;proc~enforce_bounds</title>
-<path fill="none" stroke="#000000" d="M363.081,-242.509C392.265,-236.365 440.456,-226.22 478.64,-218.181"/>
-<polygon fill="#000000" stroke="#000000" points="479.551,-221.566 488.616,-216.081 478.109,-214.716 479.551,-221.566"/>
-</g>
-<!-- proc~dnrm2 -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node14" class="node"><title>proc~dnrm2</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node14"><a xlink:href="../proc/dnrm2.html" xlink:title="dnrm2">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="920,-414 866,-414 866,-390 920,-390 920,-414"/>
-<text text-anchor="middle" x="893" y="-399.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
-</a>
-</g>
-</g>
-<!-- proc~check_convergence&#45;&gt;proc~dnrm2 -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge1" class="edge"><title>proc~check_convergence&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M718.1,-459.967C756.747,-447.084 817.688,-426.771 856.213,-413.929"/>
-<polygon fill="#000000" stroke="#000000" points="857.592,-417.159 865.972,-410.676 855.379,-410.518 857.592,-417.159"/>
-</g>
-<!-- proc~lsq&#45;&gt;proc~dcopy -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge24" class="edge"><title>proc~lsq&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M432.823,-300.221C452.654,-340.3 521.93,-468.198 622,-521 697.415,-560.793 801.87,-549.115 856.095,-538.999"/>
-<polygon fill="#000000" stroke="#000000" points="856.789,-542.43 865.933,-537.077 855.447,-535.56 856.789,-542.43"/>
-</g>
-<!-- proc~lsq&#45;&gt;proc~dscal -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge28" class="edge"><title>proc~lsq&#45;&gt;proc~dscal</title>
-<path fill="none" stroke="#000000" d="M453.228,-278.419C467.449,-273.224 485.232,-266.728 500.709,-261.074"/>
-<polygon fill="#000000" stroke="#000000" points="502.294,-264.222 510.486,-257.503 499.892,-257.647 502.294,-264.222"/>
-</g>
-<!-- proc~lsq&#45;&gt;proc~ddot -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge27" class="edge"><title>proc~lsq&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M453.154,-292.123C487.14,-295.992 546.763,-297.528 586,-269 616.881,-246.547 593.153,-216.013 622,-191 688.793,-133.085 798.719,-125.844 855.509,-126.375"/>
-<polygon fill="#000000" stroke="#000000" points="855.738,-129.88 865.801,-126.564 855.867,-122.881 855.738,-129.88"/>
-</g>
-<!-- proc~lsq&#45;&gt;proc~enforce_bounds -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge25" class="edge"><title>proc~lsq&#45;&gt;proc~enforce_bounds</title>
-<path fill="none" stroke="#000000" d="M436.913,-275.906C448.352,-262.553 468.266,-241.087 489,-227 491.23,-225.485 493.588,-224.037 496.012,-222.661"/>
-<polygon fill="#000000" stroke="#000000" points="497.716,-225.72 504.978,-218.006 494.49,-219.508 497.716,-225.72"/>
-</g>
-<!-- proc~lsei -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node15" class="node"><title>proc~lsei</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node15"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
-<polygon fill="#d9534f" stroke="#d9534f" points="564.5,-340 510.5,-340 510.5,-316 564.5,-316 564.5,-340"/>
-<text text-anchor="middle" x="537.5" y="-325.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
-</a>
-</g>
-</g>
-<!-- proc~lsq&#45;&gt;proc~lsei -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge26" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
-<path fill="none" stroke="#000000" d="M453.228,-297.581C467.449,-302.776 485.232,-309.272 500.709,-314.926"/>
-<polygon fill="#000000" stroke="#000000" points="499.892,-318.353 510.486,-318.497 502.294,-311.778 499.892,-318.353"/>
-</g>
-<!-- proc~lsei&#45;&gt;proc~dcopy -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge18" class="edge"><title>proc~lsei&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M540.656,-340.02C546.922,-371.126 568.214,-454.515 622,-493 658.741,-519.289 790.792,-527.501 855.602,-529.977"/>
-<polygon fill="#000000" stroke="#000000" points="855.654,-533.481 865.773,-530.34 855.904,-526.486 855.654,-533.481"/>
-</g>
-<!-- proc~lsei&#45;&gt;proc~ddot -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge21" class="edge"><title>proc~lsei&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M561.454,-315.988C569.325,-311.724 578.13,-306.791 586,-302 672.972,-249.055 685.932,-221.486 776,-174 801.991,-160.297 833.001,-148.202 856.417,-139.858"/>
-<polygon fill="#000000" stroke="#000000" points="857.67,-143.127 865.95,-136.518 855.355,-136.521 857.67,-143.127"/>
-</g>
-<!-- proc~lsei&#45;&gt;proc~dnrm2 -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge19" class="edge"><title>proc~lsei&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M564.781,-333.502C627.157,-346.559 784.239,-379.442 855.653,-394.391"/>
-<polygon fill="#000000" stroke="#000000" points="855.041,-397.839 865.546,-396.462 856.475,-390.987 855.041,-397.839"/>
-</g>
-<!-- proc~hfti -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node16" class="node"><title>proc~hfti</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node16"><a xlink:href="../proc/hfti.html" xlink:title="hfti">
-<polygon fill="#d9534f" stroke="#d9534f" points="920,-456 866,-456 866,-432 920,-432 920,-456"/>
-<text text-anchor="middle" x="893" y="-441.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">hfti</text>
-</a>
-</g>
-</g>
-<!-- proc~lsei&#45;&gt;proc~hfti -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge20" class="edge"><title>proc~lsei&#45;&gt;proc~hfti</title>
-<path fill="none" stroke="#000000" d="M558.485,-340.17C575.035,-349.841 599.414,-363.167 622,-372 703.114,-403.721 803.248,-426.361 855.832,-437.056"/>
-<polygon fill="#000000" stroke="#000000" points="855.202,-440.5 865.695,-439.035 856.579,-433.636 855.202,-440.5"/>
-</g>
-<!-- proc~h12 -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node17" class="node"><title>proc~h12</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node17"><a xlink:href="../proc/h12.html" xlink:title="h12">
-<polygon fill="#d9534f" stroke="#d9534f" points="1010,-271 956,-271 956,-247 1010,-247 1010,-271"/>
-<text text-anchor="middle" x="983" y="-256.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
-</a>
-</g>
-</g>
-<!-- proc~lsei&#45;&gt;proc~h12 -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge22" class="edge"><title>proc~lsei&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M550.03,-315.561C560.306,-304.065 575.327,-286.21 586,-269 606.123,-236.553 593.676,-216.603 622,-191 707.083,-114.092 752.882,-125.926 866,-107 889.671,-103.04 900.081,-93.6124 920,-107 963.541,-136.264 976.522,-202.033 980.379,-236.679"/>
-<polygon fill="#000000" stroke="#000000" points="976.905,-237.124 981.338,-246.748 983.874,-236.461 976.905,-237.124"/>
-</g>
-<!-- proc~lsi -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node18" class="node"><title>proc~lsi</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node18"><a xlink:href="../proc/lsi.html" xlink:title="lsi">
-<polygon fill="#d9534f" stroke="#d9534f" points="708,-312 654,-312 654,-288 708,-288 708,-312"/>
-<text text-anchor="middle" x="681" y="-297.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
-</a>
-</g>
-</g>
-<!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge23" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
-<path fill="none" stroke="#000000" d="M564.783,-322.799C587.022,-318.398 619.118,-312.047 643.789,-307.165"/>
-<polygon fill="#000000" stroke="#000000" points="644.727,-310.548 653.857,-305.173 643.368,-303.681 644.727,-310.548"/>
-</g>
-<!-- proc~hfti&#45;&gt;proc~h12 -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge2" class="edge"><title>proc~hfti&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M911.93,-431.969C914.951,-429.303 917.811,-426.283 920,-423 951.598,-375.608 932.517,-351.894 956,-300 959.128,-293.086 963.272,-285.965 967.33,-279.636"/>
-<polygon fill="#000000" stroke="#000000" points="970.426,-281.304 973.086,-271.049 964.611,-277.407 970.426,-281.304"/>
-</g>
-<!-- proc~diff -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node19" class="node"><title>proc~diff</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node19"><a xlink:href="../proc/diff.html" xlink:title="diff">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="1010,-375 956,-375 956,-351 1010,-351 1010,-375"/>
-<text text-anchor="middle" x="983" y="-360.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
-</a>
-</g>
-</g>
-<!-- proc~hfti&#45;&gt;proc~diff -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge3" class="edge"><title>proc~hfti&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M909.587,-431.787C913.064,-428.959 916.697,-425.922 920,-423 934.726,-409.974 950.649,-394.534 962.671,-382.578"/>
-<polygon fill="#000000" stroke="#000000" points="965.365,-384.834 969.956,-375.286 960.412,-379.887 965.365,-384.834"/>
-</g>
-<!-- proc~lsi&#45;&gt;proc~daxpy -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge14" class="edge"><title>proc~lsi&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M708.172,-297.507C745.371,-293.965 813.677,-287.459 855.736,-283.454"/>
-<polygon fill="#000000" stroke="#000000" points="856.206,-286.925 865.829,-282.492 855.542,-279.956 856.206,-286.925"/>
-</g>
-<!-- proc~lsi&#45;&gt;proc~ddot -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge15" class="edge"><title>proc~lsi&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M696.767,-287.905C732.915,-258.298 826.04,-182.024 869.295,-146.596"/>
-<polygon fill="#000000" stroke="#000000" points="871.731,-149.125 877.25,-140.081 867.295,-143.71 871.731,-149.125"/>
-</g>
-<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge16" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M706.914,-312.101C744.489,-330.352 815.751,-364.965 858.046,-385.508"/>
-<polygon fill="#000000" stroke="#000000" points="856.594,-388.694 867.118,-389.914 859.652,-382.397 856.594,-388.694"/>
-</g>
-<!-- proc~lsi&#45;&gt;proc~h12 -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge13" class="edge"><title>proc~lsi&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M708.204,-292.251C743.619,-282.221 808.907,-265.284 866,-259 892.44,-256.09 922.476,-256.183 945.359,-256.954"/>
-<polygon fill="#000000" stroke="#000000" points="945.519,-260.463 955.65,-257.363 945.797,-253.469 945.519,-260.463"/>
-</g>
-<!-- proc~ldp -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node20" class="node"><title>proc~ldp</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node20"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
-<polygon fill="#d9534f" stroke="#d9534f" points="830,-332 776,-332 776,-308 830,-308 830,-332"/>
-<text text-anchor="middle" x="803" y="-317.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
-</a>
-</g>
-</g>
-<!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge17" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
-<path fill="none" stroke="#000000" d="M708.038,-304.34C724.905,-307.151 747.11,-310.852 765.7,-313.95"/>
-<polygon fill="#000000" stroke="#000000" points="765.159,-317.408 775.598,-315.6 766.31,-310.503 765.159,-317.408"/>
-</g>
-<!-- proc~ldp&#45;&gt;proc~dcopy -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge7" class="edge"><title>proc~ldp&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M809.112,-332.256C823.545,-366.862 864.744,-465.649 883.049,-509.537"/>
-<polygon fill="#000000" stroke="#000000" points="879.904,-511.091 886.984,-518.973 886.365,-508.396 879.904,-511.091"/>
-</g>
-<!-- proc~ldp&#45;&gt;proc~daxpy -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge8" class="edge"><title>proc~ldp&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M830.403,-307.999C838.657,-304.247 847.9,-300.046 856.665,-296.061"/>
-<polygon fill="#000000" stroke="#000000" points="858.264,-299.179 865.919,-291.855 855.367,-292.807 858.264,-299.179"/>
-</g>
-<!-- proc~ldp&#45;&gt;proc~ddot -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge10" class="edge"><title>proc~ldp&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M809.505,-307.99C824.074,-276.203 863.785,-189.56 882.28,-149.206"/>
-<polygon fill="#000000" stroke="#000000" points="885.512,-150.555 886.497,-140.006 879.149,-147.638 885.512,-150.555"/>
-</g>
-<!-- proc~ldp&#45;&gt;proc~dnrm2 -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge9" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M816.985,-332.099C831.283,-345.423 854.471,-367.03 871.286,-382.699"/>
-<polygon fill="#000000" stroke="#000000" points="869.26,-385.594 878.962,-389.851 874.032,-380.473 869.26,-385.594"/>
-</g>
-<!-- proc~ldp&#45;&gt;proc~diff -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge12" class="edge"><title>proc~ldp&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M830.202,-330.941C841.122,-335.18 854.027,-339.777 866,-343 892.353,-350.095 922.779,-355.23 945.857,-358.52"/>
-<polygon fill="#000000" stroke="#000000" points="945.518,-362.006 955.902,-359.901 946.472,-355.071 945.518,-362.006"/>
-</g>
-<!-- proc~nnls -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node21" class="node"><title>proc~nnls</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node21"><a xlink:href="../proc/nnls.html" xlink:title="nnls">
-<polygon fill="#d9534f" stroke="#d9534f" points="920,-334 866,-334 866,-310 920,-310 920,-334"/>
-<text text-anchor="middle" x="893" y="-319.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
-</a>
-</g>
-</g>
-<!-- proc~ldp&#45;&gt;proc~nnls -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge11" class="edge"><title>proc~ldp&#45;&gt;proc~nnls</title>
-<path fill="none" stroke="#000000" d="M830.403,-320.6C838.393,-320.782 847.311,-320.984 855.824,-321.178"/>
-<polygon fill="#000000" stroke="#000000" points="855.842,-324.679 865.919,-321.407 856.001,-317.681 855.842,-324.679"/>
-</g>
-<!-- proc~nnls&#45;&gt;proc~h12 -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge4" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M910.967,-309.853C923.994,-300.527 942.181,-287.507 956.891,-276.976"/>
-<polygon fill="#000000" stroke="#000000" points="958.991,-279.777 965.085,-271.11 954.916,-274.085 958.991,-279.777"/>
-</g>
-<!-- proc~nnls&#45;&gt;proc~diff -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge5" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M919.927,-334.08C928.356,-338.007 937.855,-342.433 946.842,-346.619"/>
-<polygon fill="#000000" stroke="#000000" points="945.412,-349.814 955.954,-350.865 948.368,-343.469 945.412,-349.814"/>
-</g>
-<!-- proc~g1 -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_node22" class="node"><title>proc~g1</title>
-<g id="a_proc~~slsqp_wrapper~~CallsGraph_node22"><a xlink:href="../proc/g1.html" xlink:title="g1">
-<polygon fill="#d9534f" stroke="#d9534f" points="1010,-333 956,-333 956,-309 1010,-309 1010,-333"/>
-<text text-anchor="middle" x="983" y="-318.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
-</a>
-</g>
-</g>
-<!-- proc~nnls&#45;&gt;proc~g1 -->
-<g id="proc~~slsqp_wrapper~~CallsGraph_edge6" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
-<path fill="none" stroke="#000000" d="M920.403,-321.7C928.393,-321.609 937.311,-321.508 945.824,-321.411"/>
-<polygon fill="#000000" stroke="#000000" points="945.959,-324.91 955.919,-321.296 945.88,-317.91 945.959,-324.91"/>
+<!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
+<g id="proc~~slsqp_wrapper~~CallsGraph_edge2" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
+<path fill="none" stroke="#000000" d="M88.2925,-27.0384C111.298,-23.8705 139.259,-20.0201 161.129,-17.0084"/>
+<polygon fill="#000000" stroke="#000000" points="161.899,-20.4356 171.328,-15.6041 160.944,-13.501 161.899,-20.4356"/>
 </g>
 </g>
 </svg>
-</div>
-                <script>var panprocslsqp_wrapperCallsGraph = svgPanZoom('#procslsqp_wrapperCallsGraph', {
-                    zoomEnabled: true,
-                    controlIconsEnabled: true,
-                    fit: true,
-                    center: true,});
-                    </script>
-                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
-                      </div>
-                      <div class="modal-body">
-                        
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
     <p>Nodes of different colours represent the following: </p>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -862,18 +415,18 @@ private subroutine slsqp_wrapper(me, x, istat, iterations, status_message)
     This could include the module procedures in a generic interface or the
     implementation in a submodule of an interface in a parent module.
     </p>
-    
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+    </div></div></div></div>
+      </div>
+    </div>
      
      
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
       
+<h3>Contents</h3>
+ 
+
 
 
 
@@ -900,6 +453,7 @@ private subroutine slsqp_wrapper(me, x, istat, iterations, status_message)
     <a class="list-group-item" href="../proc/slsqp_wrapper.html#src">slsqp_wrapper</a>
   </div>
 </div>
+
 
 
     </section>
@@ -1116,114 +670,14 @@ private subroutine slsqp_wrapper(me, x, istat, iterations, status_message)
     </div>
   </div>
 
-  <section class="visible-xs visible-sm hidden-md">
-    <hr>
-    
-
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allprocs-1">All Procedures</a></h3></div>
-  <div id="allprocs-1" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../proc/check_convergence.html">check_convergence</a>
-      
-      <a class="list-group-item" href="../proc/daxpy.html">daxpy</a>
-      
-      <a class="list-group-item" href="../proc/dcopy.html">dcopy</a>
-      
-      <a class="list-group-item" href="../proc/ddot.html">ddot</a>
-      
-      <a class="list-group-item" href="../proc/destroy_linmin_data.html">destroy_linmin_data</a>
-      
-      <a class="list-group-item" href="../proc/destroy_slsqp.html">destroy_slsqp</a>
-      
-      <a class="list-group-item" href="../proc/destroy_slsqpb_data.html">destroy_slsqpb_data</a>
-      
-      <a class="list-group-item" href="../proc/diff.html">diff</a>
-      
-      <a class="list-group-item" href="../proc/dnrm2.html">dnrm2</a>
-      
-      <a class="list-group-item" href="../proc/dscal.html">dscal</a>
-      
-      <a class="list-group-item" href="../proc/dummy_grad.html">dummy_grad</a>
-      
-      <a class="list-group-item" href="../proc/enforce_bounds.html">enforce_bounds</a>
-      
-      <a class="list-group-item" href="../proc/func.html">func</a>
-      
-      <a class="list-group-item" href="../proc/g1.html">g1</a>
-      
-      <a class="list-group-item" href="../proc/grad.html">grad</a>
-      
-      <a class="list-group-item" href="../proc/h12.html">h12</a>
-      
-      <a class="list-group-item" href="../proc/hfti.html">hfti</a>
-      
-      <a class="list-group-item" href="../proc/initialize_slsqp.html">initialize_slsqp</a>
-      
-      <a class="list-group-item" href="../proc/ldl.html">ldl</a>
-      
-      <a class="list-group-item" href="../proc/ldp.html">ldp</a>
-      
-      <a class="list-group-item" href="../proc/linmin.html">linmin</a>
-      
-      <a class="list-group-item" href="../proc/lsei.html">lsei</a>
-      
-      <a class="list-group-item" href="../proc/lsi.html">lsi</a>
-      
-      <a class="list-group-item" href="../proc/lsq.html">lsq</a>
-      
-      <a class="list-group-item" href="../proc/mode_to_status_message.html">mode_to_status_message</a>
-      
-      <a class="list-group-item" href="../proc/nnls.html">nnls</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E2.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E3.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E4.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_iteration%7E5.html">report_iteration</a>
-      
-      <a class="list-group-item" href="../proc/report_message.html">report_message</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func%7E2.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_func%7E3.html">rosenbrock_func</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_grad.html">rosenbrock_grad</a>
-      
-      <a class="list-group-item" href="../proc/rosenbrock_grad%7E2.html">rosenbrock_grad</a>
-      
-      <a class="list-group-item" href="../proc/slsqp.html">slsqp</a>
-      
-      <a class="list-group-item" href="../proc/slsqp_wrapper.html">slsqp_wrapper</a>
-      
-      <a class="list-group-item" href="../proc/slsqpb.html">slsqpb</a>
-      
-      <a class="list-group-item" href="../proc/stop_iterations.html">stop_iterations</a>
-      
-      <a class="list-group-item" href="../proc/test_func.html">test_func</a>
-      
-      <a class="list-group-item" href="../proc/test_grad.html">test_grad</a>
-      
-    </div>
-  </div>
-</div>
-
-
-  </section>
 
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+                                          </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 
@@ -1254,12 +708,17 @@ private subroutine slsqp_wrapper(me, x, istat, iterations, status_message)
       MathJax.Hub.Config({
         TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
         jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
-        'HTML-CSS': { 
-           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
-        }
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
   </body>
 </html>

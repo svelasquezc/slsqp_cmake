@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 
-	 <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
+   
+   <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
     
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="./favicon.png">
@@ -17,6 +17,9 @@
     <link href="./css/font-awesome.min.css" rel="stylesheet">
     <link href="./css/local.css" rel="stylesheet">
     
+    <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,13 +29,6 @@
     
     <script src="./js/jquery-2.1.3.min.js"></script>
     <script src="./js/svg-pan-zoom.min.js"></script>
-
-    
-    <script src="./tipuesearch/tipuesearch_content.js"></script>
-    <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
-    <script src="./tipuesearch/tipuesearch_set.js"></script>
-    <script src="./tipuesearch/tipuesearch.js"></script>
-    
 
   </head>
 
@@ -52,35 +48,37 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-				
+        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
-		 aria-expanded="false">Contents <span class="caret"></span></a>
-	      <ul class="dropdown-menu">
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
               
             <li><a href="./lists/files.html">Source Files</a></li>
-				
-				
+        
+        
+        
             <li><a href="./lists/modules.html">Modules</a></li>
-				
+        
             
                                 
             <li><a href="./lists/procedures.html">Procedures</a></li>
-				
-				
+        
+        
             <li><a href="./lists/absint.html">Abstract Interfaces</a></li>
-								
+               
             <li><a href="./lists/types.html">Derived Types</a></li>
-				
-				
-            <li><a href="./lists/programs.html">Programs</a></li>
-				
+        
+        
             </ul>
             </li>
 
+
 <li class="visible-xs hidden-sm visible-lg"><a href="./lists/files.html">Source Files</a></li>
+
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="./lists/modules.html">Modules</a></li>
@@ -94,8 +92,6 @@
                              
 <li class="visible-xs hidden-sm visible-lg"><a href="./lists/types.html">Derived Types</a></li>
 
-
-<li class="visible-xs hidden-sm visible-lg"><a href="./lists/programs.html">Programs</a></li>
 
           </ul>
         
@@ -190,36 +186,12 @@
                     <li><a href='./sourcefile/slsqp_support.f90.html'>slsqp_support.f90</a></li>
                   
                 
-                  
-                    <li><a href='./sourcefile/slsqp_test.f90.html'>slsqp_test.f90</a></li>
-                  
-                
-                  
-                    <li><a href='./sourcefile/slsqp_test_2.f90.html'>slsqp_test_2.f90</a></li>
-                  
-                
-                  
-                    <li><a href='./sourcefile/slsqp_test_3.f90.html'>slsqp_test_3.f90</a></li>
-                  
-                
-                  
-                    <li><a href='./sourcefile/slsqp_test_71.f90.html'>slsqp_test_71.f90</a></li>
-                  
-                
-                  
-                    <li><a href='./sourcefile/slsqp_test_stopping_criterion.f90.html'>slsqp_test_stopping_criterion.f90</a></li>
-                  
-                
               </ul>
           </div>
           
 		  <div class="col-xs-6 col-sm-3">
               <h3>Modules</h3>
               <ul>
-                
-                  
-                    <li><a href='./module/report_variable.html'>report_variable</a></li>
-                  
                 
                   
                     <li><a href='./module/slsqp_core.html'>slsqp_core</a></li>
@@ -323,36 +295,6 @@
                 
                   
                 
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
-                  
-                
               </ul>
           </div>
           
@@ -383,7 +325,8 @@
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+                                          </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 
@@ -414,12 +357,17 @@
       MathJax.Hub.Config({
         TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
         jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
-        'HTML-CSS': { 
-           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
-        }
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="./tipuesearch/tipuesearch_content.js"></script>
+    <script src="./tipuesearch/tipuesearch_set.js"></script>
+    <script src="./tipuesearch/tipuesearch.js"></script>
+    
+    
   </body>
 </html>

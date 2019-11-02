@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 
-	 <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
+   
+   <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
     
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
@@ -17,6 +17,9 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
     
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,13 +29,6 @@
     
     <script src="../js/jquery-2.1.3.min.js"></script>
     <script src="../js/svg-pan-zoom.min.js"></script>
-
-    
-    <script src="../tipuesearch/tipuesearch_content.js"></script>
-    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    <script src="../tipuesearch/tipuesearch_set.js"></script>
-    <script src="../tipuesearch/tipuesearch.js"></script>
-    
 
   </head>
 
@@ -52,35 +48,37 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-				
+        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
-		 aria-expanded="false">Contents <span class="caret"></span></a>
-	      <ul class="dropdown-menu">
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
               
             <li><a href="../lists/files.html">Source Files</a></li>
-				
-				
+        
+        
+        
             <li><a href="../lists/modules.html">Modules</a></li>
-				
+        
             
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
-				
-				
+        
+        
             <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-								
+               
             <li><a href="../lists/types.html">Derived Types</a></li>
-				
-				
-            <li><a href="../lists/programs.html">Programs</a></li>
-				
+        
+        
             </ul>
             </li>
 
+
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
@@ -94,8 +92,6 @@
                              
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
 
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
 
           </ul>
         
@@ -135,17 +131,21 @@
     
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
-	  data-placement="bottom" data-html="true"
-	  title=" 9.5% of total for modules and submodules.">175 statements</a>
+    data-placement="bottom" data-html="true"
+    title=" 9.6% of total for modules and submodules.">175 statements</a>
      </li> 
+     
      
      
     <li><i class="fa fa-code"></i><a href="../src/slsqp_support.f90"> Source File</a></li>
      
+     
   </ul>
   <ol class="breadcrumb in-well text-right">
   
+    
      <li><a href='../sourcefile/slsqp_support.f90.html'>slsqp_support.f90</a></li>
+    
   
      <li class="active">slsqp_support</li>
   </ol>
@@ -165,6 +165,9 @@
     
 <div id="sidebar">
   
+<h3>Contents</h3>
+ 
+
 
 
 <div class="panel panel-primary">
@@ -200,6 +203,7 @@
 
 
 
+
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
   <div id="funcs-0" class="panel-collapse collapse">
@@ -212,6 +216,7 @@
     </div>
   </div>
 </div>
+
 
 
 <div class="panel panel-primary">
@@ -237,45 +242,36 @@
 
 
 
-  <hr>
-  
 
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-0">All Modules</a></h3></div>
-  <div id="allmods-0" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../module/report_variable.html">report_variable</a>
-      
-      <a class="list-group-item" href="../module/slsqp_core.html">slsqp_core</a>
-      
-      <a class="list-group-item" href="../module/slsqp_kinds.html">slsqp_kinds</a>
-      
-      <a class="list-group-item" href="../module/slsqp_module.html">slsqp_module</a>
-      
-      <a class="list-group-item" href="../module/slsqp_support.html">slsqp_support</a>
-      
-    </div>
-  </div>
 </div>
-
-
-</div>  
 
     </div>
     
     <div class="col-md-9" id='text'>
-      
+    <p>Support routines for SLSQP. For example, routines from
+  <a href="http://www.netlib.org/blas/">BLAS</a> and <a href="http://www.netlib.org/linpack/">LINPACK</a>.
+  These have also been refactored into modern Fortran.</p>
+      <br>
     
   
-    <ul class="list-inline">
-      <li><h4>Uses:</h4></li>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
       
-      <li><a href='../module/slsqp_kinds.html'>slsqp_kinds</a></li>
-      
-    </ul>
+      <li class="list-group-item">
+  <ul class="list-inline">
     
-                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <li><a href='../module/slsqp_kinds.html'>slsqp_kinds</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.38.0 (20140413.2041)
@@ -293,16 +289,16 @@
 </g>
 <!-- module~slsqp_kinds -->
 <g id="module~~slsqp_support~~UsesGraph_node2" class="node"><title>module~slsqp_kinds</title>
-<g id="a_module~~slsqp_support~~UsesGraph_node2"><a xlink:href="../module/slsqp_kinds.html" xlink:title="slsqp_kinds">
+<g id="a_module~~slsqp_support~~UsesGraph_node2"><a xlink:href=".././module/slsqp_kinds.html" xlink:title="slsqp_kinds">
 <polygon fill="#337ab7" stroke="#337ab7" points="200,-24 127,-24 127,-0 200,-0 200,-24"/>
 <text text-anchor="middle" x="163.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_kinds</text>
 </a>
 </g>
 </g>
-<!-- module~slsqp_kinds&#45;&gt;module~slsqp_support -->
-<g id="module~~slsqp_support~~UsesGraph_edge2" class="edge"><title>module~slsqp_kinds&#45;&gt;module~slsqp_support</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M200.101,-12C208.231,-12 217.038,-12 225.704,-12"/>
-<polygon fill="#000000" stroke="#000000" points="225.766,-15.5001 235.766,-12 225.766,-8.5001 225.766,-15.5001"/>
+<!-- module~slsqp_support&#45;&gt;module~slsqp_kinds -->
+<g id="module~~slsqp_support~~UsesGraph_edge1" class="edge"><title>module~slsqp_support&#45;&gt;module~slsqp_kinds</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M235.737,-12C227.402,-12 218.621,-12 210.18,-12"/>
+<polygon fill="#000000" stroke="#000000" points="210.106,-8.5001 200.106,-12 210.106,-15.5001 210.106,-8.5001"/>
 </g>
 <!-- iso_fortran_env -->
 <g id="module~~slsqp_support~~UsesGraph_node3" class="node"><title>iso_fortran_env</title>
@@ -312,24 +308,14 @@
 </a>
 </g>
 </g>
-<!-- iso_fortran_env&#45;&gt;module~slsqp_kinds -->
-<g id="module~~slsqp_support~~UsesGraph_edge1" class="edge"><title>iso_fortran_env&#45;&gt;module~slsqp_kinds</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M91.0169,-12C99.4656,-12 108.318,-12 116.803,-12"/>
-<polygon fill="#000000" stroke="#000000" points="116.918,-15.5001 126.918,-12 116.918,-8.5001 116.918,-15.5001"/>
+<!-- module~slsqp_kinds&#45;&gt;iso_fortran_env -->
+<g id="module~~slsqp_support~~UsesGraph_edge2" class="edge"><title>module~slsqp_kinds&#45;&gt;iso_fortran_env</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M126.75,-12C118.711,-12 110.001,-12 101.383,-12"/>
+<polygon fill="#000000" stroke="#000000" points="101.354,-8.5001 91.3538,-12 101.354,-15.5001 101.354,-8.5001"/>
 </g>
 </g>
 </svg>
-</div>
-                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
-                      </div>
-                      <div class="modal-body">
-                        
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
     <p>Nodes of different colours represent the following: </p>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -376,151 +362,77 @@
 </svg>
 
     
-    <p>Solid arrows point from a parent (sub)module to the submodule which is
-    descended from it. Dashed arrows point from a module being used to the
-    module or program unit using it.
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses.
     </p>
-    
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
     
 
     
-    <p>Support routines for SLSQP. For example, routines from
-  <a href="http://www.netlib.org/blas/">BLAS</a> and <a href="http://www.netlib.org/linpack/">LINPACK</a>.
-  These have also been refactored into modern Fortran.</p>
     
-    
-    <h3>Used By</h3>
-    
-                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  
+  
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.38.0 (20140413.2041)
  -->
 <!-- Title: module~~slsqp_support~~UsedByGraph Pages: 1 -->
-<svg id="moduleslsqp_supportUsedByGraph" width="469pt" height="200pt"
- viewBox="0.00 0.00 469.00 200.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="module~~slsqp_support~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 196)">
+<svg id="moduleslsqp_supportUsedByGraph" width="320pt" height="52pt"
+ viewBox="0.00 0.00 320.00 52.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~slsqp_support~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 48)">
 <title>module~~slsqp_support~~UsedByGraph</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-196 465,-196 465,4 -4,4"/>
+<polygon fill="white" stroke="none" points="-4,4 -4,-48 316,-48 316,4 -4,4"/>
 <!-- module~slsqp_support -->
 <g id="module~~slsqp_support~~UsedByGraph_node1" class="node"><title>module~slsqp_support</title>
-<polygon fill="none" stroke="black" points="86,-108 0,-108 0,-84 86,-84 86,-108"/>
-<text text-anchor="middle" x="43" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp_support</text>
-</g>
-<!-- module~slsqp_module -->
-<g id="module~~slsqp_support~~UsedByGraph_node2" class="node"><title>module~slsqp_module</title>
-<g id="a_module~~slsqp_support~~UsedByGraph_node2"><a xlink:href="../module/slsqp_module.html" xlink:title="slsqp_module">
-<polygon fill="#337ab7" stroke="#337ab7" points="312,-108 227,-108 227,-84 312,-84 312,-108"/>
-<text text-anchor="middle" x="269.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_module</text>
-</a>
-</g>
-</g>
-<!-- module~slsqp_support&#45;&gt;module~slsqp_module -->
-<g id="module~~slsqp_support~~UsedByGraph_edge7" class="edge"><title>module~slsqp_support&#45;&gt;module~slsqp_module</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M86.0988,-96.6385C97.7293,-96.788 110.353,-96.9253 122,-97 152.666,-97.1966 160.334,-97.1978 191,-97 199.227,-96.9469 207.945,-96.8622 216.45,-96.7639"/>
-<polygon fill="#000000" stroke="#000000" points="216.715,-100.261 226.671,-96.6385 216.629,-93.2615 216.715,-100.261"/>
+<polygon fill="none" stroke="black" points="86,-44 0,-44 0,-20 86,-20 86,-44"/>
+<text text-anchor="middle" x="43" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp_support</text>
 </g>
 <!-- module~slsqp_core -->
-<g id="module~~slsqp_support~~UsedByGraph_node3" class="node"><title>module~slsqp_core</title>
-<g id="a_module~~slsqp_support~~UsedByGraph_node3"><a xlink:href="../module/slsqp_core.html" xlink:title="slsqp_core">
-<polygon fill="#337ab7" stroke="#337ab7" points="191,-88 122,-88 122,-64 191,-64 191,-88"/>
-<text text-anchor="middle" x="156.5" y="-73.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_core</text>
+<g id="module~~slsqp_support~~UsedByGraph_node2" class="node"><title>module~slsqp_core</title>
+<g id="a_module~~slsqp_support~~UsedByGraph_node2"><a xlink:href=".././module/slsqp_core.html" xlink:title="slsqp_core">
+<polygon fill="#337ab7" stroke="#337ab7" points="191,-24 122,-24 122,-0 191,-0 191,-24"/>
+<text text-anchor="middle" x="156.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_core</text>
 </a>
 </g>
 </g>
-<!-- module~slsqp_support&#45;&gt;module~slsqp_core -->
-<g id="module~~slsqp_support~~UsedByGraph_edge8" class="edge"><title>module~slsqp_support&#45;&gt;module~slsqp_core</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M86.1534,-88.4389C94.5713,-86.9289 103.43,-85.34 111.895,-83.8215"/>
-<polygon fill="#000000" stroke="#000000" points="112.746,-87.2249 121.971,-82.0142 111.51,-80.3348 112.746,-87.2249"/>
+<!-- module~slsqp_core&#45;&gt;module~slsqp_support -->
+<g id="module~~slsqp_support~~UsedByGraph_edge1" class="edge"><title>module~slsqp_core&#45;&gt;module~slsqp_support</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M121.744,-18.0549C113.728,-19.4928 104.989,-21.0602 96.3594,-22.6082"/>
+<polygon fill="#000000" stroke="#000000" points="95.5534,-19.1968 86.3285,-24.4074 96.7894,-26.0868 95.5534,-19.1968"/>
 </g>
-<!-- program~slsqp_test_3 -->
-<g id="module~~slsqp_support~~UsedByGraph_node4" class="node"><title>program~slsqp_test_3</title>
-<g id="a_module~~slsqp_support~~UsedByGraph_node4"><a xlink:href="../program/slsqp_test_3.html" xlink:title="slsqp_test_3">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="443.5,-192 365.5,-192 365.5,-168 443.5,-168 443.5,-192"/>
-<text text-anchor="middle" x="404.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_3</text>
+<!-- module~slsqp_module -->
+<g id="module~~slsqp_support~~UsedByGraph_node3" class="node"><title>module~slsqp_module</title>
+<g id="a_module~~slsqp_support~~UsedByGraph_node3"><a xlink:href=".././module/slsqp_module.html" xlink:title="slsqp_module">
+<polygon fill="#337ab7" stroke="#337ab7" points="312,-44 227,-44 227,-20 312,-20 312,-44"/>
+<text text-anchor="middle" x="269.5" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_module</text>
 </a>
 </g>
 </g>
-<!-- module~slsqp_module&#45;&gt;program~slsqp_test_3 -->
-<g id="module~~slsqp_support~~UsedByGraph_edge1" class="edge"><title>module~slsqp_module&#45;&gt;program~slsqp_test_3</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M282.727,-108.065C297.265,-121.88 322.751,-144.471 348,-159 350.993,-160.722 354.153,-162.353 357.386,-163.888"/>
-<polygon fill="#000000" stroke="#000000" points="356.047,-167.122 366.61,-167.951 358.87,-160.717 356.047,-167.122"/>
+<!-- module~slsqp_module&#45;&gt;module~slsqp_support -->
+<g id="module~~slsqp_support~~UsedByGraph_edge2" class="edge"><title>module~slsqp_module&#45;&gt;module~slsqp_support</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M226.671,-32.6385C215.115,-32.788 202.572,-32.9253 191,-33 160.334,-33.1978 152.666,-33.1966 122,-33 113.629,-32.9463 104.753,-32.8603 96.104,-32.7606"/>
+<polygon fill="#000000" stroke="#000000" points="96.1408,-29.2609 86.0988,-32.6385 96.0553,-36.2604 96.1408,-29.2609"/>
 </g>
-<!-- program~slsqp_test -->
-<g id="module~~slsqp_support~~UsedByGraph_node5" class="node"><title>program~slsqp_test</title>
-<g id="a_module~~slsqp_support~~UsedByGraph_node5"><a xlink:href="../program/slsqp_test.html" xlink:title="slsqp_test">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="437.5,-150 371.5,-150 371.5,-126 437.5,-126 437.5,-150"/>
-<text text-anchor="middle" x="404.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test</text>
-</a>
-</g>
-</g>
-<!-- module~slsqp_module&#45;&gt;program~slsqp_test -->
-<g id="module~~slsqp_support~~UsedByGraph_edge2" class="edge"><title>module~slsqp_module&#45;&gt;program~slsqp_test</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M308.612,-108.036C325.167,-113.263 344.612,-119.404 361.574,-124.76"/>
-<polygon fill="#000000" stroke="#000000" points="360.644,-128.137 371.234,-127.811 362.752,-121.462 360.644,-128.137"/>
-</g>
-<!-- program~slsqp_test_criterion -->
-<g id="module~~slsqp_support~~UsedByGraph_node6" class="node"><title>program~slsqp_test_criterion</title>
-<g id="a_module~~slsqp_support~~UsedByGraph_node6"><a xlink:href="../program/slsqp_test_criterion.html" xlink:title="slsqp_test_criterion">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="461,-108 348,-108 348,-84 461,-84 461,-108"/>
-<text text-anchor="middle" x="404.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_criterion</text>
-</a>
-</g>
-</g>
-<!-- module~slsqp_module&#45;&gt;program~slsqp_test_criterion -->
-<g id="module~~slsqp_support~~UsedByGraph_edge3" class="edge"><title>module~slsqp_module&#45;&gt;program~slsqp_test_criterion</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M312.217,-96C320.321,-96 328.998,-96 337.659,-96"/>
-<polygon fill="#000000" stroke="#000000" points="337.785,-99.5001 347.785,-96 337.785,-92.5001 337.785,-99.5001"/>
-</g>
-<!-- program~slsqp_test_2 -->
-<g id="module~~slsqp_support~~UsedByGraph_node7" class="node"><title>program~slsqp_test_2</title>
-<g id="a_module~~slsqp_support~~UsedByGraph_node7"><a xlink:href="../program/slsqp_test_2.html" xlink:title="slsqp_test_2">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="443.5,-66 365.5,-66 365.5,-42 443.5,-42 443.5,-66"/>
-<text text-anchor="middle" x="404.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_2</text>
-</a>
-</g>
-</g>
-<!-- module~slsqp_module&#45;&gt;program~slsqp_test_2 -->
-<g id="module~~slsqp_support~~UsedByGraph_edge4" class="edge"><title>module~slsqp_module&#45;&gt;program~slsqp_test_2</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M308.612,-83.9645C323.221,-79.3513 340.079,-74.0276 355.497,-69.1589"/>
-<polygon fill="#000000" stroke="#000000" points="356.9,-72.3862 365.382,-66.0373 354.792,-65.7111 356.9,-72.3862"/>
-</g>
-<!-- program~slsqp_test_71 -->
-<g id="module~~slsqp_support~~UsedByGraph_node8" class="node"><title>program~slsqp_test_71</title>
-<g id="a_module~~slsqp_support~~UsedByGraph_node8"><a xlink:href="../program/slsqp_test_71.html" xlink:title="slsqp_test_71">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="447,-24 362,-24 362,-0 447,-0 447,-24"/>
-<text text-anchor="middle" x="404.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_71</text>
-</a>
-</g>
-</g>
-<!-- module~slsqp_module&#45;&gt;program~slsqp_test_71 -->
-<g id="module~~slsqp_support~~UsedByGraph_edge5" class="edge"><title>module~slsqp_module&#45;&gt;program~slsqp_test_71</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M282.727,-83.9352C297.265,-70.1202 322.751,-47.5286 348,-33 350.993,-31.2779 354.153,-29.6468 357.386,-28.1124"/>
-<polygon fill="#000000" stroke="#000000" points="358.87,-31.2835 366.61,-24.0487 356.047,-24.8776 358.87,-31.2835"/>
-</g>
-<!-- module~slsqp_core&#45;&gt;module~slsqp_module -->
-<g id="module~~slsqp_support~~UsedByGraph_edge6" class="edge"><title>module~slsqp_core&#45;&gt;module~slsqp_module</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M191.105,-82.0549C199.177,-83.5093 207.984,-85.0963 216.672,-86.6616"/>
-<polygon fill="#000000" stroke="#000000" points="216.301,-90.151 226.763,-88.4798 217.542,-83.262 216.301,-90.151"/>
+<!-- module~slsqp_module&#45;&gt;module~slsqp_core -->
+<g id="module~~slsqp_support~~UsedByGraph_edge3" class="edge"><title>module~slsqp_module&#45;&gt;module~slsqp_core</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M226.852,-24.4958C218.455,-22.9829 209.606,-21.3884 201.143,-19.8635"/>
+<polygon fill="#000000" stroke="#000000" points="201.529,-16.3769 191.067,-18.0481 200.288,-23.266 201.529,-16.3769"/>
 </g>
 </g>
 </svg>
-</div>
-                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
-                      </div>
-                      <div class="modal-body">
-                        
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
     <p>Nodes of different colours represent the following: </p>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -567,21 +479,24 @@
 </svg>
 
     
-    <p>Solid arrows point from a parent (sub)module to the submodule which is
-    descended from it. Dashed arrows point from a module being used to the
-    module or program unit using it.
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses.
     </p>
+    </div></div></div></div>
+  </li>
+  
+      </ul>
+    </div>
     
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+
     <br>
-    
 
     <section class="visible-xs visible-sm hidden-md">
       
+<h3>Contents</h3>
+ 
+
 
 
 <div class="panel panel-primary">
@@ -617,6 +532,7 @@
 
 
 
+
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
   <div id="funcs-1" class="panel-collapse collapse">
@@ -629,6 +545,7 @@
     </div>
   </div>
 </div>
+
 
 
 <div class="panel panel-primary">
@@ -645,6 +562,7 @@
     </div>
   </div>
 </div>
+
 
 
 
@@ -795,7 +713,7 @@
 public function <a href='../proc/ddot.html'>ddot</a>(n, dx, incx, dy, incy)
     
     
-	 
+   
 </h3></div>
   <div class="panel-body">
        
@@ -808,7 +726,7 @@ public function <a href='../proc/ddot.html'>ddot</a>(n, dx, incx, dy, incy)
 
 
 <p>forms the dot product of two vectors.
-  uses unrolled loops for increments equal to one.</p>
+  uses unrolled loops for increments equal to one.</p><a href="../proc/ddot.html" class="pull-right"><emph>Read more&hellip;</emph></a>
     
     <h4>Arguments</h4>
     
@@ -924,7 +842,7 @@ public function <a href='../proc/ddot.html'>ddot</a>(n, dx, incx, dy, incy)
 public function <a href='../proc/dnrm2.html'>dnrm2</a>(n, x, incx)
     
     
-	 
+   
 </h3></div>
   <div class="panel-body">
        
@@ -937,7 +855,7 @@ public function <a href='../proc/dnrm2.html'>dnrm2</a>(n, x, incx)
 
 
 <p>Function that returns the Euclidean norm
-  \( \sqrt{ \mathbf{x}^T \mathbf{x} } \) of a vector \( \mathbf{x} \).</p>
+  <script type="math/tex"> \sqrt{ \mathbf{x}^T \mathbf{x} } </script> of a vector <script type="math/tex"> \mathbf{x} </script>.</p><a href="../proc/dnrm2.html" class="pull-right"><emph>Read more&hellip;</emph></a>
     
     <h4>Arguments</h4>
     
@@ -1031,7 +949,7 @@ public function <a href='../proc/dnrm2.html'>dnrm2</a>(n, x, incx)
 public subroutine <a href='../proc/daxpy.html'>daxpy</a>(n, da, dx, incx, dy, incy)
     
     
-	 
+   
 </h3></div>
   <div class="panel-body">
        
@@ -1044,7 +962,7 @@ public subroutine <a href='../proc/daxpy.html'>daxpy</a>(n, da, dx, incx, dy, in
 
 
 <p>constant times a vector plus a vector.
-  uses unrolled loops for increments equal to one.</p>
+  uses unrolled loops for increments equal to one.</p><a href="../proc/daxpy.html" class="pull-right"><emph>Read more&hellip;</emph></a>
     
     <h4>Arguments</h4>
     
@@ -1166,7 +1084,7 @@ public subroutine <a href='../proc/daxpy.html'>daxpy</a>(n, da, dx, incx, dy, in
 public subroutine <a href='../proc/dcopy.html'>dcopy</a>(n, dx, incx, dy, incy)
     
     
-	 
+   
 </h3></div>
   <div class="panel-body">
        
@@ -1179,7 +1097,7 @@ public subroutine <a href='../proc/dcopy.html'>dcopy</a>(n, dx, incx, dy, incy)
 
 
 <p>copies a vector, x, to a vector, y.
-  uses unrolled loops for increments equal to one.</p>
+  uses unrolled loops for increments equal to one.</p><a href="../proc/dcopy.html" class="pull-right"><emph>Read more&hellip;</emph></a>
     
     <h4>Arguments</h4>
     
@@ -1286,7 +1204,7 @@ public subroutine <a href='../proc/dcopy.html'>dcopy</a>(n, dx, incx, dy, incy)
 public subroutine <a href='../proc/dscal.html'>dscal</a>(n, da, dx, incx)
     
     
-	 
+   
 </h3></div>
   <div class="panel-body">
        
@@ -1299,7 +1217,7 @@ public subroutine <a href='../proc/dscal.html'>dscal</a>(n, da, dx, incx)
 
 
 <p>scales a vector by a constant.
-  uses unrolled loops for increment equal to one.</p>
+  uses unrolled loops for increment equal to one.</p><a href="../proc/dscal.html" class="pull-right"><emph>Read more&hellip;</emph></a>
     
     <h4>Arguments</h4>
     
@@ -1393,38 +1311,14 @@ public subroutine <a href='../proc/dscal.html'>dscal</a>(n, da, dx, incx)
     </div>
   </div>
 
-  <section class="visible-xs visible-sm hidden-md">
-    <hr>
-    
-
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allmods-1">All Modules</a></h3></div>
-  <div id="allmods-1" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../module/report_variable.html">report_variable</a>
-      
-      <a class="list-group-item" href="../module/slsqp_core.html">slsqp_core</a>
-      
-      <a class="list-group-item" href="../module/slsqp_kinds.html">slsqp_kinds</a>
-      
-      <a class="list-group-item" href="../module/slsqp_module.html">slsqp_module</a>
-      
-      <a class="list-group-item" href="../module/slsqp_support.html">slsqp_support</a>
-      
-    </div>
-  </div>
-</div>
-
-
-  </section>
   
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+                                          </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 
@@ -1455,12 +1349,17 @@ public subroutine <a href='../proc/dscal.html'>dscal</a>(n, da, dx, incx)
       MathJax.Hub.Config({
         TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
         jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
-        'HTML-CSS': { 
-           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
-        }
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
   </body>
 </html>

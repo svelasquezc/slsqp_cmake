@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 
-	 <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
+   
+   <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
     
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
@@ -17,6 +17,9 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
     
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,13 +29,6 @@
     
     <script src="../js/jquery-2.1.3.min.js"></script>
     <script src="../js/svg-pan-zoom.min.js"></script>
-
-    
-    <script src="../tipuesearch/tipuesearch_content.js"></script>
-    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    <script src="../tipuesearch/tipuesearch_set.js"></script>
-    <script src="../tipuesearch/tipuesearch.js"></script>
-    
 
   </head>
 
@@ -52,35 +48,37 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-				
+        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
-		 aria-expanded="false">Contents <span class="caret"></span></a>
-	      <ul class="dropdown-menu">
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
               
             <li><a href="../lists/files.html">Source Files</a></li>
-				
-				
+        
+        
+        
             <li><a href="../lists/modules.html">Modules</a></li>
-				
+        
             
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
-				
-				
+        
+        
             <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-								
+               
             <li><a href="../lists/types.html">Derived Types</a></li>
-				
-				
-            <li><a href="../lists/programs.html">Programs</a></li>
-				
+        
+        
             </ul>
             </li>
 
+
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
@@ -94,8 +92,6 @@
                              
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
 
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
 
           </ul>
         
@@ -133,15 +129,19 @@
     
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
-	  data-placement="bottom" data-html="true"
-	  title=" 8.0% of total for source files.">175 statements</a>
+    data-placement="bottom" data-html="true"
+    title=" 9.6% of total for source files.">175 statements</a>
      </li> 
+     
      
      
     <li><i class="fa fa-code"></i><a href="../src/slsqp_support.f90"> Source File</a></li>
      
+     
   </ul>
   <ol class="breadcrumb in-well text-right">
+  
+    
   
      <li class="active">slsqp_support.f90</li>
   </ol>
@@ -160,6 +160,9 @@
     
 <div id="sidebar">
   
+<h3>Contents</h3>
+ 
+
 
 
 
@@ -191,6 +194,7 @@
 
 
 
+
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
@@ -199,46 +203,20 @@
 </div>
 
 
-  <hr>
-  
 
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-0">All Source Files</a></h3></div>
-  <div id="allfiles-0" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_core.f90.html">slsqp_core.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_kinds.f90.html">slsqp_kinds.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_module.f90.html">slsqp_module.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_support.f90.html">slsqp_support.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test.f90.html">slsqp_test.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_2.f90.html">slsqp_test_2.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_3.f90.html">slsqp_test_3.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_71.f90.html">slsqp_test_71.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_stopping_criterion.f90.html">slsqp_test_stopping_criterion.f90</a>
-      
-    </div>
-  </div>
 </div>
-
-
-</div>  
 
     </div>
     <div class="col-md-9" id='text'>
+      
+      <br>
     
-    
-    <h3>This File Depends On</h3>
-    
-                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">This file depends on</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.38.0 (20140413.2041)
@@ -256,30 +234,20 @@
 </g>
 <!-- sourcefile~slsqp_kinds.f90 -->
 <g id="sourcefile~~slsqp_support.f90~~EfferentGraph_node2" class="node"><title>sourcefile~slsqp_kinds.f90</title>
-<g id="a_sourcefile~~slsqp_support.f90~~EfferentGraph_node2"><a xlink:href="../sourcefile/slsqp_kinds.f90.html" xlink:title="slsqp_kinds.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="93,-24 7.10543e-15,-24 7.10543e-15,-0 93,-0 93,-24"/>
+<g id="a_sourcefile~~slsqp_support.f90~~EfferentGraph_node2"><a xlink:href=".././sourcefile/slsqp_kinds.f90.html" xlink:title="slsqp_kinds.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="93,-24 0,-24 0,-0 93,-0 93,-24"/>
 <text text-anchor="middle" x="46.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_kinds.f90</text>
 </a>
 </g>
 </g>
-<!-- sourcefile~slsqp_kinds.f90&#45;&gt;sourcefile~slsqp_support.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~EfferentGraph_edge1" class="edge"><title>sourcefile~slsqp_kinds.f90&#45;&gt;sourcefile~slsqp_support.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M93.0697,-12C101.322,-12 110.056,-12 118.69,-12"/>
-<polygon fill="#000000" stroke="#000000" points="118.746,-15.5001 128.746,-12 118.746,-8.5001 118.746,-15.5001"/>
+<!-- sourcefile~slsqp_support.f90&#45;&gt;sourcefile~slsqp_kinds.f90 -->
+<g id="sourcefile~~slsqp_support.f90~~EfferentGraph_edge1" class="edge"><title>sourcefile~slsqp_support.f90&#45;&gt;sourcefile~slsqp_kinds.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M128.62,-12C120.311,-12 111.69,-12 103.306,-12"/>
+<polygon fill="#000000" stroke="#000000" points="103.233,-8.5001 93.233,-12 103.233,-15.5001 103.233,-8.5001"/>
 </g>
 </g>
 </svg>
-</div>
-                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
-                      </div>
-                      <div class="modal-body">
-                        
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
     <p>Nodes of different colours represent the following: </p>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -306,145 +274,70 @@
 </svg>
 
     
-    <p>Solid arrows point from a file to a file which depends upon it. A file 
+    <p>Solid arrows point from a file to a file which it depends on. A file
     is dependent upon another if the latter must be compiled before the former
     can be.
     </p>
-    
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+    </div></div></div></div>
+      </div>
+    </div>
     
       
-      <h3>Files Dependent On This One</h3>
-      
-                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Files dependent on this one</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.38.0 (20140413.2041)
  -->
 <!-- Title: sourcefile~~slsqp_support.f90~~AfferentGraph Pages: 1 -->
-<svg id="sourcefileslsqp_supportf90AfferentGraph" width="598pt" height="200pt"
- viewBox="0.00 0.00 598.00 200.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 196)">
+<svg id="sourcefileslsqp_supportf90AfferentGraph" width="378pt" height="52pt"
+ viewBox="0.00 0.00 378.00 52.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~slsqp_support.f90~~AfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 48)">
 <title>sourcefile~~slsqp_support.f90~~AfferentGraph</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-196 594,-196 594,4 -4,4"/>
+<polygon fill="white" stroke="none" points="-4,4 -4,-48 374,-48 374,4 -4,4"/>
 <!-- sourcefile~slsqp_support.f90 -->
 <g id="sourcefile~~slsqp_support.f90~~AfferentGraph_node1" class="node"><title>sourcefile~slsqp_support.f90</title>
-<polygon fill="none" stroke="black" points="106,-108 7.10543e-15,-108 7.10543e-15,-84 106,-84 106,-108"/>
-<text text-anchor="middle" x="53" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp_support.f90</text>
-</g>
-<!-- sourcefile~slsqp_module.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_node2" class="node"><title>sourcefile~slsqp_module.f90</title>
-<g id="a_sourcefile~~slsqp_support.f90~~AfferentGraph_node2"><a xlink:href="../sourcefile/slsqp_module.f90.html" xlink:title="slsqp_module.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="370,-108 266,-108 266,-84 370,-84 370,-108"/>
-<text text-anchor="middle" x="318" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_module.f90</text>
-</a>
-</g>
-</g>
-<!-- sourcefile~slsqp_support.f90&#45;&gt;sourcefile~slsqp_module.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_edge7" class="edge"><title>sourcefile~slsqp_support.f90&#45;&gt;sourcefile~slsqp_module.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M106.116,-96.6901C117.915,-96.8191 130.388,-96.934 142,-97 181.11,-97.2222 190.89,-97.2248 230,-97 238.36,-96.952 247.171,-96.878 255.848,-96.7915"/>
-<polygon fill="#000000" stroke="#000000" points="255.974,-100.29 265.937,-96.685 255.9,-93.2908 255.974,-100.29"/>
+<polygon fill="none" stroke="black" points="106,-44 0,-44 0,-20 106,-20 106,-44"/>
+<text text-anchor="middle" x="53" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp_support.f90</text>
 </g>
 <!-- sourcefile~slsqp_core.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_node3" class="node"><title>sourcefile~slsqp_core.f90</title>
-<g id="a_sourcefile~~slsqp_support.f90~~AfferentGraph_node3"><a xlink:href="../sourcefile/slsqp_core.f90.html" xlink:title="slsqp_core.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="230,-88 142,-88 142,-64 230,-64 230,-88"/>
-<text text-anchor="middle" x="186" y="-73.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_core.f90</text>
+<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_node2" class="node"><title>sourcefile~slsqp_core.f90</title>
+<g id="a_sourcefile~~slsqp_support.f90~~AfferentGraph_node2"><a xlink:href=".././sourcefile/slsqp_core.f90.html" xlink:title="slsqp_core.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="230,-24 142,-24 142,-0 230,-0 230,-24"/>
+<text text-anchor="middle" x="186" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_core.f90</text>
 </a>
 </g>
 </g>
-<!-- sourcefile~slsqp_support.f90&#45;&gt;sourcefile~slsqp_core.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_edge8" class="edge"><title>sourcefile~slsqp_support.f90&#45;&gt;sourcefile~slsqp_core.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M106.151,-88.038C114.572,-86.7524 123.3,-85.4199 131.746,-84.1304"/>
-<polygon fill="#000000" stroke="#000000" points="132.512,-87.5541 141.869,-82.5849 131.455,-80.6343 132.512,-87.5541"/>
+<!-- sourcefile~slsqp_core.f90&#45;&gt;sourcefile~slsqp_support.f90 -->
+<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_edge1" class="edge"><title>sourcefile~slsqp_core.f90&#45;&gt;sourcefile~slsqp_support.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M141.743,-18.6042C133.601,-19.8472 124.938,-21.1697 116.349,-22.4811"/>
+<polygon fill="#000000" stroke="#000000" points="115.691,-19.0409 106.334,-24.0101 116.747,-25.9607 115.691,-19.0409"/>
 </g>
-<!-- sourcefile~slsqp_test_2.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_node4" class="node"><title>sourcefile~slsqp_test_2.f90</title>
-<g id="a_sourcefile~~slsqp_support.f90~~AfferentGraph_node4"><a xlink:href="../sourcefile/slsqp_test_2.f90.html" xlink:title="slsqp_test_2.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="546.5,-192 449.5,-192 449.5,-168 546.5,-168 546.5,-192"/>
-<text text-anchor="middle" x="498" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_2.f90</text>
+<!-- sourcefile~slsqp_module.f90 -->
+<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_node3" class="node"><title>sourcefile~slsqp_module.f90</title>
+<g id="a_sourcefile~~slsqp_support.f90~~AfferentGraph_node3"><a xlink:href=".././sourcefile/slsqp_module.f90.html" xlink:title="slsqp_module.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="370,-44 266,-44 266,-20 370,-20 370,-44"/>
+<text text-anchor="middle" x="318" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_module.f90</text>
 </a>
 </g>
 </g>
-<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_2.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_edge1" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_2.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M332.088,-108.11C348.245,-122.402 377.141,-145.877 406,-159 416.388,-163.724 427.943,-167.437 439.237,-170.339"/>
-<polygon fill="#000000" stroke="#000000" points="438.52,-173.766 449.06,-172.686 440.147,-166.958 438.52,-173.766"/>
+<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_support.f90 -->
+<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_edge2" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_support.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M265.937,-32.685C254.136,-32.8161 241.631,-32.9332 230,-33 190.89,-33.2248 181.11,-33.2222 142,-33 133.654,-32.9526 124.863,-32.8799 116.197,-32.7948"/>
+<polygon fill="#000000" stroke="#000000" points="116.151,-29.2942 106.116,-32.6901 116.079,-36.2939 116.151,-29.2942"/>
 </g>
-<!-- sourcefile~slsqp_test.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_node5" class="node"><title>sourcefile~slsqp_test.f90</title>
-<g id="a_sourcefile~~slsqp_support.f90~~AfferentGraph_node5"><a xlink:href="../sourcefile/slsqp_test.f90.html" xlink:title="slsqp_test.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="540.5,-150 455.5,-150 455.5,-126 540.5,-126 540.5,-150"/>
-<text text-anchor="middle" x="498" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test.f90</text>
-</a>
-</g>
-</g>
-<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_edge2" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M368.667,-108.08C380.869,-111.022 393.902,-114.144 406,-117 418.701,-119.998 432.41,-123.187 445.238,-126.15"/>
-<polygon fill="#000000" stroke="#000000" points="444.771,-129.634 455.301,-128.47 446.343,-122.813 444.771,-129.634"/>
-</g>
-<!-- sourcefile~slsqp_test_3.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_node6" class="node"><title>sourcefile~slsqp_test_3.f90</title>
-<g id="a_sourcefile~~slsqp_support.f90~~AfferentGraph_node6"><a xlink:href="../sourcefile/slsqp_test_3.f90.html" xlink:title="slsqp_test_3.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="546.5,-108 449.5,-108 449.5,-84 546.5,-84 546.5,-108"/>
-<text text-anchor="middle" x="498" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_3.f90</text>
-</a>
-</g>
-</g>
-<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_3.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_edge3" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_3.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M370.008,-96C391.656,-96 416.996,-96 439.322,-96"/>
-<polygon fill="#000000" stroke="#000000" points="439.344,-99.5001 449.344,-96 439.344,-92.5001 439.344,-99.5001"/>
-</g>
-<!-- sourcefile~slsqp_test_stopping_criterion.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_node7" class="node"><title>sourcefile~slsqp_test_stopping_criterion.f90</title>
-<g id="a_sourcefile~~slsqp_support.f90~~AfferentGraph_node7"><a xlink:href="../sourcefile/slsqp_test_stopping_criterion.f90.html" xlink:title="slsqp_test_stopping_criterion.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="590,-66 406,-66 406,-42 590,-42 590,-66"/>
-<text text-anchor="middle" x="498" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_stopping_criterion.f90</text>
-</a>
-</g>
-</g>
-<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_stopping_criterion.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_edge4" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_stopping_criterion.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M368.667,-83.9202C380.869,-80.9777 393.902,-77.8559 406,-75 415.252,-72.8158 425.04,-70.5306 434.632,-68.3051"/>
-<polygon fill="#000000" stroke="#000000" points="435.575,-71.6796 444.528,-66.0143 433.996,-64.86 435.575,-71.6796"/>
-</g>
-<!-- sourcefile~slsqp_test_71.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_node8" class="node"><title>sourcefile~slsqp_test_71.f90</title>
-<g id="a_sourcefile~~slsqp_support.f90~~AfferentGraph_node8"><a xlink:href="../sourcefile/slsqp_test_71.f90.html" xlink:title="slsqp_test_71.f90">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="550,-24 446,-24 446,-0 550,-0 550,-24"/>
-<text text-anchor="middle" x="498" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_71.f90</text>
-</a>
-</g>
-</g>
-<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_71.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_edge5" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_test_71.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M332.088,-83.8903C348.245,-69.5985 377.141,-46.1227 406,-33 415.395,-28.7277 425.745,-25.2817 435.993,-22.5151"/>
-<polygon fill="#000000" stroke="#000000" points="436.906,-25.8947 445.753,-20.0661 435.202,-19.1052 436.906,-25.8947"/>
-</g>
-<!-- sourcefile~slsqp_core.f90&#45;&gt;sourcefile~slsqp_module.f90 -->
-<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_edge6" class="edge"><title>sourcefile~slsqp_core.f90&#45;&gt;sourcefile~slsqp_module.f90</title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M230.288,-82.6597C238.464,-83.9175 247.157,-85.2549 255.762,-86.5788"/>
-<polygon fill="#000000" stroke="#000000" points="255.371,-90.0597 265.787,-88.121 256.435,-83.1411 255.371,-90.0597"/>
+<!-- sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_core.f90 -->
+<g id="sourcefile~~slsqp_support.f90~~AfferentGraph_edge3" class="edge"><title>sourcefile~slsqp_module.f90&#45;&gt;sourcefile~slsqp_core.f90</title>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M265.994,-24.1529C257.599,-22.8614 248.877,-21.5196 240.425,-20.2193"/>
+<polygon fill="#000000" stroke="#000000" points="240.705,-16.7213 230.29,-18.6599 239.641,-23.6399 240.705,-16.7213"/>
 </g>
 </g>
 </svg>
-</div>
-                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
-                      </div>
-                      <div class="modal-body">
-                        
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
     <p>Nodes of different colours represent the following: </p>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -471,21 +364,21 @@
 </svg>
 
     
-    <p>Solid arrows point from a file to a file which depends upon it. A file 
+    <p>Solid arrows point from a file to a file which it depends on. A file
     is dependent upon another if the latter must be compiled before the former
     can be.
     </p>
-    
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+    </div></div></div></div>
+      </div>
+    </div>
       
       <br>
 
     <section class="visible-xs visible-sm hidden-md">
       
+<h3>Contents</h3>
+ 
+
 
 
 
@@ -517,12 +410,14 @@
 
 
 
+
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
     <a class="list-group-item" href="../sourcefile/slsqp_support.f90.html#src">slsqp_support.f90</a>
   </div>
 </div>
+
 
 
     </section>
@@ -854,46 +749,14 @@
     </div>
   </div>
 
-  <section class="visible-xs visible-sm hidden-md">
-    <hr>
-    
-
-<div class="panel panel-default">
-  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#allfiles-1">All Source Files</a></h3></div>
-  <div id="allfiles-1" class="panel-collapse collapse">
-    <div class="list-group">
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_core.f90.html">slsqp_core.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_kinds.f90.html">slsqp_kinds.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_module.f90.html">slsqp_module.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_support.f90.html">slsqp_support.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test.f90.html">slsqp_test.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_2.f90.html">slsqp_test_2.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_3.f90.html">slsqp_test_3.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_71.f90.html">slsqp_test_71.f90</a>
-      
-      <a class="list-group-item" href="../sourcefile/slsqp_test_stopping_criterion.f90.html">slsqp_test_stopping_criterion.f90</a>
-      
-    </div>
-  </div>
-</div>
-
-
-  </section>
   
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+                                          </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 
@@ -924,12 +787,17 @@
       MathJax.Hub.Config({
         TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
         jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
-        'HTML-CSS': { 
-           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
-        }
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
   </body>
 </html>

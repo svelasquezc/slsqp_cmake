@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	 
-	 <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
+   
+   <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
     
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
@@ -19,6 +19,9 @@ All Procedures &ndash; slsqp
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
     
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -28,13 +31,6 @@ All Procedures &ndash; slsqp
     
     <script src="../js/jquery-2.1.3.min.js"></script>
     <script src="../js/svg-pan-zoom.min.js"></script>
-
-    
-    <script src="../tipuesearch/tipuesearch_content.js"></script>
-    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    <script src="../tipuesearch/tipuesearch_set.js"></script>
-    <script src="../tipuesearch/tipuesearch.js"></script>
-    
 
   </head>
 
@@ -54,35 +50,37 @@ All Procedures &ndash; slsqp
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-				
+        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
-		 aria-expanded="false">Contents <span class="caret"></span></a>
-	      <ul class="dropdown-menu">
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
               
             <li><a href="../lists/files.html">Source Files</a></li>
-				
-				
+        
+        
+        
             <li><a href="../lists/modules.html">Modules</a></li>
-				
+        
             
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
-				
-				
+        
+        
             <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-								
+               
             <li><a href="../lists/types.html">Derived Types</a></li>
-				
-				
-            <li><a href="../lists/programs.html">Programs</a></li>
-				
+        
+        
             </ul>
             </li>
 
+
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
@@ -96,8 +94,6 @@ All Procedures &ndash; slsqp
                              
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
 
-
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/programs.html">Programs</a></li>
 
           </ul>
         
@@ -126,13 +122,13 @@ All Procedures &ndash; slsqp
 			   <tr><td><a href='../proc/check_convergence.html'>check_convergence</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Function</td><td><p>Check for convergence.</p></td></tr>
 			 
 			   <tr><td><a href='../proc/daxpy.html'>daxpy</a></td><td><a href='../module/slsqp_support.html'>slsqp_support</a></td><td>Subroutine</td><td><p>constant times a vector plus a vector.
-  uses unrolled loops for increments equal to one.</p></td></tr>
+  uses unrolled loops for increments equal to one.</p><a href="../proc/daxpy.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/dcopy.html'>dcopy</a></td><td><a href='../module/slsqp_support.html'>slsqp_support</a></td><td>Subroutine</td><td><p>copies a vector, x, to a vector, y.
-  uses unrolled loops for increments equal to one.</p></td></tr>
+  uses unrolled loops for increments equal to one.</p><a href="../proc/dcopy.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/ddot.html'>ddot</a></td><td><a href='../module/slsqp_support.html'>slsqp_support</a></td><td>Function</td><td><p>forms the dot product of two vectors.
-  uses unrolled loops for increments equal to one.</p></td></tr>
+  uses unrolled loops for increments equal to one.</p><a href="../proc/ddot.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/destroy_linmin_data.html'>destroy_linmin_data</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>Destructor for <a href="../type/linmin_data.html">linmin_data</a> type.</p></td></tr>
 			 
@@ -141,686 +137,433 @@ All Procedures &ndash; slsqp
 			   <tr><td><a href='../proc/destroy_slsqpb_data.html'>destroy_slsqpb_data</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>Destructor for <a href="../type/slsqpb_data.html">slsqpb_data</a> type.</p></td></tr>
 			 
 			   <tr><td><a href='../proc/diff.html'>diff</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Function</td><td><p>Replaced statement function in the original code.
-  Returns \( d = u - v \).</p></td></tr>
+  Returns <script type="math/tex"> d = u - v </script>.</p></td></tr>
 			 
 			   <tr><td><a href='../proc/dnrm2.html'>dnrm2</a></td><td><a href='../module/slsqp_support.html'>slsqp_support</a></td><td>Function</td><td><p>Function that returns the Euclidean norm
-  \( \sqrt{ \mathbf{x}^T \mathbf{x} } \) of a vector \( \mathbf{x} \).</p></td></tr>
+  <script type="math/tex"> \sqrt{ \mathbf{x}^T \mathbf{x} } </script> of a vector <script type="math/tex"> \mathbf{x} </script>.</p><a href="../proc/dnrm2.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/dscal.html'>dscal</a></td><td><a href='../module/slsqp_support.html'>slsqp_support</a></td><td>Subroutine</td><td><p>scales a vector by a constant.
-  uses unrolled loops for increment equal to one.</p></td></tr>
-			 
-			   <tr><td><a href='../proc/dummy_grad.html'>dummy_grad</a></td><td><a href='../program/slsqp_test_3.html'>slsqp_test_3</a></td><td>Subroutine</td><td><p>not used in this case</p></td></tr>
+  uses unrolled loops for increment equal to one.</p><a href="../proc/dscal.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/enforce_bounds.html'>enforce_bounds</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>enforce the bound constraints on x.</p></td></tr>
 			 
-			   <tr><td><a href='../proc/func.html'>func</a></td><td><a href='../program/slsqp_test_71.html'>slsqp_test_71</a></td><td>Subroutine</td><td></td></tr>
-			 
-			   <tr><td><a href='../proc/g1.html'>g1</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>Compute orthogonal rotation matrix.</p></td></tr>
-			 
-			   <tr><td><a href='../proc/grad.html'>grad</a></td><td><a href='../program/slsqp_test_71.html'>slsqp_test_71</a></td><td>Subroutine</td><td><p>gradients for <a href="../proc/func.html">func</a>.</p></td></tr>
+			   <tr><td><a href='../proc/g1.html'>g1</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>Compute orthogonal rotation matrix.</p><a href="../proc/g1.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/h12.html'>h12</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>Construction and/or application of a single
-  householder transformation \( Q = I + u(u^t)/b \).</p></td></tr>
+  householder transformation <script type="math/tex"> Q = I + u(u^t)/b </script>.</p><a href="../proc/h12.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/hfti.html'>hfti</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>Rank-deficient least squares algorithm using
-  householder forward triangulation with column interchanges.</p></td></tr>
+  householder forward triangulation with column interchanges.</p><a href="../proc/hfti.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/initialize_slsqp.html'>initialize_slsqp</a></td><td><a href='../module/slsqp_module.html'>slsqp_module</a></td><td>Subroutine</td><td><p>initialize the <a href="../type/slsqp_solver.html">slsqp_solver</a> class.  see <a href="../proc/slsqp.html">slsqp</a> for more details.</p></td></tr>
 			 
-			   <tr><td><a href='../proc/ldl.html'>ldl</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>\(LDL^T\) - rank-one - update</p></td></tr>
+			   <tr><td><a href='../proc/ldl.html'>ldl</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>
+<script type="math/tex">LDL^T</script> - rank-one - update</p><a href="../proc/ldl.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/ldp.html'>ldp</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>Least distance programming routine.
-  Minimize \( \frac{1}{2} \mathbf{x}^T \mathbf{x}  \) subject to
-  \( \mathbf{G} \mathbf{x} \ge \mathbf{h} \).</p></td></tr>
+  Minimize <script type="math/tex"> \frac{1}{2} \mathbf{x}^T \mathbf{x}  </script> subject to
+  <script type="math/tex"> \mathbf{G} \mathbf{x} \ge \mathbf{h} </script>.</p><a href="../proc/ldp.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/linmin.html'>linmin</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Function</td><td><p>Linesearch without derivatives (used by <a href="../proc/slsqp.html">slsqp</a> if <code>linesearch_mode=2</code>).
-  Returns the abscissa approximating the point where <code>f</code> attains a minimum.</p></td></tr>
+  Returns the abscissa approximating the point where <code>f</code> attains a minimum.</p><a href="../proc/linmin.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/lsei.html'>lsei</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>for <code>mode=1</code>, the subroutine returns the solution <code>x</code> of
-  equality &amp; inequality constrained least squares problem lsei :</p></td></tr>
+  equality &amp; inequality constrained least squares problem lsei :</p><a href="../proc/lsei.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/lsi.html'>lsi</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>for <code>mode=1</code>, the subroutine returns the solution <code>x</code> of
-  inequality constrained linear least squares problem:</p></td></tr>
+  inequality constrained linear least squares problem:</p><a href="../proc/lsi.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
-			   <tr><td><a href='../proc/lsq.html'>lsq</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>Minimize \( || e x - f || \) with respect to \(x\),
-  with upper triangular matrix \( e = + d ^{1/2} l^T \),
-  and vector \( f = -d^{-1/2} l^{-1} g \),
-  where the unit lower tridiangular matrix \(l\) is stored columnwise
-  dense in the \(n*(n+1)/2\) array \(l\) with vector \(d\) stored in its
-  'diagonal' thus substituting the one-elements of \(l\)</p></td></tr>
+			   <tr><td><a href='../proc/lsq.html'>lsq</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>Minimize <script type="math/tex"> || e x - f || </script> with respect to <script type="math/tex">x</script>,
+  with upper triangular matrix <script type="math/tex"> e = + d ^{1/2} l^T </script>,
+  and vector <script type="math/tex"> f = -d^{-1/2} l^{-1} g </script>,
+  where the unit lower tridiangular matrix <script type="math/tex">l</script> is stored columnwise
+  dense in the <script type="math/tex">n*(n+1)/2</script> array <script type="math/tex">l</script> with vector <script type="math/tex">d</script> stored in its
+  'diagonal' thus substituting the one-elements of <script type="math/tex">l</script>
+</p><a href="../proc/lsq.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/mode_to_status_message.html'>mode_to_status_message</a></td><td><a href='../module/slsqp_module.html'>slsqp_module</a></td><td>Function</td><td><p>Convert the <a href="../proc/slsqp.html">slsqp</a> <code>mode</code> flag to a message string.</p></td></tr>
 			 
-			   <tr><td><a href='../proc/nnls.html'>nnls</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>Nonnegative least squares algorithm.</p></td></tr>
-			 
-			   <tr><td><a href='../proc/report_iteration.html'>report_iteration</a></td><td><a href='../program/slsqp_test_2.html'>slsqp_test_2</a></td><td>Subroutine</td><td><p>report an iteration (print to the console).</p></td></tr>
-			 
-			   <tr><td><a href='../proc/report_iteration%7E2.html'>report_iteration</a></td><td><a href='../program/slsqp_test_71.html'>slsqp_test_71</a></td><td>Subroutine</td><td><p>report an iteration (print to the console).</p></td></tr>
-			 
-			   <tr><td><a href='../proc/report_iteration%7E3.html'>report_iteration</a></td><td><a href='../program/slsqp_test_criterion.html'>slsqp_test_criterion</a></td><td>Subroutine</td><td><p>report an iteration (print to the console).</p></td></tr>
-			 
-			   <tr><td><a href='../proc/report_iteration%7E4.html'>report_iteration</a></td><td><a href='../program/slsqp_test_3.html'>slsqp_test_3</a></td><td>Subroutine</td><td><p>report an iteration (print to the console).</p></td></tr>
-			 
-			   <tr><td><a href='../proc/report_iteration%7E5.html'>report_iteration</a></td><td><a href='../program/slsqp_test.html'>slsqp_test</a></td><td>Subroutine</td><td><p>report an iteration (print to the console).</p></td></tr>
+			   <tr><td><a href='../proc/nnls.html'>nnls</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>Nonnegative least squares algorithm.</p><a href="../proc/nnls.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/report_message.html'>report_message</a></td><td><a href='../module/slsqp_module.html'>slsqp_module</a></td><td>Subroutine</td><td><p>Report a message from an <a href="../type/slsqp_solver.html">slsqp_solver</a> class. This uses the <code>iprint</code>
   variable in the class as the unit number for printing. Note: for fatal errors,
   if no unit is specified, the <code>error_unit</code> is used.</p></td></tr>
 			 
-			   <tr><td><a href='../proc/rosenbrock_func.html'>rosenbrock_func</a></td><td><a href='../program/slsqp_test_criterion.html'>slsqp_test_criterion</a></td><td>Subroutine</td><td><p>Rosenbrock function</p></td></tr>
-			 
-			   <tr><td><a href='../proc/rosenbrock_func%7E2.html'>rosenbrock_func</a></td><td><a href='../program/slsqp_test_3.html'>slsqp_test_3</a></td><td>Subroutine</td><td><p>Rosenbrock function</p></td></tr>
-			 
-			   <tr><td><a href='../proc/rosenbrock_func%7E3.html'>rosenbrock_func</a></td><td><a href='../program/slsqp_test.html'>slsqp_test</a></td><td>Subroutine</td><td><p>Rosenbrock function</p></td></tr>
-			 
-			   <tr><td><a href='../proc/rosenbrock_grad.html'>rosenbrock_grad</a></td><td><a href='../program/slsqp_test_criterion.html'>slsqp_test_criterion</a></td><td>Subroutine</td><td><p>gradients for <a href="../proc/rosenbrock_func.html">rosenbrock_func</a>.</p></td></tr>
-			 
-			   <tr><td><a href='../proc/rosenbrock_grad%7E2.html'>rosenbrock_grad</a></td><td><a href='../program/slsqp_test.html'>slsqp_test</a></td><td>Subroutine</td><td><p>gradients for <a href="../proc/rosenbrock_func.html">rosenbrock_func</a>.</p></td></tr>
-			 
 			   <tr><td><a href='../proc/slsqp.html'>slsqp</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p><strong>slsqp</strong>: <strong>s</strong>equential <strong>l</strong>east <strong>sq</strong>uares <strong>p</strong>rogramming
-  to solve general nonlinear optimization problems</p></td></tr>
+  to solve general nonlinear optimization problems</p><a href="../proc/slsqp.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/slsqp_wrapper.html'>slsqp_wrapper</a></td><td><a href='../module/slsqp_module.html'>slsqp_module</a></td><td>Subroutine</td><td><p>main routine for calling <a href="../proc/slsqp.html">slsqp</a>.</p></td></tr>
 			 
-			   <tr><td><a href='../proc/slsqpb.html'>slsqpb</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>nonlinear programming by solving sequentially quadratic programs</p></td></tr>
+			   <tr><td><a href='../proc/slsqpb.html'>slsqpb</a></td><td><a href='../module/slsqp_core.html'>slsqp_core</a></td><td>Subroutine</td><td><p>nonlinear programming by solving sequentially quadratic programs</p><a href="../proc/slsqpb.html" class="pull-right"><emph>Read more&hellip;</emph></a></td></tr>
 			 
 			   <tr><td><a href='../proc/stop_iterations.html'>stop_iterations</a></td><td><a href='../module/slsqp_module.html'>slsqp_module</a></td><td>Subroutine</td><td><p>A method that the user can call to stop the iterations.
   (it can be called in any of the functions).
   SLSQP will stop at the end of the next iteration.</p></td></tr>
 			 
-			   <tr><td><a href='../proc/test_func.html'>test_func</a></td><td><a href='../program/slsqp_test_2.html'>slsqp_test_2</a></td><td>Subroutine</td><td><p>Compute the objective function and constraints</p></td></tr>
-			 
-			   <tr><td><a href='../proc/test_grad.html'>test_grad</a></td><td><a href='../program/slsqp_test_2.html'>slsqp_test_2</a></td><td>Subroutine</td><td><p>compute the gradients.</p></td></tr>
-			 
 			 </tbody></table>
-             
-                <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+             <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Generated by graphviz version 2.38.0 (20140413.2041)
  -->
 <!-- Title: call~~graph~~CallGraph Pages: 1 -->
-<svg id="callgraphCallGraph" width="855pt" height="1056pt"
- viewBox="0.00 0.00 855.00 1055.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="call~~graph~~CallGraph" class="graph" transform="scale(0.815062 0.815062) rotate(0) translate(4 1291)">
+<svg id="callgraphCallGraph" width="445pt" height="860pt"
+ viewBox="0.00 0.00 445.00 860.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="call~~graph~~CallGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 856)">
 <title>call~~graph~~CallGraph</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-1291 1045,-1291 1045,4 -4,4"/>
-<!-- proc~grad -->
-<g id="call~~graph~~CallGraph_node1" class="node"><title>proc~grad</title>
-<g id="a_call~~graph~~CallGraph_node1"><a xlink:href="../proc/grad.html" xlink:title="grad">
-<polygon fill="#d9534f" stroke="#d9534f" points="86.5,-405 32.5,-405 32.5,-381 86.5,-381 86.5,-405"/>
-<text text-anchor="middle" x="59.5" y="-390.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">grad</text>
+<polygon fill="white" stroke="none" points="-4,4 -4,-856 441,-856 441,4 -4,4"/>
+<!-- proc~slsqp -->
+<g id="call~~graph~~CallGraph_node1" class="node"><title>proc~slsqp</title>
+<g id="a_call~~graph~~CallGraph_node1"><a xlink:href=".././proc/slsqp.html" xlink:title="slsqp">
+<polygon fill="#d9534f" stroke="#d9534f" points="256.5,-66 202.5,-66 202.5,-42 256.5,-42 256.5,-66"/>
+<text text-anchor="middle" x="229.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
 </a>
 </g>
 </g>
-<!-- proc~daxpy -->
-<g id="call~~graph~~CallGraph_node2" class="node"><title>proc~daxpy</title>
-<g id="a_call~~graph~~CallGraph_node2"><a xlink:href="../proc/daxpy.html" xlink:title="daxpy">
-<polygon fill="#d9534f" stroke="#d9534f" points="951,-314 897,-314 897,-290 951,-290 951,-314"/>
-<text text-anchor="middle" x="924" y="-299.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
+<!-- proc~ldl -->
+<g id="call~~graph~~CallGraph_node2" class="node"><title>proc~ldl</title>
+<g id="a_call~~graph~~CallGraph_node2"><a xlink:href=".././proc/ldl.html" xlink:title="ldl">
+<polygon fill="#d9534f" stroke="#d9534f" points="256.5,-558 202.5,-558 202.5,-534 256.5,-534 256.5,-558"/>
+<text text-anchor="middle" x="229.5" y="-543.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldl</text>
+</a>
+</g>
+</g>
+<!-- proc~initialize_slsqp -->
+<g id="call~~graph~~CallGraph_node3" class="node"><title>proc~initialize_slsqp</title>
+<g id="a_call~~graph~~CallGraph_node3"><a xlink:href=".././proc/initialize_slsqp.html" xlink:title="initialize_slsqp">
+<polygon fill="#d9534f" stroke="#d9534f" points="102.5,-558 16.5,-558 16.5,-534 102.5,-534 102.5,-558"/>
+<text text-anchor="middle" x="59.5" y="-543.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">initialize_slsqp</text>
 </a>
 </g>
 </g>
 <!-- proc~linmin -->
-<g id="call~~graph~~CallGraph_node3" class="node"><title>proc~linmin</title>
-<g id="a_call~~graph~~CallGraph_node3"><a xlink:href="../proc/linmin.html" xlink:title="linmin">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="484,-588 430,-588 430,-564 484,-564 484,-588"/>
-<text text-anchor="middle" x="457" y="-573.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">linmin</text>
+<g id="call~~graph~~CallGraph_node4" class="node"><title>proc~linmin</title>
+<g id="a_call~~graph~~CallGraph_node4"><a xlink:href=".././proc/linmin.html" xlink:title="linmin">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="256.5,-474 202.5,-474 202.5,-450 256.5,-450 256.5,-474"/>
+<text text-anchor="middle" x="229.5" y="-459.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">linmin</text>
 </a>
 </g>
-</g>
-<!-- proc~report_iteration~2 -->
-<g id="call~~graph~~CallGraph_node4" class="node"><title>proc~report_iteration~2</title>
-<g id="a_call~~graph~~CallGraph_node4"><a xlink:href="../proc/report_iteration%7E2.html" xlink:title="report_iteration">
-<polygon fill="#d9534f" stroke="#d9534f" points="105,-489 14,-489 14,-465 105,-465 105,-489"/>
-<text text-anchor="middle" x="59.5" y="-474.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">report_iteration</text>
-</a>
-</g>
-</g>
-<!-- proc~destroy_linmin_data -->
-<g id="call~~graph~~CallGraph_node5" class="node"><title>proc~destroy_linmin_data</title>
-<g id="a_call~~graph~~CallGraph_node5"><a xlink:href="../proc/destroy_linmin_data.html" xlink:title="destroy_linmin_data">
-<polygon fill="#d9534f" stroke="#d9534f" points="117,-531 2,-531 2,-507 117,-507 117,-531"/>
-<text text-anchor="middle" x="59.5" y="-516.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">destroy_linmin_data</text>
-</a>
-</g>
-</g>
-<!-- proc~rosenbrock_func -->
-<g id="call~~graph~~CallGraph_node6" class="node"><title>proc~rosenbrock_func</title>
-<g id="a_call~~graph~~CallGraph_node6"><a xlink:href="../proc/rosenbrock_func.html" xlink:title="rosenbrock_func">
-<polygon fill="#d9534f" stroke="#d9534f" points="279.5,-573 179.5,-573 179.5,-549 279.5,-549 279.5,-573"/>
-<text text-anchor="middle" x="229.5" y="-558.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">rosenbrock_func</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqp -->
-<g id="call~~graph~~CallGraph_node7" class="node"><title>proc~slsqp</title>
-<g id="a_call~~graph~~CallGraph_node7"><a xlink:href="../proc/slsqp.html" xlink:title="slsqp">
-<polygon fill="#d9534f" stroke="#d9534f" points="256.5,-468 202.5,-468 202.5,-444 256.5,-444 256.5,-468"/>
-<text text-anchor="middle" x="229.5" y="-453.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb -->
-<g id="call~~graph~~CallGraph_node19" class="node"><title>proc~slsqpb</title>
-<g id="a_call~~graph~~CallGraph_node19"><a xlink:href="../proc/slsqpb.html" xlink:title="slsqpb">
-<polygon fill="#d9534f" stroke="#d9534f" points="394,-468 340,-468 340,-444 394,-444 394,-468"/>
-<text text-anchor="middle" x="367" y="-453.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqp&#45;&gt;proc~slsqpb -->
-<g id="call~~graph~~CallGraph_edge1" class="edge"><title>proc~slsqp&#45;&gt;proc~slsqpb</title>
-<path fill="none" stroke="#000000" d="M256.626,-456C277.433,-456 306.792,-456 329.855,-456"/>
-<polygon fill="#000000" stroke="#000000" points="329.954,-459.5 339.954,-456 329.954,-452.5 329.954,-459.5"/>
-</g>
-<!-- proc~initialize_slsqp -->
-<g id="call~~graph~~CallGraph_node8" class="node"><title>proc~initialize_slsqp</title>
-<g id="a_call~~graph~~CallGraph_node8"><a xlink:href="../proc/initialize_slsqp.html" xlink:title="initialize_slsqp">
-<polygon fill="#d9534f" stroke="#d9534f" points="102.5,-615 16.5,-615 16.5,-591 102.5,-591 102.5,-615"/>
-<text text-anchor="middle" x="59.5" y="-600.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">initialize_slsqp</text>
-</a>
-</g>
-</g>
-<!-- proc~diff -->
-<g id="call~~graph~~CallGraph_node9" class="node"><title>proc~diff</title>
-<g id="a_call~~graph~~CallGraph_node9"><a xlink:href="../proc/diff.html" xlink:title="diff">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="1041,-376 987,-376 987,-352 1041,-352 1041,-376"/>
-<text text-anchor="middle" x="1014" y="-361.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
-</a>
-</g>
-</g>
-<!-- proc~nnls -->
-<g id="call~~graph~~CallGraph_node10" class="node"><title>proc~nnls</title>
-<g id="a_call~~graph~~CallGraph_node10"><a xlink:href="../proc/nnls.html" xlink:title="nnls">
-<polygon fill="#d9534f" stroke="#d9534f" points="951,-356 897,-356 897,-332 951,-332 951,-356"/>
-<text text-anchor="middle" x="924" y="-341.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
-</a>
-</g>
-</g>
-<!-- proc~nnls&#45;&gt;proc~diff -->
-<g id="call~~graph~~CallGraph_edge3" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M951.403,-350.001C959.481,-351.837 968.507,-353.888 977.105,-355.842"/>
-<polygon fill="#000000" stroke="#000000" points="976.392,-359.269 986.919,-358.072 977.943,-352.443 976.392,-359.269"/>
-</g>
-<!-- proc~g1 -->
-<g id="call~~graph~~CallGraph_node11" class="node"><title>proc~g1</title>
-<g id="a_call~~graph~~CallGraph_node11"><a xlink:href="../proc/g1.html" xlink:title="g1">
-<polygon fill="#d9534f" stroke="#d9534f" points="1041,-334 987,-334 987,-310 1041,-310 1041,-334"/>
-<text text-anchor="middle" x="1014" y="-319.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
-</a>
-</g>
-</g>
-<!-- proc~nnls&#45;&gt;proc~g1 -->
-<g id="call~~graph~~CallGraph_edge4" class="edge"><title>proc~nnls&#45;&gt;proc~g1</title>
-<path fill="none" stroke="#000000" d="M951.403,-337.399C959.481,-335.38 968.507,-333.123 977.105,-330.974"/>
-<polygon fill="#000000" stroke="#000000" points="978.066,-334.341 986.919,-328.52 976.369,-327.55 978.066,-334.341"/>
-</g>
-<!-- proc~h12 -->
-<g id="call~~graph~~CallGraph_node36" class="node"><title>proc~h12</title>
-<g id="a_call~~graph~~CallGraph_node36"><a xlink:href="../proc/h12.html" xlink:title="h12">
-<polygon fill="#d9534f" stroke="#d9534f" points="1041,-252 987,-252 987,-228 1041,-228 1041,-252"/>
-<text text-anchor="middle" x="1014" y="-237.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
-</a>
-</g>
-</g>
-<!-- proc~nnls&#45;&gt;proc~h12 -->
-<g id="call~~graph~~CallGraph_edge2" class="edge"><title>proc~nnls&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M941.223,-331.94C944.593,-329.153 948.022,-326.093 951,-323 969.803,-303.471 987.958,-278.166 999.709,-260.656"/>
-<polygon fill="#000000" stroke="#000000" points="1002.65,-262.555 1005.24,-252.282 996.808,-258.698 1002.65,-262.555"/>
-</g>
-<!-- proc~ldl -->
-<g id="call~~graph~~CallGraph_node12" class="node"><title>proc~ldl</title>
-<g id="a_call~~graph~~CallGraph_node12"><a xlink:href="../proc/ldl.html" xlink:title="ldl">
-<polygon fill="#d9534f" stroke="#d9534f" points="484,-546 430,-546 430,-522 484,-522 484,-546"/>
-<text text-anchor="middle" x="457" y="-531.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldl</text>
-</a>
-</g>
-</g>
-<!-- proc~test_func -->
-<g id="call~~graph~~CallGraph_node13" class="node"><title>proc~test_func</title>
-<g id="a_call~~graph~~CallGraph_node13"><a xlink:href="../proc/test_func.html" xlink:title="test_func">
-<polygon fill="#d9534f" stroke="#d9534f" points="90,-657 29,-657 29,-633 90,-633 90,-657"/>
-<text text-anchor="middle" x="59.5" y="-642.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_func</text>
-</a>
-</g>
-</g>
-<!-- proc~rosenbrock_grad -->
-<g id="call~~graph~~CallGraph_node14" class="node"><title>proc~rosenbrock_grad</title>
-<g id="a_call~~graph~~CallGraph_node14"><a xlink:href="../proc/rosenbrock_grad.html" xlink:title="rosenbrock_grad">
-<polygon fill="#d9534f" stroke="#d9534f" points="109.5,-699 9.5,-699 9.5,-675 109.5,-675 109.5,-699"/>
-<text text-anchor="middle" x="59.5" y="-684.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">rosenbrock_grad</text>
-</a>
-</g>
-</g>
-<!-- proc~destroy_slsqp -->
-<g id="call~~graph~~CallGraph_node15" class="node"><title>proc~destroy_slsqp</title>
-<g id="a_call~~graph~~CallGraph_node15"><a xlink:href="../proc/destroy_slsqp.html" xlink:title="destroy_slsqp">
-<polygon fill="#d9534f" stroke="#d9534f" points="102,-741 17,-741 17,-717 102,-717 102,-741"/>
-<text text-anchor="middle" x="59.5" y="-726.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">destroy_slsqp</text>
-</a>
-</g>
-</g>
-<!-- proc~report_iteration~3 -->
-<g id="call~~graph~~CallGraph_node16" class="node"><title>proc~report_iteration~3</title>
-<g id="a_call~~graph~~CallGraph_node16"><a xlink:href="../proc/report_iteration%7E3.html" xlink:title="report_iteration">
-<polygon fill="#d9534f" stroke="#d9534f" points="105,-783 14,-783 14,-759 105,-759 105,-783"/>
-<text text-anchor="middle" x="59.5" y="-768.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">report_iteration</text>
-</a>
-</g>
-</g>
-<!-- proc~test_grad -->
-<g id="call~~graph~~CallGraph_node17" class="node"><title>proc~test_grad</title>
-<g id="a_call~~graph~~CallGraph_node17"><a xlink:href="../proc/test_grad.html" xlink:title="test_grad">
-<polygon fill="#d9534f" stroke="#d9534f" points="90,-825 29,-825 29,-801 90,-801 90,-825"/>
-<text text-anchor="middle" x="59.5" y="-810.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">test_grad</text>
-</a>
-</g>
-</g>
-<!-- proc~func -->
-<g id="call~~graph~~CallGraph_node18" class="node"><title>proc~func</title>
-<g id="a_call~~graph~~CallGraph_node18"><a xlink:href="../proc/func.html" xlink:title="func">
-<polygon fill="#d9534f" stroke="#d9534f" points="86.5,-867 32.5,-867 32.5,-843 86.5,-843 86.5,-867"/>
-<text text-anchor="middle" x="59.5" y="-852.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">func</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~daxpy -->
-<g id="call~~graph~~CallGraph_edge7" class="edge"><title>proc~slsqpb&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M394.195,-457.886C440.412,-460.37 538.923,-461.863 617,-437 710.835,-407.119 714.826,-357.669 807,-323 832.748,-313.315 863.437,-308.011 886.78,-305.158"/>
-<polygon fill="#000000" stroke="#000000" points="887.399,-308.61 896.944,-304.012 886.615,-301.654 887.399,-308.61"/>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~linmin -->
-<g id="call~~graph~~CallGraph_edge5" class="edge"><title>proc~slsqpb&#45;&gt;proc~linmin</title>
-<path fill="none" stroke="#000000" d="M373.918,-468.144C383.814,-487.728 405.108,-526.929 430,-555 430.606,-555.684 431.236,-556.363 431.885,-557.035"/>
-<polygon fill="#000000" stroke="#000000" points="429.588,-559.678 439.309,-563.893 434.338,-554.537 429.588,-559.678"/>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~ldl -->
-<g id="call~~graph~~CallGraph_edge11" class="edge"><title>proc~slsqpb&#45;&gt;proc~ldl</title>
-<path fill="none" stroke="#000000" d="M381.75,-468.188C395.957,-480.78 418.32,-500.602 434.794,-515.204"/>
-<polygon fill="#000000" stroke="#000000" points="432.541,-517.884 442.347,-521.898 437.185,-512.646 432.541,-517.884"/>
-</g>
-<!-- proc~dscal -->
-<g id="call~~graph~~CallGraph_node37" class="node"><title>proc~dscal</title>
-<g id="a_call~~graph~~CallGraph_node37"><a xlink:href="../proc/dscal.html" xlink:title="dscal">
-<polygon fill="#d9534f" stroke="#d9534f" points="595.5,-428 541.5,-428 541.5,-404 595.5,-404 595.5,-428"/>
-<text text-anchor="middle" x="568.5" y="-413.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dscal</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~dscal -->
-<g id="call~~graph~~CallGraph_edge9" class="edge"><title>proc~slsqpb&#45;&gt;proc~dscal</title>
-<path fill="none" stroke="#000000" d="M394.202,-449.869C405.234,-447.343 418.223,-444.442 430,-442 464.277,-434.892 503.529,-427.548 531.297,-422.486"/>
-<polygon fill="#000000" stroke="#000000" points="532.128,-425.893 541.342,-420.663 530.878,-419.005 532.128,-425.893"/>
-</g>
-<!-- proc~lsq -->
-<g id="call~~graph~~CallGraph_node38" class="node"><title>proc~lsq</title>
-<g id="a_call~~graph~~CallGraph_node38"><a xlink:href="../proc/lsq.html" xlink:title="lsq">
-<polygon fill="#d9534f" stroke="#d9534f" points="484,-333 430,-333 430,-309 484,-309 484,-333"/>
-<text text-anchor="middle" x="457" y="-318.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~lsq -->
-<g id="call~~graph~~CallGraph_edge12" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
-<path fill="none" stroke="#000000" d="M376.121,-443.542C391.259,-420.318 423.93,-370.199 442.457,-341.777"/>
-<polygon fill="#000000" stroke="#000000" points="445.623,-343.328 448.152,-333.04 439.759,-339.506 445.623,-343.328"/>
-</g>
-<!-- proc~dcopy -->
-<g id="call~~graph~~CallGraph_node39" class="node"><title>proc~dcopy</title>
-<g id="a_call~~graph~~CallGraph_node39"><a xlink:href="../proc/dcopy.html" xlink:title="dcopy">
-<polygon fill="#d9534f" stroke="#d9534f" points="951,-513 897,-513 897,-489 951,-489 951,-513"/>
-<text text-anchor="middle" x="924" y="-498.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~dcopy -->
-<g id="call~~graph~~CallGraph_edge6" class="edge"><title>proc~slsqpb&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M369.417,-468.242C373.35,-496.157 387.111,-564.603 430,-597 479.227,-634.184 505.808,-616 567.5,-616 567.5,-616 567.5,-616 713,-616 791.503,-616 868.47,-553.411 903.442,-520.581"/>
-<polygon fill="#000000" stroke="#000000" points="906.231,-522.756 911.022,-513.307 901.384,-517.706 906.231,-522.756"/>
-</g>
-<!-- proc~check_convergence -->
-<g id="call~~graph~~CallGraph_node40" class="node"><title>proc~check_convergence</title>
-<g id="a_call~~graph~~CallGraph_node40"><a xlink:href="../proc/check_convergence.html" xlink:title="check_convergence">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="771,-508 653,-508 653,-484 771,-484 771,-508"/>
-<text text-anchor="middle" x="712" y="-493.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">check_convergence</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~check_convergence -->
-<g id="call~~graph~~CallGraph_edge8" class="edge"><title>proc~slsqpb&#45;&gt;proc~check_convergence</title>
-<path fill="none" stroke="#000000" d="M394.1,-462.685C405.117,-465.3 418.12,-468.117 430,-470 502.239,-481.448 585.783,-488.386 642.882,-492.181"/>
-<polygon fill="#000000" stroke="#000000" points="642.667,-495.674 652.873,-492.831 643.121,-488.689 642.667,-495.674"/>
 </g>
 <!-- proc~enforce_bounds -->
-<g id="call~~graph~~CallGraph_node41" class="node"><title>proc~enforce_bounds</title>
-<g id="a_call~~graph~~CallGraph_node41"><a xlink:href="../proc/enforce_bounds.html" xlink:title="enforce_bounds">
-<polygon fill="#d9534f" stroke="#d9534f" points="617,-52 520,-52 520,-28 617,-28 617,-52"/>
-<text text-anchor="middle" x="568.5" y="-37.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">enforce_bounds</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~enforce_bounds -->
-<g id="call~~graph~~CallGraph_edge13" class="edge"><title>proc~slsqpb&#45;&gt;proc~enforce_bounds</title>
-<path fill="none" stroke="#000000" d="M369.645,-443.953C377.25,-392.4 413.287,-187.473 520,-66 522.647,-62.9873 525.73,-60.2567 529.031,-57.7978"/>
-<polygon fill="#000000" stroke="#000000" points="531.094,-60.6315 537.561,-52.2396 527.272,-54.7668 531.094,-60.6315"/>
-</g>
-<!-- proc~ddot -->
-<g id="call~~graph~~CallGraph_node42" class="node"><title>proc~ddot</title>
-<g id="a_call~~graph~~CallGraph_node42"><a xlink:href="../proc/ddot.html" xlink:title="ddot">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="951,-86 897,-86 897,-62 951,-62 951,-86"/>
-<text text-anchor="middle" x="924" y="-71.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~ddot -->
-<g id="call~~graph~~CallGraph_edge10" class="edge"><title>proc~slsqpb&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M367.625,-443.803C366.076,-371.286 367.889,-0 567.5,-0 567.5,-0 567.5,-0 713,-0 781.023,-0 797.976,-13.4036 861,-39 872.869,-43.8205 885.29,-50.4744 895.87,-56.6871"/>
-<polygon fill="#000000" stroke="#000000" points="894.264,-59.8057 904.634,-61.976 897.88,-53.8125 894.264,-59.8057"/>
-</g>
-<!-- proc~report_iteration~4 -->
-<g id="call~~graph~~CallGraph_node20" class="node"><title>proc~report_iteration~4</title>
-<g id="a_call~~graph~~CallGraph_node20"><a xlink:href="../proc/report_iteration%7E4.html" xlink:title="report_iteration">
-<polygon fill="#d9534f" stroke="#d9534f" points="105,-909 14,-909 14,-885 105,-885 105,-909"/>
-<text text-anchor="middle" x="59.5" y="-894.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">report_iteration</text>
-</a>
-</g>
-</g>
-<!-- proc~rosenbrock_func~2 -->
-<g id="call~~graph~~CallGraph_node21" class="node"><title>proc~rosenbrock_func~2</title>
-<g id="a_call~~graph~~CallGraph_node21"><a xlink:href="../proc/rosenbrock_func%7E2.html" xlink:title="rosenbrock_func">
-<polygon fill="#d9534f" stroke="#d9534f" points="109.5,-951 9.5,-951 9.5,-927 109.5,-927 109.5,-951"/>
-<text text-anchor="middle" x="59.5" y="-936.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">rosenbrock_func</text>
-</a>
-</g>
-</g>
-<!-- proc~dnrm2 -->
-<g id="call~~graph~~CallGraph_node22" class="node"><title>proc~dnrm2</title>
-<g id="a_call~~graph~~CallGraph_node22"><a xlink:href="../proc/dnrm2.html" xlink:title="dnrm2">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="951,-436 897,-436 897,-412 951,-412 951,-436"/>
-<text text-anchor="middle" x="924" y="-421.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
+<g id="call~~graph~~CallGraph_node5" class="node"><title>proc~enforce_bounds</title>
+<g id="a_call~~graph~~CallGraph_node5"><a xlink:href=".././proc/enforce_bounds.html" xlink:title="enforce_bounds">
+<polygon fill="#d9534f" stroke="#d9534f" points="437,-599 340,-599 340,-575 437,-575 437,-599"/>
+<text text-anchor="middle" x="388.5" y="-584.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">enforce_bounds</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqp_wrapper -->
-<g id="call~~graph~~CallGraph_node23" class="node"><title>proc~slsqp_wrapper</title>
-<g id="a_call~~graph~~CallGraph_node23"><a xlink:href="../proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
-<polygon fill="#d9534f" stroke="#d9534f" points="103.5,-447 15.5,-447 15.5,-423 103.5,-423 103.5,-447"/>
-<text text-anchor="middle" x="59.5" y="-432.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
+<g id="call~~graph~~CallGraph_node6" class="node"><title>proc~slsqp_wrapper</title>
+<g id="a_call~~graph~~CallGraph_node6"><a xlink:href=".././proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
+<polygon fill="#d9534f" stroke="#d9534f" points="103.5,-45 15.5,-45 15.5,-21 103.5,-21 103.5,-45"/>
+<text text-anchor="middle" x="59.5" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
-<g id="call~~graph~~CallGraph_edge14" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
-<path fill="none" stroke="#000000" d="M103.764,-440.408C131.108,-443.826 166.05,-448.194 191.991,-451.436"/>
-<polygon fill="#000000" stroke="#000000" points="191.801,-454.94 202.158,-452.707 192.669,-447.994 191.801,-454.94"/>
+<g id="call~~graph~~CallGraph_edge2" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
+<path fill="none" stroke="#000000" d="M103.764,-38.408C131.108,-41.826 166.05,-46.1937 191.991,-49.4364"/>
+<polygon fill="#000000" stroke="#000000" points="191.801,-52.9397 202.158,-50.7072 192.669,-45.9938 191.801,-52.9397"/>
 </g>
 <!-- proc~mode_to_status_message -->
-<g id="call~~graph~~CallGraph_node28" class="node"><title>proc~mode_to_status_message</title>
-<g id="a_call~~graph~~CallGraph_node28"><a xlink:href="../proc/mode_to_status_message.html" xlink:title="mode_to_status_message">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="304,-426 155,-426 155,-402 304,-402 304,-426"/>
-<text text-anchor="middle" x="229.5" y="-411.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mode_to_status_message</text>
+<g id="call~~graph~~CallGraph_node20" class="node"><title>proc~mode_to_status_message</title>
+<g id="a_call~~graph~~CallGraph_node20"><a xlink:href=".././proc/mode_to_status_message.html" xlink:title="mode_to_status_message">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="304,-24 155,-24 155,-0 304,-0 304,-24"/>
+<text text-anchor="middle" x="229.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">mode_to_status_message</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~mode_to_status_message -->
-<g id="call~~graph~~CallGraph_edge15" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~mode_to_status_message</title>
-<path fill="none" stroke="#000000" d="M103.764,-429.592C116.281,-428.027 130.391,-426.264 144.5,-424.5"/>
-<polygon fill="#000000" stroke="#000000" points="145.263,-427.932 154.752,-423.219 144.395,-420.986 145.263,-427.932"/>
-</g>
-<!-- proc~lsi -->
-<g id="call~~graph~~CallGraph_node24" class="node"><title>proc~lsi</title>
-<g id="a_call~~graph~~CallGraph_node24"><a xlink:href="../proc/lsi.html" xlink:title="lsi">
-<polygon fill="#d9534f" stroke="#d9534f" points="739,-278 685,-278 685,-254 739,-254 739,-278"/>
-<text text-anchor="middle" x="712" y="-263.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
-</a>
-</g>
-</g>
-<!-- proc~lsi&#45;&gt;proc~daxpy -->
-<g id="call~~graph~~CallGraph_edge17" class="edge"><title>proc~lsi&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M739.241,-270.008C768.857,-274.59 818.457,-282.435 861,-290 869.365,-291.487 878.346,-293.174 886.805,-294.803"/>
-<polygon fill="#000000" stroke="#000000" points="886.303,-298.27 896.787,-296.743 887.639,-291.399 886.303,-298.27"/>
-</g>
-<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
-<g id="call~~graph~~CallGraph_edge19" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M722.315,-278.246C738.054,-298.324 771.665,-338.641 807,-365 831.831,-383.523 863.338,-399.129 887.248,-409.629"/>
-<polygon fill="#000000" stroke="#000000" points="886.091,-412.941 896.661,-413.673 888.854,-406.51 886.091,-412.941"/>
-</g>
-<!-- proc~ldp -->
-<g id="call~~graph~~CallGraph_node29" class="node"><title>proc~ldp</title>
-<g id="a_call~~graph~~CallGraph_node29"><a xlink:href="../proc/ldp.html" xlink:title="ldp">
-<polygon fill="#d9534f" stroke="#d9534f" points="861,-356 807,-356 807,-332 861,-332 861,-356"/>
-<text text-anchor="middle" x="834" y="-341.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
-</a>
-</g>
-</g>
-<!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="call~~graph~~CallGraph_edge20" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
-<path fill="none" stroke="#000000" d="M731.487,-278.017C751.337,-290.919 783.076,-311.549 805.779,-326.307"/>
-<polygon fill="#000000" stroke="#000000" points="804.002,-329.326 814.294,-331.841 807.817,-323.457 804.002,-329.326"/>
-</g>
-<!-- proc~lsi&#45;&gt;proc~h12 -->
-<g id="call~~graph~~CallGraph_edge16" class="edge"><title>proc~lsi&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M739.072,-260.95C774.61,-254.347 840.326,-243.136 897,-239 920.936,-237.253 927.001,-238.806 951,-239 959.25,-239.067 968.118,-239.183 976.493,-239.313"/>
-<polygon fill="#000000" stroke="#000000" points="976.699,-242.817 986.755,-239.483 976.815,-235.818 976.699,-242.817"/>
-</g>
-<!-- proc~lsi&#45;&gt;proc~ddot -->
-<g id="call~~graph~~CallGraph_edge18" class="edge"><title>proc~lsi&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M726.136,-253.99C761.566,-221.597 859.304,-132.236 902.274,-92.9493"/>
-<polygon fill="#000000" stroke="#000000" points="904.85,-95.3368 909.869,-86.0059 900.127,-90.1705 904.85,-95.3368"/>
+<g id="call~~graph~~CallGraph_edge1" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~mode_to_status_message</title>
+<path fill="none" stroke="#000000" d="M103.764,-27.592C116.281,-26.0273 130.391,-24.2636 144.5,-22.4999"/>
+<polygon fill="#000000" stroke="#000000" points="145.263,-25.9319 154.752,-21.2185 144.395,-18.986 145.263,-25.9319"/>
 </g>
 <!-- proc~destroy_slsqpb_data -->
-<g id="call~~graph~~CallGraph_node25" class="node"><title>proc~destroy_slsqpb_data</title>
-<g id="a_call~~graph~~CallGraph_node25"><a xlink:href="../proc/destroy_slsqpb_data.html" xlink:title="destroy_slsqpb_data">
-<polygon fill="#d9534f" stroke="#d9534f" points="119,-993 0,-993 0,-969 119,-969 119,-993"/>
-<text text-anchor="middle" x="59.5" y="-978.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">destroy_slsqpb_data</text>
+<g id="call~~graph~~CallGraph_node7" class="node"><title>proc~destroy_slsqpb_data</title>
+<g id="a_call~~graph~~CallGraph_node7"><a xlink:href=".././proc/destroy_slsqpb_data.html" xlink:title="destroy_slsqpb_data">
+<polygon fill="#d9534f" stroke="#d9534f" points="119,-600 0,-600 0,-576 119,-576 119,-600"/>
+<text text-anchor="middle" x="59.5" y="-585.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">destroy_slsqpb_data</text>
 </a>
 </g>
 </g>
 <!-- proc~report_message -->
-<g id="call~~graph~~CallGraph_node26" class="node"><title>proc~report_message</title>
-<g id="a_call~~graph~~CallGraph_node26"><a xlink:href="../proc/report_message.html" xlink:title="report_message">
-<polygon fill="#d9534f" stroke="#d9534f" points="108,-1035 11,-1035 11,-1011 108,-1011 108,-1035"/>
-<text text-anchor="middle" x="59.5" y="-1020.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">report_message</text>
+<g id="call~~graph~~CallGraph_node8" class="node"><title>proc~report_message</title>
+<g id="a_call~~graph~~CallGraph_node8"><a xlink:href=".././proc/report_message.html" xlink:title="report_message">
+<polygon fill="#d9534f" stroke="#d9534f" points="108,-642 11,-642 11,-618 108,-618 108,-642"/>
+<text text-anchor="middle" x="59.5" y="-627.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">report_message</text>
 </a>
 </g>
 </g>
-<!-- proc~report_iteration~5 -->
-<g id="call~~graph~~CallGraph_node27" class="node"><title>proc~report_iteration~5</title>
-<g id="a_call~~graph~~CallGraph_node27"><a xlink:href="../proc/report_iteration%7E5.html" xlink:title="report_iteration">
-<polygon fill="#d9534f" stroke="#d9534f" points="105,-1077 14,-1077 14,-1053 105,-1053 105,-1077"/>
-<text text-anchor="middle" x="59.5" y="-1062.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">report_iteration</text>
+<!-- proc~check_convergence -->
+<g id="call~~graph~~CallGraph_node9" class="node"><title>proc~check_convergence</title>
+<g id="a_call~~graph~~CallGraph_node9"><a xlink:href=".././proc/check_convergence.html" xlink:title="check_convergence">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="288.5,-314 170.5,-314 170.5,-290 288.5,-290 288.5,-314"/>
+<text text-anchor="middle" x="229.5" y="-299.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">check_convergence</text>
 </a>
 </g>
 </g>
-<!-- proc~ldp&#45;&gt;proc~daxpy -->
-<g id="call~~graph~~CallGraph_edge22" class="edge"><title>proc~ldp&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M860.453,-331.852C869.21,-327.673 879.165,-322.921 888.518,-318.457"/>
-<polygon fill="#000000" stroke="#000000" points="890.087,-321.587 897.604,-314.121 887.072,-315.27 890.087,-321.587"/>
-</g>
-<!-- proc~ldp&#45;&gt;proc~diff -->
-<g id="call~~graph~~CallGraph_edge26" class="edge"><title>proc~ldp&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M861.064,-354.94C871.963,-358.955 884.89,-363.005 897,-365 923.366,-369.344 953.561,-368.917 976.534,-367.497"/>
-<polygon fill="#000000" stroke="#000000" points="976.814,-370.986 986.541,-366.788 976.319,-364.003 976.814,-370.986"/>
-</g>
-<!-- proc~ldp&#45;&gt;proc~nnls -->
-<g id="call~~graph~~CallGraph_edge25" class="edge"><title>proc~ldp&#45;&gt;proc~nnls</title>
-<path fill="none" stroke="#000000" d="M861.403,-344C869.393,-344 878.311,-344 886.824,-344"/>
-<polygon fill="#000000" stroke="#000000" points="886.919,-347.5 896.919,-344 886.919,-340.5 886.919,-347.5"/>
-</g>
-<!-- proc~ldp&#45;&gt;proc~dnrm2 -->
-<g id="call~~graph~~CallGraph_edge23" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M848.365,-356.15C862.662,-369.147 885.525,-389.932 902.183,-405.075"/>
-<polygon fill="#000000" stroke="#000000" points="900.043,-407.861 909.797,-411.998 904.752,-402.681 900.043,-407.861"/>
-</g>
-<!-- proc~ldp&#45;&gt;proc~dcopy -->
-<g id="call~~graph~~CallGraph_edge21" class="edge"><title>proc~ldp&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M841.759,-356.059C856.631,-382.592 892.354,-446.324 911.083,-479.739"/>
-<polygon fill="#000000" stroke="#000000" points="908.154,-481.672 916.097,-488.684 914.26,-478.249 908.154,-481.672"/>
-</g>
-<!-- proc~ldp&#45;&gt;proc~ddot -->
-<g id="call~~graph~~CallGraph_edge24" class="edge"><title>proc~ldp&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M839.01,-331.697C852.785,-289.432 898.292,-149.809 915.929,-95.6951"/>
-<polygon fill="#000000" stroke="#000000" points="919.296,-96.659 919.067,-86.0666 912.641,-94.4898 919.296,-96.659"/>
-</g>
-<!-- proc~rosenbrock_func~3 -->
-<g id="call~~graph~~CallGraph_node30" class="node"><title>proc~rosenbrock_func~3</title>
-<g id="a_call~~graph~~CallGraph_node30"><a xlink:href="../proc/rosenbrock_func%7E3.html" xlink:title="rosenbrock_func">
-<polygon fill="#d9534f" stroke="#d9534f" points="109.5,-1119 9.5,-1119 9.5,-1095 109.5,-1095 109.5,-1119"/>
-<text text-anchor="middle" x="59.5" y="-1104.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">rosenbrock_func</text>
+<!-- proc~dnrm2 -->
+<g id="call~~graph~~CallGraph_node19" class="node"><title>proc~dnrm2</title>
+<g id="a_call~~graph~~CallGraph_node19"><a xlink:href=".././proc/dnrm2.html" xlink:title="dnrm2">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="415.5,-272 361.5,-272 361.5,-248 415.5,-248 415.5,-272"/>
+<text text-anchor="middle" x="388.5" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
 </a>
 </g>
-</g>
-<!-- proc~stop_iterations -->
-<g id="call~~graph~~CallGraph_node31" class="node"><title>proc~stop_iterations</title>
-<g id="a_call~~graph~~CallGraph_node31"><a xlink:href="../proc/stop_iterations.html" xlink:title="stop_iterations">
-<polygon fill="#d9534f" stroke="#d9534f" points="104,-1161 15,-1161 15,-1137 104,-1137 104,-1161"/>
-<text text-anchor="middle" x="59.5" y="-1146.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stop_iterations</text>
-</a>
-</g>
-</g>
-<!-- proc~report_iteration -->
-<g id="call~~graph~~CallGraph_node32" class="node"><title>proc~report_iteration</title>
-<g id="a_call~~graph~~CallGraph_node32"><a xlink:href="../proc/report_iteration.html" xlink:title="report_iteration">
-<polygon fill="#d9534f" stroke="#d9534f" points="105,-1203 14,-1203 14,-1179 105,-1179 105,-1203"/>
-<text text-anchor="middle" x="59.5" y="-1188.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">report_iteration</text>
-</a>
-</g>
-</g>
-<!-- proc~lsei -->
-<g id="call~~graph~~CallGraph_node33" class="node"><title>proc~lsei</title>
-<g id="a_call~~graph~~CallGraph_node33"><a xlink:href="../proc/lsei.html" xlink:title="lsei">
-<polygon fill="#d9534f" stroke="#d9534f" points="595.5,-278 541.5,-278 541.5,-254 595.5,-254 595.5,-278"/>
-<text text-anchor="middle" x="568.5" y="-263.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
-</a>
-</g>
-</g>
-<!-- proc~lsei&#45;&gt;proc~dnrm2 -->
-<g id="call~~graph~~CallGraph_edge28" class="edge"><title>proc~lsei&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M587.804,-278.054C626.653,-303.151 720.861,-361.463 807,-395 832.834,-405.058 863.282,-412.514 886.5,-417.346"/>
-<polygon fill="#000000" stroke="#000000" points="886.123,-420.84 896.617,-419.381 887.503,-413.977 886.123,-420.84"/>
-</g>
-<!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="call~~graph~~CallGraph_edge32" class="edge"><title>proc~lsei&#45;&gt;proc~lsi</title>
-<path fill="none" stroke="#000000" d="M595.783,-266C618.022,-266 650.118,-266 674.789,-266"/>
-<polygon fill="#000000" stroke="#000000" points="674.857,-269.5 684.857,-266 674.857,-262.5 674.857,-269.5"/>
-</g>
-<!-- proc~lsei&#45;&gt;proc~h12 -->
-<g id="call~~graph~~CallGraph_edge31" class="edge"><title>proc~lsei&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M595.614,-254.46C611.79,-247.939 633.191,-240.426 653,-237 769.972,-216.772 911.531,-228.21 976.811,-235.461"/>
-<polygon fill="#000000" stroke="#000000" points="976.654,-238.966 986.987,-236.627 977.451,-232.011 976.654,-238.966"/>
-</g>
-<!-- proc~lsei&#45;&gt;proc~dcopy -->
-<g id="call~~graph~~CallGraph_edge27" class="edge"><title>proc~lsei&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M577.527,-278.062C591.153,-297.825 620.509,-337.456 653,-363 728.386,-422.269 833.197,-467.064 887.387,-487.973"/>
-<polygon fill="#000000" stroke="#000000" points="886.307,-491.307 896.897,-491.598 888.799,-484.766 886.307,-491.307"/>
-</g>
-<!-- proc~lsei&#45;&gt;proc~ddot -->
-<g id="call~~graph~~CallGraph_edge30" class="edge"><title>proc~lsei&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M571.536,-253.773C577.512,-222.154 598.166,-137.544 653,-100 724,-51.3873 831.2,-58.9247 886.751,-67.2225"/>
-<polygon fill="#000000" stroke="#000000" points="886.4,-70.7104 896.825,-68.8215 887.497,-63.797 886.4,-70.7104"/>
-</g>
-<!-- proc~hfti -->
-<g id="call~~graph~~CallGraph_node43" class="node"><title>proc~hfti</title>
-<g id="a_call~~graph~~CallGraph_node43"><a xlink:href="../proc/hfti.html" xlink:title="hfti">
-<polygon fill="#d9534f" stroke="#d9534f" points="951,-272 897,-272 897,-248 951,-248 951,-272"/>
-<text text-anchor="middle" x="924" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">hfti</text>
-</a>
-</g>
-</g>
-<!-- proc~lsei&#45;&gt;proc~hfti -->
-<g id="call~~graph~~CallGraph_edge29" class="edge"><title>proc~lsei&#45;&gt;proc~hfti</title>
-<path fill="none" stroke="#000000" d="M595.511,-257.699C611.83,-252.932 633.418,-247.425 653,-245 736.254,-234.691 834.832,-246.082 886.779,-253.902"/>
-<polygon fill="#000000" stroke="#000000" points="886.413,-257.387 896.831,-255.459 887.485,-250.469 886.413,-257.387"/>
-</g>
-<!-- proc~rosenbrock_grad~2 -->
-<g id="call~~graph~~CallGraph_node34" class="node"><title>proc~rosenbrock_grad~2</title>
-<g id="a_call~~graph~~CallGraph_node34"><a xlink:href="../proc/rosenbrock_grad%7E2.html" xlink:title="rosenbrock_grad">
-<polygon fill="#d9534f" stroke="#d9534f" points="109.5,-1245 9.5,-1245 9.5,-1221 109.5,-1221 109.5,-1245"/>
-<text text-anchor="middle" x="59.5" y="-1230.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">rosenbrock_grad</text>
-</a>
-</g>
-</g>
-<!-- proc~dummy_grad -->
-<g id="call~~graph~~CallGraph_node35" class="node"><title>proc~dummy_grad</title>
-<g id="a_call~~graph~~CallGraph_node35"><a xlink:href="../proc/dummy_grad.html" xlink:title="dummy_grad">
-<polygon fill="#d9534f" stroke="#d9534f" points="99,-1287 20,-1287 20,-1263 99,-1263 99,-1287"/>
-<text text-anchor="middle" x="59.5" y="-1272.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dummy_grad</text>
-</a>
-</g>
-</g>
-<!-- proc~lsq&#45;&gt;proc~lsei -->
-<g id="call~~graph~~CallGraph_edge35" class="edge"><title>proc~lsq&#45;&gt;proc~lsei</title>
-<path fill="none" stroke="#000000" d="M482.03,-308.93C497.435,-301.193 517.636,-291.046 534.531,-282.56"/>
-<polygon fill="#000000" stroke="#000000" points="536.161,-285.658 543.526,-278.042 533.019,-279.403 536.161,-285.658"/>
-</g>
-<!-- proc~lsq&#45;&gt;proc~dscal -->
-<g id="call~~graph~~CallGraph_edge37" class="edge"><title>proc~lsq&#45;&gt;proc~dscal</title>
-<path fill="none" stroke="#000000" d="M466.826,-333.115C478,-347.86 498.411,-372.903 520,-390 523.851,-393.05 528.108,-395.937 532.446,-398.602"/>
-<polygon fill="#000000" stroke="#000000" points="530.947,-401.778 541.359,-403.74 534.443,-395.714 530.947,-401.778"/>
-</g>
-<!-- proc~lsq&#45;&gt;proc~dcopy -->
-<g id="call~~graph~~CallGraph_edge33" class="edge"><title>proc~lsq&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M484.031,-326.126C519.283,-334.424 581.828,-354.168 617,-395 653.896,-437.833 607.72,-483.151 653,-517 722.186,-568.719 831.355,-537.849 887.322,-516.377"/>
-<polygon fill="#000000" stroke="#000000" points="888.792,-519.559 896.808,-512.631 886.221,-513.049 888.792,-519.559"/>
-</g>
-<!-- proc~lsq&#45;&gt;proc~enforce_bounds -->
-<g id="call~~graph~~CallGraph_edge34" class="edge"><title>proc~lsq&#45;&gt;proc~enforce_bounds</title>
-<path fill="none" stroke="#000000" d="M460.656,-308.9C471.516,-259.599 512.323,-76.0098 520,-66 522.31,-62.9881 525.073,-60.2795 528.088,-57.8535"/>
-<polygon fill="#000000" stroke="#000000" points="530.249,-60.6155 536.522,-52.0773 526.294,-54.84 530.249,-60.6155"/>
-</g>
-<!-- proc~lsq&#45;&gt;proc~ddot -->
-<g id="call~~graph~~CallGraph_edge36" class="edge"><title>proc~lsq&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M462.439,-308.785C479.149,-264.879 542.975,-114.713 653,-59 728.941,-20.5456 832.751,-44.0871 886.858,-61.096"/>
-<polygon fill="#000000" stroke="#000000" points="886.087,-64.5256 896.68,-64.2849 888.249,-57.8677 886.087,-64.5256"/>
 </g>
 <!-- proc~check_convergence&#45;&gt;proc~dnrm2 -->
-<g id="call~~graph~~CallGraph_edge38" class="edge"><title>proc~check_convergence&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M748.149,-483.949C786.628,-470.756 848.012,-449.71 886.873,-436.386"/>
-<polygon fill="#000000" stroke="#000000" points="888.395,-439.565 896.72,-433.01 886.125,-432.943 888.395,-439.565"/>
+<g id="call~~graph~~CallGraph_edge3" class="edge"><title>proc~check_convergence&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M275.49,-289.964C299.535,-283.532 328.743,-275.718 351.304,-269.683"/>
+<polygon fill="#000000" stroke="#000000" points="352.404,-273.012 361.16,-267.046 350.595,-266.25 352.404,-273.012"/>
 </g>
-<!-- proc~hfti&#45;&gt;proc~diff -->
-<g id="call~~graph~~CallGraph_edge40" class="edge"><title>proc~hfti&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M941.773,-272.036C945.035,-274.78 948.281,-277.828 951,-281 971.739,-305.191 966.261,-318.809 987,-343 987.595,-343.694 988.215,-344.382 988.855,-345.062"/>
-<polygon fill="#000000" stroke="#000000" points="986.535,-347.685 996.227,-351.964 991.319,-342.575 986.535,-347.685"/>
-</g>
-<!-- proc~hfti&#45;&gt;proc~h12 -->
-<g id="call~~graph~~CallGraph_edge39" class="edge"><title>proc~hfti&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M951.403,-253.999C959.481,-252.163 968.507,-250.112 977.105,-248.158"/>
-<polygon fill="#000000" stroke="#000000" points="977.943,-251.557 986.919,-245.928 976.392,-244.731 977.943,-251.557"/>
-</g>
-<!-- program~slsqp_test_criterion -->
-<g id="call~~graph~~CallGraph_node44" class="node"><title>program~slsqp_test_criterion</title>
-<g id="a_call~~graph~~CallGraph_node44"><a xlink:href="../program/slsqp_test_criterion.html" xlink:title="slsqp_test_criterion">
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="116,-573 3,-573 3,-549 116,-549 116,-573"/>
-<text text-anchor="middle" x="59.5" y="-558.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_test_criterion</text>
+<!-- proc~hfti -->
+<g id="call~~graph~~CallGraph_node10" class="node"><title>proc~hfti</title>
+<g id="a_call~~graph~~CallGraph_node10"><a xlink:href=".././proc/hfti.html" xlink:title="hfti">
+<polygon fill="#d9534f" stroke="#d9534f" points="256.5,-108 202.5,-108 202.5,-84 256.5,-84 256.5,-108"/>
+<text text-anchor="middle" x="229.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">hfti</text>
 </a>
 </g>
 </g>
-<!-- program~slsqp_test_criterion&#45;&gt;proc~rosenbrock_func -->
-<g id="call~~graph~~CallGraph_edge41" class="edge"><title>program~slsqp_test_criterion&#45;&gt;proc~rosenbrock_func</title>
-<path fill="none" stroke="#000000" d="M116.442,-561C133.278,-561 151.814,-561 168.88,-561"/>
-<polygon fill="#000000" stroke="#000000" points="169.288,-564.5 179.288,-561 169.288,-557.5 169.288,-564.5"/>
+<!-- proc~diff -->
+<g id="call~~graph~~CallGraph_node28" class="node"><title>proc~diff</title>
+<g id="a_call~~graph~~CallGraph_node28"><a xlink:href=".././proc/diff.html" xlink:title="diff">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="415.5,-150 361.5,-150 361.5,-126 415.5,-126 415.5,-150"/>
+<text text-anchor="middle" x="388.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
+</a>
+</g>
+</g>
+<!-- proc~hfti&#45;&gt;proc~diff -->
+<g id="call~~graph~~CallGraph_edge4" class="edge"><title>proc~hfti&#45;&gt;proc~diff</title>
+<path fill="none" stroke="#000000" d="M256.778,-103.03C282.781,-109.986 322.775,-120.685 351.678,-128.417"/>
+<polygon fill="#000000" stroke="#000000" points="350.833,-131.814 361.398,-131.017 352.642,-125.052 350.833,-131.814"/>
+</g>
+<!-- proc~destroy_slsqp -->
+<g id="call~~graph~~CallGraph_node11" class="node"><title>proc~destroy_slsqp</title>
+<g id="a_call~~graph~~CallGraph_node11"><a xlink:href=".././proc/destroy_slsqp.html" xlink:title="destroy_slsqp">
+<polygon fill="#d9534f" stroke="#d9534f" points="102,-684 17,-684 17,-660 102,-660 102,-684"/>
+<text text-anchor="middle" x="59.5" y="-669.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">destroy_slsqp</text>
+</a>
+</g>
+</g>
+<!-- proc~g1 -->
+<g id="call~~graph~~CallGraph_node12" class="node"><title>proc~g1</title>
+<g id="a_call~~graph~~CallGraph_node12"><a xlink:href=".././proc/g1.html" xlink:title="g1">
+<polygon fill="#d9534f" stroke="#d9534f" points="86.5,-726 32.5,-726 32.5,-702 86.5,-702 86.5,-726"/>
+<text text-anchor="middle" x="59.5" y="-711.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp -->
+<g id="call~~graph~~CallGraph_node13" class="node"><title>proc~ldp</title>
+<g id="a_call~~graph~~CallGraph_node13"><a xlink:href=".././proc/ldp.html" xlink:title="ldp">
+<polygon fill="#d9534f" stroke="#d9534f" points="256.5,-230 202.5,-230 202.5,-206 256.5,-206 256.5,-230"/>
+<text text-anchor="middle" x="229.5" y="-215.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
+</a>
+</g>
+</g>
+<!-- proc~ddot -->
+<g id="call~~graph~~CallGraph_node17" class="node"><title>proc~ddot</title>
+<g id="a_call~~graph~~CallGraph_node17"><a xlink:href=".././proc/ddot.html" xlink:title="ddot">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="415.5,-396 361.5,-396 361.5,-372 415.5,-372 415.5,-396"/>
+<text text-anchor="middle" x="388.5" y="-381.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp&#45;&gt;proc~ddot -->
+<g id="call~~graph~~CallGraph_edge5" class="edge"><title>proc~ldp&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M256.509,-220.534C271.665,-223.128 290.406,-228.377 304,-239 325.55,-255.84 360.573,-326.354 377.59,-362.473"/>
+<polygon fill="#000000" stroke="#000000" points="374.485,-364.095 381.887,-371.675 380.828,-361.133 374.485,-364.095"/>
+</g>
+<!-- proc~ldp&#45;&gt;proc~dnrm2 -->
+<g id="call~~graph~~CallGraph_edge7" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M256.778,-225.03C282.781,-231.986 322.775,-242.685 351.678,-250.417"/>
+<polygon fill="#000000" stroke="#000000" points="350.833,-253.814 361.398,-253.017 352.642,-247.052 350.833,-253.814"/>
+</g>
+<!-- proc~ldp&#45;&gt;proc~diff -->
+<g id="call~~graph~~CallGraph_edge6" class="edge"><title>proc~ldp&#45;&gt;proc~diff</title>
+<path fill="none" stroke="#000000" d="M254.345,-205.85C281.127,-192.203 324.759,-169.97 354.732,-154.697"/>
+<polygon fill="#000000" stroke="#000000" points="356.624,-157.661 363.945,-150.002 353.446,-151.424 356.624,-157.661"/>
+</g>
+<!-- proc~lsq -->
+<g id="call~~graph~~CallGraph_node14" class="node"><title>proc~lsq</title>
+<g id="a_call~~graph~~CallGraph_node14"><a xlink:href=".././proc/lsq.html" xlink:title="lsq">
+<polygon fill="#d9534f" stroke="#d9534f" points="256.5,-516 202.5,-516 202.5,-492 256.5,-492 256.5,-516"/>
+<text text-anchor="middle" x="229.5" y="-501.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
+</a>
+</g>
+</g>
+<!-- proc~lsq&#45;&gt;proc~enforce_bounds -->
+<g id="call~~graph~~CallGraph_edge9" class="edge"><title>proc~lsq&#45;&gt;proc~enforce_bounds</title>
+<path fill="none" stroke="#000000" d="M256.511,-509.021C270.966,-512.396 289.006,-517.599 304,-525 327.163,-536.433 350.514,-554.45 366.61,-568.122"/>
+<polygon fill="#000000" stroke="#000000" points="364.479,-570.907 374.326,-574.818 369.067,-565.62 364.479,-570.907"/>
+</g>
+<!-- proc~lsq&#45;&gt;proc~ddot -->
+<g id="call~~graph~~CallGraph_edge8" class="edge"><title>proc~lsq&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M256.553,-500.42C271.362,-497.477 289.737,-492.227 304,-483 335.22,-462.803 360.95,-427.386 375.254,-404.842"/>
+<polygon fill="#000000" stroke="#000000" points="378.404,-406.401 380.667,-396.051 372.444,-402.731 378.404,-406.401"/>
+</g>
+<!-- proc~h12 -->
+<g id="call~~graph~~CallGraph_node15" class="node"><title>proc~h12</title>
+<g id="a_call~~graph~~CallGraph_node15"><a xlink:href=".././proc/h12.html" xlink:title="h12">
+<polygon fill="#d9534f" stroke="#d9534f" points="86.5,-768 32.5,-768 32.5,-744 86.5,-744 86.5,-768"/>
+<text text-anchor="middle" x="59.5" y="-753.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
+</a>
+</g>
+</g>
+<!-- proc~dscal -->
+<g id="call~~graph~~CallGraph_node16" class="node"><title>proc~dscal</title>
+<g id="a_call~~graph~~CallGraph_node16"><a xlink:href=".././proc/dscal.html" xlink:title="dscal">
+<polygon fill="#d9534f" stroke="#d9534f" points="256.5,-642 202.5,-642 202.5,-618 256.5,-618 256.5,-642"/>
+<text text-anchor="middle" x="229.5" y="-627.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dscal</text>
+</a>
+</g>
+</g>
+<!-- proc~lsi -->
+<g id="call~~graph~~CallGraph_node18" class="node"><title>proc~lsi</title>
+<g id="a_call~~graph~~CallGraph_node18"><a xlink:href=".././proc/lsi.html" xlink:title="lsi">
+<polygon fill="#d9534f" stroke="#d9534f" points="86.5,-251 32.5,-251 32.5,-227 86.5,-227 86.5,-251"/>
+<text text-anchor="middle" x="59.5" y="-236.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
+</a>
+</g>
+</g>
+<!-- proc~lsi&#45;&gt;proc~ldp -->
+<g id="call~~graph~~CallGraph_edge12" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
+<path fill="none" stroke="#000000" d="M86.75,-235.719C115.106,-232.174 160.479,-226.503 192.232,-222.533"/>
+<polygon fill="#000000" stroke="#000000" points="192.946,-225.972 202.434,-221.258 192.077,-219.026 192.946,-225.972"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~ddot -->
+<g id="call~~graph~~CallGraph_edge11" class="edge"><title>proc~lsi&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M65.3835,-251.047C76.6837,-277.152 107.363,-338.702 155,-365 217.264,-399.373 303.514,-395.528 351.541,-389.724"/>
+<polygon fill="#000000" stroke="#000000" points="352.008,-393.193 361.471,-388.429 351.102,-386.252 352.008,-393.193"/>
+</g>
+<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
+<g id="call~~graph~~CallGraph_edge13" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M81.0337,-226.843C99.6228,-216.591 128.129,-202.702 155,-197 219.78,-183.253 241.206,-175.969 304,-197 329.515,-205.546 353.467,-225.304 369.117,-240.433"/>
+<polygon fill="#000000" stroke="#000000" points="366.968,-243.233 376.509,-247.838 371.922,-238.288 366.968,-243.233"/>
+</g>
+<!-- proc~daxpy -->
+<g id="call~~graph~~CallGraph_node23" class="node"><title>proc~daxpy</title>
+<g id="a_call~~graph~~CallGraph_node23"><a xlink:href=".././proc/daxpy.html" xlink:title="daxpy">
+<polygon fill="#d9534f" stroke="#d9534f" points="256.5,-272 202.5,-272 202.5,-248 256.5,-248 256.5,-272"/>
+<text text-anchor="middle" x="229.5" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
+</a>
+</g>
+</g>
+<!-- proc~lsi&#45;&gt;proc~daxpy -->
+<g id="call~~graph~~CallGraph_edge10" class="edge"><title>proc~lsi&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M86.75,-242.281C115.106,-245.826 160.479,-251.497 192.232,-255.467"/>
+<polygon fill="#000000" stroke="#000000" points="192.077,-258.974 202.434,-256.742 192.946,-252.028 192.077,-258.974"/>
+</g>
+<!-- proc~lsei -->
+<g id="call~~graph~~CallGraph_node21" class="node"><title>proc~lsei</title>
+<g id="a_call~~graph~~CallGraph_node21"><a xlink:href=".././proc/lsei.html" xlink:title="lsei">
+<polygon fill="#d9534f" stroke="#d9534f" points="256.5,-356 202.5,-356 202.5,-332 256.5,-332 256.5,-356"/>
+<text text-anchor="middle" x="229.5" y="-341.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
+</a>
+</g>
+</g>
+<!-- proc~lsei&#45;&gt;proc~ddot -->
+<g id="call~~graph~~CallGraph_edge14" class="edge"><title>proc~lsei&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M256.778,-350.695C282.781,-357.32 322.775,-367.509 351.678,-374.873"/>
+<polygon fill="#000000" stroke="#000000" points="350.843,-378.272 361.398,-377.35 352.571,-371.489 350.843,-378.272"/>
+</g>
+<!-- proc~lsei&#45;&gt;proc~dnrm2 -->
+<g id="call~~graph~~CallGraph_edge15" class="edge"><title>proc~lsei&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M256.533,-339.024C270.995,-335.662 289.034,-330.458 304,-323 327.391,-311.343 350.871,-292.882 366.948,-278.952"/>
+<polygon fill="#000000" stroke="#000000" points="369.474,-281.39 374.641,-272.14 364.834,-276.149 369.474,-281.39"/>
+</g>
+<!-- proc~dcopy -->
+<g id="call~~graph~~CallGraph_node22" class="node"><title>proc~dcopy</title>
+<g id="a_call~~graph~~CallGraph_node22"><a xlink:href=".././proc/dcopy.html" xlink:title="dcopy">
+<polygon fill="#d9534f" stroke="#d9534f" points="256.5,-600 202.5,-600 202.5,-576 256.5,-576 256.5,-600"/>
+<text text-anchor="middle" x="229.5" y="-585.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
+</a>
+</g>
+</g>
+<!-- proc~destroy_linmin_data -->
+<g id="call~~graph~~CallGraph_node24" class="node"><title>proc~destroy_linmin_data</title>
+<g id="a_call~~graph~~CallGraph_node24"><a xlink:href=".././proc/destroy_linmin_data.html" xlink:title="destroy_linmin_data">
+<polygon fill="#d9534f" stroke="#d9534f" points="117,-810 2,-810 2,-786 117,-786 117,-810"/>
+<text text-anchor="middle" x="59.5" y="-795.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">destroy_linmin_data</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqpb -->
+<g id="call~~graph~~CallGraph_node25" class="node"><title>proc~slsqpb</title>
+<g id="a_call~~graph~~CallGraph_node25"><a xlink:href=".././proc/slsqpb.html" xlink:title="slsqpb">
+<polygon fill="#d9534f" stroke="#d9534f" points="86.5,-516 32.5,-516 32.5,-492 86.5,-492 86.5,-516"/>
+<text text-anchor="middle" x="59.5" y="-501.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
+</a>
+</g>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~ldl -->
+<g id="call~~graph~~CallGraph_edge20" class="edge"><title>proc~slsqpb&#45;&gt;proc~ldl</title>
+<path fill="none" stroke="#000000" d="M86.75,-510.562C115.229,-517.682 160.874,-529.094 192.646,-537.036"/>
+<polygon fill="#000000" stroke="#000000" points="191.884,-540.454 202.434,-539.484 193.582,-533.663 191.884,-540.454"/>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~linmin -->
+<g id="call~~graph~~CallGraph_edge18" class="edge"><title>proc~slsqpb&#45;&gt;proc~linmin</title>
+<path fill="none" stroke="#000000" d="M86.75,-497.438C115.229,-490.318 160.874,-478.906 192.646,-470.964"/>
+<polygon fill="#000000" stroke="#000000" points="193.582,-474.337 202.434,-468.516 191.884,-467.546 193.582,-474.337"/>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~enforce_bounds -->
+<g id="call~~graph~~CallGraph_edge16" class="edge"><title>proc~slsqpb&#45;&gt;proc~enforce_bounds</title>
+<path fill="none" stroke="#000000" d="M86.7714,-507.925C98.0748,-510.871 110.595,-516.018 119,-525 158.794,-567.526 108.503,-615.928 155,-651 207.868,-690.879 241.286,-672.269 304,-651 329.777,-642.258 353.838,-622.006 369.447,-606.607"/>
+<polygon fill="#000000" stroke="#000000" points="372.315,-608.681 376.803,-599.084 367.309,-603.787 372.315,-608.681"/>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~check_convergence -->
+<g id="call~~graph~~CallGraph_edge19" class="edge"><title>proc~slsqpb&#45;&gt;proc~check_convergence</title>
+<path fill="none" stroke="#000000" d="M63.3101,-491.741C71.4416,-459.092 98.126,-369.366 155,-323 157.025,-321.349 159.173,-319.828 161.414,-318.426"/>
+<polygon fill="#000000" stroke="#000000" points="163.283,-321.396 170.448,-313.591 159.98,-315.224 163.283,-321.396"/>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~lsq -->
+<g id="call~~graph~~CallGraph_edge21" class="edge"><title>proc~slsqpb&#45;&gt;proc~lsq</title>
+<path fill="none" stroke="#000000" d="M86.75,-504C115.106,-504 160.479,-504 192.232,-504"/>
+<polygon fill="#000000" stroke="#000000" points="192.434,-507.5 202.434,-504 192.434,-500.5 192.434,-507.5"/>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~dscal -->
+<g id="call~~graph~~CallGraph_edge17" class="edge"><title>proc~slsqpb&#45;&gt;proc~dscal</title>
+<path fill="none" stroke="#000000" d="M86.5576,-508.513C97.6836,-511.57 110.122,-516.641 119,-525 148.573,-552.843 124.52,-582.153 155,-609 165.294,-618.067 179.258,-623.236 192.251,-626.176"/>
+<polygon fill="#000000" stroke="#000000" points="191.897,-629.671 202.373,-628.088 193.196,-622.793 191.897,-629.671"/>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~ddot -->
+<g id="call~~graph~~CallGraph_edge22" class="edge"><title>proc~slsqpb&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M75.2548,-491.764C93.0823,-477.571 124.495,-454.412 155,-441 190.1,-425.568 295.386,-402.77 351.449,-391.242"/>
+<polygon fill="#000000" stroke="#000000" points="352.22,-394.656 361.316,-389.224 350.818,-387.798 352.22,-394.656"/>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~dcopy -->
+<g id="call~~graph~~CallGraph_edge24" class="edge"><title>proc~slsqpb&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M86.6348,-510.219C97.2721,-513.528 109.315,-518.326 119,-525 139.244,-538.951 134.305,-553.728 155,-567 166.283,-574.236 180.104,-579.031 192.703,-582.185"/>
+<polygon fill="#000000" stroke="#000000" points="191.951,-585.603 202.474,-584.378 193.483,-578.773 191.951,-585.603"/>
+</g>
+<!-- proc~slsqpb&#45;&gt;proc~daxpy -->
+<g id="call~~graph~~CallGraph_edge23" class="edge"><title>proc~slsqpb&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M61.9607,-491.999C67.1405,-454.771 88.0688,-340.195 155,-281 165.276,-271.912 179.236,-266.739 192.231,-263.802"/>
+<polygon fill="#000000" stroke="#000000" points="193.178,-267.185 202.356,-261.893 191.881,-260.306 193.178,-267.185"/>
+</g>
+<!-- proc~nnls -->
+<g id="call~~graph~~CallGraph_node26" class="node"><title>proc~nnls</title>
+<g id="a_call~~graph~~CallGraph_node26"><a xlink:href=".././proc/nnls.html" xlink:title="nnls">
+<polygon fill="#d9534f" stroke="#d9534f" points="256.5,-150 202.5,-150 202.5,-126 256.5,-126 256.5,-150"/>
+<text text-anchor="middle" x="229.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
+</a>
+</g>
+</g>
+<!-- proc~nnls&#45;&gt;proc~diff -->
+<g id="call~~graph~~CallGraph_edge25" class="edge"><title>proc~nnls&#45;&gt;proc~diff</title>
+<path fill="none" stroke="#000000" d="M256.778,-138C282.667,-138 322.426,-138 351.299,-138"/>
+<polygon fill="#000000" stroke="#000000" points="351.398,-141.5 361.398,-138 351.398,-134.5 351.398,-141.5"/>
+</g>
+<!-- proc~stop_iterations -->
+<g id="call~~graph~~CallGraph_node27" class="node"><title>proc~stop_iterations</title>
+<g id="a_call~~graph~~CallGraph_node27"><a xlink:href=".././proc/stop_iterations.html" xlink:title="stop_iterations">
+<polygon fill="#d9534f" stroke="#d9534f" points="104,-852 15,-852 15,-828 104,-828 104,-852"/>
+<text text-anchor="middle" x="59.5" y="-837.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stop_iterations</text>
+</a>
+</g>
 </g>
 </g>
 </svg>
-</div>
-                <script>var pancallgraphCallGraph = svgPanZoom('#callgraphCallGraph', {
-                    zoomEnabled: true,
-                    controlIconsEnabled: true,
-                    fit: true,
-                    center: true,});
-                    </script>
-                <div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div>
-                <div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog">
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
-                      </div>
-                      <div class="modal-body">
-                        
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
     <p>Nodes of different colours represent the following: </p>
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
@@ -872,12 +615,7 @@ All Procedures &ndash; slsqp
     This could include the module procedures in a generic interface or the
     implementation in a submodule of an interface in a parent module.
     </p>
-    
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+    </div></div></div></div>
         </div>
       </div>
 
@@ -886,7 +624,8 @@ All Procedures &ndash; slsqp
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 </p></div>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+                                          </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
             Documentation generated by 
@@ -917,12 +656,17 @@ All Procedures &ndash; slsqp
       MathJax.Hub.Config({
         TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
         jax: ['input/TeX','input/MathML','output/HTML-CSS'],
-        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js'],
-        'HTML-CSS': { 
-           styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: '#000000 ! important'} }
-        }
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
   </body>
 </html>
