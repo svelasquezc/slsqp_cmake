@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 2.5% of total for procedures.">42 statements</a>
+    title=" 2.0% of total for procedures.">43 statements</a>
      </li> 
      
      
@@ -203,7 +203,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode)
+private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_iter_ls)
     
     
    
@@ -459,6 +459,21 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode)
   
 </tr>
 
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_iter_ls%7E7"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>max_iter_ls</strong></td><td><p>maximum number of iterations in the <a href="../proc/nnls.html">nnls</a> problem</p></td>
+  
+</tr>
+
 </tbody>
 </table>
 
@@ -682,7 +697,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode)
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">lsi</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">le</span><span class="p">,</span><span class="n">me</span><span class="p">,</span><span class="n">lg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnorm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">lsi</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">le</span><span class="p">,</span><span class="n">me</span><span class="p">,</span><span class="n">lg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnorm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">,</span><span class="n">max_iter_ls</span><span class="p">)</span>
 
     <span class="k">implicit none</span>
 
@@ -706,6 +721,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode)
                                                      <span class="c">!! * ***3:*** iteration count exceeded by [[nnls]],</span>
                                                      <span class="c">!! * ***4:*** inequality constraints incompatible,</span>
                                                      <span class="c">!! * ***5:*** matrix `e` is not of full rank.</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">max_iter_ls</span> <span class="c">!! maximum number of iterations in the [[nnls]] problem</span>
 
     <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t</span>
@@ -731,7 +747,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode)
 
     <span class="c">!  solve least distance problem</span>
 
-    <span class="k">call </span><span class="n">ldp</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">lg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnorm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">ldp</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">lg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnorm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">,</span><span class="n">max_iter_ls</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
 
         <span class="c">!  solution of original problem</span>

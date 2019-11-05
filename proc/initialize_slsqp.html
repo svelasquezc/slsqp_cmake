@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 5.7% of total for procedures.">96 statements</a>
+    title=" 4.6% of total for procedures.">98 statements</a>
      </li> 
      
      
@@ -203,7 +203,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report, alphamin, alphamax, gradient_mode, gradient_delta, tolf, toldf, toldx)
+private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report, alphamin, alphamax, gradient_mode, gradient_delta, tolf, toldf, toldx, max_iter_ls)
     
     
    
@@ -556,6 +556,21 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
   
 </tr>
 
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_iter_ls%7E2"></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>max_iter_ls</strong></td><td><p>maximum number of iterations in the <a href="../proc/nnls.html">nnls</a> problem</p></td>
+  
+</tr>
+
 </tbody>
 </table>
 
@@ -625,7 +640,8 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">initialize_slsqp</span><span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">max_iter</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">,</span><span class="n">status_ok</span><span class="p">,&amp;</span>
                                 <span class="n">linesearch_mode</span><span class="p">,</span><span class="n">iprint</span><span class="p">,</span><span class="n">report</span><span class="p">,</span><span class="n">alphamin</span><span class="p">,</span><span class="n">alphamax</span><span class="p">,&amp;</span>
-                                <span class="n">gradient_mode</span><span class="p">,</span><span class="n">gradient_delta</span><span class="p">,</span><span class="n">tolf</span><span class="p">,</span><span class="n">toldf</span><span class="p">,</span><span class="n">toldx</span><span class="p">)</span>
+                                <span class="n">gradient_mode</span><span class="p">,</span><span class="n">gradient_delta</span><span class="p">,</span><span class="n">tolf</span><span class="p">,</span><span class="n">toldf</span><span class="p">,</span><span class="n">toldx</span><span class="p">,&amp;</span>
+                                <span class="n">max_iter_ls</span><span class="p">)</span>
 
     <span class="k">implicit none</span>
 
@@ -659,6 +675,7 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>      <span class="kd">::</span> <span class="n">tolf</span>            <span class="c">!! stopping criterion if \( |f| &lt; tolf \) then stop.</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>      <span class="kd">::</span> <span class="n">toldf</span>           <span class="c">!! stopping criterion if \( |f_{n+1} - f_n| &lt; toldf \) then stop</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>      <span class="kd">::</span> <span class="n">toldx</span>           <span class="c">!! stopping criterion if \( ||x_{n+1} - x_n|| &lt; toldx \) then stop</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span>       <span class="kd">::</span> <span class="n">max_iter_ls</span>     <span class="c">!! maximum number of iterations in the [[nnls]] problem</span>
 
     <span class="kt">integer</span> <span class="kd">::</span> <span class="n">n1</span><span class="p">,</span><span class="n">mineq</span><span class="p">,</span><span class="n">i</span>
 
@@ -719,9 +736,11 @@ private subroutine initialize_slsqp(me, n, m, meq, max_iter, acc, f, g, xl, xu, 
 
 <span class="k">        end if</span>
 
-<span class="k">        if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">tolf</span><span class="p">))</span>  <span class="n">me</span><span class="p">%</span><span class="n">tolf</span>     <span class="o">=</span> <span class="n">tolf</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">toldf</span><span class="p">))</span> <span class="n">me</span><span class="p">%</span><span class="n">toldf</span>    <span class="o">=</span> <span class="n">toldf</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">toldx</span><span class="p">))</span> <span class="n">me</span><span class="p">%</span><span class="n">toldx</span>    <span class="o">=</span> <span class="n">toldx</span>
+<span class="k">        if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">tolf</span><span class="p">))</span>  <span class="n">me</span><span class="p">%</span><span class="n">tolf</span>  <span class="o">=</span> <span class="n">tolf</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">toldf</span><span class="p">))</span> <span class="n">me</span><span class="p">%</span><span class="n">toldf</span> <span class="o">=</span> <span class="n">toldf</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">toldx</span><span class="p">))</span> <span class="n">me</span><span class="p">%</span><span class="n">toldx</span> <span class="o">=</span> <span class="n">toldx</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">max_iter_ls</span><span class="p">))</span> <span class="n">me</span><span class="p">%</span><span class="n">max_iter_ls</span> <span class="o">=</span> <span class="n">max_iter_ls</span>
 
         <span class="n">status_ok</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
         <span class="n">me</span><span class="p">%</span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span>

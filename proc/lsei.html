@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 5.2% of total for procedures.">88 statements</a>
+    title=" 4.2% of total for procedures.">89 statements</a>
      </li> 
      
      
@@ -203,7 +203,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w, mode)
+private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w, mode, max_iter_ls)
     
     
    
@@ -525,6 +525,21 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 </tr>
 
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-max_iter_ls%7E6"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>max_iter_ls</strong></td><td><p>maximum number of iterations in the <a href="../proc/nnls.html">nnls</a> problem</p></td>
+  
+</tr>
+
 </tbody>
 </table>
 
@@ -699,7 +714,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">lsei</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">lc</span><span class="p">,</span><span class="n">mc</span><span class="p">,</span><span class="n">le</span><span class="p">,</span><span class="n">me</span><span class="p">,</span><span class="n">lg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnrm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">lsei</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">lc</span><span class="p">,</span><span class="n">mc</span><span class="p">,</span><span class="n">le</span><span class="p">,</span><span class="n">me</span><span class="p">,</span><span class="n">lg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnrm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">,</span><span class="n">max_iter_ls</span><span class="p">)</span>
 
     <span class="k">implicit none</span>
 
@@ -729,6 +744,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
                                                     <span class="c">!! * ***5:*** matrix `e` is not of full rank,</span>
                                                     <span class="c">!! * ***6:*** matrix `c` is not of full rank,</span>
                                                     <span class="c">!! * ***7:*** rank defect in [[hfti]]</span>
+    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">max_iter_ls</span> <span class="c">!! maximum number of iterations in the [[nnls]] problem</span>
 
     <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span> <span class="p">,</span> <span class="n">ie</span><span class="p">,</span> <span class="k">if</span> <span class="p">,</span> <span class="n">ig</span> <span class="p">,</span> <span class="n">iw</span> <span class="p">,</span> <span class="n">j</span> <span class="p">,</span> <span class="n">k</span> <span class="p">,</span> <span class="n">krank</span> <span class="p">,</span> <span class="n">l</span> <span class="p">,</span> <span class="n">mc1</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t</span> <span class="p">,</span> <span class="n">dum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -785,7 +801,8 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
                     <span class="n">h</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">h</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">ddot</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span><span class="n">g</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">lg</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
                 <span class="k">end do</span>
 <span class="k">                call </span><span class="n">lsi</span><span class="p">(</span><span class="n">w</span><span class="p">(</span><span class="n">ie</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="k">if</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="n">ig</span><span class="p">),</span><span class="n">h</span><span class="p">,</span><span class="n">me</span><span class="p">,</span><span class="n">me</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">x</span><span class="p">(</span><span class="n">mc1</span><span class="p">),</span><span class="n">xnrm</span><span class="p">,</span>  <span class="p">&amp;</span>
-                         <span class="n">w</span><span class="p">(</span><span class="n">mc1</span><span class="p">),</span><span class="n">mode</span><span class="p">)</span>
+                         <span class="n">w</span><span class="p">(</span><span class="n">mc1</span><span class="p">),</span><span class="n">mode</span><span class="p">,</span><span class="n">max_iter_ls</span><span class="p">)</span>
+
                 <span class="k">if</span> <span class="p">(</span> <span class="n">mc</span><span class="o">==</span><span class="mi">0</span> <span class="p">)</span> <span class="k">return</span>
 <span class="k">                </span><span class="n">t</span> <span class="o">=</span> <span class="n">dnrm2</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
                 <span class="n">xnrm</span> <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">xnrm</span><span class="o">*</span><span class="n">xnrm</span><span class="o">+</span><span class="n">t</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>

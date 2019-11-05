@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title="<p>43.6% of total for derived types.</p>Including implementation: 321 statements, 86.1% of total for derived types.">34 statements</a>
+    title="<p>44.3% of total for derived types.</p>Including implementation: 324 statements, 86.2% of total for derived types.">35 statements</a>
      </li> 
      
      
@@ -220,6 +220,8 @@
       <a class="list-group-item" href="../type/slsqp_solver.html#variable-linmin">linmin</a>
       
       <a class="list-group-item" href="../type/slsqp_solver.html#variable-slsqpb">slsqpb</a>
+      
+      <a class="list-group-item" href="../type/slsqp_solver.html#variable-max_iter_ls">max_iter_ls</a>
       
       <a class="list-group-item" href="../type/slsqp_solver.html#variable-user_triggered_stop">user_triggered_stop</a>
       
@@ -431,6 +433,8 @@
       <a class="list-group-item" href="../type/slsqp_solver.html#variable-linmin">linmin</a>
       
       <a class="list-group-item" href="../type/slsqp_solver.html#variable-slsqpb">slsqpb</a>
+      
+      <a class="list-group-item" href="../type/slsqp_solver.html#variable-max_iter_ls">max_iter_ls</a>
       
       <a class="list-group-item" href="../type/slsqp_solver.html#variable-user_triggered_stop">user_triggered_stop</a>
       
@@ -845,6 +849,21 @@
   
 <tr>
   
+  <td><span class="anchor" id="variable-max_iter_ls"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>max_iter_ls</strong></td><td> =</td><td>0</td><td><p>max iterations in the least squares problem.
+ if <code>&lt;=0</code>, defaults to <code>3*n</code>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
   <td><span class="anchor" id="variable-user_triggered_stop"></span>logical,</td>
   
   <td>private</td>
@@ -883,7 +902,7 @@
           
     
     <h3>
-private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report, alphamin, alphamax, gradient_mode, gradient_delta, tolf, toldf, toldx)
+private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(me, n, m, meq, max_iter, acc, f, g, xl, xu, status_ok, linesearch_mode, iprint, report, alphamin, alphamax, gradient_mode, gradient_delta, tolf, toldf, toldx, max_iter_ls)
     
     
    
@@ -1230,6 +1249,21 @@ private subroutine <a href='../proc/initialize_slsqp.html'>initialize_slsqp</a>(
   
   <td></td><td>::</td>
   <td><strong>toldx</strong></td><td><p>stopping criterion if <script type="math/tex"> ||x_{n+1} - x_n|| < toldx </script> then stop</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>max_iter_ls</strong></td><td><p>maximum number of iterations in the <a href="../proc/nnls.html">nnls</a> problem</p></td>
   
 </tr>
 
@@ -1721,8 +1755,11 @@ private subroutine <a href='../proc/report_message.html'>report_message</a>(me, 
                                         <span class="c">!! * `1` = inexact (Armijo) linesearch,</span>
                                         <span class="c">!! * `2` = exact linesearch.</span>
         <span class="k">type</span><span class="p">(</span><span class="n">linmin_data</span><span class="p">)</span> <span class="kd">::</span> <span class="n">linmin</span> <span class="c">!! data formerly within [[linmin]].</span>
-                                                <span class="c">!! Only used when `linesearch_mode=2`</span>
+                                    <span class="c">!! Only used when `linesearch_mode=2`</span>
         <span class="k">type</span><span class="p">(</span><span class="n">slsqpb_data</span><span class="p">)</span> <span class="kd">::</span> <span class="n">slsqpb</span>  <span class="c">!! data formerly within [[slsqpb]].</span>
+
+        <span class="kt">integer</span> <span class="kd">::</span> <span class="n">max_iter_ls</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c">!! max iterations in the least squares problem.</span>
+                                    <span class="c">!! if `&lt;=0`, defaults to `3*n`.</span>
 
         <span class="kt">logical</span> <span class="kd">::</span> <span class="n">user_triggered_stop</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>    <span class="c">!! if the `abort` method has been called</span>
                                                     <span class="c">!! to stop the iterations</span>

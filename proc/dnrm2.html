@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 1.7% of total for procedures.">29 statements</a>
+    title=" 1.4% of total for procedures.">29 statements</a>
      </li> 
      
      
@@ -203,7 +203,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-public function dnrm2(n, x, incx)
+public pure function dnrm2(n, x, incx) result(norm)
     
     
    
@@ -293,7 +293,7 @@ public function dnrm2(n, x, incx)
     
     
     
-   <h3>Return Value <small><span class="anchor" id="variable-dnrm2"></span>real(kind=wp)
+   <h3>Return Value <small><span class="anchor" id="variable-norm"></span>real(kind=wp)
   </small></h3>
     
     
@@ -379,19 +379,6 @@ public function dnrm2(n, x, incx)
 <g id="proc~~dnrm2~~CalledByGraph_edge5" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
 <path fill="none" stroke="#000000" d="M54.0382,-111.66C70.9049,-108.849 93.1105,-105.148 111.7,-102.05"/>
 <polygon fill="#000000" stroke="#000000" points="112.31,-105.497 121.598,-100.4 111.159,-98.592 112.31,-105.497"/>
-</g>
-<!-- proc~slsqpb -->
-<g id="proc~~dnrm2~~CalledByGraph_node6" class="node"><title>proc~slsqpb</title>
-<g id="a_proc~~dnrm2~~CalledByGraph_node6"><a xlink:href=".././proc/slsqpb.html" xlink:title="slsqpb">
-<polygon fill="#d9534f" stroke="#d9534f" points="54,-24 0,-24 0,-0 54,-0 54,-24"/>
-<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
-</a>
-</g>
-</g>
-<!-- proc~slsqpb&#45;&gt;proc~check_convergence -->
-<g id="proc~~dnrm2~~CalledByGraph_edge6" class="edge"><title>proc~slsqpb&#45;&gt;proc~check_convergence</title>
-<path fill="none" stroke="#000000" d="M54.0382,-12C61.8339,-12 70.7702,-12 79.9628,-12"/>
-<polygon fill="#000000" stroke="#000000" points="79.9965,-15.5001 89.9964,-12 79.9964,-8.5001 79.9965,-15.5001"/>
 </g>
 </g>
 </svg>
@@ -510,15 +497,16 @@ public function dnrm2(n, x, incx)
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="k">function </span><span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">incx</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>    <span class="k">pure function </span><span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">incx</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">norm</span><span class="p">)</span>
 
     <span class="k">implicit none</span>
 
 <span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">incx</span>
     <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">n</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>                         <span class="kd">::</span> <span class="n">norm</span>
 
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">absxi</span> <span class="p">,</span> <span class="n">norm</span> <span class="p">,</span> <span class="nb">scale</span> <span class="p">,</span> <span class="n">ssq</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">absxi</span> <span class="p">,</span> <span class="nb">scale</span> <span class="p">,</span> <span class="n">ssq</span>
     <span class="kt">integer</span> <span class="kd">::</span> <span class="n">ix</span>
 
     <span class="k">if</span> <span class="p">(</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">1</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">incx</span><span class="o">&lt;</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
@@ -545,9 +533,7 @@ public function dnrm2(n, x, incx)
 <span class="k">        </span><span class="n">norm</span> <span class="o">=</span> <span class="nb">scale</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">ssq</span><span class="p">)</span>
     <span class="k">end if</span>
 
-<span class="k">    </span><span class="n">dnrm2</span> <span class="o">=</span> <span class="n">norm</span>
-
-    <span class="k">end function </span><span class="n">dnrm2</span>
+<span class="k">    end function </span><span class="n">dnrm2</span>
 </pre></div>
 
     </section>
