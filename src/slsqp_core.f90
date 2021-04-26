@@ -8,7 +8,6 @@
 
     use slsqp_kinds
     use slsqp_support
-    use bvls_module, only: bvls_wrapper
 
     implicit none
 
@@ -111,7 +110,7 @@
 !@note `f`, `c`, `g`, `a` must all be set by the user before each call.
 
     subroutine slsqp(m,meq,la,n,x,xl,xu,f,c,g,a,acc,iter,mode,w,l_w, &
-                     sdat,ldat,alphamin,alphamax,tolf,toldf,toldx,max_iter_ls)
+                     sdat,ldat,alphamin,alphamax,tolf,toldf,toldx)
 
     implicit none
 
@@ -200,7 +199,6 @@
     real(wp),intent(in) :: tolf      !! stopping criterion if \( |f| < tolf \) then stop.
     real(wp),intent(in) :: toldf     !! stopping criterion if \( |f_{n+1} - f_n| < toldf \) then stop.
     real(wp),intent(in) :: toldx     !! stopping criterion if \( ||x_{n+1} - x_n|| < toldx \) then stop.
-    integer,intent(in)  :: max_iter_ls !! maximum number of iterations in the [[nnls]] problem
 
     integer :: il , im , ir , is , iu , iv , iw , ix , mineq, n1
 
@@ -244,7 +242,7 @@
                 sdat%t,sdat%f0,sdat%h1,sdat%h2,sdat%h3,sdat%h4,&
                 sdat%n1,sdat%n2,sdat%n3,sdat%t0,sdat%gs,sdat%tol,sdat%line,&
                 sdat%alpha,sdat%iexact,sdat%incons,sdat%ireset,sdat%itermx,&
-                ldat,alphamin,alphamax,tolf,toldf,toldx,max_iter_ls)
+                ldat,alphamin,alphamax,tolf,toldf,toldx)
 
     end subroutine slsqp
 !*******************************************************************************
@@ -259,7 +257,7 @@
                       r,l,x0,mu,s,u,v,w,&
                       t,f0,h1,h2,h3,h4,n1,n2,n3,t0,gs,tol,line,&
                       alpha,iexact,incons,ireset,itermx,ldat,&
-                      alphamin,alphamax,tolf,toldf,toldx,max_iter_ls)
+                      alphamin,alphamax,tolf,toldf,toldx)
     implicit none
 
     integer,intent(in)                  :: m
@@ -317,7 +315,6 @@
     real(wp),intent(in)                 :: tolf      !! stopping criterion if \( |f| < tolf \) then stop.
     real(wp),intent(in)                 :: toldf     !! stopping criterion if \( |f_{n+1} - f_n| < toldf \) then stop
     real(wp),intent(in)                 :: toldx     !! stopping criterion if \( ||x_{n+1} - x_n|| < toldx \) then stop
-    integer,intent(in)                  :: max_iter_ls !! maximum number of iterations in the [[nnls]] problem
 
     integer :: i, j, k
 
@@ -378,6 +375,8 @@
 
         ! end of main iteration
 
+        goto 200
+
     else if ( mode==0 ) then
 
         itermx = iter
@@ -398,9 +397,6 @@
         call dcopy(n,s(1),0,s,1)
         call dcopy(m,mu(1),0,mu,1)
 
-        call reset_bfgs_matrix()
-        if ( ireset>5 ) return
-
     else
 
         ! call functions at current x
@@ -415,193 +411,171 @@
             t = t + mu(j)*max(-c(j),h1)
         end do
         h1 = t - t0
-        select case (iexact)
-        case(0)
-            if ( h1<=h3/ten .or. line>10 ) then
-                call convergence_check()
-            else
-                alpha = min(max(h3/(two*(h3-h1)),alphamin),alphamax)
-                call inexact_linesearch()
-            end if
-        case(1)
-            call exact_linesearch()
-            if ( line==3 ) call convergence_check()
-        end select
-
-        return
+        if ( iexact+1==1 ) then
+            if ( h1<=h3/ten .or. line>10 ) goto 500
+            alpha = min(max(h3/(two*(h3-h1)),alphamin),alphamax)
+            goto 300
+        else if ( iexact+1==2 ) then
+            goto 400
+        else
+            goto 500
+        end if
 
     end if
 
-    do
-        ! main iteration : search direction, steplength, ldl'-update
+    ! reset bfgs matrix
 
-        iter = iter + 1
-        mode = 9
-        if ( iter>itermx ) return
+100 ireset = ireset + 1
+    if ( ireset>5 ) then
+        ! check relaxed convergence in case of positive directional derivative
+        mode = check_convergence(n,f,f0,x,x0,s,h3,tol,tolf,toldf,toldx,0,8)
+        return
+    else
+        l(1) = zero
+        call dcopy(n2,l(1),0,l,1)
+        j = 1
+        do i = 1 , n
+            l(j) = one
+            j = j + n1 - i
+        end do
+    end if
 
-        ! search direction as solution of qp - subproblem
+    ! main iteration : search direction, steplength, ldl'-update
 
-        call dcopy(n,xl,1,u,1)
-        call dcopy(n,xu,1,v,1)
-        call daxpy(n,-one,x,1,u,1)
-        call daxpy(n,-one,x,1,v,1)
-        h4 = one
-        call lsq(m,meq,n,n3,la,l,g,a,c,u,v,s,r,w,mode,max_iter_ls)
+200 iter = iter + 1
+    mode = 9
+    if ( iter>itermx ) return
 
-        ! augmented problem for inconsistent linearization
+    ! search direction as solution of qp - subproblem
 
-        if ( mode==6 ) then
-            if ( n==meq ) mode = 4
-        end if
+    call dcopy(n,xl,1,u,1)
+    call dcopy(n,xu,1,v,1)
+    call daxpy(n,-one,x,1,u,1)
+    call daxpy(n,-one,x,1,v,1)
+    h4 = one
+    call lsq(m,meq,n,n3,la,l,g,a,c,u,v,s,r,w,mode)
+
+    ! augmented problem for inconsistent linearization
+
+    if ( mode==6 ) then
+        if ( n==meq ) mode = 4
+    end if
+    if ( mode==4 ) then
+        do j = 1 , m
+            if ( j<=meq ) then
+                a(j,n1) = -c(j)
+            else
+                a(j,n1) = max(-c(j),zero)
+            end if
+        end do
+        s(1) = zero
+        call dcopy(n,s(1),0,s,1)
+        h3 = zero
+        g(n1) = zero
+        l(n3) = hun
+        s(n1) = one
+        u(n1) = zero
+        v(n1) = one
+        incons = 0
+250     call lsq(m,meq,n1,n3,la,l,g,a,c,u,v,s,r,w,mode)
+        h4 = one - s(n1)
         if ( mode==4 ) then
-            do j = 1 , m
-                if ( j<=meq ) then
-                    a(j,n1) = -c(j)
-                else
-                    a(j,n1) = max(-c(j),zero)
-                end if
-            end do
-            s(1) = zero
-            call dcopy(n,s(1),0,s,1)
-            h3 = zero
-            g(n1) = zero
-            l(n3) = hun
-            s(n1) = one
-            u(n1) = zero
-            v(n1) = one
-            incons = 0
-            do
-                call lsq(m,meq,n1,n3,la,l,g,a,c,u,v,s,r,w,mode,max_iter_ls)
-                h4 = one - s(n1)
-                if ( mode==4 ) then
-                    l(n3) = ten*l(n3)
-                    incons = incons + 1
-                    if ( incons<=5 ) cycle
-                    return
-                else if ( mode/=1 ) then
-                    return
-                else
-                    exit
-                end if
-            end do
-
+            l(n3) = ten*l(n3)
+            incons = incons + 1
+            if ( incons<=5 ) goto 250
+            return
         else if ( mode/=1 ) then
             return
         end if
+    else if ( mode/=1 ) then
+        return
+    end if
 
-        ! update multipliers for l1-test
+    ! update multipliers for l1-test
 
-        do i = 1 , n
-            v(i) = g(i) - ddot(m,a(1,i),1,r,1)
-        end do
-        f0 = f
-        call dcopy(n,x,1,x0,1)
-        gs = ddot(n,g,1,s,1)
-        h1 = abs(gs)
-        h2 = zero
-        do j = 1 , m
-            if ( j<=meq ) then
-                h3 = c(j)
-            else
-                h3 = zero
-            end if
-            h2 = h2 + max(-c(j),h3)
-            h3 = abs(r(j))
-            mu(j) = max(h3,(mu(j)+h3)/two)
-            h1 = h1 + h3*abs(c(j))
-        end do
-
-        ! check convergence
-
-        mode = 0
-        if ( h1<acc .and. h2<acc ) return
-        h1 = zero
-        do j = 1 , m
-            if ( j<=meq ) then
-                h3 = c(j)
-            else
-                h3 = zero
-            end if
-            h1 = h1 + mu(j)*max(-c(j),h3)
-        end do
-        t0 = f + h1
-        h3 = gs - h1*h4
-        mode = 8
-        if ( h3>=zero ) then
-            call reset_bfgs_matrix()
-            if ( ireset>5 ) return
-        else
-            exit
-        end if
-
+    do i = 1 , n
+        v(i) = g(i) - ddot(m,a(1,i),1,r,1)
     end do
+    f0 = f
+    call dcopy(n,x,1,x0,1)
+    gs = ddot(n,g,1,s,1)
+    h1 = abs(gs)
+    h2 = zero
+    do j = 1 , m
+        if ( j<=meq ) then
+            h3 = c(j)
+        else
+            h3 = zero
+        end if
+        h2 = h2 + max(-c(j),h3)
+        h3 = abs(r(j))
+        mu(j) = max(h3,(mu(j)+h3)/two)
+        h1 = h1 + h3*abs(c(j))
+    end do
+
+    ! check convergence
+
+    mode = 0
+    if ( h1<acc .and. h2<acc ) return
+    h1 = zero
+    do j = 1 , m
+        if ( j<=meq ) then
+            h3 = c(j)
+        else
+            h3 = zero
+        end if
+        h1 = h1 + mu(j)*max(-c(j),h3)
+    end do
+    t0 = f + h1
+    h3 = gs - h1*h4
+    mode = 8
+    if ( h3>=zero ) goto 100
 
     ! line search with an l1-testfunction
 
     line = 0
     alpha = alphamax
-    if ( iexact==1 ) then
-        call exact_linesearch()
-        if ( line==3 ) call convergence_check()
-    else
-        call inexact_linesearch()
+    if ( iexact==1 ) goto 400
+
+    ! inexact linesearch
+
+300 line = line + 1
+    h3 = alpha*h3
+    call dscal(n,alpha,s,1)
+    call dcopy(n,x0,1,x,1)
+    call daxpy(n,one,s,1,x,1)
+
+    call enforce_bounds(x,xl,xu)  ! ensure that x doesn't violate bounds
+
+    mode = 1
+    return
+
+    ! exact linesearch
+
+400 if ( line/=3 ) then
+        alpha = linmin(line,alphamin,alphamax,t,tol, &
+        ldat%a, ldat%b, ldat%d, ldat%e, ldat%p,   ldat%q,   &
+        ldat%r, ldat%u, ldat%v, ldat%w, ldat%x,   ldat%m,   &
+        ldat%fu,ldat%fv,ldat%fw,ldat%fx,ldat%tol1,ldat%tol2 )
+        call dcopy(n,x0,1,x,1)
+        call daxpy(n,alpha,s,1,x,1)
+        mode = 1
+        return
     end if
+    call dscal(n,alpha,s,1)
 
-    contains
+    ! check convergence
 
-        subroutine reset_bfgs_matrix()  ! 100
-            ireset = ireset + 1
-            if ( ireset>5 ) then
-                ! check relaxed convergence in case of positive directional derivative
-                mode = check_convergence(n,f,f0,x,x0,s,h3,tol,tolf,toldf,toldx,0,8)
-                return
-            else
-                l(1) = zero
-                call dcopy(n2,l(1),0,l,1)
-                j = 1
-                do i = 1 , n
-                    l(j) = one
-                    j = j + n1 - i
-                end do
-            end if
-        end subroutine reset_bfgs_matrix
-
-        subroutine inexact_linesearch()  ! 300
-            line = line + 1
-            h3 = alpha*h3
-            call dscal(n,alpha,s,1)
-            call dcopy(n,x0,1,x,1)
-            call daxpy(n,one,s,1,x,1)
-            call enforce_bounds(x,xl,xu)  ! ensure that x doesn't violate bounds
-            mode = 1
-        end subroutine inexact_linesearch
-
-        subroutine exact_linesearch() ! 400
-            if ( line/=3 ) then
-                alpha = linmin(line,alphamin,alphamax,t,tol, &
-                               ldat%a, ldat%b, ldat%d, ldat%e, ldat%p,   ldat%q,   &
-                               ldat%r, ldat%u, ldat%v, ldat%w, ldat%x,   ldat%m,   &
-                               ldat%fu,ldat%fv,ldat%fw,ldat%fx,ldat%tol1,ldat%tol2 )
-                call dcopy(n,x0,1,x,1)
-                call daxpy(n,alpha,s,1,x,1)
-                mode = 1
-            else
-                call dscal(n,alpha,s,1)
-            end if
-        end subroutine exact_linesearch
-
-        subroutine convergence_check()  ! 500
-            h3 = zero
-            do j = 1 , m
-                if ( j<=meq ) then
-                    h1 = c(j)
-                else
-                    h1 = zero
-                end if
-                h3 = h3 + max(-c(j),h1)
-            end do
-            mode = check_convergence(n,f,f0,x,x0,s,h3,acc,tolf,toldf,toldx,0,-1)
-        end subroutine convergence_check
+500 h3 = zero
+    do j = 1 , m
+        if ( j<=meq ) then
+            h1 = c(j)
+        else
+            h1 = zero
+        end if
+        h3 = h3 + max(-c(j),h1)
+    end do
+    mode = check_convergence(n,f,f0,x,x0,s,h3,acc,tolf,toldf,toldx,0,-1)
 
     end subroutine slsqpb
 !*******************************************************************************
@@ -610,8 +584,8 @@
 !>
 !  Check for convergence.
 
-    pure function check_convergence(n,f,f0,x,x0,s,h3,acc,tolf,toldf,toldx,&
-                                    converged,not_converged) result(mode)
+    function check_convergence(n,f,f0,x,x0,s,h3,acc,tolf,toldf,toldx,&
+                                converged,not_converged) result(mode)
 
     implicit none
 
@@ -692,7 +666,7 @@
 !  * coded dieter kraft, april 1987
 !  * revised march 1989
 
-    subroutine lsq(m,meq,n,nl,la,l,g,a,b,xl,xu,x,y,w,mode,max_iter_ls)
+    subroutine lsq(m,meq,n,nl,la,l,g,a,b,xl,xu,x,y,w,mode)
 
     implicit none
 
@@ -713,7 +687,6 @@
                                     !! * **5:** matrix `e` is not of full rank,
                                     !! * **6:** matrix `c` is not of full rank,
                                     !! * **7:** rank defect in [[hfti]]
-    integer,intent(in) :: max_iter_ls !! maximum number of iterations in the [[nnls]] problem
 
     real(wp),dimension(nl)   :: l
     real(wp),dimension(n)    :: g
@@ -835,7 +808,7 @@
       iw = iu + n
 
       call lsei(w(ic),w(id),w(ie),w(if),w(ig),w(ih),max(1,meq),meq,n,n, &
-                m1,m1,n,x,xnorm,w(iw),mode,max_iter_ls)
+                m1,m1,n,x,xnorm,w(iw),mode)
 
       if ( mode==1 ) then
          ! restore lagrange multipliers
@@ -884,7 +857,7 @@
 !  * 18.5.1981, dieter kraft, dfvlr oberpfaffenhofen
 !  * 20.3.1987, dieter kraft, dfvlr oberpfaffenhofen
 
-    subroutine lsei(c,d,e,f,g,h,lc,mc,le,me,lg,mg,n,x,xnrm,w,mode,max_iter_ls)
+    subroutine lsei(c,d,e,f,g,h,lc,mc,le,me,lg,mg,n,x,xnrm,w,mode)
 
     implicit none
 
@@ -914,7 +887,6 @@
                                                     !! * ***5:*** matrix `e` is not of full rank,
                                                     !! * ***6:*** matrix `c` is not of full rank,
                                                     !! * ***7:*** rank defect in [[hfti]]
-    integer,intent(in) :: max_iter_ls !! maximum number of iterations in the [[nnls]] problem
 
     integer :: i , ie, if , ig , iw , j , k , krank , l , mc1
     real(wp) :: t , dum(1)
@@ -971,8 +943,7 @@
                     h(i) = h(i) - ddot(mc,g(i,1),lg,x,1)
                 end do
                 call lsi(w(ie),w(if),w(ig),h,me,me,mg,mg,l,x(mc1),xnrm,  &
-                         w(mc1),mode,max_iter_ls)
-
+                         w(mc1),mode)
                 if ( mc==0 ) return
                 t = dnrm2(mc,x,1)
                 xnrm = sqrt(xnrm*xnrm+t*t)
@@ -1046,7 +1017,7 @@
 !  * 03.01.1980, dieter kraft: coded
 !  * 20.03.1987, dieter kraft: revised to fortran 77
 
-    subroutine lsi(e,f,g,h,le,me,lg,mg,n,x,xnorm,w,mode,max_iter_ls)
+    subroutine lsi(e,f,g,h,le,me,lg,mg,n,x,xnorm,w,mode)
 
     implicit none
 
@@ -1070,7 +1041,6 @@
                                                      !! * ***3:*** iteration count exceeded by [[nnls]],
                                                      !! * ***4:*** inequality constraints incompatible,
                                                      !! * ***5:*** matrix `e` is not of full rank.
-    integer,intent(in) :: max_iter_ls !! maximum number of iterations in the [[nnls]] problem
 
     integer :: i, j
     real(wp) :: t
@@ -1096,7 +1066,7 @@
 
     !  solve least distance problem
 
-    call ldp(g,lg,mg,n,h,x,xnorm,w,mode,max_iter_ls)
+    call ldp(g,lg,mg,n,h,x,xnorm,w,mode)
     if ( mode==1 ) then
 
         !  solution of original problem
@@ -1140,7 +1110,7 @@
 !@note The 1995 version of this routine may have some sort of problem.
 !      Using a refactored version of the original routine.
 
-    subroutine ldp(g,mg,m,n,h,x,xnorm,w,mode,max_iter_ls)
+    subroutine ldp(g,mg,m,n,h,x,xnorm,w,mode)
 
     implicit none
 
@@ -1165,7 +1135,6 @@
                                                   !! * ***2:*** error return because of wrong dimensions (`n<=0`),
                                                   !! * ***3:*** iteration count exceeded by [[nnls]],
                                                   !! * ***4:*** inequality constraints incompatible.
-    integer,intent(in) :: max_iter_ls !! maximum number of iterations in the [[nnls]] problem
 
     integer :: i , iw , iwdual , iy , iz , j , jf , n1
     real(wp) :: fac , rnorm
@@ -1199,9 +1168,7 @@
             iy=iz+n1
             iwdual=iy+m
             ! solve dual problem
-            !call nnls (w,n1,n1,m,w(jf),w(iy),rnorm,w(iwdual),w(iz),mode,max_iter_ls)        ! original
-            call bvls_wrapper(w,n1,n1,m,w(jf),w(iy),rnorm,w(iwdual),w(iz),mode,max_iter_ls)  ! new version
-
+            call nnls (w,n1,n1,m,w(jf),w(iy),rnorm,w(iwdual),w(iz),mode)
             if (mode==1) then
                 mode=4
                 if (rnorm>zero) then
@@ -1262,7 +1229,7 @@
 !### History
 !  * Jacob Williams, refactored into modern Fortran, Jan. 2016.
 
-    subroutine nnls(a,mda,m,n,b,x,rnorm,w,zz,mode,max_iter)
+    subroutine nnls(a,mda,m,n,b,x,rnorm,w,zz,mode)
 
     implicit none
 
@@ -1286,7 +1253,6 @@
                                                        !! * ***1*** the solution has been computed successfully.
                                                        !! * ***2*** the dimensions of the problem are bad. either `m<=0` or `n<=0`.
                                                        !! * ***3*** iteration count exceeded. more than `3*n` iterations.
-    integer,intent(in)                      :: max_iter !! maximum number of iterations (if <=0, then `3*n` is used)
 
     integer :: i,ii,ip,iter,itmax,iz,iz1,iz2,izmax,j,jj,jz,l,npp1,nsetp,rtnkey
     real(wp) :: alpha,asave,cc,sm,ss,t,temp,unorm,up,wmax,ztest
@@ -1308,12 +1274,7 @@
         return
     end if
     iter = 0
-
-    if (max_iter<=0) then
-        itmax = 3*n
-    else
-        itmax = max_iter
-    end if
+    itmax = 3*n
 
     ! initialize the arrays index(1:n) and x(1:n).
     x = zero
@@ -2176,7 +2137,7 @@
 !>
 !  enforce the bound constraints on x.
 
-    pure subroutine enforce_bounds(x,xl,xu)
+    subroutine enforce_bounds(x,xl,xu)
 
     implicit none
 

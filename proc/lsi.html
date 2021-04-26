@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 2.0% of total for procedures.">43 statements</a>
+    title=" 2.5% of total for procedures.">42 statements</a>
      </li> 
      
      
@@ -203,7 +203,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_iter_ls)
+private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode)
     
     
    
@@ -221,15 +221,14 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
 <p>s.t. <script type="math/tex"> G x \ge h </script>.</p>
 <p>the following dimensions of the arrays defining the problem
   are necessary:</p>
-<div class="codehilite"><pre><span></span>     <span class="n">dim</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="p">:</span>   <span class="n">formal</span> <span class="p">(</span><span class="n">le</span><span class="p">,</span><span class="n">n</span><span class="p">),</span>    <span class="n">actual</span> <span class="p">(</span><span class="n">me</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
-     <span class="n">dim</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="p">:</span>   <span class="n">formal</span> <span class="p">(</span><span class="n">le</span>  <span class="p">),</span>    <span class="n">actual</span> <span class="p">(</span><span class="n">me</span>  <span class="p">)</span>
-     <span class="n">dim</span><span class="p">(</span><span class="k">g</span><span class="p">)</span> <span class="p">:</span>   <span class="n">formal</span> <span class="p">(</span><span class="n">lg</span><span class="p">,</span><span class="n">n</span><span class="p">),</span>    <span class="n">actual</span> <span class="p">(</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
-     <span class="n">dim</span><span class="p">(</span><span class="n">h</span><span class="p">)</span> <span class="p">:</span>   <span class="n">formal</span> <span class="p">(</span><span class="n">lg</span>  <span class="p">),</span>    <span class="n">actual</span> <span class="p">(</span><span class="n">mg</span>  <span class="p">)</span>
-     <span class="n">dim</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">:</span>   <span class="n">n</span>
-     <span class="n">dim</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="p">:</span>   <span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">mg</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">mg</span>
-     <span class="n">dim</span><span class="p">(</span><span class="n">jw</span><span class="p">):</span>   <span class="n">lg</span>
-</pre></div>
-
+<div class="codehilite"><pre><span></span><code>     dim(e) :   formal (le,n),    actual (me,n)
+     dim(f) :   formal (le  ),    actual (me  )
+     dim(g) :   formal (lg,n),    actual (mg,n)
+     dim(h) :   formal (lg  ),    actual (mg  )
+     dim(x) :   n
+     dim(w) :   (n+1)*(mg+2) + 2*mg
+     dim(jw):   lg
+</code></pre></div>
 
 <p>on entry, the user has to provide the arrays <code>e</code>, <code>f</code>, <code>g</code>, and <code>h</code>.
   on return, all arrays will be changed by the subroutine.</p>
@@ -262,7 +261,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   
 <tr>
   
-  <td><span class="anchor" id="variable-e%7E4"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-e~4"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -277,7 +276,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   
 <tr>
   
-  <td><span class="anchor" id="variable-f%7E10"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-f~10"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -292,7 +291,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   
 <tr>
   
-  <td><span class="anchor" id="variable-g%7E8"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-g~8"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -307,7 +306,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   
 <tr>
   
-  <td><span class="anchor" id="variable-h%7E2"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-h~2"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -322,7 +321,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   
 <tr>
   
-  <td><span class="anchor" id="variable-le%7E2"></span>integer,</td>
+  <td><span class="anchor" id="variable-le~2"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -337,7 +336,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   
 <tr>
   
-  <td><span class="anchor" id="variable-me%7E10"></span>integer,</td>
+  <td><span class="anchor" id="variable-me~10"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -352,7 +351,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   
 <tr>
   
-  <td><span class="anchor" id="variable-lg%7E2"></span>integer,</td>
+  <td><span class="anchor" id="variable-lg~2"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -367,7 +366,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   
 <tr>
   
-  <td><span class="anchor" id="variable-mg%7E2"></span>integer,</td>
+  <td><span class="anchor" id="variable-mg~2"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -382,7 +381,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   
 <tr>
   
-  <td><span class="anchor" id="variable-n%7E13"></span>integer,</td>
+  <td><span class="anchor" id="variable-n~13"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -397,7 +396,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   
 <tr>
   
-  <td><span class="anchor" id="variable-x%7E13"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-x~13"></span>real(kind=wp),</td>
   <td>intent(out),</td>
   <td></td>
   
@@ -427,7 +426,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   
 <tr>
   
-  <td><span class="anchor" id="variable-w%7E8"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-w~8"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -443,7 +442,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   
 <tr>
   
-  <td><span class="anchor" id="variable-mode%7E7"></span>integer,</td>
+  <td><span class="anchor" id="variable-mode~7"></span>integer,</td>
   <td>intent(out)</td>
   <td></td>
   
@@ -456,21 +455,6 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
 <li><strong><em>4:</em></strong> inequality constraints incompatible,</li>
 <li><strong><em>5:</em></strong> matrix <code>e</code> is not of full rank.</li>
 </ul></td>
-  
-</tr>
-
-  
-  
-  
-  
-<tr>
-  
-  <td><span class="anchor" id="variable-max_iter_ls%7E7"></span>integer,</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
-  <td><strong>max_iter_ls</strong></td><td><p>maximum number of iterations in the <a href="../proc/nnls.html">nnls</a> problem</p></td>
   
 </tr>
 
@@ -491,83 +475,95 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
   <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+<!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: proc~~lsi~~CallsGraph Pages: 1 -->
 <svg id="proclsiCallsGraph" width="242pt" height="154pt"
  viewBox="0.00 0.00 242.00 154.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="proc~~lsi~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 150)">
 <title>proc~~lsi~~CallsGraph</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-150 238,-150 238,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-150 238,-150 238,4 -4,4"/>
 <!-- proc~lsi -->
-<g id="proc~~lsi~~CallsGraph_node1" class="node"><title>proc~lsi</title>
+<g id="proc~~lsi~~CallsGraph_node1" class="node">
+<title>proc~lsi</title>
 <polygon fill="none" stroke="black" points="54,-84 0,-84 0,-60 54,-60 54,-84"/>
 <text text-anchor="middle" x="27" y="-69.6" font-family="Helvetica,sans-Serif" font-size="10.50">lsi</text>
 </g>
+<!-- proc~dnrm2 -->
+<g id="proc~~lsi~~CallsGraph_node2" class="node">
+<title>proc~dnrm2</title>
+<g id="a_proc~~lsi~~CallsGraph_node2"><a xlink:href=".././proc/dnrm2.html" xlink:title="dnrm2">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="234,-146 180,-146 180,-122 234,-122 234,-146"/>
+<text text-anchor="middle" x="207" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
+</a>
+</g>
+</g>
+<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
+<g id="proc~~lsi~~CallsGraph_edge1" class="edge">
+<title>proc~lsi&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M42.82,-84.32C54.81,-93.63 72.52,-105.98 90,-113 115.53,-123.25 146.23,-128.52 169.63,-131.22"/>
+<polygon fill="#000000" stroke="#000000" points="169.52,-134.73 179.83,-132.29 170.25,-127.77 169.52,-134.73"/>
+</g>
+<!-- proc~ddot -->
+<g id="proc~~lsi~~CallsGraph_node3" class="node">
+<title>proc~ddot</title>
+<g id="a_proc~~lsi~~CallsGraph_node3"><a xlink:href=".././proc/ddot.html" xlink:title="ddot">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="234,-62 180,-62 180,-38 234,-38 234,-62"/>
+<text text-anchor="middle" x="207" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
+</a>
+</g>
+</g>
+<!-- proc~lsi&#45;&gt;proc~ddot -->
+<g id="proc~~lsi~~CallsGraph_edge3" class="edge">
+<title>proc~lsi&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M54.26,-68.75C84.85,-64.97 135.55,-58.71 169.84,-54.47"/>
+<polygon fill="#000000" stroke="#000000" points="170.42,-57.92 179.92,-53.22 169.56,-50.98 170.42,-57.92"/>
+</g>
+<!-- proc~daxpy -->
+<g id="proc~~lsi~~CallsGraph_node4" class="node">
+<title>proc~daxpy</title>
+<g id="a_proc~~lsi~~CallsGraph_node4"><a xlink:href=".././proc/daxpy.html" xlink:title="daxpy">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-24 90,-24 90,0 144,0 144,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
+</a>
+</g>
+</g>
+<!-- proc~lsi&#45;&gt;proc~daxpy -->
+<g id="proc~~lsi~~CallsGraph_edge2" class="edge">
+<title>proc~lsi&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M45.81,-59.86C58.45,-51.24 75.63,-39.52 89.83,-29.84"/>
+<polygon fill="#000000" stroke="#000000" points="91.93,-32.65 98.22,-24.12 87.98,-26.87 91.93,-32.65"/>
+</g>
 <!-- proc~ldp -->
-<g id="proc~~lsi~~CallsGraph_node2" class="node"><title>proc~ldp</title>
-<g id="a_proc~~lsi~~CallsGraph_node2"><a xlink:href=".././proc/ldp.html" xlink:title="ldp">
+<g id="proc~~lsi~~CallsGraph_node5" class="node">
+<title>proc~ldp</title>
+<g id="a_proc~~lsi~~CallsGraph_node5"><a xlink:href=".././proc/ldp.html" xlink:title="ldp">
 <polygon fill="#d9534f" stroke="#d9534f" points="144,-104 90,-104 90,-80 144,-80 144,-104"/>
 <text text-anchor="middle" x="117" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ldp</text>
 </a>
 </g>
 </g>
 <!-- proc~lsi&#45;&gt;proc~ldp -->
-<g id="proc~~lsi~~CallsGraph_edge3" class="edge"><title>proc~lsi&#45;&gt;proc~ldp</title>
-<path fill="none" stroke="#000000" d="M54.4029,-78.0007C62.481,-79.8366 71.5067,-81.8879 80.1046,-83.842"/>
-<polygon fill="#000000" stroke="#000000" points="79.392,-87.2692 89.919,-86.0725 80.9434,-80.4432 79.392,-87.2692"/>
-</g>
-<!-- proc~daxpy -->
-<g id="proc~~lsi~~CallsGraph_node3" class="node"><title>proc~daxpy</title>
-<g id="a_proc~~lsi~~CallsGraph_node3"><a xlink:href=".././proc/daxpy.html" xlink:title="daxpy">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-24 90,-24 90,-0 144,-0 144,-24"/>
-<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
-</a>
-</g>
-</g>
-<!-- proc~lsi&#45;&gt;proc~daxpy -->
-<g id="proc~~lsi~~CallsGraph_edge1" class="edge"><title>proc~lsi&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M45.8081,-59.8581C58.4516,-51.2375 75.6317,-39.5239 89.8302,-29.843"/>
-<polygon fill="#000000" stroke="#000000" points="91.9278,-32.6491 98.2184,-24.1238 87.9844,-26.8654 91.9278,-32.6491"/>
-</g>
-<!-- proc~ddot -->
-<g id="proc~~lsi~~CallsGraph_node4" class="node"><title>proc~ddot</title>
-<g id="a_proc~~lsi~~CallsGraph_node4"><a xlink:href=".././proc/ddot.html" xlink:title="ddot">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="234,-146 180,-146 180,-122 234,-122 234,-146"/>
-<text text-anchor="middle" x="207" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
-</a>
-</g>
-</g>
-<!-- proc~lsi&#45;&gt;proc~ddot -->
-<g id="proc~~lsi~~CallsGraph_edge2" class="edge"><title>proc~lsi&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M42.8193,-84.3172C54.808,-93.6335 72.5151,-105.982 90,-113 115.53,-123.247 146.23,-128.523 169.632,-131.223"/>
-<polygon fill="#000000" stroke="#000000" points="169.516,-134.73 179.827,-132.291 170.246,-127.768 169.516,-134.73"/>
-</g>
-<!-- proc~dnrm2 -->
-<g id="proc~~lsi~~CallsGraph_node5" class="node"><title>proc~dnrm2</title>
-<g id="a_proc~~lsi~~CallsGraph_node5"><a xlink:href=".././proc/dnrm2.html" xlink:title="dnrm2">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="234,-62 180,-62 180,-38 234,-38 234,-62"/>
-<text text-anchor="middle" x="207" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
-</a>
-</g>
-</g>
-<!-- proc~lsi&#45;&gt;proc~dnrm2 -->
-<g id="proc~~lsi~~CallsGraph_edge4" class="edge"><title>proc~lsi&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M54.2645,-68.7538C84.8509,-64.9735 135.551,-58.7072 169.843,-54.4689"/>
-<polygon fill="#000000" stroke="#000000" points="170.423,-57.9239 179.918,-53.2237 169.564,-50.9768 170.423,-57.9239"/>
-</g>
-<!-- proc~ldp&#45;&gt;proc~ddot -->
-<g id="proc~~lsi~~CallsGraph_edge5" class="edge"><title>proc~ldp&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M143.453,-104.148C152.21,-108.327 162.165,-113.079 171.518,-117.543"/>
-<polygon fill="#000000" stroke="#000000" points="170.072,-120.73 180.604,-121.879 173.087,-114.413 170.072,-120.73"/>
+<g id="proc~~lsi~~CallsGraph_edge4" class="edge">
+<title>proc~lsi&#45;&gt;proc~ldp</title>
+<path fill="none" stroke="#000000" d="M54.4,-78C62.48,-79.84 71.51,-81.89 80.1,-83.84"/>
+<polygon fill="#000000" stroke="#000000" points="79.39,-87.27 89.92,-86.07 80.94,-80.44 79.39,-87.27"/>
 </g>
 <!-- proc~ldp&#45;&gt;proc~dnrm2 -->
-<g id="proc~~lsi~~CallsGraph_edge7" class="edge"><title>proc~ldp&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M143.453,-79.8519C152.21,-75.6727 162.165,-70.9211 171.518,-66.4571"/>
-<polygon fill="#000000" stroke="#000000" points="173.087,-69.5869 180.604,-62.1208 170.072,-63.2695 173.087,-69.5869"/>
+<g id="proc~~lsi~~CallsGraph_edge5" class="edge">
+<title>proc~ldp&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M143.45,-104.15C152.21,-108.33 162.17,-113.08 171.52,-117.54"/>
+<polygon fill="#000000" stroke="#000000" points="170.07,-120.73 180.6,-121.88 173.09,-114.41 170.07,-120.73"/>
+</g>
+<!-- proc~ldp&#45;&gt;proc~ddot -->
+<g id="proc~~lsi~~CallsGraph_edge6" class="edge">
+<title>proc~ldp&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M143.45,-79.85C152.21,-75.67 162.17,-70.92 171.52,-66.46"/>
+<polygon fill="#000000" stroke="#000000" points="173.09,-69.59 180.6,-62.12 170.07,-63.27 173.09,-69.59"/>
 </g>
 <!-- proc~diff -->
-<g id="proc~~lsi~~CallsGraph_node6" class="node"><title>proc~diff</title>
+<g id="proc~~lsi~~CallsGraph_node6" class="node">
+<title>proc~diff</title>
 <g id="a_proc~~lsi~~CallsGraph_node6"><a xlink:href=".././proc/diff.html" xlink:title="diff">
 <polygon fill="#d94e8f" stroke="#d94e8f" points="234,-104 180,-104 180,-80 234,-80 234,-104"/>
 <text text-anchor="middle" x="207" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
@@ -575,9 +571,10 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
 </g>
 </g>
 <!-- proc~ldp&#45;&gt;proc~diff -->
-<g id="proc~~lsi~~CallsGraph_edge6" class="edge"><title>proc~ldp&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M144.403,-92C152.393,-92 161.311,-92 169.824,-92"/>
-<polygon fill="#000000" stroke="#000000" points="169.919,-95.5001 179.919,-92 169.919,-88.5001 169.919,-95.5001"/>
+<g id="proc~~lsi~~CallsGraph_edge7" class="edge">
+<title>proc~ldp&#45;&gt;proc~diff</title>
+<path fill="none" stroke="#000000" d="M144.4,-92C152.39,-92 161.31,-92 169.82,-92"/>
+<polygon fill="#000000" stroke="#000000" points="169.92,-95.5 179.92,-92 169.92,-88.5 169.92,-95.5"/>
 </g>
 </g>
 </svg>
@@ -586,43 +583,49 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+<!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: Graph Key Pages: 1 -->
-<svg width="590pt" height="32pt"
- viewBox="0.00 0.00 589.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="597pt" height="32pt"
+ viewBox="0.00 0.00 596.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
 <title>Graph Key</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-28 585.5,-28 585.5,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 592.5,-28 592.5,4 -4,4"/>
 <!-- Subroutine -->
-<g id="node1" class="node"><title>Subroutine</title>
-<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,-0 70,-0 70,-24"/>
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
 <text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
 </g>
 <!-- Function -->
-<g id="node2" class="node"><title>Function</title>
-<polygon fill="#d94e8f" stroke="#d94e8f" points="145.5,-24 88.5,-24 88.5,-0 145.5,-0 145.5,-24"/>
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
 <text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
 </g>
 <!-- Interface -->
-<g id="node3" class="node"><title>Interface</title>
-<polygon fill="#a7506f" stroke="#a7506f" points="222,-24 164,-24 164,-0 222,-0 222,-24"/>
-<text text-anchor="middle" x="193" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
 </g>
 <!-- Unknown Procedure Type -->
-<g id="node4" class="node"><title>Unknown Procedure Type</title>
-<polygon fill="#777777" stroke="#777777" points="385.5,-24 240.5,-24 240.5,-0 385.5,-0 385.5,-24"/>
-<text text-anchor="middle" x="313" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="388.5,-24 243.5,-24 243.5,0 388.5,0 388.5,-24"/>
+<text text-anchor="middle" x="316" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
 </g>
 <!-- Program -->
-<g id="node5" class="node"><title>Program</title>
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="460,-24 404,-24 404,-0 460,-0 460,-24"/>
-<text text-anchor="middle" x="432" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="465,-24 407,-24 407,0 465,0 465,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
 </g>
 <!-- This Page&#39;s Entity -->
-<g id="node6" class="node"><title>This Page&#39;s Entity</title>
-<polygon fill="none" stroke="black" points="581.5,-24 478.5,-24 478.5,-0 581.5,-0 581.5,-24"/>
-<text text-anchor="middle" x="530" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="588.5,-24 483.5,-24 483.5,0 588.5,0 588.5,-24"/>
+<text text-anchor="middle" x="536" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
 </g>
 </g>
 </svg>
@@ -697,7 +700,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">lsi</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">le</span><span class="p">,</span><span class="n">me</span><span class="p">,</span><span class="n">lg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnorm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">,</span><span class="n">max_iter_ls</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">lsi</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">le</span><span class="p">,</span><span class="n">me</span><span class="p">,</span><span class="n">lg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnorm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
 
     <span class="k">implicit none</span>
 
@@ -721,7 +724,6 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
                                                      <span class="c">!! * ***3:*** iteration count exceeded by [[nnls]],</span>
                                                      <span class="c">!! * ***4:*** inequality constraints incompatible,</span>
                                                      <span class="c">!! * ***5:*** matrix `e` is not of full rank.</span>
-    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">max_iter_ls</span> <span class="c">!! maximum number of iterations in the [[nnls]] problem</span>
 
     <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t</span>
@@ -747,7 +749,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
 
     <span class="c">!  solve least distance problem</span>
 
-    <span class="k">call </span><span class="n">ldp</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">lg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnorm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">,</span><span class="n">max_iter_ls</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">ldp</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">lg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnorm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
     <span class="k">if</span> <span class="p">(</span> <span class="n">mode</span><span class="o">==</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
 
         <span class="c">!  solution of original problem</span>
@@ -778,7 +780,7 @@ private subroutine lsi(e, f, g, h, le, me, lg, mg, n, x, xnorm, w, mode, max_ite
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+        <div class="col-xs-6 col-md-4"><p>&copy; 2021 
                                           </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">

@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 4.2% of total for procedures.">89 statements</a>
+    title=" 5.2% of total for procedures.">88 statements</a>
      </li> 
      
      
@@ -203,7 +203,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w, mode, max_iter_ls)
+private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w, mode)
     
     
    
@@ -222,7 +222,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
 <p>using QR decomposition &amp; orthogonal basis of nullspace of <script type="math/tex"> C </script>.</p>
 <p>The following dimensions of the arrays defining the problem
   are necessary:</p>
-<div class="codehilite"><pre><span></span>        <span class="nv">dim</span><span class="ss">(</span><span class="nv">c</span><span class="ss">)</span> :   <span class="nv">formal</span> <span class="ss">(</span><span class="nv">lc</span>,<span class="nv">n</span><span class="ss">)</span>,    <span class="nv">actual</span> <span class="ss">(</span><span class="nv">mc</span>,<span class="nv">n</span><span class="ss">)</span>
+<div class="codehilite"><pre><span></span><code>        <span class="nv">dim</span><span class="ss">(</span><span class="nv">c</span><span class="ss">)</span> :   <span class="nv">formal</span> <span class="ss">(</span><span class="nv">lc</span>,<span class="nv">n</span><span class="ss">)</span>,    <span class="nv">actual</span> <span class="ss">(</span><span class="nv">mc</span>,<span class="nv">n</span><span class="ss">)</span>
         <span class="nv">dim</span><span class="ss">(</span><span class="nv">d</span><span class="ss">)</span> :   <span class="nv">formal</span> <span class="ss">(</span><span class="nv">lc</span>  <span class="ss">)</span>,    <span class="nv">actual</span> <span class="ss">(</span><span class="nv">mc</span>  <span class="ss">)</span>
         <span class="nv">dim</span><span class="ss">(</span><span class="nv">e</span><span class="ss">)</span> :   <span class="nv">formal</span> <span class="ss">(</span><span class="nv">le</span>,<span class="nv">n</span><span class="ss">)</span>,    <span class="nv">actual</span> <span class="ss">(</span><span class="nv">me</span>,<span class="nv">n</span><span class="ss">)</span>
         <span class="nv">dim</span><span class="ss">(</span><span class="nv">f</span><span class="ss">)</span> :   <span class="nv">formal</span> <span class="ss">(</span><span class="nv">le</span>  <span class="ss">)</span>,    <span class="nv">actual</span> <span class="ss">(</span><span class="nv">me</span>  <span class="ss">)</span>
@@ -232,8 +232,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
         <span class="nv">dim</span><span class="ss">(</span><span class="nv">w</span><span class="ss">)</span> :   <span class="mi">2</span><span class="o">*</span><span class="nv">mc</span><span class="o">+</span><span class="nv">me</span><span class="o">+</span><span class="ss">(</span><span class="nv">me</span><span class="o">+</span><span class="nv">mg</span><span class="ss">)</span><span class="o">*</span><span class="ss">(</span><span class="nv">n</span><span class="o">-</span><span class="nv">mc</span><span class="ss">)</span>  <span class="k">for</span> <span class="nv">lsei</span>
                  <span class="o">+</span><span class="ss">(</span><span class="nv">n</span><span class="o">-</span><span class="nv">mc</span><span class="o">+</span><span class="mi">1</span><span class="ss">)</span><span class="o">*</span><span class="ss">(</span><span class="nv">mg</span><span class="o">+</span><span class="mi">2</span><span class="ss">)</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="nv">mg</span>     <span class="k">for</span> <span class="nv">lsi</span>
         <span class="nv">dim</span><span class="ss">(</span><span class="nv">jw</span><span class="ss">)</span>:   <span class="nv">max</span><span class="ss">(</span><span class="nv">mg</span>,<span class="nv">l</span><span class="ss">)</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>On entry, the user has to provide the arrays C, d, E, f, G, and h.
   On return, all arrays will be changed by the subroutine.</p>
@@ -266,7 +265,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-c%7E5"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-c~5"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -281,7 +280,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-d%7E4"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-d~4"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -296,7 +295,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-e%7E3"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-e~3"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -311,7 +310,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-f%7E9"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-f~9"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -326,7 +325,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-g%7E7"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-g~7"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -401,7 +400,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-me%7E9"></span>integer,</td>
+  <td><span class="anchor" id="variable-me~9"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -446,7 +445,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-n%7E12"></span>integer,</td>
+  <td><span class="anchor" id="variable-n~12"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -461,7 +460,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-x%7E12"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-x~12"></span>real(kind=wp),</td>
   <td>intent(out),</td>
   <td></td>
   
@@ -491,7 +490,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-w%7E7"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-w~7"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -507,7 +506,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   
 <tr>
   
-  <td><span class="anchor" id="variable-mode%7E6"></span>integer,</td>
+  <td><span class="anchor" id="variable-mode~6"></span>integer,</td>
   <td>intent(out)</td>
   <td></td>
   
@@ -522,21 +521,6 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
 <li><strong><em>6:</em></strong> matrix <code>c</code> is not of full rank,</li>
 <li><strong><em>7:</em></strong> rank defect in <a href="../proc/hfti.html">hfti</a></li>
 </ul></td>
-  
-</tr>
-
-  
-  
-  
-  
-<tr>
-  
-  <td><span class="anchor" id="variable-max_iter_ls%7E6"></span>integer,</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
-  <td><strong>max_iter_ls</strong></td><td><p>maximum number of iterations in the <a href="../proc/nnls.html">nnls</a> problem</p></td>
   
 </tr>
 
@@ -557,44 +541,49 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
   <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+<!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: proc~~lsei~~CallsGraph Pages: 1 -->
 <svg id="proclseiCallsGraph" width="152pt" height="74pt"
  viewBox="0.00 0.00 152.00 74.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="proc~~lsei~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 70)">
 <title>proc~~lsei~~CallsGraph</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-70 148,-70 148,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-70 148,-70 148,4 -4,4"/>
 <!-- proc~lsei -->
-<g id="proc~~lsei~~CallsGraph_node1" class="node"><title>proc~lsei</title>
+<g id="proc~~lsei~~CallsGraph_node1" class="node">
+<title>proc~lsei</title>
 <polygon fill="none" stroke="black" points="54,-45 0,-45 0,-21 54,-21 54,-45"/>
 <text text-anchor="middle" x="27" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50">lsei</text>
 </g>
-<!-- proc~ddot -->
-<g id="proc~~lsei~~CallsGraph_node2" class="node"><title>proc~ddot</title>
-<g id="a_proc~~lsei~~CallsGraph_node2"><a xlink:href=".././proc/ddot.html" xlink:title="ddot">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-66 90,-66 90,-42 144,-42 144,-66"/>
-<text text-anchor="middle" x="117" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
-</a>
-</g>
-</g>
-<!-- proc~lsei&#45;&gt;proc~ddot -->
-<g id="proc~~lsei~~CallsGraph_edge1" class="edge"><title>proc~lsei&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M54.4029,-39.3007C62.481,-41.2284 71.5067,-43.3823 80.1046,-45.4341"/>
-<polygon fill="#000000" stroke="#000000" points="79.3797,-48.8593 89.919,-47.7761 81.0046,-42.0505 79.3797,-48.8593"/>
-</g>
 <!-- proc~dnrm2 -->
-<g id="proc~~lsei~~CallsGraph_node3" class="node"><title>proc~dnrm2</title>
-<g id="a_proc~~lsei~~CallsGraph_node3"><a xlink:href=".././proc/dnrm2.html" xlink:title="dnrm2">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-24 90,-24 90,-0 144,-0 144,-24"/>
-<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
+<g id="proc~~lsei~~CallsGraph_node2" class="node">
+<title>proc~dnrm2</title>
+<g id="a_proc~~lsei~~CallsGraph_node2"><a xlink:href=".././proc/dnrm2.html" xlink:title="dnrm2">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-66 90,-66 90,-42 144,-42 144,-66"/>
+<text text-anchor="middle" x="117" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
 </a>
 </g>
 </g>
 <!-- proc~lsei&#45;&gt;proc~dnrm2 -->
-<g id="proc~~lsei~~CallsGraph_edge2" class="edge"><title>proc~lsei&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M54.4029,-26.6993C62.481,-24.7716 71.5067,-22.6177 80.1046,-20.5659"/>
-<polygon fill="#000000" stroke="#000000" points="81.0046,-23.9495 89.919,-18.2239 79.3797,-17.1407 81.0046,-23.9495"/>
+<g id="proc~~lsei~~CallsGraph_edge1" class="edge">
+<title>proc~lsei&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M54.4,-39.3C62.48,-41.23 71.51,-43.38 80.1,-45.43"/>
+<polygon fill="#000000" stroke="#000000" points="79.38,-48.86 89.92,-47.78 81,-42.05 79.38,-48.86"/>
+</g>
+<!-- proc~ddot -->
+<g id="proc~~lsei~~CallsGraph_node3" class="node">
+<title>proc~ddot</title>
+<g id="a_proc~~lsei~~CallsGraph_node3"><a xlink:href=".././proc/ddot.html" xlink:title="ddot">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-24 90,-24 90,0 144,0 144,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
+</a>
+</g>
+</g>
+<!-- proc~lsei&#45;&gt;proc~ddot -->
+<g id="proc~~lsei~~CallsGraph_edge2" class="edge">
+<title>proc~lsei&#45;&gt;proc~ddot</title>
+<path fill="none" stroke="#000000" d="M54.4,-26.7C62.48,-24.77 71.51,-22.62 80.1,-20.57"/>
+<polygon fill="#000000" stroke="#000000" points="81,-23.95 89.92,-18.22 79.38,-17.14 81,-23.95"/>
 </g>
 </g>
 </svg>
@@ -603,43 +592,49 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+<!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: Graph Key Pages: 1 -->
-<svg width="590pt" height="32pt"
- viewBox="0.00 0.00 589.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="597pt" height="32pt"
+ viewBox="0.00 0.00 596.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
 <title>Graph Key</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-28 585.5,-28 585.5,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 592.5,-28 592.5,4 -4,4"/>
 <!-- Subroutine -->
-<g id="node1" class="node"><title>Subroutine</title>
-<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,-0 70,-0 70,-24"/>
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
 <text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
 </g>
 <!-- Function -->
-<g id="node2" class="node"><title>Function</title>
-<polygon fill="#d94e8f" stroke="#d94e8f" points="145.5,-24 88.5,-24 88.5,-0 145.5,-0 145.5,-24"/>
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
 <text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
 </g>
 <!-- Interface -->
-<g id="node3" class="node"><title>Interface</title>
-<polygon fill="#a7506f" stroke="#a7506f" points="222,-24 164,-24 164,-0 222,-0 222,-24"/>
-<text text-anchor="middle" x="193" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
 </g>
 <!-- Unknown Procedure Type -->
-<g id="node4" class="node"><title>Unknown Procedure Type</title>
-<polygon fill="#777777" stroke="#777777" points="385.5,-24 240.5,-24 240.5,-0 385.5,-0 385.5,-24"/>
-<text text-anchor="middle" x="313" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="388.5,-24 243.5,-24 243.5,0 388.5,0 388.5,-24"/>
+<text text-anchor="middle" x="316" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
 </g>
 <!-- Program -->
-<g id="node5" class="node"><title>Program</title>
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="460,-24 404,-24 404,-0 460,-0 460,-24"/>
-<text text-anchor="middle" x="432" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="465,-24 407,-24 407,0 465,0 465,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
 </g>
 <!-- This Page&#39;s Entity -->
-<g id="node6" class="node"><title>This Page&#39;s Entity</title>
-<polygon fill="none" stroke="black" points="581.5,-24 478.5,-24 478.5,-0 581.5,-0 581.5,-24"/>
-<text text-anchor="middle" x="530" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="588.5,-24 483.5,-24 483.5,0 588.5,0 588.5,-24"/>
+<text text-anchor="middle" x="536" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
 </g>
 </g>
 </svg>
@@ -714,7 +709,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">lsei</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">lc</span><span class="p">,</span><span class="n">mc</span><span class="p">,</span><span class="n">le</span><span class="p">,</span><span class="n">me</span><span class="p">,</span><span class="n">lg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnrm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">,</span><span class="n">max_iter_ls</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">lsei</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">lc</span><span class="p">,</span><span class="n">mc</span><span class="p">,</span><span class="n">le</span><span class="p">,</span><span class="n">me</span><span class="p">,</span><span class="n">lg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnrm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
 
     <span class="k">implicit none</span>
 
@@ -744,7 +739,6 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
                                                     <span class="c">!! * ***5:*** matrix `e` is not of full rank,</span>
                                                     <span class="c">!! * ***6:*** matrix `c` is not of full rank,</span>
                                                     <span class="c">!! * ***7:*** rank defect in [[hfti]]</span>
-    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">max_iter_ls</span> <span class="c">!! maximum number of iterations in the [[nnls]] problem</span>
 
     <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span> <span class="p">,</span> <span class="n">ie</span><span class="p">,</span> <span class="k">if</span> <span class="p">,</span> <span class="n">ig</span> <span class="p">,</span> <span class="n">iw</span> <span class="p">,</span> <span class="n">j</span> <span class="p">,</span> <span class="n">k</span> <span class="p">,</span> <span class="n">krank</span> <span class="p">,</span> <span class="n">l</span> <span class="p">,</span> <span class="n">mc1</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t</span> <span class="p">,</span> <span class="n">dum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -801,8 +795,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
                     <span class="n">h</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">h</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">-</span> <span class="n">ddot</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span><span class="n">g</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">lg</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
                 <span class="k">end do</span>
 <span class="k">                call </span><span class="n">lsi</span><span class="p">(</span><span class="n">w</span><span class="p">(</span><span class="n">ie</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="k">if</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="n">ig</span><span class="p">),</span><span class="n">h</span><span class="p">,</span><span class="n">me</span><span class="p">,</span><span class="n">me</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">l</span><span class="p">,</span><span class="n">x</span><span class="p">(</span><span class="n">mc1</span><span class="p">),</span><span class="n">xnrm</span><span class="p">,</span>  <span class="p">&amp;</span>
-                         <span class="n">w</span><span class="p">(</span><span class="n">mc1</span><span class="p">),</span><span class="n">mode</span><span class="p">,</span><span class="n">max_iter_ls</span><span class="p">)</span>
-
+                         <span class="n">w</span><span class="p">(</span><span class="n">mc1</span><span class="p">),</span><span class="n">mode</span><span class="p">)</span>
                 <span class="k">if</span> <span class="p">(</span> <span class="n">mc</span><span class="o">==</span><span class="mi">0</span> <span class="p">)</span> <span class="k">return</span>
 <span class="k">                </span><span class="n">t</span> <span class="o">=</span> <span class="n">dnrm2</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
                 <span class="n">xnrm</span> <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">xnrm</span><span class="o">*</span><span class="n">xnrm</span><span class="o">+</span><span class="n">t</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
@@ -858,7 +851,7 @@ private subroutine lsei(c, d, e, f, g, h, lc, mc, le, me, lg, mg, n, x, xnrm, w,
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+        <div class="col-xs-6 col-md-4"><p>&copy; 2021 
                                           </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">

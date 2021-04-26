@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 2.6% of total for procedures.">55 statements</a>
+    title=" 3.2% of total for procedures.">54 statements</a>
      </li> 
      
      
@@ -203,7 +203,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w, l_w, sdat, ldat, alphamin, alphamax, tolf, toldf, toldx, max_iter_ls)
+public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w, l_w, sdat, ldat, alphamin, alphamax, tolf, toldf, toldx)
     
     
    
@@ -279,7 +279,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-m%7E5"></span>integer,</td>
+  <td><span class="anchor" id="variable-m~5"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -295,7 +295,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-meq%7E3"></span>integer,</td>
+  <td><span class="anchor" id="variable-meq~3"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -327,7 +327,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-n%7E9"></span>integer,</td>
+  <td><span class="anchor" id="variable-n~9"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -343,7 +343,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-x%7E9"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-x~9"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -360,7 +360,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-xl%7E3"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-xl~3"></span>real(kind=wp),</td>
   <td>intent(in),</td>
   <td></td>
   
@@ -375,7 +375,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-xu%7E3"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-xu~3"></span>real(kind=wp),</td>
   <td>intent(in),</td>
   <td></td>
   
@@ -390,7 +390,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-f%7E7"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-f~7"></span>real(kind=wp),</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -405,7 +405,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-c%7E3"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-c~3"></span>real(kind=wp),</td>
   <td>intent(in),</td>
   <td></td>
   
@@ -423,7 +423,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-g%7E4"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-g~4"></span>real(kind=wp),</td>
   <td>intent(in),</td>
   <td></td>
   
@@ -440,7 +440,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-a%7E4"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-a~4"></span>real(kind=wp),</td>
   <td>intent(in),</td>
   <td></td>
   
@@ -458,7 +458,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-acc%7E4"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-acc~4"></span>real(kind=wp),</td>
   <td>intent(inout)</td>
   <td></td>
   
@@ -475,7 +475,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-iter%7E2"></span>integer,</td>
+  <td><span class="anchor" id="variable-iter~2"></span>integer,</td>
   <td>intent(inout)</td>
   <td></td>
   
@@ -491,7 +491,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-mode%7E3"></span>integer,</td>
+  <td><span class="anchor" id="variable-mode~3"></span>integer,</td>
   <td>intent(inout)</td>
   <td></td>
   
@@ -533,7 +533,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-w%7E4"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-w~4"></span>real(kind=wp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -560,7 +560,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-l_w%7E2"></span>integer,</td>
+  <td><span class="anchor" id="variable-l_w~2"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -612,7 +612,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-alphamin%7E3"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-alphamin~3"></span>real(kind=wp),</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -629,7 +629,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-alphamax%7E3"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-alphamax~3"></span>real(kind=wp),</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -646,7 +646,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-tolf%7E4"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-tolf~4"></span>real(kind=wp),</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -661,7 +661,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-toldf%7E4"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-toldf~4"></span>real(kind=wp),</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -676,27 +676,12 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   
 <tr>
   
-  <td><span class="anchor" id="variable-toldx%7E4"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-toldx~4"></span>real(kind=wp),</td>
   <td>intent(in)</td>
   <td></td>
   
   <td></td><td>::</td>
   <td><strong>toldx</strong></td><td><p>stopping criterion if <script type="math/tex"> ||x_{n+1} - x_n|| < toldx </script> then stop.</p></td>
-  
-</tr>
-
-  
-  
-  
-  
-<tr>
-  
-  <td><span class="anchor" id="variable-max_iter_ls%7E3"></span>integer,</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
-  <td><strong>max_iter_ls</strong></td><td><p>maximum number of iterations in the <a href="../proc/nnls.html">nnls</a> problem</p></td>
   
 </tr>
 
@@ -718,31 +703,34 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
   <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+<!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: proc~~slsqp~~CalledByGraph Pages: 1 -->
-<svg id="procslsqpCalledByGraph" width="186pt" height="32pt"
- viewBox="0.00 0.00 186.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg id="procslsqpCalledByGraph" width="187pt" height="32pt"
+ viewBox="0.00 0.00 187.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="proc~~slsqp~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
 <title>proc~~slsqp~~CalledByGraph</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-28 182,-28 182,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 183,-28 183,4 -4,4"/>
 <!-- proc~slsqp -->
-<g id="proc~~slsqp~~CalledByGraph_node1" class="node"><title>proc~slsqp</title>
-<polygon fill="none" stroke="black" points="178,-24 124,-24 124,-0 178,-0 178,-24"/>
-<text text-anchor="middle" x="151" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp</text>
+<g id="proc~~slsqp~~CalledByGraph_node1" class="node">
+<title>proc~slsqp</title>
+<polygon fill="none" stroke="black" points="179,-24 125,-24 125,0 179,0 179,-24"/>
+<text text-anchor="middle" x="152" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">slsqp</text>
 </g>
 <!-- proc~slsqp_wrapper -->
-<g id="proc~~slsqp~~CalledByGraph_node2" class="node"><title>proc~slsqp_wrapper</title>
+<g id="proc~~slsqp~~CalledByGraph_node2" class="node">
+<title>proc~slsqp_wrapper</title>
 <g id="a_proc~~slsqp~~CalledByGraph_node2"><a xlink:href=".././proc/slsqp_wrapper.html" xlink:title="slsqp_wrapper">
-<polygon fill="#d9534f" stroke="#d9534f" points="88,-24 7.10543e-15,-24 7.10543e-15,-0 88,-0 88,-24"/>
-<text text-anchor="middle" x="44" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="89,-24 0,-24 0,0 89,0 89,-24"/>
+<text text-anchor="middle" x="44.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqp_wrapper</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqp_wrapper&#45;&gt;proc~slsqp -->
-<g id="proc~~slsqp~~CalledByGraph_edge1" class="edge"><title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
-<path fill="none" stroke="#000000" d="M88.0105,-12C96.5323,-12 105.399,-12 113.672,-12"/>
-<polygon fill="#000000" stroke="#000000" points="113.763,-15.5001 123.763,-12 113.763,-8.5001 113.763,-15.5001"/>
+<g id="proc~~slsqp~~CalledByGraph_edge1" class="edge">
+<title>proc~slsqp_wrapper&#45;&gt;proc~slsqp</title>
+<path fill="none" stroke="#000000" d="M89.02,-12C97.56,-12 106.43,-12 114.71,-12"/>
+<polygon fill="#000000" stroke="#000000" points="114.8,-15.5 124.8,-12 114.8,-8.5 114.8,-15.5"/>
 </g>
 </g>
 </svg>
@@ -751,43 +739,49 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+<!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: Graph Key Pages: 1 -->
-<svg width="590pt" height="32pt"
- viewBox="0.00 0.00 589.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="597pt" height="32pt"
+ viewBox="0.00 0.00 596.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
 <title>Graph Key</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-28 585.5,-28 585.5,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 592.5,-28 592.5,4 -4,4"/>
 <!-- Subroutine -->
-<g id="node1" class="node"><title>Subroutine</title>
-<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,-0 70,-0 70,-24"/>
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="70,-24 0,-24 0,0 70,0 70,-24"/>
 <text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
 </g>
 <!-- Function -->
-<g id="node2" class="node"><title>Function</title>
-<polygon fill="#d94e8f" stroke="#d94e8f" points="145.5,-24 88.5,-24 88.5,-0 145.5,-0 145.5,-24"/>
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="146,-24 88,-24 88,0 146,0 146,-24"/>
 <text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
 </g>
 <!-- Interface -->
-<g id="node3" class="node"><title>Interface</title>
-<polygon fill="#a7506f" stroke="#a7506f" points="222,-24 164,-24 164,-0 222,-0 222,-24"/>
-<text text-anchor="middle" x="193" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="225.5,-24 164.5,-24 164.5,0 225.5,0 225.5,-24"/>
+<text text-anchor="middle" x="195" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
 </g>
 <!-- Unknown Procedure Type -->
-<g id="node4" class="node"><title>Unknown Procedure Type</title>
-<polygon fill="#777777" stroke="#777777" points="385.5,-24 240.5,-24 240.5,-0 385.5,-0 385.5,-24"/>
-<text text-anchor="middle" x="313" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="388.5,-24 243.5,-24 243.5,0 388.5,0 388.5,-24"/>
+<text text-anchor="middle" x="316" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
 </g>
 <!-- Program -->
-<g id="node5" class="node"><title>Program</title>
-<polygon fill="#f0ad4e" stroke="#f0ad4e" points="460,-24 404,-24 404,-0 460,-0 460,-24"/>
-<text text-anchor="middle" x="432" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="465,-24 407,-24 407,0 465,0 465,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
 </g>
 <!-- This Page&#39;s Entity -->
-<g id="node6" class="node"><title>This Page&#39;s Entity</title>
-<polygon fill="none" stroke="black" points="581.5,-24 478.5,-24 478.5,-0 581.5,-0 581.5,-24"/>
-<text text-anchor="middle" x="530" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="588.5,-24 483.5,-24 483.5,0 588.5,0 588.5,-24"/>
+<text text-anchor="middle" x="536" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
 </g>
 </g>
 </svg>
@@ -862,7 +856,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
     <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">slsqp</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">meq</span><span class="p">,</span><span class="n">la</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">acc</span><span class="p">,</span><span class="n">iter</span><span class="p">,</span><span class="n">mode</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">l_w</span><span class="p">,</span> <span class="p">&amp;</span>
-                     <span class="n">sdat</span><span class="p">,</span><span class="n">ldat</span><span class="p">,</span><span class="n">alphamin</span><span class="p">,</span><span class="n">alphamax</span><span class="p">,</span><span class="n">tolf</span><span class="p">,</span><span class="n">toldf</span><span class="p">,</span><span class="n">toldx</span><span class="p">,</span><span class="n">max_iter_ls</span><span class="p">)</span>
+                     <span class="n">sdat</span><span class="p">,</span><span class="n">ldat</span><span class="p">,</span><span class="n">alphamin</span><span class="p">,</span><span class="n">alphamax</span><span class="p">,</span><span class="n">tolf</span><span class="p">,</span><span class="n">toldf</span><span class="p">,</span><span class="n">toldx</span><span class="p">)</span>
 
     <span class="k">implicit none</span>
 
@@ -951,7 +945,6 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">tolf</span>      <span class="c">!! stopping criterion if \( |f| &lt; tolf \) then stop.</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">toldf</span>     <span class="c">!! stopping criterion if \( |f_{n+1} - f_n| &lt; toldf \) then stop.</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">toldx</span>     <span class="c">!! stopping criterion if \( ||x_{n+1} - x_n|| &lt; toldx \) then stop.</span>
-    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">max_iter_ls</span> <span class="c">!! maximum number of iterations in the [[nnls]] problem</span>
 
     <span class="kt">integer</span> <span class="kd">::</span> <span class="n">il</span> <span class="p">,</span> <span class="n">im</span> <span class="p">,</span> <span class="n">ir</span> <span class="p">,</span> <span class="k">is</span> <span class="p">,</span> <span class="n">iu</span> <span class="p">,</span> <span class="n">iv</span> <span class="p">,</span> <span class="n">iw</span> <span class="p">,</span> <span class="n">ix</span> <span class="p">,</span> <span class="n">mineq</span><span class="p">,</span> <span class="n">n1</span>
 
@@ -995,7 +988,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
                 <span class="n">sdat</span><span class="p">%</span><span class="n">t</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">f0</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">h1</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">h2</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">h3</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">h4</span><span class="p">,&amp;</span>
                 <span class="n">sdat</span><span class="p">%</span><span class="n">n1</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">n2</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">n3</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">t0</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">gs</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">tol</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">line</span><span class="p">,&amp;</span>
                 <span class="n">sdat</span><span class="p">%</span><span class="n">alpha</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">iexact</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">incons</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">ireset</span><span class="p">,</span><span class="n">sdat</span><span class="p">%</span><span class="n">itermx</span><span class="p">,&amp;</span>
-                <span class="n">ldat</span><span class="p">,</span><span class="n">alphamin</span><span class="p">,</span><span class="n">alphamax</span><span class="p">,</span><span class="n">tolf</span><span class="p">,</span><span class="n">toldf</span><span class="p">,</span><span class="n">toldx</span><span class="p">,</span><span class="n">max_iter_ls</span><span class="p">)</span>
+                <span class="n">ldat</span><span class="p">,</span><span class="n">alphamin</span><span class="p">,</span><span class="n">alphamax</span><span class="p">,</span><span class="n">tolf</span><span class="p">,</span><span class="n">toldf</span><span class="p">,</span><span class="n">toldx</span><span class="p">)</span>
 
     <span class="k">end subroutine </span><span class="n">slsqp</span>
 </pre></div>
@@ -1013,7 +1006,7 @@ public subroutine slsqp(m, meq, la, n, x, xl, xu, f, c, g, a, acc, iter, mode, w
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 
+        <div class="col-xs-6 col-md-4"><p>&copy; 2021 
                                           </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">
