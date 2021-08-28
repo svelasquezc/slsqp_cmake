@@ -156,7 +156,7 @@
 <li>Some new features were added to support printing error  messages and reporting iterations to the user.</li>
 <li>The user can now specify the max and min <code>alpha</code> to use during the line search.</li>
 <li>The user can supply a routine to compute the gradients of the objective function and constriants, or allow the code to estimate them using finite differences (backward, forward, or central).</li>
-<li>The documentation strings in the code have been converted to <a href="https://github.com/cmacmackin/ford">FORD</a> format, allowing for <a href="http://jacobwilliams.github.io/slsqp/">nicely formatted documentation</a> to be auto-generated.</li>
+<li>The documentation strings in the code have been converted to <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a> format, allowing for <a href="http://jacobwilliams.github.io/slsqp/">nicely formatted documentation</a> to be auto-generated.</li>
 <li>A couple of bug fixes noted elsewhere have been applied.</li>
 </ul>
 <h3>License</h3>
@@ -164,6 +164,17 @@
 <li>The original sourcecode and the modifications are released under a <a href="https://github.com/jacobwilliams/slsqp/blob/master/LICENSE">permissive BSD-style license</a>.</li>
 </ul>
 <h3>Building SLSQP</h3>
+<h4><strong>Fortran Package Manager</strong></h4>
+<p>The library can be built with the <a href="https://github.com/fortran-lang/fpm">Fortran Package Manager</a> using the provided <code>fpm.toml</code> file like so:</p>
+<div class="codehilite"><pre><span></span><code>fpm build --release
+</code></pre></div>
+
+<p>To use SLSQP within your fpm project, add the following to your <code>fpm.toml</code> file:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">[dependencies]</span>
+<span class="na">slsqp</span> <span class="o">=</span> <span class="s">{ git=&quot;https://github.com/jacobwilliams/slsqp.git&quot; }</span>
+</code></pre></div>
+
+<h4><strong>FoBiS</strong></h4>
 <p>A <a href="https://github.com/szaghi/FoBiS">FoBiS</a> configuration file (<code>slsqp.fobis</code>) is also provided that can also build the library and examples. Use the <code>mode</code> flag to indicate what to build. For example:</p>
 <ul>
 <li>To build all the examples using gfortran: <code>FoBiS.py build -f slsqp.fobis -mode tests-gnu</code></li>
@@ -172,14 +183,14 @@
 <li>To build a static library using ifort: <code>FoBiS.py build -f slsqp.fobis -mode static-intel</code></li>
 </ul>
 <p>The full set of modes are: <code>static-gnu</code>, <code>static-gnu-debug</code>, <code>static-intel</code>, <code>static-intel-debug</code>, <code>shared-gnu</code>, <code>shared-gnu-debug</code>, <code>shared-intel</code>, <code>shared-intel-debug</code>, <code>tests-gnu</code>, <code>tests-gnu-debug</code>, <code>tests-intel</code>, <code>tests-intel-debug</code></p>
-<p>To generate the documentation using <a href="https://github.com/cmacmackin/ford">ford</a>, run: <code>FoBis.py rule --execute makedoc -f slsqp.fobis</code></p>
+<p>To generate the documentation using <a href="https://github.com/Fortran-FOSS-Programmers/ford">ford</a>, run: <code>FoBis.py rule --execute makedoc -f slsqp.fobis</code></p>
 <p>To run the test programs, run: <code>FoBis.py rule --execute tests -f slsqp.fobis</code></p>
 <h3>Development</h3>
 <ul>
 <li>Development continues on <a href="https://github.com/jacobwilliams/slsqp">GitHub</a>.</li>
 </ul>
 <h3>Documentation</h3>
-<p>The latest API documentation can be found <a href="http://jacobwilliams.github.io/slsqp/">here</a>. This was generated from the source code using <a href="https://github.com/cmacmackin/ford">FORD</a> (note that the included <code>build.sh</code> script will also generate these files).</p>
+<p>The latest API documentation can be found <a href="http://jacobwilliams.github.io/slsqp/">here</a>. This was generated from the source code using <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a> (note that the included <code>build.sh</code> script will also generate these files).</p>
 <h3>References</h3>
 <ul>
 <li><a href="http://www.netlib.org/toms/733">Original sourcecode at NETLIB</a></li>
