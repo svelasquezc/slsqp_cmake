@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
    <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
-    
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
 
@@ -16,10 +14,7 @@
     <link href="../css/pygments.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
-    
     <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    
-    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -48,58 +43,27 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
      aria-expanded="false">Contents <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          
-              
             <li><a href="../lists/files.html">Source Files</a></li>
-        
-        
-        
             <li><a href="../lists/modules.html">Modules</a></li>
-        
-            
-                                
             <li><a href="../lists/procedures.html">Procedures</a></li>
-        
-        
             <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-               
-            <li><a href="../lists/types.html">Derived Types</a></li>
-        
-               
-        
-        
+                   <li><a href="../lists/types.html">Derived Types</a></li>
+       
             </ul>
         
             </li>
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
-
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
-
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
-                             
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
-
-
-
-
+                             <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
           </ul>
-        
         <form action="../search.html" class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
@@ -108,51 +72,29 @@
         <button type="submit" class="btn btn-default">Submit</button>
 -->
         </form>
-        
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
-    
-  
   <div class="row">
     <h1>enforce_bounds
       <small>Subroutine</small>
-    
     </h1>
-    
-<div class="row">
+    <div class="row">
   <div class="col-lg-12">
 <div class="well well-sm">
   <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     
-     
-     
-     
-     
-    
-    
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
     title=" 0.7% of total for procedures.">11 statements</a>
      </li> 
-     
-     
-     
     <li><i class="fa fa-code"></i><a href="../src/slsqp_core.f90"> Source File</a></li>
-     
-     
   </ul>
   <ol class="breadcrumb in-well text-right">
-  
-    
      <li><a href='../sourcefile/slsqp_core.f90.html'>slsqp_core.f90</a></li>
-    
      <li><a href='../module/slsqp_core.html'>slsqp_core</a></li>
-    
-  
      <li class="active">enforce_bounds</li>
   </ol>
 </div>
@@ -168,32 +110,9 @@
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    
-<div id="sidebar">
-  
-<h3>Contents</h3>
+    <div id="sidebar">
+  <h3>Contents</h3>
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
@@ -201,94 +120,42 @@
   </div>
 </div>
 
-
-
 </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>
-private subroutine enforce_bounds(x, xl, xu)
+    <h2>private subroutine enforce_bounds(x, xl, xu)</h2>
     
-    
-   
-</h2>
-    
-  
 
-
-    
     <p>enforce the bound constraints on x.</p>
-    
 
     <h3>Arguments</h3>
-    
-      
-<table class="table table-striped varlist">
-<thead><tr><th>Type</th>
-<th>Intent</th><th>Optional</th>
-<th>Attributes</th><th></th><th>Name</th><th></th></thead>
-
-
-
+      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
 <tbody>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-x~16"></span>real(kind=wp),</td>
-  <td>intent(inout),</td>
-  <td></td>
-  
-  <td>dimension(:)</td><td>::</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
   <td><strong>x</strong></td><td><p>optimization variable vector</p></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-xl~6"></span>real(kind=wp),</td>
-  <td>intent(in),</td>
-  <td></td>
-  
-  <td>dimension(:)</td><td>::</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
   <td><strong>xl</strong></td><td><p>lower bounds (must be same dimension as <code>x</code>)</p></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-xu~6"></span>real(kind=wp),</td>
-  <td>intent(in),</td>
-  <td></td>
-  
-  <td>dimension(:)</td><td>::</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(:)</td><td>::</td>
   <td><strong>xu</strong></td><td><p>upper bounds (must be same dimension as <code>x</code>)</p></td>
-  
 </tr>
-
 </tbody>
 </table>
 
-    
-    
-    
     <br>
-    
-    
-     
     <div class="panel panel-default">
       <div class="panel-heading">
   <h3 class="panel-title">Called by</h3>
@@ -311,41 +178,41 @@ private subroutine enforce_bounds(x, xl, xu)
 <polygon fill="none" stroke="black" points="492,-44 395,-44 395,-20 492,-20 492,-44"/>
 <text text-anchor="middle" x="443.5" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50">enforce_bounds</text>
 </g>
-<!-- proc~slsqpb -->
+<!-- proc~lsq -->
 <g id="proc~~enforce_bounds~~CalledByGraph_node2" class="node">
+<title>proc~lsq</title>
+<g id="a_proc~~enforce_bounds~~CalledByGraph_node2"><a xlink:href=".././proc/lsq.html" xlink:title="lsq">
+<polygon fill="#d9534f" stroke="#d9534f" points="359,-24 305,-24 305,0 359,0 359,-24"/>
+<text text-anchor="middle" x="332" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
+</a>
+</g>
+</g>
+<!-- proc~lsq&#45;&gt;proc~enforce_bounds -->
+<g id="proc~~enforce_bounds~~CalledByGraph_edge1" class="edge">
+<title>proc~lsq&#45;&gt;proc~enforce_bounds</title>
+<path fill="none" stroke="#000000" d="M359.23,-16.79C366.95,-18.2 375.72,-19.8 384.61,-21.43"/>
+<polygon fill="#000000" stroke="#000000" points="384.17,-24.9 394.64,-23.26 385.43,-18.02 384.17,-24.9"/>
+</g>
+<!-- proc~slsqpb -->
+<g id="proc~~enforce_bounds~~CalledByGraph_node3" class="node">
 <title>proc~slsqpb</title>
-<g id="a_proc~~enforce_bounds~~CalledByGraph_node2"><a xlink:href=".././proc/slsqpb.html" xlink:title="slsqpb">
+<g id="a_proc~~enforce_bounds~~CalledByGraph_node3"><a xlink:href=".././proc/slsqpb.html" xlink:title="slsqpb">
 <polygon fill="#d9534f" stroke="#d9534f" points="269,-44 215,-44 215,-20 269,-20 269,-44"/>
 <text text-anchor="middle" x="242" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">slsqpb</text>
 </a>
 </g>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~enforce_bounds -->
-<g id="proc~~enforce_bounds~~CalledByGraph_edge1" class="edge">
+<g id="proc~~enforce_bounds~~CalledByGraph_edge2" class="edge">
 <title>proc~slsqpb&#45;&gt;proc~enforce_bounds</title>
 <path fill="none" stroke="#000000" d="M269.24,-32.52C280.28,-32.71 293.27,-32.91 305,-33 331.11,-33.21 360.01,-33.06 384.55,-32.82"/>
 <polygon fill="#000000" stroke="#000000" points="384.81,-36.31 394.77,-32.71 384.74,-29.31 384.81,-36.31"/>
 </g>
-<!-- proc~lsq -->
-<g id="proc~~enforce_bounds~~CalledByGraph_node3" class="node">
-<title>proc~lsq</title>
-<g id="a_proc~~enforce_bounds~~CalledByGraph_node3"><a xlink:href=".././proc/lsq.html" xlink:title="lsq">
-<polygon fill="#d9534f" stroke="#d9534f" points="359,-24 305,-24 305,0 359,0 359,-24"/>
-<text text-anchor="middle" x="332" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsq</text>
-</a>
-</g>
-</g>
 <!-- proc~slsqpb&#45;&gt;proc~lsq -->
-<g id="proc~~enforce_bounds~~CalledByGraph_edge4" class="edge">
+<g id="proc~~enforce_bounds~~CalledByGraph_edge3" class="edge">
 <title>proc~slsqpb&#45;&gt;proc~lsq</title>
 <path fill="none" stroke="#000000" d="M269.4,-26C277.48,-24.16 286.51,-22.11 295.1,-20.16"/>
 <polygon fill="#000000" stroke="#000000" points="295.94,-23.56 304.92,-17.93 294.39,-16.73 295.94,-23.56"/>
-</g>
-<!-- proc~lsq&#45;&gt;proc~enforce_bounds -->
-<g id="proc~~enforce_bounds~~CalledByGraph_edge2" class="edge">
-<title>proc~lsq&#45;&gt;proc~enforce_bounds</title>
-<path fill="none" stroke="#000000" d="M359.23,-16.79C366.95,-18.2 375.72,-19.8 384.61,-21.43"/>
-<polygon fill="#000000" stroke="#000000" points="384.17,-24.9 394.64,-23.26 385.43,-18.02 384.17,-24.9"/>
 </g>
 <!-- proc~slsqp -->
 <g id="proc~~enforce_bounds~~CalledByGraph_node4" class="node">
@@ -357,7 +224,7 @@ private subroutine enforce_bounds(x, xl, xu)
 </g>
 </g>
 <!-- proc~slsqp&#45;&gt;proc~slsqpb -->
-<g id="proc~~enforce_bounds~~CalledByGraph_edge3" class="edge">
+<g id="proc~~enforce_bounds~~CalledByGraph_edge4" class="edge">
 <title>proc~slsqp&#45;&gt;proc~slsqpb</title>
 <path fill="none" stroke="#000000" d="M179.4,-32C187.39,-32 196.31,-32 204.82,-32"/>
 <polygon fill="#000000" stroke="#000000" points="204.92,-35.5 214.92,-32 204.92,-28.5 204.92,-35.5"/>
@@ -440,34 +307,11 @@ private subroutine enforce_bounds(x, xl, xu)
     </div></div></div></div>
       </div>
     </div>
-     
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      
-<h3>Contents</h3>
+      <h3>Contents</h3>
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
@@ -475,70 +319,55 @@ private subroutine enforce_bounds(x, xl, xu)
   </div>
 </div>
 
-
-
     </section>
     <br class="visible-xs visible-sm hidden-md">
 
-    
 
-    
-    
-    
     
     
 
     
     
-    
-    
-    
 
 
-    
-    
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">enforce_bounds</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><span class="w">    </span><span class="k">subroutine </span><span class="n">enforce_bounds</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">xl</span><span class="p">,</span><span class="n">xu</span><span class="p">)</span><span class="w"></span>
 
-    <span class="k">implicit none</span>
+<span class="w">    </span><span class="k">implicit none</span>
 
-<span class="k">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span>   <span class="c">!! optimization variable vector</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">xl</span>  <span class="c">!! lower bounds (must be same dimension as `x`)</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">xu</span>  <span class="c">!! upper bounds (must be same dimension as `x`)</span>
+<span class="k">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="w">   </span><span class="c">!! optimization variable vector</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">xl</span><span class="w">  </span><span class="c">!! lower bounds (must be same dimension as `x`)</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(:),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">xu</span><span class="w">  </span><span class="c">!! upper bounds (must be same dimension as `x`)</span>
 
-    <span class="k">where</span> <span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">xl</span><span class="p">)</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">xl</span>
-    <span class="n">elsewhere</span> <span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">xu</span><span class="p">)</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">xu</span>
-    <span class="k">end where</span>
+<span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">xl</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xl</span><span class="w"></span>
+<span class="w">    </span><span class="n">elsewhere</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">xu</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xu</span><span class="w"></span>
+<span class="w">    </span><span class="k">end where</span>
 
-<span class="k">    end subroutine </span><span class="n">enforce_bounds</span>
+<span class="k">    end subroutine </span><span class="n">enforce_bounds</span><span class="w"></span>
 </pre></div>
 
     </section>
     <br>
     
-    
     </div>
   </div>
-
 
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>slsqp was developed by Jacob Williams<br>&copy; 2021 
-                                          </p>
+        <div class="col-xs-6 col-md-6"><p>slsqp was developed by Jacob Williams<br>&copy; 2022 
+</p>
         </div>
         <div class="col-xs-6 col-md-6">
           <p class="text-right">
             Documentation generated by 
             <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
-            
-            
           </p>
         </div>
       </div>
@@ -566,14 +395,11 @@ private subroutine enforce_bounds(x, xl, xu)
         extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
     
     <script src="../tipuesearch/tipuesearch_content.js"></script>
     <script src="../tipuesearch/tipuesearch_set.js"></script>
     <script src="../tipuesearch/tipuesearch.js"></script>
-    
     
   </body>
 </html>

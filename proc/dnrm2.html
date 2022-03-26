@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
    <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
-    
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
 
@@ -16,10 +14,7 @@
     <link href="../css/pygments.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
-    
     <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    
-    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -48,58 +43,27 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
      aria-expanded="false">Contents <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          
-              
             <li><a href="../lists/files.html">Source Files</a></li>
-        
-        
-        
             <li><a href="../lists/modules.html">Modules</a></li>
-        
-            
-                                
             <li><a href="../lists/procedures.html">Procedures</a></li>
-        
-        
             <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-               
-            <li><a href="../lists/types.html">Derived Types</a></li>
-        
-               
-        
-        
+                   <li><a href="../lists/types.html">Derived Types</a></li>
+       
             </ul>
         
             </li>
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
-
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
-
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
-                             
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
-
-
-
-
+                             <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
           </ul>
-        
         <form action="../search.html" class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
@@ -108,51 +72,29 @@
         <button type="submit" class="btn btn-default">Submit</button>
 -->
         </form>
-        
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
-    
-  
   <div class="row">
     <h1>dnrm2
       <small>Function</small>
-    
     </h1>
-    
-<div class="row">
+    <div class="row">
   <div class="col-lg-12">
 <div class="well well-sm">
   <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     
-     
-     
-     
-     
-    
-    
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
     title=" 1.7% of total for procedures.">29 statements</a>
      </li> 
-     
-     
-     
     <li><i class="fa fa-code"></i><a href="../src/slsqp_support.f90"> Source File</a></li>
-     
-     
   </ul>
   <ol class="breadcrumb in-well text-right">
-  
-    
      <li><a href='../sourcefile/slsqp_support.f90.html'>slsqp_support.f90</a></li>
-    
      <li><a href='../module/slsqp_support.html'>slsqp_support</a></li>
-    
-  
      <li class="active">dnrm2</li>
   </ol>
 </div>
@@ -168,32 +110,9 @@
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    
-<div id="sidebar">
-  
-<h3>Contents</h3>
+    <div id="sidebar">
+  <h3>Contents</h3>
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
@@ -201,24 +120,14 @@
   </div>
 </div>
 
-
-
 </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>
-public function dnrm2(n, x, incx)
+    <h2>public function dnrm2(n, x, incx)</h2>
     
-    
-   
-</h2>
-    
-  
 
-
-    
     <p>Function that returns the Euclidean norm
   <script type="math/tex"> \sqrt{ \mathbf{x}^T \mathbf{x} } </script> of a vector <script type="math/tex"> \mathbf{x} </script>.</p>
 <h3>Further details</h3>
@@ -230,84 +139,35 @@ public function dnrm2(n, x, incx)
 </ul>
 <p></p><div class="alert alert-info" role="alert"><h4>Note</h4><p>Replaced original SLSQP routine with this one from
       <a href="http://netlib.sandia.gov/blas/dnrm2.f">BLAS</a>.</p></div>
-    
 
     <h3>Arguments</h3>
-    
-      
-<table class="table table-striped varlist">
-<thead><tr><th>Type</th>
-<th>Intent</th><th>Optional</th>
-<th>Attributes</th><th></th><th>Name</th><th></th></thead>
-
-
-
+      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
 <tbody>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-n~3"></span>integer,</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>n</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-x~5"></span>real(kind=wp),</td>
-  <td>intent(in),</td>
-  <td></td>
-  
-  <td>dimension(*)</td><td>::</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(*)</td><td>::</td>
   <td><strong>x</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-incx~2"></span>integer,</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>incx</strong></td><td></td>
-  
 </tr>
-
 </tbody>
 </table>
 
-    
-    
-    
-    
-    
-    
-    
-   <h3>Return Value <small><span class="anchor" id="variable-dnrm2"></span>real(kind=wp)
-  </small></h3>
-    
-    
+   <h3>Return Value <small><span class="anchor" id="variable-dnrm2"></span>real(kind=wp)</small></h3>
     
     <br>
-    
-    
-     
     <div class="panel panel-default">
       <div class="panel-heading">
   <h3 class="panel-title">Called by</h3>
@@ -345,53 +205,17 @@ public function dnrm2(n, x, incx)
 <path fill="none" stroke="#000000" d="M686.23,-24.22C698.71,-32.59 715.44,-43.81 729.4,-53.16"/>
 <polygon fill="#000000" stroke="#000000" points="727.84,-56.33 738.09,-58.99 731.73,-50.52 727.84,-56.33"/>
 </g>
-<!-- proc~check_convergence -->
-<g id="proc~~dnrm2~~CalledByGraph_node3" class="node">
-<title>proc~check_convergence</title>
-<g id="a_proc~~dnrm2~~CalledByGraph_node3"><a xlink:href=".././proc/check_convergence.html" xlink:title="check_convergence">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="514,-140 395,-140 395,-116 514,-116 514,-140"/>
-<text text-anchor="middle" x="454.5" y="-125.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">check_convergence</text>
-</a>
-</g>
-</g>
-<!-- proc~check_convergence&#45;&gt;proc~dnrm2 -->
-<g id="proc~~dnrm2~~CalledByGraph_edge2" class="edge">
-<title>proc~check_convergence&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M514.32,-121.51C562.9,-115.52 633.46,-105.37 694,-91 702.54,-88.97 711.6,-86.34 720.09,-83.65"/>
-<polygon fill="#000000" stroke="#000000" points="721.29,-86.93 729.71,-80.5 719.12,-80.28 721.29,-86.93"/>
-</g>
-<!-- proc~lsei -->
-<g id="proc~~dnrm2~~CalledByGraph_node4" class="node">
-<title>proc~lsei</title>
-<g id="a_proc~~dnrm2~~CalledByGraph_node4"><a xlink:href=".././proc/lsei.html" xlink:title="lsei">
-<polygon fill="#d9534f" stroke="#d9534f" points="481.5,-98 427.5,-98 427.5,-74 481.5,-74 481.5,-98"/>
-<text text-anchor="middle" x="454.5" y="-83.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
-</a>
-</g>
-</g>
-<!-- proc~lsei&#45;&gt;proc~dnrm2 -->
-<g id="proc~~dnrm2~~CalledByGraph_edge3" class="edge">
-<title>proc~lsei&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M481.62,-84.95C525.51,-83.16 616.81,-79.27 694,-75 702.35,-74.54 711.32,-73.99 719.78,-73.45"/>
-<polygon fill="#000000" stroke="#000000" points="720.01,-76.94 729.76,-72.8 719.55,-69.96 720.01,-76.94"/>
-</g>
 <!-- proc~lsi -->
-<g id="proc~~dnrm2~~CalledByGraph_node5" class="node">
+<g id="proc~~dnrm2~~CalledByGraph_node3" class="node">
 <title>proc~lsi</title>
-<g id="a_proc~~dnrm2~~CalledByGraph_node5"><a xlink:href=".././proc/lsi.html" xlink:title="lsi">
+<g id="a_proc~~dnrm2~~CalledByGraph_node3"><a xlink:href=".././proc/lsi.html" xlink:title="lsi">
 <polygon fill="#d9534f" stroke="#d9534f" points="604,-62 550,-62 550,-38 604,-38 604,-62"/>
 <text text-anchor="middle" x="577" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsi</text>
 </a>
 </g>
 </g>
-<!-- proc~lsei&#45;&gt;proc~lsi -->
-<g id="proc~~dnrm2~~CalledByGraph_edge8" class="edge">
-<title>proc~lsei&#45;&gt;proc~lsi</title>
-<path fill="none" stroke="#000000" d="M481.65,-78.19C498.78,-73.07 521.4,-66.31 540.19,-60.7"/>
-<polygon fill="#000000" stroke="#000000" points="541.32,-64.01 549.9,-57.8 539.32,-57.31 541.32,-64.01"/>
-</g>
 <!-- proc~lsi&#45;&gt;proc~dnrm2 -->
-<g id="proc~~dnrm2~~CalledByGraph_edge4" class="edge">
+<g id="proc~~dnrm2~~CalledByGraph_edge2" class="edge">
 <title>proc~lsi&#45;&gt;proc~dnrm2</title>
 <path fill="none" stroke="#000000" d="M604.26,-53.1C634.85,-56.71 685.55,-62.69 719.84,-66.73"/>
 <polygon fill="#000000" stroke="#000000" points="719.58,-70.23 729.92,-67.92 720.4,-63.28 719.58,-70.23"/>
@@ -401,6 +225,42 @@ public function dnrm2(n, x, incx)
 <title>proc~lsi&#45;&gt;proc~ldp</title>
 <path fill="none" stroke="#000000" d="M604.4,-38.6C612.66,-35.03 621.9,-31.04 630.66,-27.26"/>
 <polygon fill="#000000" stroke="#000000" points="632.13,-30.44 639.92,-23.26 629.35,-24.01 632.13,-30.44"/>
+</g>
+<!-- proc~check_convergence -->
+<g id="proc~~dnrm2~~CalledByGraph_node4" class="node">
+<title>proc~check_convergence</title>
+<g id="a_proc~~dnrm2~~CalledByGraph_node4"><a xlink:href=".././proc/check_convergence.html" xlink:title="check_convergence">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="514,-140 395,-140 395,-116 514,-116 514,-140"/>
+<text text-anchor="middle" x="454.5" y="-125.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">check_convergence</text>
+</a>
+</g>
+</g>
+<!-- proc~check_convergence&#45;&gt;proc~dnrm2 -->
+<g id="proc~~dnrm2~~CalledByGraph_edge3" class="edge">
+<title>proc~check_convergence&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M514.32,-121.51C562.9,-115.52 633.46,-105.37 694,-91 702.54,-88.97 711.6,-86.34 720.09,-83.65"/>
+<polygon fill="#000000" stroke="#000000" points="721.29,-86.93 729.71,-80.5 719.12,-80.28 721.29,-86.93"/>
+</g>
+<!-- proc~lsei -->
+<g id="proc~~dnrm2~~CalledByGraph_node5" class="node">
+<title>proc~lsei</title>
+<g id="a_proc~~dnrm2~~CalledByGraph_node5"><a xlink:href=".././proc/lsei.html" xlink:title="lsei">
+<polygon fill="#d9534f" stroke="#d9534f" points="481.5,-98 427.5,-98 427.5,-74 481.5,-74 481.5,-98"/>
+<text text-anchor="middle" x="454.5" y="-83.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lsei</text>
+</a>
+</g>
+</g>
+<!-- proc~lsei&#45;&gt;proc~dnrm2 -->
+<g id="proc~~dnrm2~~CalledByGraph_edge4" class="edge">
+<title>proc~lsei&#45;&gt;proc~dnrm2</title>
+<path fill="none" stroke="#000000" d="M481.62,-84.95C525.51,-83.16 616.81,-79.27 694,-75 702.35,-74.54 711.32,-73.99 719.78,-73.45"/>
+<polygon fill="#000000" stroke="#000000" points="720.01,-76.94 729.76,-72.8 719.55,-69.96 720.01,-76.94"/>
+</g>
+<!-- proc~lsei&#45;&gt;proc~lsi -->
+<g id="proc~~dnrm2~~CalledByGraph_edge6" class="edge">
+<title>proc~lsei&#45;&gt;proc~lsi</title>
+<path fill="none" stroke="#000000" d="M481.65,-78.19C498.78,-73.07 521.4,-66.31 540.19,-60.7"/>
+<polygon fill="#000000" stroke="#000000" points="541.32,-64.01 549.9,-57.8 539.32,-57.31 541.32,-64.01"/>
 </g>
 <!-- proc~slsqpb -->
 <g id="proc~~dnrm2~~CalledByGraph_node6" class="node">
@@ -412,7 +272,7 @@ public function dnrm2(n, x, incx)
 </g>
 </g>
 <!-- proc~slsqpb&#45;&gt;proc~check_convergence -->
-<g id="proc~~dnrm2~~CalledByGraph_edge6" class="edge">
+<g id="proc~~dnrm2~~CalledByGraph_edge7" class="edge">
 <title>proc~slsqpb&#45;&gt;proc~check_convergence</title>
 <path fill="none" stroke="#000000" d="M269.23,-109.62C297.93,-112.48 345.08,-117.18 384.5,-121.12"/>
 <polygon fill="#000000" stroke="#000000" points="384.31,-124.61 394.61,-122.12 385,-117.65 384.31,-124.61"/>
@@ -433,7 +293,7 @@ public function dnrm2(n, x, incx)
 <polygon fill="#000000" stroke="#000000" points="295.94,-98.56 304.92,-92.93 294.39,-91.73 295.94,-98.56"/>
 </g>
 <!-- proc~lsq&#45;&gt;proc~lsei -->
-<g id="proc~~dnrm2~~CalledByGraph_edge7" class="edge">
+<g id="proc~~dnrm2~~CalledByGraph_edge8" class="edge">
 <title>proc~lsq&#45;&gt;proc~lsei</title>
 <path fill="none" stroke="#000000" d="M359.15,-86.78C376.12,-86.64 398.48,-86.46 417.17,-86.3"/>
 <polygon fill="#000000" stroke="#000000" points="417.43,-89.8 427.4,-86.22 417.38,-82.8 417.43,-89.8"/>
@@ -531,34 +391,11 @@ public function dnrm2(n, x, incx)
     </div></div></div></div>
       </div>
     </div>
-     
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      
-<h3>Contents</h3>
+      <h3>Contents</h3>
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
@@ -566,93 +403,78 @@ public function dnrm2(n, x, incx)
   </div>
 </div>
 
-
-
     </section>
     <br class="visible-xs visible-sm hidden-md">
 
-    
 
-    
-    
-    
     
     
 
     
     
-    
-    
-    
 
 
-    
-    
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="k">function </span><span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">incx</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span><span class="w"> </span><span class="k">function </span><span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">incx</span><span class="p">)</span><span class="w"></span>
 
-    <span class="k">implicit none</span>
+<span class="w">    </span><span class="k">implicit none</span>
 
-<span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">incx</span>
-    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>               <span class="kd">::</span> <span class="n">n</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span>
+<span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">               </span><span class="kd">::</span><span class="w"> </span><span class="n">incx</span><span class="w"></span>
+<span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">               </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
 
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">absxi</span> <span class="p">,</span> <span class="n">norm</span> <span class="p">,</span> <span class="nb">scale</span> <span class="p">,</span> <span class="n">ssq</span>
-    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">ix</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">absxi</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">norm</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="nb">scale</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">ssq</span><span class="w"></span>
+<span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ix</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">1</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">incx</span><span class="o">&lt;</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
-<span class="k">        </span><span class="n">norm</span> <span class="o">=</span> <span class="n">zero</span>
-    <span class="n">elseif</span> <span class="p">(</span> <span class="n">n</span><span class="o">==</span><span class="mi">1</span> <span class="p">)</span> <span class="k">then</span>
-<span class="k">        </span><span class="n">norm</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-    <span class="k">else</span>
-<span class="k">        </span><span class="nb">scale</span> <span class="o">=</span> <span class="n">zero</span>
-        <span class="n">ssq</span> <span class="o">=</span> <span class="n">one</span>
-        <span class="c">! the following loop is equivalent to this call to the lapack</span>
-        <span class="c">! auxiliary routine:</span>
-        <span class="c">! call dlassq( n, x, incx, scale, ssq )</span>
-        <span class="k">do </span><span class="n">ix</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">incx</span> <span class="p">,</span> <span class="n">incx</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">ix</span><span class="p">))</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
-<span class="k">                </span><span class="n">absxi</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">ix</span><span class="p">))</span>
-                <span class="k">if</span> <span class="p">(</span> <span class="nb">scale</span><span class="o">&lt;</span><span class="n">absxi</span> <span class="p">)</span> <span class="k">then</span>
-<span class="k">                    </span><span class="n">ssq</span> <span class="o">=</span> <span class="n">one</span> <span class="o">+</span> <span class="n">ssq</span><span class="o">*</span><span class="p">(</span><span class="nb">scale</span><span class="o">/</span><span class="n">absxi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-                    <span class="nb">scale</span> <span class="o">=</span> <span class="n">absxi</span>
-                <span class="k">else</span>
-<span class="k">                    </span><span class="n">ssq</span> <span class="o">=</span> <span class="n">ssq</span> <span class="o">+</span> <span class="p">(</span><span class="n">absxi</span><span class="o">/</span><span class="nb">scale</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-                <span class="k">end if</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="o">&lt;</span><span class="mi">1</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="n">incx</span><span class="o">&lt;</span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        </span><span class="n">norm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span><span class="w"></span>
+<span class="w">    </span><span class="n">elseif</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        </span><span class="n">norm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span>
+<span class="k">        </span><span class="nb">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span><span class="w"></span>
+<span class="w">        </span><span class="n">ssq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">one</span><span class="w"></span>
+<span class="w">        </span><span class="c">! the following loop is equivalent to this call to the lapack</span>
+<span class="w">        </span><span class="c">! auxiliary routine:</span>
+<span class="w">        </span><span class="c">! call dlassq( n, x, incx, scale, ssq )</span>
+<span class="w">        </span><span class="k">do </span><span class="n">ix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">incx</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">incx</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">ix</span><span class="p">))</span><span class="o">&gt;</span><span class="n">zero</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">                </span><span class="n">absxi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">ix</span><span class="p">))</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">scale</span><span class="o">&lt;</span><span class="n">absxi</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">                    </span><span class="n">ssq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ssq</span><span class="o">*</span><span class="p">(</span><span class="nb">scale</span><span class="o">/</span><span class="n">absxi</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="w"></span>
+<span class="w">                    </span><span class="nb">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">absxi</span><span class="w"></span>
+<span class="w">                </span><span class="k">else</span>
+<span class="k">                    </span><span class="n">ssq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ssq</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">absxi</span><span class="o">/</span><span class="nb">scale</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="w"></span>
+<span class="w">                </span><span class="k">end if</span>
 <span class="k">            end if</span>
 <span class="k">        end do</span>
-<span class="k">        </span><span class="n">norm</span> <span class="o">=</span> <span class="nb">scale</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">ssq</span><span class="p">)</span>
-    <span class="k">end if</span>
+<span class="k">        </span><span class="n">norm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">scale</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">ssq</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">end if</span>
 
-<span class="k">    </span><span class="n">dnrm2</span> <span class="o">=</span> <span class="n">norm</span>
+<span class="k">    </span><span class="n">dnrm2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">norm</span><span class="w"></span>
 
-    <span class="k">end function </span><span class="n">dnrm2</span>
+<span class="w">    </span><span class="k">end function </span><span class="n">dnrm2</span><span class="w"></span>
 </pre></div>
 
     </section>
     <br>
     
-    
     </div>
   </div>
-
 
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>slsqp was developed by Jacob Williams<br>&copy; 2021 
-                                          </p>
+        <div class="col-xs-6 col-md-6"><p>slsqp was developed by Jacob Williams<br>&copy; 2022 
+</p>
         </div>
         <div class="col-xs-6 col-md-6">
           <p class="text-right">
             Documentation generated by 
             <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
-            
-            
           </p>
         </div>
       </div>
@@ -680,14 +502,11 @@ public function dnrm2(n, x, incx)
         extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
     
     <script src="../tipuesearch/tipuesearch_content.js"></script>
     <script src="../tipuesearch/tipuesearch_set.js"></script>
     <script src="../tipuesearch/tipuesearch.js"></script>
-    
     
   </body>
 </html>

@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
    <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
-    
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
 
@@ -16,10 +14,7 @@
     <link href="../css/pygments.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
-    
     <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    
-    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -48,58 +43,27 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
      aria-expanded="false">Contents <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          
-              
             <li><a href="../lists/files.html">Source Files</a></li>
-        
-        
-        
             <li><a href="../lists/modules.html">Modules</a></li>
-        
-            
-                                
             <li><a href="../lists/procedures.html">Procedures</a></li>
-        
-        
             <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-               
-            <li><a href="../lists/types.html">Derived Types</a></li>
-        
-               
-        
-        
+                   <li><a href="../lists/types.html">Derived Types</a></li>
+       
             </ul>
         
             </li>
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
-
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
-
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
-                             
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
-
-
-
-
+                             <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
           </ul>
-        
         <form action="../search.html" class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
@@ -108,51 +72,29 @@
         <button type="submit" class="btn btn-default">Submit</button>
 -->
         </form>
-        
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
-    
-  
   <div class="row">
     <h1>ldp
       <small>Subroutine</small>
-    
     </h1>
-    
-<div class="row">
+    <div class="row">
   <div class="col-lg-12">
 <div class="well well-sm">
   <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     
-     
-     
-     
-     
-    
-    
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
     title=" 3.5% of total for procedures.">60 statements</a>
      </li> 
-     
-     
-     
     <li><i class="fa fa-code"></i><a href="../src/slsqp_core.f90"> Source File</a></li>
-     
-     
   </ul>
   <ol class="breadcrumb in-well text-right">
-  
-    
      <li><a href='../sourcefile/slsqp_core.f90.html'>slsqp_core.f90</a></li>
-    
      <li><a href='../module/slsqp_core.html'>slsqp_core</a></li>
-    
-  
      <li class="active">ldp</li>
   </ol>
 </div>
@@ -168,32 +110,9 @@
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    
-<div id="sidebar">
-  
-<h3>Contents</h3>
+    <div id="sidebar">
+  <h3>Contents</h3>
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
@@ -201,24 +120,14 @@
   </div>
 </div>
 
-
-
 </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>
-private subroutine ldp(g, mg, m, n, h, x, xnorm, w, mode)
+    <h2>private subroutine ldp(g, mg, m, n, h, x, xnorm, w, mode)</h2>
     
-    
-   
-</h2>
-    
-  
 
-
-    
     <p>Least distance programming routine.
   Minimize <script type="math/tex"> \frac{1}{2} \mathbf{x}^T \mathbf{x}  </script> subject to
   <script type="math/tex"> \mathbf{G} \mathbf{x} \ge \mathbf{h} </script>.</p>
@@ -242,158 +151,70 @@ private subroutine ldp(g, mg, m, n, h, x, xnorm, w, mode)
 </ul>
 <p></p><div class="alert alert-info" role="alert"><h4>Note</h4><p>The 1995 version of this routine may have some sort of problem.
       Using a refactored version of the original routine.</p></div>
-    
 
     <h3>Arguments</h3>
-    
-      
-<table class="table table-striped varlist">
-<thead><tr><th>Type</th>
-<th>Intent</th><th>Optional</th>
-<th>Attributes</th><th></th><th>Name</th><th></th></thead>
-
-
-
+      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
 <tbody>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-g~9"></span>real(kind=wp),</td>
-  <td>intent(in),</td>
-  <td></td>
-  
-  <td>dimension(mg,n)</td><td>::</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(mg,n)</td><td>::</td>
   <td><strong>g</strong></td><td><p>on entry <code>g</code> stores the <code>m</code> by <code>n</code> matrix of
- linear inequality constraints. <code>g</code> has first
- dimensioning parameter <code>mg</code></p></td>
-  
+linear inequality constraints. <code>g</code> has first
+dimensioning parameter <code>mg</code></p></td>
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-mg~3"></span>integer,</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>mg</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-m~8"></span>integer,</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>m</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-n~14"></span>integer,</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>n</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-h~3"></span>real(kind=wp),</td>
-  <td>intent(in),</td>
-  <td></td>
-  
-  <td>dimension(m)</td><td>::</td>
+<td>intent(in),</td>
+  <td></td>  <td>dimension(m)</td><td>::</td>
   <td><strong>h</strong></td><td><p>the right side of the inequality system.</p></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-x~14"></span>real(kind=wp),</td>
-  <td>intent(out),</td>
-  <td></td>
-  
-  <td>dimension(n)</td><td>::</td>
+<td>intent(out),</td>
+  <td></td>  <td>dimension(n)</td><td>::</td>
   <td><strong>x</strong></td><td><p>solution vector <code>x</code> if <code>mode=1</code>.</p></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-xnorm~2"></span>real(kind=wp),</td>
-  <td>intent(out)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>xnorm</strong></td><td><p>euclidian norm of the solution vector
- if computation is successful</p></td>
-  
+if computation is successful</p></td>
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-w~9"></span>real(kind=wp),</td>
-  <td>intent(inout),</td>
-  <td></td>
-  
-  <td>dimension(*)</td><td>::</td>
+<td>intent(inout),</td>
+  <td></td>  <td>dimension(*)</td><td>::</td>
   <td><strong>w</strong></td><td><p><code>w</code> is a one dimensional working space, the length
- of which should be at least <code>(m+2)*(n+1) + 2*m</code>.
- on exit <code>w</code> stores the lagrange multipliers
- associated with the constraints.
- at the solution of problem <code>ldp</code>.</p></td>
-  
+of which should be at least <code>(m+2)*(n+1) + 2*m</code>.
+on exit <code>w</code> stores the lagrange multipliers
+associated with the constraints.
+at the solution of problem <code>ldp</code>.</p></td>
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-mode~8"></span>integer,</td>
-  <td>intent(out)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(out)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>mode</strong></td><td><p>success-failure flag with the following meanings:</p>
 <ul>
 <li><strong><em>1:</em></strong> successful computation,</li>
@@ -401,18 +222,11 @@ private subroutine ldp(g, mg, m, n, h, x, xnorm, w, mode)
 <li><strong><em>3:</em></strong> iteration count exceeded by <a href="../proc/nnls.html">nnls</a>,</li>
 <li><strong><em>4:</em></strong> inequality constraints incompatible.</li>
 </ul></td>
-  
 </tr>
-
 </tbody>
 </table>
 
-    
-    
-    
     <br>
-    
-    
     <div class="panel panel-default">
       <div class="panel-heading">
   <h3 class="panel-title">Calls</h3>
@@ -424,142 +238,142 @@ private subroutine ldp(g, mg, m, n, h, x, xnorm, w, mode)
 <!-- Generated by graphviz version 2.43.0 (0)
  -->
 <!-- Title: proc~~ldp~~CallsGraph Pages: 1 -->
-<svg id="procldpCallsGraph" width="242pt" height="238pt"
- viewBox="0.00 0.00 242.00 238.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="proc~~ldp~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 234)">
+<svg id="procldpCallsGraph" width="242pt" height="259pt"
+ viewBox="0.00 0.00 242.00 259.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~ldp~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 255)">
 <title>proc~~ldp~~CallsGraph</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-234 238,-234 238,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-255 238,-255 238,4 -4,4"/>
 <!-- proc~ldp -->
 <g id="proc~~ldp~~CallsGraph_node1" class="node">
 <title>proc~ldp</title>
-<polygon fill="none" stroke="black" points="54,-129 0,-129 0,-105 54,-105 54,-129"/>
-<text text-anchor="middle" x="27" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50">ldp</text>
+<polygon fill="none" stroke="black" points="54,-149 0,-149 0,-125 54,-125 54,-149"/>
+<text text-anchor="middle" x="27" y="-134.6" font-family="Helvetica,sans-Serif" font-size="10.50">ldp</text>
+</g>
+<!-- proc~daxpy -->
+<g id="proc~~ldp~~CallsGraph_node2" class="node">
+<title>proc~daxpy</title>
+<g id="a_proc~~ldp~~CallsGraph_node2"><a xlink:href=".././proc/daxpy.html" xlink:title="daxpy">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-251 90,-251 90,-227 144,-227 144,-251"/>
+<text text-anchor="middle" x="117" y="-236.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
+</a>
+</g>
+</g>
+<!-- proc~ldp&#45;&gt;proc~daxpy -->
+<g id="proc~~ldp~~CallsGraph_edge1" class="edge">
+<title>proc~ldp&#45;&gt;proc~daxpy</title>
+<path fill="none" stroke="#000000" d="M36.01,-149.25C47.1,-165.76 68.25,-195.67 90,-218 90.66,-218.67 91.33,-219.34 92.02,-220.01"/>
+<polygon fill="#000000" stroke="#000000" points="90,-222.9 99.8,-226.91 94.65,-217.66 90,-222.9"/>
 </g>
 <!-- proc~dnrm2 -->
-<g id="proc~~ldp~~CallsGraph_node2" class="node">
+<g id="proc~~ldp~~CallsGraph_node3" class="node">
 <title>proc~dnrm2</title>
-<g id="a_proc~~ldp~~CallsGraph_node2"><a xlink:href=".././proc/dnrm2.html" xlink:title="dnrm2">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-230 90,-230 90,-206 144,-206 144,-230"/>
-<text text-anchor="middle" x="117" y="-215.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
+<g id="a_proc~~ldp~~CallsGraph_node3"><a xlink:href=".././proc/dnrm2.html" xlink:title="dnrm2">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-209 90,-209 90,-185 144,-185 144,-209"/>
+<text text-anchor="middle" x="117" y="-194.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dnrm2</text>
 </a>
 </g>
 </g>
 <!-- proc~ldp&#45;&gt;proc~dnrm2 -->
-<g id="proc~~ldp~~CallsGraph_edge1" class="edge">
+<g id="proc~~ldp~~CallsGraph_edge2" class="edge">
 <title>proc~ldp&#45;&gt;proc~dnrm2</title>
-<path fill="none" stroke="#000000" d="M37.54,-129.25C49.43,-144.35 70.56,-170.63 90,-192 91.97,-194.17 94.08,-196.4 96.2,-198.59"/>
-<polygon fill="#000000" stroke="#000000" points="93.8,-201.15 103.32,-205.8 98.78,-196.23 93.8,-201.15"/>
+<path fill="none" stroke="#000000" d="M45.81,-149.14C58.45,-157.76 75.63,-169.48 89.83,-179.16"/>
+<polygon fill="#000000" stroke="#000000" points="87.98,-182.13 98.22,-184.88 91.93,-176.35 87.98,-182.13"/>
 </g>
 <!-- proc~diff -->
-<g id="proc~~ldp~~CallsGraph_node3" class="node">
+<g id="proc~~ldp~~CallsGraph_node4" class="node">
 <title>proc~diff</title>
-<g id="a_proc~~ldp~~CallsGraph_node3"><a xlink:href=".././proc/diff.html" xlink:title="diff">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="234,-191 180,-191 180,-167 234,-167 234,-191"/>
-<text text-anchor="middle" x="207" y="-176.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
+<g id="a_proc~~ldp~~CallsGraph_node4"><a xlink:href=".././proc/diff.html" xlink:title="diff">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="234,-138 180,-138 180,-114 234,-114 234,-138"/>
+<text text-anchor="middle" x="207" y="-123.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">diff</text>
 </a>
 </g>
 </g>
 <!-- proc~ldp&#45;&gt;proc~diff -->
 <g id="proc~~ldp~~CallsGraph_edge3" class="edge">
 <title>proc~ldp&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M42.26,-129.28C54.22,-138.89 72.15,-151.81 90,-159 115.48,-169.27 146.18,-174.27 169.6,-176.7"/>
-<polygon fill="#000000" stroke="#000000" points="169.52,-180.21 179.8,-177.65 170.17,-173.24 169.52,-180.21"/>
+<path fill="none" stroke="#000000" d="M54.33,-138.78C77.88,-140.01 113.33,-140.94 144,-138 152.46,-137.19 161.48,-135.77 169.94,-134.18"/>
+<polygon fill="#000000" stroke="#000000" points="170.79,-137.58 179.92,-132.2 169.42,-130.72 170.79,-137.58"/>
 </g>
-<!-- proc~nnls -->
-<g id="proc~~ldp~~CallsGraph_node4" class="node">
-<title>proc~nnls</title>
-<g id="a_proc~~ldp~~CallsGraph_node4"><a xlink:href=".././proc/nnls.html" xlink:title="nnls">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-150 90,-150 90,-126 144,-126 144,-150"/>
-<text text-anchor="middle" x="117" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
-</a>
-</g>
-</g>
-<!-- proc~ldp&#45;&gt;proc~nnls -->
-<g id="proc~~ldp~~CallsGraph_edge4" class="edge">
-<title>proc~ldp&#45;&gt;proc~nnls</title>
-<path fill="none" stroke="#000000" d="M54.4,-123.3C62.48,-125.23 71.51,-127.38 80.1,-129.43"/>
-<polygon fill="#000000" stroke="#000000" points="79.38,-132.86 89.92,-131.78 81,-126.05 79.38,-132.86"/>
-</g>
-<!-- proc~daxpy -->
+<!-- proc~dcopy -->
 <g id="proc~~ldp~~CallsGraph_node5" class="node">
-<title>proc~daxpy</title>
-<g id="a_proc~~ldp~~CallsGraph_node5"><a xlink:href=".././proc/daxpy.html" xlink:title="daxpy">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-108 90,-108 90,-84 144,-84 144,-108"/>
-<text text-anchor="middle" x="117" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">daxpy</text>
+<title>proc~dcopy</title>
+<g id="a_proc~~ldp~~CallsGraph_node5"><a xlink:href=".././proc/dcopy.html" xlink:title="dcopy">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-129 90,-129 90,-105 144,-105 144,-129"/>
+<text text-anchor="middle" x="117" y="-114.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
 </a>
 </g>
 </g>
-<!-- proc~ldp&#45;&gt;proc~daxpy -->
-<g id="proc~~ldp~~CallsGraph_edge5" class="edge">
-<title>proc~ldp&#45;&gt;proc~daxpy</title>
-<path fill="none" stroke="#000000" d="M54.4,-110.7C62.48,-108.77 71.51,-106.62 80.1,-104.57"/>
-<polygon fill="#000000" stroke="#000000" points="81,-107.95 89.92,-102.22 79.38,-101.14 81,-107.95"/>
+<!-- proc~ldp&#45;&gt;proc~dcopy -->
+<g id="proc~~ldp~~CallsGraph_edge4" class="edge">
+<title>proc~ldp&#45;&gt;proc~dcopy</title>
+<path fill="none" stroke="#000000" d="M54.4,-131C62.48,-129.16 71.51,-127.11 80.1,-125.16"/>
+<polygon fill="#000000" stroke="#000000" points="80.94,-128.56 89.92,-122.93 79.39,-121.73 80.94,-128.56"/>
 </g>
 <!-- proc~ddot -->
 <g id="proc~~ldp~~CallsGraph_node6" class="node">
 <title>proc~ddot</title>
 <g id="a_proc~~ldp~~CallsGraph_node6"><a xlink:href=".././proc/ddot.html" xlink:title="ddot">
-<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-66 90,-66 90,-42 144,-42 144,-66"/>
-<text text-anchor="middle" x="117" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="144,-87 90,-87 90,-63 144,-63 144,-87"/>
+<text text-anchor="middle" x="117" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">ddot</text>
 </a>
 </g>
 </g>
 <!-- proc~ldp&#45;&gt;proc~ddot -->
-<g id="proc~~ldp~~CallsGraph_edge2" class="edge">
+<g id="proc~~ldp~~CallsGraph_edge5" class="edge">
 <title>proc~ldp&#45;&gt;proc~ddot</title>
-<path fill="none" stroke="#000000" d="M44.97,-104.85C57.99,-95.53 76.18,-82.51 90.89,-71.98"/>
-<polygon fill="#000000" stroke="#000000" points="92.99,-74.78 99.08,-66.11 88.92,-69.09 92.99,-74.78"/>
+<path fill="none" stroke="#000000" d="M45.39,-124.75C58.24,-115.69 75.96,-103.21 90.43,-93.01"/>
+<polygon fill="#000000" stroke="#000000" points="92.79,-95.63 98.95,-87.01 88.76,-89.91 92.79,-95.63"/>
 </g>
-<!-- proc~dcopy -->
+<!-- proc~nnls -->
 <g id="proc~~ldp~~CallsGraph_node7" class="node">
-<title>proc~dcopy</title>
-<g id="a_proc~~ldp~~CallsGraph_node7"><a xlink:href=".././proc/dcopy.html" xlink:title="dcopy">
-<polygon fill="#d9534f" stroke="#d9534f" points="144,-24 90,-24 90,0 144,0 144,-24"/>
-<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">dcopy</text>
+<title>proc~nnls</title>
+<g id="a_proc~~ldp~~CallsGraph_node7"><a xlink:href=".././proc/nnls.html" xlink:title="nnls">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-45 90,-45 90,-21 144,-21 144,-45"/>
+<text text-anchor="middle" x="117" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">nnls</text>
 </a>
 </g>
 </g>
-<!-- proc~ldp&#45;&gt;proc~dcopy -->
+<!-- proc~ldp&#45;&gt;proc~nnls -->
 <g id="proc~~ldp~~CallsGraph_edge6" class="edge">
-<title>proc~ldp&#45;&gt;proc~dcopy</title>
-<path fill="none" stroke="#000000" d="M35.55,-104.85C46.43,-87.81 67.69,-56.31 90,-33 90.65,-32.32 91.32,-31.64 92.01,-30.97"/>
-<polygon fill="#000000" stroke="#000000" points="94.64,-33.32 99.76,-24.05 89.97,-28.1 94.64,-33.32"/>
+<title>proc~ldp&#45;&gt;proc~nnls</title>
+<path fill="none" stroke="#000000" d="M35.76,-124.72C46.73,-107.83 67.92,-76.93 90,-54 90.65,-53.32 91.32,-52.65 92.01,-51.98"/>
+<polygon fill="#000000" stroke="#000000" points="94.64,-54.33 99.78,-45.06 89.98,-49.1 94.64,-54.33"/>
 </g>
 <!-- proc~nnls&#45;&gt;proc~diff -->
-<g id="proc~~ldp~~CallsGraph_edge8" class="edge">
+<g id="proc~~ldp~~CallsGraph_edge9" class="edge">
 <title>proc~nnls&#45;&gt;proc~diff</title>
-<path fill="none" stroke="#000000" d="M143.93,-150.08C152.36,-154.01 161.86,-158.43 170.84,-162.62"/>
-<polygon fill="#000000" stroke="#000000" points="169.41,-165.81 179.95,-166.87 172.37,-159.47 169.41,-165.81"/>
+<path fill="none" stroke="#000000" d="M134.06,-45.22C137.44,-48 140.92,-51.01 144,-54 160.93,-70.41 178.29,-90.94 190.31,-105.88"/>
+<polygon fill="#000000" stroke="#000000" points="187.77,-108.3 196.73,-113.95 193.25,-103.95 187.77,-108.3"/>
 </g>
 <!-- proc~h12 -->
 <g id="proc~~ldp~~CallsGraph_node8" class="node">
 <title>proc~h12</title>
 <g id="a_proc~~ldp~~CallsGraph_node8"><a xlink:href=".././proc/h12.html" xlink:title="h12">
-<polygon fill="#d9534f" stroke="#d9534f" points="234,-149 180,-149 180,-125 234,-125 234,-149"/>
-<text text-anchor="middle" x="207" y="-134.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-66 180,-66 180,-42 234,-42 234,-66"/>
+<text text-anchor="middle" x="207" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">h12</text>
 </a>
 </g>
 </g>
 <!-- proc~nnls&#45;&gt;proc~h12 -->
 <g id="proc~~ldp~~CallsGraph_edge7" class="edge">
 <title>proc~nnls&#45;&gt;proc~h12</title>
-<path fill="none" stroke="#000000" d="M144.4,-137.7C152.39,-137.61 161.31,-137.51 169.82,-137.41"/>
-<polygon fill="#000000" stroke="#000000" points="169.96,-140.91 179.92,-137.3 169.88,-133.91 169.96,-140.91"/>
+<path fill="none" stroke="#000000" d="M144.4,-39.3C152.48,-41.23 161.51,-43.38 170.1,-45.43"/>
+<polygon fill="#000000" stroke="#000000" points="169.38,-48.86 179.92,-47.78 171,-42.05 169.38,-48.86"/>
 </g>
 <!-- proc~g1 -->
 <g id="proc~~ldp~~CallsGraph_node9" class="node">
 <title>proc~g1</title>
 <g id="a_proc~~ldp~~CallsGraph_node9"><a xlink:href=".././proc/g1.html" xlink:title="g1">
-<polygon fill="#d9534f" stroke="#d9534f" points="234,-107 180,-107 180,-83 234,-83 234,-107"/>
-<text text-anchor="middle" x="207" y="-92.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 180,-24 180,0 234,0 234,-24"/>
+<text text-anchor="middle" x="207" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">g1</text>
 </a>
 </g>
 </g>
 <!-- proc~nnls&#45;&gt;proc~g1 -->
-<g id="proc~~ldp~~CallsGraph_edge9" class="edge">
+<g id="proc~~ldp~~CallsGraph_edge8" class="edge">
 <title>proc~nnls&#45;&gt;proc~g1</title>
-<path fill="none" stroke="#000000" d="M142.98,-125.79C152.07,-121.35 162.5,-116.26 172.22,-111.51"/>
-<polygon fill="#000000" stroke="#000000" points="173.81,-114.62 181.26,-107.09 170.74,-108.33 173.81,-114.62"/>
+<path fill="none" stroke="#000000" d="M144.4,-26.7C152.48,-24.77 161.51,-22.62 170.1,-20.57"/>
+<polygon fill="#000000" stroke="#000000" points="171,-23.95 179.92,-18.22 169.38,-17.14 171,-23.95"/>
 </g>
 </g>
 </svg>
@@ -624,8 +438,6 @@ private subroutine ldp(g, mg, m, n, h, x, xnorm, w, mode)
     </div></div></div></div>
       </div>
     </div>
-     
-     
     <div class="panel panel-default">
       <div class="panel-heading">
   <h3 class="panel-title">Called by</h3>
@@ -801,34 +613,11 @@ private subroutine ldp(g, mg, m, n, h, x, xnorm, w, mode)
     </div></div></div></div>
       </div>
     </div>
-     
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      
-<h3>Contents</h3>
+      <h3>Contents</h3>
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
@@ -836,137 +625,122 @@ private subroutine ldp(g, mg, m, n, h, x, xnorm, w, mode)
   </div>
 </div>
 
-
-
     </section>
     <br class="visible-xs visible-sm hidden-md">
 
-    
 
-    
-    
-    
     
     
 
     
     
-    
-    
-    
 
 
-    
-    
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>    <span class="k">subroutine </span><span class="n">ldp</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnorm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><span class="w">    </span><span class="k">subroutine </span><span class="n">ldp</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">mg</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">xnorm</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">mode</span><span class="p">)</span><span class="w"></span>
 
-    <span class="k">implicit none</span>
+<span class="w">    </span><span class="k">implicit none</span>
 
-<span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                   <span class="kd">::</span> <span class="n">mg</span>
-    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                   <span class="kd">::</span> <span class="n">m</span>
-    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>                   <span class="kd">::</span> <span class="n">n</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">g</span>     <span class="c">!! on entry `g` stores the `m` by `n` matrix of</span>
-                                                  <span class="c">!! linear inequality constraints. `g` has first</span>
-                                                  <span class="c">!! dimensioning parameter `mg`</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">m</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">h</span>     <span class="c">!! the right side of the inequality system.</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>    <span class="kd">::</span> <span class="n">x</span>     <span class="c">!! solution vector `x` if `mode=1`.</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span>  <span class="kd">::</span> <span class="n">w</span>     <span class="c">!! `w` is a one dimensional working space, the length</span>
-                                                  <span class="c">!! of which should be at least `(m+2)*(n+1) + 2*m`.</span>
-                                                  <span class="c">!! on exit `w` stores the lagrange multipliers</span>
-                                                  <span class="c">!! associated with the constraints.</span>
-                                                  <span class="c">!! at the solution of problem `ldp`.</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>                 <span class="kd">::</span> <span class="n">xnorm</span> <span class="c">!! euclidian norm of the solution vector</span>
-                                                  <span class="c">!! if computation is successful</span>
-    <span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>                  <span class="kd">::</span> <span class="n">mode</span>  <span class="c">!! success-failure flag with the following meanings:</span>
-                                                  <span class="c">!!</span>
-                                                  <span class="c">!! * ***1:*** successful computation,</span>
-                                                  <span class="c">!! * ***2:*** error return because of wrong dimensions (`n&lt;=0`),</span>
-                                                  <span class="c">!! * ***3:*** iteration count exceeded by [[nnls]],</span>
-                                                  <span class="c">!! * ***4:*** inequality constraints incompatible.</span>
+<span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">                   </span><span class="kd">::</span><span class="w"> </span><span class="n">mg</span><span class="w"></span>
+<span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">                   </span><span class="kd">::</span><span class="w"> </span><span class="n">m</span><span class="w"></span>
+<span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">                   </span><span class="kd">::</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">mg</span><span class="p">,</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">g</span><span class="w">     </span><span class="c">!! on entry `g` stores the `m` by `n` matrix of</span>
+<span class="w">                                                  </span><span class="c">!! linear inequality constraints. `g` has first</span>
+<span class="w">                                                  </span><span class="c">!! dimensioning parameter `mg`</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">m</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">h</span><span class="w">     </span><span class="c">!! the right side of the inequality system.</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w">    </span><span class="kd">::</span><span class="w"> </span><span class="n">x</span><span class="w">     </span><span class="c">!! solution vector `x` if `mode=1`.</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">dimension</span><span class="p">(</span><span class="o">*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">w</span><span class="w">     </span><span class="c">!! `w` is a one dimensional working space, the length</span>
+<span class="w">                                                  </span><span class="c">!! of which should be at least `(m+2)*(n+1) + 2*m`.</span>
+<span class="w">                                                  </span><span class="c">!! on exit `w` stores the lagrange multipliers</span>
+<span class="w">                                                  </span><span class="c">!! associated with the constraints.</span>
+<span class="w">                                                  </span><span class="c">!! at the solution of problem `ldp`.</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w">                 </span><span class="kd">::</span><span class="w"> </span><span class="n">xnorm</span><span class="w"> </span><span class="c">!! euclidian norm of the solution vector</span>
+<span class="w">                                                  </span><span class="c">!! if computation is successful</span>
+<span class="w">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">out</span><span class="p">)</span><span class="w">                  </span><span class="kd">::</span><span class="w"> </span><span class="n">mode</span><span class="w">  </span><span class="c">!! success-failure flag with the following meanings:</span>
+<span class="w">                                                  </span><span class="c">!!</span>
+<span class="w">                                                  </span><span class="c">!! * ***1:*** successful computation,</span>
+<span class="w">                                                  </span><span class="c">!! * ***2:*** error return because of wrong dimensions (`n&lt;=0`),</span>
+<span class="w">                                                  </span><span class="c">!! * ***3:*** iteration count exceeded by [[nnls]],</span>
+<span class="w">                                                  </span><span class="c">!! * ***4:*** inequality constraints incompatible.</span>
 
-    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span> <span class="p">,</span> <span class="n">iw</span> <span class="p">,</span> <span class="n">iwdual</span> <span class="p">,</span> <span class="n">iy</span> <span class="p">,</span> <span class="n">iz</span> <span class="p">,</span> <span class="n">j</span> <span class="p">,</span> <span class="n">jf</span> <span class="p">,</span> <span class="n">n1</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">fac</span> <span class="p">,</span> <span class="n">rnorm</span>
+<span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">iw</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">iwdual</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">iy</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">iz</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">jf</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">n1</span><span class="w"></span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">fac</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">rnorm</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span> <span class="n">n</span><span class="o">&lt;=</span><span class="mi">0</span> <span class="p">)</span> <span class="k">then</span>
-       <span class="c">! error return.</span>
-       <span class="n">mode</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="k">else</span>
-        <span class="c">! state dual problem</span>
-        <span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">zero</span>
-        <span class="n">xnorm</span> <span class="o">=</span> <span class="n">zero</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">m</span><span class="o">/=</span><span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
-<span class="k">            </span><span class="n">iw</span><span class="o">=</span><span class="mi">0</span>
-            <span class="k">do </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span>
-                <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span>
-                    <span class="n">iw</span><span class="o">=</span><span class="n">iw</span><span class="o">+</span><span class="mi">1</span>
-                    <span class="n">w</span><span class="p">(</span><span class="n">iw</span><span class="p">)</span><span class="o">=</span><span class="n">g</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">)</span>
-                <span class="k">end do</span>
-<span class="k">                </span><span class="n">iw</span><span class="o">=</span><span class="n">iw</span><span class="o">+</span><span class="mi">1</span>
-                <span class="n">w</span><span class="p">(</span><span class="n">iw</span><span class="p">)</span><span class="o">=</span><span class="n">h</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-            <span class="k">end do</span>
-<span class="k">            </span><span class="n">jf</span><span class="o">=</span><span class="n">iw</span><span class="o">+</span><span class="mi">1</span>
-            <span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span>
-                <span class="n">iw</span><span class="o">=</span><span class="n">iw</span><span class="o">+</span><span class="mi">1</span>
-                <span class="n">w</span><span class="p">(</span><span class="n">iw</span><span class="p">)</span><span class="o">=</span><span class="n">zero</span>
-            <span class="k">end do</span>
-<span class="k">            </span><span class="n">w</span><span class="p">(</span><span class="n">iw</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">one</span>
-            <span class="n">n1</span><span class="o">=</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span>
-            <span class="n">iz</span><span class="o">=</span><span class="n">iw</span><span class="o">+</span><span class="mi">2</span>
-            <span class="n">iy</span><span class="o">=</span><span class="n">iz</span><span class="o">+</span><span class="n">n1</span>
-            <span class="n">iwdual</span><span class="o">=</span><span class="n">iy</span><span class="o">+</span><span class="n">m</span>
-            <span class="c">! solve dual problem</span>
-            <span class="k">call </span><span class="n">nnls</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="n">jf</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="n">iy</span><span class="p">),</span><span class="n">rnorm</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="n">iwdual</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="n">iz</span><span class="p">),</span><span class="n">mode</span><span class="p">)</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">mode</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
-<span class="k">                </span><span class="n">mode</span><span class="o">=</span><span class="mi">4</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">rnorm</span><span class="o">&gt;</span><span class="n">zero</span><span class="p">)</span> <span class="k">then</span>
-                    <span class="c">!  compute solution of primal problem</span>
-                    <span class="n">fac</span><span class="o">=</span><span class="n">one</span><span class="o">-</span><span class="n">ddot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="n">iy</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>
-                    <span class="k">if</span> <span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="n">one</span><span class="o">+</span><span class="n">fac</span><span class="p">,</span><span class="n">one</span><span class="p">)</span><span class="o">&gt;</span><span class="n">zero</span><span class="p">)</span> <span class="k">then</span>
-<span class="k">                        </span><span class="n">mode</span><span class="o">=</span><span class="mi">1</span>
-                        <span class="n">fac</span><span class="o">=</span><span class="n">one</span><span class="o">/</span><span class="n">fac</span>
-                        <span class="k">do </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span>
-                            <span class="n">x</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">=</span><span class="n">fac</span><span class="o">*</span><span class="n">ddot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">g</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="n">iy</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>
-                        <span class="k">end do</span>
-<span class="k">                        </span><span class="n">xnorm</span><span class="o">=</span><span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-                        <span class="c">! compute lagrange multipliers for primal problem</span>
-                        <span class="n">w</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">zero</span>
-                        <span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-                        <span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">fac</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="n">iy</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-                    <span class="k">end if</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="o">&lt;=</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"></span>
+<span class="w">       </span><span class="c">! error return.</span>
+<span class="w">       </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">        </span><span class="c">! state dual problem</span>
+<span class="w">        </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span><span class="w"></span>
+<span class="w">        </span><span class="n">xnorm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="o">/=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">            </span><span class="n">iw</span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
+<span class="w">            </span><span class="k">do </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">m</span><span class="w"></span>
+<span class="w">                </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="w"></span>
+<span class="w">                    </span><span class="n">iw</span><span class="o">=</span><span class="n">iw</span><span class="o">+</span><span class="mi">1</span><span class="w"></span>
+<span class="w">                    </span><span class="n">w</span><span class="p">(</span><span class="n">iw</span><span class="p">)</span><span class="o">=</span><span class="n">g</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="n">i</span><span class="p">)</span><span class="w"></span>
+<span class="w">                </span><span class="k">end do</span>
+<span class="k">                </span><span class="n">iw</span><span class="o">=</span><span class="n">iw</span><span class="o">+</span><span class="mi">1</span><span class="w"></span>
+<span class="w">                </span><span class="n">w</span><span class="p">(</span><span class="n">iw</span><span class="p">)</span><span class="o">=</span><span class="n">h</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">end do</span>
+<span class="k">            </span><span class="n">jf</span><span class="o">=</span><span class="n">iw</span><span class="o">+</span><span class="mi">1</span><span class="w"></span>
+<span class="w">            </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="w"></span>
+<span class="w">                </span><span class="n">iw</span><span class="o">=</span><span class="n">iw</span><span class="o">+</span><span class="mi">1</span><span class="w"></span>
+<span class="w">                </span><span class="n">w</span><span class="p">(</span><span class="n">iw</span><span class="p">)</span><span class="o">=</span><span class="n">zero</span><span class="w"></span>
+<span class="w">            </span><span class="k">end do</span>
+<span class="k">            </span><span class="n">w</span><span class="p">(</span><span class="n">iw</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">one</span><span class="w"></span>
+<span class="w">            </span><span class="n">n1</span><span class="o">=</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="w"></span>
+<span class="w">            </span><span class="n">iz</span><span class="o">=</span><span class="n">iw</span><span class="o">+</span><span class="mi">2</span><span class="w"></span>
+<span class="w">            </span><span class="n">iy</span><span class="o">=</span><span class="n">iz</span><span class="o">+</span><span class="n">n1</span><span class="w"></span>
+<span class="w">            </span><span class="n">iwdual</span><span class="o">=</span><span class="n">iy</span><span class="o">+</span><span class="n">m</span><span class="w"></span>
+<span class="w">            </span><span class="c">! solve dual problem</span>
+<span class="w">            </span><span class="k">call </span><span class="n">nnls</span><span class="w"> </span><span class="p">(</span><span class="n">w</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="n">jf</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="n">iy</span><span class="p">),</span><span class="n">rnorm</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="n">iwdual</span><span class="p">),</span><span class="n">w</span><span class="p">(</span><span class="n">iz</span><span class="p">),</span><span class="n">mode</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mode</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">                </span><span class="n">mode</span><span class="o">=</span><span class="mi">4</span><span class="w"></span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rnorm</span><span class="o">&gt;</span><span class="n">zero</span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"></span>
+<span class="w">                    </span><span class="c">!  compute solution of primal problem</span>
+<span class="w">                    </span><span class="n">fac</span><span class="o">=</span><span class="n">one</span><span class="o">-</span><span class="n">ddot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="n">iy</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="n">one</span><span class="o">+</span><span class="n">fac</span><span class="p">,</span><span class="n">one</span><span class="p">)</span><span class="o">&gt;</span><span class="n">zero</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">                        </span><span class="n">mode</span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
+<span class="w">                        </span><span class="n">fac</span><span class="o">=</span><span class="n">one</span><span class="o">/</span><span class="n">fac</span><span class="w"></span>
+<span class="w">                        </span><span class="k">do </span><span class="n">j</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="w"></span>
+<span class="w">                            </span><span class="n">x</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">=</span><span class="n">fac</span><span class="o">*</span><span class="n">ddot</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">g</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">j</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="n">iy</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">                        </span><span class="k">end do</span>
+<span class="k">                        </span><span class="n">xnorm</span><span class="o">=</span><span class="n">dnrm2</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">                        </span><span class="c">! compute lagrange multipliers for primal problem</span>
+<span class="w">                        </span><span class="n">w</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">=</span><span class="n">zero</span><span class="w"></span>
+<span class="w">                        </span><span class="k">call </span><span class="n">dcopy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="mi">0</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">                        </span><span class="k">call </span><span class="n">daxpy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="n">fac</span><span class="p">,</span><span class="n">w</span><span class="p">(</span><span class="n">iy</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">                    </span><span class="k">end if</span>
 <span class="k">                end if</span>
 <span class="k">            end if</span>
 <span class="k">        end if</span>
 <span class="k">    end if</span>
 
-<span class="k">    end subroutine </span><span class="n">ldp</span>
+<span class="k">    end subroutine </span><span class="n">ldp</span><span class="w"></span>
 </pre></div>
 
     </section>
     <br>
     
-    
     </div>
   </div>
-
 
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>slsqp was developed by Jacob Williams<br>&copy; 2021 
-                                          </p>
+        <div class="col-xs-6 col-md-6"><p>slsqp was developed by Jacob Williams<br>&copy; 2022 
+</p>
         </div>
         <div class="col-xs-6 col-md-6">
           <p class="text-right">
             Documentation generated by 
             <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
-            
-            
           </p>
         </div>
       </div>
@@ -994,14 +768,11 @@ private subroutine ldp(g, mg, m, n, h, x, xnorm, w, mode)
         extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
     
     <script src="../tipuesearch/tipuesearch_content.js"></script>
     <script src="../tipuesearch/tipuesearch_set.js"></script>
     <script src="../tipuesearch/tipuesearch.js"></script>
-    
     
   </body>
 </html>

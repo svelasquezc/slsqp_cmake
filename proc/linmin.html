@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
    <meta name="description" content="Modern Fortran Implementation of the SLSQP Optimization Method">
-    
     <meta name="author" content="Jacob Williams" >
     <link rel="icon" href="../favicon.png">
 
@@ -16,10 +14,7 @@
     <link href="../css/pygments.css" rel="stylesheet">
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/local.css" rel="stylesheet">
-    
     <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
-    
-    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -48,58 +43,27 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-        
             <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
               <a href="#" class="dropdown-toggle"
               data-toggle="dropdown" role="button"
               aria-haspopup="true"
      aria-expanded="false">Contents <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          
-              
             <li><a href="../lists/files.html">Source Files</a></li>
-        
-        
-        
             <li><a href="../lists/modules.html">Modules</a></li>
-        
-            
-                                
             <li><a href="../lists/procedures.html">Procedures</a></li>
-        
-        
             <li><a href="../lists/absint.html">Abstract Interfaces</a></li>
-               
-            <li><a href="../lists/types.html">Derived Types</a></li>
-        
-               
-        
-        
+                   <li><a href="../lists/types.html">Derived Types</a></li>
+       
             </ul>
         
             </li>
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
-
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
-
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
-
-
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/absint.html">Abstract Interfaces</a></li>
-                             
-<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
-
-
-
-
+                             <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
           </ul>
-        
         <form action="../search.html" class="navbar-form navbar-right" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
@@ -108,51 +72,29 @@
         <button type="submit" class="btn btn-default">Submit</button>
 -->
         </form>
-        
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
     <div class="container">
-    
-  
   <div class="row">
     <h1>linmin
       <small>Function</small>
-    
     </h1>
-    
-<div class="row">
+    <div class="row">
   <div class="col-lg-12">
 <div class="well well-sm">
   <ul class="list-inline" style="margin-bottom:0px;display:inline">
-     
-     
-     
-     
-     
-    
-    
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
     title=" 5.1% of total for procedures.">86 statements</a>
      </li> 
-     
-     
-     
     <li><i class="fa fa-code"></i><a href="../src/slsqp_core.f90"> Source File</a></li>
-     
-     
   </ul>
   <ol class="breadcrumb in-well text-right">
-  
-    
      <li><a href='../sourcefile/slsqp_core.f90.html'>slsqp_core.f90</a></li>
-    
      <li><a href='../module/slsqp_core.html'>slsqp_core</a></li>
-    
-  
      <li class="active">linmin</li>
   </ol>
 </div>
@@ -168,32 +110,9 @@
   
   <div class="row">
     <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
-    
-<div id="sidebar">
-  
-<h3>Contents</h3>
+    <div id="sidebar">
+  <h3>Contents</h3>
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
@@ -201,24 +120,14 @@
   </div>
 </div>
 
-
-
 </div>
 
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2>
-private function linmin(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m, fu, fv, fw, fx, tol1, tol2)
+    <h2>private function linmin(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m, fu, fv, fw, fx, tol1, tol2)</h2>
     
-    
-   
-</h2>
-    
-  
 
-
-    
     <p>Linesearch without derivatives (used by <a href="../proc/slsqp.html">slsqp</a> if <code>linesearch_mode=2</code>).
   Returns the abscissa approximating the point where <code>f</code> attains a minimum.</p>
 <h3>purpose:</h3>
@@ -238,388 +147,159 @@ private function linmin(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m
 <li>Jacob Williams, Jan 2016, Refactored into modern Fortran.
     Added saved variables as <code>inout</code>s to make the routine thread-safe.</li>
 </ul>
-    
 
     <h3>Arguments</h3>
-    
-      
-<table class="table table-striped varlist">
-<thead><tr><th>Type</th>
-<th>Intent</th><th>Optional</th>
-<th>Attributes</th><th></th><th>Name</th><th></th></thead>
-
-
-
+      <table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
 <tbody>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-mode~2"></span>integer,</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>mode</strong></td><td><p>controls reverse communication
- must be set to 0 initially, returns with intermediate
- values 1 and 2 which must not be changed by the user,
- ends with convergence with value 3.</p></td>
-  
+must be set to 0 initially, returns with intermediate
+values 1 and 2 which must not be changed by the user,
+ends with convergence with value 3.</p></td>
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-ax"></span>real(kind=wp),</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>ax</strong></td><td><p>left endpoint of initial interval</p></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-bx"></span>real(kind=wp),</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>bx</strong></td><td><p>right endpoint of initial interval</p></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-f~6"></span>real(kind=wp)</td>
-  <td></td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td></td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>f</strong></td><td><p>function value at <code>linmin</code> which is to be brought in by
- reverse communication controlled by <code>mode</code></p></td>
-  
+reverse communication controlled by <code>mode</code></p></td>
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-tol~2"></span>real(kind=wp),</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(in)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>tol</strong></td><td><p>desired length of interval of uncertainty of final result</p></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-a~3"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>a</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-b~2"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>b</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-d~3"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>d</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-e~2"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>e</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-p~2"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>p</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-q~2"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>q</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-r~2"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>r</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-u~3"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>u</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-v~3"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>v</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-w~3"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>w</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-x~8"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>x</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-m~4"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>m</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-fu~2"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>fu</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-fv~2"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>fv</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-fw~2"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>fw</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-fx~2"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>fx</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-tol1~2"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>tol1</strong></td><td></td>
-  
 </tr>
-
-  
-  
-  
-  
 <tr>
-  
   <td><span class="anchor" id="variable-tol2~2"></span>real(kind=wp),</td>
-  <td>intent(inout)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
+<td>intent(inout)</td>
+  <td></td>  <td></td><td>::</td>
   <td><strong>tol2</strong></td><td></td>
-  
 </tr>
-
 </tbody>
 </table>
 
-    
-    
-    
-    
-    
-    
-    
-   <h3>Return Value <small><span class="anchor" id="variable-linmin~2"></span>real(kind=wp)
-  </small></h3>
-    
-    
+   <h3>Return Value <small><span class="anchor" id="variable-linmin~2"></span>real(kind=wp)</small></h3>
     
     <br>
-    
-    
-     
     <div class="panel panel-default">
       <div class="panel-heading">
   <h3 class="panel-title">Called by</h3>
@@ -750,34 +430,11 @@ private function linmin(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m
     </div></div></div></div>
       </div>
     </div>
-     
     <br>
 
     <section class="visible-xs visible-sm hidden-md">
-      
-<h3>Contents</h3>
+      <h3>Contents</h3>
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="panel panel-primary">
   <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
   <div class="list-group">
@@ -785,176 +442,161 @@ private function linmin(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m
   </div>
 </div>
 
-
-
     </section>
     <br class="visible-xs visible-sm hidden-md">
 
-    
 
-    
-    
-    
     
     
 
     
     
-    
-    
-    
 
 
-    
-    
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span>    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="k">function </span><span class="n">linmin</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span><span class="n">ax</span><span class="p">,</span><span class="n">bx</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">tol</span><span class="p">,&amp;</span>
-                                <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,&amp;</span>
-                                <span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">fu</span><span class="p">,</span><span class="n">fv</span><span class="p">,</span><span class="n">fw</span><span class="p">,</span><span class="n">fx</span><span class="p">,</span><span class="n">tol1</span><span class="p">,</span><span class="n">tol2</span><span class="p">)</span>
+    <div class="highlight"><pre><span></span><span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span><span class="w"> </span><span class="k">function </span><span class="n">linmin</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span><span class="n">ax</span><span class="p">,</span><span class="n">bx</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">tol</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="w">                                </span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="w">                                </span><span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">fu</span><span class="p">,</span><span class="n">fv</span><span class="p">,</span><span class="n">fw</span><span class="p">,</span><span class="n">fx</span><span class="p">,</span><span class="n">tol1</span><span class="p">,</span><span class="n">tol2</span><span class="p">)</span><span class="w"></span>
 
-    <span class="k">implicit none</span>
+<span class="w">    </span><span class="k">implicit none</span>
 
-<span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">mode</span>  <span class="c">!! controls reverse communication</span>
-                                   <span class="c">!! must be set to 0 initially, returns with intermediate</span>
-                                   <span class="c">!! values 1 and 2 which must not be changed by the user,</span>
-                                   <span class="c">!! ends with convergence with value 3.</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">f</span>                  <span class="c">!! function value at `linmin` which is to be brought in by</span>
-                                   <span class="c">!! reverse communication controlled by `mode`</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">tol</span>     <span class="c">!! desired length of interval of uncertainty of final result</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ax</span>      <span class="c">!! left endpoint of initial interval</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">bx</span>      <span class="c">!! right endpoint of initial interval</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">fu</span><span class="p">,</span><span class="n">fv</span><span class="p">,</span><span class="n">fw</span><span class="p">,</span><span class="n">fx</span><span class="p">,</span><span class="n">tol1</span><span class="p">,</span><span class="n">tol2</span>
+<span class="k">    </span><span class="kt">integer</span><span class="p">,</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">mode</span><span class="w">  </span><span class="c">!! controls reverse communication</span>
+<span class="w">                                   </span><span class="c">!! must be set to 0 initially, returns with intermediate</span>
+<span class="w">                                   </span><span class="c">!! values 1 and 2 which must not be changed by the user,</span>
+<span class="w">                                   </span><span class="c">!! ends with convergence with value 3.</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">f</span><span class="w">                  </span><span class="c">!! function value at `linmin` which is to be brought in by</span>
+<span class="w">                                   </span><span class="c">!! reverse communication controlled by `mode`</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">tol</span><span class="w">     </span><span class="c">!! desired length of interval of uncertainty of final result</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">ax</span><span class="w">      </span><span class="c">!! left endpoint of initial interval</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">bx</span><span class="w">      </span><span class="c">!! right endpoint of initial interval</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">fu</span><span class="p">,</span><span class="n">fv</span><span class="p">,</span><span class="n">fw</span><span class="p">,</span><span class="n">fx</span><span class="p">,</span><span class="n">tol1</span><span class="p">,</span><span class="n">tol2</span><span class="w"></span>
 
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">c</span>    <span class="o">=</span> <span class="p">(</span><span class="mf">3.0_wp</span><span class="o">-</span><span class="nb">sqrt</span><span class="p">(</span><span class="mf">5.0_wp</span><span class="p">))</span><span class="o">/</span><span class="mf">2.0_wp</span>  <span class="c">!! golden section ratio = `0.381966011`</span>
-    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">eps</span>  <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="nb">epsilon</span><span class="p">(</span><span class="mf">1.0_wp</span><span class="p">))</span>         <span class="c">!! square - root of machine precision</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">c</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mf">3.0_wp</span><span class="o">-</span><span class="nb">sqrt</span><span class="p">(</span><span class="mf">5.0_wp</span><span class="p">))</span><span class="o">/</span><span class="mf">2.0_wp</span><span class="w">  </span><span class="c">!! golden section ratio = `0.381966011`</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">eps</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="nb">epsilon</span><span class="p">(</span><span class="mf">1.0_wp</span><span class="p">))</span><span class="w">         </span><span class="c">!! square - root of machine precision</span>
 
-    <span class="k">select case</span> <span class="p">(</span><span class="n">mode</span><span class="p">)</span>
-    <span class="k">case</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="k">select case</span><span class="w"> </span><span class="p">(</span><span class="n">mode</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">case</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
 
-        <span class="c">! main loop starts here</span>
+<span class="w">        </span><span class="c">! main loop starts here</span>
 
-        <span class="n">fx</span> <span class="o">=</span> <span class="n">f</span>
-        <span class="n">fv</span> <span class="o">=</span> <span class="n">fx</span>
-        <span class="n">fw</span> <span class="o">=</span> <span class="n">fv</span>
+<span class="w">        </span><span class="n">fx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
+<span class="w">        </span><span class="n">fv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fx</span><span class="w"></span>
+<span class="w">        </span><span class="n">fw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fv</span><span class="w"></span>
 
-    <span class="k">case</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="k">case</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
 
-        <span class="n">fu</span> <span class="o">=</span> <span class="n">f</span>
-        <span class="c">! update a, b, v, w, and x</span>
-        <span class="k">if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&gt;</span><span class="n">fx</span> <span class="p">)</span> <span class="k">then</span>
-<span class="k">            if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&lt;</span><span class="n">x</span> <span class="p">)</span> <span class="n">a</span> <span class="o">=</span> <span class="n">u</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&gt;=</span><span class="n">x</span> <span class="p">)</span> <span class="n">b</span> <span class="o">=</span> <span class="n">u</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&lt;=</span><span class="n">fw</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">w</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
-<span class="k">                </span><span class="n">v</span> <span class="o">=</span> <span class="n">w</span>
-                <span class="n">fv</span> <span class="o">=</span> <span class="n">fw</span>
-                <span class="n">w</span> <span class="o">=</span> <span class="n">u</span>
-                <span class="n">fw</span> <span class="o">=</span> <span class="n">fu</span>
-            <span class="k">else if</span> <span class="p">(</span> <span class="n">fu</span><span class="o">&lt;=</span><span class="n">fv</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span> <span class="p">)</span> <span class="k">then</span>
-<span class="k">                </span><span class="n">v</span> <span class="o">=</span> <span class="n">u</span>
-                <span class="n">fv</span> <span class="o">=</span> <span class="n">fu</span>
-            <span class="k">end if</span>
+<span class="w">        </span><span class="n">fu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="w"></span>
+<span class="w">        </span><span class="c">! update a, b, v, w, and x</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fu</span><span class="o">&gt;</span><span class="n">fx</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">            if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">u</span><span class="o">&lt;</span><span class="n">x</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">u</span><span class="o">&gt;=</span><span class="n">x</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fu</span><span class="o">&lt;=</span><span class="n">fw</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">w</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">                </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="w"></span>
+<span class="w">                </span><span class="n">fv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fw</span><span class="w"></span>
+<span class="w">                </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
+<span class="w">                </span><span class="n">fw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fu</span><span class="w"></span>
+<span class="w">            </span><span class="k">else if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">fu</span><span class="o">&lt;=</span><span class="n">fv</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">zero</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">                </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
+<span class="w">                </span><span class="n">fv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fu</span><span class="w"></span>
+<span class="w">            </span><span class="k">end if</span>
 <span class="k">        else</span>
-<span class="k">            if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&gt;=</span><span class="n">x</span> <span class="p">)</span> <span class="n">a</span> <span class="o">=</span> <span class="n">x</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="n">u</span><span class="o">&lt;</span><span class="n">x</span> <span class="p">)</span> <span class="n">b</span> <span class="o">=</span> <span class="n">x</span>
-            <span class="n">v</span> <span class="o">=</span> <span class="n">w</span>
-            <span class="n">fv</span> <span class="o">=</span> <span class="n">fw</span>
-            <span class="n">w</span> <span class="o">=</span> <span class="n">x</span>
-            <span class="n">fw</span> <span class="o">=</span> <span class="n">fx</span>
-            <span class="n">x</span> <span class="o">=</span> <span class="n">u</span>
-            <span class="n">fx</span> <span class="o">=</span> <span class="n">fu</span>
-        <span class="k">end if</span>
+<span class="k">            if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">u</span><span class="o">&gt;=</span><span class="n">x</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">u</span><span class="o">&lt;</span><span class="n">x</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+<span class="w">            </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="w"></span>
+<span class="w">            </span><span class="n">fv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fw</span><span class="w"></span>
+<span class="w">            </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+<span class="w">            </span><span class="n">fw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fx</span><span class="w"></span>
+<span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
+<span class="w">            </span><span class="n">fx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fu</span><span class="w"></span>
+<span class="w">        </span><span class="k">end if</span>
 
-<span class="k">    case </span><span class="n">default</span>
+<span class="k">    case </span><span class="n">default</span><span class="w"></span>
 
-        <span class="c">! initialization</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="n">ax</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">bx</span>
-        <span class="n">e</span> <span class="o">=</span> <span class="n">zero</span>
-        <span class="n">v</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span>
-        <span class="n">w</span> <span class="o">=</span> <span class="n">v</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">w</span>
-        <span class="n">linmin</span> <span class="o">=</span> <span class="n">x</span>
-        <span class="n">mode</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">return</span>
+<span class="w">        </span><span class="c">! initialization</span>
+<span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ax</span><span class="w"></span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bx</span><span class="w"></span>
+<span class="w">        </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span><span class="w"></span>
+<span class="w">        </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">v</span><span class="w"></span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="w"></span>
+<span class="w">        </span><span class="n">linmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+<span class="w">        </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span>
 
 <span class="k">    end select</span>
 
-<span class="k">    </span><span class="n">m</span> <span class="o">=</span> <span class="mf">0.5_wp</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
-    <span class="n">tol1</span> <span class="o">=</span> <span class="n">eps</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">tol</span>
-    <span class="n">tol2</span> <span class="o">=</span> <span class="n">tol1</span> <span class="o">+</span> <span class="n">tol1</span>
+<span class="k">    </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5_wp</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">tol1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">eps</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tol</span><span class="w"></span>
+<span class="w">    </span><span class="n">tol2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tol1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">tol1</span><span class="w"></span>
 
-    <span class="c">! test convergence</span>
+<span class="w">    </span><span class="c">! test convergence</span>
 
-    <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">m</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">tol2</span><span class="o">-</span><span class="mf">0.5_wp</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
-        <span class="c">! end of main loop</span>
-        <span class="n">linmin</span> <span class="o">=</span> <span class="n">x</span>
-        <span class="n">mode</span> <span class="o">=</span> <span class="mi">3</span>
-    <span class="k">else</span>
-<span class="k">        </span><span class="n">r</span> <span class="o">=</span> <span class="n">zero</span>
-        <span class="n">q</span> <span class="o">=</span> <span class="n">r</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="n">q</span>
-        <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">&gt;</span><span class="n">tol1</span> <span class="p">)</span> <span class="k">then</span>
-            <span class="c">! fit parabola</span>
-            <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">fx</span><span class="o">-</span><span class="n">fv</span><span class="p">)</span>
-            <span class="n">q</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">fx</span><span class="o">-</span><span class="n">fw</span><span class="p">)</span>
-            <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="n">q</span> <span class="o">-</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">*</span><span class="n">r</span>
-            <span class="n">q</span> <span class="o">=</span> <span class="n">q</span> <span class="o">-</span> <span class="n">r</span>
-            <span class="n">q</span> <span class="o">=</span> <span class="n">q</span> <span class="o">+</span> <span class="n">q</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="n">q</span><span class="o">&gt;</span><span class="n">zero</span> <span class="p">)</span> <span class="n">p</span> <span class="o">=</span> <span class="o">-</span><span class="n">p</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="n">q</span><span class="o">&lt;</span><span class="n">zero</span> <span class="p">)</span> <span class="n">q</span> <span class="o">=</span> <span class="o">-</span><span class="n">q</span>
-            <span class="n">r</span> <span class="o">=</span> <span class="n">e</span>
-            <span class="n">e</span> <span class="o">=</span> <span class="n">d</span>
-        <span class="k">end if</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">m</span><span class="p">)</span><span class="o">&lt;=</span><span class="n">tol2</span><span class="o">-</span><span class="mf">0.5_wp</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"></span>
+<span class="w">        </span><span class="c">! end of main loop</span>
+<span class="w">        </span><span class="n">linmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+<span class="w">        </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span>
+<span class="k">        </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">zero</span><span class="w"></span>
+<span class="w">        </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="w"></span>
+<span class="w">        </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">&gt;</span><span class="n">tol1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"></span>
+<span class="w">            </span><span class="c">! fit parabola</span>
+<span class="w">            </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">fx</span><span class="o">-</span><span class="n">fv</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">fx</span><span class="o">-</span><span class="n">fw</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">v</span><span class="p">)</span><span class="o">*</span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">w</span><span class="p">)</span><span class="o">*</span><span class="n">r</span><span class="w"></span>
+<span class="w">            </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r</span><span class="w"></span>
+<span class="w">            </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">q</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">q</span><span class="o">&gt;</span><span class="n">zero</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">q</span><span class="o">&lt;</span><span class="n">zero</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"></span>
+<span class="w">            </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="w"></span>
+<span class="w">            </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="w"></span>
+<span class="w">        </span><span class="k">end if</span><span class="w"></span>
 
-        <span class="c">! is parabola acceptable</span>
-        <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">&gt;=</span><span class="mf">0.5_wp</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">q</span><span class="o">*</span><span class="n">r</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">p</span><span class="o">&lt;=</span><span class="n">q</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="p">.</span><span class="nb">or</span><span class="p">.</span> <span class="n">p</span><span class="o">&gt;=</span><span class="n">q</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="p">)</span> <span class="k">then</span>
-            <span class="c">! golden section step</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="n">x</span><span class="o">&gt;=</span><span class="n">m</span> <span class="p">)</span> <span class="n">e</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">x</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="n">x</span><span class="o">&lt;</span><span class="n">m</span> <span class="p">)</span> <span class="n">e</span> <span class="o">=</span> <span class="n">b</span> <span class="o">-</span> <span class="n">x</span>
-            <span class="n">d</span> <span class="o">=</span> <span class="n">c</span><span class="o">*</span><span class="n">e</span>
-        <span class="k">else</span>
-            <span class="c">! parabolic interpolation step</span>
-            <span class="n">d</span> <span class="o">=</span> <span class="n">p</span><span class="o">/</span><span class="n">q</span>
-            <span class="c">! f must not be evaluated too close to a or b</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="n">u</span><span class="o">-</span><span class="n">a</span><span class="o">&lt;</span><span class="n">tol2</span> <span class="p">)</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">tol1</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="n">b</span><span class="o">-</span><span class="n">u</span><span class="o">&lt;</span><span class="n">tol2</span> <span class="p">)</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">tol1</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
-        <span class="k">end if</span>
+<span class="w">        </span><span class="c">! is parabola acceptable</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">&gt;=</span><span class="mf">0.5_wp</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">q</span><span class="o">*</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="n">p</span><span class="o">&lt;=</span><span class="n">q</span><span class="o">*</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="nb">or</span><span class="p">.</span><span class="w"> </span><span class="n">p</span><span class="o">&gt;=</span><span class="n">q</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">then</span><span class="w"></span>
+<span class="w">            </span><span class="c">! golden section step</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="o">&gt;=</span><span class="n">m</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="o">&lt;</span><span class="n">m</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
+<span class="w">            </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="o">*</span><span class="n">e</span><span class="w"></span>
+<span class="w">        </span><span class="k">else</span><span class="w"></span>
+<span class="w">            </span><span class="c">! parabolic interpolation step</span>
+<span class="w">            </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="o">/</span><span class="n">q</span><span class="w"></span>
+<span class="w">            </span><span class="c">! f must not be evaluated too close to a or b</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">u</span><span class="o">-</span><span class="n">a</span><span class="o">&lt;</span><span class="n">tol2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sign</span><span class="p">(</span><span class="n">tol1</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">b</span><span class="o">-</span><span class="n">u</span><span class="o">&lt;</span><span class="n">tol2</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sign</span><span class="p">(</span><span class="n">tol1</span><span class="p">,</span><span class="n">m</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">end if</span><span class="w"></span>
 
-        <span class="c">! f must not be evaluated too close to x</span>
-        <span class="k">if</span> <span class="p">(</span> <span class="nb">abs</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">&lt;</span><span class="n">tol1</span> <span class="p">)</span> <span class="n">d</span> <span class="o">=</span> <span class="nb">sign</span><span class="p">(</span><span class="n">tol1</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
-        <span class="n">u</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">d</span>
-        <span class="n">linmin</span> <span class="o">=</span> <span class="n">u</span>
-        <span class="n">mode</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="w">        </span><span class="c">! f must not be evaluated too close to x</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">&lt;</span><span class="n">tol1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">sign</span><span class="p">(</span><span class="n">tol1</span><span class="p">,</span><span class="n">d</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span><span class="w"></span>
+<span class="w">        </span><span class="n">linmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="w"></span>
+<span class="w">        </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
 
-    <span class="k">end if</span>
+<span class="w">    </span><span class="k">end if</span>
 
-<span class="k">    end function </span><span class="n">linmin</span>
+<span class="k">    end function </span><span class="n">linmin</span><span class="w"></span>
 </pre></div>
 
     </section>
     <br>
     
-    
     </div>
   </div>
-
 
     <hr>    
     </div> <!-- /container -->
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-6"><p>slsqp was developed by Jacob Williams<br>&copy; 2021 
-                                          </p>
+        <div class="col-xs-6 col-md-6"><p>slsqp was developed by Jacob Williams<br>&copy; 2022 
+</p>
         </div>
         <div class="col-xs-6 col-md-6">
           <p class="text-right">
             Documentation generated by 
             <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
-            
-            
           </p>
         </div>
       </div>
@@ -982,14 +624,11 @@ private function linmin(mode, ax, bx, f, tol, a, b, d, e, p, q, r, u, v, w, x, m
         extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
       });
     </script>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
     
     <script src="../tipuesearch/tipuesearch_content.js"></script>
     <script src="../tipuesearch/tipuesearch_set.js"></script>
     <script src="../tipuesearch/tipuesearch.js"></script>
-    
     
   </body>
 </html>
