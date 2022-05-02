@@ -135,27 +135,27 @@
 <thead><tr><th>Type</th><th>Intent</th><th>Optional</th><th>Attributes</th><th></th><th>Name</th><th></th></thead>
 <tbody>
 <tr>
-  <td><span class="anchor" id="variable-me~5"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
+  <td><span class="anchor" id="variable-me~9"></span>class(<a href='../type/slsqp_solver.html'>slsqp_solver</a>),</td>
 <td>intent(inout)</td>
   <td></td>  <td></td><td>::</td>
   <td><strong>me</strong></td><td></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-n~7"></span>integer,</td>
+  <td><span class="anchor" id="variable-n~17"></span>integer,</td>
 <td>intent(in)</td>
   <td></td>  <td></td><td>::</td>
   <td><strong>n</strong></td><td><p>the number of variables, <script type="math/tex"> n \ge 1 </script>
 </p></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-m~3"></span>integer,</td>
+  <td><span class="anchor" id="variable-m~11"></span>integer,</td>
 <td>intent(in)</td>
   <td></td>  <td></td><td>::</td>
   <td><strong>m</strong></td><td><p>total number of constraints, <script type="math/tex"> m \ge 0 </script>
 </p></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-meq~2"></span>integer,</td>
+  <td><span class="anchor" id="variable-meq~5"></span>integer,</td>
 <td>intent(in)</td>
   <td></td>  <td></td><td>::</td>
   <td><strong>meq</strong></td><td><p>number of equality constraints, <script type="math/tex"> m_{eq} \ge 0 </script>
@@ -168,32 +168,32 @@
   <td><strong>max_iter</strong></td><td><p>maximum number of iterations</p></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-acc~2"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-acc~5"></span>real(kind=wp),</td>
 <td>intent(in)</td>
   <td></td>  <td></td><td>::</td>
   <td><strong>acc</strong></td><td><p>accuracy</p></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-f~4"></span>procedure(<a href='../interface/func.html'>func</a>)</td>
+  <td><span class="anchor" id="variable-f~10"></span>procedure(<a href='../interface/func.html'>func</a>)</td>
 <td></td>
   <td></td>  <td></td><td>::</td>
   <td><strong>f</strong></td><td><p>problem function</p></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-g~3"></span>procedure(<a href='../interface/grad.html'>grad</a>)</td>
+  <td><span class="anchor" id="variable-g~10"></span>procedure(<a href='../interface/grad.html'>grad</a>)</td>
 <td></td>
   <td></td>  <td></td><td>::</td>
   <td><strong>g</strong></td><td><p>function to compute gradients (must be
 associated if <code>gradient_mode=0</code>)</p></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-xl~2"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-xl~6"></span>real(kind=wp),</td>
 <td>intent(in),</td>
   <td></td>  <td>dimension(n)</td><td>::</td>
   <td><strong>xl</strong></td><td><p>lower bounds on <code>x</code></p></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-xu~2"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-xu~6"></span>real(kind=wp),</td>
 <td>intent(in),</td>
   <td></td>  <td>dimension(n)</td><td>::</td>
   <td><strong>xu</strong></td><td><p>upper bounds on <code>x</code></p></td>
@@ -223,13 +223,13 @@ associated if <code>gradient_mode=0</code>)</p></td>
   <td><strong>report</strong></td><td><p>user-defined procedure that will be called once per iteration</p></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-alphamin~2"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-alphamin~4"></span>real(kind=wp),</td>
 <td>intent(in),</td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>alphamin</strong></td><td><p>minimum alpha for linesearch [default 0.1]</p></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-alphamax~2"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-alphamax~4"></span>real(kind=wp),</td>
 <td>intent(in),</td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>alphamax</strong></td><td><p>maximum alpha for linesearch [default 1.0]</p></td>
@@ -256,19 +256,19 @@ note that this is an absolute step that does not respect
 the <code>xl</code> or <code>xu</code> variable bounds.</p></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-tolf~2"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-tolf~5"></span>real(kind=wp),</td>
 <td>intent(in),</td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>tolf</strong></td><td><p>stopping criterion if <script type="math/tex"> |f| < tolf </script> then stop.</p></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-toldf~2"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-toldf~5"></span>real(kind=wp),</td>
 <td>intent(in),</td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>toldf</strong></td><td><p>stopping criterion if <script type="math/tex"> |f_{n+1} - f_n| < toldf </script> then stop</p></td>
 </tr>
 <tr>
-  <td><span class="anchor" id="variable-toldx~2"></span>real(kind=wp),</td>
+  <td><span class="anchor" id="variable-toldx~5"></span>real(kind=wp),</td>
 <td>intent(in),</td>
   <td>optional</td>  <td></td><td>::</td>
   <td><strong>toldx</strong></td><td><p>stopping criterion if <script type="math/tex"> ||x_{n+1} - x_n|| < toldx </script> then stop</p></td>
